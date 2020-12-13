@@ -1,26 +1,7 @@
 <template>
     <div class="container">
         <div>
-            <Logo />
-            <h1 class="title">pycontw-2021</h1>
-            <div class="links">
-                <a
-                    class="button--green"
-                    href="https://nuxtjs.org/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    Documentation
-                </a>
-                <a
-                    class="button--grey"
-                    href="https://github.com/nuxt/nuxt.js"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    GitHub
-                </a>
-            </div>
+            <h1 class="text-6xl">PyCon Taiwan 2021 Coming Soon</h1>
         </div>
     </div>
 </template>
