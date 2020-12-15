@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/about/code-of-conduct", {data:[{}],fetch:[],mutations:void 0});

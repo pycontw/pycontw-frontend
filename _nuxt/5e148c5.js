@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{247:function(e,n,t){"use strict";t.r(n);var c={name:"PageCommunity"},o=t(5),component=Object(o.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("p",[this._v("COMMUNITY")])}),[],!1,null,"7225ad11",null);n.default=component.exports}}]);
