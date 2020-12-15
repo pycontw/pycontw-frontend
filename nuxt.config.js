@@ -2,6 +2,11 @@ export default {
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
 
+    // Re-route for GitHub Pages to serve with /assets
+    router: {
+        base: '/pycontw-2021/',
+    },
+
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
         title: 'pycontw-2021',
