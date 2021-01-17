@@ -1,28 +1,33 @@
 <template>
     <nav class="flex justify-evenly items-center">
-        <locale-link to="/about" class="mx-4">{{ $t('about') }}</locale-link>
+        <locale-link to="/about" :class="getPageClassesByPath('about', true)">
+            {{ $t('about') }}
+        </locale-link>
         <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
-            class="mx-4"
+            :class="getPageClassesByPath('conference')"
         >
         </nav-bar-item-dropdown>
         <nav-bar-item-dropdown
             :label="$t('events')"
             :items="eventsItems"
-            class="mx-4"
+            :class="getPageClassesByPath('events')"
         >
         </nav-bar-item-dropdown>
         <nav-bar-item-dropdown
             :label="$t('registration')"
             :items="registrationItems"
-            class="mx-4"
+            :class="getPageClassesByPath('registration')"
         >
         </nav-bar-item-dropdown>
-        <locale-link to="/venue" class="mx-4">
+        <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}
         </locale-link>
-        <locale-link to="/covid-19/guidelines" class="mx-4">
+        <locale-link
+            to="/covid-19/guidelines"
+            :class="getPageClassesByPath('covid-19', true)"
+        >
             {{ $t('covid19Guidelines') }}
         </locale-link>
     </nav>
@@ -66,11 +71,11 @@ export default {
             return [
                 {
                     label: this.$i18n.t('overview'),
-                    value: '/events/warmUpSessions',
+                    value: '/events/overview',
                 },
                 {
                     label: this.$i18n.t('warmUpSessions'),
-                    value: '/events/warm-up-session',
+                    value: '/events/warm-up-sessions',
                 },
                 {
                     label: this.$i18n.t('openSpaces'),
@@ -94,6 +99,19 @@ export default {
                     value: '/registration/financial-aid',
                 },
             ]
+        },
+    },
+    methods: {
+        getPageClassesByPath(pathPrefix = '', isLink = false) {
+            const isOnCurrentPath = this.$route.name.startsWith(pathPrefix)
+            return {
+                'mx-4': true,
+                'px-4': isLink,
+                'py-2': isLink,
+                'border-b-2': true,
+                'border-gray-800': isOnCurrentPath,
+                'border-transparent': !isOnCurrentPath,
+            }
         },
     },
 }
