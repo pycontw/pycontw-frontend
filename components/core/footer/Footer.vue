@@ -2,23 +2,25 @@
     <div class="flex flex-col px-4 py-8 bg-orange-300">
         <div class="flex justify-center">
             <div class="flex flex-col mr-20">
-                <LocaleLink to="/about/code-of-conduct">
+                <locale-link to="/about/code-of-conduct">
                     {{ $t('codeOfConduct') }}
-                </LocaleLink>
-                <LocaleLink to="/about/staff">{{ $t('staff') }}</LocaleLink>
-                <LocaleLink to="/about/community">
+                </locale-link>
+                <locale-link to="/about/staff">{{ $t('staff') }}</locale-link>
+                <locale-link to="/about/community">
                     {{ $t('community') }}
-                </LocaleLink>
-                <LocaleLink to="/about/privacy-policy">
+                </locale-link>
+                <locale-link to="/about/privacy-policy">
                     {{ $t('privacyPolicy') }}
-                </LocaleLink>
+                </locale-link>
             </div>
             <div class="flex flex-col ml-20">
-                <ExtLink href="https://pycontw.blogspot.tw/">Blogspot</ExtLink>
-                <ExtLink href="https://www.facebook.com/pycontw">
+                <ext-link href="https://pycontw.blogspot.tw/">
+                    Blogspot
+                </ext-link>
+                <ext-link href="https://www.facebook.com/pycontw">
                     Facebook
-                </ExtLink>
-                <ExtLink href="https://twitter.com/pycontw">Twitter</ExtLink>
+                </ext-link>
+                <ext-link href="https://twitter.com/pycontw">Twitter</ext-link>
                 <a
                     href="mailto:organizers@pycon.tw"
                     target="_blank"
