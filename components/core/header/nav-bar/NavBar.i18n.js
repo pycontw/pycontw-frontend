@@ -1,7 +1,7 @@
 import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
-    en: {
+    'en-us': {
         about: 'About',
         conference: 'Conference',
         schedule: 'Schedule',
@@ -21,7 +21,7 @@ export default genI18nMessages({
         venue: 'Venue',
         covid19Guidelines: 'COVID-19 Guidelines',
     },
-    zh: {
+    'zh-hant': {
         about: '關於',
         conference: '議程',
         schedule: '時間表',
