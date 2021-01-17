@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{258:function(e,n,t){"use strict";t.r(n);var r={name:"PageEventsOverview"},v=t(5),component=Object(v.a)(r,(function(){var e=this.$createElement;return(this._self._c||e)("p",[this._v("Events overview")])}),[],!1,null,"e78989f6",null);n.default=component.exports}}]);

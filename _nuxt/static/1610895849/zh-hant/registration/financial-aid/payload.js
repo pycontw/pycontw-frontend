@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-hant/registration/financial-aid", {data:[{}],fetch:[],mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-hant/events/open-spaces", {data:[{}],fetch:[],mutations:void 0});

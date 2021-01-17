@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-hant/about/code-of-conduct", {data:[{}],fetch:[],mutations:void 0});
