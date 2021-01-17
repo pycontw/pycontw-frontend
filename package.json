@@ -9,7 +9,8 @@
         "generate": "nuxt generate",
         "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
         "lint": "npm run lint:js",
-        "test": "jest"
+        "test": "jest",
+        "json-server": "./node_modules/.bin/json-server --watch db.json --routes routes.json --port 9876"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.12.2",
@@ -30,6 +31,7 @@
         "eslint-plugin-nuxt": "^1.0.0",
         "eslint-plugin-prettier": "^3.1.4",
         "jest": "^26.5.0",
+        "json-server": "^0.16.3",
         "prettier": "^2.1.2",
         "vue-jest": "^3.0.4"
     }
