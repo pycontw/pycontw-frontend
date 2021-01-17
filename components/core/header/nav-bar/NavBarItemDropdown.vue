@@ -22,7 +22,12 @@
                 leave-class="opacity-100 scale-100"
                 leave-to-class="opacity-0 scale-95"
             >
-                <core-menu v-show="isHovering" :style="{ top: '32px' }">
+                <core-menu
+                    v-show="isHovering"
+                    :sm="sm"
+                    :lg="lg"
+                    :style="{ top: '32px' }"
+                >
                     <slot name="items" :hideMenu="hideMenu"></slot>
                     <core-menu-item
                         v-for="(item, i) in items"
@@ -48,6 +53,8 @@ export default {
         CoreMenuItem,
     },
     props: {
+        sm: Boolean,
+        lg: Boolean,
         label: {
             type: String,
             default: '',
