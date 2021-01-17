@@ -1,4 +1,5 @@
 const DEFAULT_BASE_URL = 'http://localhost:3000'
+const DEFAULT_ROUTER_BASE = '/pycontw-2021'
 
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
@@ -6,7 +7,7 @@ export default {
 
     // Re-route for GitHub Pages to serve with /assets
     router: {
-        base: '/pycontw-2021/',
+        base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
     },
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -47,7 +48,9 @@ export default {
     ],
 
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-    axios: {},
+    axios: {
+        baseURL: process.env.BASE_URL || DEFAULT_BASE_URL,
+    },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {},
