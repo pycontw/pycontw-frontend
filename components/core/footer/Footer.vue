@@ -2,10 +2,16 @@
     <div class="flex flex-col px-4 py-8 bg-orange-300">
         <div class="flex justify-center">
             <div class="flex flex-col mr-20">
-                <NuxtLink to="/about/code-of-conduct">Code of Conduct</NuxtLink>
-                <NuxtLink to="/about/staff">Staff</NuxtLink>
-                <NuxtLink to="/about/community">Community</NuxtLink>
-                <NuxtLink to="/about/privacy-policy">Privacy Policy</NuxtLink>
+                <LocaleLink to="/about/code-of-conduct">
+                    {{ $t('codeOfConduct') }}
+                </LocaleLink>
+                <LocaleLink to="/about/staff">{{ $t('staff') }}</LocaleLink>
+                <LocaleLink to="/about/community">
+                    {{ $t('community') }}
+                </LocaleLink>
+                <LocaleLink to="/about/privacy-policy">
+                    {{ $t('privacyPolicy') }}
+                </LocaleLink>
             </div>
             <div class="flex flex-col ml-20">
                 <ExtLink href="https://pycontw.blogspot.tw/">Blogspot</ExtLink>
@@ -29,11 +35,15 @@
 </template>
 
 <script>
-import ExtLink from '~/components/core/links/ExtLink'
+import i18n from './Footer.i18n'
+import { ExtLink, LocaleLink } from '~/components/core/links'
+
 export default {
+    i18n,
     name: 'CoreFooter',
     components: {
         ExtLink,
+        LocaleLink,
     },
 }
 </script>
