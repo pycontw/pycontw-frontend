@@ -1,5 +1,5 @@
 const DEFAULT_BASE_URL = 'http://localhost:3000'
-const DEFAULT_ROUTER_BASE = '/pycontw-2021'
+const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
 
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
