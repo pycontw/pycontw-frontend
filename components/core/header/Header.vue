@@ -1,7 +1,9 @@
 <template>
     <header class="w-full h-16 px-4 flex justify-between items-center">
-        <home-icon />
-        <locale-switch />
+        <div class="w-56 h-full flex justify-between items-center">
+            <home-icon />
+            <locale-switch />
+        </div>
         <nav-bar />
         <text-button
             href="https://tw.pycon.org/2020/en-us/dashboard/"
