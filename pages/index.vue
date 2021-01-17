@@ -1,13 +1,44 @@
 <template>
-    <div class="container">
-        <div>
-            <h1 class="text-6xl">PyCon Taiwan 2021 Coming Soon</h1>
+    <div>
+        <div class="container">
+            <div>
+                <h1 class="text-6xl">PyCon Taiwan 2021 Coming Soon</h1>
+            </div>
+        </div>
+        <h3>sponsor list</h3>
+        <div v-for="(leveledSponsors, i) in sponsorsData" :key="i">
+            <h2 class="text-2xl">{{ leveledSponsors.level_name }}</h2>
+            <div
+                v-for="(sponsor, j) in leveledSponsors.sponsors"
+                :key="j"
+                class="border-black"
+            >
+                <div>
+                    Name:
+                    <a :href="sponsor.website_url">{{ sponsor.name }}</a>
+                </div>
+                <div>Intro: {{ sponsor.intro }}</div>
+                <img
+                    :src="`https://5f43c00e6788.ngrok.io${sponsor.logo_url}`"
+                    :width="40"
+                    :height="30"
+                    alt=""
+                />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    name: 'PageIndex',
+    async asyncData({ $axios }) {
+        const { data: sponsorsData } = await $axios.$get('/api/sponsors')
+        return {
+            sponsorsData,
+        }
+    },
+}
 </script>
 
 <style>
