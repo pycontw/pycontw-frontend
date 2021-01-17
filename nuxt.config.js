@@ -1,3 +1,5 @@
+const DEFAULT_BASE_URL = 'http://localhost:3000'
+
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
