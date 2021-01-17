@@ -1,47 +1,23 @@
 <template>
     <nav class="flex justify-evenly items-center">
         <locale-link to="/about" class="mx-4">{{ $t('about') }}</locale-link>
-        <nav-bar-item-dropdown :title="$t('conference')" class="mx-4">
-            <locale-link to="/conference/schedule">
-                {{ $t('schedule') }}
-            </locale-link>
-            <locale-link to="/conference/keynotes">
-                {{ $t('keynotes') }}
-            </locale-link>
-            <locale-link to="/conference/talks">
-                {{ $t('talks') }}
-            </locale-link>
-            <locale-link to="/conference/tutorials">
-                {{ $t('tutorials') }}
-            </locale-link>
-            <locale-link to="/conference/community-tracks">
-                {{ $t('communityTracks') }}
-            </locale-link>
+        <nav-bar-item-dropdown
+            :label="$t('conference')"
+            :items="conferenceItems"
+            class="mx-4"
+        >
         </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown :title="$t('events')" class="mx-4">
-            <locale-link to="/events/overview">
-                {{ $t('overview') }}
-            </locale-link>
-            <locale-link to="/events/warm-up-sessions">
-                {{ $t('warmUpSessions') }}
-            </locale-link>
-            <locale-link to="/events/open-spaces">
-                {{ $t('openSpaces') }}
-            </locale-link>
-            <locale-link to="/events/sprints">
-                {{ $t('sprints') }}
-            </locale-link>
-            <locale-link to="/events/job-listings">
-                {{ $t('jobListings') }}
-            </locale-link>
+        <nav-bar-item-dropdown
+            :label="$t('events')"
+            :items="eventsItems"
+            class="mx-4"
+        >
         </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown :title="$t('registration')" class="mx-4">
-            <locale-link to="/registration/tickets">
-                {{ $t('conferenceTickets') }}
-            </locale-link>
-            <locale-link to="/registration/financial-aid">
-                {{ $t('financialAid') }}
-            </locale-link>
+        <nav-bar-item-dropdown
+            :label="$t('registration')"
+            :items="registrationItems"
+            class="mx-4"
+        >
         </nav-bar-item-dropdown>
         <locale-link to="/venue" class="mx-4">
             {{ $t('venue') }}
@@ -63,6 +39,62 @@ export default {
     components: {
         NavBarItemDropdown,
         LocaleLink,
+    },
+    computed: {
+        conferenceItems() {
+            return [
+                {
+                    label: this.$i18n.t('schedule'),
+                    value: '/conference/schedule',
+                },
+                {
+                    label: this.$i18n.t('keynotes'),
+                    value: '/conference/keynotes',
+                },
+                { label: this.$i18n.t('talks'), value: '/conference/talks' },
+                {
+                    label: this.$i18n.t('tutorials'),
+                    value: '/conference/tutorials',
+                },
+                {
+                    label: this.$i18n.t('communityTracks'),
+                    value: '/conference/community-tracks',
+                },
+            ]
+        },
+        eventsItems() {
+            return [
+                {
+                    label: this.$i18n.t('overview'),
+                    value: '/events/warmUpSessions',
+                },
+                {
+                    label: this.$i18n.t('warmUpSessions'),
+                    value: '/events/warm-up-session',
+                },
+                {
+                    label: this.$i18n.t('openSpaces'),
+                    value: '/events/open-spaces',
+                },
+                { label: this.$i18n.t('sprints'), value: '/events/sprints' },
+                {
+                    label: this.$i18n.t('jobListings'),
+                    value: '/events/job-listings',
+                },
+            ]
+        },
+        registrationItems() {
+            return [
+                {
+                    label: this.$i18n.t('conferenceTickets'),
+                    value: '/registration/tickets',
+                },
+                {
+                    label: this.$i18n.t('financialAid'),
+                    value: '/registration/financial-aid',
+                },
+            ]
+        },
     },
 }
 </script>
