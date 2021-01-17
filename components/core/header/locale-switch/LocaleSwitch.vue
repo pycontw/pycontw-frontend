@@ -1,7 +1,5 @@
 <template>
-    <nav-bar-item-dropdown
-        :on-click-item="(e, value) => onClickLang(switchLocalePath, value)"
-    >
+    <nav-bar-item-dropdown sm>
         <template #label>
             {{ $t($i18n.locale) }}
             <svg
