@@ -1,7 +1,7 @@
 <template>
-    <NuxtLink :to="localePath(to)">
+    <nuxt-link :to="localePath(to)">
         <slot></slot>
-    </NuxtLink>
+    </nuxt-link>
 </template>
 
 <script>
