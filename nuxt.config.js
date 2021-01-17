@@ -45,7 +45,22 @@ export default {
     modules: [
         // https://go.nuxtjs.dev/axios
         '@nuxtjs/axios',
+        // https://i18n.nuxtjs.org/
+        'nuxt-i18n',
     ],
+
+    i18n: {
+        strategy: 'prefix',
+        locale: 'en',
+        defaultLocale: 'en',
+        fallbackLocale: 'en',
+        locales: ['en', 'zh'],
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+            onlyOnRoot: true, // recommended
+        },
+    },
 
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
     axios: {
