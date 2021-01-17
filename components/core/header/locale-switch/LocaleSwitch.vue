@@ -8,30 +8,23 @@
             <option
                 v-for="(lang, i) in languages"
                 :key="i"
-                :value="lang.code"
-                @click="$router.push(switchLocalePath(lang.code))"
+                :value="lang"
+                @click="$router.push(switchLocalePath(lang))"
             >
-                {{ lang.name }}
+                {{ $t(lang) }}
             </option>
         </select>
     </div>
 </template>
 
 <script>
+import i18n from './LocaleSwitch.i18n'
 export default {
+    i18n,
     name: 'CoreHeaderLocaleSwitch',
     data() {
         return {
-            languages: [
-                {
-                    code: 'en',
-                    name: 'EN',
-                },
-                {
-                    code: 'zh',
-                    name: 'ZH',
-                },
-            ],
+            languages: ['en-us', 'zh-hant'],
         }
     },
 }

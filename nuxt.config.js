@@ -51,10 +51,10 @@ export default {
 
     i18n: {
         strategy: 'prefix',
-        locale: 'en',
-        defaultLocale: 'en',
-        fallbackLocale: 'en',
-        locales: ['en', 'zh'],
+        locale: 'en-us',
+        defaultLocale: 'en-us',
+        fallbackLocale: 'en-us',
+        locales: ['en-us', 'zh-hant'],
         detectBrowserLanguage: {
             useCookie: true,
             cookieKey: 'i18n_redirected',
