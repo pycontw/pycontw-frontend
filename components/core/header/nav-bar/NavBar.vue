@@ -4,6 +4,12 @@
             {{ $t('about') }}
         </locale-link>
         <nav-bar-item-dropdown
+            :label="$t('speaking')"
+            :items="speakingItems"
+            :class="getPageClassesByPath('speaking')"
+        >
+        </nav-bar-item-dropdown>
+        <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
             :class="getPageClassesByPath('conference')"
@@ -64,6 +70,26 @@ export default {
                 {
                     label: this.$i18n.t('communityTracks'),
                     value: '/conference/community-tracks',
+                },
+            ]
+        },
+        speakingItems() {
+            return [
+                {
+                    label: this.$i18n.t('cfp'),
+                    value: '/speaking/cfp',
+                },
+                {
+                    label: this.$i18n.t('talk'),
+                    value: '/speaking/talk',
+                },
+                {
+                    label: this.$i18n.t('tutorial'),
+                    value: '/speaking/tutorial',
+                },
+                {
+                    label: this.$i18n.t('recording'),
+                    value: '/speaking/recording',
                 },
             ]
         },
