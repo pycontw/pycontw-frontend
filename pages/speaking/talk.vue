@@ -1,10 +1,178 @@
 <template>
-    <p>Talk</p>
+    <div class="px-64 py-24">
+        <h1 class="text-3xl my-8 text-center">{{ $t('title') }}</h1>
+        <i18n path="intro.0" tag="p" class="my-6">
+            <template #cfp>
+                <locale-link to="/speaking/cfp" :highlight="true">{{
+                    $t('terms.cfp')
+                }}</locale-link>
+            </template>
+        </i18n>
+        <i18n path="intro.1" tag="p" class="my-6"> </i18n>
+
+        <!-- Tips -->
+        <ul class="list-disc">
+            <i18n
+                v-for="(tip, i) in $t('tips')"
+                :key="i"
+                :path="`tips.${i}`"
+                tag="li"
+                class="my-1 ml-12"
+            ></i18n>
+        </ul>
+
+        <!-- Required Fields -->
+        <i18n path="requiredFields-description" tag="p" class="my-8"> </i18n>
+        <ul class="list-disc">
+            <i18n
+                v-for="(field, i) in $t('requiredFields-fields')"
+                :key="i"
+                :path="`requiredFields-fields.${i}`"
+                tag="li"
+                class="my-1 ml-12"
+            ></i18n>
+        </ul>
+        <i18n path="requiredFields-encouragement" tag="p" class="my-6"> </i18n>
+        <i18n path="requiredFields-reviewOnly" tag="p" class="my-6"> </i18n>
+        <ul class="list-disc">
+            <i18n
+                v-for="(content, i) in $t('requiredFields-reviewOnlyFields')"
+                :key="i"
+                :path="`requiredFields-reviewOnlyFields.${i}`"
+                tag="li"
+                class="my-1 ml-12"
+            ></i18n>
+        </ul>
+        <i18n path="requiredFields-summaries.0" tag="p" class="my-8">
+            <template #myPyCon>
+                <ext-link :href="myPyConLink" :highlight="true"
+                    >My PyCon</ext-link
+                >
+            </template>
+        </i18n>
+        <i18n path="requiredFields-summaries.1" tag="p" class="my-8"></i18n>
+
+        <!-- Advices -->
+        <h2 class="text-2xl my-8">{{ $t('advice-title') }}</h2>
+        <i18n path="advice-previousConf" tag="p" class="my-6"> </i18n>
+        <ul class="list-disc">
+            <li
+                v-for="(conf, i) in previoudConfLinks"
+                :key="i"
+                class="my-1 ml-12"
+            >
+                <ext-link :href="conf[1]" :highlight="true">
+                    {{ conf[0] }}
+                </ext-link>
+            </li>
+        </ul>
+
+        <!-- Good & Bad Ideas -->
+        <div v-for="(tag, tag_idx) in ['goodIdea', 'badIdea']" :key="tag_idx">
+            <h3 class="text-xl my-8">{{ $t(`advice-${tag}-title`) }}</h3>
+            <ul class="list-disc">
+                <li
+                    v-for="(idea, i) in $t(`advice-${tag}-ideas`)"
+                    :key="i"
+                    class="my-1 ml-12"
+                >
+                    {{ idea[0] }}
+                    <ul v-if="idea[1]" class="list-disc">
+                        <li
+                            v-for="(detail, idx) in idea[1]"
+                            :key="idx"
+                            class="my-1 ml-12"
+                        >
+                            {{ detail }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Choose Level -->
+        <h2 class="text-2xl my-8">{{ $t('chooseLevel-title') }}</h2>
+        <i18n
+            v-for="(content, i) in $t('chooseLevel-descriptions')"
+            :key="i"
+            :path="`chooseLevel-descriptions.${i}`"
+            tag="p"
+            class="my-6"
+        >
+            <template #important>
+                <b>{{ $t('terms.important') }}</b>
+            </template>
+        </i18n>
+        <div v-for="(levelInfo, i) in $t('chooseLevel-levels')" :key="i">
+            <h3 class="text-xl my-8">{{ levelInfo[0] }}</h3>
+            <p
+                v-for="(description, idx) in levelInfo[1]"
+                :key="idx"
+                class="my-6"
+            >
+                {{ description }}
+            </p>
+        </div>
+    </div>
 </template>
 
 <script>
+import LocaleLink from '@/components/core/links/LocaleLink.vue'
+import ExtLink from '@/components/core/links/ExtLink.vue'
+import i18n from './talk.i18n'
+
 export default {
+    i18n,
     name: 'PageSpeakingTalk',
+    components: {
+        ExtLink,
+        LocaleLink,
+    },
+    computed: {
+        myPyConLink() {
+            return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard`
+        },
+        previoudConfLinks() {
+            // use 'en' & 'zh' before 2016
+            const shortLocale = { 'en-us': 'en', 'zh-hant': 'zh' }[
+                this.$i18n.locale
+            ]
+            return [
+                [
+                    'PyCon Taiwan 2020',
+                    `https://tw.pycon.org/2020/${this.$i18n.locale}/conference/schedule/`,
+                ],
+                [
+                    'PyCon Taiwan 2019',
+                    `https://tw.pycon.org/2019/${this.$i18n.locale}/events/schedule/`,
+                ],
+                [
+                    'PyCon Taiwan 2018',
+                    `https://tw.pycon.org/2018/${this.$i18n.locale}/events/schedule/`,
+                ],
+                [
+                    'PyCon Taiwan 2017',
+                    `https://tw.pycon.org/2017/${this.$i18n.locale}/events/schedule/`,
+                ],
+                [
+                    'PyCon Taiwan 2016',
+                    `https://tw.pycon.org/2016/${this.$i18n.locale}/events/schedule/`,
+                ],
+                [
+                    'PyCon Taiwan PyCon APAC 2015',
+                    `https://tw.pycon.org/2015apac/${shortLocale}/schedule/`,
+                ],
+                [
+                    'PyCon Taiwan PyCon APAC 2014',
+                    `https://tw.pycon.org/2014apac/${shortLocale}/program/`,
+                ],
+                [
+                    'PyCon Taiwan 2013',
+                    `https://tw.pycon.org/2013/${shortLocale}/program/`,
+                ],
+            ]
+        },
+    },
 }
 </script>
 
