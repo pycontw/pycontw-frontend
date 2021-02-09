@@ -5,10 +5,7 @@
             <locale-switch />
         </div>
         <nav-bar />
-        <text-button
-            href="https://tw.pycon.org/2020/en-us/dashboard/"
-            secondary
-        >
+        <text-button :href="getMyPyConUrl()" secondary>
             my pycontw
         </text-button>
     </header>
@@ -27,6 +24,11 @@ export default {
         LocaleSwitch,
         NavBar,
         TextButton,
+    },
+    methods: {
+        getMyPyConUrl() {
+            return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard/`
+        },
     },
 }
 </script>
