@@ -89,7 +89,7 @@
             <template #previousConfs>
                 <ul class="list-disc">
                     <li
-                        v-for="(conf, idx) in previoudConfLinks"
+                        v-for="(conf, idx) in previousConfLinks"
                         :key="idx"
                         class="my-1 ml-12"
                     >
@@ -198,7 +198,7 @@ export default {
         signUpLink() {
             return `https://tw.pycon.org/2021/${this.$i18n.locale}/accounts/login`
         },
-        previoudConfLinks() {
+        previousConfLinks() {
             return [
                 [
                     'PyCon Taiwan 2020',
