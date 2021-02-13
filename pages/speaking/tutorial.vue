@@ -6,7 +6,7 @@
             :key="i"
             :path="`intro.${i}`"
             tag="p"
-            class="my-6"
+            class="mt-6 mb-3"
         >
             <template #cfp>
                 <locale-link to="/speaking/cfp" highlight>{{
@@ -23,11 +23,11 @@
                 {{ item }}
             </li>
         </ul>
-        <i18n path="proviso" tag="p" class="my-6"></i18n>
+        <i18n path="proviso" tag="p" class="mt-3 mb-6"></i18n>
 
         <!-- Policies -->
         <div v-for="(policy, i) in $t('policies')" :key="i">
-            <h2 class="text-2xl my-8">{{ policy[0] }}</h2>
+            <h2 class="text-2xl mt-12 mb-6">{{ policy[0] }}</h2>
             <i18n
                 v-for="(description, idx) in policy[1]"
                 :key="idx"
