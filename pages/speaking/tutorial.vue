@@ -9,7 +9,7 @@
             class="my-6"
         >
             <template #cfp>
-                <locale-link to="/speaking/cfp" :highlight="true">{{
+                <locale-link to="/speaking/cfp" highlight>{{
                     $t('terms.cfp')
                 }}</locale-link>
             </template>
@@ -36,11 +36,9 @@
                 class="my-6"
             >
                 <template #contact>
-                    <ext-link
-                        href="mailto:organizers@pycon.tw"
-                        :highlight="true"
-                        >{{ $t('terms.contact') }}</ext-link
-                    >
+                    <ext-link href="mailto:organizers@pycon.tw" highlight>{{
+                        $t('terms.contact')
+                    }}</ext-link>
                 </template>
             </i18n>
         </div>

@@ -3,7 +3,7 @@
         :href="href"
         rel="noopener noreferrer"
         target="_blank"
-        :class="['outline-none', highlight ? 'highlight' : '']"
+        :class="classObject"
     >
         <slot></slot>
     </a>
@@ -20,6 +20,14 @@ export default {
         highlight: {
             type: Boolean,
             default: false,
+        },
+    },
+    computed: {
+        classObject() {
+            return {
+                'outline-none': true,
+                highlight: this.highlight,
+            }
         },
     },
 }

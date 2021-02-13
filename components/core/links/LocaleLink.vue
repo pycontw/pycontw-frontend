@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :to="localePath(to)" :class="highlight ? 'highlight' : ''">
+    <nuxt-link :to="localePath(to)" :class="classObject">
         <slot></slot>
     </nuxt-link>
 </template>
@@ -15,6 +15,13 @@ export default {
         highlight: {
             type: Boolean,
             default: false,
+        },
+    },
+    computed: {
+        classObject() {
+            return {
+                highlight: this.highlight,
+            }
         },
     },
 }

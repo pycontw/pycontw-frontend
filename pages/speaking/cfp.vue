@@ -15,7 +15,7 @@
             <template #AoE>
                 <ext-link
                     href="https://www.timeanddate.com/worldclock/converter.html?iso=20210427T115900&p1=tz_aoe&p2=241&p3=1440"
-                    :highlight="true"
+                    highlight
                     >AoE</ext-link
                 >
             </template>
@@ -28,19 +28,19 @@
             class="my-6"
         >
             <template #pyvideo>
-                <ext-link href="https://pyvideo.org" :highlight="true"
+                <ext-link href="https://pyvideo.org" highlight
                     >pyvideo.org</ext-link
                 >
             </template>
             <template #recording>
-                <locale-link to="/speaking/recording" :highlight="true">{{
+                <locale-link to="/speaking/recording" highlight>{{
                     $t('terms.recording')
                 }}</locale-link>
             </template>
             <template #everyoneContributesPolicy>
                 <ext-link
                     href="https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html"
-                    :highlight="true"
+                    highlight
                     >Everyone Contributes Policy</ext-link
                 >
             </template>
@@ -58,17 +58,17 @@
             <template #signUp>
                 <ext-link
                     :href="proposalSystemUrlPrefix + '/accounts/login/'"
-                    :highlight="true"
+                    highlight
                     >{{ $t('terms.signUp') }}</ext-link
                 >
             </template>
             <template #main>
-                <locale-link to="/" :highlight="true">tw.pycon.org</locale-link>
+                <locale-link to="/" highlight>tw.pycon.org</locale-link>
             </template>
             <template #myPyCon>
                 <ext-link
                     :href="proposalSystemUrlPrefix + '/dashboard'"
-                    :highlight="true"
+                    highlight
                     >My PyCon</ext-link
                 >
             </template>
@@ -91,14 +91,14 @@
                         :key="idx"
                         class="my-1 ml-12"
                     >
-                        <ext-link :href="conf[1]" :highlight="true">
+                        <ext-link :href="conf[1]" highlight>
                             {{ conf[0] }}
                         </ext-link>
                     </li>
                 </ul>
             </template>
             <template #talk>
-                <locale-link to="/speaking/talk" :highlight="true">{{
+                <locale-link to="/speaking/talk" highlight>{{
                     $t('terms.talk')
                 }}</locale-link>
             </template>
@@ -116,12 +116,12 @@
             class="my-6"
         >
             <template #talk>
-                <locale-link to="/speaking/talk" :highlight="true">{{
+                <locale-link to="/speaking/talk" highlight>{{
                     $t('terms.talk')
                 }}</locale-link>
             </template>
             <template #tutorial>
-                <locale-link to="/speaking/tutorial" :highlight="true">{{
+                <locale-link to="/speaking/tutorial" highlight>{{
                     $t('terms.tutorial')
                 }}</locale-link>
             </template>
@@ -150,7 +150,7 @@
             class="my-6"
         >
             <template #programMail>
-                <ext-link href="mailto:program@pycon.tw" :highlight="true">
+                <ext-link href="mailto:program@pycon.tw" highlight>
                     program@pycon.tw
                 </ext-link>
             </template>
@@ -165,7 +165,7 @@
             class="my-6"
         >
             <template #coc>
-                <locale-link to="/about/code-of-conduct" :highlight="true">{{
+                <locale-link to="/about/code-of-conduct" highlight>{{
                     $t('terms.coc')
                 }}</locale-link>
             </template>

@@ -9,7 +9,7 @@
             class="my-8"
         >
             <template #pyvideo>
-                <ext-link href="https://pyvideo.org" :highlight="true"
+                <ext-link href="https://pyvideo.org" highlight
                     >pyvideo.org</ext-link
                 >
             </template>
