@@ -3,7 +3,7 @@
         <h1 class="text-3xl my-8 text-center">{{ $t('title') }}</h1>
         <i18n path="intro.0" tag="p" class="my-6">
             <template #cfp>
-                <locale-link to="/speaking/cfp" :highlight="true">{{
+                <locale-link to="/speaking/cfp" highlight>{{
                     $t('terms.cfp')
                 }}</locale-link>
             </template>
@@ -45,9 +45,7 @@
         </ul>
         <i18n path="requiredFields-summaries.0" tag="p" class="my-8">
             <template #myPyCon>
-                <ext-link :href="myPyConLink" :highlight="true"
-                    >My PyCon</ext-link
-                >
+                <ext-link :href="myPyConLink" highlight>My PyCon</ext-link>
             </template>
         </i18n>
         <i18n path="requiredFields-summaries.1" tag="p" class="my-8"></i18n>
@@ -61,7 +59,7 @@
                 :key="i"
                 class="my-1 ml-12"
             >
-                <ext-link :href="conf[1]" :highlight="true">
+                <ext-link :href="conf[1]" highlight>
                     {{ conf[0] }}
                 </ext-link>
             </li>
