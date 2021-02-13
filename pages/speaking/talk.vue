@@ -60,7 +60,7 @@
         <i18n path="advice-previousConf" tag="p" class="mt-6 mb-3"> </i18n>
         <ul class="list-disc">
             <li
-                v-for="(conf, i) in previoudConfLinks"
+                v-for="(conf, i) in previousConfLinks"
                 :key="i"
                 class="my-1 ml-12"
             >
@@ -135,7 +135,7 @@ export default {
         myPyConLink() {
             return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard`
         },
-        previoudConfLinks() {
+        previousConfLinks() {
             // use 'en' & 'zh' before 2016
             const shortLocale = { 'en-us': 'en', 'zh-hant': 'zh' }[
                 this.$i18n.locale
