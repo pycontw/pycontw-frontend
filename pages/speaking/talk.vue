@@ -8,9 +8,9 @@
                 }}</locale-link>
             </template>
         </i18n>
-        <i18n path="intro.1" tag="p" class="my-6"> </i18n>
 
         <!-- Tips -->
+        <i18n path="intro.1" tag="p" class="mt-6 mb-3"></i18n>
         <ul class="list-disc">
             <i18n
                 v-for="(tip, i) in $t('tips')"
@@ -22,7 +22,8 @@
         </ul>
 
         <!-- Required Fields -->
-        <i18n path="requiredFields-description" tag="p" class="my-8"> </i18n>
+        <i18n path="requiredFields-description" tag="p" class="mt-6 mb-3">
+        </i18n>
         <ul class="list-disc">
             <i18n
                 v-for="(field, i) in $t('requiredFields-fields')"
@@ -32,8 +33,12 @@
                 class="my-1 ml-12"
             ></i18n>
         </ul>
-        <i18n path="requiredFields-encouragement" tag="p" class="my-6"> </i18n>
-        <i18n path="requiredFields-reviewOnly" tag="p" class="my-6"> </i18n>
+        <i18n
+            path="requiredFields-encouragement"
+            tag="p"
+            class="mt-3 mb-6"
+        ></i18n>
+        <i18n path="requiredFields-reviewOnly" tag="p" class="mt-6 mb-3"></i18n>
         <ul class="list-disc">
             <i18n
                 v-for="(content, i) in $t('requiredFields-reviewOnlyFields')"
@@ -51,8 +56,8 @@
         <i18n path="requiredFields-summaries.1" tag="p" class="my-8"></i18n>
 
         <!-- Advices -->
-        <h2 class="text-2xl my-8">{{ $t('advice-title') }}</h2>
-        <i18n path="advice-previousConf" tag="p" class="my-6"> </i18n>
+        <h2 class="text-2xl mt-12 mb-6">{{ $t('advice-title') }}</h2>
+        <i18n path="advice-previousConf" tag="p" class="mt-6 mb-3"> </i18n>
         <ul class="list-disc">
             <li
                 v-for="(conf, i) in previoudConfLinks"
@@ -67,7 +72,7 @@
 
         <!-- Good & Bad Ideas -->
         <div v-for="(tag, tag_idx) in ['goodIdea', 'badIdea']" :key="tag_idx">
-            <h3 class="text-xl my-8">{{ $t(`advice-${tag}-title`) }}</h3>
+            <h3 class="text-xl mt-6 mb-3">{{ $t(`advice-${tag}-title`) }}</h3>
             <ul class="list-disc">
                 <li
                     v-for="(idea, i) in $t(`advice-${tag}-ideas`)"
@@ -89,7 +94,7 @@
         </div>
 
         <!-- Choose Level -->
-        <h2 class="text-2xl my-8">{{ $t('chooseLevel-title') }}</h2>
+        <h2 class="text-2xl mt-12 mb-6">{{ $t('chooseLevel-title') }}</h2>
         <i18n
             v-for="(content, i) in $t('chooseLevel-descriptions')"
             :key="i"
@@ -102,7 +107,7 @@
             </template>
         </i18n>
         <div v-for="(levelInfo, i) in $t('chooseLevel-levels')" :key="i">
-            <h3 class="text-xl my-8">{{ levelInfo[0] }}</h3>
+            <h3 class="text-xl mt-6 mb-3">{{ levelInfo[0] }}</h3>
             <p
                 v-for="(description, idx) in levelInfo[1]"
                 :key="idx"

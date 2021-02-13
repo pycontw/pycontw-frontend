@@ -5,7 +5,7 @@ export default genI18nMessages({
         title: 'How to Propose a Talk?',
         intro: [
             'For general proposal calling information, see {cfp}. ',
-            'First of all, thank you for contributing to PyCon Taiwan!' +
+            'First of all, thank you for contributing to PyCon Taiwan! ' +
                 'The following will help you submit a successful proposal. ' +
                 'In the following, we are going to provide you the tips to make your proposal strong ' +
                 'and informative and get the best chance of acceptance.',
