@@ -56,21 +56,15 @@
             class="my-6"
         >
             <template #signUp>
-                <ext-link
-                    :href="proposalSystemUrlPrefix + '/accounts/login/'"
-                    highlight
-                    >{{ $t('terms.signUp') }}</ext-link
-                >
+                <ext-link :href="signUpLink" highlight>{{
+                    $t('terms.signUp')
+                }}</ext-link>
             </template>
             <template #main>
                 <locale-link to="/" highlight>tw.pycon.org</locale-link>
             </template>
             <template #myPyCon>
-                <ext-link
-                    :href="proposalSystemUrlPrefix + '/dashboard'"
-                    highlight
-                    >My PyCon</ext-link
-                >
+                <ext-link :href="myPyConLink" highlight>My PyCon</ext-link>
             </template>
         </i18n>
 
@@ -186,8 +180,11 @@ export default {
         LocaleLink,
     },
     computed: {
-        proposalSystemUrlPrefix() {
-            return `https://tw.pycon.org/2021/${this.$i18n.locale}`
+        myPyConLink() {
+            return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard`
+        },
+        signUpLink() {
+            return `https://tw.pycon.org/2021/${this.$i18n.locale}/accounts/login`
         },
         previoudConfLinks() {
             return [
