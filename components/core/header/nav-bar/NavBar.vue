@@ -3,6 +3,12 @@
         <locale-link to="/about" :class="getPageClassesByPath('about', true)">
             {{ $t('about') }}
         </locale-link>
+        <locale-link
+            to="/sponsor"
+            :class="getPageClassesByPath('sponsor', true)"
+        >
+            {{ $t('sponsor') }}
+        </locale-link>
         <nav-bar-item-dropdown
             :label="$t('speaking')"
             :items="speakingItems"
