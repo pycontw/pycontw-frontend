@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-us/speaking/recording", {data:[{}],fetch:[],mutations:void 0});
