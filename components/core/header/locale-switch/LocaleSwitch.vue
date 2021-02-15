@@ -19,7 +19,7 @@
         <template v-slot:items="{ hideMenu }">
             <core-menu-item
                 v-for="(lang, i) in languages"
-                :key="i"
+                :key="`language_${i}`"
                 @click="onClickLang(hideMenu, switchLocalePath, lang)"
             >
                 {{ $t(lang) }}

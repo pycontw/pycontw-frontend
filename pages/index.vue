@@ -6,11 +6,14 @@
             </div>
         </div>
         <h3>sponsor list</h3>
-        <div v-for="(leveledSponsors, i) in sponsorsData" :key="i">
+        <div
+            v-for="(leveledSponsors, i) in sponsorsData"
+            :key="`index_sponsor_level_${i}`"
+        >
             <h2 class="text-2xl">{{ leveledSponsors.level_name }}</h2>
             <div
                 v-for="(sponsor, j) in leveledSponsors.sponsors"
-                :key="j"
+                :key="`index_sponsor_level_${i}_sponsor_${j}`"
                 class="border-black"
             >
                 <div>

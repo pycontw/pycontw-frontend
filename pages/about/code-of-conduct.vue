@@ -5,8 +5,8 @@
         <h2 class="text-2xl mt-12 mb-6">{{ $t('title') }}</h2>
         <ul>
             <li
-                v-for="(content, idx) in $t('contents')"
-                :key="idx"
+                v-for="(content, i) in $t('contents')"
+                :key="`about_content_${i}`"
                 class="my-4"
             >
                 <b>{{ content.title }}</b>

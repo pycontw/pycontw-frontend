@@ -86,8 +86,8 @@
             </h3>
             <ul class="list-disc">
                 <li
-                    v-for="(item, idx) in $t(`package-${level}.1`)"
-                    :key="`prospectus_package_${level}_${idx}`"
+                    v-for="(item, j) in $t(`package-${level}.1`)"
+                    :key="`prospectus_package_${i}_detail_${j}`"
                     class="my-1 ml-12"
                 >
                     {{ item }}
@@ -124,7 +124,7 @@
                     </th>
                     <td
                         v-for="(cell, i) in row.slice(1)"
-                        :key="`prospectus_extra_purchase_cell_${row_idx}_${i}`"
+                        :key="`prospectus_extra_purchase_row_${row_idx}_cell_${i}`"
                         class="text-left leading-tight px-2 py-2 align-middle"
                     >
                         <p v-if="Array.isArray(cell)">
@@ -150,8 +150,8 @@
             </h3>
             <ul class="list-disc">
                 <li
-                    v-for="(item, idx) in $t(`specialSponsorship-${type}.1`)"
-                    :key="`prospectus_special_${type}_${idx}`"
+                    v-for="(item, j) in $t(`specialSponsorship-${type}.1`)"
+                    :key="`prospectus_special_${i}_item_${j}`"
                     class="my-1 ml-12"
                 >
                     {{ item }}
@@ -165,8 +165,8 @@
         </h2>
         <ol class="list-decimal">
             <li
-                v-for="(item, idx) in $t(`note-items`)"
-                :key="`prospectus_note_${idx}`"
+                v-for="(item, i) in $t(`note-items`)"
+                :key="`prospectus_note_${i}`"
                 class="my-1 ml-12"
             >
                 {{ item }}
