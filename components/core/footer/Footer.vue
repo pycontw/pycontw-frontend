@@ -5,6 +5,7 @@
                 <locale-link to="/about/code-of-conduct">
                     {{ $t('codeOfConduct') }}
                 </locale-link>
+                <!-- 
                 <locale-link to="/about/staff">{{ $t('staff') }}</locale-link>
                 <locale-link to="/about/community">
                     {{ $t('community') }}
@@ -12,6 +13,7 @@
                 <locale-link to="/about/privacy-policy">
                     {{ $t('privacyPolicy') }}
                 </locale-link>
+                -->
             </div>
             <div class="flex flex-col ml-20">
                 <ext-link href="https://pycontw.blogspot.tw/">
