@@ -3,7 +3,7 @@
         <h1 class="text-3xl my-8 text-center">{{ $t('title') }}</h1>
         <i18n
             v-for="(content, i) in $t('intro')"
-            :key="i"
+            :key="`tutorial_intro_${i}`"
             :path="`intro.${i}`"
             tag="p"
             class="mt-6 mb-3"
@@ -17,7 +17,7 @@
         <ul class="list-disc">
             <li
                 v-for="(item, i) in $t('requirements')"
-                :key="i"
+                :key="`tutorial_requirement_${i}`"
                 class="my-1 ml-12"
             >
                 {{ item }}
@@ -26,12 +26,15 @@
         <i18n path="proviso" tag="p" class="mt-3 mb-6"></i18n>
 
         <!-- Policies -->
-        <div v-for="(policy, i) in $t('policies')" :key="i">
+        <div
+            v-for="(policy, i) in $t('policies')"
+            :key="`tutorial_policy_${i}`"
+        >
             <h2 class="text-2xl mt-12 mb-6">{{ policy[0] }}</h2>
             <i18n
-                v-for="(description, idx) in policy[1]"
-                :key="idx"
-                :path="`policies.${i}[1].${idx}`"
+                v-for="(description, j) in policy[1]"
+                :key="`tutorial_policy_${i}_description_${j}`"
+                :path="`policies.${i}[1].${j}`"
                 tag="p"
                 class="my-6"
             >

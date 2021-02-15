@@ -14,7 +14,7 @@
         <ul class="list-disc">
             <i18n
                 v-for="(tip, i) in $t('tips')"
-                :key="i"
+                :key="`talk_tips_${i}`"
                 :path="`tips.${i}`"
                 tag="li"
                 class="my-1 ml-12"
@@ -27,7 +27,7 @@
         <ul class="list-disc">
             <i18n
                 v-for="(field, i) in $t('requiredFields-fields')"
-                :key="i"
+                :key="`talk_required_field_${i}`"
                 :path="`requiredFields-fields.${i}`"
                 tag="li"
                 class="my-1 ml-12"
@@ -42,7 +42,7 @@
         <ul class="list-disc">
             <i18n
                 v-for="(content, i) in $t('requiredFields-reviewOnlyFields')"
-                :key="i"
+                :key="`talk_review_only_field_${i}`"
                 :path="`requiredFields-reviewOnlyFields.${i}`"
                 tag="li"
                 class="my-1 ml-12"
@@ -61,7 +61,7 @@
         <ul class="list-disc">
             <li
                 v-for="(conf, i) in previousConfLinks"
-                :key="i"
+                :key="`talk_previous_conf_${i}`"
                 class="my-1 ml-12"
             >
                 <ext-link :href="conf[1]" highlight>
@@ -71,19 +71,22 @@
         </ul>
 
         <!-- Good & Bad Ideas -->
-        <div v-for="(tag, tag_idx) in ['goodIdea', 'badIdea']" :key="tag_idx">
+        <div
+            v-for="(tag, i) in ['goodIdea', 'badIdea']"
+            :key="`talk_idea_type_${i}`"
+        >
             <h3 class="text-xl mt-6 mb-3">{{ $t(`advice-${tag}-title`) }}</h3>
             <ul class="list-disc">
                 <li
-                    v-for="(idea, i) in $t(`advice-${tag}-ideas`)"
-                    :key="i"
+                    v-for="(idea, j) in $t(`advice-${tag}-ideas`)"
+                    :key="`talk_idea_type_${i}_idea_${j}`"
                     class="my-1 ml-12"
                 >
                     {{ idea[0] }}
                     <ul v-if="idea[1]" class="list-disc">
                         <li
-                            v-for="(detail, idx) in idea[1]"
-                            :key="idx"
+                            v-for="(detail, k) in idea[1]"
+                            :key="`talk_idea_type_${i}_idea_${j}_detail_${k}`"
                             class="my-1 ml-12"
                         >
                             {{ detail }}
@@ -97,7 +100,7 @@
         <h2 class="text-2xl mt-12 mb-6">{{ $t('chooseLevel-title') }}</h2>
         <i18n
             v-for="(content, i) in $t('chooseLevel-descriptions')"
-            :key="i"
+            :key="`talk_choose_level_description_${i}`"
             :path="`chooseLevel-descriptions.${i}`"
             tag="p"
             class="my-6"
@@ -106,11 +109,14 @@
                 <b>{{ $t('terms.important') }}</b>
             </template>
         </i18n>
-        <div v-for="(levelInfo, i) in $t('chooseLevel-levels')" :key="i">
+        <div
+            v-for="(levelInfo, i) in $t('chooseLevel-levels')"
+            :key="`talk_choose_level_level_${i}`"
+        >
             <h3 class="text-xl mt-6 mb-3">{{ levelInfo[0] }}</h3>
             <p
-                v-for="(description, idx) in levelInfo[1]"
-                :key="idx"
+                v-for="(description, j) in levelInfo[1]"
+                :key="`talk_choose_level_level_${i}_content_${j}`"
                 class="my-6"
             >
                 {{ description }}

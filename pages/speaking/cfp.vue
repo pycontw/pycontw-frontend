@@ -11,7 +11,7 @@
         ></i18n>
         <i18n
             v-for="(date, i) in $t('importantDates.1')"
-            :key="i"
+            :key="`cfp_dates_${i}`"
             :path="`importantDates.1.${i}`"
             tag="p"
             class="my-1"
@@ -26,7 +26,7 @@
         </i18n>
         <i18n
             v-for="(description, i) in $t('importantDates.2')"
-            :key="i"
+            :key="`cfp_dates_description_${i}`"
             :path="`importantDates.2.${i}`"
             tag="p"
             class="my-6"
@@ -54,7 +54,7 @@
         <i18n path="howToSubmit.0" tag="h2" class="text-2xl mt-12 mb-6"></i18n>
         <i18n
             v-for="(date, i) in $t('howToSubmit.1')"
-            :key="i"
+            :key="`cfp_how_to_submit_${i}`"
             :path="`howToSubmit.1.${i}`"
             tag="p"
             class="my-6"
@@ -81,7 +81,7 @@
         <i18n path="guidelines-talks.0" tag="h3" class="text-xl my-6"></i18n>
         <i18n
             v-for="(description, i) in $t('guidelines-talks.1')"
-            :key="i"
+            :key="`cfp_guidelines_talks_${i}`"
             :path="`guidelines-talks.1.${i}`"
             tag="p"
             class="my-6"
@@ -89,8 +89,8 @@
             <template #previousConfs>
                 <ul class="list-disc">
                     <li
-                        v-for="(conf, idx) in previousConfLinks"
-                        :key="idx"
+                        v-for="(conf, j) in previousConfLinks"
+                        :key="`cfp_previous_conf_${j}`"
                         class="my-1 ml-12"
                     >
                         <ext-link :href="conf[1]" highlight>
@@ -112,7 +112,7 @@
         ></i18n>
         <i18n
             v-for="(description, i) in $t('guidelines-tutorials.1')"
-            :key="i"
+            :key="`cfp_guidelines_tutorials_${i}`"
             :path="`guidelines-tutorials.1.${i}`"
             tag="p"
             class="my-6"
@@ -139,7 +139,7 @@
         <ul class="list-disc">
             <li
                 v-for="(stage, i) in $t('reviewProcess.2')"
-                :key="i"
+                :key="`cfp_review_process_stage_${i}`"
                 class="my-1 ml-12"
             >
                 <b>{{ stage[0] }}</b>
@@ -150,7 +150,7 @@
         <i18n path="modificationStep.0" tag="h3" class="text-xl my-6"></i18n>
         <i18n
             v-for="(description, i) in $t('modificationStep.1')"
-            :key="i"
+            :key="`cfp_modification_step_${i}`"
             :path="`modificationStep.1.${i}`"
             tag="p"
             class="my-6"
@@ -165,7 +165,7 @@
         <i18n path="inappropriate.0" tag="h3" class="text-xl my-6"></i18n>
         <i18n
             v-for="(description, i) in $t('inappropriate.1')"
-            :key="i"
+            :key="`cfp_inappropriate_${i}`"
             :path="`inappropriate.1.${i}`"
             tag="p"
             class="my-6"

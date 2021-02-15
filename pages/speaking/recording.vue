@@ -3,7 +3,7 @@
         <h1 class="text-3xl my-8 text-center">{{ $t('title') }}</h1>
         <i18n
             v-for="(paragraph, i) in $t('paragraphs')"
-            :key="i"
+            :key="`recording_${i}`"
             :path="`paragraphs.${i}`"
             tag="p"
             class="my-8"
