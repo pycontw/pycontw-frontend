@@ -7,7 +7,7 @@
         <ul class="list-disc">
             <li
                 v-for="(service, i) in $t('services')"
-                :key="'sponsor_services_' + i"
+                :key="`sponsor_services_${i}`"
                 class="my-1 ml-12"
             >
                 {{ service }}
