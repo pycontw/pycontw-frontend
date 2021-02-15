@@ -15,6 +15,7 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown>
+        <!--
         <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
@@ -42,6 +43,7 @@
         >
             {{ $t('covid19Guidelines') }}
         </locale-link>
+        -->
     </nav>
 </template>
 
