@@ -13,7 +13,7 @@
         <ul>
             <li
                 v-for="(contact, i) in $t('contactWindows')"
-                :key="'prospectus_contact_window_' + i"
+                :key="`prospectus_contact_window_${i}`"
                 class="my-1"
             >
                 {{ contact }}
@@ -23,7 +23,7 @@
         <!-- intro -->
         <i18n
             v-for="(paragraph, i) in $t('intro')"
-            :key="'prospectus_intro_' + i"
+            :key="`prospectus_intro_${i}`"
             :path="`intro.${i}`"
             tag="p"
             class="my-6"
@@ -32,14 +32,7 @@
         <!-- anchors to sponsor level -->
         <ul class="list-disc">
             <li
-                v-for="(level, i) in [
-                    'diamond',
-                    'platinum',
-                    'gold',
-                    'silver',
-                    'bronze',
-                    'special',
-                ]"
+                v-for="(level, i) in [...sponsorLevels, 'special']"
                 :key="`prospectus_anchors_${i}`"
                 class="my-1 ml-12 text-blue-600 hover:text-blue-800"
             >
@@ -54,7 +47,7 @@
         <ul class="list-disc">
             <li
                 v-for="(item, i) in $t('stats.1')"
-                :key="'prospectus_stats_' + i"
+                :key="`prospectus_stats_${i}`"
                 class="my-1 ml-12"
             >
                 {{ item }}
@@ -67,7 +60,7 @@
         <ul class="list-disc">
             <i18n
                 v-for="(date, i) in $t('importantDates.2')"
-                :key="'prospectus_dates_' + i"
+                :key="`prospectus_dates_${i}`"
                 :path="`importantDates.2.${i}`"
                 tag="li"
                 class="my-1 ml-12"
@@ -85,13 +78,7 @@
         <!-- sponsor package -->
         <h2 class="text-2xl mt-12 mb-6">{{ $t('package-title') }}</h2>
         <div
-            v-for="(level, i) in [
-                'diamond',
-                'platinum',
-                'gold',
-                'silver',
-                'bronze',
-            ]"
+            v-for="(level, i) in sponsorLevels"
             :key="`prospectus_package_${i}`"
         >
             <h3 :id="level" class="text-xl mt-6 mb-3">
@@ -155,16 +142,16 @@
             {{ $t('specialSponsorship-title') }}
         </h2>
         <div
-            v-for="(unit, i) in ['fa', 'food']"
+            v-for="(type, i) in specialSponsorshipTypes"
             :key="`prospectus_special_${i}`"
         >
             <h3 class="text-xl mt-6 mb-3">
-                {{ $t(`specialSponsorship-${unit}.0`) }}
+                {{ $t(`specialSponsorship-${type}.0`) }}
             </h3>
             <ul class="list-disc">
                 <li
-                    v-for="(item, idx) in $t(`specialSponsorship-${unit}.1`)"
-                    :key="`prospectus_special_${unit}_${idx}`"
+                    v-for="(item, idx) in $t(`specialSponsorship-${type}.1`)"
+                    :key="`prospectus_special_${type}_${idx}`"
                     class="my-1 ml-12"
                 >
                     {{ item }}
@@ -197,6 +184,12 @@ export default {
     name: 'PageSponsorProspectus',
     components: {
         ExtLink,
+    },
+    data() {
+        return {
+            sponsorLevels: ['diamond', 'platinum', 'gold', 'silver', 'bronze'],
+            specialSponsorshipTypes: ['fa', 'food'],
+        }
     },
 }
 </script>
