@@ -18,7 +18,7 @@ export default genI18nMessages({
             'PyCon Taiwan continues to connect with new community members locally, ' +
                 'nationally, and globally. Your sponsorship keeps PyCon Taiwan affordable and ' +
                 'accessible to the widest potential audience. Having your support, ' +
-                'we are able to provide financial aid to needed attendences.',
+                'we are able to provide financial aid to needed attendances.',
             'We have several sponsor packages including but not limited to the list below:',
         ],
 
@@ -59,7 +59,7 @@ export default genI18nMessages({
                 'One 30 mins Technical Talks',
                 'Social Media: 4 Posts',
                 'Job Recruitment Description on Website: 2 Posts*',
-                'Logos on Opening of Recorded Videoes*',
+                'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 5 Tickets',
                 'Job Fair*',
@@ -116,8 +116,8 @@ export default genI18nMessages({
             ],
         ],
 
-        'extaPurchase-title': 'Extra Purchase (USD$)',
-        'extaPurchase-table-header': [
+        'extraPurchase-title': 'Extra Purchase (USD$)',
+        'extraPurchase-table-header': [
             'Item',
             'Diamond',
             'Platinum',
@@ -125,7 +125,7 @@ export default genI18nMessages({
             'Silver',
             'Bronze',
         ],
-        'extaPurchase-table-body': [
+        'extraPurchase-table-body': [
             [['Speaker Banquets', '(per person)'], 200, 200, 200, 200, 200],
             ['Talks (30 Mins.)', 'Included', 'Included', 500, '-', '-'],
             [['Social Media', '(per post)'], 200, 300, 300, 500, 600],
@@ -154,7 +154,7 @@ export default genI18nMessages({
             [
                 'Giveback to the Python community, providing financial aid to the association.',
                 'Exclusive promotions to aid receivers.',
-                'Acquire personal information upder the aid receiver’s agreement.',
+                'Acquire personal information under the aid receiver’s agreement.',
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
@@ -182,8 +182,8 @@ export default genI18nMessages({
                 'PyCon TW 2021. However, PyCon TW 2021 reserves the right to further evaluate such action.',
             'Diamond Sponsorship includes the title right of the main conference room, ' +
                 'PyCon TW 2021 reserves the right to evaluate such action.',
-            'To further promote diversity of PyCon TW 2021, company(group / sponsoring) tickets will not ' +
-                'exceeded 1 / 3 of the total pass sold.Thus, such group passes are sold in a first come ' +
+            'To further promote diversity of PyCon TW 2021, company (group / sponsoring) tickets will not ' +
+                'exceeded 1 / 3 of the total pass sold. Thus, such group passes are sold in a first come ' +
                 'first served manner, please order ASAP.',
             'Sponsor packages may be affected and changed due to the outbreak of COVID-19, ' +
                 'final version will be released on mid June along with conference details.',
@@ -221,7 +221,7 @@ export default genI18nMessages({
         stats: [
             '2020 快速總覽',
             [
-                '出席人數 400+ （2020 為 PyCon TW 首次移師南台灣）',
+                '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
                 '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
                 '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
             ],
@@ -291,7 +291,7 @@ export default genI18nMessages({
             '銀級贊助 - 名額 8 名，贊助金額：110,000 元',
             [
                 '企業票 6 張',
-                '網站首頁公司宣傳 (標誌及介紹)',
+                '網站首頁公司宣傳 （標誌及介紹）',
                 '主會場精緻攤位',
                 '社群媒體宣傳 1 篇',
                 '網站徵才牆 1 篇',
@@ -304,13 +304,13 @@ export default genI18nMessages({
             '銅級贊助 - 名額 10 名，贊助金額：40,000 元',
             [
                 '企業票 2 張',
-                '網站首頁公司宣傳 (標誌及介紹)',
+                '網站首頁公司宣傳（標誌及介紹）',
                 '社群媒體宣傳 1 篇',
             ],
         ],
 
-        'extaPurchase-title': '各級贊助方案加價購列表 (單位：新台幣)',
-        'extaPurchase-table-header': [
+        'extraPurchase-title': '各級贊助方案加價購列表（單位：新台幣）',
+        'extraPurchase-table-header': [
             '項目',
             '鑽石級',
             '白金級',
@@ -318,7 +318,7 @@ export default genI18nMessages({
             '銀級',
             '銅級',
         ],
-        'extaPurchase-table-body': [
+        'extraPurchase-table-body': [
             ['講者晚宴 / 人', 6000, 6000, 6000, 6000, 6000],
             ['技術演講（30 分鐘）', '已包含', '已包含', 15000, '無', '無'],
             ['社群媒體宣傳 / 篇', 6000, 9000, 9000, 15000, 18000],
@@ -341,20 +341,20 @@ export default genI18nMessages({
                 '回饋社群，贊助需財務補助之會眾。',
                 '針對個別被贊助之會眾的公司宣傳。',
                 '得在被贊助者同意下獲取其個人資訊。',
-                '網站特別贊助區塊之公司宣傳 (標誌及介紹)。',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）。',
             ],
         ],
         'specialSponsorship-food': [
             '主場地餐點認養 - 名額 3 名，單一贊助金額：40,000 元，可以總額認養。',
             [
                 '主場地餐點區品牌宣傳，實體標誌展出。',
-                '網站特別贊助區塊之公司宣傳 (標誌及介紹)。',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）。',
             ],
         ],
 
         'note-title': '備註',
         'note-items': [
-            '徵才介紹 (Job Fair), 每組 5 分鐘為限。',
+            '徵才介紹（Job Fair）， 每組 5 分鐘為限。',
             'PyCon TW 2021 無電子版大會手冊，所有內容整合至網站以及 APP。',
             'PyCon TW 2021 無迎賓袋以及實體文宣，贊助商可自行自作發放。',
             '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限',
