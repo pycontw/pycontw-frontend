@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-us/speaking/cfp", {data:[{}],fetch:[],mutations:void 0});

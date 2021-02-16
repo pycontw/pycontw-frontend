@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{267:function(e,n,t){"use strict";t.r(n);var c={name:"PageCodeOfConduct"},o=t(4),component=Object(o.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("p",[this._v("CODE OF CONDUCT")])}),[],!1,null,"783e9b20",null);n.default=component.exports}}]);
