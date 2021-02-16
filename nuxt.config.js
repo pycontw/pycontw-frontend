@@ -1,9 +1,10 @@
-const DEFAULT_BASE_URL = 'http://localhost:3000'
+const DEFAULT_BASE_URL = 'http://staging.pycon.tw/2021'
 const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
+const DEFAULT_BUILD_TARGET = 'static'
 
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
-    target: 'server',
+    target: process.env.BUILD_TARGET || DEFAULT_BUILD_TARGET,
 
     // Re-route for GitHub Pages to serve with /assets
     router: {
