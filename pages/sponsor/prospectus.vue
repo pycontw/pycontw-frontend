@@ -96,12 +96,12 @@
         </div>
 
         <!-- Extra Purchase -->
-        <h2 class="text-2xl mt-12 mb-6">{{ $t('extaPurchase-title') }}</h2>
+        <h2 class="text-2xl mt-12 mb-6">{{ $t('extraPurchase-title') }}</h2>
         <table class="relative w-full table-fixed border-collapse">
             <thead>
                 <tr>
                     <th
-                        v-for="(item, i) in $t('extaPurchase-table-header')"
+                        v-for="(item, i) in $t('extraPurchase-table-header')"
                         :key="`prospectus_extra_purchase_header_${i}`"
                         class="font-bold text-left px-2 table-cell tracking-wider border-b-2 border-gray-500"
                     >
@@ -111,7 +111,7 @@
             </thead>
             <tbody>
                 <tr
-                    v-for="(row, row_idx) in $t('extaPurchase-table-body')"
+                    v-for="(row, row_idx) in $t('extraPurchase-table-body')"
                     :key="`prospectus_extra_purchase_row_${row_idx}`"
                     class="border-b border-gray-500 flex-wrap"
                 >

@@ -6,8 +6,8 @@ export default genI18nMessages({
         intro: [
             'PyCon Taiwan is driven by our members and, YOU, our awesome sponsor partners! ' +
                 'Your generous support is the helping us to move forward.',
-            'PyCon Taiwan calls for your sponsorship in order to enlarging our community. ' +
-                'Our sponsorship packages includes items that:',
+            'PyCon Taiwan calls for your sponsorship in order to enlarging our community.',
+            'Our sponsorship packages includes items that:',
         ],
         services: [
             'Increase Visibility on Python Community',
