@@ -33,16 +33,18 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 
 export default {
     i18n,
     name: 'PageIndex',
-    async asyncData({ $axios }) {
-        const { data: sponsorsData } = await $axios.$get('/api/sponsors')
-        return {
-            sponsorsData,
-        }
+    fetchOnServer: false,
+    computed: {
+        ...mapState(['sponsorsData']),
+    },
+    created() {
+        this.$store.dispatch('$getSponsorsData')
     },
 }
 </script>
