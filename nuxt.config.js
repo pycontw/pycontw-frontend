@@ -56,8 +56,6 @@ export default {
         fallbackLocale: 'en-us',
         locales: ['en-us', 'zh-hant'],
         detectBrowserLanguage: {
-            useCookie: true,
-            cookieKey: 'i18n_redirected',
             onlyOnRoot: true, // recommended
         },
     },
