@@ -31,7 +31,7 @@
 <script>
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
-import i18n from './index.i18n'
+import i18n from '@/i18n/sponsor/index.i18n'
 
 export default {
     i18n,

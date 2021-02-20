@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import i18n from './code-of-conduct.i18n'
+import i18n from '@/i18n/about/code-of-conduct.i18n'
 
 export default {
     i18n,

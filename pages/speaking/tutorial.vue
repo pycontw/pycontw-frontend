@@ -51,7 +51,7 @@
 <script>
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
-import i18n from './tutorial.i18n'
+import i18n from '@/i18n/speaking/tutorial.i18n'
 
 export default {
     i18n,

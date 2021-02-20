@@ -177,7 +177,7 @@
 
 <script>
 import ExtLink from '@/components/core/links/ExtLink.vue'
-import i18n from './prospectus.i18n'
+import i18n from '@/i18n/sponsor/prospectus.i18n'
 
 export default {
     i18n,

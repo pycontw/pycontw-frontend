@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import i18n from './recording.i18n'
-import ExtLink from '~/components/core/links/ExtLink'
+import ExtLink from '@/components/core/links/ExtLink'
+import i18n from '@/i18n/speaking/recording.i18n'
 
 export default {
     i18n,

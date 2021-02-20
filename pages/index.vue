@@ -2,7 +2,7 @@
     <div>
         <div class="container">
             <div>
-                <h1 class="text-6xl">PyCon Taiwan 2021 Coming Soon</h1>
+                <h1 class="text-6xl">{{ $t('pyconComingSoon') }}</h1>
             </div>
         </div>
         <h3>sponsor list</h3>
@@ -33,7 +33,10 @@
 </template>
 
 <script>
+import i18n from '@/i18n/index.i18n'
+
 export default {
+    i18n,
     name: 'PageIndex',
     async asyncData({ $axios }) {
         const { data: sponsorsData } = await $axios.$get('/api/sponsors')
