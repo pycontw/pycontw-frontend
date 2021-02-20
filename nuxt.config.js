@@ -3,7 +3,7 @@ const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
 
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
-    target: 'static',
+    target: 'server',
 
     // Re-route for GitHub Pages to serve with /assets
     router: {
