@@ -44,7 +44,7 @@ export default {
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
         // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios',
+        '@nuxt/http',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
     ],
@@ -62,8 +62,8 @@ export default {
         },
     },
 
-    // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-    axios: {
+    // http module configuration (https://http.nuxtjs.org/options)
+    http: {
         baseURL: process.env.BASE_URL || DEFAULT_BASE_URL,
     },
 
