@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-hant/about", {data:[{}],fetch:[],mutations:void 0});

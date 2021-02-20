@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/events/sprints", {data:[{}],fetch:[],mutations:void 0});

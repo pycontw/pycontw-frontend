@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/about/community", {data:[{}],fetch:[],mutations:void 0});
