@@ -20,7 +20,7 @@
             <core-menu-item
                 v-for="(lang, i) in languages"
                 :key="`language_${i}`"
-                @click="onClickLang(hideMenu, switchLocalePath, lang)"
+                @click="onClickLang(hideMenu, lang)"
             >
                 {{ $t(lang) }}
             </core-menu-item>
@@ -46,9 +46,9 @@ export default {
         }
     },
     methods: {
-        onClickLang(hideMenu, switchLocalePath, lang) {
+        onClickLang(hideMenu, lang) {
             this.$i18n.locale = lang
-            this.$router.push(switchLocalePath(lang))
+            this.$router.push(this.switchLocalePath(lang))
             hideMenu()
         },
     },

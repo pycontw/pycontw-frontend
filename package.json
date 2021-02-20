@@ -7,13 +7,14 @@
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate",
+        "serve": "npm run build && npm run start",
         "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
         "lint": "npm run lint:js",
         "test": "jest",
         "json-server": "./node_modules/.bin/json-server --watch db.json --routes routes.json --port 9876"
     },
     "dependencies": {
-        "@nuxtjs/axios": "^5.12.2",
+        "@nuxt/http": "^0.6.2",
         "core-js": "^3.6.5",
         "nuxt": "^2.14.6",
         "nuxt-i18n": "^6.18.0"

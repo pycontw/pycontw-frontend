@@ -3,7 +3,7 @@ const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
 
 export default {
     // Target (https://go.nuxtjs.dev/config-target)
-    target: 'static',
+    target: 'server',
 
     // Re-route for GitHub Pages to serve with /assets
     router: {
@@ -44,7 +44,7 @@ export default {
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
         // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios',
+        '@nuxt/http',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
     ],
@@ -56,14 +56,12 @@ export default {
         fallbackLocale: 'en-us',
         locales: ['en-us', 'zh-hant'],
         detectBrowserLanguage: {
-            useCookie: true,
-            cookieKey: 'i18n_redirected',
             onlyOnRoot: true, // recommended
         },
     },
 
-    // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-    axios: {
+    // http module configuration (https://http.nuxtjs.org/options)
+    http: {
         baseURL: process.env.BASE_URL || DEFAULT_BASE_URL,
     },
 

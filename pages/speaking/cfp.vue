@@ -182,7 +182,7 @@
 <script>
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
-import i18n from './cfp.i18n'
+import i18n from '@/i18n/speaking/cfp.i18n'
 
 export default {
     i18n,

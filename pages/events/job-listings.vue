@@ -20,11 +20,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     name: 'PageEventsJobListings',
-    async asyncData({ $axios }) {
-        const { data: jobsData } = await $axios.$get('/api/jobs')
-        return { jobsData }
+    fetchOnServer: false,
+    computed: {
+        ...mapState(['jobsData']),
+    },
+    created() {
+        this.$store.dispatch('$getJobsData')
     },
 }
 </script>
