@@ -24,8 +24,7 @@ export default genI18nMessages({
                 'distinguishes PyCon Taiwan ' +
                 'from other conferences in Taiwan. ' +
                 'The chairperson, yyc, ' +
-                'cheerfully {linkYycBlog2012}.' +
-                '{year2013}',
+                'cheerfully {linkYycBlog2012}.',
             year2013:
                 'In 2013, the re-elected chairperson, yyc, ' +
                 'decided to expand the scale of PyCon Taiwan, ' +
