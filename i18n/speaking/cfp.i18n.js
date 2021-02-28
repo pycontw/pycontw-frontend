@@ -9,8 +9,8 @@ export default genI18nMessages({
         importantDates: [
             'Important Dates',
             [
-                'Talks & Tutorial CfP begins: March 1st',
-                'Talks & Tutorial CfP ends: Apr 26, 23:59:59 ({AoE})',
+                'Talks & Tutorial CFP begins: March 1st',
+                'Talks & Tutorial CFP ends: Apr 26, 23:59:59 ({AoE})',
                 'Announcement of acceptance: In the end of June (tentative)',
             ],
             [
@@ -76,7 +76,7 @@ export default genI18nMessages({
 
         reviewProcess: [
             'Proposals Review Process',
-            'After the Call for Proposal ends, and before the announcement of acceptance, ' +
+            'After the Call for Proposals ends, and before the announcement of acceptance, ' +
                 'the PyCon TW 2021 Proposals Review Committee is going to review the proposals and give scores and provide feedback. ' +
                 'The process consists of three phases: ',
             [
