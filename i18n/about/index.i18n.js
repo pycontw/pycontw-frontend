@@ -85,7 +85,7 @@ export default genI18nMessages({
                 'interactive games combining sensor technology and ' +
                 'a vending machine, and experience-sharing talks ' +
                 'about teaching programming to young adults. ' +
-                'The {linkPhotoAlbum} have our most treasuring memories.',
+                'The {linkPhotoAlbum} have our most treasurous memories.',
             year2017:
                 '2017 is our most futuristic PyCon Taiwan ever. ' +
                 'All of our keynote speakers, including globally renowned ' +
@@ -118,12 +118,23 @@ export default genI18nMessages({
                 'Python communities, ' +
                 'and kept adopting innovative plans.',
             year2020:
-                'Following the expectation and work of 2019, ' +
-                'we host PyCon Taiwan in Tainan. ' +
+                'In 2020, we hosted PyCon Taiwan in Tainan. ' +
                 'This is the first time we host PyCon Taiwan ' +
                 'in southern Taiwan. ' +
+                'Another new attempt is Community Track. ' +
+                'While interacting with local Communities, ' +
+                'attendees can get a taste of local culture in ' +
+                'a different ambience. ' +
                 'We hope we could bring local communities more and ' +
                 'different experience.',
+            year2021:
+                'In 2021, as the 10th anniversary of PyCon Taiwan ' +
+                'is approaching, we could be the world’s only offline PyCon. ' +
+                'Besides passing on experience in communities, ' +
+                'we also take new steps in activities, ' +
+                'like Podcast and Young Talent, ' +
+                'to facilitate and encourage the exchanging ' +
+                'of views among different groups.',
             outro:
                 'As a platform for Python communities, ' +
                 'PyCon Taiwan invites all Python users, developers, ' +
@@ -206,7 +217,15 @@ export default genI18nMessages({
             year2020:
                 '延續 2019 的能量，' +
                 '在 2020 我們首次嘗試將 PyCon Taiwan 搬到濁水溪以南的台南，' +
-                '以期能夠替更多台灣在地社群，注入新的活水與帶來更多彼此交流後不一樣的火花。',
+                '並首次舉辦「社群體驗式議程軌」，讓會眾在與地方社群交流的同時，' +
+                '也能在不同場地細細品味台南在地文化。' +
+                '替更多台灣在地社群注入新的活水，帶來更多交流。',
+            year2021:
+                '2021 年是 PyCon Taiwan 的十周年，' +
+                '面對疫情當前的現在，PyCon Taiwan 可能是今年全球少數能實體舉辦的 PyCon 。' +
+                '今年 PyCon Taiwan 除了傳承十年來的社群交流經驗，' +
+                '我們更做了一些新嘗試，像是 Podcast 、 Young Talent 分享會等。' +
+                '以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
             outro:
                 '台灣 Python 年會自許為一個交流平台，' +
                 '我們誠摯邀請每一個台灣 Python 使用者、開發者、推廣者一起多加利用與參與。',
