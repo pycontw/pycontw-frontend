@@ -41,8 +41,8 @@ export default genI18nMessages({
                 'Call for Proposal: March 1st, 2021',
                 'Deadline of Call for Proposal: April 26th, 2021 23:59:59 ({AoE})',
                 'Schedule Announcement: in the end of June, 2021 (tentative)',
-                'Job Fair: TBD',
-                'Main Conference: TBD',
+                'Job Fair: 8/21 Sat. (tentative)',
+                'Main Conference: 8/20 Fri. ~ 8/22 Sun. (tentative)',
             ],
         ],
 
@@ -234,8 +234,8 @@ export default genI18nMessages({
                 '議程、課程 開放徵稿：3 月 1 日',
                 '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
                 '公告完整議程：6 月 下旬（暫定）',
-                'Job Fair：未定',
-                '研討會日：未定',
+                'Job Fair：8 月 21 日 (六) (暫定)',
+                '研討會日：8 月 20 日 (五) 至 8 月 22 日 (日) (暫定)',
             ],
         ],
 
