@@ -1,13 +1,15 @@
 <template>
-    <div class="px-64 py-24">
-        <h1 class="text-3xl my-8 text-center">{{ $t('pageTitle') }}</h1>
+    <i18n-page-wrapper>
+        <h1>
+            {{ $t('pageTitle') }}
+        </h1>
         <i18n
             v-if="$t('paragraph.intro')"
             path="paragraph.intro"
             tag="p"
             class="paragraph"
         ></i18n>
-        <i18n path="paragraph.year2008And2011" tag="p" class="paragraph">
+        <i18n path="paragraph.year2008And2011" tag="p">
             <template #linkPyCtw2008>
                 <ext-link :href="linkPyCtw2008" highlight>2008</ext-link>
             </template>
@@ -15,7 +17,7 @@
                 <ext-link :href="linkPyCtw2011" highlight>2011</ext-link>
             </template>
         </i18n>
-        <i18n path="paragraph.year2012And2013" tag="p" class="paragraph">
+        <i18n path="paragraph.year2012And2013" tag="p">
             <template #linkEverybodyPays>
                 <ext-link :href="linkEverybodyPays" highlight
                     >Everybody Pays</ext-link
@@ -44,13 +46,13 @@
                 }}</ext-link>
             </template>
         </i18n>
-        <i18n path="paragraph.year2014And2015" tag="p" class="paragraph">
+        <i18n path="paragraph.year2014And2015" tag="p">
             <template #linkCheckIo>
                 <ext-link :href="linkCheckIo" highlight>CheckIO</ext-link>
             </template>
         </i18n>
-        <i18n path="paragraph.pyDay2015" tag="p" class="paragraph"></i18n>
-        <i18n path="paragraph.year2016" tag="p" class="paragraph">
+        <i18n path="paragraph.pyDay2015" tag="p"></i18n>
+        <i18n path="paragraph.year2016" tag="p">
             <template #linkPyConBlog2016>
                 <ext-link :href="linkPyConBlog2016" highlight>{{
                     $t('link.pyConBlog2016')
@@ -62,13 +64,13 @@
                 }}</ext-link>
             </template>
         </i18n>
-        <i18n path="paragraph.year2017" tag="p" class="paragraph"></i18n>
-        <i18n path="paragraph.year2018" tag="p" class="paragraph"></i18n>
-        <i18n path="paragraph.year2019" tag="p" class="paragraph"></i18n>
-        <i18n path="paragraph.year2020" tag="p" class="paragraph"></i18n>
-        <i18n path="paragraph.outro" tag="p" class="paragraph"></i18n>
+        <i18n path="paragraph.year2017" tag="p"></i18n>
+        <i18n path="paragraph.year2018" tag="p"></i18n>
+        <i18n path="paragraph.year2019" tag="p"></i18n>
+        <i18n path="paragraph.year2020" tag="p"></i18n>
+        <i18n path="paragraph.outro" tag="p"></i18n>
 
-        <div class="flex w-full mt-32 mb-8 justify-center">
+        <div class="flex flex-wrap w-full mt-32 mb-8 justify-center">
             <ext-link
                 v-for="(history, i) in histories"
                 :key="`about_history_${i}`"
@@ -78,17 +80,19 @@
                 >{{ history.label }}</ext-link
             >
         </div>
-    </div>
+    </i18n-page-wrapper>
 </template>
 
 <script>
 import i18n from '@/i18n/about/index.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import ExtLink from '@/components/core/links/ExtLink'
 
 export default {
     i18n,
     name: 'PageAbout',
     components: {
+        I18nPageWrapper,
         ExtLink,
     },
     data() {
@@ -148,8 +152,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.paragraph {
-    @apply .my-1 .mb-6 .text-justify;
-}
-</style>
+<style scoped></style>

@@ -1,12 +1,11 @@
 <template>
-    <div class="px-64 py-24">
-        <h1 class="text-3xl my-8 text-center">{{ $t('title') }}</h1>
+    <i18n-page-wrapper>
+        <h1>{{ $t('title') }}</h1>
         <i18n
             v-for="(content, i) in $t('intro')"
             :key="`tutorial_intro_${i}`"
             :path="`intro.${i}`"
             tag="p"
-            class="mt-6 mb-3"
         >
             <template #cfp>
                 <locale-link to="/speaking/cfp" highlight>{{
@@ -18,25 +17,23 @@
             <li
                 v-for="(item, i) in $t('requirements')"
                 :key="`tutorial_requirement_${i}`"
-                class="my-1 ml-12"
             >
                 {{ item }}
             </li>
         </ul>
-        <i18n path="proviso" tag="p" class="mt-3 mb-6"></i18n>
+        <i18n path="proviso" tag="p"></i18n>
 
         <!-- Policies -->
         <div
             v-for="(policy, i) in $t('policies')"
             :key="`tutorial_policy_${i}`"
         >
-            <h2 class="text-2xl mt-12 mb-6">{{ policy[0] }}</h2>
+            <h2>{{ policy[0] }}</h2>
             <i18n
                 v-for="(description, j) in policy[1]"
                 :key="`tutorial_policy_${i}_description_${j}`"
                 :path="`policies.${i}[1].${j}`"
                 tag="p"
-                class="my-6"
             >
                 <template #contact>
                     <ext-link href="mailto:organizers@pycon.tw" highlight>{{
@@ -45,10 +42,11 @@
                 </template>
             </i18n>
         </div>
-    </div>
+    </i18n-page-wrapper>
 </template>
 
 <script>
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import i18n from '@/i18n/speaking/tutorial.i18n'
@@ -57,6 +55,7 @@ export default {
     i18n,
     name: 'PageSpeakingTutorial',
     components: {
+        I18nPageWrapper,
         LocaleLink,
         ExtLink,
     },
