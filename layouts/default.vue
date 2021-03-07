@@ -42,6 +42,6 @@ html {
     display: grid;
     height: 100vh;
     grid-template-rows: 60px auto 280px;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
 }
 </style>
