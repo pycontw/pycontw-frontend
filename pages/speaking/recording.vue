@@ -1,12 +1,11 @@
 <template>
-    <div class="px-64 py-24">
-        <h1 class="text-3xl my-8 text-center">{{ $t('title') }}</h1>
+    <i18n-page-wrapper>
+        <h1>{{ $t('title') }}</h1>
         <i18n
             v-for="(paragraph, i) in $t('paragraphs')"
             :key="`recording_${i}`"
             :path="`paragraphs.${i}`"
             tag="p"
-            class="my-8"
         >
             <template #pyvideo>
                 <ext-link href="https://pyvideo.org" highlight
@@ -14,10 +13,11 @@
                 >
             </template>
         </i18n>
-    </div>
+    </i18n-page-wrapper>
 </template>
 
 <script>
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import ExtLink from '@/components/core/links/ExtLink'
 import i18n from '@/i18n/speaking/recording.i18n'
 
@@ -25,6 +25,7 @@ export default {
     i18n,
     name: 'PageSpeakingRecording',
     components: {
+        I18nPageWrapper,
         ExtLink,
     },
 }
