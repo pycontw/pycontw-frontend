@@ -203,7 +203,7 @@ export default genI18nMessages({
         contact: '聯絡方式：電子信箱 {mail} 致「台灣 Python 年會贊助組」收',
         contactWindows: [
             '台灣 Python 年會 2021 大會主席 李唯',
-            '台灣 Python 年會 2021 議程主席 柯文華',
+            '台灣 Python 年會 2021 議程主席 柯彣樺',
             '台灣 Python 年會 2021 贊助總監 王品淳',
         ],
         intro: [

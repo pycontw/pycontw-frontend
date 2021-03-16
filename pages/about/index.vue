@@ -68,6 +68,7 @@
         <i18n path="paragraph.year2018" tag="p"></i18n>
         <i18n path="paragraph.year2019" tag="p"></i18n>
         <i18n path="paragraph.year2020" tag="p"></i18n>
+        <i18n path="paragraph.year2021" tag="p"></i18n>
         <i18n path="paragraph.outro" tag="p"></i18n>
 
         <div class="flex flex-wrap w-full mt-32 mb-8 justify-center">
