@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col px-4 py-8 bg-orange-300">
+    <div class="flex flex-col px-4 py-8 bg-dark-primary text-golden">
         <div class="flex justify-center">
             <div class="flex flex-col mr-20">
                 <locale-link to="/about/code-of-conduct">
