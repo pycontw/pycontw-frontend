@@ -64,6 +64,18 @@ export default {
     text-align: center;
 }
 
+.text-golden {
+    color: #c2a53a;
+}
+
+.bg-golden-primary {
+    background: #c2a53a;
+}
+
+.bg-dark-primary {
+    background: #212121;
+}
+
 .title {
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
         BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
