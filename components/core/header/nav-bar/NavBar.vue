@@ -44,13 +44,19 @@
             {{ $t('covid19Guidelines') }}
         </locale-link>
         -->
+        <ext-link
+            href="https://forms.gle/wuG2w42cbhamyGdv9"
+            :class="getPageClassesByPath('volunteer', true)"
+        >
+            {{ $t('volunteer') }}
+        </ext-link>
     </nav>
 </template>
 
 <script>
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
-import { LocaleLink } from '~/components/core/links'
+import { LocaleLink, ExtLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -58,6 +64,7 @@ export default {
     components: {
         NavBarItemDropdown,
         LocaleLink,
+        ExtLink,
     },
     computed: {
         conferenceItems() {
