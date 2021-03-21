@@ -1,6 +1,7 @@
 <template>
     <div class="default-layout">
         <core-header />
+        <announce-bar />
         <Nuxt />
         <core-footer />
     </div>
@@ -9,11 +10,13 @@
 <script>
 import CoreFooter from '~/components/core/footer'
 import CoreHeader from '~/components/core/header'
+import AnnounceBar from '~/components/core/announce-bar'
 
 export default {
     components: {
         CoreHeader,
         CoreFooter,
+        AnnounceBar,
     },
 }
 </script>
@@ -41,7 +44,7 @@ html {
 .default-layout {
     display: grid;
     height: 100vh;
-    grid-template-rows: 60px auto 280px;
+    grid-template-rows: 60px auto auto 280px;
     grid-template-columns: 100%;
 }
 </style>

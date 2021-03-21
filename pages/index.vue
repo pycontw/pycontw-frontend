@@ -2,7 +2,19 @@
     <div>
         <div class="container">
             <div>
-                <h1 class="text-6xl">{{ $t('pyconComingSoon') }}</h1>
+                <h1 class="text-6xl">{{ $t('pyconWelcome') }}</h1>
+                <div class="flex mt-8">
+                    <p class="rounded-button text-2xl px-12 py-2 mr-4">
+                        <locale-link to="sponsor">{{
+                            $t('sponsor')
+                        }}</locale-link>
+                    </p>
+                    <p class="rounded-button text-2xl px-12 py-2 mr-4">
+                        <ext-link href="https://forms.gle/wuG2w42cbhamyGdv9">{{
+                            $t('volunteer')
+                        }}</ext-link>
+                    </p>
+                </div>
             </div>
         </div>
         <!--        <h3>sponsor list</h3>-->
@@ -35,10 +47,15 @@
 <script>
 // import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
+import { LocaleLink, ExtLink } from '~/components/core/links'
 
 export default {
     i18n,
     name: 'PageIndex',
+    components: {
+        LocaleLink,
+        ExtLink,
+    },
     // fetchOnServer: false,
     // computed: {
     //     ...mapState(['sponsorsData']),
@@ -64,6 +81,18 @@ export default {
     text-align: center;
 }
 
+.text-golden {
+    color: #c2a53a;
+}
+
+.bg-golden-primary {
+    background: #c2a53a;
+}
+
+.bg-dark-primary {
+    background: #212121;
+}
+
 .title {
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
         BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
@@ -85,5 +114,17 @@ export default {
 
 .links {
     padding-top: 15px;
+}
+
+.rounded-button {
+    border-radius: 30px;
+    border: 3px solid #212121;
+    color: #212121;
+}
+
+.rounded-button:hover {
+    border-radius: 30px;
+    border: 3px solid #526488;
+    color: #526488;
 }
 </style>

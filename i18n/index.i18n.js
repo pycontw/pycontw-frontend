@@ -2,9 +2,13 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        pyconComingSoon: 'PyCon TW 2021 Coming Soon',
+        pyconWelcome: 'Welcome to PyCon TW 2021',
+        sponsor: 'Sponsor Us',
+        volunteer: 'Join as Volunteer',
     },
     'zh-hant': {
-        pyconComingSoon: 'PyCon TW 2021 即將到來',
+        pyconWelcome: '歡迎來到 PyCon TW 2021',
+        sponsor: '贊助我們',
+        volunteer: '成為志工',
     },
 })
