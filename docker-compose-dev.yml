@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  mock-server:
+    container_name: mock-server
+    ports:
+      - "9876:9876"
+    build:
+      context: .
+      dockerfile: mock-server.Dockerfile
+
+  pycontw-2021:
+    container_name: pycontw-2021-frontend-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - .:/app:cached
+      - ./node_modules:/app/node_modules:delegated
+    environment: 
+      - BUILD_TARGET=server
+      - ROUTER_BASE=/
+      - HOST=0.0.0.0
+      - BASE_URL=http://mock-server:9876
+      - API_URL_BROWSER=http://0.0.0.0:9876
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    command: npm run dev
