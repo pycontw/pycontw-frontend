@@ -5,8 +5,10 @@
                 <locale-link to="/about/code-of-conduct">
                     {{ $t('codeOfConduct') }}
                 </locale-link>
+                <locale-link to="/about/staff">
+                    {{ $t('staff') }}
+                </locale-link>
                 <!-- 
-                <locale-link to="/about/staff">{{ $t('staff') }}</locale-link>
                 <locale-link to="/about/community">
                     {{ $t('community') }}
                 </locale-link>
