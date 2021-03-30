@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = 'http://staging.pycon.tw/2021'
+const DEFAULT_BASE_URL = 'http://staging.pycon.tw/prs'
 const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
 const DEFAULT_BUILD_TARGET = 'static'
 
