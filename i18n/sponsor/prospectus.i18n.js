@@ -18,8 +18,8 @@ export default genI18nMessages({
             'PyCon Taiwan continues to connect with new community members locally, ' +
                 'nationally, and globally. Your sponsorship keeps PyCon Taiwan affordable and ' +
                 'accessible to the widest potential audience. Having your support, ' +
-                'we are able to provide financial aid to needed attendances.',
-            'We have several sponsor packages including but not limited to the list below:',
+                'we are able to provide financial aid to needed attendees.',
+            'We have several sponsorship packages including but not limited to the list below:',
         ],
 
         stats: [
@@ -27,10 +27,11 @@ export default genI18nMessages({
             [
                 '400+ attendees (as the first southern Taiwan PyCon TW)',
                 'Most attendees are software engineers. ' +
-                    'Others are: potential job seekers, data scientist, students, managers, researchers, ' +
+                    'Others are: potential job seekers, data scientists, students, managers, researchers, ' +
                     'CEOs and CTOs etc.',
                 'Over half of attendees are Python users for 1-5 years, and ' +
                     'around 20% attendees have been using Python for more than 5 years.',
+                'Feel free to review our wonderful moments from the photos: PyCon Taiwan flickr album',
             ],
         ],
 
@@ -46,7 +47,7 @@ export default genI18nMessages({
             ],
         ],
 
-        'package-title': 'Sponsor Packages',
+        'package-title': 'Sponsorship Packages',
         'package-diamond': [
             'Diamond Level Sponsorship - USD$ 16,200 (Available: 1)',
             [
@@ -148,13 +149,13 @@ export default genI18nMessages({
             ],
         ],
 
-        'specialSponsorship-title': 'Special Sponsorship',
+        'specialSponsorship-title': 'Special Sponsorship Packages',
         'specialSponsorship-fa': [
             'Community Financial Aid Sponsorship - USD$ 1,700 (Limit: 5)',
             [
-                'Giveback to the Python community, providing financial aid to the association.',
+                'Provide financial aid to needed attendees.',
                 'Exclusive promotions to aid receivers.',
-                'Acquire personal information under the aid receiver’s agreement.',
+                'Acquire personal information under the aid receivers’ agreement.',
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
@@ -224,6 +225,7 @@ export default genI18nMessages({
                 '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
                 '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
                 '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
+                '歡迎從照片中一起回顧我們的精彩的時刻：PyCon Taiwan flickr album',
             ],
         ],
 
@@ -336,19 +338,19 @@ export default genI18nMessages({
 
         'specialSponsorship-title': '特別贊助方案',
         'specialSponsorship-fa': [
-            '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養。',
+            '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養',
             [
-                '回饋社群，贊助需財務補助之會眾。',
-                '針對個別被贊助之會眾的公司宣傳。',
-                '得在被贊助者同意下獲取其個人資訊。',
-                '網站特別贊助區塊之公司宣傳（標誌及介紹）。',
+                '贊助需財務補助之會眾',
+                '針對個別被贊助之會眾的公司宣傳',
+                '得在被贊助者同意下獲取其個人資訊',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
         'specialSponsorship-food': [
-            '主場地餐點認養 - 名額 3 名，單一贊助金額：40,000 元，可以總額認養。',
+            '主場地餐點認養 - 名額 3 名，單一贊助金額：40,000 元，可以總額認養',
             [
-                '主場地餐點區品牌宣傳，實體標誌展出。',
-                '網站特別贊助區塊之公司宣傳（標誌及介紹）。',
+                '主場地餐點區品牌宣傳，實體標誌展出',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
 
@@ -356,14 +358,14 @@ export default genI18nMessages({
         'note-items': [
             '徵才介紹（Job Fair）， 每組 5 分鐘為限。',
             'PyCon TW 2021 無電子版大會手冊，所有內容整合至網站以及 APP。',
-            'PyCon TW 2021 無迎賓袋以及實體文宣，贊助商可自行自作發放。',
-            '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限',
+            'PyCon TW 2021 無迎賓袋以及實體文宣，贊助商可自行製作發放。',
+            '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限。',
             '關於技術演講的購買限制，基本上一個贊助商限制買一個，' +
                 '若廠商有特殊需求，則由主辦方討論與決定。',
             '鑽石級贊助方案包含之冠名贊助權，表示贊助者的標誌會與 PyCon TW 2021 同時出現，' +
-                '但 PyCon TW 2021 主辦方保留解釋權利。',
-            '鑽石級贊助方案包含之主場地會議室冠名權，表示贊助者可命名該會議室，' +
-                '但 PyCon TW 2021 主辦方保留審核權利。',
+                ' PyCon TW 2021 主辦方保留解釋權利。',
+            '鑽石級贊助方案包含之主場地會議室冠名權，表示贊助商可命名該會議室，' +
+                ' PyCon TW 2021 主辦方保留審核權利。',
             '網站徵才牆排列順序按贊助等級排序，同級內按照確認贊助時序。',
             '為求會眾多樣性，企業團購優惠票總量不會超過總報名會眾的三分之一。' +
                 '如有意購買此票種，請即早訂購，以免向隅。',
