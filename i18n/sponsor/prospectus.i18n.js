@@ -31,7 +31,6 @@ export default genI18nMessages({
                     'CEOs and CTOs etc.',
                 'Over half of attendees are Python users for 1-5 years, and ' +
                     'around 20% attendees have been using Python for more than 5 years.',
-                'Feel free to review our wonderful moments from the photos: PyCon Taiwan flickr album',
             ],
         ],
 
@@ -225,7 +224,6 @@ export default genI18nMessages({
                 '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
                 '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
                 '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
-                '歡迎從照片中一起回顧我們的精彩的時刻：PyCon Taiwan flickr album',
             ],
         ],
 
