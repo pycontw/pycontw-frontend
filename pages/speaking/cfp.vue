@@ -172,10 +172,10 @@ export default {
     },
     computed: {
         myPyConLink() {
-            return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard`
+            return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`
         },
         signUpLink() {
-            return `https://tw.pycon.org/2021/${this.$i18n.locale}/accounts/login`
+            return `https://tw.pycon.org/prs/${this.$i18n.locale}/accounts/login`
         },
         previousConfLinks() {
             return [
