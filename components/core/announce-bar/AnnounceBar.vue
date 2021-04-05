@@ -47,7 +47,7 @@ nav {
     align-items: center;
 }
 .hidden {
-    height: 0px;
+    display: none;
     transition: height 0.25s ease-out;
 }
 #closeBarBtn {
