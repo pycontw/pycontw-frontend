@@ -93,6 +93,10 @@ export default {
     background: #212121;
 }
 
+.bg-dark-secondary {
+    background-color: #2b2b2b;
+}
+
 .title {
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
         BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
