@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full h-16 px-4 flex justify-between items-center">
+    <header class="w-full h-full px-4 flex justify-between items-center">
         <div class="w-56 h-full flex justify-between items-center">
             <home-icon />
             <locale-switch />
