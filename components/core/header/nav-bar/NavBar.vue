@@ -50,6 +50,12 @@
         >
             {{ $t('volunteer') }}
         </ext-link>
+        <ext-link
+            :href="signInUrl"
+            :class="getPageClassesByPath('signIn', true)"
+        >
+            {{ $t('signIn') }}
+        </ext-link>
     </nav>
 </template>
 
@@ -140,6 +146,9 @@ export default {
                     value: '/registration/financial-aid',
                 },
             ]
+        },
+        signInUrl() {
+            return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard/`
         },
     },
     methods: {

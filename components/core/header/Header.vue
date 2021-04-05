@@ -1,11 +1,8 @@
 <template>
     <header class="w-full h-full px-4 flex justify-between items-center">
-        <div class="w-56 h-full flex justify-between items-center">
-            <home-icon />
-            <locale-switch />
-        </div>
+        <home-icon />
         <nav-bar />
-        <text-button :href="myPyConUrl" secondary> my pycontw </text-button>
+        <locale-switch />
     </header>
 </template>
 
@@ -13,7 +10,6 @@
 import HomeIcon from './HomeIcon'
 import NavBar from './nav-bar'
 import LocaleSwitch from './locale-switch'
-import TextButton from '~/components/core/buttons/TextButton'
 
 export default {
     name: 'CoreHeader',
@@ -21,7 +17,6 @@ export default {
         HomeIcon,
         LocaleSwitch,
         NavBar,
-        TextButton,
     },
     computed: {
         myPyConUrl() {
