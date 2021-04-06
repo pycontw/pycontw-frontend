@@ -5,7 +5,9 @@
         aria-orientation="vertical"
         role="menu"
     >
-        <slot></slot>
+        <div class="relative">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -18,18 +20,7 @@ export default {
     },
     data() {
         return {
-            originalClasses: [
-                'origin-top-right',
-                'absolute',
-                'right-0',
-                'mt-2',
-                'rounded-md',
-                'shadow-lg',
-                'bg-white',
-                'ring-1',
-                'ring-black',
-                'ring-opacity-5',
-            ],
+            originalClasses: ['core-menu', 'bg-golden-primary'],
         }
     },
     computed: {
@@ -48,4 +39,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.core-menu {
+    @apply absolute origin-top-right rounded;
+    top: 48px;
+    right: -32px;
+    background-color: #1c1c1c;
+    border: 1px solid #c2a53a;
+    opacity: 0.9;
+}
+</style>

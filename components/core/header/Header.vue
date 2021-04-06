@@ -1,11 +1,11 @@
 <template>
     <header class="w-full h-full">
-        <div class="header-container hidden md:flex">
+        <div class="header-container --desktop hidden md:flex">
             <home-icon />
             <nav-bar />
             <locale-switch />
         </div>
-        <div class="header-container flex md:hidden">
+        <div class="header-container --mobile flex md:hidden">
             <home-icon />
             <div class="h-full flex items-center">
                 <locale-switch />
@@ -40,5 +40,17 @@ export default {
 <style scoped>
 .header-container {
     @apply w-full h-full px-4 justify-between items-center;
+}
+
+.header-container.--desktop {
+    background-color: #000000;
+}
+
+.header-container.--mobile {
+    background-color: #c2a53a;
+}
+
+.header-container.--mobile .core-localeSwitch {
+    color: #000000;
 }
 </style>
