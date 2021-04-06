@@ -1,6 +1,6 @@
 <template>
     <locale-link to="/" class="w-10">
-        <img src="/2021/snake-icon.svg" />
+        <img src="/snake-icon.svg" />
     </locale-link>
 </template>
 
