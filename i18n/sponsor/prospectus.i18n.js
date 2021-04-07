@@ -31,7 +31,7 @@ export default genI18nMessages({
                     'CEOs and CTOs etc.',
                 'Over half of attendees are Python users for 1-5 years, and ' +
                     'around 20% attendees have been using Python for more than 5 years.',
-                'Feel free to  review our wonderful moments from the photos: PyCon TW flickr album'
+                'Feel free to  review our wonderful moments from the photos: PyCon TW flickr album',
             ],
         ],
 
