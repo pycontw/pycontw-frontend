@@ -31,6 +31,7 @@ export default genI18nMessages({
                     'CEOs and CTOs etc.',
                 'Over half of attendees are Python users for 1-5 years, and ' +
                     'around 20% attendees have been using Python for more than 5 years.',
+                'Feel free to  review our wonderful moments from the photos: PyCon TW flickr album'
             ],
         ],
 
@@ -224,6 +225,7 @@ export default genI18nMessages({
                 '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
                 '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
                 '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
+                '歡迎從照片中一同回顧我們的精采時刻: PyCon TW flickr album',
             ],
         ],
 
@@ -339,8 +341,7 @@ export default genI18nMessages({
             '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養',
             [
                 '贊助需財務補助之會眾',
-                '針對個別被贊助之會眾的公司宣傳',
-                '得在被贊助者同意下獲取其個人資訊',
+                '在被贊助者同意下獲取其個人資訊，針對個別被贊助之會眾的公司宣傳',
                 '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
