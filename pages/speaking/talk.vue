@@ -128,7 +128,7 @@ export default {
     },
     computed: {
         myPyConLink() {
-            return `https://tw.pycon.org/2021/${this.$i18n.locale}/dashboard`
+            return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`
         },
         previousConfLinks() {
             // use 'en' & 'zh' before 2016

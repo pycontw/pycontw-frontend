@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = 'http://staging.pycon.tw/2021'
+const DEFAULT_BASE_URL = 'http://staging.pycon.tw/prs'
 const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
 const DEFAULT_BUILD_TARGET = 'static'
 
@@ -22,7 +22,9 @@ export default {
             },
             { hid: 'description', name: 'description', content: '' },
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
+        ],
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
