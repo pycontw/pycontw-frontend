@@ -10,9 +10,9 @@
                     {{ content.organization }}
                 </h2>
                 <p
-                    class="flex flex-col items-center"
-                    v-for="(member, j) in MemberList[content.key]"
+                    v-for="(member, j) in member_list[content.key]"
                     :key="`staff_members_${j}`"
+                    class="flex flex-col items-center"
                 >
                     {{ member }}
                 </p>
@@ -33,9 +33,9 @@ export default {
     },
     data() {
         return {
-            MemberList: {
-                Chairperson: ['Wei Lee'],
-                Program: [
+            member_list: {
+                chairperson: ['Wei Lee'],
+                program: [
                     'Winnie',
                     'Pochun',
                     'Petertc',
@@ -58,7 +58,7 @@ export default {
                     'Lance',
                     'Shirley',
                 ],
-                DevelopmentWeb: [
+                development_web: [
                     'Matt Wang',
                     'Kaka Lin',
                     'Ethan Lin',
@@ -71,7 +71,7 @@ export default {
                     'Phil',
                     'Benson',
                 ],
-                DevelopmentData: [
+                development_data: [
                     '泰瑋',
                     'Hane',
                     'Jacky',
@@ -79,7 +79,7 @@ export default {
                     'Howard',
                     'Juihsiang',
                 ],
-                DevelopmentInfra: [
+                development_infra: [
                     'Josix',
                     'SHY',
                     'Mozix',
@@ -87,7 +87,7 @@ export default {
                     'GaryPai',
                     'Jacky',
                 ],
-                Venue: [
+                venue: [
                     'David Liu',
                     '地瓜',
                     'Yider',
@@ -110,7 +110,7 @@ export default {
                     'Tim',
                     'liyu',
                 ],
-                Marketing: [
+                marketing: [
                     'Tumi',
                     'Gobby Chen',
                     '四貓',
@@ -128,9 +128,9 @@ export default {
                     'Tai',
                     'yuhow5566',
                 ],
-                Registration: ['育承', 'Tumi'],
-                Recruitment: ['Rex', 'Josix', '四貓', 'Tai', 'Leina'],
-                Design: [
+                registration: ['育承', 'Tumi'],
+                recruitment: ['Rex', 'Josix', '四貓', 'Tai', 'Leina'],
+                design: [
                     'Ben',
                     '小玖',
                     '王禹翔',
@@ -139,8 +139,8 @@ export default {
                     'Carol Cho',
                     'Cailin',
                 ],
-                Finance: ['Rock', 'Leina'],
-                Photography: ['Andy Chuang'],
+                finance: ['Rock', 'Leina'],
+                photography: ['Andy Chuang'],
             },
         }
     },

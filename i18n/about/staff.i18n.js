@@ -5,51 +5,51 @@ export default genI18nMessages({
         title: 'Staff',
         contents: [
             {
-                key: 'Chairperson',
+                key: 'chairperson',
                 organization: 'Chairperson',
             },
             {
-                key: 'Program',
+                key: 'program',
                 organization: 'Program',
             },
             {
-                key: 'DevelopmentWeb',
+                key: 'development_web',
                 organization: 'Development(web)',
             },
             {
-                key: 'DevelopmentData',
+                key: 'development_data',
                 organization: 'Development(data)',
             },
             {
-                key: 'DevelopmentInfra',
+                key: 'development_infra',
                 organization: 'Development(infrastructure)',
             },
             {
-                key: 'Venue',
+                key: 'venue',
                 organization: 'Venue',
             },
             {
-                key: 'Marketing',
+                key: 'marketing',
                 organization: 'Marketing',
             },
             {
-                key: 'Registration',
+                key: 'registration',
                 organization: 'Registration',
             },
             {
-                key: 'Recruitment',
+                key: 'recruitment',
                 organization: 'Recruitment',
             },
             {
-                key: 'Design',
+                key: 'design',
                 organization: 'Design',
             },
             {
-                key: 'Finance',
+                key: 'finance',
                 organization: 'Finance',
             },
             {
-                key: 'Photography',
+                key: 'photography',
                 organization: 'Photography',
             },
         ],
@@ -58,51 +58,51 @@ export default genI18nMessages({
         title: '工作人員',
         contents: [
             {
-                key: 'Chairperson',
+                key: 'chairperson',
                 organization: '主席',
             },
             {
-                key: 'Program',
+                key: 'program',
                 organization: '議程',
             },
             {
-                key: 'DevelopmentWeb',
+                key: 'development_web',
                 organization: '開發(網頁)',
             },
             {
-                key: 'DevelopmentData',
+                key: 'development_data',
                 organization: '開發(資料)',
             },
             {
-                key: 'DevelopmentInfra',
+                key: 'development_infra',
                 organization: '開發(基礎設施)',
             },
             {
-                key: 'Venue',
+                key: 'venue',
                 organization: '場務',
             },
             {
-                key: 'Marketing',
+                key: 'marketing',
                 organization: '行銷',
             },
             {
-                key: 'Registration',
+                key: 'registration',
                 organization: '註冊',
             },
             {
-                key: 'Recruitment',
+                key: 'recruitment',
                 organization: '招募',
             },
             {
-                key: 'Design',
+                key: 'design',
                 organization: '設計',
             },
             {
-                key: 'Finance',
+                key: 'finance',
                 organization: '財務',
             },
             {
-                key: 'Photography',
+                key: 'photography',
                 organization: '攝影',
             },
         ],
