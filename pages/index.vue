@@ -47,14 +47,18 @@
 <script>
 // import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
-import { LocaleLink, ExtLink } from '~/components/core/links'
+import TextButton from '~/components/core/buttons/TextButton'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
-        LocaleLink,
-        ExtLink,
+        TextButton,
+    },
+    data() {
+        return {
+            volunteerFormUrl: 'https://forms.gle/wuG2w42cbhamyGdv9',
+        }
     },
     // fetchOnServer: false,
     // computed: {
@@ -118,17 +122,5 @@ export default {
 
 .links {
     padding-top: 15px;
-}
-
-.rounded-button {
-    border-radius: 30px;
-    border: 3px solid #212121;
-    color: #212121;
-}
-
-.rounded-button:hover {
-    border-radius: 30px;
-    border: 3px solid #526488;
-    color: #526488;
 }
 </style>
