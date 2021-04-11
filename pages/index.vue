@@ -1,19 +1,38 @@
 <template>
-    <div>
-        <div class="container">
-            <div>
-                <h1 class="text-6xl">{{ $t('pyconWelcome') }}</h1>
-                <div class="flex mt-8">
-                    <p class="rounded-button text-2xl px-12 py-2 mr-4">
-                        <locale-link to="sponsor">{{
-                            $t('sponsor')
-                        }}</locale-link>
-                    </p>
-                    <p class="rounded-button text-2xl px-12 py-2 mr-4">
-                        <ext-link href="https://forms.gle/wuG2w42cbhamyGdv9">{{
-                            $t('volunteer')
-                        }}</ext-link>
-                    </p>
+    <div class="page-home">
+        <div
+            class="page-homeLandingFocus flex flex-col-reverse justify-center items-center px-8 py-12 md:items-stretch sm:px-20 md:px-32 md:py-24 md:flex-row lg:px-40"
+        >
+            <div
+                class="page-homeLandingFocus__mobileButtons flex mt-8 md:hidden"
+            >
+                <text-button to="/sponsor" class="mr-8">{{
+                    $t('sponsor')
+                }}</text-button>
+                <text-button :href="volunteerFormUrl" secondary>{{
+                    $t('volunteer')
+                }}</text-button>
+            </div>
+            <div class="page-homeLandingFocus__image mx-12 md:mx-0">
+                <img src="/key-vision-logo.png" alt="" />
+            </div>
+            <div
+                class="page-homeLandingFocus__context flex flex-col text-golden text-center md:text-left mb-4 ml-0 md:mb-0 md:ml-8"
+            >
+                <div class="font-serif">
+                    <div class="text-3xl lg:text-5xl">PyCon Taiwan 2021</div>
+                    <div class="text-2xl lg:text-4xl">10th Anniversary</div>
+                    <div class="text-xl lg:text-3xl">20 - 22 Aug. NTU</div>
+                </div>
+                <div
+                    class="page-homeLandingFocus__desktopButtons hidden md:flex md:mt-8"
+                >
+                    <text-button to="/sponsor" class="mr-12">{{
+                        $t('sponsor')
+                    }}</text-button>
+                    <text-button :href="volunteerFormUrl" secondary>{{
+                        $t('volunteer')
+                    }}</text-button>
                 </div>
             </div>
         </div>
@@ -71,6 +90,20 @@ export default {
 </script>
 
 <style>
+.page-home .page-homeLandingFocus::before {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    z-index: -10;
+    display: block;
+    width: 100vw;
+    height: calc(100vh - 48px);
+    content: '';
+    background-image: url('/page-home-background.png');
+    background-position: center center;
+    background-size: cover;
+}
+
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
