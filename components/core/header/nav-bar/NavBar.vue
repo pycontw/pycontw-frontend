@@ -1,11 +1,16 @@
 <template>
-    <nav class="flex justify-evenly items-center">
-        <locale-link to="/about" :class="getPageClassesByPath('about', true)">
+    <nav class="h-full flex justify-evenly items-center">
+        <locale-link
+            to="/about"
+            :class="getPageClassesByPath('about', true)"
+            customized
+        >
             {{ $t('about') }}
         </locale-link>
         <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
+            customized
         >
             {{ $t('sponsor') }}
         </locale-link>

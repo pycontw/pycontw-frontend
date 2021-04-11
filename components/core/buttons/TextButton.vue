@@ -1,19 +1,23 @@
 <template>
     <button :class="coreButtonClasses">
-        <ext-link v-if="href" :href="href" class="w-full h-full">
+        <ext-link v-if="href" :href="href">
             <slot></slot>
         </ext-link>
+        <locale-link v-else-if="to" :to="to" customized>
+            <slot></slot>
+        </locale-link>
         <slot v-else></slot>
     </button>
 </template>
 
 <script>
-import ExtLink from '~/components/core/links/ExtLink'
+import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     name: 'CoreTextButton',
     components: {
         ExtLink,
+        LocaleLink,
     },
     props: {
         primary: {

@@ -31,4 +31,8 @@ export default {
 .core-footerIcon {
     @apply flex justify-self-center text-4xl;
 }
+
+.core-footerIcon:hover {
+    color: #7568f6;
+}
 </style>

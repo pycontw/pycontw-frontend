@@ -25,7 +25,9 @@ export default {
     computed: {
         classObject() {
             return {
+                'core-extLink': true,
                 'outline-none': true,
+                'cursor-pointer': true,
                 highlight: this.highlight,
             }
         },
