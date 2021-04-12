@@ -43,11 +43,16 @@ export default {
 }
 
 .header-container.--desktop {
+    color: #c2a53a;
     background-color: #000000;
 }
 
 .header-container.--mobile {
     background-color: #c2a53a;
+}
+
+.header-container.--mobile .core-homeIcon {
+    filter: brightness(0) invert(0); /* turn the color into black */
 }
 
 .header-container.--mobile .core-localeSwitch {
