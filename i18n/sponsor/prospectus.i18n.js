@@ -31,7 +31,6 @@ export default genI18nMessages({
                     'CEOs and CTOs etc.',
                 'Over half of attendees are Python users for 1-5 years, and ' +
                     'around 20% attendees have been using Python for more than 5 years.',
-                'Feel free to  review our wonderful moments from the photos: PyCon TW flickr album',
             ],
         ],
 
@@ -41,9 +40,9 @@ export default genI18nMessages({
             [
                 'Call for Proposal: March 1st, 2021',
                 'Deadline of Call for Proposal: April 26th, 2021 23:59:59 ({AoE})',
-                'Schedule Announcement: in the end of June, 2021 (tentative)',
-                'Job Fair: 8/21 Sat. (tentative)',
-                'Main Conference: 8/20 Fri. ~ 8/22 Sun. (tentative)',
+                'Schedule Announcement: in the end of June, 2021',
+                'Job Fair: 8/21 Sat.',
+                'Main Conference: 8/20 Fri. ~ 8/22 Sun.',
             ],
         ],
 
@@ -154,8 +153,7 @@ export default genI18nMessages({
             'Community Financial Aid Sponsorship - USD$ 1,700 (Limit: 5)',
             [
                 'Provide financial aid to needed attendees.',
-                'Exclusive promotions to aid receivers.',
-                'Acquire personal information under the aid receivers’ agreement.',
+                'Exclusive promotions to aid receivers.*',
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
@@ -188,6 +186,8 @@ export default genI18nMessages({
                 'first served manner, please order ASAP.',
             'Sponsor packages may be affected and changed due to the outbreak of COVID-19, ' +
                 'final version will be released on mid June along with conference details.',
+            'For Community Financial Aid Sponsorship package, '+
+                'PyCon TW 2021 shall be permitted by the aid receivers to get access to their personal information',
         ],
 
         terms: {
@@ -225,7 +225,6 @@ export default genI18nMessages({
                 '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
                 '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
                 '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
-                '歡迎從照片中一同回顧我們的精采時刻: PyCon TW flickr album',
             ],
         ],
 
@@ -235,9 +234,9 @@ export default genI18nMessages({
             [
                 '議程、課程 開放徵稿：3 月 1 日',
                 '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
-                '公告完整議程：6 月 下旬（暫定）',
-                'Job Fair：8 月 21 日 (六) (暫定)',
-                '研討會日：8 月 20 日 (五) 至 8 月 22 日 (日) (暫定)',
+                '公告完整議程：6 月 下旬',
+                'Job Fair：8 月 21 日 (六)',
+                '研討會日：8 月 20 日 (五) 至 8 月 22 日 (日)',
             ],
         ],
 
@@ -341,7 +340,7 @@ export default genI18nMessages({
             '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養',
             [
                 '贊助需財務補助之會眾',
-                '在被贊助者同意下獲取其個人資訊，針對個別被贊助之會眾的公司宣傳',
+                '針對個別被贊助之會眾的公司宣傳*',
                 '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
@@ -370,6 +369,7 @@ export default genI18nMessages({
                 '如有意購買此票種，請即早訂購，以免向隅。',
             '因應 COVID-19 疫情影響，贊助方案內容會有些許細部更動，' +
                 '會在六月中旬連同最終會議細節一起發佈。',
+            '社群參與財務補助認養方案之公司宣傳，得在被贊助之會眾同意下獲取其個人資訊。'
         ],
 
         terms: {
