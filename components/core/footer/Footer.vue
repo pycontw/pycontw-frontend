@@ -30,7 +30,10 @@
                     href="https://www/facebook.com/pycontw"
                     :icon="['fab', 'facebook']"
                 />
-                <footer-icon href="" :icon="['fab', 'telegram']" />
+                <footer-icon
+                    href="https://t.me/pycontw_chat"
+                    :icon="['fab', 'telegram']"
+                />
                 <footer-icon
                     href="https://twitter.com/pycontw"
                     :icon="['fab', 'twitter-square']"
@@ -44,7 +47,7 @@
                     :icon="['fas', 'envelope-square']"
                 />
                 <footer-icon
-                    href="https://tw.pycon.org/2020/zh-hant/ext/discord/"
+                    href="https://discord.com/invite/94hgCQv"
                     :icon="['fab', 'discord']"
                 />
             </div>
