@@ -18,6 +18,17 @@ export default {
         CoreFooter,
         AnnounceBar,
     },
+    head() {
+        return {
+            link: [
+                // add url without year prefix as canonical url
+                {
+                    rel: 'canonical',
+                    href: 'https://tw.pycon.org' + this.$route.path,
+                },
+            ],
+        }
+    },
 }
 </script>
 
