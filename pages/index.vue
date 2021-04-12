@@ -14,7 +14,7 @@
                 }}</text-button>
             </div>
             <div class="page-homeLandingFocus__image mx-12 md:mx-0">
-                <img src="/key-vision-logo.png" alt="" />
+                <img src="~/static/key-vision-logo.png" alt="" />
             </div>
             <div
                 class="page-homeLandingFocus__context flex flex-col text-golden text-center md:text-left mb-4 ml-0 md:mb-0 md:ml-8"
@@ -99,7 +99,7 @@ export default {
     width: 100vw;
     height: calc(100vh - 48px);
     content: '';
-    background-image: url('/page-home-background.png');
+    background-image: url('~@/static/page-home-background.png');
     background-position: center center;
     background-size: cover;
 }
