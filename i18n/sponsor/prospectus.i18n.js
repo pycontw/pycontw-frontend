@@ -23,10 +23,10 @@ export default genI18nMessages({
         ],
 
         stats: [
-            'Quick stats from 2020',
+            'Quick stats review',
             [
-                '400+ attendees (as the first southern Taiwan PyCon TW)',
-                'Most attendees are software engineers. ' +
+                '800+ attendees',
+                '80% of attendees are software engineers. ' +
                     'Others are: potential job seekers, data scientist, students, managers, researchers, ' +
                     'CEOs and CTOs etc.',
                 'Over half of attendees are Python users for 1-5 years, and ' +
