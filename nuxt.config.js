@@ -50,6 +50,22 @@ export default {
         '@nuxt/http',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
+        [
+            'nuxt-fontawesome',
+            {
+                component: 'fa',
+                imports: [
+                    {
+                        set: '@fortawesome/free-brands-svg-icons',
+                        icons: ['fab'],
+                    },
+                    {
+                        set: '@fortawesome/free-solid-svg-icons',
+                        icons: ['fas'],
+                    },
+                ],
+            },
+        ],
     ],
 
     i18n: {

@@ -1,11 +1,16 @@
 <template>
-    <nav class="flex justify-evenly items-center">
-        <locale-link to="/about" :class="getPageClassesByPath('about', true)">
+    <nav class="h-full flex justify-evenly items-center">
+        <locale-link
+            to="/about"
+            :class="getPageClassesByPath('about', true)"
+            customized
+        >
             {{ $t('about') }}
         </locale-link>
         <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
+            customized
         >
             {{ $t('sponsor') }}
         </locale-link>
@@ -50,10 +55,17 @@
         >
             {{ $t('volunteer') }}
         </ext-link>
+        <ext-link
+            :href="signInUrl"
+            :class="getPageClassesByPath('signIn', true)"
+        >
+            {{ $t('signIn') }}
+        </ext-link>
     </nav>
 </template>
 
 <script>
+import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
 import { LocaleLink, ExtLink } from '~/components/core/links'
@@ -68,94 +80,60 @@ export default {
     },
     computed: {
         conferenceItems() {
-            return [
-                {
-                    label: this.$i18n.t('schedule'),
-                    value: '/conference/schedule',
-                },
-                {
-                    label: this.$i18n.t('keynotes'),
-                    value: '/conference/keynotes',
-                },
-                { label: this.$i18n.t('talks'), value: '/conference/talks' },
-                {
-                    label: this.$i18n.t('tutorials'),
-                    value: '/conference/tutorials',
-                },
-                {
-                    label: this.$i18n.t('communityTracks'),
-                    value: '/conference/community-tracks',
-                },
-            ]
+            return this.generateI18nItems(navBarItems.conferenceItems)
         },
         speakingItems() {
-            return [
-                {
-                    label: this.$i18n.t('cfp'),
-                    value: '/speaking/cfp',
-                },
-                {
-                    label: this.$i18n.t('talk'),
-                    value: '/speaking/talk',
-                },
-                {
-                    label: this.$i18n.t('tutorial'),
-                    value: '/speaking/tutorial',
-                },
-                {
-                    label: this.$i18n.t('recording'),
-                    value: '/speaking/recording',
-                },
-            ]
+            return this.generateI18nItems(navBarItems.speakingItems)
         },
         eventsItems() {
-            return [
-                {
-                    label: this.$i18n.t('overview'),
-                    value: '/events/overview',
-                },
-                {
-                    label: this.$i18n.t('warmUpSessions'),
-                    value: '/events/warm-up-sessions',
-                },
-                {
-                    label: this.$i18n.t('openSpaces'),
-                    value: '/events/open-spaces',
-                },
-                { label: this.$i18n.t('sprints'), value: '/events/sprints' },
-                {
-                    label: this.$i18n.t('jobListings'),
-                    value: '/events/job-listings',
-                },
-            ]
+            return this.generateI18nItems(navBarItems.eventsItems)
         },
         registrationItems() {
-            return [
-                {
-                    label: this.$i18n.t('conferenceTickets'),
-                    value: '/registration/tickets',
-                },
-                {
-                    label: this.$i18n.t('financialAid'),
-                    value: '/registration/financial-aid',
-                },
-            ]
+            return this.generateI18nItems(navBarItems.registrationItems)
+        },
+        signInUrl() {
+            return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
         },
     },
     methods: {
+        generateI18nItems(items) {
+            return items.map(({ i18nKey, value }) => ({
+                label: this.$i18n.t(i18nKey),
+                value,
+            }))
+        },
         getPageClassesByPath(pathPrefix = '', isLink = false) {
             const isOnCurrentPath = this.$route.name.startsWith(pathPrefix)
             return {
-                'mx-4': true,
-                'px-4': isLink,
+                'core-navBarItem': true,
+                flex: isLink,
+                'h-full': isLink,
+                'justify-center': isLink,
+                'items-center': isLink,
+                'px-8': isLink,
                 'py-2': isLink,
-                'border-b-2': true,
-                'border-gray-800': isOnCurrentPath,
-                'border-transparent': !isOnCurrentPath,
+                'bg-transparent': !isOnCurrentPath,
+                'bg-golden-primary': isOnCurrentPath,
+                '--active': isOnCurrentPath,
             }
         },
     },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.core-navBarItem {
+    color: #c7c7c7;
+    font-weight: 700;
+}
+
+.core-navBarItem:hover {
+    color: #000000;
+    background-color: #c2a53a;
+}
+
+.core-navBarItem.--active,
+.core-navBarItem.--active .options-menu {
+    color: #000000;
+}
+</style>

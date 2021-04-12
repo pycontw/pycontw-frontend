@@ -14,9 +14,12 @@
         "json-server": "./node_modules/.bin/json-server --watch db.json --routes routes.json --port 9876"
     },
     "dependencies": {
+        "@fortawesome/free-brands-svg-icons": "^5.15.3",
+        "@fortawesome/free-solid-svg-icons": "^5.15.3",
         "@nuxt/http": "^0.6.2",
         "core-js": "^3.6.5",
         "nuxt": "^2.14.6",
+        "nuxt-fontawesome": "^0.4.0",
         "nuxt-i18n": "^6.18.0"
     },
     "devDependencies": {

@@ -44,7 +44,7 @@ html {
 .default-layout {
     display: grid;
     height: 100vh;
-    grid-template-rows: 60px auto auto 280px;
+    grid-template-rows: 48px auto auto auto;
     grid-template-columns: 100%;
 }
 </style>

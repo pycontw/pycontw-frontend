@@ -1,7 +1,7 @@
 <template>
     <div class="h-12 px-8" :class="{ hidden: completeFlag }">
         <nav class="h-full" @click="completeRead">
-            <locale-link to="/speaking/cfp">
+            <locale-link to="/speaking/cfp" customized>
                 {{ $t('announceMsg') }}
             </locale-link>
         </nav>
@@ -36,7 +36,7 @@ div {
     display: flex;
     flex-direction: row;
     color: white;
-    background-color: #ab320e;
+    background-color: #8278f5;
     justify-content: center;
     align-items: center;
 }
@@ -47,7 +47,7 @@ nav {
     align-items: center;
 }
 .hidden {
-    height: 0px;
+    display: none;
     transition: height 0.25s ease-out;
 }
 #closeBarBtn {

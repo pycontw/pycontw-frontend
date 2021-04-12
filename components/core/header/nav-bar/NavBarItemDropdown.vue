@@ -1,44 +1,37 @@
 <template>
-    <div class="relative inline-block text-left">
+    <div
+        class="relative flex h-full px-8 justify-center items-center text-left"
+    >
         <div
-            class="relative flex flex-col rounded-md items-start cursor-pointer"
+            class="relative flex h-full flex-col rounded-md items-start cursor-pointer"
             @mouseenter="showMenu"
             @mouseleave="hideMenu"
         >
             <div
                 id="options-menu"
-                class="inline-flex justify-center w-full px-4 py-2 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                class="options-menu focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
                 aria-haspopup="true"
                 aria-expanded="true"
             >
                 <slot v-if="$slots.label" name="label"></slot>
                 {{ label }}
+                <fa
+                    :icon="['fa', 'caret-down']"
+                    aria-hidden="true"
+                    class="ml-3"
+                ></fa>
             </div>
-            <transition
-                enter-active-class="transition ease-out duration-100 transform"
-                enter-class="opacity-0 scale-95"
-                enter-to-class="opacity-100 scale-100"
-                leave-active-class="transition ease-in duration-75 transform"
-                leave-class="opacity-100 scale-100"
-                leave-to-class="opacity-0 scale-95"
-            >
-                <core-menu
-                    v-show="isHovering"
-                    :sm="sm"
-                    :lg="lg"
-                    :style="{ top: '32px' }"
+            <core-menu v-show="isHovering" :lg="lg" :sm="sm">
+                <slot :hideMenu="hideMenu" name="items"></slot>
+                <core-menu-item
+                    v-for="item in items"
+                    :key="item.value"
+                    :href="item.value"
+                    @click="hideMenu"
                 >
-                    <slot name="items" :hideMenu="hideMenu"></slot>
-                    <core-menu-item
-                        v-for="item in items"
-                        :key="item.value"
-                        :href="item.value"
-                        @click="hideMenu"
-                    >
-                        {{ item.label }}
-                    </core-menu-item>
-                </core-menu>
-            </transition>
+                    {{ item.label }}
+                </core-menu-item>
+            </core-menu>
         </div>
     </div>
 </template>
@@ -81,4 +74,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.options-menu {
+    @apply inline-flex w-full h-full justify-center items-center w-full bg-transparent;
+    z-index: 100;
+}
+</style>
