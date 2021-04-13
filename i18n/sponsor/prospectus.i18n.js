@@ -167,27 +167,27 @@ export default genI18nMessages({
 
         'note-title': 'Notes',
         'note-items': [
-            'Job recruitment description posted on website will be sorted as sponsor packages.',
-            'Recorded tech talks will be uploaded to several platforms, such as Youtube, ' +
-                'where logos will be shown in the opening or ending depending on the package.',
             'Job fair introduction is restricted to 5 minutes per organization.',
-            'PyCon TW 2021 will not produce a digital brochure, all information will be posted ' +
-                'on our website and app.',
-            'PyCon TW 2021 do not provide tote bag and physical brochure to our participants. ' +
-                'However, sponsors have the liberty to design, print and provide copies of ' +
-                'their own handbook.',
-            'The sponsoring talk is limited to 30 minutes, and 1 talk per organization.',
-            'Diamond Sponsorship includes title rights, the company logo will be displayed with ' +
-                'PyCon TW 2021. However, PyCon TW 2021 reserves the right to further evaluate such action.',
-            'Diamond Sponsorship includes the title right of the main conference room, ' +
-                'PyCon TW 2021 reserves the right to evaluate such action.',
-            'To further promote diversity of PyCon TW 2021, company (group / sponsoring) tickets will not ' +
-                'exceeded 1 / 3 of the total pass sold. Thus, such group passes are sold in a first come ' +
-                'first served manner, please order ASAP.',
-            'Sponsor packages may be affected and changed due to the outbreak of COVID-19, ' +
-                'final version will be released on mid June along with conference details.',
-            'For Community Financial Aid Sponsorship package, ' +
-                'PyCon TW 2021 shall be permitted by the aid receivers to get access to their personal information',
+            'PyCon TW 2021 will not produce a digital brochure. ' +
+                'All information will be posted on our website and app.',
+            'PyCon TW 2021 will not provide tote bag and physical brochure to our participants. ' +
+                'However, sponsors have the liberty to design, print and provide copies of their own handbook.',
+            'Recorded tech talks will be uploaded to several platforms, such as Youtube. ' +
+                'Whether logos will be shown in the opening or ending depends on the package.',
+            'The technical talk is limited to 30 minutes whether it is included in package or extra purchased.',
+            'Regarding the purchase limit of tech talks, basically one sponsor is restricted to one purchase. ' +
+                'If the sponsor has special needs, please inform PyCon TW 2021. PyCon TW 2021 reserves the right of final decision.',
+            "Diamond Sponsorship package includes the title right which sponsor's logo will be displayed with PyCon TW 2021. " +
+                'PyCon TW 2021 reserves the right of final decision.',
+            'Diamond Sponsorship package includes the title right of the main conference room. ' +
+                'PyCon TW 2021 reserves the right of final decision.',
+            'Job recruitment description posted on website will be sorted by level of sponsorship packages. ' +
+                'If there are same levels, then it will be sorted by the timing of sponsorship.',
+            "The sponsor of Community Financial Aid Sponsorship are allowed to acquire personal information under the aid receiver's agreement.",
+            'To further promote diversity of attendees, company (group / sponsoring) tickets will not exceed 1 / 3 of the total pass sold. ' +
+                'Thus, such group passes are sold in a first come first served manner, please order as soon as possible.',
+            'Sponsorship packages may be affected and changed due to the outbreak of COVID-19. ' +
+                'Final version will be released along with conference details on June 27th .',
         ],
 
         terms: {
@@ -355,8 +355,10 @@ export default genI18nMessages({
         'note-title': '備註',
         'note-items': [
             '徵才介紹（Job Fair）， 每組 5 分鐘為限。',
-            'PyCon TW 2021 無電子版大會手冊，所有內容整合至網站以及 APP。',
-            'PyCon TW 2021 無迎賓袋以及實體文宣，贊助商可自行製作發放。',
+            'PyCon TW 2021 無電子版大會手冊，所有內容將會發布至網站以及 APP。',
+            'PyCon TW 2021 無迎賓袋及實體文宣，贊助商可自行製作發放。',
+            '錄製好的技術演講將會上傳至Youtube等多個平台，' +
+                '而 Logo 出現在開場或結尾則是根據贊助的方案決定。',
             '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限。',
             '關於技術演講的購買限制，基本上一個贊助商限制買一個，' +
                 '若廠商有特殊需求，則由主辦方討論與決定。',
@@ -365,11 +367,11 @@ export default genI18nMessages({
             '鑽石級贊助方案包含之主場地會議室冠名權，表示贊助商可命名該會議室，' +
                 ' PyCon TW 2021 主辦方保留審核權利。',
             '網站徵才牆排列順序按贊助等級排序，同級內按照確認贊助時序。',
+            '社群參與財務補助認養方案之公司，得在被贊助之會眾同意下獲取其個人資訊。',
             '為求會眾多樣性，企業團購優惠票總量不會超過總報名會眾的三分之一。' +
                 '如有意購買此票種，請即早訂購，以免向隅。',
             '因應 COVID-19 疫情影響，贊助方案內容會有些許細部更動，' +
                 '會在六月中旬連同最終會議細節一起發佈。',
-            '社群參與財務補助認養方案之公司宣傳，得在被贊助之會眾同意下獲取其個人資訊。',
         ],
 
         terms: {
