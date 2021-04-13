@@ -6,12 +6,7 @@
             <div
                 class="page-homeLandingFocus__mobileButtons flex mt-8 md:hidden"
             >
-                <text-button to="/sponsor" class="mr-8">{{
-                    $t('sponsor')
-                }}</text-button>
-                <text-button :href="volunteerFormUrl" secondary>{{
-                    $t('volunteer')
-                }}</text-button>
+                <text-button to="/sponsor">{{ $t('sponsor') }}</text-button>
             </div>
             <div class="page-homeLandingFocus__image mx-12 md:mx-0">
                 <img src="~/static/key-vision-logo.png" alt="" />
@@ -27,12 +22,7 @@
                 <div
                     class="page-homeLandingFocus__desktopButtons hidden md:flex md:mt-8"
                 >
-                    <text-button to="/sponsor" class="mr-12">{{
-                        $t('sponsor')
-                    }}</text-button>
-                    <text-button :href="volunteerFormUrl" secondary>{{
-                        $t('volunteer')
-                    }}</text-button>
+                    <text-button to="/sponsor">{{ $t('sponsor') }}</text-button>
                 </div>
             </div>
         </div>
