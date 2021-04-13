@@ -1,5 +1,5 @@
 <template>
-    <ext-link :href="href" class="mx-8 my-4">
+    <ext-link :href="href" class="mx-4 my-4">
         <fa class="core-footerIcon" v-bind="faProps"></fa>
     </ext-link>
 </template>
@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .core-footerIcon {
-    @apply flex justify-self-center text-4xl;
+    @apply flex justify-self-center text-2xl;
 }
 
 .core-footerIcon:hover {

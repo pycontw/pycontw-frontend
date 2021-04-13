@@ -36,7 +36,7 @@ export default {
 html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
         'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: #c7c7c7;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
