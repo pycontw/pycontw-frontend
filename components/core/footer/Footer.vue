@@ -27,7 +27,7 @@
                     :icon="['fab', 'blogger']"
                 />
                 <footer-icon
-                    href="https://www/facebook.com/pycontw"
+                    href="https://www.facebook.com/pycontw"
                     :icon="['fab', 'facebook']"
                 />
                 <footer-icon
