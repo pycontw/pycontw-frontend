@@ -40,9 +40,9 @@ a {
     color: inherit;
 }
 .highlight {
-    color: rgba(37, 99, 235, 1);
+    color: #9387ff;
 }
 .highlight:hover {
-    color: rgba(30, 64, 175, 1);
+    color: #6656f8;
 }
 </style>
