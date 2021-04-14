@@ -22,7 +22,9 @@ export default {
             },
             { hid: 'description', name: 'description', content: '' },
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
+        ],
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -48,6 +50,22 @@ export default {
         '@nuxt/http',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
+        [
+            'nuxt-fontawesome',
+            {
+                component: 'fa',
+                imports: [
+                    {
+                        set: '@fortawesome/free-brands-svg-icons',
+                        icons: ['fab'],
+                    },
+                    {
+                        set: '@fortawesome/free-solid-svg-icons',
+                        icons: ['fas'],
+                    },
+                ],
+            },
+        ],
     ],
 
     i18n: {

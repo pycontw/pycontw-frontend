@@ -27,6 +27,7 @@ export default genI18nMessages({
         venue: 'Venue',
         covid19Guidelines: 'COVID-19 Guidelines',
         volunteer: 'Volunteer',
+        signIn: 'Sign In',
     },
     'zh-hant': {
         about: '關於',
@@ -54,5 +55,6 @@ export default genI18nMessages({
         venue: '會場',
         covid19Guidelines: 'COVID-19 防疫守則',
         volunteer: '志工招募',
+        signIn: '登入',
     },
 })

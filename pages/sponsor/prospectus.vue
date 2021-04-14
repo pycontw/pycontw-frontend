@@ -5,7 +5,7 @@
         <!-- contact -->
         <i18n path="contact" tag="p">
             <template #mail>
-                <ext-link href="sponsorship@pycon.tw" highlight>
+                <ext-link href="mailto:sponsorship@pycon.tw" highlight>
                     sponsorship@pycon.tw
                 </ext-link>
             </template>

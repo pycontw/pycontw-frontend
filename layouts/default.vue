@@ -18,6 +18,17 @@ export default {
         CoreFooter,
         AnnounceBar,
     },
+    head() {
+        return {
+            link: [
+                // add url without year prefix as canonical url
+                {
+                    rel: 'canonical',
+                    href: 'https://tw.pycon.org' + this.$route.path,
+                },
+            ],
+        }
+    },
 }
 </script>
 
@@ -25,13 +36,15 @@ export default {
 html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
         'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    color: #c7c7c7;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
+    background: #212121;
 }
 
 *,
@@ -44,7 +57,7 @@ html {
 .default-layout {
     display: grid;
     height: 100vh;
-    grid-template-rows: 60px auto auto 280px;
+    grid-template-rows: 48px auto auto auto;
     grid-template-columns: 100%;
 }
 </style>

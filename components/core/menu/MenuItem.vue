@@ -3,7 +3,13 @@
         <div v-if="readonly" :class="itemClasses">
             <slot></slot>
         </div>
-        <locale-link v-else :to="href" :class="itemClasses" role="menuitem">
+        <locale-link
+            v-else
+            :to="href"
+            :class="itemClasses"
+            role="menuitem"
+            customized
+        >
             <slot></slot>
         </locale-link>
     </div>
@@ -25,16 +31,7 @@ export default {
     },
     computed: {
         itemClasses() {
-            return [
-                'block',
-                'px-4',
-                'py-2',
-                'text-sm',
-                'text-gray-700',
-                'rounded',
-                'hover:bg-gray-100',
-                'hover:text-gray-900',
-            ]
+            return ['core-menuItem', 'block', 'px-4', 'py-2', 'text-sm']
         },
         readonly() {
             return !this.href
@@ -48,4 +45,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.core-menuItem {
+    color: #b5b5b5;
+}
+
+.core-menuItem:hover {
+    color: #7568f6;
+}
+</style>
