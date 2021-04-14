@@ -15,7 +15,7 @@ export default genI18nMessages({
             {
                 title: 'The Purpose of Usage of Your Personal Information',
                 description: [
-                    'For the purposes of organizing the event and providing better services, we are going to collect your personal information on the registration page all according to the Personal Information Protection Act by The specific purpose and the classification of personal information of the <b>Personal Information Protection Act 130</b>. Meeting Management.',
+                    'For the purposes of organizing the event and providing better services, we are going to collect your personal information on the registration page all according to the Personal Information Protection Act by The specific purpose and the classification of personal information of the {MeetingManagement}. Meeting Management.',
                     'The purposes will be including but not limited to:',
                 ],
                 items: [
@@ -83,7 +83,7 @@ export default genI18nMessages({
             {
                 title: 'Questions for Privacy Protection Policy',
                 description: [
-                    'If you have any questions regarding the gathering and usage of your personal information, please feel free to contact us at <a href="mailto:organizers@pycon.tw" target="_blank" style="color: #337ab7">organizers@pycon.tw.</a>',
+                    'If you have any questions regarding the gathering and usage of your personal information, please feel free to contact us at {contact}',
                 ],
                 items: [],
                 summary: [],
@@ -99,6 +99,10 @@ export default genI18nMessages({
                 summary: [],
             },
         ],
+        terms: {
+            contact: 'organizers@pycon.tw.',
+            MeetingManagement: 'Personal Information Protection Act 130',
+        },
     },
     'zh-hant': {
         title: 'PyCon Taiwan 個人資料保護聲明',
@@ -114,7 +118,7 @@ export default genI18nMessages({
             {
                 title: '個人資料之使用目的',
                 description: [
-                    '我們為求本活動順利進行及提供您相關之服務，蒐集並於使用目的範圍內利用您所提供之個人資料，<b>其法定特定目的為一三〇會議管理</b>。使用目的包含但不限於：',
+                    '我們為求本活動順利進行及提供您相關之服務，蒐集並於使用目的範圍內利用您所提供之個人資料，{MeetingManagement}。使用目的包含但不限於：',
                 ],
                 items: [
                     '確認報名者與前來報到者之身分同一性',
@@ -169,7 +173,7 @@ export default genI18nMessages({
             {
                 title: '隱私保護諮詢',
                 description: [
-                    '如果您對於我們的隱私權保護政策或是有個人資料蒐集、利用、更新等問題，請來信<a href="mailto:organizers@pycon.tw" target="_blank" style="color: #337ab7">organizers@pycon.tw.</a>。',
+                    '如果您對於我們的隱私權保護政策或是有個人資料蒐集、利用、更新等問題，請來信{contact}。',
                 ],
                 items: [],
                 summary: [],
@@ -185,5 +189,9 @@ export default genI18nMessages({
                 summary: [],
             },
         ],
+        terms: {
+            contact: 'organizers@pycon.tw.',
+            MeetingManagement: '其法定特定目的為一三〇會議管理',
+        },
     },
 })

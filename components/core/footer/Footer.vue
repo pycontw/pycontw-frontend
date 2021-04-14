@@ -13,9 +13,6 @@
                 <locale-link to="/about/community">
                     {{ $t('community') }}
                 </locale-link>
-                <locale-link to="/about/privacy-policy">
-                    {{ $t('privacyPolicy') }}
-                </locale-link>
                 -->
             </div>
             <div class="flex flex-col ml-20">
