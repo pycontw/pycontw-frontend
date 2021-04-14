@@ -20,6 +20,12 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown>
+        <nav-bar-item-dropdown
+            :label="$t('registration')"
+            :items="registrationItems"
+            :class="getPageClassesByPath('registration')"
+        >
+        </nav-bar-item-dropdown>
         <!--
         <nav-bar-item-dropdown
             :label="$t('conference')"
@@ -31,12 +37,6 @@
             :label="$t('events')"
             :items="eventsItems"
             :class="getPageClassesByPath('events')"
-        >
-        </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
-            :label="$t('registration')"
-            :items="registrationItems"
-            :class="getPageClassesByPath('registration')"
         >
         </nav-bar-item-dropdown>
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">

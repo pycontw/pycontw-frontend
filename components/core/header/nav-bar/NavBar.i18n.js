@@ -49,7 +49,7 @@ export default genI18nMessages({
         openSpaces: '開放空間',
         sprints: '衝刺開發',
         jobListings: '徵才資訊',
-        registration: '註冊',
+        registration: '購票',
         conferenceTickets: '會議門票',
         financialAid: '財務補助',
         venue: '會場',
