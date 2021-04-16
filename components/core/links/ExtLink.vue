@@ -21,6 +21,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        underline: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         classObject() {
@@ -29,6 +33,7 @@ export default {
                 'outline-none': true,
                 'cursor-pointer': true,
                 highlight: this.highlight,
+                underline: this.underline,
             }
         },
     },
@@ -40,9 +45,12 @@ a {
     color: inherit;
 }
 .highlight {
-    color: #9387ff;
+    color: #c2a53a;
 }
 .highlight:hover {
-    color: #6656f8;
+    color: #9387ff;
+}
+.underline {
+    text-decoration: underline;
 }
 </style>
