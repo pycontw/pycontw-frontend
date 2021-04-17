@@ -45,7 +45,7 @@ export default genI18nMessages({
             {
                 title: 'Acceptance Deadline',
                 content:
-                    'The Financial Aid Program closes on ??/??/???? (15:30 UTC).',
+                    'The Financial Aid Program closes on 30 June (15:59 UTC).',
             },
         ],
         visaTitle: 'Visitor Visa',
@@ -55,7 +55,6 @@ export default genI18nMessages({
         applicationHowTo: 'Application How-Tos',
         remarkTitle: 'Remarks',
         remarkContent: [
-            'Leave a brief description about yourself, and provide at least your full name.',
             'We will inform you of the results before the end of the conference registration.',
             'You will receive instructions about how to claim your aid. Please make sure to bring papers and/or proofs as appropriate to the conference for the claim process.',
         ],
@@ -71,6 +70,10 @@ export default genI18nMessages({
             'We understand that we all have different financial situations, and contribution is difficult to quantify.' +
             'As we have a limited budget, we cannot guarantee to fund all applicants.' +
             'But please do let us know if you need support, and we will do our best.',
+        fill: 'Fill out',
+        form: 'the form.',
+        fillFormProcess:
+            ' Leave a brief description about yourself, and provide at least your full name.',
     },
     'zh-hant': {
         title: '財務補助說明',
@@ -108,7 +111,7 @@ export default genI18nMessages({
             },
             {
                 title: '受理期限',
-                content: '即日起至？月 ？日 (台北時間) 截止。',
+                content: '即日起至 6 月 30 日 (台北時間) 截止。',
             },
         ],
         visaTitle: '入境簽證',
@@ -117,7 +120,6 @@ export default genI18nMessages({
         applicationHowTo: '申請流程',
         remarkTitle: '備註',
         remarkContent: [
-            '表單內容填寫需真實，包含真實姓名、聯絡資訊、處境與需求說明',
             '售票期間我們會主動告知您是否能獲得補助，請留意信箱及電話。',
             '若申請通過，請您仔細閱讀退費的注意事項，請保留單據（例如：交通補助會需要單據證明）並在會場交付工作人員。',
         ],
@@ -132,5 +134,9 @@ export default genI18nMessages({
         othersContent:
             '我們知道每個人的經濟狀況皆有不同，對 Python 社群的貢獻也都難以比較。' +
             '財務補助的資源有限，無法保證能幫到所有人，但我們還是想對有困難的朋友們說：「需要幫忙就說一聲吧！我們盡力！」',
+        fill: '填寫',
+        form: '線上表單',
+        fillFormProcess:
+            '，表單內容填寫需真實，包含真實姓名、聯絡資訊、處境與需求說明',
     },
 })

@@ -13,8 +13,10 @@ export default {
     i18n,
     name: 'CoreH1',
     props: {
-        title: String,
-        default: () => '',
+        title: {
+            type: String,
+            required: true,
+        },
     },
     computed: {
         dynamicSpacing() {
@@ -42,7 +44,6 @@ h1 {
     line-height: 41px;
     color: #f3cc39;
     padding: 9px 0px;
-    border-bottom: 8px solid #f3cc39;
     margin-bottom: 45px;
 }
 </style>

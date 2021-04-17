@@ -58,16 +58,7 @@
                 <p>{{ $t('applicationHowTo') }}</p>
             </template>
             <template #right-col>
-                <p class="content-text">
-                    {{ $t('applicationHowTo') }}
-                    <ext-link
-                        href="mailto:organizers@pycon.tw"
-                        highlight
-                        underline
-                    >
-                        {{ $t('orgEmail') }}
-                    </ext-link>
-                </p>
+                <div class="application-how-to-diagram" :style="getImage"></div>
             </template>
         </two-col-wrapper>
         <two-col-wrapper>
@@ -76,10 +67,21 @@
             </template>
             <template #right-col>
                 <ul class="list-disc">
+                    <li>
+                        {{ $t('fill') }}
+                        <ext-link
+                            href="https://forms.gle/vXZNwRPhu84G4NM49"
+                            highlight
+                            underline
+                        >
+                            {{ $t('form') }}
+                        </ext-link>
+                        {{ $t('fillFormProcess') }}
+                    </li>
                     <li
-                        class="list-item"
                         v-for="(content, i) in $t('remarkContent')"
                         :key="`remark_content_${i}`"
+                        class="list-item"
                     >
                         {{ content }}
                     </li>
@@ -94,9 +96,9 @@
             <template #right-col>
                 <ul class="list-disc">
                     <li
-                        class="list-item"
                         v-for="(content, i) in $t('applicationTipsContent')"
                         :key="`application_tips_content_${i}`"
+                        class="list-item"
                     >
                         {{ content }}
                     </li>
@@ -123,6 +125,9 @@ import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import CoreHr from '@/components/core/layout/Hr.vue'
 
+import ApplicationHowToZH from '@/static/img/registration/ApplicationHowToDiagramZH.svg'
+import ApplicationHowToEN from '@/static/img/registration/ApplicationHowToDiagramEN.svg'
+
 export default {
     i18n,
     name: 'PageRegistrationFinancialAid',
@@ -132,6 +137,26 @@ export default {
         TwoColWrapper,
         ExtLink,
         CoreHr,
+    },
+    data() {
+        return {
+            applicationHowToZH: ApplicationHowToZH,
+            applicationHowToEN: ApplicationHowToEN,
+        }
+    },
+    computed: {
+        getImage() {
+            return {
+                'background-image':
+                    this.$i18n.locale === 'en-us'
+                        ? `url(${this.applicationHowToEN})`
+                        : `url(${this.applicationHowToZH})`,
+                'background-size': 'contain',
+                'background-repeat': 'no-repeat',
+                width: '100%',
+                'padding-top': '20%',
+            }
+        },
     },
 }
 </script>
@@ -152,5 +177,9 @@ export default {
 
 .ul-disc {
     list-style: normal;
+}
+
+.application-how-to-diagram {
+    margin: 25px 0px 10px 0px;
 }
 </style>
