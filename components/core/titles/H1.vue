@@ -37,7 +37,7 @@ export default {
     justify-content: center;
 }
 h1 {
-    font-family: Noto Serif, Source Sans Pro;
+    font-family: 'Noto Serif TC';
     font-style: normal;
     font-weight: 500;
     font-size: 30px;

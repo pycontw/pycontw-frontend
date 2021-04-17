@@ -24,6 +24,7 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC'}
         ],
     },
 
