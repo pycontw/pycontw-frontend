@@ -16,22 +16,42 @@ export default {
 </script>
 
 <style scpoed>
+@media (min-width: 600px) {
+    .two-col-layout {
+        grid-template-columns: 3fr 8fr;
+    }
+
+    .left-col {
+        justify-self: center;
+    }
+
+    .right-col {
+        font-size: 18px;
+        line-height: 30.5px;
+    }
+}
+@media (max-width: 600px) {
+    .left-col {
+        justify-self: start;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .right-col {
+        font-size: 14px;
+        line-height: 23px;
+    }
+}
 .two-col-layout {
     display: grid;
-    grid-template-columns: 3fr 8fr;
     margin: 20px auto;
 }
-
 .left-col {
     color: #9387ff;
-    justify-self: center;
 }
-
 .right-col {
     width: 100%;
     justify-self: start;
-    font-size: 18px;
-    line-height: 23px;
     color: #c7c7c7;
 }
 </style>

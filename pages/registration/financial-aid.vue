@@ -6,7 +6,7 @@
                 <p>{{ $t('coreValueTitle') }}</p>
             </template>
             <template #right-col>
-                <p class="content-text paragraph">
+                <p class="content paragraph">
                     <ext-link
                         href="https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html"
                         highlight
@@ -16,7 +16,7 @@
                     </ext-link>
                     {{ $t('coreValueContent')[0] }}
                 </p>
-                <p class="content-text paragraph">
+                <p class="content paragraph">
                     {{ $t('coreValueContent')[1] }}
                 </p>
             </template>
@@ -30,7 +30,7 @@
                 <p>{{ field.title }}</p>
             </template>
             <template #right-col>
-                <p class="content-text">
+                <p class="content">
                     {{ field.content }}
                 </p>
             </template>
@@ -40,7 +40,7 @@
                 <p>{{ $t('visaTitle') }}</p>
             </template>
             <template #right-col>
-                <p class="content-text">
+                <p class="content">
                     {{ $t('visaContent') }}
                     <ext-link
                         href="mailto:organizers@pycon.tw"
@@ -58,7 +58,10 @@
                 <p>{{ $t('applicationHowTo') }}</p>
             </template>
             <template #right-col>
-                <div class="application-how-to-diagram" :style="getImage"></div>
+                <div
+                    class="application-how-to-diagram content"
+                    :style="getImage"
+                ></div>
             </template>
         </two-col-wrapper>
         <two-col-wrapper>
@@ -67,7 +70,7 @@
             </template>
             <template #right-col>
                 <ul class="list-disc">
-                    <li>
+                    <li class="content">
                         {{ $t('fill') }}
                         <ext-link
                             href="https://forms.gle/vXZNwRPhu84G4NM49"
@@ -81,7 +84,7 @@
                     <li
                         v-for="(content, i) in $t('remarkContent')"
                         :key="`remark_content_${i}`"
-                        class="list-item"
+                        class="content"
                     >
                         {{ content }}
                     </li>
@@ -98,7 +101,7 @@
                     <li
                         v-for="(content, i) in $t('applicationTipsContent')"
                         :key="`application_tips_content_${i}`"
-                        class="list-item"
+                        class="content"
                     >
                         {{ content }}
                     </li>
@@ -111,7 +114,7 @@
                 <p>{{ $t('othersTitle') }}</p>
             </template>
             <template #right-col>
-                <p class="content-text">{{ $t('othersContent') }}</p>
+                <p class="content">{{ $t('othersContent') }}</p>
             </template>
         </two-col-wrapper>
     </i18n-page-wrapper>
@@ -153,7 +156,7 @@ export default {
                         : `url(${this.applicationHowToZH})`,
                 'background-size': 'contain',
                 'background-repeat': 'no-repeat',
-                width: '100%',
+                'background-position': 'center',
                 'padding-top': '20%',
             }
         },
@@ -161,18 +164,21 @@ export default {
 }
 </script>
 <style scoped>
-.content-text {
-    width: 85%;
-    margin: 0px 0px 0px 0px;
+@media (max-width: 600px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    .content {
+        width: 85%;
+        margin: 3px 0px;
+    }
 }
 
 .paragraph {
     margin: 0px 0px 40px 0px;
-}
-
-.list-item {
-    width: 85%;
-    margin: 3px 0px;
 }
 
 .ul-disc {

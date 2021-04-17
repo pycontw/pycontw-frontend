@@ -36,14 +36,25 @@ export default {
     display: flex;
     justify-content: center;
 }
+@media (min-width: 600px) {
+    h1 {
+        font-size: 30px;
+        margin-bottom: 45px;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+}
+
 h1 {
     font-family: 'Noto Serif TC';
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
     line-height: 41px;
     color: #f3cc39;
     padding: 9px 0px;
-    margin-bottom: 45px;
 }
 </style>
