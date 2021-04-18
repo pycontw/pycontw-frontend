@@ -11,7 +11,7 @@
                     <locale-link to="/about/staff" class="my-2">{{
                         $t('staff')
                     }}</locale-link>
-                    <locale-link to="/about/privacy-policy">
+                    <locale-link to="/about/privacy-policy" class="my-2">
                         {{ $t('privacyPolicy') }}
                     </locale-link>
                     <!--

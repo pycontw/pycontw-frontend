@@ -5,7 +5,7 @@
             v-for="(contents, i) in $t('contents')"
             :key="`privacy_policy_contents_${i}`"
         >
-            <i18n :path="contents.title" tag="h1"></i18n>
+            <i18n :path="contents.title" tag="h2"></i18n>
             <i18n
                 v-for="(content, ii) in contents.description"
                 :key="`privacy_policy_description_${ii}`"
