@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-3">
+    <div class="mt-10 mb-3">
         <div class="flex justify-center cursor-default">
             <p class="py-3 font-bold">{{ $t('history') }}</p>
         </div>
