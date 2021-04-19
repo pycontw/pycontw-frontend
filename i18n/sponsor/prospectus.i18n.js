@@ -41,7 +41,7 @@ export default genI18nMessages({
                 'Deadline of Call for Proposal: April 26th 23:59:59 ({AoE})',
                 'Schedule Announcement: June 27th',
                 'Job Fair: August 21st (Sat)',
-                'Main Conference: August 20th (Fri) ~ August 22nd (Sun)',
+                'Main Conference: August 21st (Sat) ~ August 22nd (Sun)',
             ],
         ],
 
@@ -272,7 +272,7 @@ export default genI18nMessages({
                 '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
                 '公告完整議程：6 月 27 日',
                 'Job Fair：8 月 21 日 (六)',
-                '研討會日：8 月 20 日 (五) 至 8 月 22 日 (日)',
+                '研討會日：8 月 21 日 (六) 至 8 月 22 日 (日)',
             ],
         ],
 
