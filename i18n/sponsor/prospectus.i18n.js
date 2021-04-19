@@ -23,14 +23,13 @@ export default genI18nMessages({
         ],
 
         stats: [
-            'Quick stats from 2020',
+            'Quick stats from the past',
             [
-                '400+ attendees (as the first southern Taiwan PyCon TW)',
-                'Most attendees are software engineers. ' +
-                    'Others are: potential job seekers, data scientists, students, managers, researchers, ' +
-                    'CEOs and CTOs etc.',
-                'Over half of attendees are Python users for 1-5 years, and ' +
-                    'around 20% attendees have been using Python for more than 5 years.',
+                '675 attendees (latest PyConTW hosted in Taipei)',
+                '52% of attendees are software engineers. ' +
+                    'Others are: data scientists (11%), students (9%), managers (8%) etc',
+                '62% of attendees are Python users for 1-5 years, and ' +
+                    'around 15% have been using Python for 5-10 years.',
             ],
         ],
 
@@ -38,11 +37,11 @@ export default genI18nMessages({
             'Conference Schedule',
             'Taiwan timezone (UTC+8) if not specified',
             [
-                'Call for Proposal: March 1st, 2021',
-                'Deadline of Call for Proposal: April 26th, 2021 23:59:59 ({AoE})',
-                'Schedule Announcement: June 27th, 2021',
-                'Job Fair: 8/21 Sat.',
-                'Main Conference: 8/20 Fri. ~ 8/22 Sun.',
+                'Call for Proposal: March 1st',
+                'Deadline of Call for Proposal: April 26th 23:59:59 ({AoE})',
+                'Schedule Announcement: June 27th',
+                'Job Fair: August 21st (Sat)',
+                'Main Conference: August 21st (Sat) ~ August 22nd (Sun)',
             ],
         ],
 
@@ -62,6 +61,7 @@ export default genI18nMessages({
                 'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 5 Tickets',
+                'Podcast Advertisement*: 1 episode',
                 'Job Fair*',
             ],
         ],
@@ -77,6 +77,7 @@ export default genI18nMessages({
                 'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 4 Tickets',
+                'Podcast Advertisement*: 1 episode',
                 'Job Fair*',
             ],
         ],
@@ -131,12 +132,20 @@ export default genI18nMessages({
             [['Social Media', '(per post)'], 200, 300, 300, 500, 600],
             [['JD', '(per post)'], 200, 300, 300, 500, 600],
             [
-                ['Advertisement', '(APP or Website)'],
+                ['APP or Website AD'],
                 'Included',
                 'Included',
                 'Included',
                 200,
                 200,
+            ],
+            [
+                ['Podcast AD', '(per episode)'],
+                'Included',
+                'Included',
+                200,
+                200,
+                '-',
             ],
             [
                 'Ticket Discount',
@@ -164,9 +173,36 @@ export default genI18nMessages({
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
+        'specialSponsorship-sprint': [
+            'Sprints Meetup - USD$ 500 (Limit: 1)',
+            [
+                'Host physical meetup for open source project developing ' +
+                    'and is held out of the main conference',
+                'Roughly 40 attendees, most of them are experienced python developers',
+                'Pull up banner will be placed in the entrance',
+                'Sponsors will be introduced in both opening and closing',
+            ],
+        ],
+        'specialSponsorship-youngTalent': [
+            'Young Talent Hackathon - USD$ 1,000 (Limit: 1)',
+            [
+                'Host hackathon for high school students ' +
+                    'exchanging programming learning experience',
+                'Event is held out of the main conference',
+                'Reserve up to 10 tickets (out of 30) and FAs ' +
+                    'for underprivileged students',
+                'Pull up banner will be placed in the entrance',
+                'Logos will be revealed in documentary video' +
+                    ', which will be included in slideshow during conference',
+            ],
+        ],
 
         'note-title': 'Notes',
         'note-items': [
+            'Podcast advertisement includes (i) 30s - 90s introduction ' +
+                'in the beginning of podcast, (ii) revealed in FB post along ' +
+                'with new episode announcement and (iii) revealed in ' +
+                'podcast description.',
             'Job fair introduction is restricted to 5 minutes per organization.',
             'PyCon TW 2021 will not produce a digital brochure. ' +
                 'All information will be posted on our website and app.',
@@ -220,23 +256,23 @@ export default genI18nMessages({
         ],
 
         stats: [
-            '2020 快速總覽',
+            '快速總覽',
             [
-                '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
-                '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
-                '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
+                '出席人數 675（最近一次在台北舉辦的大會）',
+                '會眾以軟體工程師為主 (52%)，亦有會眾為：資料工程師 (11%)，學生 (9%)，主管 (8%)。',
+                '62% 的會眾為 Python 1~5 年的使用者，更有 15% 左右為 Python 5~10年的使用者',
             ],
         ],
 
         importantDates: [
-            '大會重要時間點',
+            '大會重要日期',
             '若未註明則以台灣時區 (UTC+8) 為準',
             [
                 '議程、課程 開放徵稿：3 月 1 日',
                 '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
                 '公告完整議程：6 月 27 日',
                 'Job Fair：8 月 21 日 (六)',
-                '研討會日：8 月 20 日 (五) 至 8 月 22 日 (日)',
+                '研討會日：8 月 21 日 (六) 至 8 月 22 日 (日)',
             ],
         ],
 
@@ -256,6 +292,7 @@ export default genI18nMessages({
                 '演講影片片頭宣傳',
                 '會期期間 APP 推播廣告介紹',
                 '講者晚宴 5 名',
+                'Podcast 廣告 1 集*',
                 '徵才介紹*',
             ],
         ],
@@ -271,6 +308,7 @@ export default genI18nMessages({
                 '演講影片片頭宣傳',
                 '會期期間 APP 推播廣告介紹',
                 '講者晚宴 4 名',
+                'Podcast 廣告 1 集*',
                 '徵才介紹*',
             ],
         ],
@@ -324,7 +362,8 @@ export default genI18nMessages({
             ['技術演講（30 分鐘）', '已包含', '已包含', 15000, '無', '無'],
             ['社群媒體宣傳 / 篇', 6000, 9000, 9000, 15000, 18000],
             ['網站徵才牆 / 篇', 6000, 9000, 9000, 15000, 18000],
-            ['網站/APP、廣告宣傳', '已包含', '已包含', '已包含', 6000, 6000],
+            ['網站/APP 廣告宣傳', '已包含', '已包含', '已包含', 6000, 6000],
+            ['Podcast廣告 / 集', '已包含', '已包含', 6000, 6000, '無'],
             [
                 '門票優惠',
                 '任意數量九折',
@@ -351,9 +390,31 @@ export default genI18nMessages({
                 '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
+        'specialSponsorship-sprint': [
+            '衝刺開發場地認養 - 名額 1 名, 單一贊助金額: 15,000 元',
+            [
+                '衝刺開發將安排在大會會期之外',
+                '專案領導人帶領參加者專案待解決的問題、待開發的功能',
+                '參加人數以 40 人為限, 多為有一定 Python 基礎的開發者',
+                '擺放含有公司商標的易拉展在活動入口位置',
+                '贊助商將在活動開頭以及結尾被提及',
+            ],
+        ],
+        'specialSponsorship-youngTalent': [
+            'Young Talent 黑客松 - 名額 1 名, 單一贊助金額: 30,000 元',
+            [
+                'Young Talent 黑客松將安排在大會會期之外',
+                '舉辦高中生的一日黑客松，規模約為 30 人並保留 10 個偏鄉學生名額',
+                '贊助需財務補助的偏鄉學生',
+                '擺放含有公司商標的易拉展在活動入口位置',
+                '贊助商商標將被包含在活動紀錄片中，該紀錄片將在大會現場輪播',
+            ],
+        ],
 
         'note-title': '備註',
         'note-items': [
+            'Podcast 廣告包含 (i) 30 - 90秒的開頭廣告, (ii) FB 上架貼文露出, ' +
+                '(iii) podcast 集數簡介中文字露出。',
             '徵才介紹（Job Fair）， 每組 5 分鐘為限。',
             'PyCon TW 2021 無電子版大會手冊，所有內容將會發布至網站以及 APP。',
             'PyCon TW 2021 無迎賓袋及實體文宣，贊助商可自行製作發放。',
