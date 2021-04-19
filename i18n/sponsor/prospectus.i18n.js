@@ -61,6 +61,7 @@ export default genI18nMessages({
                 'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 5 Tickets',
+                'Podcast Advertisement*: 1 episode',
                 'Job Fair*',
             ],
         ],
@@ -76,6 +77,7 @@ export default genI18nMessages({
                 'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 4 Tickets',
+                'Podcast Advertisement*: 1 episode',
                 'Job Fair*',
             ],
         ],
@@ -130,10 +132,18 @@ export default genI18nMessages({
             [['Social Media', '(per post)'], 200, 300, 300, 500, 600],
             [['JD', '(per post)'], 200, 300, 300, 500, 600],
             [
-                ['Advertisement', '(APP or Website)'],
+                ['APP or Website AD'],
                 'Included',
                 'Included',
                 'Included',
+                200,
+                200,
+            ],
+            [
+                ['Podcast AD', '(per episode)'],
+                'Included',
+                'Included',
+                200,
                 200,
                 200,
             ],
@@ -189,6 +199,10 @@ export default genI18nMessages({
 
         'note-title': 'Notes',
         'note-items': [
+            'Podcast advertisement includes (i) 30s - 90s introduction ' +
+                'in the beginning of podcast, (ii) revealed in FB post along ' +
+                'with new episode announcement and (iii) revealed in ' +
+                'podcast description.',
             'Job fair introduction is restricted to 5 minutes per organization.',
             'PyCon TW 2021 will not produce a digital brochure. ' +
                 'All information will be posted on our website and app.',
