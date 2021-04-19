@@ -163,6 +163,29 @@ export default genI18nMessages({
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
+        'specialSponsorship-sprint': [
+            'Sprints Meetup - USD$ 500 (Limit: 1)',
+            [
+                'Host physical meetup for open source project developing ' +
+                    'and is held out of the main conference',
+                'Roughly 40 attendees, most of them are experienced python developers',
+                'Pull up banner will be placed in the entrance',
+                'Sponsors will be introduced in both opening and closing',
+            ],
+        ],
+        'specialSponsorship-youngTalent': [
+            'Young Talent Hackathon - USD$ 1,000 (Limit: 1)',
+            [
+                'Host hackathon for high school students ' +
+                    'exchanging programming learning experience',
+                'Event is held out of the main conference',
+                'Reserve up to 10 tickets (out of 30) and FAs ' +
+                    'for underprivileged students',
+                'Pull up banner will be placed in the entrance',
+                'Logos will be revealed in documentary video' +
+                    ', which will be included in slideshow during conference',
+            ],
+        ],
 
         'note-title': 'Notes',
         'note-items': [
