@@ -23,14 +23,13 @@ export default genI18nMessages({
         ],
 
         stats: [
-            'Quick stats from 2020',
+            'Quick stats from the past',
             [
-                '400+ attendees (as the first southern Taiwan PyCon TW)',
-                'Most attendees are software engineers. ' +
-                    'Others are: potential job seekers, data scientists, students, managers, researchers, ' +
-                    'CEOs and CTOs etc.',
-                'Over half of attendees are Python users for 1-5 years, and ' +
-                    'around 20% attendees have been using Python for more than 5 years.',
+                '675 attendees (latest PyConTW hosted in Taipei)',
+                '52% of attendees are software engineers. ' +
+                    'Others are: data scientists (11%), students (9%), managers (8%) etc',
+                '62% of attendees are Python users for 1-5 years, and ' +
+                    'around 15% have been using Python for 5-10 years.',
             ],
         ],
 
@@ -38,11 +37,11 @@ export default genI18nMessages({
             'Conference Schedule',
             'Taiwan timezone (UTC+8) if not specified',
             [
-                'Call for Proposal: March 1st, 2021',
-                'Deadline of Call for Proposal: April 26th, 2021 23:59:59 ({AoE})',
-                'Schedule Announcement: June 27th, 2021',
-                'Job Fair: 8/21 Sat.',
-                'Main Conference: 8/20 Fri. ~ 8/22 Sun.',
+                'Call for Proposal: March 1st',
+                'Deadline of Call for Proposal: April 26th 23:59:59 ({AoE})',
+                'Schedule Announcement: June 27th',
+                'Job Fair: August 21st (Sat)',
+                'Main Conference: August 20th (Fri) ~ August 22nd (Sun)',
             ],
         ],
 
