@@ -14,15 +14,15 @@ export default genI18nMessages({
             },
             {
                 key: 'development_web',
-                organization: 'Development(web)',
+                organization: 'Development (web)',
             },
             {
                 key: 'development_data',
-                organization: 'Development(data)',
+                organization: 'Development (data)',
             },
             {
                 key: 'development_infra',
-                organization: 'Development(infrastructure)',
+                organization: 'Development (infra)',
             },
             {
                 key: 'venue',
@@ -67,15 +67,15 @@ export default genI18nMessages({
             },
             {
                 key: 'development_web',
-                organization: '開發(網頁)',
+                organization: '開發（網站）',
             },
             {
                 key: 'development_data',
-                organization: '開發(資料)',
+                organization: '開發（資料）',
             },
             {
                 key: 'development_infra',
-                organization: '開發(基礎設施)',
+                organization: '開發（基礎設施）',
             },
             {
                 key: 'venue',
