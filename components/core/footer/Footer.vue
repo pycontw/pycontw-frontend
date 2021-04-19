@@ -3,7 +3,7 @@
         class="w-full flex flex-col justify-between bg-dark-secondary text-golden"
     >
         <div class="w-full p-10">
-            <div class="h-32 flex justify-center">
+            <div class="h-24 flex justify-center">
                 <div class="flex flex-col items-center">
                     <locale-link to="/about/code-of-conduct" class="my-2">
                         {{ $t('codeOfConduct') }}
@@ -21,6 +21,7 @@
                     -->
                 </div>
             </div>
+            <footer-history />
             <div class="w-full flex justify-center items-center flex-wrap">
                 <footer-icon
                     href="https://pycontw.blogspot.tw/"
@@ -63,6 +64,7 @@
 <script>
 import i18n from './Footer.i18n'
 import FooterIcon from './FooterIcon'
+import FooterHistory from './FooterHistory'
 import { LocaleLink } from '~/components/core/links'
 
 export default {
@@ -71,6 +73,7 @@ export default {
     components: {
         FooterIcon,
         LocaleLink,
+        FooterHistory,
     },
 }
 </script>

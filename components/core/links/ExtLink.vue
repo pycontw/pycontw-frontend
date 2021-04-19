@@ -40,7 +40,7 @@ a {
     color: inherit;
 }
 .highlight {
-    color: #9387ff;
+    color: #c2a53a;
 }
 .highlight:hover {
     color: #6656f8;

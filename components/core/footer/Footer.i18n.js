@@ -6,11 +6,13 @@ export default genI18nMessages({
         staff: 'Staff',
         community: 'Community',
         privacyPolicy: 'Privacy Policy',
+        history: 'History',
     },
     'zh-hant': {
         codeOfConduct: '行為準則',
         staff: '工作人員',
         community: '社群',
         privacyPolicy: '個人資料保護聲明',
+        history: '歷年網站',
     },
 })
