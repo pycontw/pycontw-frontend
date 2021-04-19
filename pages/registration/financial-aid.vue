@@ -24,7 +24,7 @@
         <core-hr></core-hr>
         <two-col-wrapper
             v-for="(field, i) in $t('plainTextFields')"
-            :key="`field_${i}`"
+            :key="`financial_plain_text_field_${i}`"
         >
             <template #default>
                 <p>{{ field.title }}</p>
@@ -70,17 +70,16 @@
             </template>
             <template #right-col>
                 <ul class="list-disc">
-                    <li class="content">
-                        {{ $t('fill') }}
-                        <ext-link
-                            href="https://forms.gle/vXZNwRPhu84G4NM49"
-                            highlight
-                            underline
-                        >
-                            {{ $t('form') }}
-                        </ext-link>
-                        {{ $t('fillFormProcess') }}
-                    </li>
+                    <i18n path="fillFormProcess" tag="li">
+                        <template #form>
+                            <ext-link
+                                href="https://forms.gle/vXZNwRPhu84G4NM49"
+                                highlight
+                                underline
+                                >{{ $t('form') }}</ext-link
+                            >
+                        </template>
+                    </i18n>
                     <li
                         v-for="(content, i) in $t('remarkContent')"
                         :key="`remark_content_${i}`"

@@ -70,10 +70,9 @@ export default genI18nMessages({
             'We understand that we all have different financial situations, and contribution is difficult to quantify.' +
             'As we have a limited budget, we cannot guarantee to fund all applicants.' +
             'But please do let us know if you need support, and we will do our best.',
-        fill: 'Fill out',
-        form: 'the form.',
+        form: 'the form',
         fillFormProcess:
-            ' Leave a brief description about yourself, and provide at least your full name.',
+            'Fill out {form}. Leave a brief description about yourself, and provide at least your full name.',
     },
     'zh-hant': {
         title: '財務補助說明',
@@ -134,9 +133,8 @@ export default genI18nMessages({
         othersContent:
             '我們知道每個人的經濟狀況皆有不同，對 Python 社群的貢獻也都難以比較。' +
             '財務補助的資源有限，無法保證能幫到所有人，但我們還是想對有困難的朋友們說：「需要幫忙就說一聲吧！我們盡力！」',
-        fill: '填寫',
         form: '線上表單',
         fillFormProcess:
-            '，表單內容填寫需真實，包含真實姓名、聯絡資訊、處境與需求說明',
+            '填寫{form}，表單內容填寫需真實，包含真實姓名、聯絡資訊、處境與需求說明',
     },
 })

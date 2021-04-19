@@ -10,7 +10,9 @@ export default {
     router: {
         base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
     },
-
+    server: {
+        host: '0.0.0.0',
+    },
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
         title: 'pycontw-2021',
