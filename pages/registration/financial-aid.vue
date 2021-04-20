@@ -6,7 +6,9 @@
                 <p>{{ $t('coreValueTitle') }}</p>
             </template>
             <template #right-col>
-                <p class="content paragraph">
+                <p
+                    class="mb-8 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                >
                     <ext-link
                         href="https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html"
                         highlight
@@ -16,7 +18,9 @@
                     </ext-link>
                     {{ $t('coreValueContent')[0] }}
                 </p>
-                <p class="content paragraph">
+                <p
+                    class="mb-8 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                >
                     {{ $t('coreValueContent')[1] }}
                 </p>
             </template>
@@ -30,7 +34,7 @@
                 <p>{{ field.title }}</p>
             </template>
             <template #right-col>
-                <p class="content">
+                <p class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0">
                     {{ field.content }}
                 </p>
             </template>
@@ -40,7 +44,7 @@
                 <p>{{ $t('visaTitle') }}</p>
             </template>
             <template #right-col>
-                <p class="content">
+                <p class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0">
                     {{ $t('visaContent') }}
                     <ext-link
                         href="mailto:organizers@pycon.tw"
@@ -59,7 +63,7 @@
             </template>
             <template #right-col>
                 <div
-                    class="application-how-to-diagram content"
+                    class="mt-5 mb-2 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
                     :style="getImage"
                 ></div>
             </template>
@@ -83,7 +87,7 @@
                     <li
                         v-for="(content, i) in $t('remarkContent')"
                         :key="`remark_content_${i}`"
-                        class="content"
+                        class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
                     >
                         {{ content }}
                     </li>
@@ -100,7 +104,7 @@
                     <li
                         v-for="(content, i) in $t('applicationTipsContent')"
                         :key="`application_tips_content_${i}`"
-                        class="content"
+                        class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
                     >
                         {{ content }}
                     </li>
@@ -113,7 +117,9 @@
                 <p>{{ $t('othersTitle') }}</p>
             </template>
             <template #right-col>
-                <p class="content">{{ $t('othersContent') }}</p>
+                <p class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0">
+                    {{ $t('othersContent') }}
+                </p>
             </template>
         </two-col-wrapper>
     </i18n-page-wrapper>
@@ -156,35 +162,14 @@ export default {
                 'background-size': 'contain',
                 'background-repeat': 'no-repeat',
                 'background-position': 'center',
-                'padding-top': '20%',
+                'padding-top': '23%',
             }
         },
     },
 }
 </script>
 <style scoped>
-@media (max-width: 600px) {
-    .content {
-        width: 100%;
-    }
-}
-
-@media (min-width: 600px) {
-    .content {
-        width: 85%;
-        margin: 3px 0px;
-    }
-}
-
-.paragraph {
-    margin: 0px 0px 40px 0px;
-}
-
 .ul-disc {
     list-style: normal;
-}
-
-.application-how-to-diagram {
-    margin: 25px 0px 10px 0px;
 }
 </style>

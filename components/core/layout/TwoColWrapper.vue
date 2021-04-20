@@ -1,9 +1,13 @@
 <template>
     <div class="two-col-layout">
-        <div class="left-col">
+        <div
+            class="left-col mb-2 justify-self-start text-sm md:justify-self-center lg:justify-self-center md:mb-0 lg:mb-0 md:text-lg lg:text-lg"
+        >
             <slot></slot>
         </div>
-        <div class="right-col">
+        <div
+            class="right-col leading-4 text-xs md:text-sm lg:text-sm md:leading-6 lg:leading-6"
+        >
             <slot name="right-col"></slot>
         </div>
     </div>
@@ -16,42 +20,18 @@ export default {
 </script>
 
 <style scpoed>
-@media (min-width: 600px) {
+@media (min-width: 640px) {
     .two-col-layout {
         grid-template-columns: 3fr 8fr;
     }
-
-    .left-col {
-        justify-self: center;
-    }
-
-    .right-col {
-        font-size: 18px;
-        line-height: 30.5px;
-    }
-}
-@media (max-width: 600px) {
-    .left-col {
-        justify-self: start;
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-
-    .right-col {
-        font-size: 14px;
-        line-height: 23px;
-    }
 }
 .two-col-layout {
-    display: grid;
-    margin: 20px auto;
+    @apply grid my-4;
 }
 .left-col {
     color: #9387ff;
 }
 .right-col {
-    width: 100%;
-    justify-self: start;
     color: #c7c7c7;
 }
 </style>

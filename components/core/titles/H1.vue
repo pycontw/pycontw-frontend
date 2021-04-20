@@ -1,6 +1,8 @@
 <template>
-    <div class="h1-wrapper">
-        <h1 :style="dynamicSpacing">
+    <div class="flex justify-center">
+        <h1
+            :class="`py-2 font-medium leading-loose text-lg mb-3 ${langSpacing} md:text-2xl lg:text-2xl md:mb-9 lg:mb-9`"
+        >
             {{ title }}
         </h1>
     </div>
@@ -19,42 +21,17 @@ export default {
         },
     },
     computed: {
-        dynamicSpacing() {
+        langSpacing() {
             return this.$i18n.locale === 'en-us'
-                ? {
-                      'letter-spacing': '1px',
-                  }
-                : {
-                      'letter-spacing': '4px',
-                  }
+                ? 'tracking-wider'
+                : 'tracking-widest'
         },
     },
 }
 </script>
 <style scoped>
-.h1-wrapper {
-    display: flex;
-    justify-content: center;
-}
-@media (min-width: 600px) {
-    h1 {
-        font-size: 30px;
-        margin-bottom: 45px;
-    }
-}
-@media (max-width: 600px) {
-    h1 {
-        font-size: 26px;
-        margin-bottom: 15px;
-    }
-}
-
 h1 {
     font-family: 'Noto Serif TC';
-    font-style: normal;
-    font-weight: 500;
-    line-height: 41px;
     color: #f3cc39;
-    padding: 9px 0px;
 }
 </style>
