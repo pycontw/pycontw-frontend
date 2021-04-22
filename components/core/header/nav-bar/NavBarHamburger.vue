@@ -31,6 +31,12 @@
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
             ></nav-bar-item-accordion>
+            <nav-bar-item-accordion
+                :label="$t('registration')"
+                :items="registrationItems"
+                :expanding="expandingItem === 'registration'"
+                @click.native="toggleAccordion('registration')"
+            ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 href="https://forms.gle/wuG2w42cbhamyGdv9"
@@ -70,6 +76,9 @@ export default {
     computed: {
         speakingItems() {
             return this.generateI18nItems(navBarItems.speakingItems)
+        },
+        registrationItems() {
+            return this.generateI18nItems(navBarItems.registrationItems)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
