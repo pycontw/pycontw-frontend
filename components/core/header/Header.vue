@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 .header-container {
-    @apply w-full h-full px-4 justify-between items-center;
+    @apply w-full h-full px-4 justify-between items-center text-sm;
 }
 
 .header-container.--desktop {
