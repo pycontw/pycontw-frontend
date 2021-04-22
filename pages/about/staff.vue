@@ -88,7 +88,7 @@ export default {
                     'Jacky',
                 ],
                 venue: [
-                    'David Liu',
+                    'David Lu',
                     '地瓜',
                     'Yider',
                     'Matthew',
