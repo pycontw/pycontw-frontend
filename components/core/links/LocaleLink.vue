@@ -36,10 +36,10 @@ export default {
 <style scoped>
 /* TODO: Update highlight variant style with the design */
 .highlight {
-    color: #9387ff;
+    color: #c2a53a;
 }
 .highlight:hover {
-    color: #6656f8;
+    color: #9387ff;
 }
 
 .core-localeLink:not(.highlight):not(.--customized) {
@@ -47,6 +47,6 @@ export default {
 }
 
 .core-localeLink:not(.highlight):not(.--customized):hover {
-    color: #7568f6;
+    color: #9387ff;
 }
 </style>

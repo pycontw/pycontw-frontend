@@ -10,7 +10,6 @@ export default {
     router: {
         base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
     },
-
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
         title: 'pycontw-2021',
@@ -24,6 +23,11 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
+            {
+                rel: 'stylesheet',
+                href:
+                    'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC',
+            },
         ],
     },
 
