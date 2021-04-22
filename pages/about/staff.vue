@@ -88,7 +88,7 @@ export default {
                     'Jacky',
                 ],
                 venue: [
-                    'David Liu',
+                    'David Lu',
                     '地瓜',
                     'Yider',
                     'Matthew',
@@ -127,9 +127,10 @@ export default {
                     'Rain',
                     'Tai',
                     'yuhow5566',
+                    '坤賢',
                 ],
-                registration: ['育承', 'Tumi'],
-                recruitment: ['Rex', 'Josix', '四貓', 'Tai', 'Leina'],
+                registration: ['育承', 'Tumi', 'GTB', '岱瑾', 'twtrubiks'],
+                recruitment: ['Rex', 'Josix', '四貓', 'Tai', 'Leila'],
                 design: [
                     'Ben',
                     '小玖',
@@ -139,7 +140,7 @@ export default {
                     'Carol Cho',
                     'Cailin',
                 ],
-                finance: ['Rock', 'Leina'],
+                finance: ['Rock', 'Leila'],
                 photography: ['Andy Chuang'],
             },
         }
