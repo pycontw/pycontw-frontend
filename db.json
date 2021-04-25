@@ -5,10 +5,13 @@
                 "level_name": "platinum",
                 "sponsors": [
                     {
-                        "name": "platinum",
-                        "intro": "platinum sponsor",
-                        "website_url": "https://www.platinum.com",
-                        "logo_url": "/media/sponsors/platinum/1561674586.JPG"
+                        "name": "國泰金控",
+                        "subtitle_en_us": "3-year-sponsorship",
+                        "subtitle_zh_hant": "連續三年贊助",
+                        "intro_en_us": "國泰於金控層級設立「數位暨數據發展中心（簡稱數數發中心）」",
+                        "intro_zh_hant": "國泰於金控層級設立「數位暨數據發展中心（簡稱數數發中心）」，以數據驅動（data-driven as culture）為理念，結合子公司的力量與基礎，協助國泰金控打造數位數據生態圈。\n數數發中心了解金融與科技人才對發揮專業、在工作上追求突破的渴望，整合集團資源打造適合跨界新型態人才的環境，團隊成員背景多元，包括技術、科技、新創、電商、零售、電信、金融……等。為讓資料及大數據分析人才擁有充足的資料量運用，同時投注相當的資源與人力於資料科學研發，數數發中心創立「資料科學實驗室」，讓成員不僅能專注開發，也能共同探討資料科學技術的創新應用。\n數數發中心以數據驅動金融科技創新，提供有感、有效的客戶數位體驗，致力成為亞洲數位生態圈及科技金融領頭羊。",
+                        "website_url": "https://www.billgates.com",
+                        "logo_url": "https://tw.pycon.org/2020/media/sponsors/%E5%9C%8B%E6%B3%B0%E9%87%91%E6%8E%A7/%E5%9C%8B%E6%B3%B0%E9%87%91%E6%8E%A7cmyk-%E4%B8%AD%E8%8B%B1_7hzqwdc.png"
                     }
                 ]
             },
@@ -16,10 +19,58 @@
                 "level_name": "gold",
                 "sponsors": [
                     {
-                        "name": "gold",
-                        "intro": "11",
+                        "name": "名字超級長 Have a LONG Name",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "but short content",
+                        "intro_zh_hant": "但描述超級短",
                         "website_url": "https://docs.djangoproject.com/en/3.1/ref/models/expressions/",
-                        "logo_url": null
+                        "logo_url": "https://tw.pycon.org/2020/media/sponsors/%E6%88%90%E5%8A%9F%E5%A4%A7%E5%AD%B8%E8%B3%87%E8%A8%8A%E5%B7%A5%E7%A8%8B%E5%AD%B8%E7%B3%BB/NCKU_CSIE_new.png"
+                    },
+                    {
+                        "name": "Elon Musk",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "He runs gigantic business",
+                        "intro_zh_hant": "馬誼郎，出生於南非的美國企業家",
+                        "website_url": "https://docs.djangoproject.com/en/3.1/ref/models/expressions/",
+                        "logo_url": "https://i.imgur.com/RK2bZI7.jpeg"
+                    },
+                    {
+                        "name": "Elon Musk",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "He runs gigantic business",
+                        "intro_zh_hant": "馬誼郎，出生於南非的美國企業家",
+                        "website_url": "https://docs.djangoproject.com/en/3.1/ref/models/expressions/",
+                        "logo_url": "https://i.imgur.com/xiAfNVQ.jpeg"
+                    },
+                    {
+                        "name": "Elon Musk",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "He runs gigantic business",
+                        "intro_zh_hant": "馬誼郎，出生於南非的美國企業家",
+                        "website_url": "https://docs.djangoproject.com/en/3.1/ref/models/expressions/",
+                        "logo_url": "https://i.imgur.com/p1Ln71T.jpg"
+                    },
+                    {
+                        "name": "Elon Musk",
+                        "subtitle_en_us": "Tesla",
+                        "subtitle_zh_hant": "特斯拉",
+                        "intro_en_us": "He runs gigantic business",
+                        "intro_zh_hant": "馬誼郎，出生於南非的美國企業家",
+                        "website_url": "https://docs.djangoproject.com/en/3.1/ref/models/expressions/",
+                        "logo_url": "https://i.imgur.com/nY1SVr7.gif"
+                    },
+                    {
+                        "name": "Elon Musk",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "He runs gigantic business",
+                        "intro_zh_hant": "馬誼郎，出生於南非的美國企業家",
+                        "website_url": "https://docs.djangoproject.com/en/3.1/ref/models/expressions/",
+                        "logo_url": "https://i.imgur.com/ARxWY48.gif"
                     }
                 ]
             },
@@ -27,10 +78,13 @@
                 "level_name": "silver",
                 "sponsors": [
                     {
-                        "name": "ee",
-                        "intro": "qqq",
-                        "website_url": "https://www.google.com/search?client=firefox-b-d&q=Multilingual+QuerySet+to+dict&spell=1&sa=X&ved=2ahUKEwjc86645JDuAhUGGqYKHVLpAHMQBSgAegQICBA1&biw=1792&bih=916",
-                        "logo_url": null
+                        "name": "Jeff Bezos",
+                        "subtitle_en_us": "Amazon!!!",
+                        "subtitle_zh_hant": "Amazon!!!",
+                        "intro_en_us": "",
+                        "intro_zh_hant": "",
+                        "website_url": "https://amazon.com",
+                        "logo_url": "https://static.boredpanda.com/blog/wp-content/uploads/2020/08/jeff-bezos-stonks-man1.jpg"
                     }
                 ]
             },
@@ -38,10 +92,50 @@
                 "level_name": "bronze",
                 "sponsors": [
                     {
-                        "name": "qweqwewqeqw",
-                        "intro": "qwdaxsxas",
-                        "website_url": "https://github.com/orgs/encode/people",
-                        "logo_url": "/media/sponsors/qweqwewqeqw/d3289673.jpg"
+                        "name": "Mark Zuckerberg",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "Mark Elliot Zuckerberg (born May 14, 1984) is an American media magnate, internet entrepreneur, and philanthropist. He is known for co-founding Facebook, Inc. and serves as its chairman, chief executive officer, and controlling shareholder. He also is a co-founder of the solar sail spacecraft development project Breakthrough Starshot and serves as one of its board members.",
+                        "intro_zh_hant": "馬克·艾略特·祖克柏（1984年5月14日－）出生於美國紐約州白原市，Facebook創始人、董事長兼執行長，同時也是一名軟體設計師。Facebook是由他和哈佛大學的同學達斯汀·莫斯科維茲、愛德華多·薩維林、克里斯·舒爾茨於2004年共同創立，被譽爲Facebook教主。",
+                        "website_url": "https://facebook.com",
+                        "logo_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700"
+                    }
+                ]
+            },
+            {
+                "level_name": "co-organizer",
+                "sponsors": [
+                    {
+                        "name": "test",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "sponsor with empty logo & shouldn't be displayed",
+                        "intro_zh_hant": "",
+                        "website_url": "https://google.com",
+                        "logo_url": ""
+                    },
+                    {
+                        "name": "test",
+                        "subtitle_en_us": "test",
+                        "subtitle_zh_hant": "test",
+                        "intro_en_us": "test",
+                        "intro_zh_hant": "test",
+                        "website_url": "https://google.com",
+                        "logo_url": "https://i.imgur.com/ARxWY48.gif"
+                    }
+                ]
+            },
+            {
+                "level_name": "organizer",
+                "sponsors": [
+                    {
+                        "name": "test",
+                        "subtitle_en_us": "test",
+                        "subtitle_zh_hant": "test",
+                        "intro_en_us": "test",
+                        "intro_zh_hant": "test",
+                        "website_url": "https://google.com",
+                        "logo_url": "https://i.imgur.com/ARxWY48.gif"
                     }
                 ]
             }
