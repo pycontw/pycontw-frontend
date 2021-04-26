@@ -17,7 +17,7 @@
                 <div class="font-serif">
                     <div class="text-3xl lg:text-5xl">PyCon Taiwan 2021</div>
                     <div class="text-2xl lg:text-4xl">10th Anniversary</div>
-                    <div class="text-xl lg:text-3xl">20 - 22 Aug. NTU</div>
+                    <div class="text-xl lg:text-3xl">21 - 22 Aug. NTU</div>
                 </div>
                 <div
                     class="page-homeLandingFocus__desktopButtons hidden md:flex md:mt-8"
