@@ -183,8 +183,8 @@ export default genI18nMessages({
                 'Sponsors will be introduced in both opening and closing',
             ],
         ],
-        'specialSponsorship-youngTalent': [
-            'Young Talent Hackathon - USD$ 1,000 (Limit: 1)',
+        'specialSponsorship-youngPyckathon': [
+            'Young Pyckathon - USD$ 1,000 (Limit: 1)',
             [
                 'Host hackathon for high school students ' +
                     'exchanging programming learning experience',
@@ -400,10 +400,10 @@ export default genI18nMessages({
                 '贊助商將在活動開頭以及結尾被提及',
             ],
         ],
-        'specialSponsorship-youngTalent': [
-            'Young Talent 黑客松 - 名額 1 名, 單一贊助金額: 30,000 元',
+        'specialSponsorship-youngPyckathon': [
+            '新世代 Py 客松 - 名額 1 名, 單一贊助金額: 30,000 元',
             [
-                'Young Talent 黑客松將安排在大會會期之外',
+                '新世代 Py 客松將安排在大會會期之外',
                 '舉辦高中生的一日黑客松，規模約為 30 人並保留 10 個偏鄉學生名額',
                 '贊助需財務補助的偏鄉學生',
                 '擺放含有公司商標的易拉展在活動入口位置',
