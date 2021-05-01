@@ -26,56 +26,54 @@
                 </div>
             </div>
         </div>
-        <!--        <h3>sponsor list</h3>-->
-        <!--        <div-->
-        <!--            v-for="(leveledSponsors, i) in sponsorsData"-->
-        <!--            :key="`index_sponsor_level_${i}`"-->
-        <!--        >-->
-        <!--            <h2 class="text-2xl">{{ leveledSponsors.level_name }}</h2>-->
-        <!--            <div-->
-        <!--                v-for="(sponsor, j) in leveledSponsors.sponsors"-->
-        <!--                :key="`index_sponsor_level_${i}_sponsor_${j}`"-->
-        <!--                class="border-black"-->
-        <!--            >-->
-        <!--                <div>-->
-        <!--                    Name:-->
-        <!--                    <a :href="sponsor.website_url">{{ sponsor.name }}</a>-->
-        <!--                </div>-->
-        <!--                <div>Intro: {{ sponsor.intro }}</div>-->
-        <!--                <img-->
-        <!--                    :src="`https://5f43c00e6788.ngrok.io${sponsor.logo_url}`"-->
-        <!--                    :width="40"-->
-        <!--                    :height="30"-->
-        <!--                    alt=""-->
-        <!--                />-->
-        <!--            </div>-->
-        <!--        </div>-->
+
+        <i18n-page-wrapper>
+            <h2>{{ $t('sponsorList') }}</h2>
+            <sponsor-card-collection
+                v-for="(leveledSponsors, i) in sponsorsData"
+                :key="`index_sponsor_level_${i}`"
+                :level-name="leveledSponsors.level_name"
+            >
+                <sponsor-card
+                    v-for="(sponsor, j) in leveledSponsors.sponsors"
+                    :key="`index_sponsor_level_${i}_sponsor_${j}`"
+                    :logo-url="sponsor.logo_url"
+                    :tag="sponsor.subtitle_en_us"
+                >
+                </sponsor-card>
+            </sponsor-card-collection>
+        </i18n-page-wrapper>
     </div>
 </template>
 
 <script>
-// import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
+import { SponsorCard, SponsorCardCollection } from '~/components/sponsors'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
         TextButton,
+        I18nPageWrapper,
+        SponsorCard,
+        SponsorCardCollection,
     },
     data() {
         return {
             volunteerFormUrl: 'https://forms.gle/wuG2w42cbhamyGdv9',
         }
     },
-    // fetchOnServer: false,
-    // computed: {
-    //     ...mapState(['sponsorsData']),
-    // },
-    // created() {
-    //     this.$store.dispatch('$getSponsorsData')
-    // },
+    fetchOnServer: false,
+    computed: {
+        ...mapState(['sponsorsData']),
+    },
+    created() {
+        this.$store.dispatch('$getSponsorsData')
+    },
 }
 </script>
 
