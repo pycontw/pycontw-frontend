@@ -1,5 +1,5 @@
 <template>
-    <div class="sponsorCard">
+    <div v-show="!!logoUrl" :class="classObject">
         <img :src="logoUrl" class="object-contain w-full" />
         <div v-if="!!tag" class="sponsorCard__tag">
             {{ tag }}
@@ -13,13 +13,27 @@ export default {
     props: {
         logoUrl: { type: String, default: '' },
         tag: { type: String, default: '' },
+        small: { type: Boolean, default: false },
+    },
+    computed: {
+        classObject() {
+            return {
+                sponsorCard: true,
+                '-small': this.small,
+            }
+        },
     },
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .sponsorCard {
     @apply w-40 h-40 relative flex flex-col justify-center items-center bg-white rounded-2xl;
+}
+
+.sponsorCard.-small {
+    @apply w-20 h-20;
+    min-width: 100px;
 }
 
 .sponsorCard__tag {

@@ -27,8 +27,8 @@
             </div>
         </div>
 
-        <i18n-page-wrapper>
-            <h2>{{ $t('sponsorList') }}</h2>
+        <i18n-page-wrapper class="pt-12">
+            <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
                 v-for="(leveledSponsors, i) in sponsorsData"
                 :key="`index_sponsor_level_${i}`"
@@ -38,11 +38,13 @@
                     v-for="(sponsor, j) in leveledSponsors.sponsors"
                     :key="`index_sponsor_level_${i}_sponsor_${j}`"
                     :logo-url="sponsor.logo_url"
-                    :tag="sponsor.subtitle_en_us"
+                    :tag="getAttributeByLocale(sponsor, 'subtitle')"
+                    @click.native="showModal(sponsor)"
                 >
                 </sponsor-card>
             </sponsor-card-collection>
         </i18n-page-wrapper>
+        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
     </div>
 </template>
 
@@ -51,7 +53,11 @@ import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
-import { SponsorCard, SponsorCardCollection } from '~/components/sponsors'
+import {
+    SponsorCardCollection,
+    SponsorModal,
+    SponsorCard,
+} from '~/components/sponsors'
 
 export default {
     i18n,
@@ -61,9 +67,12 @@ export default {
         I18nPageWrapper,
         SponsorCard,
         SponsorCardCollection,
+        SponsorModal,
     },
     data() {
         return {
+            isOpened: false,
+            selectedSponsor: {},
             volunteerFormUrl: 'https://forms.gle/wuG2w42cbhamyGdv9',
         }
     },
@@ -73,6 +82,21 @@ export default {
     },
     created() {
         this.$store.dispatch('$getSponsorsData')
+    },
+    methods: {
+        showModal(sponsor) {
+            this.isOpened = true
+            this.selectedSponsor = sponsor
+        },
+        closeModal() {
+            this.isOpened = false
+            this.selectedSponsor = {}
+        },
+        getAttributeByLocale(data, attr) {
+            const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
+            const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`
+            return data[attributeName]
+        },
     },
 }
 </script>
