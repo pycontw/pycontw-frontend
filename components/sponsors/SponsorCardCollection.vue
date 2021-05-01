@@ -20,15 +20,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .sponsorCardCollection__cardContainer {
     @apply flex flex-wrap;
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard {
     margin: 0 0 60px 0;
+    padding: 5px;
     @media (min-width: 415px) {
-        margin: 0 30px 60px 0;
+        margin: 5px 15px 65px 5px;
     }
+}
+
+.sponsorCardCollection__cardContainer > .sponsorCard:hover {
+    @apply cursor-pointer box-content;
+    margin: 0 10px 60px 0;
 }
 </style>
