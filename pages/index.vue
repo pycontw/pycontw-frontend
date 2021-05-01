@@ -43,6 +43,9 @@
                 >
                 </sponsor-card>
             </sponsor-card-collection>
+            <div class="text-center">
+                <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
+            </div>
         </i18n-page-wrapper>
         <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
     </div>
