@@ -1,3 +1,4 @@
 import SponsorCard from './SponsorCard'
+import SponsorCardCollection from './SponsorCardCollection'
 
-export { SponsorCard }
+export { SponsorCard, SponsorCardCollection }
