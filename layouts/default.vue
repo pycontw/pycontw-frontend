@@ -1,9 +1,13 @@
 <template>
     <div class="default-layout">
-        <core-header />
-        <announce-bar />
-        <Nuxt />
-        <core-footer />
+        <div class="default-layout__header">
+            <core-header />
+            <announce-bar />
+        </div>
+        <div class="default-layout__body">
+            <Nuxt />
+            <core-footer />
+        </div>
     </div>
 </template>
 
@@ -54,10 +58,13 @@ html {
     margin: 0;
 }
 
-.default-layout {
+.default-layout__header {
+    @apply fixed w-full;
+    height: 48px;
+}
+
+.default-layout__body {
     display: grid;
-    height: 100vh;
-    grid-template-rows: 48px auto auto auto;
     grid-template-columns: 100%;
 }
 </style>
