@@ -20,10 +20,10 @@ COPY utils ./utils
 COPY nuxt.config.js .babelrc ./
 
 ENV ROUTER_BASE /2021/
-ENV BASE_URL http://pycontw-2021:8000
+ENV BASE_URL pycontw-2021:8000
 ENV BUILD_TARGET server
 ENV HOST 0.0.0.0
-ENV API_URL_BROWSER http://pycon.tw/prs
+ENV API_URL_BROWSER https://pycon.tw/prs
 
 RUN npm run build
 
