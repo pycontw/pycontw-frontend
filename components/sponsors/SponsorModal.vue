@@ -83,8 +83,13 @@ export default {
 
 .lightBox__closeButton {
     @apply relative flex justify-end text-yellow-500 cursor-pointer;
-    top: -40px;
-    right: -20px;
+    top: -24px;
+    right: -12px;
+
+    @media (min-width: 415px) {
+        top: -40px;
+        right: -20px;
+    }
 }
 
 .lightBox__title {
