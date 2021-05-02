@@ -1,28 +1,24 @@
 <template>
     <div class="page-home">
-        <div
-            class="page-homeLandingFocus flex flex-col-reverse justify-center items-center px-8 py-12 md:items-stretch sm:px-20 md:px-32 md:py-24 md:flex-row lg:px-40"
-        >
+        <div class="page-homeLandingFocus flex py-8 md:py-12">
             <div
-                class="page-homeLandingFocus__mobileButtons flex mt-8 md:hidden"
+                class="w-full flex flex-col items-start text-golden mx-4 sm:mx-8 md:mx-16"
             >
-                <text-button to="/sponsor">{{ $t('sponsor') }}</text-button>
-            </div>
-            <div class="page-homeLandingFocus__image mx-12 md:mx-0">
-                <img src="~/static/key-vision-logo.png" alt="" />
-            </div>
-            <div
-                class="page-homeLandingFocus__context flex flex-col text-golden text-center md:text-left mb-4 ml-0 md:mb-0 md:ml-8"
-            >
-                <div class="font-serif">
-                    <div class="text-3xl lg:text-5xl">PyCon Taiwan 2021</div>
-                    <div class="text-2xl lg:text-4xl">10th Anniversary</div>
-                    <div class="text-xl lg:text-3xl">21 - 22 Aug. NTU</div>
+                <div class="font-serif text-3xl lg:text-5xl">
+                    PyCon Taiwan <br />
+                    10th Anniversary
                 </div>
+                <landing-focus-info class="my-12 md:my-8" />
                 <div
-                    class="page-homeLandingFocus__desktopButtons hidden md:flex md:mt-8"
+                    class="w-full flex flex-col justify-between items-center md:flex-row"
                 >
-                    <text-button to="/sponsor">{{ $t('sponsor') }}</text-button>
+                    <text-button
+                        to="/sponsor"
+                        class="mb-8 ml-12 self-start md:mb-0 md:self-center"
+                    >
+                        {{ $t('sponsor') }}
+                    </text-button>
+                    <landing-focus-slogan />
                 </div>
             </div>
         </div>
@@ -61,6 +57,10 @@ import {
     SponsorModal,
     SponsorCard,
 } from '~/components/sponsors'
+import {
+    LandingFocusSlogan,
+    LandingFocusInfo,
+} from '~/components/landing-focus'
 
 export default {
     i18n,
@@ -68,6 +68,8 @@ export default {
     components: {
         TextButton,
         I18nPageWrapper,
+        LandingFocusSlogan,
+        LandingFocusInfo,
         SponsorCard,
         SponsorCardCollection,
         SponsorModal,
@@ -101,14 +103,18 @@ export default {
 </script>
 
 <style>
-.page-home .page-homeLandingFocus::before {
-    position: absolute;
+.page-home .page-homeLandingFocus,
+.page-home .page-homeLandingFocus::after {
+    position: relative;
     top: 48px;
-    left: 0;
-    z-index: -10;
-    display: block;
     width: 100vw;
     height: calc(100vh - 48px);
+}
+
+.page-home .page-homeLandingFocus::after {
+    position: absolute;
+    top: 0;
+    z-index: -10;
     content: '';
     background-image: url('~@/static/page-home-background.png');
     background-position: center center;

@@ -49,9 +49,4 @@ export default {
     color: #c7c7c7;
     font-weight: 700;
 }
-
-.core-localeSwitch:hover {
-    background: #c2a53a;
-    color: #000000;
-}
 </style>

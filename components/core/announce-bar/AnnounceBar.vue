@@ -20,7 +20,7 @@ export default {
     },
     data() {
         return {
-            completeFlag: false,
+            completeFlag: true,
         }
     },
     methods: {

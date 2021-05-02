@@ -46,6 +46,6 @@ export default {
     right: -32px;
     background-color: #1c1c1c;
     border: 1px solid #c2a53a;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 </style>

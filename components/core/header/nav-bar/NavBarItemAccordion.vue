@@ -58,15 +58,17 @@ export default {
 
 .core-navBarItemAccordion__label {
     @apply inline-flex justify-center items-center;
+    color: #c2a53a;
 }
 
 .core-navBarItemAccordion__items {
-    @apply flex mt-4 flex-col justify-center bg-black;
+    @apply flex mt-4 flex-col justify-center;
+    background-color: #27244c;
 }
 
 .core-navBarItemAccordion__items > .core-localeLink {
     @apply inline-flex py-4 justify-center;
-    color: #b2b2b2;
+    color: #c2a53a;
 }
 
 .core-navBarItemAccordion__items > .core-localeLink:hover {
