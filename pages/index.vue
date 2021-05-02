@@ -26,56 +26,77 @@
                 </div>
             </div>
         </div>
-        <!--        <h3>sponsor list</h3>-->
-        <!--        <div-->
-        <!--            v-for="(leveledSponsors, i) in sponsorsData"-->
-        <!--            :key="`index_sponsor_level_${i}`"-->
-        <!--        >-->
-        <!--            <h2 class="text-2xl">{{ leveledSponsors.level_name }}</h2>-->
-        <!--            <div-->
-        <!--                v-for="(sponsor, j) in leveledSponsors.sponsors"-->
-        <!--                :key="`index_sponsor_level_${i}_sponsor_${j}`"-->
-        <!--                class="border-black"-->
-        <!--            >-->
-        <!--                <div>-->
-        <!--                    Name:-->
-        <!--                    <a :href="sponsor.website_url">{{ sponsor.name }}</a>-->
-        <!--                </div>-->
-        <!--                <div>Intro: {{ sponsor.intro }}</div>-->
-        <!--                <img-->
-        <!--                    :src="`https://5f43c00e6788.ngrok.io${sponsor.logo_url}`"-->
-        <!--                    :width="40"-->
-        <!--                    :height="30"-->
-        <!--                    alt=""-->
-        <!--                />-->
-        <!--            </div>-->
-        <!--        </div>-->
+
+        <i18n-page-wrapper class="pt-12">
+            <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
+            <sponsor-card-collection
+                v-for="(leveledSponsors, i) in sponsorsData"
+                :key="`index_sponsor_level_${i}`"
+                :level-name="leveledSponsors.level_name"
+            >
+                <sponsor-card
+                    v-for="(sponsor, j) in leveledSponsors.sponsors"
+                    :key="`index_sponsor_level_${i}_sponsor_${j}`"
+                    :logo-url="sponsor.logo_url"
+                    :tag="getAttributeByLocale(sponsor, 'subtitle')"
+                    @click.native="showModal(sponsor)"
+                >
+                </sponsor-card>
+            </sponsor-card-collection>
+            <div class="text-center">
+                <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
+            </div>
+        </i18n-page-wrapper>
+        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
     </div>
 </template>
 
 <script>
-// import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
+import {
+    SponsorCardCollection,
+    SponsorModal,
+    SponsorCard,
+} from '~/components/sponsors'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
         TextButton,
+        I18nPageWrapper,
+        SponsorCard,
+        SponsorCardCollection,
+        SponsorModal,
     },
     data() {
         return {
+            isOpened: false,
+            selectedSponsor: {},
             volunteerFormUrl: 'https://forms.gle/wuG2w42cbhamyGdv9',
         }
     },
-    // fetchOnServer: false,
-    // computed: {
-    //     ...mapState(['sponsorsData']),
-    // },
-    // created() {
-    //     this.$store.dispatch('$getSponsorsData')
-    // },
+    fetchOnServer: false,
+    computed: {
+        ...mapState(['sponsorsData']),
+    },
+    created() {
+        this.$store.dispatch('$getSponsorsData')
+    },
+    methods: {
+        showModal(sponsor) {
+            this.isOpened = true
+            this.selectedSponsor = sponsor
+        },
+        getAttributeByLocale(data, attr) {
+            const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
+            const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`
+            return data[attributeName]
+        },
+    },
 }
 </script>
 
