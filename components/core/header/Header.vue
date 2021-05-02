@@ -44,18 +44,24 @@ export default {
 
 .header-container.--desktop {
     color: #c2a53a;
-    background-color: #000000;
+    background-color: rgba(27, 26, 39, 0.6);
 }
 
-.header-container.--mobile {
+.header-container.--desktop .core-localeSwitch:hover {
+    color: #000000;
     background-color: #c2a53a;
 }
 
-.header-container.--mobile .core-homeIcon {
-    filter: brightness(0) invert(0); /* turn the color into black */
+.header-container.--mobile {
+    color: #c2a53a;
+    background-color: #1c1a38;
 }
 
 .header-container.--mobile .core-localeSwitch {
-    color: #000000;
+    color: #c2a53a;
+}
+
+.header-container.--mobile .core-localeSwitch:hover {
+    background-color: unset;
 }
 </style>
