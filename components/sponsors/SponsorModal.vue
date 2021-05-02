@@ -12,7 +12,7 @@
             <div class="lightBox__intro">
                 <p class="text-sm">{{ getAttributeByLocale('intro') }}</p>
             </div>
-            <div class="lightBox__bottons">
+            <div class="lightBox__buttons">
                 <text-button :href="context.website_url">{{
                     $t('website')
                 }}</text-button>
@@ -72,13 +72,13 @@ export default {
 }
 
 .lightBox__closeButton {
-    @apply relative flex justify-end text-yellow-500;
-    top: 10px;
-    right: 10px;
+    @apply relative flex justify-end text-yellow-500 cursor-pointer;
+    top: -40px;
+    right: -20px;
 }
 
 .lightBox__title {
-    @apply flex justify-start items-center;
+    @apply flex items-center;
 }
 
 .lightBox__intro {

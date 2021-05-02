@@ -1,6 +1,6 @@
 <template>
     <div v-show="!!logoUrl" :class="classObject">
-        <img :src="logoUrl" class="object-contain w-full" />
+        <img :src="logoUrl" alt="" class="object-contain w-full" />
         <div v-if="!!tag" class="sponsorCard__tag">
             {{ tag }}
         </div>

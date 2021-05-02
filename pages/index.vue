@@ -91,10 +91,6 @@ export default {
             this.isOpened = true
             this.selectedSponsor = sponsor
         },
-        closeModal() {
-            this.isOpened = false
-            this.selectedSponsor = {}
-        },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
             const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`
