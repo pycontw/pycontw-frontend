@@ -1,5 +1,5 @@
 <template>
-    <div v-show="value" class="sponsorModal">
+    <div v-show="shouldShowModal" class="sponsorModal">
         <div class="lightBox">
             <div class="lightBox__closeButton" @click="close">✕</div>
             <div class="lightBox__title">
@@ -37,9 +37,19 @@ export default {
         value: { type: Boolean, default: false },
         context: { type: Object, default: () => ({}) },
     },
+    data() {
+        return {
+            shouldShowModal: this.value,
+        }
+    },
+    watch: {
+        value(newVal) {
+            this.shouldShowModal = newVal
+        },
+    },
     methods: {
         close() {
-            this.value = false
+            this.shouldShowModal = false
             this.$emit('input', false)
         },
         getAttributeByLocale(attr) {
