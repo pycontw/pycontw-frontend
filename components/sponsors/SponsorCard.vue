@@ -1,6 +1,6 @@
 <template>
     <div v-show="!!logoUrl" :class="classObject">
-        <img :src="logoUrl" alt="" class="object-contain w-full" />
+        <img :src="logoUrl" alt="" />
         <div v-if="!!tag" class="sponsorCard__tag">
             {{ tag }}
         </div>
@@ -29,6 +29,11 @@ export default {
 <style lang="postcss" scoped>
 .sponsorCard {
     @apply w-40 h-40 relative flex flex-col justify-center items-center bg-white rounded-2xl;
+}
+
+.sponsorCard > img {
+    @apply object-contain w-full;
+    border-radius: inherit;
 }
 
 .sponsorCard.-small {
