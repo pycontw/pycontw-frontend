@@ -1,6 +1,6 @@
 <template>
     <div class="landingFocusInfo flex flex-col items-center font-serif">
-        <div class="landingFocusInfo__temporal">8/20</div>
+        <div class="landingFocusInfo__temporal">8/21</div>
         <div class="landingFocusInfo__till"></div>
         <div class="landingFocusInfo__temporal">8/22</div>
         <div class="landingFocusInfo__locale mt-4">NTU</div>
