@@ -42,6 +42,12 @@
                 href="https://forms.gle/wuG2w42cbhamyGdv9"
                 >{{ $t('volunteer') }}</ext-link
             >
+            <locale-link
+                class="core-navBarHamburgerSlideInMenu__item"
+                to="/covid-19/guidelines"
+                customized
+                >{{ $t('covid19Guidelines') }}</locale-link
+            >
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"

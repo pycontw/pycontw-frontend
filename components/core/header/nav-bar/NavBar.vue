@@ -55,6 +55,13 @@
         >
             {{ $t('volunteer') }}
         </ext-link>
+        <locale-link
+            to="/covid-19/guidelines"
+            :class="getPageClassesByPath('covid-19', true)"
+            customized
+        >
+            {{ $t('covid19Guidelines') }}
+        </locale-link>
         <ext-link
             :href="signInUrl"
             :class="getPageClassesByPath('signIn', true)"
