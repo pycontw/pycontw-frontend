@@ -84,7 +84,7 @@
         <ol class="list-decimal md:px-0 lg:px-36 xl:px-48">
             <i18n path="privacyPolicyContent" tag="li">
                 <template #policy>
-                    <locale-link to="/about/privacy_policy/" highlight>{{
+                    <locale-link to="/about/privacy-policy/" highlight>{{
                         $t('otherLinks.policy')
                     }}</locale-link>
                 </template>
@@ -119,6 +119,13 @@
         >
             <template #picSrc>
                 <img :src="$t('otherLinks.picSrc')" highlight />
+            </template>
+            <template #license>
+                <ext-link
+                    href="https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW"
+                    highlight
+                    >{{ $t('otherLinks.license') }}</ext-link
+                >
             </template>
         </i18n>
     </i18n-page-wrapper>
