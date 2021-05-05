@@ -10,8 +10,8 @@ export default genI18nMessages({
             'Important Dates',
             [
                 'Talks & Tutorial CFP begins: March 1st',
-                'Talks & Tutorial CFP ends: Apr 26, 23:59:59 ({AoE})',
-                'Announcement of acceptance: In the end of June (tentative)',
+                'Talks & Tutorial CFP ends: Apr 26th, 23:59:59 ({AoE})',
+                'Announcement of acceptance: June 27th',
             ],
             [
                 'All talks will be recorded, edited then uploaded to {pyvideo} ' +
@@ -134,7 +134,7 @@ export default genI18nMessages({
             [
                 '議程、課程 開放徵稿：3 月 1 日',
                 '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
-                '公告完整議程： 6 月 下旬（暫定）',
+                '公告完整議程： 6 月 27 日',
             ],
             [
                 '演講（talk）預設將會被錄影、編輯。之後 PyCon Taiwan 會把錄影編輯後上傳至 {pyvideo}，' +
