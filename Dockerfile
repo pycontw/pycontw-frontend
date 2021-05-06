@@ -23,7 +23,7 @@ ENV ROUTER_BASE /2021/
 ENV BASE_URL pycontw-2021:8000
 ENV BUILD_TARGET server
 ENV HOST 0.0.0.0
-ENV API_URL_BROWSER https://pycon.tw/prs
+ENV API_URL_BROWSER https://tw.pycon.org/prs
 
 RUN npm run build
 
