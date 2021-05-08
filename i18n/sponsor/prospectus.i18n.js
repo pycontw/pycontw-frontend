@@ -18,19 +18,18 @@ export default genI18nMessages({
             'PyCon Taiwan continues to connect with new community members locally, ' +
                 'nationally, and globally. Your sponsorship keeps PyCon Taiwan affordable and ' +
                 'accessible to the widest potential audience. Having your support, ' +
-                'we are able to provide financial aid to needed attendances.',
-            'We have several sponsor packages including but not limited to the list below:',
+                'we are able to provide financial aid to needed attendees.',
+            'We have several sponsorship packages including but not limited to the list below:',
         ],
 
         stats: [
-            'Quick stats from 2020',
+            'Quick stats from the past',
             [
-                '400+ attendees (as the first southern Taiwan PyCon TW)',
-                'Most attendees are software engineers. ' +
-                    'Others are: potential job seekers, data scientist, students, managers, researchers, ' +
-                    'CEOs and CTOs etc.',
-                'Over half of attendees are Python users for 1-5 years, and ' +
-                    'around 20% attendees have been using Python for more than 5 years.',
+                '675 attendees (latest PyConTW hosted in Taipei)',
+                '52% of attendees are software engineers. ' +
+                    'Others are: data scientists (11%), students (9%), managers (8%) etc',
+                '62% of attendees are Python users for 1-5 years, and ' +
+                    'around 15% have been using Python for 5-10 years.',
             ],
         ],
 
@@ -38,15 +37,15 @@ export default genI18nMessages({
             'Conference Schedule',
             'Taiwan timezone (UTC+8) if not specified',
             [
-                'Call for Proposal: March 1st, 2021',
-                'Deadline of Call for Proposal: April 26th, 2021 23:59:59 ({AoE})',
-                'Schedule Announcement: in the end of June, 2021 (tentative)',
-                'Job Fair: 8/21 Sat. (tentative)',
-                'Main Conference: 8/20 Fri. ~ 8/22 Sun. (tentative)',
+                'Call for Proposal: March 1st',
+                'Deadline of Call for Proposal: April 26th 23:59:59 ({AoE})',
+                'Schedule Announcement: June 27th',
+                'Job Fair: August 21st (Sat)',
+                'Main Conference: August 21st (Sat) ~ August 22nd (Sun)',
             ],
         ],
 
-        'package-title': 'Sponsor Packages',
+        'package-title': 'Sponsorship Packages',
         'package-diamond': [
             'Diamond Level Sponsorship - USD$ 16,200 (Available: 1)',
             [
@@ -62,6 +61,7 @@ export default genI18nMessages({
                 'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 5 Tickets',
+                'Podcast Advertisement*: 1 episode',
                 'Job Fair*',
             ],
         ],
@@ -77,6 +77,7 @@ export default genI18nMessages({
                 'Logos on Opening of Recorded Videos*',
                 'Advertisements on APP During Conference',
                 'Speaker Banquets: 4 Tickets',
+                'Podcast Advertisement*: 1 episode',
                 'Job Fair*',
             ],
         ],
@@ -131,12 +132,20 @@ export default genI18nMessages({
             [['Social Media', '(per post)'], 200, 300, 300, 500, 600],
             [['JD', '(per post)'], 200, 300, 300, 500, 600],
             [
-                ['Advertisement', '(APP or Website)'],
+                ['APP or Website AD'],
                 'Included',
                 'Included',
                 'Included',
                 200,
                 200,
+            ],
+            [
+                ['Podcast AD', '(per episode)'],
+                'Included',
+                'Included',
+                200,
+                200,
+                '-',
             ],
             [
                 'Ticket Discount',
@@ -148,13 +157,12 @@ export default genI18nMessages({
             ],
         ],
 
-        'specialSponsorship-title': 'Special Sponsorship',
+        'specialSponsorship-title': 'Special Sponsorship Packages',
         'specialSponsorship-fa': [
             'Community Financial Aid Sponsorship - USD$ 1,700 (Limit: 5)',
             [
-                'Giveback to the Python community, providing financial aid to the association.',
-                'Exclusive promotions to aid receivers.',
-                'Acquire personal information under the aid receiver’s agreement.',
+                'Provide financial aid to needed attendees.',
+                'Exclusive promotions to aid receivers.*',
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
@@ -165,28 +173,57 @@ export default genI18nMessages({
                 'Listed as Special Sponsors on the PyCon TW website (Company Logo & Introduction).',
             ],
         ],
+        'specialSponsorship-sprint': [
+            'Sprints Meetup - USD$ 500 (Limit: 1)',
+            [
+                'Host physical meetup for open source project developing ' +
+                    'and is held out of the main conference',
+                'Roughly 40 attendees, most of them are experienced python developers',
+                'Pull up banner will be placed in the entrance',
+                'Sponsors will be introduced in both opening and closing',
+            ],
+        ],
+        'specialSponsorship-youngPyckathon': [
+            'Young Pyckathon - USD$ 1,000 (Limit: 1)',
+            [
+                'Host hackathon for high school students ' +
+                    'exchanging programming learning experience',
+                'Event is held out of the main conference',
+                'Reserve up to 10 tickets (out of 30) and FAs ' +
+                    'for underprivileged students',
+                'Pull up banner will be placed in the entrance',
+                'Logos will be revealed in documentary video' +
+                    ', which will be included in slideshow during conference',
+            ],
+        ],
 
         'note-title': 'Notes',
         'note-items': [
-            'Job recruitment description posted on website will be sorted as sponsor packages.',
-            'Recorded tech talks will be uploaded to several platforms, such as Youtube, ' +
-                'where logos will be shown in the opening or ending depending on the package.',
+            'Podcast advertisement includes (i) 30s - 90s introduction ' +
+                'in the beginning of podcast, (ii) revealed in FB post along ' +
+                'with new episode announcement and (iii) revealed in ' +
+                'podcast description.',
             'Job fair introduction is restricted to 5 minutes per organization.',
-            'PyCon TW 2021 will not produce a digital brochure, all information will be posted ' +
-                'on our website and app.',
-            'PyCon TW 2021 do not provide tote bag and physical brochure to our participants. ' +
-                'However, sponsors have the liberty to design, print and provide copies of ' +
-                'their own handbook.',
-            'The sponsoring talk is limited to 30 minutes, and 1 talk per organization.',
-            'Diamond Sponsorship includes title rights, the company logo will be displayed with ' +
-                'PyCon TW 2021. However, PyCon TW 2021 reserves the right to further evaluate such action.',
-            'Diamond Sponsorship includes the title right of the main conference room, ' +
-                'PyCon TW 2021 reserves the right to evaluate such action.',
-            'To further promote diversity of PyCon TW 2021, company (group / sponsoring) tickets will not ' +
-                'exceeded 1 / 3 of the total pass sold. Thus, such group passes are sold in a first come ' +
-                'first served manner, please order ASAP.',
-            'Sponsor packages may be affected and changed due to the outbreak of COVID-19, ' +
-                'final version will be released on mid June along with conference details.',
+            'PyCon TW 2021 will not produce a digital brochure. ' +
+                'All information will be posted on our website and app.',
+            'PyCon TW 2021 will not provide tote bag and physical brochure to our participants. ' +
+                'However, sponsors have the liberty to design, print and provide copies of their own handbook.',
+            'Recorded tech talks will be uploaded to several platforms, such as Youtube. ' +
+                'Whether logos will be shown in the opening or ending depends on the package.',
+            'The technical talk is limited to 30 minutes whether it is included in package or extra purchased.',
+            'Regarding the purchase limit of tech talks, basically one sponsor is restricted to one purchase. ' +
+                'If the sponsor has special needs, please inform PyCon TW 2021. PyCon TW 2021 reserves the right of final decision.',
+            "Diamond Sponsorship package includes the title right which sponsor's logo will be displayed with PyCon TW 2021. " +
+                'PyCon TW 2021 reserves the right of final decision.',
+            'Diamond Sponsorship package includes the title right of the main conference room. ' +
+                'PyCon TW 2021 reserves the right of final decision.',
+            'Job recruitment description posted on website will be sorted by level of sponsorship packages. ' +
+                'If there are same levels, then it will be sorted by the timing of sponsorship.',
+            "The sponsor of Community Financial Aid Sponsorship are allowed to acquire personal information under the aid receiver's agreement.",
+            'To further promote diversity of attendees, company (group / sponsoring) tickets will not exceed 1 / 3 of the total pass sold. ' +
+                'Thus, such group passes are sold in a first come first served manner, please order as soon as possible.',
+            'Sponsorship packages may be affected and changed due to the outbreak of COVID-19. ' +
+                'Final version will be released along with conference details on June 27th .',
         ],
 
         terms: {
@@ -219,23 +256,23 @@ export default genI18nMessages({
         ],
 
         stats: [
-            '2020 快速總覽',
+            '快速總覽',
             [
-                '出席人數 400+（2020 為 PyCon TW 首次移師南台灣）',
-                '會眾多以軟體工程師為主，亦有會眾為：資料工程師，學生，主管，研究人員。',
-                '半數以上的會眾為 Python 1~5 年的使用者，更有 20% 左右為 Python 5年以上的使用者',
+                '出席人數 675（最近一次在台北舉辦的大會）',
+                '會眾以軟體工程師為主 (52%)，亦有會眾為：資料工程師 (11%)，學生 (9%)，主管 (8%)。',
+                '62% 的會眾為 Python 1~5 年的使用者，更有 15% 左右為 Python 5~10年的使用者',
             ],
         ],
 
         importantDates: [
-            '大會重要時間點',
+            '大會重要日期',
             '若未註明則以台灣時區 (UTC+8) 為準',
             [
                 '議程、課程 開放徵稿：3 月 1 日',
                 '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
-                '公告完整議程：6 月 下旬（暫定）',
-                'Job Fair：8 月 21 日 (六) (暫定)',
-                '研討會日：8 月 20 日 (五) 至 8 月 22 日 (日) (暫定)',
+                '公告完整議程：6 月 27 日',
+                'Job Fair：8 月 21 日 (六)',
+                '研討會日：8 月 21 日 (六) 至 8 月 22 日 (日)',
             ],
         ],
 
@@ -255,6 +292,7 @@ export default genI18nMessages({
                 '演講影片片頭宣傳',
                 '會期期間 APP 推播廣告介紹',
                 '講者晚宴 5 名',
+                'Podcast 廣告 1 集*',
                 '徵才介紹*',
             ],
         ],
@@ -270,6 +308,7 @@ export default genI18nMessages({
                 '演講影片片頭宣傳',
                 '會期期間 APP 推播廣告介紹',
                 '講者晚宴 4 名',
+                'Podcast 廣告 1 集*',
                 '徵才介紹*',
             ],
         ],
@@ -323,7 +362,8 @@ export default genI18nMessages({
             ['技術演講（30 分鐘）', '已包含', '已包含', 15000, '無', '無'],
             ['社群媒體宣傳 / 篇', 6000, 9000, 9000, 15000, 18000],
             ['網站徵才牆 / 篇', 6000, 9000, 9000, 15000, 18000],
-            ['網站/APP、廣告宣傳', '已包含', '已包含', '已包含', 6000, 6000],
+            ['網站/APP 廣告宣傳', '已包含', '已包含', '已包含', 6000, 6000],
+            ['Podcast廣告 / 集', '已包含', '已包含', 6000, 6000, '無'],
             [
                 '門票優惠',
                 '任意數量九折',
@@ -336,35 +376,59 @@ export default genI18nMessages({
 
         'specialSponsorship-title': '特別贊助方案',
         'specialSponsorship-fa': [
-            '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養。',
+            '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養',
             [
-                '回饋社群，贊助需財務補助之會眾。',
-                '針對個別被贊助之會眾的公司宣傳。',
-                '得在被贊助者同意下獲取其個人資訊。',
-                '網站特別贊助區塊之公司宣傳（標誌及介紹）。',
+                '贊助需財務補助之會眾',
+                '針對個別被贊助之會眾的公司宣傳*',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
         'specialSponsorship-food': [
-            '主場地餐點認養 - 名額 3 名，單一贊助金額：40,000 元，可以總額認養。',
+            '主場地餐點認養 - 名額 3 名，單一贊助金額：40,000 元，可以總額認養',
             [
-                '主場地餐點區品牌宣傳，實體標誌展出。',
-                '網站特別贊助區塊之公司宣傳（標誌及介紹）。',
+                '主場地餐點區品牌宣傳，實體標誌展出',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）',
+            ],
+        ],
+        'specialSponsorship-sprint': [
+            '衝刺開發場地認養 - 名額 1 名, 單一贊助金額: 15,000 元',
+            [
+                '衝刺開發將安排在大會會期之外',
+                '專案領導人帶領參加者專案待解決的問題、待開發的功能',
+                '參加人數以 40 人為限, 多為有一定 Python 基礎的開發者',
+                '擺放含有公司商標的易拉展在活動入口位置',
+                '贊助商將在活動開頭以及結尾被提及',
+            ],
+        ],
+        'specialSponsorship-youngPyckathon': [
+            '新世代 Py 客松 - 名額 1 名, 單一贊助金額: 30,000 元',
+            [
+                '新世代 Py 客松將安排在大會會期之外',
+                '舉辦高中生的一日黑客松，規模約為 30 人並保留 10 個偏鄉學生名額',
+                '贊助需財務補助的偏鄉學生',
+                '擺放含有公司商標的易拉展在活動入口位置',
+                '贊助商商標將被包含在活動紀錄片中，該紀錄片將在大會現場輪播',
             ],
         ],
 
         'note-title': '備註',
         'note-items': [
+            'Podcast 廣告包含 (i) 30 - 90秒的開頭廣告, (ii) FB 上架貼文露出, ' +
+                '(iii) podcast 集數簡介中文字露出。',
             '徵才介紹（Job Fair）， 每組 5 分鐘為限。',
-            'PyCon TW 2021 無電子版大會手冊，所有內容整合至網站以及 APP。',
-            'PyCon TW 2021 無迎賓袋以及實體文宣，贊助商可自行自作發放。',
-            '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限',
+            'PyCon TW 2021 無電子版大會手冊，所有內容將會發布至網站以及 APP。',
+            'PyCon TW 2021 無迎賓袋及實體文宣，贊助商可自行製作發放。',
+            '錄製好的技術演講將會上傳至Youtube等多個平台，' +
+                '而 Logo 出現在開場或結尾則是根據贊助的方案決定。',
+            '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限。',
             '關於技術演講的購買限制，基本上一個贊助商限制買一個，' +
                 '若廠商有特殊需求，則由主辦方討論與決定。',
             '鑽石級贊助方案包含之冠名贊助權，表示贊助者的標誌會與 PyCon TW 2021 同時出現，' +
-                '但 PyCon TW 2021 主辦方保留解釋權利。',
-            '鑽石級贊助方案包含之主場地會議室冠名權，表示贊助者可命名該會議室，' +
-                '但 PyCon TW 2021 主辦方保留審核權利。',
+                ' PyCon TW 2021 主辦方保留解釋權利。',
+            '鑽石級贊助方案包含之主場地會議室冠名權，表示贊助商可命名該會議室，' +
+                ' PyCon TW 2021 主辦方保留審核權利。',
             '網站徵才牆排列順序按贊助等級排序，同級內按照確認贊助時序。',
+            '社群參與財務補助認養方案之公司，得在被贊助之會眾同意下獲取其個人資訊。',
             '為求會眾多樣性，企業團購優惠票總量不會超過總報名會眾的三分之一。' +
                 '如有意購買此票種，請即早訂購，以免向隅。',
             '因應 COVID-19 疫情影響，贊助方案內容會有些許細部更動，' +

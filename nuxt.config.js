@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = 'http://staging.pycon.tw/2021'
+const DEFAULT_BASE_URL = 'http://staging.pycon.tw/prs'
 const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
 const DEFAULT_BUILD_TARGET = 'static'
 
@@ -10,7 +10,6 @@ export default {
     router: {
         base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
     },
-
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
         title: 'pycontw-2021',
@@ -22,7 +21,14 @@ export default {
             },
             { hid: 'description', name: 'description', content: '' },
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
+            {
+                rel: 'stylesheet',
+                href:
+                    'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC',
+            },
+        ],
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -48,6 +54,22 @@ export default {
         '@nuxt/http',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
+        [
+            'nuxt-fontawesome',
+            {
+                component: 'fa',
+                imports: [
+                    {
+                        set: '@fortawesome/free-brands-svg-icons',
+                        icons: ['fab'],
+                    },
+                    {
+                        set: '@fortawesome/free-solid-svg-icons',
+                        icons: ['fas'],
+                    },
+                ],
+            },
+        ],
     ],
 
     i18n: {

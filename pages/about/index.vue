@@ -70,17 +70,6 @@
         <i18n path="paragraph.year2020" tag="p"></i18n>
         <i18n path="paragraph.year2021" tag="p"></i18n>
         <i18n path="paragraph.outro" tag="p"></i18n>
-
-        <div class="flex flex-wrap w-full mt-32 mb-8 justify-center">
-            <ext-link
-                v-for="(history, i) in histories"
-                :key="`about_history_${i}`"
-                :href="history.link"
-                class="mx-4"
-                highlight
-                >{{ history.label }}</ext-link
-            >
-        </div>
     </i18n-page-wrapper>
 </template>
 
@@ -110,44 +99,6 @@ export default {
             linkPyConBlog2016:
                 'http://pycontw.blogspot.tw/2016/04/blog-post.html',
             linkPhotoAlbum: 'http://www.flickr.com/photos/pycon_tw/albums',
-            histories: [
-                {
-                    label: '2012',
-                    link: 'https://tw.pycon.org/2012/',
-                },
-                {
-                    label: '2013',
-                    link: 'https://tw.pycon.org/2013/',
-                },
-                {
-                    label: '2014',
-                    link: 'https://tw.pycon.org/2014apac/',
-                },
-                {
-                    label: '2015',
-                    link: 'https://tw.pycon.org/2015apac/',
-                },
-                {
-                    label: '2016',
-                    link: 'https://tw.pycon.org/2016/',
-                },
-                {
-                    label: '2017',
-                    link: 'https://tw.pycon.org/2017/',
-                },
-                {
-                    label: '2018',
-                    link: 'https://tw.pycon.org/2018/',
-                },
-                {
-                    label: '2019',
-                    link: 'https://tw.pycon.org/2019/',
-                },
-                {
-                    label: '2020',
-                    link: 'https://tw.pycon.org/2020/',
-                },
-            ],
         }
     },
 }

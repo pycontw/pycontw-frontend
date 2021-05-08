@@ -27,6 +27,7 @@ export default genI18nMessages({
         venue: 'Venue',
         covid19Guidelines: 'COVID-19 Guidelines',
         volunteer: 'Volunteer',
+        signIn: 'Sign In',
     },
     'zh-hant': {
         about: '關於',
@@ -48,11 +49,12 @@ export default genI18nMessages({
         openSpaces: '開放空間',
         sprints: '衝刺開發',
         jobListings: '徵才資訊',
-        registration: '註冊',
+        registration: '購票',
         conferenceTickets: '會議門票',
         financialAid: '財務補助',
         venue: '會場',
         covid19Guidelines: 'COVID-19 防疫守則',
         volunteer: '志工招募',
+        signIn: '登入',
     },
 })

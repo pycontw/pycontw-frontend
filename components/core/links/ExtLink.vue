@@ -21,12 +21,19 @@ export default {
             type: Boolean,
             default: false,
         },
+        underline: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         classObject() {
             return {
+                'core-extLink': true,
                 'outline-none': true,
+                'cursor-pointer': true,
                 highlight: this.highlight,
+                underline: this.underline,
             }
         },
     },
@@ -38,9 +45,12 @@ a {
     color: inherit;
 }
 .highlight {
-    color: rgba(37, 99, 235, 1);
+    color: #c2a53a;
 }
 .highlight:hover {
-    color: rgba(30, 64, 175, 1);
+    color: #9387ff;
+}
+.underline {
+    text-decoration: underline;
 }
 </style>
