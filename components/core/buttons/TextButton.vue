@@ -1,9 +1,14 @@
 <template>
-    <button :class="coreButtonClasses">
-        <ext-link v-if="href" :href="href">
+    <button>
+        <ext-link v-if="href" :href="href" :class="coreButtonClasses">
             <slot></slot>
         </ext-link>
-        <locale-link v-else-if="to" :to="to" customized>
+        <locale-link
+            v-else-if="to"
+            :to="to"
+            customized
+            :class="coreButtonClasses"
+        >
             <slot></slot>
         </locale-link>
         <slot v-else></slot>
