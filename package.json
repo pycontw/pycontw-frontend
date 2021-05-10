@@ -20,7 +20,9 @@
         "core-js": "^3.6.5",
         "nuxt": "^2.14.6",
         "nuxt-fontawesome": "^0.4.0",
-        "nuxt-i18n": "^6.18.0"
+        "nuxt-i18n": "^6.18.0",
+        "swiper": "^6.5.9",
+        "vue-awesome-swiper": "^4.1.1"
     },
     "devDependencies": {
         "@nuxt/types": "^2.14.11",

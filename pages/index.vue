@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-
+        <landing-img-swiper-collection />
         <i18n-page-wrapper class="pt-12">
             <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
@@ -61,7 +61,7 @@ import {
     LandingFocusSlogan,
     LandingFocusInfo,
 } from '~/components/landing-focus'
-
+import { LandingImgSwiperCollection } from '~/components/landing-swiper'
 export default {
     i18n,
     name: 'PageIndex',
@@ -73,6 +73,7 @@ export default {
         SponsorCard,
         SponsorCardCollection,
         SponsorModal,
+        LandingImgSwiperCollection,
     },
     data() {
         return {
