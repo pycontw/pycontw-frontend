@@ -105,19 +105,29 @@ export default {
     data() {
         return {
             swiperOptions: {
-                slidesPerView: 4,
+                slidesPerView: 'auto',
                 spaceBetween: 30,
                 freeMode: true,
+                preloadImages: true,
+                initialSlide: 0,
             },
         }
     },
     computed: {
+        swiper1() {
+            return this.$refs.mySwiper1.$swiper
+        },
         swiper2() {
             return this.$refs.mySwiper2.$swiper
         },
+        swiper3() {
+            return this.$refs.mySwiper3.$swiper
+        },
     },
     mounted() {
-        this.swiper2.slideTo(3, 0, false)
+        this.swiper1.slideTo(1, 0, false)
+        this.swiper2.slideTo(5, 0, false)
+        this.swiper3.slideTo(3, 0, false)
     },
 }
 </script>
@@ -125,5 +135,12 @@ export default {
 <style scoped>
 .imgGroup {
     margin-bottom: 40px;
+}
+.swiper-wrapper {
+    box-sizing: border-box;
+}
+.swiper-slide {
+    display: inline-flex;
+    width: auto;
 }
 </style>
