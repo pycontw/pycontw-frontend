@@ -210,7 +210,11 @@ export default genI18nMessages({
                 'However, sponsors have the liberty to design, print and provide copies of their own handbook.',
             'Recorded tech talks will be uploaded to several platforms, such as Youtube. ' +
                 'Whether logos will be shown in the opening or ending depends on the package.',
-            'The technical talk is limited to 30 minutes whether it is included in package or extra purchased.',
+            'The tech talk is limited to 30 minutes whether it is included in package or extra purchased.',
+            'To accommodate conference agenda, diamond, platinum package and tech talk sponsorship is only available before 15th June.',
+            'The total amount of tech talks is limited to three talks. Tech talk includes in diamond and platinum package have higher priority ' +
+                'than additional purchases. First come first served if no specified.',
+            'Each sponsor can have at most one tech talk. If the sponsor has special needs, please inform PyCon TW 2021. PyCon TW 2021 reserves the right of final decision.',
             'Regarding the purchase limit of tech talks, basically one sponsor is restricted to one purchase. ' +
                 'If the sponsor has special needs, please inform PyCon TW 2021. PyCon TW 2021 reserves the right of final decision.',
             "Diamond Sponsorship package includes the title right which sponsor's logo will be displayed with PyCon TW 2021. " +
@@ -421,8 +425,9 @@ export default genI18nMessages({
             '錄製好的技術演講將會上傳至Youtube等多個平台，' +
                 '而 Logo 出現在開場或結尾則是根據贊助的方案決定。',
             '贊助商方案中已包含之技術演講，或是加購之技術演講，以 30 分鐘為上限。',
-            '關於技術演講的購買限制，基本上一個贊助商限制買一個，' +
-                '若廠商有特殊需求，則由主辦方討論與決定。',
+            '因應議程安排以及宣布時間，鑽石級、白金級贊助以及技術短講的購買必須在 6/15 之前完成。',
+            '技術演講的總額以三篇為上限，鑽石級和白金級優先於金級的加購，加購順序則是先來先得額滿為止。',
+            '單一贊助商限制一個技術短講，若廠商有特殊需求，則由主辦方討論與決定，PyCon TW 2021 主辦方保留解釋權利。',
             '鑽石級贊助方案包含之冠名贊助權，表示贊助者的標誌會與 PyCon TW 2021 同時出現，' +
                 ' PyCon TW 2021 主辦方保留解釋權利。',
             '鑽石級贊助方案包含之主場地會議室冠名權，表示贊助商可命名該會議室，' +
