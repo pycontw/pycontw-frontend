@@ -1,146 +1,22 @@
 <template>
-    <div>
+    <div class="swiperCollection">
         <CoolLightBox
-            :items="images"
-            :index="index"
+            :items="lightBoxSettings.imgs"
+            :index="lightBoxSettings.index"
             :slideshow="false"
-            @close="index = null"
+            @close="lightBoxSettings.index = null"
         >
         </CoolLightBox>
-        <div class="imgGroup">
-            <swiper ref="mySwiper1" :options="swiperOptions">
-                <swiper-slide
+        <div
+            v-for="(imgGroup, groupIndex) in imgGroups"
+            :key="'imgGroup' + groupIndex"
+            class="imgGroup"
+        >
+            <swiper :ref="'mySwiper' + groupIndex" :options="swiperOptions">
+                <swiper-slide v-for="(imgName, index) in imgGroup" :key="index"
                     ><img
-                        src="@/assets/landing-past-img/thumbnail/1-1.jpg"
-                        @click="openLightBox('1-1')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-2.jpg"
-                        @click="openLightBox('1-2')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-3.jpg"
-                        @click="openLightBox('1-3')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-4.jpg"
-                        @click="openLightBox('1-4')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-5.jpg"
-                        @click="openLightBox('1-5')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-6.jpg"
-                        @click="openLightBox('1-6')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-7.jpg"
-                        @click="openLightBox('1-7')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-8.jpg"
-                        @click="openLightBox('1-8')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/1-9.jpg"
-                        @click="openLightBox('1-9')"
-                /></swiper-slide>
-            </swiper>
-        </div>
-        <div class="imgGroup">
-            <swiper ref="mySwiper2" :options="swiperOptions">
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-1.jpg"
-                        @click="openLightBox('2-1')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-2.jpg"
-                        @click="openLightBox('2-2')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-3.jpg"
-                        @click="openLightBox('2-3')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-4.jpg"
-                        @click="openLightBox('2-4')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-5.jpg"
-                        @click="openLightBox('2-5')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-6.jpg"
-                        @click="openLightBox('2-6')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-7.jpg"
-                        @click="openLightBox('2-7')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/2-8.jpg"
-                        @click="openLightBox('2-8')"
-                /></swiper-slide>
-            </swiper>
-        </div>
-        <div class="imgGroup">
-            <swiper ref="mySwiper3" :options="swiperOptions">
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-1.jpg"
-                        @click="openLightBox('3-1')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-2.jpg"
-                        @click="openLightBox('3-2')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-3.jpg"
-                        @click="openLightBox('3-3')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-4.jpg"
-                        @click="openLightBox('3-4')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-5.jpg"
-                        @click="openLightBox('3-5')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-6.jpg"
-                        @click="openLightBox('3-6')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-7.jpg"
-                        @click="openLightBox('3-7')"
-                /></swiper-slide>
-                <swiper-slide
-                    ><img
-                        src="@/assets/landing-past-img/thumbnail/3-8.jpg"
-                        @click="openLightBox('3-8')"
+                        :src="`${require(`@/static/img/landing-past-img/thumbnail/${imgName}.jpg`)}`"
+                        @click="openLightBox(imgName)"
                 /></swiper-slide>
             </swiper>
         </div>
@@ -171,19 +47,26 @@ export default {
                 preloadImages: true,
                 initialSlide: 0,
             },
-            images: [],
-            index: null,
+            lightBoxSettings: {
+                imgs: [],
+                index: null,
+            },
+            imgGroups: [
+                ['1-1', '1-2', '1-3', '1-4', '1-5', '1-6', '1-7', '1-8', '1-9'],
+                ['2-1', '2-2', '2-3', '2-4', '2-5', '2-6', '2-7', '2-8'],
+                ['3-1', '3-2', '3-3', '3-4', '3-5', '3-6', '3-7', '3-8'],
+            ],
         }
     },
     computed: {
         swiper1() {
-            return this.$refs.mySwiper1.$swiper
+            return this.$refs.mySwiper0[0].$swiper
         },
         swiper2() {
-            return this.$refs.mySwiper2.$swiper
+            return this.$refs.mySwiper1[0].$swiper
         },
         swiper3() {
-            return this.$refs.mySwiper3.$swiper
+            return this.$refs.mySwiper2[0].$swiper
         },
     },
     mounted() {
@@ -193,16 +76,19 @@ export default {
     },
     methods: {
         openLightBox(imgName) {
-            const imageDir = `/pycontw-2021/_nuxt/assets/landing-past-img/thumbnail/${imgName}.jpg`
-            // const imageDir = `/pycontw-2021/_nuxt/assets/landing-past-img/origin/${imgName}.jpg`
-            this.images = [imageDir]
-            this.index = 0
+            const imageDir = `${require(`@/static/img/landing-past-img/origin/${imgName}.jpg`)}`
+            this.lightBoxSettings.imgs = [imageDir]
+            this.lightBoxSettings.index = 0
         },
     },
 }
 </script>
 
 <style scoped>
+.swiperCollection {
+    background-color: #121023;
+    padding-bottom: 5px;
+}
 .imgGroup {
     margin-bottom: 40px;
 }
