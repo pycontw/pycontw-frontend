@@ -1,14 +1,9 @@
 <template>
-    <button>
-        <ext-link v-if="href" :href="href" :class="coreButtonClasses">
+    <button :class="coreButtonClasses">
+        <ext-link v-if="href" :href="href">
             <slot></slot>
         </ext-link>
-        <locale-link
-            v-else-if="to"
-            :to="to"
-            customized
-            :class="coreButtonClasses"
-        >
+        <locale-link v-else-if="to" :to="to" customized>
             <slot></slot>
         </locale-link>
         <slot v-else></slot>
@@ -50,6 +45,11 @@ export default {
             default: undefined,
         },
     },
+    data() {
+        return {
+            isLink: false,
+        }
+    },
     computed: {
         coreButtonClasses() {
             return {
@@ -58,7 +58,22 @@ export default {
                 '--secondary': this.secondary,
                 '--rounded': this.rounded,
                 '--block': this.block,
+                '--is-link': this.isLink,
             }
+        },
+    },
+    watch: {
+        isLink: {
+            immediate: true,
+            handler() {
+                if (this.href) {
+                    this.isLink = true
+                } else if (this.to) {
+                    this.isLink = true
+                } else {
+                    this.isLink = false
+                }
+            },
         },
     },
 }
@@ -66,6 +81,12 @@ export default {
 
 <style scoped>
 .core-button {
+    outline: none;
+    background-color: transparent;
+}
+
+.core-button:not(.--is-link),
+.core-button.--is-link > a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -78,25 +99,28 @@ export default {
     outline: none;
     font-weight: 700;
     font-size: 1rem;
-    background-color: transparent;
 }
 
-.core-button.--rounded {
+.core-button:not(.--is-link):hover,
+.core-button.--is-link > a:hover {
+    color: #7568f6;
+    border-color: #7568f6;
+}
+
+.--rounded:not(.--is-link),
+.--rounded.--is-link > a {
     border-radius: 9999px;
 }
 
-.core-button.--primary {
+.--rounded:not(.--is-link),
+.--rounded.--is-link > a {
     color: #c2a53a;
     border: 0.25rem solid #c2a53a;
 }
 
-.core-button.--secondary {
+.--secondary:not(.--is-link),
+.--secondary.--is-link > a {
     color: #c7c7c7;
     border: 0.25rem solid #c7c7c7;
-}
-
-.core-button:hover {
-    color: #7568f6;
-    border-color: #7568f6;
 }
 </style>
