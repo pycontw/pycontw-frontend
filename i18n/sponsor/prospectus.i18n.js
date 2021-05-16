@@ -196,6 +196,21 @@ export default genI18nMessages({
                     ', which will be included in slideshow during conference',
             ],
         ],
+        'specialSponsorship-mask': [
+            'Special Souvenirs Mask - USD$ 850 (Limit: 1)',
+            [
+                'Every attendee will rechieve 3 masks as welcome package',
+                'Logo will be reveal on masks',
+            ],
+        ],
+        'specialSponsorship-spray': [
+            'Special Souvenirs Alcohol Spray - USD$ 1,700 (Limit: 1)',
+            [
+                'Every attendee will rechieve a alcohol spray as welcome package',
+                'Logo will be reveal on the spray',
+                'Sponsors will be listed as special sponsor on website',
+            ],
+        ],
 
         'note-title': 'Notes',
         'note-items': [
@@ -412,6 +427,21 @@ export default genI18nMessages({
                 '贊助需財務補助的偏鄉學生',
                 '擺放含有公司商標的易拉展在活動入口位置',
                 '贊助商商標將被包含在活動紀錄片中，該紀錄片將在大會現場輪播',
+            ],
+        ],
+        'specialSponsorship-mask': [
+            '防疫紀念品口罩 - 名額 1 名, 單一贊助金額: 25,000 元',
+            [
+                '參加會眾將獲得 3 份 1 組的防疫口罩作為迎賓禮',
+                '企業 Logo 將印製在口罩上',
+            ],
+        ],
+        'specialSponsorship-spray': [
+            '防疫紀念品酒精噴霧 - 名額 1 名, 單一贊助金額: 50,000 元',
+            [
+                '參加會眾將獲得酒精噴霧 1 瓶作為迎賓禮',
+                '企業 Logo 將印製在酒精噴霧上',
+                '網站特別贊助區塊之公司宣傳（標誌及介紹）',
             ],
         ],
 
