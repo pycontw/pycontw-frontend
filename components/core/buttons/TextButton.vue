@@ -45,11 +45,6 @@ export default {
             default: undefined,
         },
     },
-    data() {
-        return {
-            isLink: false,
-        }
-    },
     computed: {
         coreButtonClasses() {
             return {
@@ -61,19 +56,8 @@ export default {
                 '--is-link': this.isLink,
             }
         },
-    },
-    watch: {
-        isLink: {
-            immediate: true,
-            handler() {
-                if (this.href) {
-                    this.isLink = true
-                } else if (this.to) {
-                    this.isLink = true
-                } else {
-                    this.isLink = false
-                }
-            },
+        isLink() {
+            return this.href || this.to
         },
     },
 }
@@ -101,26 +85,26 @@ export default {
     font-size: 1rem;
 }
 
-.core-button:not(.--is-link):hover,
-.core-button.--is-link > a:hover {
-    color: #7568f6;
-    border-color: #7568f6;
-}
-
-.--rounded:not(.--is-link),
-.--rounded.--is-link > a {
+.core-button.--rounded:not(.--is-link),
+.core-button.--rounded.--is-link > a {
     border-radius: 9999px;
 }
 
-.--rounded:not(.--is-link),
-.--rounded.--is-link > a {
+.core-button.--primary:not(.--is-link),
+.core-button.--primary.--is-link > a {
     color: #c2a53a;
     border: 0.25rem solid #c2a53a;
 }
 
-.--secondary:not(.--is-link),
-.--secondary.--is-link > a {
+.core-button.--secondary:not(.--is-link),
+.core-button.--secondary.--is-link > a {
     color: #c7c7c7;
     border: 0.25rem solid #c7c7c7;
+}
+
+.core-button:not(.--is-link):hover,
+.core-button.--is-link > a:hover {
+    color: #7568f6;
+    border-color: #7568f6;
 }
 </style>
