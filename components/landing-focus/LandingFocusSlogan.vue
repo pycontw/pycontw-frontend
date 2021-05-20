@@ -2,8 +2,8 @@
     <div class="flex items-center">
         <pre
             class="text-xs mr-4"
-        ><code>with</code> Pythonistas() <code>as</code> us:
-          Python.TW.reunion()</pre>
+        ><code>with</code> Pythonistas() <code>as</code> us:<br>  Python.TW.reunion()
+        </pre>
         <div class="w-10 md:w-16 lg:w-20">
             <img
                 src="~/static/page-home-slogan.png"
