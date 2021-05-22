@@ -53,7 +53,11 @@ export default {
                 '--secondary': this.secondary,
                 '--rounded': this.rounded,
                 '--block': this.block,
+                '--is-link': this.isLink,
             }
+        },
+        isLink() {
+            return this.href || this.to
         },
     },
 }
@@ -61,6 +65,12 @@ export default {
 
 <style scoped>
 .core-button {
+    outline: none;
+    background-color: transparent;
+}
+
+.core-button:not(.--is-link),
+.core-button.--is-link > a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -73,24 +83,27 @@ export default {
     outline: none;
     font-weight: 700;
     font-size: 1rem;
-    background-color: transparent;
 }
 
-.core-button.--rounded {
+.core-button.--rounded:not(.--is-link),
+.core-button.--rounded.--is-link > a {
     border-radius: 9999px;
 }
 
-.core-button.--primary {
+.core-button.--primary:not(.--is-link),
+.core-button.--primary.--is-link > a {
     color: #c2a53a;
     border: 0.25rem solid #c2a53a;
 }
 
-.core-button.--secondary {
+.core-button.--secondary:not(.--is-link),
+.core-button.--secondary.--is-link > a {
     color: #c7c7c7;
     border: 0.25rem solid #c7c7c7;
 }
 
-.core-button:hover {
+.core-button:not(.--is-link):hover,
+.core-button.--is-link > a:hover {
     color: #7568f6;
     border-color: #7568f6;
 }
