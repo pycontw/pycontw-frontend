@@ -53,6 +53,8 @@ export default {
     modules: [
         // https://go.nuxtjs.dev/axios
         '@nuxt/http',
+        // https://github.com/nuxt-community/gtm-module
+        '@nuxtjs/gtm',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
         [
@@ -92,11 +94,18 @@ export default {
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {},
 
+    gtm: {
+        id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+
     googleAnalytics: {
         id: process.env.GOOGLE_ANALYTICS_ID,
     },
 
     publicRuntimeConfig: {
+        gtm: {
+            id: process.env.GOOGLE_TAG_MANAGER_ID,
+        },
         googleAnalytics: {
             id: process.env.GOOGLE_ANALYTICS_ID,
         },
