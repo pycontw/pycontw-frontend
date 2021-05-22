@@ -46,7 +46,6 @@ export default {
         '@nuxtjs/eslint-module',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/google-analytics',
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
@@ -98,16 +97,9 @@ export default {
         id: process.env.GOOGLE_TAG_MANAGER_ID,
     },
 
-    googleAnalytics: {
-        id: process.env.GOOGLE_ANALYTICS_ID,
-    },
-
     publicRuntimeConfig: {
         gtm: {
             id: process.env.GOOGLE_TAG_MANAGER_ID,
-        },
-        googleAnalytics: {
-            id: process.env.GOOGLE_ANALYTICS_ID,
         },
     },
 }
