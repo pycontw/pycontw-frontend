@@ -44,7 +44,7 @@ export default {
 
 .header-container.--desktop {
     color: #c2a53a;
-    background-color: rgba(27, 26, 39, 0.6);
+    background-color: #121023;
 }
 
 .header-container.--desktop .core-localeSwitch:hover {

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-8 py-24 sm:px-20 md:px-32 lg:px-32">
+    <div :class="classObject">
         <slot></slot>
     </div>
 </template>
@@ -7,6 +7,21 @@
 <script>
 export default {
     name: 'I18nPageWrapper',
+    props: {
+        customY: { type: Boolean, default: false },
+    },
+    computed: {
+        classObject() {
+            return {
+                'w-full': true,
+                'px-8': true,
+                'py-24': !this.customY,
+                'sm:px-20': true,
+                'md:px-32': true,
+                'lg:px-32': true,
+            }
+        },
+    },
 }
 </script>
 
