@@ -2,17 +2,17 @@
     <div class="jobsPanel">
         <div
             v-for="(job, i) in jobs"
-            :key="`jobs_panel_job_${i}`"
+            :key="$makeKey(i, 'jobs_panel_job')"
             class="jobsPanelJob"
         >
             <div class="jobsPanelJob__title">
-                {{ job[`job_name_${locale}`] || '-' }}
+                {{ job[$makeKey(locale, 'job_name')] || '-' }}
             </div>
             <div class="jobsPanelJob__description">
-                {{ job[`job_description_${locale}`] || '-' }}
+                {{ job[$makeKey(locale, 'job_description')] || '-' }}
             </div>
             <div class="jobsPanelJob__requirements">
-                {{ job[`job_requirements_${locale}`] || '-' }}
+                {{ job[$makeKey(locale, 'job_requirements')] || '-' }}
             </div>
             <core-text-button :href="job.job_url" class="mt-4 mb-8">
                 {{ ctaLabel }}

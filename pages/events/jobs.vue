@@ -3,8 +3,8 @@
         <core-h1 :title="$t('jobListing')" class="mt-24"></core-h1>
         <jobs-card-collection ref="jobsCardCollection">
             <jobs-card
-                v-for="(sponsor, i) in jobsData"
-                :key="`sponsor_jobs_card_${i}`"
+                v-for="sponsor in jobsData"
+                :key="sponsor.id"
                 :logo-url="sponsor.sponsor_logo_url"
                 :active="selectedSponsor.id === sponsor.id"
                 @click="setSelectedSponsor(sponsor)"
