@@ -37,22 +37,22 @@ export default Object.freeze({
         },
     ],
     eventsItems: [
+        // {
+        //     i18nKey: 'overview',
+        //     value: '/events/overview',
+        // },
+        // {
+        //     i18nKey: 'warmUpSessions',
+        //     value: '/events/warm-up-sessions',
+        // },
+        // {
+        //     i18nKey: 'openSpaces',
+        //     value: '/events/open-spaces',
+        // },
+        // { i18nKey: 'sprints', value: '/events/sprints' },
         {
-            i18nKey: 'overview',
-            value: '/events/overview',
-        },
-        {
-            i18nKey: 'warmUpSessions',
-            value: '/events/warm-up-sessions',
-        },
-        {
-            i18nKey: 'openSpaces',
-            value: '/events/open-spaces',
-        },
-        { i18nKey: 'sprints', value: '/events/sprints' },
-        {
-            i18nKey: 'jobListings',
-            value: '/events/job-listings',
+            i18nKey: 'jobs',
+            value: '/events/jobs',
         },
     ],
     registrationItems: [

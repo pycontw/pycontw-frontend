@@ -4,6 +4,7 @@ export default genI18nMessages({
     'en-us': {
         about: 'About',
         sponsor: 'Sponsor',
+        jobs: 'Job Listing',
         speaking: 'Speaking',
         cfp: 'Call for Proposals',
         talk: 'Propose a Talk',
@@ -32,6 +33,7 @@ export default genI18nMessages({
     'zh-hant': {
         about: '關於',
         sponsor: '贊助',
+        jobs: '徵才資訊',
         speaking: '投稿',
         cfp: '投稿募集',
         talk: '如何投稿演講',
