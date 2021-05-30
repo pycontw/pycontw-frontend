@@ -16,7 +16,7 @@ export const actions = {
         commit('setSponsorsData', data)
     },
     async $getJobsData({ commit }) {
-        const { data } = await this.$http.$get('/api/jobs')
+        const { data } = await this.$http.$get('/api/sponsors/jobs')
         commit('setJobsData', data)
     },
 }
