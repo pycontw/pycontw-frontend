@@ -29,7 +29,7 @@
         </div>
 =======
 
-        <i18n-page-wrapper class="pt-12 bg-blue-primary">
+        <i18n-page-wrapper class="py-8 bg-blue-primary">
             <h1 class="text-yellow-500">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
