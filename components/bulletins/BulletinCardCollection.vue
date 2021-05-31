@@ -27,19 +27,19 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCardCollection__cardContainer {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap justify-center;
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard {
     margin: 0 0 60px 0;
     padding: 5px;
     @media (min-width: 415px) {
-        margin: 5px 15px 65px 5px;
+        margin: 30px 50px 40px 5px;
     }
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard:hover {
     @apply cursor-pointer box-content;
-    margin: 0 10px 60px 0;
+    margin: 25px 45px 35px 0px;
 }
 </style>

@@ -1,10 +1,13 @@
 <template>
     <div v-show="!!title" :class="classObject">
-        <h2 class="text-gray-700">{{ $t(title) }}</h2>
-        <p class="text-gray-400">{{ $t(description) }}</p>
-        <div class="text-center">
+        <h2>
+            {{ $t(title) }}
+        </h2>
+        <p>{{ $t(description) }}</p>
+        <a :href="linkUrl" :title="linkStr">{{ linkStr }}</a>
+        <!-- <div class="text-center">
             <text-button :to="linkUrl">{{ linkStr }}</text-button>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -32,6 +35,25 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply w-56 h-64 relative flex flex-col justify-center items-center rounded-2xl;
+    @apply w-48 h-64 relative flex flex-col justify-center items-center rounded-3xl border-4 border-gray-700;
+    border-color: rgba(75, 75, 75);
+    color: rgba(75, 75, 75);
+}
+
+.bulletinCard > h2 {
+    @apply text-xl;
+    color: rgba(128, 128, 128);
+}
+
+.bulletinCard > p {
+    @apply text-sm m-4 text-justify;
+    color: rgba(199, 199, 199);
+}
+
+.bulletinCard > a {
+    @apply text-sm rounded-full px-8 py-2;
+    border-color: rgba(199, 199, 199);
+    border-width: inherit;
+    color: rgba(199, 199, 199);
 }
 </style>
