@@ -28,8 +28,38 @@
                 ></div>
             </div>
         </div>
-        <i18n-page-wrapper>
-            <p></p>
+        <i18n-page-wrapper class="pt-0 px-8 md:px-57 lg:px-56">
+            <i18n
+                path="reasonTitle"
+                tag="p"
+                class="h3 my-2 text-base md:text-lg lg:text-lg"
+            >
+                <template #number>
+                    <span class="highlight">{{ $t('number') }}</span>
+                </template>
+            </i18n>
+            <p class="w-full text-xs md:text-base lg:text-base">
+                {{ $t('reason') }}
+            </p>
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-2 my-10"
+            >
+                <div
+                    v-for="img in reasonImgs"
+                    :key="img.text"
+                    class="flex flex-col items-center"
+                >
+                    <div
+                        class="w-24 md:w-24 lg:w-24 h-24 md:h-24 lg:h-24 bg-contain bg-no-repeat mx-0 md:mx-10 lg:mx-10 my-5"
+                        :style="{
+                            'background-image': 'url(' + img.src + ')',
+                        }"
+                    ></div>
+                    <span class="text-xs md:text-base lg:text-base">{{
+                        img.text
+                    }}</span>
+                </div>
+            </div>
         </i18n-page-wrapper>
     </div>
 </template>
@@ -44,6 +74,10 @@ import IntroImg1 from '@/static/img/about/Intro-1.png'
 import IntroImg2 from '@/static/img/about/Intro-2.png'
 import IntroImg3 from '@/static/img/about/Intro-3.png'
 import IntroImg4 from '@/static/img/about/Intro-4.png'
+import Cooperation from '@/static/img/about/Cooperation.svg'
+import Share from '@/static/img/about/Share.svg'
+import Skill from '@/static/img/about/Skill.svg'
+import Speech from '@/static/img/about/Speech.svg'
 
 export default {
     i18n,
@@ -57,6 +91,24 @@ export default {
         return {
             aboutBanner: AboutBanner,
             introImgs: [IntroImg1, IntroImg2, IntroImg3, IntroImg4],
+            reasonImgs: {
+                cooperationImg: {
+                    src: Cooperation,
+                    text: this.$t('cooperation'),
+                },
+                shareImg: {
+                    src: Share,
+                    text: this.$t('share'),
+                },
+                skillImg: {
+                    src: Skill,
+                    text: this.$t('skill'),
+                },
+                speechImg: {
+                    src: Speech,
+                    text: this.$t('speech'),
+                },
+            },
         }
     },
     computed: {
@@ -71,4 +123,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.h3 {
+    font-family: 'Noto Serif TC';
+    color: #d1d1d1;
+}
+.highlight {
+    color: #c2a53a;
+}
+</style>
