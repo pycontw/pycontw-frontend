@@ -35,7 +35,7 @@
                 class="h3 my-2 text-base md:text-lg lg:text-lg"
             >
                 <template #number>
-                    <span class="highlight">{{ $t('number') }}</span>
+                    <span class="highlight">{{ $t('reasonNumber') }}</span>
                 </template>
             </i18n>
             <p class="w-full text-xs md:text-base lg:text-base">
@@ -60,6 +60,53 @@
                     }}</span>
                 </div>
             </div>
+            <p class="h3 my-2 text-base md:text-lg lg:text-lg">
+                {{ $t('activityTitle') }}
+            </p>
+            <div class="flex items-center justify-evenly">
+                <i18n
+                    path="kindsOFTalk"
+                    tag="span"
+                    class="text-xs md:text-base lg:text-base"
+                >
+                    <template #talkNumber>
+                        <span
+                            class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                            >3</span
+                        >
+                    </template>
+                </i18n>
+                <span
+                    class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                    >+</span
+                >
+                <i18n
+                    path="kindsOfActivity"
+                    tag="span"
+                    class="text-xs md:text-base lg:text-base"
+                >
+                    <template #activityNumber>
+                        <span
+                            class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                            >7</span
+                        >
+                    </template>
+                </i18n>
+            </div>
+            <p class="w-full text-xs md:text-base lg:text-base">
+                {{ $t('activityDesc') }}
+            </p>
+            <ul class="m-0 md:m-12 lg:m-12 text-xs md:text-base lg:text-base">
+                <li
+                    v-for="(content, i) in $t('activityDetails')"
+                    :key="`activity_detail${i}`"
+                >
+                    <p class="activity-detail">{{ content }}</p>
+                </li>
+            </ul>
+            <p class="w-full text-xs md:text-base lg:text-base">
+                {{ $t('moreInfo') }}
+            </p>
         </i18n-page-wrapper>
     </div>
 </template>
@@ -130,5 +177,16 @@ export default {
 }
 .highlight {
     color: #c2a53a;
+}
+.paragraph-highlight {
+    font-family: 'Noto Serif TC';
+    color: #7568f6;
+    text-shadow: 4px 6px 0px #4f4f4f;
+    font-weight: bold;
+    margin: auto 0.5rem;
+}
+
+.activity-detail {
+    color: #9387ff;
 }
 </style>
