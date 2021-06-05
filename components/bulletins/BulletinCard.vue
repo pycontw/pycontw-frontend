@@ -46,7 +46,7 @@ export default {
 }
 
 .bulletinCard > p {
-    @apply text-sm m-4 text-justify;
+    @apply text-sm m-5;
     color: rgba(199, 199, 199);
 }
 
@@ -55,5 +55,10 @@ export default {
     border-color: rgba(199, 199, 199);
     border-width: inherit;
     color: rgba(199, 199, 199);
+}
+
+.bulletinCard > a:hover {
+    background: rgba(199, 199, 199);
+    color: #121023;
 }
 </style>
