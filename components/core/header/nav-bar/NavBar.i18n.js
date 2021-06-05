@@ -3,6 +3,8 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         about: 'About',
+        pycontw: 'PyCon Taiwan',
+        community: 'Community',
         sponsor: 'Sponsor',
         jobs: 'Job Listing',
         speaking: 'Speaking',
@@ -32,6 +34,8 @@ export default genI18nMessages({
     },
     'zh-hant': {
         about: '關於',
+        pycontw: 'PyCon Taiwan',
+        community: '在地社群',
         sponsor: '贊助',
         jobs: '徵才資訊',
         speaking: '投稿',
