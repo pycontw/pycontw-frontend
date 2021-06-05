@@ -31,15 +31,12 @@ export default {
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard {
-    margin: 0 0 60px 0;
-    padding: 5px;
     @media (min-width: 415px) {
-        margin: 30px 50px 40px 5px;
+        margin: 18px 36px 36px 18px;
     }
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard:hover {
-    @apply cursor-pointer box-content;
-    margin: 25px 45px 35px 0px;
+    @apply cursor-pointer;
 }
 </style>
