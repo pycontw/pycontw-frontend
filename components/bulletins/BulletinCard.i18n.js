@@ -4,38 +4,38 @@ export default genI18nMessages({
     'en-us': {
         bulletins: [
             {
-                title: 'Volunteer recruitment',
+                title: 'Volunteer',
                 description:
-                    'We welcome all friends who are interested in Python to join us, support PyCon with action, and make this place better.',
-                linkStr: 'Online registration',
+                    'Welcome friends who are interested in Python, support PyCon with action, and make this place better!',
+                linkStr: 'Sign up',
                 linkUrl: 'https://forms.gle/wuG2w42cbhamyGdv9',
             },
             {
-                title: 'Podcast is online',
+                title: 'Pycast',
                 description:
-                    'Wow! Pycon actually has a Podcast and it is too trendy! Young people are all listening to Podcasts now! Every episode is well-plotted.',
-                linkStr: 'Listen online',
+                    "There are Podcasts for PyCon and it's trendy! Teenagers are listening to Pycast now! Every episode is interesting!",
+                linkStr: 'Go Listen',
                 linkUrl: 'https://podcasts.apple.com/podcast/id1559843325',
             },
             {
-                title: 'Financial assistance application',
+                title: 'Financial',
                 description:
-                    'As long as you need it, you can apply for subsidies such as tickets and transportation expenses. We try our best to help more people participate in the conference with subsidies.',
-                linkStr: 'Apply online',
+                    'You can apply financial aid as long as you need. We will help you to participate in the conference.',
+                linkStr: 'Apply Now',
                 linkUrl: '/registration/financial-aid',
             },
             {
                 title: 'Blog',
                 description:
-                    'Want to receive the latest news right away? Then you must not miss the blog, we will post the latest information to the blog!',
-                linkStr: 'Check it out',
+                    'Want to receive the latest news? Must not miss the blog, we post the latest information to the blog!',
+                linkStr: 'Go and See',
                 linkUrl: 'https://pycontw.blogspot.com/',
             },
             {
                 title: 'Youtube',
                 description:
-                    'PyCon also has a Youtube channel! Welcome to subscribe to us. Every year, we will upload the videos of the agenda so that everyone can watch it together.',
-                linkStr: 'Subscribe online',
+                    'PyCon has a youtube channel! Welcome subscribe us! We will update so you can watch it together.',
+                linkStr: 'Go and See',
                 linkUrl: 'https://www.youtube.com/c/pycontaiwan',
             },
         ],
