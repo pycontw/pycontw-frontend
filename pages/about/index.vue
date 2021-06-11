@@ -1,10 +1,10 @@
 <template>
     <div class="py-10 md:py-24 lg:py24">
-        <Banner>
+        <banner>
             <template #default>
                 <div
                     class="hidden md:block lg:block md:w-full lg:w-full md:h-full lg:h-full"
-                    :style="getBanner"
+                    :style="bannerStyle"
                 ></div>
             </template>
             <template #text>
@@ -17,14 +17,12 @@
                     {{ content }}
                 </p>
             </template>
-        </Banner>
+        </banner>
         <div class="flex flex-wrap justify-center mx-2 my-3">
             <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
                 <div
                     class="w-32 md:w-56 lg:w-56 h-24 md:h-40 lg:h-40 bg-contain bg-no-repeat mx-2 my-3"
-                    :style="{
-                        'background-image': 'url(' + img + ')',
-                    }"
+                    :style="getImgStyle(img)"
                 ></div>
             </div>
         </div>
@@ -51,9 +49,7 @@
                 >
                     <div
                         class="w-24 md:w-24 lg:w-24 h-24 md:h-24 lg:h-24 bg-contain bg-no-repeat mx-0 md:mx-10 lg:mx-10 my-5"
-                        :style="{
-                            'background-image': 'url(' + img.src + ')',
-                        }"
+                        :style="getImgStyle(img.src)"
                     ></div>
                     <span class="text-xs md:text-base lg:text-base">{{
                         img.text
@@ -159,11 +155,18 @@ export default {
         }
     },
     computed: {
-        getBanner() {
+        bannerStyle() {
             return {
                 'background-image': `url(${this.aboutBanner})`,
                 'background-repeat': 'no-repeat',
                 'background-position': 'center',
+            }
+        },
+    },
+    methods: {
+        getImgStyle(img) {
+            return {
+                'background-image': `url(${img})`,
             }
         },
     },
