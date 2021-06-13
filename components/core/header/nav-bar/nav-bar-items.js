@@ -71,6 +71,10 @@ export default Object.freeze({
             value: '/about',
         },
         {
+            i18nKey: 'history',
+            value: '/about/history',
+        },
+        {
             i18nKey: 'community',
             value: '/about/community',
         },
