@@ -4,10 +4,11 @@
             {{ $t(title) }}
         </h2>
         <p>{{ $t(description) }}</p>
-        <a :href="linkUrl" :title="linkStr">{{ linkStr }}</a>
-        <!-- <div class="text-center">
-            <text-button :to="linkUrl">{{ linkStr }}</text-button>
-        </div> -->
+        <div class="mt-6 mb-2">
+            <text-button :thirdary="true" :href="linkHref">{{
+                linkTitle
+            }}</text-button>
+        </div>
     </div>
 </template>
 
@@ -20,8 +21,8 @@ export default {
             type: String,
             default: '',
         },
-        linkStr: { type: String, default: '' },
-        linkUrl: { type: String, default: '' },
+        linkTitle: { type: String, default: '' },
+        linkHref: { type: String, default: '' },
     },
     computed: {
         classObject() {
