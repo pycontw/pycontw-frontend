@@ -15,7 +15,7 @@
             </template>
         </banner>
         <I18nPageWrapper class="pt-8 px-8 md:px-57 lg:px-56">
-            <div class="flex flex-col w-full md:w-3/5 lg:w-3/5 m-auto">
+            <div class="flex flex-col w-full m-auto">
                 <p
                     class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
                 >
