@@ -28,6 +28,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        thirdary: {
+            type: Boolean,
+            default: false,
+        },
         rounded: {
             type: Boolean,
             default: true,
@@ -51,6 +55,7 @@ export default {
                 'core-button': true,
                 '--primary': this.primary,
                 '--secondary': this.secondary,
+                '--thirdary': this.thirdary,
                 '--rounded': this.rounded,
                 '--block': this.block,
                 '--is-link': this.isLink,
@@ -100,6 +105,13 @@ export default {
 .core-button.--secondary.--is-link > a {
     color: #c7c7c7;
     border: 0.25rem solid #c7c7c7;
+}
+
+.core-button.--thirdary:not(.--is-link),
+.core-button.--thirdary.--is-link > a {
+    color: #c7c7c7;
+    border: 0.25rem solid #c7c7c7;
+    font-size: 0.8rem;
 }
 
 .core-button:not(.--is-link):hover,
