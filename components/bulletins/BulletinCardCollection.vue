@@ -9,8 +9,8 @@
                 :key="`index_bulletin_${i}`"
                 :title="bulletin.title"
                 :description="bulletin.description"
-                :linkStr="bulletin.linkStr"
-                :linkUrl="bulletin.linkUrl"
+                :link-title="bulletin.linkTitle"
+                :link-href="bulletin.linkHref"
             >
             </bulletin-card>
         </div>
