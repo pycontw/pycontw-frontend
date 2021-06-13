@@ -5,6 +5,62 @@ export default genI18nMessages({
         pageTitle: 'History of PyCon Taiwan',
         pageAbstract:
             'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Talent sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
+        beforePyCon: {
+            title: 'Before PyCon Taiwan',
+            pyctw2008: '2008 PyCTW',
+            pyctw2011: '2011 PyCTW',
+            content:
+                'Thinker organized PyCTW, the predecessor of PyCon Taiwan, in both {pyctw2008} and {pyctw2011}. They are one-day events gathering Pythonistas in Taiwan together.',
+        },
+        pycon2012: {
+            title: '2012 is the first year of PyCon Taiwan',
+            everybodypay: 'Everybody Pays',
+            content:
+                'The first PyCon Taiwan was founded in 2012, by yyc and volunteers from communities. The topics mainly focused on scientific computation as well as introduction to Python-based tools. The organizers decided to follow the {everybody-pays} policy originated from PyCon US: Everyone, including the staffs and speakers of PyCon Taiwan, is required to pay for the ticket. The principle, which we honor to this day, distinguishes PyCon Taiwan from other conferences in Taiwan.',
+        },
+        pycon2014: {
+            title: 'In 2014, the Python community hosted the APAC',
+            checkIO: 'CheckIO',
+            content:
+                'We turned to host PyCon APAC/Taiwan, as PyCon for the APAC area, in both 2014 and 2015, lead by chairpersons Tim Hsu and Keith Yang. We were lucky to invite Jessica McKellar, director of Python Software Foundation, and many prestigious contributors in the community as our keynote speakers. During the BoF, we launched a problem-solving competition in collaboration with {check-io}, as an entertaining activity. We also arranged programs like Show Time and Job Event in order to promote sponsors. Tutorials covering several topics were held, ranging from Python introduction to web crawling, data mining, signal processing, and even interaction with Raspberry Pi.',
+        },
+        pycon2015: {
+            title: 'The 2015 PyConAPAC held an additional paid PyDay',
+            content:
+                'PyDay, an activity for new programmers hosted jointly by PyCon Taiwan and top universities in Taiwan, was also held at the first time in 2015. Keynote speakers from PyCon Taiwan came to the PyDay event, and share their experience throughout sessions.',
+        },
+        pycon2016: {
+            title: '2016 「Implement the Future, Together!」',
+            pyconBlog2016: 'local keynote speakers',
+            pyconTWFlickr: 'photo albums',
+            content:
+                'We passed the APAC flag to South Korea in 2016, and put our focus back to the native Taiwanese community. But PyCon Taiwan, now under the slogan “Implement the Future, Together!”, was strong as ever, and received a overwhelming amount of proposals and participants. We were lucky to invite jserv and Audrey Tang, both famous Taiwanese community leaders and established hackers, as well as foreign speakers including Paul Hildebrandt, senior engineer at Disney Animation Studio, Steve Dower, software developer at Microsoft, and Amber Brown, manager of the Twisted project. Paul brought us an enlightening speech about how Python is applied to animation production in Disney, which the audience greatly enjoyed. Along with the first {pycon-blog-2016} at PyCon Taiwan, we also made new attempts including a FinTech session, interactive games combining sensor technology and a vending machine, and experience-sharing talks about teaching programming to young adults. The {pycontw-flickr} have our most treasurous memories.',
+        },
+        pycon2017: {
+            title: '2017 「Future」',
+            content:
+                '2017 is our most futuristic PyCon Taiwan ever. All of our keynote speakers, including globally renowned machine-learning expert Hsuan-Tien Lin, are not only recognized in their respective fields, but also community leaders, trend-setters, and visionaries for the next generation. In line with the community-focused theme, we also held an unconference session for the first time, looking forward to spurring discussion in the community, to great success. The late-night party is also expanded to include contributions from community members with great talent. Adrian Liaw’s piano performance was such a treat.',
+        },
+        pycon2018: {
+            title: '2018 「Acceletation」',
+            content:
+                'The largely same team were brought back to host PyCon Taiwan in 2018. Continuing the established theme, the image is set to “acceletation”, both in the technical sense and community-wise.',
+        },
+        pycon2019: {
+            title: '2019 「Innovation」',
+            content:
+                'We retrospected the role of PyCon Taiwan as a community platform in Taiwan in 2019. We have continued improving our agenda and events by introducing wonderful thoughts and experience from the other Python Conferences in the world to PyCon Taiwan. We also enhanced the exchange of experience between local-to-local and local-to-international Python communities, and kept adopting innovative plans.',
+        },
+        pycon2020: {
+            title: '2020「Migration Southward」',
+            content:
+                'In 2020, we hosted PyCon Taiwan in Tainan. This is the first time we host PyCon Taiwan in southern Taiwan. Another new attempt is Community Track. While interacting with local Communities, attendees can get a taste of local culture in a different ambience. We hope we could bring local communities more and different experience.',
+        },
+        pycon2021: {
+            title: '2021 is the Tenth Anniversary of PyCon Taiwan',
+            content:
+                'In 2021, as the 10th anniversary of PyCon Taiwan is approaching, we could be the world’s only offline PyCon. Besides passing on experience in communities, we also take new steps in activities, like Podcast and Young Talent, to facilitate and encourage the exchanging of views among different groups. As a platform for Python communities, PyCon Taiwan invites all Python users, developers, and promoters in Taiwan to join our events.',
+        },
     },
     'zh-hant': {
         pageTitle: '年會歷史',
@@ -20,10 +76,8 @@ export default genI18nMessages({
         pycon2012: {
             title: '2012 年是 PyCon Taiwan 元年',
             everybodypay: 'Everybody Pays',
-            pyconReview2012: '2012 PyCon 心得',
-            pyconReview2013: '2013 PyCon 心得',
             content:
-                '首任主席 yyc 催生了這個活動，第一屆的年會主要議題以科學運算為主。同時，從第一屆年會開始，我們就選擇遵從 PyCon US 的 {everybody-pays} 原則，這也成為 PyCon Taiwan 有別於台灣地區其他年會的一項特色。2013年年會擴大舉辦結果報名十分踴躍，甚至還試辦了付費教學活動。大會主席 yyc 也在自己的 blog 中記下 {pycon-review-2012} 與 {pycon-review-2013}。',
+                '首任主席 yyc 催生了這個活動，第一屆的年會主要議題以科學運算為主。同時，從第一屆年會開始，我們就選擇遵從 PyCon US 的 {everybody-pays} 原則，這也成為 PyCon Taiwan 有別於台灣地區其他年會的一項特色。2013年年會擴大舉辦結果報名十分踴躍，甚至還試辦了付費教學活動。',
         },
         pycon2014: {
             title: '2014 年Python 社群承辦了亞太區的 Python 年會',
