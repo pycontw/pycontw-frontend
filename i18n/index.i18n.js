@@ -7,7 +7,7 @@ export default genI18nMessages({
         sponsor: 'Sponsor Us',
         sponsorList: 'Sponsors',
         sponsorUs: 'Be a Sponsor',
-        bulletinList: 'Latest Bulletins',
+        bulletinList: 'Latest Announcement',
     },
     'zh-hant': {
         pyconWelcome: '歡迎來到 PyCon TW 2021',
