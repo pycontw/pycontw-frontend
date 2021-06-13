@@ -27,16 +27,18 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCardCollection__cardContainer {
-    @apply flex flex-wrap justify-center;
+    @apply flex flex-wrap justify-center m-5;
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard {
     @media (min-width: 415px) {
-        margin: 18px 36px 36px 18px;
+        margin: 30px 20px 22px 21px;
+        padding: 5px;
     }
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard:hover {
     @apply cursor-pointer;
+    border-color: #413f5a;
 }
 </style>
