@@ -28,6 +28,22 @@ export default {
         I18nPageWrapper,
         ExtLink,
     },
+    head() {
+        return {
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('og.title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('og.description'),
+                },
+            ],
+        }
+    },
 }
 </script>
 

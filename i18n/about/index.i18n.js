@@ -146,6 +146,10 @@ export default genI18nMessages({
             pyConBlog2016: 'local keynote speakers',
             photoAlbum: 'photo albums',
         },
+        og: {
+            title: 'History of PyCon Taiwan',
+            description: 'History of PyCon Taiwan',
+        },
     },
     'zh-hant': {
         pageTitle: '研討會歷史',
@@ -235,6 +239,10 @@ export default genI18nMessages({
             yycBlog2013: '2013',
             pyConBlog2016: '在地黑客擔任基調講者',
             photoAlbum: '許多照片',
+        },
+        og: {
+            title: '研討會歷史',
+            description: '研討會歷史',
         },
     },
 })

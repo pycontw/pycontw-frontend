@@ -57,6 +57,20 @@ export default genI18nMessages({
             cfp: 'Call for Proposals',
             contact: 'contact us',
         },
+        og: {
+            title: 'How to Propose a Tutorial?',
+            description:
+                'First of all, thank you for considering giving a tutorial in PyCon Taiwan 2021.' +
+                'Generally speaking, Good tutorials possess most of the traits good talks have. ' +
+                'The most discernible differences of a tutorial from a talk are the hands-on nature and the longer duration. ' +
+                'By longer duration, generally more content is required and it should remain interesting and ' +
+                'keep the attendees awake and hyped even after hours of lecture and exercises. ' +
+                'By containing hands-on exercises, the experience of teaching coding to people is necessary. ' +
+                'You might also need teaching assistants who you should be able to comfortably communicate during the tutorial, ' +
+                'usually at least two teaching assistants for a general class size of 20 people is needed.' +
+                'Both differences require many times of practice and experience. ' +
+                'Therefore, a tutorial speaker usually satisfies at least one of the following prerequisites:',
+        },
     },
     'zh-hant': {
         title: '如何投稿專業課程（Tutorial）？',
@@ -105,6 +119,15 @@ export default genI18nMessages({
         terms: {
             cfp: '投稿募集',
             contact: '聯繫我們',
+        },
+        og: {
+            title: '如何投稿專業課程（Tutorial）？',
+            description:
+                '首先，謝謝您考慮投稿專業課程至 PyCon Taiwan 2021。' +
+                '一般來說，好的課程滿足一場好演講的諸多特性。不過專業課程較演講最大的差異在課程有手把手的指導，以及較長的時間。' +
+                '因為有更長的時間，專業課程需要準備更多的內容，並且讓聽眾即便在數個小時的講課與操作之後還能覺得有趣且清醒；' +
+                '由於有手把手的指導，一個 20 名學員的課程通常要有兩位（以上）的助教來協助，過程中必須能與助教保持良好的溝通。' +
+                '上述兩個差異使得準備一個專業課程遠比準備演講需要更多練習和經驗。',
         },
     },
 })

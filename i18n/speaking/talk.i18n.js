@@ -154,6 +154,15 @@ export default genI18nMessages({
             cfp: 'Call for Proposals',
             important: 'very important',
         },
+
+        og: {
+            title: 'How to Propose a Talk?',
+            description:
+                'First of all, thank you for contributing to PyCon Taiwan! ' +
+                'The following will help you submit a successful proposal. ' +
+                'In the following, we are going to provide you the tips to make your proposal strong ' +
+                'and informative and get the best chance of acceptance.',
+        },
     },
     'zh-hant': {
         title: '如何投稿演講（Talk）？',
@@ -282,6 +291,13 @@ export default genI18nMessages({
         terms: {
             cfp: '投稿募集',
             important: '非常重要的',
+        },
+        og: {
+            title: '如何投稿演講（Talk）？',
+            description:
+                '首先，感謝您投稿 PyCon Taiwan！下面的內容將會幫助您成功地送出一份投稿。' +
+                '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
+                '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路：',
         },
     },
 })

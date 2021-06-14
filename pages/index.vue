@@ -99,6 +99,17 @@ export default {
             return data[attributeName]
         },
     },
+    head() {
+        return {
+            meta: [
+                {
+                    hid: 'og:image',
+                    name: 'og:image',
+                    content: `${require('@/static/og-image.jpg')}`,
+                },
+            ],
+        }
+    },
 }
 </script>
 

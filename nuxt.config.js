@@ -12,7 +12,7 @@ export default {
     },
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: 'pycontw-2021',
+        title: 'PyCon Taiwan 2021',
         meta: [
             { charset: 'utf-8' },
             {
@@ -20,6 +20,17 @@ export default {
                 content: 'width=device-width, initial-scale=1',
             },
             { hid: 'description', name: 'description', content: '' },
+            {
+                hid: 'og:title',
+                property: 'og:title',
+                content: 'PyCon Taiwan 2021',
+            },
+            {
+                hid: 'og:description',
+                property: 'og:description',
+                content: 'PyCon Taiwan 2021',
+            },
+            { hid: 'og:type', property: 'og:type', content: 'website' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
