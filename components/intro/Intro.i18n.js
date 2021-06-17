@@ -20,14 +20,14 @@ export default genI18nMessages({
             },
         ],
         description: [
-            'PyCon, also known as the Python Annual Conference, is the annual event of the global Python community.' +
-                'PyCon is spontaneously organized by fellow locals, and now Taiwan has its own Python annual meeting.' +
-                'This event aims to gather organizations and individuals who use Python in various fields in Taiwan' +
+            'PyCon, also known as the Python Annual Conference, is the annual event of the global Python community. ' +
+                'PyCon is spontaneously organized by fellow locals, and now Taiwan has its own Python annual meeting. ' +
+                'This event aims to gather organizations and individuals who use Python in various fields in Taiwan ' +
                 'to exchange their experiences, share the latest technological developments.',
-            '2021 is the tenth anniversary of PyCon Taiwan.' +
-                'This year, PyCon Taiwan has not only passed on the community communication experience of the past ten years,' +
-                'we also made some new attempts, such as Podcasts.' +
-                'It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges' +
+            '2021 is the tenth anniversary of PyCon Taiwan. ' +
+                'This year, PyCon Taiwan has not only passed on the community communication experience of the past ten years, ' +
+                'we also made some new attempts, such as Podcasts. ' +
+                'It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges ' +
                 'between different ethnic groups and spark different sparks.',
         ],
     },
