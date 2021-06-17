@@ -3,7 +3,6 @@
         <div class="landingFocusInfo__temporal">8/21</div>
         <div class="landingFocusInfo__till"></div>
         <div class="landingFocusInfo__temporal">8/22</div>
-        <div class="landingFocusInfo__locale mt-4">NTU</div>
     </div>
 </template>
 

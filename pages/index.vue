@@ -22,7 +22,10 @@
                 </div>
             </div>
         </div>
-
+        <div class="intro-section">
+            <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
+            <intro></intro>
+        </div>
         <i18n-page-wrapper class="pt-12">
             <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
@@ -61,6 +64,7 @@ import {
     LandingFocusSlogan,
     LandingFocusInfo,
 } from '~/components/landing-focus'
+import { Intro } from '~/components/intro'
 
 export default {
     i18n,
@@ -73,6 +77,7 @@ export default {
         SponsorCard,
         SponsorCardCollection,
         SponsorModal,
+        Intro,
     },
     data() {
         return {
@@ -171,5 +176,19 @@ export default {
 
 .links {
     padding-top: 15px;
+}
+
+h2.intro-title {
+    @apply text-center text-3xl mt-8 mb-16 font-bold;
+    color: #e6ba17;
+    font-family: 'Noto Serif TC';
+    @media (max-width: 767px) {
+        @apply mt-2 mb-8 text-2xl;
+    }
+}
+
+.intro-section {
+    @apply pt-8 pb-20;
+    background-color: #16132a;
 }
 </style>
