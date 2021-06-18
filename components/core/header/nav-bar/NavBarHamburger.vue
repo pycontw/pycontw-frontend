@@ -31,6 +31,12 @@
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
             ></nav-bar-item-accordion>
+            <!-- <nav-bar-item-accordion
+                :label="$t('events')"
+                :items="eventsItems"
+                :expanding="expandingItem === 'events'"
+                @click.native="toggleAccordion('events')"
+            ></nav-bar-item-accordion> -->
             <nav-bar-item-accordion
                 :label="$t('registration')"
                 :items="registrationItems"
@@ -71,6 +77,9 @@ export default {
     computed: {
         speakingItems() {
             return this.generateI18nItems(navBarItems.speakingItems)
+        },
+        eventsItems() {
+            return this.generateI18nItems(navBarItems.eventsItems)
         },
         aboutItems() {
             return this.generateI18nItems(navBarItems.aboutItems)

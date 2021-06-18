@@ -19,12 +19,12 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
+        <!-- <nav-bar-item-dropdown
             :label="$t('events')"
             :items="eventsItems"
             :class="getPageClassesByPath('events')"
         >
-        </nav-bar-item-dropdown>
+        </nav-bar-item-dropdown> -->
         <nav-bar-item-dropdown
             :label="$t('registration')"
             :items="registrationItems"
