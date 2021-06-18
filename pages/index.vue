@@ -178,7 +178,7 @@ export default {
     padding-top: 15px;
 }
 
-h2.intro-title {
+.intro-section h2.intro-title {
     @apply text-center text-3xl mt-8 mb-16 font-bold;
     color: #e6ba17;
     font-family: 'Noto Serif TC';

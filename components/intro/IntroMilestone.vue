@@ -1,17 +1,14 @@
 <template>
-    <div>
-        <p class="achievement">{{ $t(achievement) }}</p>
-        <p class="number">{{ $t(achievementNumber) }}</p>
-        <p class="achievement text-2xl mb-2">
-            {{ $t(achievementUnit) }}
-        </p>
+    <div class="milestone">
+        <p class="milestone__achievement">{{ achievement }}</p>
+        <p class="milestone__number">{{ achievementNumber }}</p>
+        <p class="milestone__unit">{{ achievementUnit }}</p>
     </div>
 </template>
 
 <script>
 export default {
     name: 'IntroMilestone',
-    components: {},
     props: {
         achievement: {
             type: String,
@@ -30,19 +27,14 @@ export default {
 </script>
 
 <style scoped>
-.number {
-    color: #c2a53a;
-    font-weight: 700;
-    font-size: 5.4rem;
-    filter: drop-shadow(4px 6px 0px #4f4f4f);
-    @media (max-width: 767px) {
-        font-size: 4.8rem;
-    }
+.milestone {
+    @apply text-center font-bold;
+    font-family: 'Noto Serif TC';
 }
 
-.achievement {
+.milestone__achievement,
+.milestone__unit {
     @apply text-2xl;
-    font-weight: 700;
     @media (max-width: 767px) {
         position: relative;
         bottom: -30px;
@@ -50,7 +42,17 @@ export default {
     }
 }
 
-.achievement:last-child {
+.milestone__number {
+    color: #c2a53a;
+    font-size: 5.4rem;
+    filter: drop-shadow(4px 6px 0px #4f4f4f);
+    @media (max-width: 767px) {
+        font-size: 4.8rem;
+    }
+}
+
+.milestone__unit {
+    @apply mb-2;
     @media (max-width: 767px) {
         top: -8px;
     }
