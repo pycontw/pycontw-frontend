@@ -1,12 +1,11 @@
 <template>
     <nav class="h-full flex justify-evenly items-center">
-        <locale-link
-            to="/about"
-            :class="getPageClassesByPath('about', true)"
-            customized
+        <nav-bar-item-dropdown
+            :label="$t('about')"
+            :items="aboutItems"
+            :class="getPageClassesByPath('about')"
         >
-            {{ $t('about') }}
-        </locale-link>
+        </nav-bar-item-dropdown>
         <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
@@ -87,6 +86,9 @@ export default {
         },
         eventsItems() {
             return this.generateI18nItems(navBarItems.eventsItems)
+        },
+        aboutItems() {
+            return this.generateI18nItems(navBarItems.aboutItems)
         },
         registrationItems() {
             return this.generateI18nItems(navBarItems.registrationItems)
