@@ -1,7 +1,7 @@
 <template>
     <i18n-page-wrapper>
         <h1>
-            {{ $t('pageTitle') }}
+            {{ $t('title') }}
         </h1>
         <i18n
             v-if="$t('paragraph.intro')"
@@ -103,6 +103,7 @@ export default {
     },
     head() {
         return {
+            title: this.$i18n.t('title'),
             meta: [
                 {
                     hid: 'og:title',

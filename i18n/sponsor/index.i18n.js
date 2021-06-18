@@ -27,8 +27,7 @@ export default genI18nMessages({
             description:
                 'PyCon Taiwan is driven by our members and, YOU, our awesome sponsor partners! ' +
                 'Your generous support is the helping us to move forward.' +
-                'PyCon Taiwan calls for your sponsorship in order to enlarging our community.' +
-                'Our sponsorship packages includes items that:',
+                'PyCon Taiwan calls for your sponsorship in order to enlarging our community.',
         },
     },
     'zh-hant': {
@@ -55,8 +54,7 @@ export default genI18nMessages({
             title: '贊助召集令',
             description:
                 '「您」的支持是推進 PyCon Taiwan 的強大動力！' +
-                'PyCon Taiwan 在此召集「您」的加入，透過贊助以具體行動支持 python 社群的成長！' +
-                '透過參與 PyCon Taiwan ，我們也提供贊助廠商以下的服務：',
+                'PyCon Taiwan 在此召集「您」的加入，透過贊助以具體行動支持 python 社群的成長！',
         },
     },
 })

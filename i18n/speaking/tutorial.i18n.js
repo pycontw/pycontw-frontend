@@ -60,16 +60,15 @@ export default genI18nMessages({
         og: {
             title: 'How to Propose a Tutorial?',
             description:
-                'First of all, thank you for considering giving a tutorial in PyCon Taiwan 2021.' +
+                'First of all, thank you for considering giving a tutorial in PyCon Taiwan 2021. ' +
                 'Generally speaking, Good tutorials possess most of the traits good talks have. ' +
                 'The most discernible differences of a tutorial from a talk are the hands-on nature and the longer duration. ' +
                 'By longer duration, generally more content is required and it should remain interesting and ' +
                 'keep the attendees awake and hyped even after hours of lecture and exercises. ' +
                 'By containing hands-on exercises, the experience of teaching coding to people is necessary. ' +
                 'You might also need teaching assistants who you should be able to comfortably communicate during the tutorial, ' +
-                'usually at least two teaching assistants for a general class size of 20 people is needed.' +
-                'Both differences require many times of practice and experience. ' +
-                'Therefore, a tutorial speaker usually satisfies at least one of the following prerequisites:',
+                'usually at least two teaching assistants for a general class size of 20 people is needed. ' +
+                'Both differences require many times of practice and experience. ',
         },
     },
     'zh-hant': {

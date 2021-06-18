@@ -173,6 +173,7 @@ export default {
     },
     head() {
         return {
+            title: this.$i18n.t('title'),
             meta: [
                 {
                     hid: 'og:title',

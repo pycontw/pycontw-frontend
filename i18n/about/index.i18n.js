@@ -2,7 +2,7 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        pageTitle: 'History of PyCon Taiwan',
+        title: 'History of PyCon Taiwan',
         paragraph: {
             intro: '',
             year2008And2011:
@@ -152,7 +152,7 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        pageTitle: '研討會歷史',
+        title: '研討會歷史',
         paragraph: {
             intro:
                 'PyCon Taiwan 是一個由台灣在地 Python 社群所組織與發起的 Python 年會，' +
