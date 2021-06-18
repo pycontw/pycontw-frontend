@@ -79,7 +79,7 @@ export default genI18nMessages({
                 'Everybody Contributes  is one of PyCon’s core principles. All attendees, including speakers and volunteers, ' +
                 'have to pay for registering. While following this convention,' +
                 'PyCon Taiwan also has a financial aid program to help friends in the community,' +
-                'financially or otherwise, so more people are able join us in the big event.' +
+                'financially or otherwise, so more people are able to join us in the big event.' +
                 'All who look for help attending the conference are welcomed to apply.' +
                 'The organizers will review all applications and allocate resources based on both the conference budget and the applicants’ conditions.' +
                 'While we hope to support everyone to participate in the community, the budget is unfortunately limited, ' +
