@@ -39,11 +39,6 @@
             ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
-                href="https://forms.gle/wuG2w42cbhamyGdv9"
-                >{{ $t('volunteer') }}</ext-link
-            >
-            <ext-link
-                class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
                 >{{ $t('signIn') }}</ext-link
             >
