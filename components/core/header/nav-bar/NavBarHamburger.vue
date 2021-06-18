@@ -13,12 +13,12 @@
             +
         </div>
         <div v-if="isMenuSlidedIn" class="core-navBarHamburgerSlideInMenu">
-            <locale-link
-                class="core-navBarHamburgerSlideInMenu__item"
-                to="/about"
-                customized
-                >{{ $t('about') }}</locale-link
-            >
+            <nav-bar-item-accordion
+                :label="$t('about')"
+                :items="aboutItems"
+                :expanding="expandingItem === 'about'"
+                @click.native="toggleAccordion('about')"
+            ></nav-bar-item-accordion>
             <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/sponsor"
@@ -71,6 +71,9 @@ export default {
     computed: {
         speakingItems() {
             return this.generateI18nItems(navBarItems.speakingItems)
+        },
+        aboutItems() {
+            return this.generateI18nItems(navBarItems.aboutItems)
         },
         registrationItems() {
             return this.generateI18nItems(navBarItems.registrationItems)
