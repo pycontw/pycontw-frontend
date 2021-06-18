@@ -92,8 +92,8 @@ export default genI18nMessages({
         },
         pycon2016: {
             title: '2016 「Implement the Future, Together!」',
-            pyconBlog2016: '2016 Pycon Blog',
-            pyconTWFlickr: 'PyconTW Flickr',
+            pyconBlog2016: '2016 PyCon Blog',
+            pyconTWFlickr: 'PyConTW Flickr',
             content:
                 '報名人數與投稿數量依然爆滿。我們邀請到台灣社群的兩位領導者 Jserv 與唐鳳、微軟的開發專家 Steve Dower、迪士尼的資深工程師 Paul Hildebrandt 與 Twisted 專案管理員 Amber Brown。不論邀請在地黑客擔任基調講者、安排 FinTech 議程、結合感應設備與智慧販賣機的互動遊戲、青少年程式教學的經驗分享等等，都是對我們而言嶄新的嘗試。這些點滴也在記錄在 {pycon-blog-2016} 以及 {pycontw-flickr}。',
         },

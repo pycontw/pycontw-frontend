@@ -19,12 +19,12 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
+        <!-- <nav-bar-item-dropdown
             :label="$t('events')"
             :items="eventsItems"
             :class="getPageClassesByPath('events')"
         >
-        </nav-bar-item-dropdown>
+        </nav-bar-item-dropdown> -->
         <nav-bar-item-dropdown
             :label="$t('registration')"
             :items="registrationItems"
@@ -48,12 +48,6 @@
             {{ $t('covid19Guidelines') }}
         </locale-link>
         -->
-        <ext-link
-            href="https://forms.gle/wuG2w42cbhamyGdv9"
-            :class="getPageClassesByPath('volunteer', true)"
-        >
-            {{ $t('volunteer') }}
-        </ext-link>
         <ext-link
             :href="signInUrl"
             :class="getPageClassesByPath('signIn', true)"

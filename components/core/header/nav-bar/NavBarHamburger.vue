@@ -13,12 +13,12 @@
             +
         </div>
         <div v-if="isMenuSlidedIn" class="core-navBarHamburgerSlideInMenu">
-            <locale-link
-                class="core-navBarHamburgerSlideInMenu__item"
-                to="/about"
-                customized
-                >{{ $t('about') }}</locale-link
-            >
+            <nav-bar-item-accordion
+                :label="$t('about')"
+                :items="aboutItems"
+                :expanding="expandingItem === 'about'"
+                @click.native="toggleAccordion('about')"
+            ></nav-bar-item-accordion>
             <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/sponsor"
@@ -31,17 +31,18 @@
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
             ></nav-bar-item-accordion>
+            <!-- <nav-bar-item-accordion
+                :label="$t('events')"
+                :items="eventsItems"
+                :expanding="expandingItem === 'events'"
+                @click.native="toggleAccordion('events')"
+            ></nav-bar-item-accordion> -->
             <nav-bar-item-accordion
                 :label="$t('registration')"
                 :items="registrationItems"
                 :expanding="expandingItem === 'registration'"
                 @click.native="toggleAccordion('registration')"
             ></nav-bar-item-accordion>
-            <ext-link
-                class="core-navBarHamburgerSlideInMenu__item"
-                href="https://forms.gle/wuG2w42cbhamyGdv9"
-                >{{ $t('volunteer') }}</ext-link
-            >
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
@@ -76,6 +77,12 @@ export default {
     computed: {
         speakingItems() {
             return this.generateI18nItems(navBarItems.speakingItems)
+        },
+        eventsItems() {
+            return this.generateI18nItems(navBarItems.eventsItems)
+        },
+        aboutItems() {
+            return this.generateI18nItems(navBarItems.aboutItems)
         },
         registrationItems() {
             return this.generateI18nItems(navBarItems.registrationItems)

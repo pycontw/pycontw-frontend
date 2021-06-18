@@ -31,18 +31,16 @@
                             href="http://wiki.python.org.tw/PycTW2008"
                             highlight
                             underline
+                            >{{ $t('beforePyCon.pyctw2008') }}</ext-link
                         >
-                            {{ $t('beforePyCon.pyctw2008') }}
-                        </ext-link>
                     </template>
                     <template #pyctw2011>
                         <ext-link
                             href="http://wiki.python.org.tw/PycTW2011"
                             highlight
                             underline
+                            >{{ $t('beforePyCon.pyctw2011') }}</ext-link
                         >
-                            {{ $t('beforePyCon.pyctw2011') }}
-                        </ext-link>
                     </template>
                 </i18n>
                 <p
@@ -60,27 +58,24 @@
                             href="http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays"
                             highlight
                             underline
+                            >{{ $t('pycon2012.everybodypay') }}</ext-link
                         >
-                            {{ $t('pycon2012.everybodypay') }}
-                        </ext-link>
                     </template>
                     <template #pycon-review-2012>
                         <ext-link
                             href="https://yyc.solvcon.net/writing/2012/pycontw2012_finale.html"
                             highlight
                             underline
+                            >{{ $t('pycon2012.pyconReview2012') }}</ext-link
                         >
-                            {{ $t('pycon2012.pyconReview2012') }}
-                        </ext-link>
                     </template>
                     <template #pycon-review-2013>
                         <ext-link
                             href="https://yyc.solvcon.net/writing/2013/after_pycontw_2013/index.html"
                             highlight
                             underline
+                            >{{ $t('pycon2012.pyconReview2013') }}</ext-link
                         >
-                            {{ $t('pycon2012.pyconReview2013') }}
-                        </ext-link>
                     </template>
                 </i18n>
                 <p
@@ -98,9 +93,8 @@
                             href="https://checkio.org/"
                             highlight
                             underline
+                            >{{ $t('pycon2014.checkIO') }}</ext-link
                         >
-                            {{ $t('pycon2014.checkIO') }}
-                        </ext-link>
                     </template>
                 </i18n>
                 <p
@@ -128,18 +122,16 @@
                             href="https://pycontw.blogspot.com/2016/04/blog-post.html"
                             highlight
                             underline
+                            >{{ $t('pycon2016.pyconBlog2016') }}</ext-link
                         >
-                            {{ $t('pycon2016.pyconBlog2016') }}
-                        </ext-link>
                     </template>
                     <template #pycontw-flickr>
                         <ext-link
                             href="https://www.flickr.com/photos/pycon_tw/albums"
                             highlight
                             underline
+                            >{{ $t('pycon2016.pyconTWFlickr') }}</ext-link
                         >
-                            {{ $t('pycon2016.pyconTWFlickr') }}
-                        </ext-link>
                     </template>
                 </i18n>
                 <p

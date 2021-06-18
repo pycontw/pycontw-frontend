@@ -30,7 +30,6 @@ export default genI18nMessages({
         financialAid: 'Financial Aid',
         venue: 'Venue',
         covid19Guidelines: 'COVID-19 Guidelines',
-        volunteer: 'Volunteer',
         signIn: 'Sign In',
     },
     'zh-hant': {
@@ -62,7 +61,6 @@ export default genI18nMessages({
         financialAid: '財務補助',
         venue: '會場',
         covid19Guidelines: 'COVID-19 防疫守則',
-        volunteer: '志工招募',
         signIn: '登入',
     },
 })
