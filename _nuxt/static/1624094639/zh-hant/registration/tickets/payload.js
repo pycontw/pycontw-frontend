@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-hant/registration/tickets", {data:[{}],fetch:[],mutations:[]});

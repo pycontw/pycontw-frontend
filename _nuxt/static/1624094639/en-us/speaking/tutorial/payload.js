@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-us/speaking/tutorial", {data:[{}],fetch:[],mutations:[]});
