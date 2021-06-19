@@ -78,7 +78,6 @@ export default {
         return {
             isOpened: false,
             selectedSponsor: {},
-            volunteerFormUrl: 'https://forms.gle/wuG2w42cbhamyGdv9',
         }
     },
     fetchOnServer: false,

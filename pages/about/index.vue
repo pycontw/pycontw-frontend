@@ -1,104 +1,157 @@
 <template>
-    <i18n-page-wrapper>
-        <h1>
-            {{ $t('title') }}
-        </h1>
-        <i18n
-            v-if="$t('paragraph.intro')"
-            path="paragraph.intro"
-            tag="p"
-            class="paragraph"
-        ></i18n>
-        <i18n path="paragraph.year2008And2011" tag="p">
-            <template #linkPyCtw2008>
-                <ext-link :href="linkPyCtw2008" highlight>2008</ext-link>
+    <div class="py-10 md:py-24 lg:py24">
+        <banner>
+            <template #default>
+                <div
+                    class="hidden md:block lg:block md:w-full lg:w-full md:h-full lg:h-full"
+                    :style="bannerStyle"
+                ></div>
             </template>
-            <template #linkPyCtw2011>
-                <ext-link :href="linkPyCtw2011" highlight>2011</ext-link>
-            </template>
-        </i18n>
-        <i18n path="paragraph.year2012And2013" tag="p">
-            <template #linkEverybodyPays>
-                <ext-link :href="linkEverybodyPays" highlight
-                    >Everybody Pays</ext-link
+            <template #text>
+                <core-h1 :title="$t('title')"></core-h1>
+                <p
+                    v-for="(content, i) in $t('pageAbstract')"
+                    :key="`abstract_${i}`"
+                    class="w-full md:w-3/4 lg:w-3/4"
                 >
+                    {{ content }}
+                </p>
             </template>
-            <template #linkYycBlog2012>
-                <ext-link :href="linkYycBlog2012" highlight>{{
-                    $t('link.yycBlog2012')
-                }}</ext-link>
-            </template>
-            <template #linkYycBlog2013>
-                <ext-link :href="linkYycBlog2013" highlight>{{
-                    $t('link.yycBlog2013')
-                }}</ext-link>
-            </template>
-        </i18n>
-        <i18n
-            v-if="$t('paragraph.year2013')"
-            path="paragraph.year2013"
-            tag="p"
-            class="paragraph"
-        >
-            <template #linkYycBlog2013>
-                <ext-link :href="linkYycBlog2013" highlight>{{
-                    $t('link.yycBlog2013')
-                }}</ext-link>
-            </template>
-        </i18n>
-        <i18n path="paragraph.year2014And2015" tag="p">
-            <template #linkCheckIo>
-                <ext-link :href="linkCheckIo" highlight>CheckIO</ext-link>
-            </template>
-        </i18n>
-        <i18n path="paragraph.pyDay2015" tag="p"></i18n>
-        <i18n path="paragraph.year2016" tag="p">
-            <template #linkPyConBlog2016>
-                <ext-link :href="linkPyConBlog2016" highlight>{{
-                    $t('link.pyConBlog2016')
-                }}</ext-link>
-            </template>
-            <template #linkPhotoAlbum>
-                <ext-link :href="linkPhotoAlbum" highlight>{{
-                    $t('link.photoAlbum')
-                }}</ext-link>
-            </template>
-        </i18n>
-        <i18n path="paragraph.year2017" tag="p"></i18n>
-        <i18n path="paragraph.year2018" tag="p"></i18n>
-        <i18n path="paragraph.year2019" tag="p"></i18n>
-        <i18n path="paragraph.year2020" tag="p"></i18n>
-        <i18n path="paragraph.year2021" tag="p"></i18n>
-        <i18n path="paragraph.outro" tag="p"></i18n>
-    </i18n-page-wrapper>
+        </banner>
+        <div class="flex flex-wrap justify-center mx-2 my-3">
+            <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
+                <div
+                    class="w-32 md:w-56 lg:w-56 h-24 md:h-40 lg:h-40 bg-contain bg-no-repeat mx-2 my-3"
+                    :style="getImgStyle(img)"
+                ></div>
+            </div>
+        </div>
+        <i18n-page-wrapper class="pt-0 px-8 md:px-57 lg:px-56">
+            <i18n
+                path="reasonTitle"
+                tag="p"
+                class="h3 my-2 text-base md:text-lg lg:text-lg"
+            >
+                <template #number>
+                    <span class="highlight">{{ $t('reasonNumber') }}</span>
+                </template>
+            </i18n>
+            <p class="w-full text-xs md:text-base lg:text-base">
+                {{ $t('reason') }}
+            </p>
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-2 my-10"
+            >
+                <div
+                    v-for="img in reasonImgs"
+                    :key="img.text"
+                    class="flex flex-col items-center"
+                >
+                    <div
+                        class="w-24 md:w-24 lg:w-24 h-24 md:h-24 lg:h-24 bg-contain bg-no-repeat mx-0 md:mx-10 lg:mx-10 my-5"
+                        :style="getImgStyle(img.src)"
+                    ></div>
+                    <span class="text-xs md:text-base lg:text-base">{{
+                        img.text
+                    }}</span>
+                </div>
+            </div>
+            <p class="h3 my-2 text-base md:text-lg lg:text-lg">
+                {{ $t('activityTitle') }}
+            </p>
+            <div class="flex items-center justify-evenly">
+                <i18n
+                    path="kindsOFTalk"
+                    tag="span"
+                    class="text-xs md:text-base lg:text-base"
+                >
+                    <template #talkNumber>
+                        <span
+                            class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                            >3</span
+                        >
+                    </template>
+                </i18n>
+                <span
+                    class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                    >+</span
+                >
+                <i18n
+                    path="kindsOfActivity"
+                    tag="span"
+                    class="text-xs md:text-base lg:text-base"
+                >
+                    <template #activityNumber>
+                        <span
+                            class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                            >7</span
+                        >
+                    </template>
+                </i18n>
+            </div>
+            <p class="w-full text-xs md:text-base lg:text-base">
+                {{ $t('activityDesc') }}
+            </p>
+            <ul class="m-0 md:m-12 lg:m-12 text-xs md:text-base lg:text-base">
+                <li
+                    v-for="(content, i) in $t('activityDetails')"
+                    :key="`activity_detail${i}`"
+                >
+                    <p class="activity-detail">{{ content }}</p>
+                </li>
+            </ul>
+            <p class="w-full text-xs md:text-base lg:text-base">
+                {{ $t('moreInfo') }}
+            </p>
+        </i18n-page-wrapper>
+    </div>
 </template>
 
 <script>
 import i18n from '@/i18n/about/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import ExtLink from '@/components/core/links/ExtLink'
+import Banner from '@/components/core/layout/Banner'
+import CoreH1 from '@/components/core/titles/H1'
+import AboutBanner from '@/static/img/about/Banner.svg'
+import IntroImg1 from '@/static/img/about/Intro-1.png'
+import IntroImg2 from '@/static/img/about/Intro-2.png'
+import IntroImg3 from '@/static/img/about/Intro-3.png'
+import IntroImg4 from '@/static/img/about/Intro-4.png'
+import Cooperation from '@/static/img/about/Cooperation.svg'
+import Share from '@/static/img/about/Share.svg'
+import Skill from '@/static/img/about/Skill.svg'
+import Speech from '@/static/img/about/Speech.svg'
 
 export default {
     i18n,
     name: 'PageAbout',
     components: {
         I18nPageWrapper,
-        ExtLink,
+        Banner,
+        CoreH1,
     },
     data() {
         return {
-            linkPyCtw2008: 'http://wiki.python.org.tw/PycTW2008',
-            linkPyCtw2011: 'http://wiki.python.org.tw/PycTW2011',
-            linkEverybodyPays:
-                'http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays',
-            linkYycBlog2012:
-                'http://yyc.solvcon.net/writing/2012/pycontw2012_finale.html',
-            linkYycBlog2013:
-                'http://yyc.solvcon.net/writing/2013/after_pycontw_2013/index.html',
-            linkCheckIo: 'http://www.checkio.org/',
-            linkPyConBlog2016:
-                'http://pycontw.blogspot.tw/2016/04/blog-post.html',
-            linkPhotoAlbum: 'http://www.flickr.com/photos/pycon_tw/albums',
+            aboutBanner: AboutBanner,
+            introImgs: [IntroImg1, IntroImg2, IntroImg3, IntroImg4],
+            reasonImgs: {
+                cooperationImg: {
+                    src: Cooperation,
+                    text: this.$t('cooperation'),
+                },
+                shareImg: {
+                    src: Share,
+                    text: this.$t('share'),
+                },
+                skillImg: {
+                    src: Skill,
+                    text: this.$t('skill'),
+                },
+                speechImg: {
+                    src: Speech,
+                    text: this.$t('speech'),
+                },
+            },
         }
     },
     head() {
@@ -118,7 +171,42 @@ export default {
             ],
         }
     },
+    computed: {
+        bannerStyle() {
+            return {
+                'background-image': `url(${this.aboutBanner})`,
+                'background-repeat': 'no-repeat',
+                'background-position': 'center',
+            }
+        },
+    },
+    methods: {
+        getImgStyle(img) {
+            return {
+                'background-image': `url(${img})`,
+            }
+        },
+    },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.h3 {
+    font-family: 'Noto Serif TC';
+    color: #d1d1d1;
+}
+.highlight {
+    color: #c2a53a;
+}
+.paragraph-highlight {
+    font-family: 'Noto Serif TC';
+    color: #7568f6;
+    text-shadow: 4px 6px 0px #4f4f4f;
+    font-weight: bold;
+    margin: auto 0.5rem;
+}
+
+.activity-detail {
+    color: #9387ff;
+}
+</style>
