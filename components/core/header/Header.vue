@@ -17,9 +17,9 @@
 
 <script>
 import HomeIcon from './HomeIcon'
-import NavBar from './nav-bar'
+import NavBar from './nav-bar/NavBar'
 import NavBarHamburger from './nav-bar/NavBarHamburger'
-import LocaleSwitch from './locale-switch'
+import LocaleSwitch from './locale-switch/LocaleSwitch'
 
 export default {
     name: 'CoreHeader',

@@ -37,7 +37,8 @@
 </template>
 
 <script>
-import { CoreMenu, CoreMenuItem } from '~/components/core/menu'
+import CoreMenu from '~/components/core/menu/Menu'
+import CoreMenuItem from '~/components/core/menu/MenuItem'
 
 export default {
     name: 'CoreHeaderNavBarItemDropdown',

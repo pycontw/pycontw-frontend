@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import CoreFooter from '~/components/core/footer'
-import CoreHeader from '~/components/core/header'
-import AnnounceBar from '~/components/core/announce-bar'
+import CoreFooter from '~/components/core/footer/Footer'
+import CoreHeader from '~/components/core/header/Header'
+import AnnounceBar from '~/components/core/announce-bar/AnnounceBar'
 
 export default {
     components: {
