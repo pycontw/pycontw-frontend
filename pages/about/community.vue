@@ -1,8 +1,11 @@
 <template>
-    <I18nPageWrapper>
+    <i18n-page-wrapper class="md:px-20 lg:px-20">
         <core-h1 :title="$t('title')"></core-h1>
-        <div class="h-64 w-full my-4" :style="communityMapStyle"></div>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
+        <div
+            class="h-64 md:h-96 lg:h-96 w-full mt-4 mb-8"
+            :style="communityMapStyle"
+        ></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
             <div
                 v-for="community in $t('communities')"
                 :key="`community_${community.tag}`"
@@ -17,14 +20,14 @@
                     <p
                         v-for="(paragraph, i) in community.desc"
                         :key="`paragraph_${i}`"
-                        class="text-sm"
+                        class="text-xs"
                     >
                         {{ paragraph }}
                     </p>
                 </div>
             </div>
         </div>
-    </I18nPageWrapper>
+    </i18n-page-wrapper>
 </template>
 
 <script>
