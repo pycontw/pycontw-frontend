@@ -20,7 +20,7 @@
 <script>
 import NavBarItemDropdown from '../nav-bar/NavBarItemDropdown'
 import i18n from './LocaleSwitch.i18n'
-import { CoreMenuItem } from '~/components/core/menu'
+import CoreMenuItem from '~/components/core/menu/MenuItem'
 
 export default {
     i18n,
