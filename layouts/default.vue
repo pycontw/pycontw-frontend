@@ -50,7 +50,7 @@ export default {
                 {
                     hid: 'og:image',
                     property: 'og:image',
-                    content: '/og-image.jpg',
+                    content: '/2021/og-image.jpg',
                 },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
             ],
