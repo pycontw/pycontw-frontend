@@ -69,6 +69,10 @@ export default genI18nMessages({
                 ],
             },
         ],
+        og: {
+            title: 'Python Community',
+            description: 'Python Community',
+        },
     },
     'zh-hant': {
         title: '在地社群',
@@ -146,5 +150,9 @@ export default genI18nMessages({
                 ],
             },
         ],
+        og: {
+            title: '在地社群',
+            description: '在地社群',
+        },
     },
 })

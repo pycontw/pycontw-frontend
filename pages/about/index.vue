@@ -8,7 +8,7 @@
                 ></div>
             </template>
             <template #text>
-                <core-h1 :title="$t('pageTitle')"></core-h1>
+                <core-h1 :title="$t('title')"></core-h1>
                 <p
                     v-for="(content, i) in $t('pageAbstract')"
                     :key="`abstract_${i}`"
@@ -169,6 +169,23 @@ export default {
                 'background-image': `url(${img})`,
             }
         },
+    },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('og.title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('og.description'),
+                },
+            ],
+        }
     },
 }
 </script>

@@ -9,7 +9,7 @@ export default genI18nMessages({
             'To provide a joyful, pleasant, and vibrant environment that creates value for all participants, ' +
             'we hereby publish PyCon Taiwan’s Code of Conduct, ' +
             'which applies to all speech and action in both physical and digital venues of PyCon Taiwan. ' +
-            'Your cooperation is necessary to help all of us to interact with respect and trust in PyCon Taiwan.',
+            'Your cooperation is necessary to help all of us to interact with respect and trust in PyCon Taiwan. ',
         contents: [
             {
                 title: 'Do not harass others.',
