@@ -37,22 +37,22 @@ export default Object.freeze({
         },
     ],
     eventsItems: [
+        // {
+        //     i18nKey: 'overview',
+        //     value: '/events/overview',
+        // },
+        // {
+        //     i18nKey: 'warmUpSessions',
+        //     value: '/events/warm-up-sessions',
+        // },
+        // {
+        //     i18nKey: 'openSpaces',
+        //     value: '/events/open-spaces',
+        // },
+        // { i18nKey: 'sprints', value: '/events/sprints' },
         {
-            i18nKey: 'overview',
-            value: '/events/overview',
-        },
-        {
-            i18nKey: 'warmUpSessions',
-            value: '/events/warm-up-sessions',
-        },
-        {
-            i18nKey: 'openSpaces',
-            value: '/events/open-spaces',
-        },
-        { i18nKey: 'sprints', value: '/events/sprints' },
-        {
-            i18nKey: 'jobListings',
-            value: '/events/job-listings',
+            i18nKey: 'jobs',
+            value: '/events/jobs',
         },
     ],
     registrationItems: [
@@ -63,6 +63,20 @@ export default Object.freeze({
         {
             i18nKey: 'financialAid',
             value: '/registration/financial-aid',
+        },
+    ],
+    aboutItems: [
+        {
+            i18nKey: 'pycontw',
+            value: '/about',
+        },
+        {
+            i18nKey: 'history',
+            value: '/about/history',
+        },
+        {
+            i18nKey: 'community',
+            value: '/about/community',
         },
     ],
 })

@@ -20,12 +20,15 @@
         "core-js": "^3.6.5",
         "nuxt": "^2.14.6",
         "nuxt-fontawesome": "^0.4.0",
-        "nuxt-i18n": "^6.18.0"
+        "nuxt-i18n": "^6.18.0",
+        "uuid": "^8.3.2"
     },
     "devDependencies": {
         "@nuxt/types": "^2.14.11",
+        "@nuxtjs/dotenv": "^1.4.1",
         "@nuxtjs/eslint-config": "^3.1.0",
         "@nuxtjs/eslint-module": "^2.0.0",
+        "@nuxtjs/gtm": "^2.4.0",
         "@nuxtjs/tailwindcss": "^3.1.0",
         "@vue/test-utils": "^1.1.0",
         "babel-core": "7.0.0-bridge.0",

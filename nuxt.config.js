@@ -35,7 +35,7 @@ export default {
     css: [],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-    plugins: [],
+    plugins: ['~/plugins/iterator.js'],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
@@ -46,12 +46,16 @@ export default {
         '@nuxtjs/eslint-module',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
+        // https://github.com/nuxt-community/dotenv-module
+        '@nuxtjs/dotenv',
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
         // https://go.nuxtjs.dev/axios
         '@nuxt/http',
+        // https://github.com/nuxt-community/gtm-module
+        '@nuxtjs/gtm',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
         [
@@ -90,4 +94,14 @@ export default {
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {},
+
+    gtm: {
+        id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+
+    publicRuntimeConfig: {
+        gtm: {
+            id: process.env.GOOGLE_TAG_MANAGER_ID,
+        },
+    },
 }
