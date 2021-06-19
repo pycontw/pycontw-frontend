@@ -193,6 +193,7 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import i18n from '@/i18n/about/history.i18n'
 import AboutBanner from '@/static/img/about/Banner.svg'
+import Banner from '@/components/core/layout/Banner'
 import CoreH1 from '@/components/core/titles/H1'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 
@@ -203,6 +204,7 @@ export default {
         I18nPageWrapper,
         CoreH1,
         ExtLink,
+        Banner,
     },
     data() {
         return {
