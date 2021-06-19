@@ -240,7 +240,6 @@ export default {
 }
 </script>
 
-font-bold
 <style scoped>
 .paragraph-title {
     font-family: 'Noto Serif TC';
