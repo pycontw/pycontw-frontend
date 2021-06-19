@@ -8,7 +8,7 @@
                 ></div>
             </template>
             <template #text>
-                <core-h1 :title="$t('pageTitle')"></core-h1>
+                <core-h1 :title="$t('title')"></core-h1>
                 <p class="w-full md:w-3/4 lg:w-3/4">
                     {{ $t('pageAbstract') }}
                 </p>
@@ -217,6 +217,23 @@ export default {
                 'background-position': 'center',
             }
         },
+    },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('og.title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('og.description'),
+                },
+            ],
+        }
     },
 }
 </script>

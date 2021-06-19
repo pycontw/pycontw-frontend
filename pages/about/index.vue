@@ -154,6 +154,22 @@ export default {
             },
         }
     },
+    computed: {
+        bannerStyle() {
+            return {
+                'background-image': `url(${this.aboutBanner})`,
+                'background-repeat': 'no-repeat',
+                'background-position': 'center',
+            }
+        },
+    },
+    methods: {
+        getImgStyle(img) {
+            return {
+                'background-image': `url(${img})`,
+            }
+        },
+    },
     head() {
         return {
             title: this.$i18n.t('title'),
@@ -170,22 +186,6 @@ export default {
                 },
             ],
         }
-    },
-    computed: {
-        bannerStyle() {
-            return {
-                'background-image': `url(${this.aboutBanner})`,
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
-            }
-        },
-    },
-    methods: {
-        getImgStyle(img) {
-            return {
-                'background-image': `url(${img})`,
-            }
-        },
     },
 }
 </script>
