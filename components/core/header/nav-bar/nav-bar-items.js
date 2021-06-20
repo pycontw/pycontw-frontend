@@ -65,4 +65,18 @@ export default Object.freeze({
             value: '/registration/financial-aid',
         },
     ],
+    aboutItems: [
+        {
+            i18nKey: 'pycontw',
+            value: '/about',
+        },
+        {
+            i18nKey: 'history',
+            value: '/about/history',
+        },
+        {
+            i18nKey: 'community',
+            value: '/about/community',
+        },
+    ],
 })

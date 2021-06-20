@@ -9,10 +9,7 @@
 </template>
 
 <script>
-import i18n from '@/i18n/about/index.i18n'
-
 export default {
-    i18n,
     name: 'CoreH1',
     props: {
         title: {

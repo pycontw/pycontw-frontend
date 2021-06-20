@@ -3,6 +3,9 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         about: 'About',
+        pycontw: 'PyCon Taiwan',
+        community: 'Community',
+        history: 'History',
         sponsor: 'Sponsor',
         jobs: 'Job Listing',
         speaking: 'Speaking',
@@ -27,11 +30,13 @@ export default genI18nMessages({
         financialAid: 'Financial Aid',
         venue: 'Venue',
         covid19Guidelines: 'COVID-19 Guidelines',
-        volunteer: 'Volunteer',
         signIn: 'Sign In',
     },
     'zh-hant': {
         about: '關於',
+        pycontw: 'PyCon Taiwan',
+        community: '在地社群',
+        history: '研討會歷史',
         sponsor: '贊助',
         jobs: '徵才資訊',
         speaking: '投稿',
@@ -56,7 +61,6 @@ export default genI18nMessages({
         financialAid: '財務補助',
         venue: '會場',
         covid19Guidelines: 'COVID-19 防疫守則',
-        volunteer: '志工招募',
         signIn: '登入',
     },
 })

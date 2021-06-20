@@ -11,25 +11,8 @@ export default {
         base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
     },
     // Global page headers (https://go.nuxtjs.dev/config-head)
-    head: {
-        title: 'pycontw-2021',
-        meta: [
-            { charset: 'utf-8' },
-            {
-                name: 'viewport',
-                content: 'width=device-width, initial-scale=1',
-            },
-            { hid: 'description', name: 'description', content: '' },
-        ],
-        link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
-            {
-                rel: 'stylesheet',
-                href:
-                    'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC',
-            },
-        ],
-    },
+    // Move to layout/default.vue due to gtm-module not support head function (https://github.com/nuxt-community/gtm-module/issues/56)
+    head: {},
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
     css: [],
