@@ -73,6 +73,20 @@ export default genI18nMessages({
         form: 'the form',
         fillFormProcess:
             'Fill out {form}. Leave a brief description about yourself, and provide at least your full name.',
+        og: {
+            title: 'Financial Aid',
+            description:
+                'Everybody Contributes  is one of PyCon’s core principles. All attendees, including speakers and volunteers, ' +
+                'have to pay for registering. While following this convention,' +
+                'PyCon Taiwan also has a financial aid program to help friends in the community,' +
+                'financially or otherwise, so more people are able to join us in the big event.' +
+                'All who look for help attending the conference are welcomed to apply.' +
+                'The organizers will review all applications and allocate resources based on both the conference budget and the applicants’ conditions.' +
+                'While we hope to support everyone to participate in the community, the budget is unfortunately limited, ' +
+                'and so is the financial aid program. In cases of insufficient resources, ' +
+                'we wish to support those who are most in need and to maximize community gain available from the applicant’s participation.' +
+                'As such, we may be forced to turn down your application to prioritize others.',
+        },
     },
     'zh-hant': {
         title: '財務補助說明',
@@ -136,5 +150,16 @@ export default genI18nMessages({
         form: '線上表單',
         fillFormProcess:
             '填寫{form}，表單內容填寫需真實，包含真實姓名、聯絡資訊、處境與需求說明',
+        og: {
+            title: '財務補助說明',
+            description:
+                'Everybody Contributes 是 PyCon 的核心價值，亦即除特邀來賓外所有的會議參與者包括講者與志工，' +
+                '皆需自己付費方能參加會議。在維持此一核心價值的同時，我們也規劃了財務補助方案，' +
+                '希望協助對會議有興趣但由於成本而難以參加的朋友們也能參與這次會議。因為我們採取審核制，所以請有需求的朋友主動與我們聯絡，' +
+                '我們收到所有申請後會根據預算及申請者狀況等因素，決定是否給予補助以及其資源多寡。' +
+                '由於會議經費有限，因此能補助的數量不多；這種情況下我們希望受理的對象大致為最需要被幫助的人或對與會者幫助最大的人。舉例而言，' +
+                '若拿家庭收入欠佳的學生與已有穩定工作的工程師相比，我們會優先協助學生。更進一步以申請者身分而言，' +
+                '對 Python 社群有所貢獻者或這次會議的講者，會是我們優先協助的目標。在資源不足的狀況下，我們可能會迫使拒絕您的申請以幫助更有需要的人。',
+        },
     },
 })

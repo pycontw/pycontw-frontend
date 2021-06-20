@@ -123,6 +123,11 @@ export default genI18nMessages({
             tutorial: 'How to Propose a Tutorial?',
             coc: 'Code of Conduct',
         },
+        og: {
+            title: 'Call for Proposals',
+            description:
+                'The Call for Proposals is now open. PyCon 2021 Taiwan is accepting talks and tutorials!',
+        },
     },
     'zh-hant': {
         title: '稿件募集',
@@ -225,6 +230,12 @@ export default genI18nMessages({
             talk: '如何投稿演講？',
             tutorial: '如何投稿專業課程？',
             coc: '行為準則',
+        },
+
+        og: {
+            title: '稿件募集',
+            description:
+                'PyCon Taiwan 2021 正式開始徵稿，接受包括議程（talk）與課程（tutorial）的稿件！',
         },
     },
 })

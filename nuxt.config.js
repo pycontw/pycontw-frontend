@@ -11,31 +11,14 @@ export default {
         base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
     },
     // Global page headers (https://go.nuxtjs.dev/config-head)
-    head: {
-        title: 'pycontw-2021',
-        meta: [
-            { charset: 'utf-8' },
-            {
-                name: 'viewport',
-                content: 'width=device-width, initial-scale=1',
-            },
-            { hid: 'description', name: 'description', content: '' },
-        ],
-        link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/2021/favicon.ico' },
-            {
-                rel: 'stylesheet',
-                href:
-                    'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC',
-            },
-        ],
-    },
+    // Move to layout/default.vue due to gtm-module not support head function (https://github.com/nuxt-community/gtm-module/issues/56)
+    head: {},
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
     css: [],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-    plugins: [],
+    plugins: ['~/plugins/iterator.js'],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
@@ -46,12 +29,16 @@ export default {
         '@nuxtjs/eslint-module',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
+        // https://github.com/nuxt-community/dotenv-module
+        '@nuxtjs/dotenv',
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
         // https://go.nuxtjs.dev/axios
         '@nuxt/http',
+        // https://github.com/nuxt-community/gtm-module
+        '@nuxtjs/gtm',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
         [
@@ -90,4 +77,14 @@ export default {
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {},
+
+    gtm: {
+        id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+
+    publicRuntimeConfig: {
+        gtm: {
+            id: process.env.GOOGLE_TAG_MANAGER_ID,
+        },
+    },
 }

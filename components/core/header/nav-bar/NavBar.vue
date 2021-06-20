@@ -1,12 +1,11 @@
 <template>
     <nav class="h-full flex justify-evenly items-center">
-        <locale-link
-            to="/about"
-            :class="getPageClassesByPath('about', true)"
-            customized
+        <nav-bar-item-dropdown
+            :label="$t('about')"
+            :items="aboutItems"
+            :class="getPageClassesByPath('about')"
         >
-            {{ $t('about') }}
-        </locale-link>
+        </nav-bar-item-dropdown>
         <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
@@ -20,6 +19,12 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown>
+        <!-- <nav-bar-item-dropdown
+            :label="$t('events')"
+            :items="eventsItems"
+            :class="getPageClassesByPath('events')"
+        >
+        </nav-bar-item-dropdown> -->
         <nav-bar-item-dropdown
             :label="$t('registration')"
             :items="registrationItems"
@@ -33,12 +38,6 @@
             :class="getPageClassesByPath('conference')"
         >
         </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
-            :label="$t('events')"
-            :items="eventsItems"
-            :class="getPageClassesByPath('events')"
-        >
-        </nav-bar-item-dropdown>
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}
         </locale-link>
@@ -49,12 +48,6 @@
             {{ $t('covid19Guidelines') }}
         </locale-link>
         -->
-        <ext-link
-            href="https://forms.gle/wuG2w42cbhamyGdv9"
-            :class="getPageClassesByPath('volunteer', true)"
-        >
-            {{ $t('volunteer') }}
-        </ext-link>
         <ext-link
             :href="signInUrl"
             :class="getPageClassesByPath('signIn', true)"
@@ -87,6 +80,9 @@ export default {
         },
         eventsItems() {
             return this.generateI18nItems(navBarItems.eventsItems)
+        },
+        aboutItems() {
+            return this.generateI18nItems(navBarItems.aboutItems)
         },
         registrationItems() {
             return this.generateI18nItems(navBarItems.registrationItems)

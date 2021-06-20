@@ -17,9 +17,9 @@
 
 <script>
 import HomeIcon from './HomeIcon'
-import NavBar from './nav-bar'
+import NavBar from './nav-bar/NavBar'
 import NavBarHamburger from './nav-bar/NavBarHamburger'
-import LocaleSwitch from './locale-switch'
+import LocaleSwitch from './locale-switch/LocaleSwitch'
 
 export default {
     name: 'CoreHeader',
@@ -44,7 +44,7 @@ export default {
 
 .header-container.--desktop {
     color: #c2a53a;
-    background-color: rgba(27, 26, 39, 0.6);
+    background-color: #121023;
 }
 
 .header-container.--desktop .core-localeSwitch:hover {

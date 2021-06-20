@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full px-8 py-24 sm:px-20 md:px-32 lg:px-32">
+    <div :class="classObject">
         <slot></slot>
     </div>
 </template>
@@ -7,25 +7,40 @@
 <script>
 export default {
     name: 'I18nPageWrapper',
+    props: {
+        customY: { type: Boolean, default: false },
+    },
+    computed: {
+        classObject() {
+            return {
+                'w-full': true,
+                'px-8': true,
+                'py-24': !this.customY,
+                'sm:px-20': true,
+                'md:px-32': true,
+                'lg:px-32': true,
+            }
+        },
+    },
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 h1 {
-    @apply .w-full .text-3xl .my-8 .text-center;
+    @apply w-full text-3xl my-8 text-center;
 }
 
 h2 {
-    @apply .w-full .text-2xl .mt-20 .mb-6;
+    @apply w-full text-2xl mt-20 mb-6;
 }
 
 h3 {
-    @apply .w-full .text-xl .mt-10 .mb-4;
+    @apply w-full text-xl mt-10 mb-4;
 }
 
 p,
 .paragraph {
-    @apply .w-full .mt-1 .mb-4 .text-justify;
+    @apply w-full mt-1 mb-4 text-justify;
 }
 
 span.text-2s {
@@ -33,14 +48,14 @@ span.text-2s {
 }
 
 ul {
-    @apply .mb-6;
+    @apply mb-6;
 }
 
 ul.list-disc {
-    @apply .pl-12;
+    @apply pl-12;
 }
 
 li {
-    @apply .my-1;
+    @apply my-1;
 }
 </style>

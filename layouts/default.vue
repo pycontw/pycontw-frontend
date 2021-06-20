@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import CoreFooter from '~/components/core/footer'
-import CoreHeader from '~/components/core/header'
-import AnnounceBar from '~/components/core/announce-bar'
+import CoreFooter from '~/components/core/footer/Footer'
+import CoreHeader from '~/components/core/header/Header'
+import AnnounceBar from '~/components/core/announce-bar/AnnounceBar'
 
 export default {
     components: {
@@ -24,8 +24,48 @@ export default {
     },
     head() {
         return {
+            titleTemplate: (titleChunk) => {
+                const title = 'PyCon Taiwan 2021'
+                return titleChunk && titleChunk !== title
+                    ? `${titleChunk} | ${title}`
+                    : title
+            },
+            meta: [
+                { charset: 'utf-8' },
+                {
+                    name: 'viewport',
+                    content: 'width=device-width, initial-scale=1',
+                },
+                { hid: 'description', name: 'description', content: '' },
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: 'PyCon Taiwan 2021',
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: 'PyCon Taiwan 2021',
+                },
+                {
+                    hid: 'og:image',
+                    property: 'og:image',
+                    content: '/2021/og-img.jpg',
+                },
+                { hid: 'og:type', property: 'og:type', content: 'website' },
+            ],
             link: [
-                // add url without year prefix as canonical url
+                {
+                    rel: 'icon',
+                    type: 'image/x-icon',
+                    href: '/2021/favicon.ico',
+                },
+                {
+                    rel: 'stylesheet',
+                    href:
+                        'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC',
+                },
+
                 {
                     rel: 'canonical',
                     href: 'https://tw.pycon.org' + this.$route.path,
@@ -48,7 +88,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    background: #212121;
+    background: #121023;
 }
 
 *,

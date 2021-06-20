@@ -184,7 +184,14 @@ export default {
     data() {
         return {
             sponsorLevels: ['diamond', 'platinum', 'gold', 'silver', 'bronze'],
-            specialSponsorshipTypes: ['fa', 'food', 'sprint', 'youngPyckathon'],
+            specialSponsorshipTypes: [
+                'fa',
+                'food',
+                'sprint',
+                'youngPyckathon',
+                'mask',
+                'spray',
+            ],
         }
     },
 }
