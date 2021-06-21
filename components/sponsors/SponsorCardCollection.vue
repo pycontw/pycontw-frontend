@@ -1,9 +1,7 @@
 <template>
     <div class="flex flex-col w-full">
-        <h3 class="mt-12 mb-8 mx-1 text-xl">{{ $t(levelName) }}</h3>
-        <div
-            class="sponsorCardCollection__cardContainer justify-center md:justify-start"
-        >
+        <h3 class="sponsorCardCollection__title">{{ $t(levelName) }}</h3>
+        <div class="sponsorCardCollection__cardContainer justify-start">
             <slot></slot>
         </div>
     </div>
@@ -21,6 +19,11 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.sponsorCardCollection__title {
+    @apply mt-12 mb-8 mx-1 text-xl;
+    font-family: 'Noto Serif TC';
+}
+
 .sponsorCardCollection__cardContainer {
     @apply flex flex-wrap;
 }
