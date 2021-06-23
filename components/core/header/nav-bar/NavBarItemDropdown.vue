@@ -75,9 +75,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .options-menu {
-    @apply inline-flex w-full h-full justify-center items-center w-full bg-transparent;
+    @apply inline-flex w-full h-full justify-center items-center bg-transparent;
     z-index: 100;
 }
 </style>

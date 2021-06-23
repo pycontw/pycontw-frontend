@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .header-container {
     @apply w-full h-full px-4 justify-between items-center text-sm;
 }
@@ -48,8 +48,7 @@ export default {
 }
 
 .header-container.--desktop .core-localeSwitch:hover {
-    color: #000000;
-    background-color: #c2a53a;
+    color: #c2a53a;
 }
 
 .header-container.--mobile {
