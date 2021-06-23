@@ -29,9 +29,9 @@ export default {
             if (this.sm) {
                 width = 'w-24'
             } else if (this.lg) {
-                width = 'w-56'
+                width = 'w-36'
             } else {
-                width = 'w-48'
+                width = 'w-32'
             }
             return [...this.originalClasses, width]
         },
@@ -39,13 +39,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-menu {
-    @apply absolute origin-top-right rounded;
+    @apply absolute origin-top-right rounded opacity-80;
     top: 48px;
-    right: -32px;
-    background-color: #1c1c1c;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1b1a2e;
     border: 1px solid #c2a53a;
-    opacity: 0.8;
 }
 </style>

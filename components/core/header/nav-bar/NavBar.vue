@@ -109,7 +109,6 @@ export default {
                 'px-8': isLink,
                 'py-2': isLink,
                 'bg-transparent': !isOnCurrentPath,
-                'bg-golden-primary': isOnCurrentPath,
                 '--active': isOnCurrentPath,
             }
         },
@@ -124,12 +123,11 @@ export default {
 }
 
 .core-navBarItem:hover {
-    color: #000000;
-    background-color: #c2a53a;
+    color: #c2a53a;
 }
 
 .core-navBarItem.--active,
 .core-navBarItem.--active .options-menu {
-    color: #000000;
+    color: #c2a53a;
 }
 </style>
