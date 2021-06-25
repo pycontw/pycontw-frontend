@@ -8,17 +8,18 @@
 export default {
     name: 'I18nPageWrapper',
     props: {
+        customX: { type: Boolean, default: false },
         customY: { type: Boolean, default: false },
     },
     computed: {
         classObject() {
             return {
                 'w-full': true,
-                'px-8': true,
+                'px-8': !this.customX,
                 'py-24': !this.customY,
-                'sm:px-20': true,
-                'md:px-32': true,
-                'lg:px-32': true,
+                'sm:px-20': !this.customX,
+                'md:px-32': !this.customX,
+                'lg:px-32': !this.customX,
             }
         },
     },
