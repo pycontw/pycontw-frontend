@@ -1,4 +1,5 @@
 {
     "/api/sponsors": "/sponsors",
-    "/api/sponsors/jobs": "/jobs"
+    "/api/sponsors/jobs": "/jobs",
+    "/api/events/keynotes": "/keynotes"
 }
