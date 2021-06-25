@@ -9,7 +9,7 @@ export default genI18nMessages({
             'Each keynote speaker is considered one of the most important figures ' +
             'in their respective fields. ' +
             'They share their professional experience and the image of their domain’s future.',
-        bio: 'Biography',
+        bio: 'Bio',
         speech: 'Speech',
         video: 'Video',
     },

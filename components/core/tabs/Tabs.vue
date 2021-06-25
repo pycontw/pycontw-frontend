@@ -48,11 +48,16 @@ export default {
     @apply ml-4;
 }
 .tabs__headers > .header {
-    @apply inline-block ml-1 py-2 px-4 border-2 rounded-t-lg bg-transparent text-sm text-center font-bold cursor-pointer;
+    @apply inline-block ml-1 py-0.5 md:py-2 px-1 md:px-4;
+    @apply text-xs md:text-sm text-center font-bold;
+    @apply border-2 rounded-t-lg bg-transparent cursor-pointer;
     color: #e6ba17;
     border-color: #c2a53a;
     font-family: 'Noto Serif TC';
-    min-width: 112px;
+    min-width: 45px;
+    @media (min-width: 767px) {
+        min-width: 110px;
+    }
 }
 .tabs__headers > .header.-selected {
     background: #e6ba17;
