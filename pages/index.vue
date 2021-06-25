@@ -64,7 +64,7 @@ import {
     LandingFocusSlogan,
     LandingFocusInfo,
 } from '~/components/landing-focus'
-import { Intro } from '~/components/intro'
+import Intro from '~/components/intro/Intro'
 
 export default {
     i18n,
