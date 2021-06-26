@@ -1,9 +1,9 @@
 <template>
     <div v-show="!!title" :class="classObject">
         <h2>
-            {{ $t(title) }}
+            {{ title }}
         </h2>
-        <p>{{ $t(description) }}</p>
+        <p>{{ description }}</p>
         <div class="mt-6 mb-2">
             <text-button :href="linkHref" secondary>{{
                 linkTitle
