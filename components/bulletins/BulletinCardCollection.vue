@@ -18,10 +18,14 @@
 </template>
 
 <script>
+import BulletinCard from './BulletinCard.vue'
 import i18n from './BulletinCard.i18n'
 export default {
     i18n,
     name: 'BulletinCardCollection',
+    components: {
+        BulletinCard,
+    },
 }
 </script>
 
