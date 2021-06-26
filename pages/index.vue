@@ -23,11 +23,15 @@
             </div>
         </div>
 
-        <i18n-page-wrapper :customY="true" class="py-12 bg-blue-primary">
+        <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
             <h1 class="text-yellow-500">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
 
+        <div class="intro-section">
+            <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
+            <intro></intro>
+        </div>
         <i18n-page-wrapper class="pt-12">
             <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
@@ -67,6 +71,7 @@ import {
     LandingFocusSlogan,
     LandingFocusInfo,
 } from '~/components/landing-focus'
+import Intro from '~/components/intro/Intro'
 
 export default {
     i18n,
@@ -80,6 +85,7 @@ export default {
         SponsorCardCollection,
         SponsorModal,
         BulletinCardCollection,
+        Intro,
     },
     data() {
         return {
@@ -182,5 +188,19 @@ export default {
 
 .links {
     padding-top: 15px;
+}
+
+.intro-section h2.intro-title {
+    @apply text-center text-3xl mt-8 mb-16 font-bold;
+    color: #e6ba17;
+    font-family: 'Noto Serif TC';
+    @media (max-width: 767px) {
+        @apply mt-2 mb-8 text-2xl;
+    }
+}
+
+.intro-section {
+    @apply pt-8 pb-20;
+    background-color: #16132a;
 }
 </style>

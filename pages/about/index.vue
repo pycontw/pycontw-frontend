@@ -26,7 +26,7 @@
                 ></div>
             </div>
         </div>
-        <i18n-page-wrapper class="pt-0 px-8 md:px-57 lg:px-56">
+        <i18n-page-wrapper class="pt-4 px-8 md:px-57 lg:px-56">
             <i18n
                 path="reasonTitle"
                 tag="p"
