@@ -22,6 +22,15 @@
                 </div>
             </div>
         </div>
+        <div class="intro-section">
+            <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
+            <intro></intro>
+        </div>
+
+        <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
+            <h1 class="text-yellow-500">{{ $t('bulletinList') }}</h1>
+            <bulletin-card-collection></bulletin-card-collection>
+        </i18n-page-wrapper>
 
         <i18n-page-wrapper class="pt-12">
             <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
@@ -57,10 +66,12 @@ import {
     SponsorModal,
     SponsorCard,
 } from '~/components/sponsors'
+import { BulletinCardCollection } from '~/components/bulletins'
 import {
     LandingFocusSlogan,
     LandingFocusInfo,
 } from '~/components/landing-focus'
+import Intro from '~/components/intro/Intro'
 
 export default {
     i18n,
@@ -73,6 +84,8 @@ export default {
         SponsorCard,
         SponsorCardCollection,
         SponsorModal,
+        Intro,
+        BulletinCardCollection,
     },
     data() {
         return {
@@ -150,6 +163,10 @@ export default {
     background-color: #2b2b2b;
 }
 
+.bg-blue-primary {
+    background-color: #121023;
+}
+
 .title {
     font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
         BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
@@ -171,5 +188,19 @@ export default {
 
 .links {
     padding-top: 15px;
+}
+
+.intro-section h2.intro-title {
+    @apply text-center text-3xl mt-8 mb-16 font-bold;
+    color: #e6ba17;
+    font-family: 'Noto Serif TC';
+    @media (max-width: 767px) {
+        @apply mt-2 mb-8 text-2xl;
+    }
+}
+
+.intro-section {
+    @apply pt-8 pb-20;
+    background-color: #16132a;
 }
 </style>
