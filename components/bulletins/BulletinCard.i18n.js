@@ -11,16 +11,16 @@ export default genI18nMessages({
                 linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
             },
             {
-                title: 'Pycast',
+                title: 'PyCast',
                 description:
-                    "There are Podcasts for PyCon and it's trendy! Teenagers are listening to Pycast now! Every episode is interesting!",
+                    "There are podcasts for PyCon, and it's trendy! Teenagers are listening to PyCast now! Every episode is interesting!",
                 linkTitle: 'Go Listen',
                 linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
             },
             {
                 title: 'Financial',
                 description:
-                    'You can apply financial aid as long as you need. We will help you to participate in the conference.',
+                    'You can apply for financial aid as long as you need it. We will help you to participate in the conference.',
                 linkTitle: 'Apply Now',
                 linkHref: '/registration/financial-aid',
             },
@@ -32,11 +32,11 @@ export default genI18nMessages({
                 linkHref: 'https://pycontw.blogspot.com/',
             },
             {
-                title: 'Youtube',
+                title: 'YouTube',
                 description:
-                    'PyCon has a youtube channel! Welcome subscribe us! We will update so you can watch it together.',
+                    'PyCon has a YouTube channel! Welcome to subscribe to us! We will update it so you can watch it together.',
                 linkTitle: 'Go and See',
-                linkHref: 'https://www.youtube.com/c/pycontaiwan',
+                linkHref: 'https://www.YouTube.com/c/pycontaiwan',
             },
         ],
     },
@@ -45,14 +45,14 @@ export default genI18nMessages({
             {
                 title: '志工招募',
                 description:
-                    '我們歡迎所有對 Python 有興趣的朋友一同加入，用行動支持PyCon，讓這裡變得更好！',
+                    '我們歡迎所有對 Python 有興趣的朋友一同加入，用行動支持 PyCon，讓這裡變得更好！',
                 linkTitle: '線上報名',
                 linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
             },
             {
-                title: 'Podcast上架',
+                title: 'PyCast',
                 description:
-                    '哇！拍抗居然有Podcast也太潮了拔！現在年輕人都在聽Podcast！每集都高潮迭起！',
+                    '哇！拍抗居然有 Podcast 也太潮了拔！現在年輕人都在聽 Podcast！每集都高潮迭起！',
                 linkTitle: '線上收聽',
                 linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
             },
@@ -71,11 +71,11 @@ export default genI18nMessages({
                 linkHref: 'https://pycontw.blogspot.com/',
             },
             {
-                title: 'Youtube',
+                title: 'YouTube',
                 description:
-                    'PyCon也有youtube頻道了！歡迎訂閱我們～每年都會固定整理議程的錄影讓大家能一同觀看。',
+                    'PyCon 也有 YouTube 頻道了！歡迎訂閱我們～每年都會固定整理議程的錄影讓大家能一同觀看。',
                 linkTitle: '線上訂閱',
-                linkHref: 'https://www.youtube.com/c/pycontaiwan',
+                linkHref: 'https://www.YouTube.com/c/pycontaiwan',
             },
         ],
     },
