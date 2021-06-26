@@ -22,7 +22,7 @@ export const actions = {
         commit('setJobsData', data)
     },
     async $getKeynotesData({ commit }) {
-        const { data } = await this.$http.$get('/api/events/keynotes')
-        commit('setKeynotesData', data)
+        const keynoteList = await this.$http.$get('/api/events/keynotes')
+        commit('setKeynotesData', keynoteList)
     },
 }

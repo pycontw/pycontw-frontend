@@ -235,54 +235,52 @@
             }
         ]
     },
-    "keynotes": {
-        "data": [
-            {
-                "speaker": {
-                    "name_zh_hant": "馬誼郎",
-                    "name_en_us": "Elon Musk",
-                    "bio_zh_hant": "出生於南非的美國企業家",
-                    "bio_en_us": "CEO and Product Architect of Tesla, Inc.",
-                    "photo": "https://i.imgur.com/ARxWY48.gif"
-                },
-                "session": {
-                    "title_zh_hant": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                    "title_en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                    "description_zh_hant": "Paragraph 1\r\n\r\nParagraph 2\r\n\r\nParagraph 3",
-                    "description_en_us": "Paragraph 1\r\n\r\nParagraph 2\r\n\r\nParagraph 3",
-                    "slides": "https://google.com"
-                }, 
-                "slido": "https://app.sli.do/event/vppisnh8",
-                "youtube_id": "dQw4w9WgXcQ",
-                "social_item":{
-                    "linkedin": "https://google.com",
-                    "twitter": "https://google.com",
-                    "github": "https://google.com"
-                }
+    "keynotes": [
+        {
+            "speaker": {
+                "name_zh_hant": "馬誼郎",
+                "name_en_us": "Elon Musk",
+                "bio_zh_hant": "出生於南非的美國企業家",
+                "bio_en_us": "CEO and Product Architect of Tesla, Inc.",
+                "photo": "https://i.imgur.com/ARxWY48.gif"
             },
-            {
-                "speaker": {
-                    "name_zh_hant": "馬誼郎",
-                    "name_en_us": "Elon Musk",
-                    "bio_zh_hant": "出生於南非的美國企業家",
-                    "bio_en_us": "CEO and Product Architect of Tesla, Inc.",
-                    "photo": "https://i.imgur.com/xiAfNVQ.jpeg"
-                },
-                "session": {
-                    "title_zh_hant": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                    "title_en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                    "description_zh_hant": "description_zh_hant",
-                    "description_en_us": "description_en_us",
-                    "slides": ""
-                }, 
-                "slido": "",
-                "youtube_id": "",
-                "social_item":{
-                    "linkedin": "https://google.com",
-                    "twitter": "https://google.com",
-                    "github": "https://google.com"
-                }
+            "session": {
+                "title_zh_hant": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                "title_en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                "description_zh_hant": "Paragraph 1\r\n\r\nParagraph 2\r\n\r\nParagraph 3",
+                "description_en_us": "Paragraph 1\r\n\r\nParagraph 2\r\n\r\nParagraph 3",
+                "slides": "https://google.com"
+            },
+            "slido": "https://app.sli.do/event/vppisnh8",
+            "youtube_id": "dQw4w9WgXcQ",
+            "social_item": {
+                "linkedin": "https://google.com",
+                "twitter": "https://google.com",
+                "github": "https://google.com"
             }
-        ]
-    }
+        },
+        {
+            "speaker": {
+                "name_zh_hant": "馬誼郎",
+                "name_en_us": "Elon Musk",
+                "bio_zh_hant": "出生於南非的美國企業家",
+                "bio_en_us": "CEO and Product Architect of Tesla, Inc.",
+                "photo": "https://i.imgur.com/xiAfNVQ.jpeg"
+            },
+            "session": {
+                "title_zh_hant": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                "title_en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                "description_zh_hant": "description_zh_hant",
+                "description_en_us": "description_en_us",
+                "slides": ""
+            },
+            "slido": "",
+            "youtube_id": "",
+            "social_item": {
+                "linkedin": "https://google.com",
+                "twitter": "https://google.com",
+                "github": "https://google.com"
+            }
+        }
+    ]
 }
