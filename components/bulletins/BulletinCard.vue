@@ -5,7 +5,7 @@
         </h2>
         <p>{{ $t(description) }}</p>
         <div class="mt-6 mb-2">
-            <text-button :thirdary="true" :href="linkHref">{{
+            <text-button :href="linkHref" secondary>{{
                 linkTitle
             }}</text-button>
         </div>
@@ -13,8 +13,13 @@
 </template>
 
 <script>
+import TextButton from '@/components/core/buttons/TextButton'
+
 export default {
     name: 'BulletinCard',
+    components: {
+        TextButton,
+    },
     props: {
         title: { type: String, default: '' },
         description: {
@@ -38,13 +43,13 @@ export default {
 .bulletinCard {
     @apply h-64 relative flex flex-col items-center rounded-3xl border-4;
     width: 11rem;
-    border-color: rgba(75, 75, 75);
-    color: rgba(75, 75, 75);
+    border-color: #4b4b4b;
+    color: #4b4b4b;
 }
 
 .bulletinCard > h2 {
     @apply text-xl mt-4 mb-6;
-    color: rgba(128, 128, 128);
+    color: #808080;
 }
 
 .bulletinCard:hover > h2 {
@@ -54,6 +59,6 @@ export default {
 .bulletinCard > p {
     @apply mx-2;
     font-size: 0.8rem;
-    color: rgba(199, 199, 199);
+    color: #c7c7c7;
 }
 </style>
