@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{487:function(e,n,t){"use strict";t.r(n);var o={name:"PageConferenceKeynotes"},c=t(5),component=Object(c.a)(o,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("h3",[e._v("Conference keynotes")])}),[],!1,null,"a0133d4e",null);n.default=component.exports}}]);
