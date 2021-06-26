@@ -22,19 +22,16 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
         <div class="intro-section">
             <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
             <intro></intro>
         </div>
-=======
 
-        <i18n-page-wrapper :customY="true" class="py-12 bg-blue-primary">
+        <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
             <h1 class="text-yellow-500">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
 
->>>>>>> 70ab4693... chore(index): add bulletins on index page
         <i18n-page-wrapper class="pt-12">
             <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
