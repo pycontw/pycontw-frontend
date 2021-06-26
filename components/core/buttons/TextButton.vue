@@ -100,6 +100,7 @@ export default {
 .core-button.--secondary.--is-link > a {
     color: #c7c7c7;
     border: 0.25rem solid #c7c7c7;
+    font-size: 0.8rem;
 }
 
 .core-button:not(.--is-link):hover,

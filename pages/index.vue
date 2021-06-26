@@ -26,6 +26,12 @@
             <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
             <intro></intro>
         </div>
+
+        <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
+            <h1 class="text-yellow-500">{{ $t('bulletinList') }}</h1>
+            <bulletin-card-collection></bulletin-card-collection>
+        </i18n-page-wrapper>
+
         <i18n-page-wrapper class="pt-12">
             <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
@@ -60,6 +66,7 @@ import {
     SponsorModal,
     SponsorCard,
 } from '~/components/sponsors'
+import { BulletinCardCollection } from '~/components/bulletins'
 import {
     LandingFocusSlogan,
     LandingFocusInfo,
@@ -78,6 +85,7 @@ export default {
         SponsorCardCollection,
         SponsorModal,
         Intro,
+        BulletinCardCollection,
     },
     data() {
         return {
@@ -153,6 +161,10 @@ export default {
 
 .bg-dark-secondary {
     background-color: #2b2b2b;
+}
+
+.bg-blue-primary {
+    background-color: #121023;
 }
 
 .title {
