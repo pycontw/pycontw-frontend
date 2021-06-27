@@ -22,6 +22,9 @@
                 </div>
             </div>
         </div>
+
+        <landing-img-swiper />
+
         <div class="intro-section">
             <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
             <intro></intro>
@@ -72,6 +75,7 @@ import {
     LandingFocusInfo,
 } from '~/components/landing-focus'
 import Intro from '~/components/intro/Intro'
+import { LandingImgSwiper } from '~/components/landing-swiper'
 
 export default {
     i18n,
@@ -81,6 +85,7 @@ export default {
         I18nPageWrapper,
         LandingFocusSlogan,
         LandingFocusInfo,
+        LandingImgSwiper,
         SponsorCard,
         SponsorCardCollection,
         SponsorModal,
