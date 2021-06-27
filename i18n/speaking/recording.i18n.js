@@ -22,14 +22,14 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: '如何投稿演講（Talk）？',
+        title: '錄影釋出',
         paragraphs: [
             'PyCon 致力於協助 Python 教育及提倡 Python 的使用，演講預設會由 PyCon Taiwan 委員會錄影、剪輯並上傳至線上影音網站（如：Youtube）以及 ' +
                 '{pyvideo}。在技術可行的情況下，我們也可能實況轉播議程的錄影。',
             '如果您不希望自己的演講被錄影，請在投稿時取消勾選錄影的選項。',
         ],
         og: {
-            title: '如何投稿演講（Talk）？',
+            title: '錄影釋出',
             description:
                 'PyCon 致力於協助 Python 教育及提倡 Python 的使用，演講預設會由 PyCon Taiwan 委員會錄影、剪輯並上傳至線上影音網站（如：Youtube）以及 ' +
                 'pyvideo.org。在技術可行的情況下，我們也可能實況轉播議程的錄影。',
