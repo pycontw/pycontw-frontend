@@ -61,22 +61,8 @@ export default {
         }
     },
     mounted() {
-        // Image lazy-loading
-        for (const slideElement of this.$refs.slide) {
-            if (slideElement.dataset && slideElement.dataset.src) {
-                const img = new Image()
-                img.src = slideElement.dataset.src
-                img.onload = function () {
-                    slideElement.style.backgroundImage = `url('${img.src}')`
-                }
-            }
-        }
-
-        // Image swiper shift limit
-        for (const index in this.imgGroups) {
-            this.limitXCoords[index] =
-                window.innerWidth - 300 * this.imgGroups[index].length + 30
-        }
+        this.lazyLoadImages()
+        this.shiftImages()
     },
     methods: {
         getImgPath(type, name) {
@@ -87,8 +73,25 @@ export default {
             this.lightBoxSettings.imgs = [imageDir]
             this.lightBoxSettings.index = 0
         },
+        lazyLoadImages() {
+            this.$refs.slide.forEach((slideElement) => {
+                if (!slideElement?.dataset?.src) {
+                    return
+                }
+                const img = new Image()
+                img.src = slideElement.dataset.src
+                img.onload = () => {
+                    slideElement.style.backgroundImage = `url("${img.src}")`
+                }
+            })
+        },
 
-        // Swipper part
+        // Swiper part
+        shiftImages() {
+            this.limitXCoords = this.imgGroups.map(
+                (imgGroup) => window.innerWidth - 300 * imgGroup.length + 30,
+            )
+        },
         getShiftPosition(index) {
             return { transform: 'translateX(' + this.relXCoords[index] + 'px)' }
         },
