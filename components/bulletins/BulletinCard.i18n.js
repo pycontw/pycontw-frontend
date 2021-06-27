@@ -22,7 +22,7 @@ export default genI18nMessages({
                 description:
                     'You can apply for financial aid as long as you need it. We will help you to participate in the conference.',
                 linkTitle: 'Apply Now',
-                linkHref: '/registration/financial-aid',
+                linkTo: '/registration/financial-aid',
             },
             {
                 title: 'Blog',

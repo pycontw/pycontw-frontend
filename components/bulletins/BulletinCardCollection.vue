@@ -11,6 +11,7 @@
                 :description="bulletin.description"
                 :link-title="bulletin.linkTitle"
                 :link-href="bulletin.linkHref"
+                :link-to="bulletin.linkTo"
             >
             </bulletin-card>
         </div>
