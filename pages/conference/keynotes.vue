@@ -152,13 +152,13 @@ export default {
 .keynote__name {
     @apply font-black text-center text-base py-2;
     color: #c2a53a;
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif TC', serif;
 }
 
 .keynote__title {
     @apply font-black text-center text-base py-2;
     color: #c2a53a;
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif TC', serif;
 }
 
 .keynote__tabs {
