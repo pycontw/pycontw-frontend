@@ -59,7 +59,7 @@ export default genI18nMessages({
             {
                 title: '財務補助申請',
                 description:
-                    '只要你有需要都可以申請門票、交通費等補助，我們盡力協助讓更多人能藉由補助參與會議。',
+                    '只要你有需要都可以申請門票補助，我們盡力協助讓更多人能藉由補助參與會議。',
                 linkTitle: '線上申請',
                 linkHref: '/registration/financial-aid',
             },
