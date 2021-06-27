@@ -175,6 +175,7 @@ export default {
 .swiper-wrapper {
     display: inline-block;
     margin: 0 15px;
+    cursor: pointer;
 }
 .swiper-slide {
     width: 270px;
