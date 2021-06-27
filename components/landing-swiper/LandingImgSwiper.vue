@@ -25,6 +25,7 @@
                         class="swiper-slide"
                         :data-src="getThumbnailPath(imgName)"
                         @mousedown="imgMouseDown($event, groupIndex, imgName)"
+                        @touchstart="imgTouchStart($event, groupIndex, imgName)"
                     ></div>
                 </div>
             </div>
@@ -135,6 +136,25 @@ export default {
             }
             document.removeEventListener('mousemove', this.imgMouseMove)
             document.removeEventListener('mouseup', this.imgMouseUp)
+        },
+        imgTouchStart(event, groupIndex, imgName) {
+            this.shiftSetting.moved = false
+            this.shiftSetting.targetGroup = groupIndex
+            this.shiftSetting.shiftX = event.touches[0].pageX
+            this.shiftSetting.targetImg = imgName
+            document.addEventListener('touchmove', this.imgTouchMove)
+            document.addEventListener('touchend', this.imgTouchEnd)
+        },
+        imgTouchMove(event) {
+            this.shiftSetting.moved = true
+            this.imgMoveAt(event.touches[0].pageX)
+        },
+        imgTouchEnd(event) {
+            if (!this.shiftSetting.moved) {
+                this.openLightBox(this.shiftSetting.targetImg)
+            }
+            document.removeEventListener('touchmove', this.imgTouchMove)
+            document.removeEventListener('touchend', this.imgTouchEnd)
         },
     },
 }
