@@ -27,14 +27,7 @@ export default genI18nMessages({
             {
                 title: 'Auxiliary Items',
                 content:
-                    'The Financial Aid includes conference fee, travel and accommodation expenses.' +
-                    '(The travel and accommodation will be partly reimbursed at the actual expense, based on the results of the review.)',
-            },
-            {
-                title: 'Allowance',
-                content:
-                    'In general, the support limit is up to NTD 20,000. If you need more financial aid,' +
-                    'you are encouraged to provide more detailed information while completing the form.',
+                    'The Financial Aid accepts conference fee only since PyCon TW 2021 is held virtually.',
             },
             {
                 title: 'Reimbursement',
@@ -45,7 +38,7 @@ export default genI18nMessages({
             {
                 title: 'Acceptance Deadline',
                 content:
-                    'The Financial Aid Program closes on 30 June (15:59 UTC).',
+                    'The Financial Aid Program closes on August 1st (15:59 UTC).',
             },
         ],
         visaTitle: 'Visitor Visa',
@@ -110,12 +103,7 @@ export default genI18nMessages({
             {
                 title: '補助項目',
                 content:
-                    '門票、交通費、住宿費 (交通費與住宿費採實報實銷，補助金額依審核結果決定)',
-            },
-            {
-                title: '補助上限',
-                content:
-                    '原則上最高 NTD 20,000，如果需要更多的話，在填寫時需提供更詳細資訊。',
+                    '門票（由於 PyCon TW 2021 改為線上舉行，本次項目只提供門票補助）',
             },
             {
                 title: '領取方式',
@@ -124,7 +112,7 @@ export default genI18nMessages({
             },
             {
                 title: '受理期限',
-                content: '即日起至 6 月 30 日 (台北時間) 截止。',
+                content: '即日起至 8 月 1 日 (台北時間) 截止。',
             },
         ],
         visaTitle: '入境簽證',
