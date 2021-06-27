@@ -22,7 +22,6 @@ export default {
             tabs: [],
         }
     },
-    computed: {},
     created() {
         this.tabs = this.$children
     },
@@ -50,10 +49,10 @@ export default {
 .tabs__headers > .header {
     @apply inline-block ml-1 py-0.5 md:py-2 px-1 md:px-4;
     @apply text-xs md:text-sm text-center font-bold;
-    @apply border-2 rounded-t-lg bg-transparent cursor-pointer;
+    @apply border rounded-t-lg bg-transparent cursor-pointer;
     color: #e6ba17;
     border-color: #c2a53a;
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif TC', serif;
     min-width: 45px;
     @media (min-width: 767px) {
         min-width: 110px;
@@ -65,10 +64,11 @@ export default {
 }
 
 .tab {
-    @apply inline-block text-sm rounded-2xl min-w-full;
+    @apply inline-block text-sm rounded-2xl min-w-full border-2;
     color: #282828;
     background: #e6ba17;
     border-color: #c2a53a;
+    box-shadow: 6px 6px 0 #c2a53a;
     padding: 20px;
 }
 </style>
