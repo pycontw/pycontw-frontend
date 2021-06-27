@@ -5,7 +5,7 @@
         </h2>
         <p>{{ description }}</p>
         <div class="mt-6 mb-2">
-            <text-button :href="linkHref" secondary>{{
+            <text-button :href="linkHref" :to="linkTo" secondary>{{
                 linkTitle
             }}</text-button>
         </div>
@@ -28,6 +28,7 @@ export default {
         },
         linkTitle: { type: String, default: '' },
         linkHref: { type: String, default: '' },
+        linkTo: { type: String, default: '' },
     },
     computed: {
         classObject() {
