@@ -2,7 +2,7 @@
     <div class="card">
         <div class="title_block">
             <div class="title">{{ title }}</div>
-            <div class="tag" :class="tagClasses()">{{ tag }}</div>
+            <div class="tag" :class="tagClasses">{{ tag }}</div>
         </div>
         <p class="card_txt">
             {{ description }}
