@@ -1,7 +1,7 @@
 <template>
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p"></i18n>
+        <i18n path="intro" tag="p" class="intro"></i18n>
         <div v-for="keynote in keynotesData" :key="keynote.id">
             <div class="keynote__photo">
                 <img
@@ -157,6 +157,11 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.intro {
+    font-size: 18px;
+    line-height: 33px;
+}
+
 .keynote__photo {
     @apply h-32 w-32 mx-auto my-6;
 }
@@ -167,14 +172,16 @@ export default {
 }
 
 .keynote__name {
-    @apply font-black text-center text-base py-2;
+    @apply font-black text-center py-2;
     color: #c2a53a;
+    font-size: 18px;
     font-family: 'Noto Serif TC', serif;
 }
 
 .keynote__title {
-    @apply font-black text-center text-base py-2;
+    @apply font-black text-center py-2;
     color: #c2a53a;
+    font-size: 18px;
     font-family: 'Noto Serif TC', serif;
 }
 

@@ -48,7 +48,7 @@ export default {
 }
 .tabs__headers > .header {
     @apply inline-block ml-1 py-0.5 md:py-2 px-1 md:px-4;
-    @apply text-xs md:text-sm text-center font-bold;
+    @apply text-xs md:text-sm text-center font-black;
     @apply border rounded-t-lg bg-transparent cursor-pointer;
     color: #e6ba17;
     border-color: #c2a53a;
