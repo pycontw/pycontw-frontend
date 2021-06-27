@@ -136,6 +136,23 @@ export default {
             return data[attributeName]
         },
     },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('intro'),
+                },
+            ],
+        }
+    },
 }
 </script>
 
