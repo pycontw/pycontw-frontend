@@ -50,7 +50,7 @@ export default {
                 {
                     hid: 'og:image',
                     property: 'og:image',
-                    content: '/2021/og-img.jpg',
+                    content: require('@/static/og-img.jpg'),
                 },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
             ],
