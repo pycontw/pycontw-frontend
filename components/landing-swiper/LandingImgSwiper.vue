@@ -23,7 +23,7 @@
                     <div
                         ref="slide"
                         class="swiper-slide"
-                        :data-src="getThumbnailPath(imgName)"
+                        :data-src="getImgPath('thumbnail', imgName)"
                         @mousedown="imgMouseDown($event, groupIndex, imgName)"
                         @touchstart="imgTouchStart($event, groupIndex, imgName)"
                     ></div>
@@ -47,14 +47,9 @@ export default {
                 imgs: [],
                 index: null,
             },
-            imgGroups: [
-                ['1-1', '1-2', '1-3', '1-4', '1-5', '1-6', '1-7', '1-8', '1-9'],
-                ['2-1', '2-2', '2-3', '2-4', '2-5', '2-6', '2-7', '2-8'],
-                ['3-1', '3-2', '3-3', '3-4', '3-5', '3-6', '3-7', '3-8'],
-            ],
-            imgPath: '/2021/img/landing-past-img/', // in dev mode, replace to /img/landing-past-img/
-            oriImgPath: 'origin/',
-            thumbnailPath: 'thumbnail/',
+            imgGroups: [10, 8, 8].map((length, i) =>
+                Array.from({ length }).map((value, j) => `${i + 1}-${j + 1}`),
+            ),
             relXCoords: [0, -105, 0], // init position
             limitXCoords: [0, 0, 0], // init
             shiftSetting: {
@@ -84,14 +79,11 @@ export default {
         }
     },
     methods: {
-        getOriImgPath(imgName) {
-            return `${this.imgPath + this.oriImgPath + imgName}.jpg`
-        },
-        getThumbnailPath(imgName) {
-            return `${this.imgPath + this.thumbnailPath + imgName}.jpg`
+        getImgPath(type, name) {
+            return require(`@/static/img/landing-past-img/${type}/${name}.jpg`)
         },
         openLightBox(imgName) {
-            const imageDir = this.getOriImgPath(imgName)
+            const imageDir = this.getImgPath('origin', imgName)
             this.lightBoxSettings.imgs = [imageDir]
             this.lightBoxSettings.index = 0
         },
