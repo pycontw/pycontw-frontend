@@ -1,8 +1,8 @@
 <template>
     <div class="landingFocusInfo flex flex-col items-center font-serif">
-        <div class="landingFocusInfo__temporal">8/21</div>
+        <div class="landingFocusInfo__temporal">10/2</div>
         <div class="landingFocusInfo__till"></div>
-        <div class="landingFocusInfo__temporal">8/22</div>
+        <div class="landingFocusInfo__temporal">10/3</div>
     </div>
 </template>
 
