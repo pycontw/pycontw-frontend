@@ -1,5 +1,5 @@
 <template>
-    <div class="video-container">
+    <div class="aspect-w-16 aspect-h-9">
         <iframe
             :src="`https://www.youtube.com/embed/${videoId}`"
             frameborder="0"
@@ -17,9 +17,3 @@ export default {
     },
 }
 </script>
-
-<style lang="postcss" scoped>
-.video-container {
-    @apply aspect-w-16 aspect-h-9;
-}
-</style>
