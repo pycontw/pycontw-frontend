@@ -77,9 +77,11 @@
                             </ext-link>
                         </div>
                     </div>
-                </tab>
-                <tab v-if="!!keynote.youtube_id.length" :title="$t('video')">
-                    <youtube :video-id="keynote.youtube_id"> </youtube>
+                    <youtube
+                        v-if="!!keynote.youtube_id.length"
+                        :video-id="keynote.youtube_id"
+                    >
+                    </youtube>
                 </tab>
                 <tab v-if="!!keynote.slido.length" title="Slido">
                     <iframe
