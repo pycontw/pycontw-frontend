@@ -161,11 +161,11 @@ export default {
 }
 
 .bg-dark-primary {
-    background: #212121;
+    background: #0e0d1c;
 }
 
 .bg-dark-secondary {
-    background-color: #2b2b2b;
+    background-color: #18152d;
 }
 
 .bg-blue-primary {

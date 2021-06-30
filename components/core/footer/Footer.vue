@@ -22,36 +22,7 @@
                 </div>
             </div>
             <footer-history />
-            <div class="w-full flex justify-center items-center flex-wrap">
-                <footer-icon
-                    href="https://pycontw.blogspot.tw/"
-                    :icon="['fab', 'blogger']"
-                />
-                <footer-icon
-                    href="https://www.facebook.com/pycontw"
-                    :icon="['fab', 'facebook']"
-                />
-                <footer-icon
-                    href="https://t.me/pycontw_chat"
-                    :icon="['fab', 'telegram']"
-                />
-                <footer-icon
-                    href="https://twitter.com/pycontw"
-                    :icon="['fab', 'twitter-square']"
-                ></footer-icon>
-                <footer-icon
-                    href="https://www.youtube.com/PyConTaiwan"
-                    :icon="['fab', 'youtube-square']"
-                />
-                <footer-icon
-                    href="mailto:organizers@pycon.tw"
-                    :icon="['fas', 'envelope-square']"
-                />
-                <footer-icon
-                    href="https://discord.com/invite/94hgCQv"
-                    :icon="['fab', 'discord']"
-                />
-            </div>
+            <footer-icon />
         </div>
         <div
             class="w-full flex py-4 justify-center cursor-default bg-dark-primary"
