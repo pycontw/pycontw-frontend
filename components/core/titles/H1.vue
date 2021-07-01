@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-center">
         <h1
-            :class="`py-2 font-medium leading-loose text-lg mb-3 ${langSpacing} md:text-2xl lg:text-2xl md:mb-9 lg:mb-9`"
+            :class="`py-2 font-semibold leading-loose text-lg mb-3 ${langSpacing} md:text-2xl lg:text-2xl md:mb-9 lg:mb-9`"
         >
             {{ title }}
         </h1>
