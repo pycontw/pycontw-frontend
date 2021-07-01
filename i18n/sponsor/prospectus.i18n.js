@@ -47,72 +47,94 @@ export default genI18nMessages({
 
         'package-title': 'Sponsorship Packages',
         'package-diamond': [
-            'Diamond Level Sponsorship - USD$ 16,200 (Available: 1)',
+            'Diamond Level Sponsorship - USD$ 14,400 (Available: 1)',
             [
-                'Logo Alongside PyCon TW 2021 and Preeminent Branding',
-                'Room Branding / Signage on the Main Conference Room',
-                'Exclusive Co-Branding Lanyards',
+                'Two Virtual Booth',
+                'One Text Channel',
+                'One Voice Stage',
                 '30 Enterprise Tickets',
+                'Logo Alongside with PyCon TW 2021 on all Channels',
                 'Logos and Company Introduction on Website',
-                'High-Class Booth',
-                'One 30 mins Technical Talks',
-                'Social Media: 4 Posts',
-                'Job Recruitment Description on Website: 2 Posts*',
                 'Logos on Opening of Recorded Videos*',
-                'Advertisements on APP During Conference',
-                'Speaker Banquets: 5 Tickets',
                 'Podcast Advertisement*: 1 episode',
+                'Logos on Special Thanks Letter',
+                'Logos during Talks',
+                'One 30 mins Technical Talks*',
                 'Job Fair*',
+                'Job Recruitment Description on Website: 2 Posts',
+                'Message Delivering during Breaks: 6 posts',
+                'Social Media: 4 Posts',
+                'Text Message on Gerneral Channel: 6 posts',
+                'Included in Attendee Letter',
             ],
         ],
         'package-platinum': [
-            'Platinum Level Sponsorship - USD$ 8,100 (Available: 2)',
+            'Platinum Level Sponsorship - USD$ 7,200 (Available: 1)',
             [
+                'Two Virtual Booth',
+                'One Text Channel',
+                'One Voice Stage',
                 '12 Enterprise Tickets',
+                'Naming on Keynote Channel',
                 'Logos and Company Introduction on Website',
-                'High-Class Booth',
-                'One 30 mins Technical Talks',
-                'Social Media: 4 Posts',
-                'Job Recruitment Description on Website: 2 Posts*',
                 'Logos on Opening of Recorded Videos*',
-                'Advertisements on APP During Conference',
-                'Speaker Banquets: 4 Tickets',
                 'Podcast Advertisement*: 1 episode',
+                'Logos on Special Thanks Letter',
+                'Logos during Talks',
+                'One 30 mins Technical Talks*',
                 'Job Fair*',
+                'Job Recruitment Description on Website: 2 Posts',
+                'Message Delivering during Breaks: 3 posts',
+                'Social Media: 4 Posts',
+                'Text Message on General Channel: 3 posts',
+                'Included in Attendee Letter',
             ],
         ],
         'package-gold': [
-            'Gold Level Sponsorship - USD$ 6,500 (Available: 2)',
+            'Gold Level Sponsorship - USD$ 6,120 (Available: 2)',
             [
+                'Two Virtual Booth',
+                'One Text Channel',
+                'One Voice Stage',
                 '8 Enterprise Tickets',
+                'Naming on Channel (other than keynote channel)',
                 'Logos and Company Introduction on Website',
-                'High-Class Booth',
-                'Social Media: 2 Posts',
-                'Job Recruitment Description on Website: 2 Posts*',
                 'Logos on Opening of Recorded Videos*',
-                'Advertisements on APP During Conference',
-                'Speaker Banquets: 3 Tickets',
+                'Logos on Special Thanks Letter',
+                'Logos during Talks',
                 'Job Fair*',
+                'Job Recruitment Description on Website: 2 Posts',
+                'Message Delivering during Breaks: 2 posts',
+                'Social Media: 2 Posts',
+                'Text Message on General Channel: 2 posts',
+                'Included in Attendee Letter',
             ],
         ],
         'package-silver': [
-            'Silver Level Sponsorship - USD$ 3,600 (Available: 8)',
+            'Silver Level Sponsorship - USD$ 3,240 (Available: 8)',
             [
+                'One Virtual Booth',
+                'One Text Channel',
                 '6 Enterprise Tickets',
                 'Logos and Company Introduction on Website',
-                'Regular Booth',
-                'Social Media: 1 posts',
-                'Job Recruitment Description on Website: 1 Posts*',
                 'Logos at the End of Recorded Videos*',
-                'Speaker Banquets: 2 people',
+                'Logos on Special Thanks Letter',
+                'Logos during Talks',
                 'Job Fair*',
+                'Job Recruitment Description on Website: 1 Posts',
+                'Message Delivering during Breaks: 1 posts',
+                'Social Media: 1 Posts',
+                'Text Message on General Channel: 1 posts',
             ],
         ],
         'package-bronze': [
             'Bronze Level Sponsorship - USD$ 1,300 (Available: 10)',
             [
-                '2 Enterprise Tickets',
+                '4 Enterprise Tickets',
+                'One Text Channel',
                 'Logos and Company Introduction on Website',
+                'Logos on Special Thanks Letter',
+                'Logos during Talks',
                 'Social Media: 1 posts',
             ],
         ],
@@ -127,16 +149,23 @@ export default genI18nMessages({
             'Bronze',
         ],
         'extraPurchase-table-body': [
-            [['Speaker Banquets', '(per person)'], 200, 200, 200, 200, 200],
-            ['Talks (30 Mins.)', 'Included', 'Included', 500, '-', '-'],
+            ['Talks (30 Mins.)', 'Included', 'Included', 900, '-', '-'],
             [['Social Media', '(per post)'], 200, 300, 300, 500, 600],
             [['JD', '(per post)'], 200, 300, 300, 500, 600],
             [
-                ['APP or Website AD'],
+                ['Message Delivering during Breaks'],
+                'Included',
                 'Included',
                 'Included',
                 'Included',
                 200,
+            ],
+            [
+                ['Text Message on General Channel'],
+                'Included',
+                'Included',
+                'Included',
+                'Included',
                 200,
             ],
             [
@@ -169,24 +198,22 @@ export default genI18nMessages({
         'specialSponsorship-sprint': [
             'Sprints Meetup - USD$ 500 (Limit: 1)',
             [
-                'Host physical meetup for open source project developing ' +
+                'Host virtual meetup for open source project developing ' +
                     'and is held out of the main conference',
                 'Roughly 40 attendees, most of them are experienced python developers',
-                'Pull up banner will be placed in the entrance',
+                'Logo revealed in virtual space',
                 'Sponsors will be introduced in both opening and closing',
             ],
         ],
         'specialSponsorship-youngPyckathon': [
-            'Young Pyckathon - USD$ 1,000 (Limit: 1)',
+            'Young Inspires - USD$ 720 (Limit: 1)',
             [
-                'Host hackathon for high school students ' +
-                    'exchanging programming learning experience',
                 'Event is held out of the main conference',
-                'Reserve up to 10 tickets (out of 30) and FAs ' +
-                    'for underprivileged students',
-                'Pull up banner will be placed in the entrance',
-                'Logos will be revealed in documentary video' +
-                    ', which will be included in slideshow during conference',
+                'Roughly 60 high school students as attendees',
+                'Sponsors will be introduced in both opening and closing',
+                'Sponsors will be mentioned in our social media post',
+                'Logo revealed during speech',
+                'Host short talk for 5-7 mins during breaks',
             ],
         ],
         'specialSponsorship-mask': [
@@ -199,17 +226,12 @@ export default genI18nMessages({
 
         'note-title': 'Notes',
         'note-items': [
+            'Recorded tech talks will be uploaded to several platforms, such as Youtube. ' +
+                'Whether logos will be shown in the opening or ending depends on the package.',
             'Podcast advertisement includes (i) 30s - 90s introduction ' +
                 'in the beginning of podcast, (ii) revealed in FB post along ' +
                 'with new episode announcement and (iii) revealed in ' +
                 'podcast description.',
-            'Job fair introduction is restricted to 5 minutes per organization.',
-            'PyCon TW 2021 will not produce a digital brochure. ' +
-                'All information will be posted on our website and app.',
-            'PyCon TW 2021 will not provide tote bag and physical brochure to our participants. ' +
-                'However, sponsors have the liberty to design, print and provide copies of their own handbook.',
-            'Recorded tech talks will be uploaded to several platforms, such as Youtube. ' +
-                'Whether logos will be shown in the opening or ending depends on the package.',
             'The tech talk is limited to 30 minutes whether it is included in package or extra purchased.',
             'To accommodate conference agenda, diamond, platinum package and tech talk sponsorship is only available before 15th June.',
             'The total amount of tech talks is limited to three talks. Tech talk includes in diamond and platinum package have higher priority ' +
@@ -217,10 +239,8 @@ export default genI18nMessages({
             'Each sponsor can have at most one tech talk. If the sponsor has special needs, please inform PyCon TW 2021. PyCon TW 2021 reserves the right of final decision.',
             'Regarding the purchase limit of tech talks, basically one sponsor is restricted to one purchase. ' +
                 'If the sponsor has special needs, please inform PyCon TW 2021. PyCon TW 2021 reserves the right of final decision.',
-            "Diamond Sponsorship package includes the title right which sponsor's logo will be displayed with PyCon TW 2021. " +
-                'PyCon TW 2021 reserves the right of final decision.',
-            'Diamond Sponsorship package includes the title right of the main conference room. ' +
-                'PyCon TW 2021 reserves the right of final decision.',
+            'Job fair introduction is restricted to 5 minutes per organization.',
+            'Naming on channel includes naming the channel and live messaging with colored',
             'Job recruitment description posted on website will be sorted by level of sponsorship packages. ' +
                 'If there are same levels, then it will be sorted by the timing of sponsorship.',
             "The sponsor of Community Financial Aid Sponsorship are allowed to acquire personal information under the aid receiver's agreement.",
@@ -351,13 +371,12 @@ export default genI18nMessages({
                 '虛擬攤位 1 個',
                 '專屬文字頻道 1 個',
                 '企業票 6 張',
-                '網站首頁公司宣傳 （標誌及介紹）',
+                '網站首頁公司宣傳 (標誌及介紹)',
+                '演講影片片尾宣傳*',
                 '實體紀念品感謝信露出',
                 '大會議程中輪播標誌露出',
-                '社群媒體宣傳 1 篇',
-                '網站徵才牆 1 篇',
-                '演講影片片尾宣傳*',
                 '徵才介紹*',
+                '網站徵才牆 1 篇',
                 '議程間推播訊息 1 則',
                 '社群媒體宣傳 1 篇',
                 '文字頻道訊息推播 1 則',
@@ -450,7 +469,7 @@ export default genI18nMessages({
             '技術演講的總額以三篇為上限，鑽石級和白金級優先於金級的加購，加購順序則是先來先得額滿為止。',
             '單一贊助商限制一個技術短講，若廠商有特殊需求，則由主辦方討論與決定，PyCon TW 2021 主辦方保留解釋權利。',
             '徵才介紹（Job Fair）， 每組 5 分鐘為限。',
-            '會議室冠名權包含直播頻道的冠名權以及在直播頻道中享有留言標註功能' +
+            '會議室冠名權包含直播頻道的冠名權以及在直播頻道中享有留言標註功能，' +
                 '根據贊助的方案決定是否為Keynote會議室。',
             '網站徵才牆排列順序按贊助等級排序，同級內按照確認贊助時序。',
             '社群參與財務補助認養方案之公司，得在被贊助之會眾同意下獲取其個人資訊。',
