@@ -64,7 +64,7 @@ export default genI18nMessages({
         og: {
             title: 'History of PyCon Taiwan',
             description:
-                'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Talent sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
+                'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Inspires sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
         },
     },
     'zh-hant': {
@@ -130,7 +130,7 @@ export default genI18nMessages({
         og: {
             title: '年會歷史',
             description:
-                '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Talent 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
+                '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Inspires 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
         },
     },
 })
