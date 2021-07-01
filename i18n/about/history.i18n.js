@@ -118,7 +118,7 @@ export default genI18nMessages({
                 '我們反思與檢討了 PyCon Taiwan 做為台灣在地社群交流年度平台的角色；在議程與活動的安排上，持續引入其他國家 Python Conference 的長處，並且試著活絡在地各 Python 社群間以及台灣與國際間的交流，持續實驗新的內容與各種革新措施。',
         },
         pycon2020: {
-            title: '2020「 南遷」',
+            title: '2020「南遷」',
             content:
                 '2020 我們首次嘗試將 PyCon Taiwan 搬到濁水溪以南的台南，以期能替更多台灣在地社群，注入新的活水與帶來更多彼此交流後不一樣的火花。',
         },
