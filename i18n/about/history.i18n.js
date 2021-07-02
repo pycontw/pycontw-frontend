@@ -64,7 +64,7 @@ export default genI18nMessages({
         og: {
             title: 'History of PyCon Taiwan',
             description:
-                'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Talent sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
+                'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Inspires sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
         },
     },
     'zh-hant': {
@@ -118,7 +118,7 @@ export default genI18nMessages({
                 '我們反思與檢討了 PyCon Taiwan 做為台灣在地社群交流年度平台的角色；在議程與活動的安排上，持續引入其他國家 Python Conference 的長處，並且試著活絡在地各 Python 社群間以及台灣與國際間的交流，持續實驗新的內容與各種革新措施。',
         },
         pycon2020: {
-            title: '2020「 南遷」',
+            title: '2020「南遷」',
             content:
                 '2020 我們首次嘗試將 PyCon Taiwan 搬到濁水溪以南的台南，以期能替更多台灣在地社群，注入新的活水與帶來更多彼此交流後不一樣的火花。',
         },
@@ -130,7 +130,7 @@ export default genI18nMessages({
         og: {
             title: '年會歷史',
             description:
-                '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Talent 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
+                '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Inspires 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
         },
     },
 })
