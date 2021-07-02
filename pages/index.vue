@@ -210,12 +210,12 @@ export default {
 }
 
 .bulletin-title {
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif TC', serif;
     color: #f3cc39;
 }
 
 .sponsor-title {
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif TC', serif;
     color: #f3cc39;
 }
 </style>

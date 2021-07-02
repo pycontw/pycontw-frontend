@@ -21,7 +21,7 @@ export default {
 <style lang="postcss" scoped>
 .sponsorCardCollection__title {
     @apply mt-12 mb-8 mx-1 text-xl;
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif TC', serif;
 }
 
 .sponsorCardCollection__cardContainer {
