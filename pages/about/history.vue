@@ -9,7 +9,7 @@
             </template>
             <template #text>
                 <core-h1 :title="$t('title')"></core-h1>
-                <p class="w-full md:w-3/4 lg:w-3/4">
+                <p class="w-full md:w-3/4 lg:w-3/4 leading-6">
                     {{ $t('pageAbstract') }}
                 </p>
             </template>
