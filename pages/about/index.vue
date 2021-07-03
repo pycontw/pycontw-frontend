@@ -12,13 +12,13 @@
                 <p
                     v-for="(content, i) in $t('pageAbstract')"
                     :key="`abstract_${i}`"
-                    class="w-full md:w-3/4 lg:w-3/4"
+                    class="w-full md:w-3/4 lg:w-3/4 leading-6"
                 >
                     {{ content }}
                 </p>
             </template>
         </banner>
-        <div class="flex flex-wrap justify-center mx-2 my-3">
+        <div class="flex flex-wrap justify-center mx-2 my-7">
             <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
                 <div
                     class="w-32 md:w-56 lg:w-56 h-24 md:h-40 lg:h-40 bg-contain bg-no-repeat mx-2 my-3"
