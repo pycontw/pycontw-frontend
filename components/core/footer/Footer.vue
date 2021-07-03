@@ -5,9 +5,9 @@
         <div class="w-full p-10">
             <div class="h-24 flex justify-center">
                 <div class="flex flex-col items-center">
-                    <locale-link to="/about/code-of-conduct" class="my-2">
+                    <!-- <locale-link to="/about/code-of-conduct" class="my-2">
                         {{ $t('codeOfConduct') }}
-                    </locale-link>
+                    </locale-link> -->
                     <locale-link to="/about/staff" class="my-2">{{
                         $t('staff')
                     }}</locale-link>

@@ -31,6 +31,7 @@ export default genI18nMessages({
         venue: 'Venue',
         covid19Guidelines: 'COVID-19 Guidelines',
         signIn: 'Sign In',
+        codeOfConduct: 'Code of Conduct',
     },
     'zh-hant': {
         about: '關於',
@@ -62,5 +63,6 @@ export default genI18nMessages({
         venue: '會場',
         covid19Guidelines: 'COVID-19 防疫守則',
         signIn: '登入',
+        codeOfConduct: '行為準則',
     },
 })
