@@ -59,7 +59,7 @@
             <p class="h3 my-2 text-base md:text-lg lg:text-lg">
                 {{ $t('activityTitle') }}
             </p>
-            <div class="flex items-center justify-evenly">
+            <div class="flex items-center justify-evenly my-10">
                 <i18n
                     path="kindsOFTalk"
                     tag="span"
@@ -89,7 +89,7 @@
                     </template>
                 </i18n>
             </div>
-            <p class="w-full text-xs md:text-base lg:text-base">
+            <p class="w-full text-xs md:text-base lg:text-base leading-6">
                 {{ $t('activityDesc') }}
             </p>
             <ul class="m-0 md:m-12 lg:m-12 text-xs md:text-base lg:text-base">
