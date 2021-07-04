@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 .intro {
-    position: relative;
+    @apply relative font-serif;
 }
 
 .intro-milestones {

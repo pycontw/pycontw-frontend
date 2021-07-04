@@ -95,8 +95,7 @@ export default {
 
 <style lang="postcss" scoped>
 .community-title {
-    @apply mt-1 mb-4 font-bold text-xl cursor-pointer;
-    font-family: 'Noto Serif TC';
+    @apply mt-1 mb-4 font-serif font-bold text-xl cursor-pointer;
     color: #c2a53a;
 }
 .box {

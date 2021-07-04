@@ -16,6 +16,6 @@ export default {
 
 <style scoped>
 .description {
-    @apply pt-12;
+    @apply pt-12 font-serif;
 }
 </style>

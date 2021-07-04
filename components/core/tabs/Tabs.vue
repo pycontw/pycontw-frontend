@@ -44,7 +44,7 @@ export default {
 
 <style lang="postcss" scoped>
 .tabs__headers {
-    @apply ml-3;
+    @apply ml-3 font-serif;
 }
 .tabs__headers > .header {
     @apply inline-block ml-1 py-2 px-2;
@@ -52,7 +52,6 @@ export default {
     @apply border rounded-t-lg bg-transparent cursor-pointer;
     color: #e6ba17;
     border-color: #c2a53a;
-    font-family: 'Noto Serif TC', serif;
     min-width: 20%;
     @media (min-width: 767px) {
         min-width: 110px;

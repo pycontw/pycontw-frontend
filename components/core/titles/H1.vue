@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center">
+    <div class="flex justify-center font-serif">
         <h1
             :class="`py-2 font-semibold leading-loose text-lg mb-3 ${langSpacing} md:text-2xl lg:text-2xl md:mb-9 lg:mb-9`"
         >
@@ -28,7 +28,6 @@ export default {
 </script>
 <style scoped>
 h1 {
-    font-family: 'Noto Serif TC';
     color: #f3cc39;
 }
 </style>

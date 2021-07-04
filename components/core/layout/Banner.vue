@@ -1,5 +1,5 @@
 <template>
-    <div class="flex w-full flex-1">
+    <div class="flex font-serif font-semibold w-full flex-1">
         <div
             class="image hidden md:block lg:block w-full md:w-3/6 lg:w-3/6 md:h-64 lg:h-64"
         >

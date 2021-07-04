@@ -242,7 +242,7 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    font-family: 'Noto Serif TC';
+    @apply font-serif;
     color: #c2a53a;
 }
 </style>

@@ -173,9 +173,6 @@ export default {
 }
 
 .title {
-    font-family: 'Quicksand', 'Source Sans Pro', -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-        sans-serif;
     display: block;
     font-weight: 300;
     font-size: 100px;
@@ -196,9 +193,8 @@ export default {
 }
 
 .intro-section h2.intro-title {
-    @apply text-center text-3xl mt-8 mb-16 font-bold;
+    @apply mt-8 mb-16 font-serif font-bold text-center text-3xl;
     color: #e6ba17;
-    font-family: 'Noto Serif TC';
     @media (max-width: 767px) {
         @apply mt-2 mb-8 text-2xl;
     }
@@ -210,12 +206,12 @@ export default {
 }
 
 .bulletin-title {
-    font-family: 'Noto Serif TC', serif;
+    @apply font-serif;
     color: #f3cc39;
 }
 
 .sponsor-title {
-    font-family: 'Noto Serif TC', serif;
+    @apply font-serif;
     color: #f3cc39;
 }
 </style>

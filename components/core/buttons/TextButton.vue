@@ -65,6 +65,7 @@ export default {
 
 <style scoped>
 .core-button {
+    @apply font-sans;
     outline: none;
     background-color: transparent;
 }
