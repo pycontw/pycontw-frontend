@@ -14,10 +14,16 @@
                 >
                     <text-button
                         to="/sponsor"
-                        class="mb-8 self-start md:mb-0 md:self-center"
+                        class="hidden md:block md:mb-0 md:self-center"
+                        large
                     >
                         {{ $t('sponsor') }}
                     </text-button>
+                    <text-button
+                        to="/sponsor"
+                        class="block mb-8 self-start md:hidden"
+                        >{{ $t('sponsor') }}</text-button
+                    >
                     <landing-focus-slogan />
                 </div>
             </div>
