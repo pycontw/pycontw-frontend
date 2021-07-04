@@ -195,6 +195,7 @@ export default {
 
 .keynote__extLink {
     @apply font-bold;
+    color: #e6ba17;
 }
 
 .keynote__extLink:hover {
