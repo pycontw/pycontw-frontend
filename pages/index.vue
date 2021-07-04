@@ -25,17 +25,17 @@
 
         <landing-img-swiper />
 
-        <div class="intro-section">
-            <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
-            <intro></intro>
-        </div>
-
         <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
             <h1 class="bulletin-title">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
 
-        <i18n-page-wrapper class="pt-12">
+        <div class="intro-section">
+            <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
+            <intro></intro>
+        </div>
+
+        <i18n-page-wrapper class="sponsor-section pt-12">
             <h1 class="sponsor-title">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
                 v-for="(leveledSponsors, i) in sponsorsData"
@@ -138,58 +138,12 @@ export default {
     background-size: cover;
 }
 
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 .text-golden {
     color: #c2a53a;
 }
 
-.bg-golden-primary {
-    background: #c2a53a;
-}
-
-.bg-dark-primary {
-    background: #0e0d1c;
-}
-
-.bg-dark-secondary {
-    background-color: #18152d;
-}
-
 .bg-blue-primary {
     background-color: #121023;
-}
-
-.title {
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-}
-
-.links {
-    padding-top: 15px;
 }
 
 .intro-section h2.intro-title {
@@ -213,5 +167,8 @@ export default {
 .sponsor-title {
     @apply font-serif;
     color: #f3cc39;
+}
+.sponsor-section {
+    background-color: #121023;
 }
 </style>
