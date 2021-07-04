@@ -130,7 +130,7 @@ export default {
 
 .page-home .page-homeLandingFocus::after {
     position: absolute;
-    top: 0;
+    top: -48px;
     z-index: -10;
     content: '';
     background-image: url('~@/static/page-home-background.png');
