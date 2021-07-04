@@ -31,7 +31,8 @@ export default {
 
 <style scoped>
 .landingFocusInfo__temporal {
-    @apply inline-flex w-12 h-12 p-2 justify-center items-center rounded-full border;
-    border: 4px solid #c2a53a;
+    @apply inline-flex w-12 h-12 p-2 justify-center rounded-full;
+    color: #8c83f5;
+    border: 3px solid #8c83f5;
 }
 </style>
