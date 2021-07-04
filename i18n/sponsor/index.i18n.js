@@ -44,10 +44,10 @@ export default genI18nMessages({
             '為企業建立人才網絡',
         ],
         summary:
-            '歡迎參考 2021 PyCon Taiwan {prospectus}，以了解 2021 PyCon Taiwan 贊助方案，' +
+            '歡迎參考{prospectus}，以了解 2021 PyCon Taiwan 贊助方案，' +
             '或是{contact}，讓我們了解貴單位的需求！',
         terms: {
-            prospectus: '贊助書',
+            prospectus: '2021 PyCon Taiwan 贊助書',
             contact: '聯絡我們',
         },
         og: {
