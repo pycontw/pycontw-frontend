@@ -14,7 +14,7 @@
                 >
                     <text-button
                         to="/sponsor"
-                        class="mb-8 ml-12 self-start md:mb-0 md:self-center"
+                        class="mb-8 self-start md:mb-0 md:self-center"
                     >
                         {{ $t('sponsor') }}
                     </text-button>
