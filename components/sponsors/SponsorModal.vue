@@ -8,11 +8,11 @@
                     {{ context.name }}
                 </h1>
             </div>
-            <h2 class="lightBox__subtitle text-xl mt-6">{{ $t('about') }}</h2>
+            <h2 class="lightBox__subtitle">{{ $t('about') }}</h2>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ getAttributeByLocale('intro') }}</p>
             </div>
-            <div class="lightBox__buttons sm:mt-20">
+            <div class="lightBox__buttons">
                 <text-button :href="context.website_url">{{
                     $t('website')
                 }}</text-button>
@@ -99,15 +99,20 @@ export default {
 }
 
 .lightBox__subtitle {
+    @apply text-xl mt-7;
     color: #f3cc39;
 }
 
 .lightBox__intro {
-    @apply flex mt-2 mb-4 overflow-y-scroll;
+    @apply flex mt-3.5 mb-4 overflow-y-scroll;
     white-space: pre-line;
 }
 
 .lightBox__buttons {
-    @apply flex;
+    @apply flex mt-28;
+
+    @media (min-width: 415px) {
+        @apply mt-10;
+    }
 }
 </style>
