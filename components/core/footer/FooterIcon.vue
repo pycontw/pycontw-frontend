@@ -6,7 +6,11 @@
             :href="icon.link"
             class="core-footerLink"
         >
-            <img :src="icon.src" alt="Footer Icon" class="core-footerIcon" />
+            <img
+                :src="icon.src"
+                :alt="`${icon.src.split('/')[3].split('.')[0]} Footer Icon`"
+                class="core-footerIcon"
+            />
         </ext-link>
         <svg class="svg-filter">
             <defs>
@@ -87,10 +91,10 @@ export default {
     @apply hidden;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .core-footerIcon {
-        width: 28px;
-        height: 28px;
+        width: 33px;
+        height: 33px;
     }
 }
 </style>
