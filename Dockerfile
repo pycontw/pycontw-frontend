@@ -17,7 +17,7 @@ COPY plugins ./plugins
 COPY static ./static
 COPY store ./store
 COPY utils ./utils
-COPY nuxt.config.js .babelrc .env ./
+COPY nuxt.config.js tailwind.config.js .babelrc .env ./
 
 ENV ROUTER_BASE /2021/
 ENV BASE_URL pycontw-2021:8000
