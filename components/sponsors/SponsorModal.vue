@@ -12,7 +12,7 @@
             <div class="lightBox__intro">
                 <p class="text-sm">{{ getAttributeByLocale('intro') }}</p>
             </div>
-            <div class="lightBox__buttons">
+            <div class="lightBox__buttons mt-28 sm:mt-10">
                 <text-button :href="context.website_url">{{
                     $t('website')
                 }}</text-button>
@@ -109,10 +109,6 @@ export default {
 }
 
 .lightBox__buttons {
-    @apply flex mt-28;
-
-    @media (min-width: 415px) {
-        @apply mt-10;
-    }
+    @apply flex;
 }
 </style>
