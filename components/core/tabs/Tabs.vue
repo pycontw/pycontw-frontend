@@ -44,16 +44,16 @@ export default {
 
 <style lang="postcss" scoped>
 .tabs__headers {
-    @apply ml-4;
+    @apply ml-3;
 }
 .tabs__headers > .header {
-    @apply inline-block ml-1 py-0.5 md:py-2 px-1 md:px-4;
-    @apply text-xs md:text-sm text-center font-bold;
+    @apply inline-block ml-1 py-2 px-2;
+    @apply text-sm text-center font-semibold;
     @apply border rounded-t-lg bg-transparent cursor-pointer;
     color: #e6ba17;
     border-color: #c2a53a;
     font-family: 'Noto Serif TC', serif;
-    min-width: 45px;
+    min-width: 20%;
     @media (min-width: 767px) {
         min-width: 110px;
     }
@@ -64,9 +64,9 @@ export default {
 }
 
 .tab {
-    @apply inline-block text-sm rounded-2xl min-w-full border-2;
-    color: #282828;
-    background: #e6ba17;
+    @apply inline-block text-xs md:text-sm rounded-2xl min-w-full border-2 bg-opacity-0;
+    line-height: 29px;
+    color: #c7c7c7;
     border-color: #c2a53a;
     box-shadow: 6px 6px 0 #c2a53a;
     padding: 20px;

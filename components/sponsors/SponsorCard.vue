@@ -1,5 +1,6 @@
 <template>
     <div v-show="!!logoUrl" :class="classObject">
+        <div class="dummy"></div>
         <img :src="logoUrl" alt="" />
         <div v-if="!!tag" class="sponsorCard__tag">
             {{ tag }}
@@ -28,11 +29,22 @@ export default {
 
 <style lang="postcss" scoped>
 .sponsorCard {
-    @apply w-40 h-40 relative flex flex-col justify-center items-center bg-white rounded-2xl;
+    @apply relative flex flex-col justify-center items-center bg-white rounded-2xl;
+    width: 40%;
+    @media (min-width: 767px) {
+        @apply w-40;
+    }
+}
+
+/* A trick to set height to be equal to width. */
+/* Checkout: https://stackoverflow.com/a/6615994/7969188 */
+.sponsorCard > .dummy {
+    margin-top: 100%;
 }
 
 .sponsorCard > img {
-    @apply object-contain w-full;
+    @apply absolute object-contain;
+    width: calc(100% - 10px);
     border-radius: inherit;
 }
 

@@ -31,12 +31,12 @@
         </div>
 
         <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
-            <h1 class="text-yellow-500">{{ $t('bulletinList') }}</h1>
+            <h1 class="bulletin-title">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
 
         <i18n-page-wrapper class="pt-12">
-            <h1 class="text-yellow-500">{{ $t('sponsorList') }}</h1>
+            <h1 class="sponsor-title">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
                 v-for="(leveledSponsors, i) in sponsorsData"
                 :key="`index_sponsor_level_${i}`"
@@ -130,7 +130,7 @@ export default {
 
 .page-home .page-homeLandingFocus::after {
     position: absolute;
-    top: 0;
+    top: -48px;
     z-index: -10;
     content: '';
     background-image: url('~@/static/page-home-background.png');
@@ -207,5 +207,15 @@ export default {
 .intro-section {
     @apply pt-8 pb-20;
     background-color: #16132a;
+}
+
+.bulletin-title {
+    font-family: 'Noto Serif TC', serif;
+    color: #f3cc39;
+}
+
+.sponsor-title {
+    font-family: 'Noto Serif TC', serif;
+    color: #f3cc39;
 }
 </style>

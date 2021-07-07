@@ -1,7 +1,7 @@
 <template>
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p"></i18n>
+        <i18n path="intro" tag="p" class="intro"></i18n>
         <div v-for="keynote in keynotesData" :key="keynote.id">
             <div class="keynote__photo">
                 <img
@@ -77,9 +77,11 @@
                             </ext-link>
                         </div>
                     </div>
-                </tab>
-                <tab v-if="!!keynote.youtube_id.length" :title="$t('video')">
-                    <youtube :video-id="keynote.youtube_id"> </youtube>
+                    <youtube
+                        v-if="!!keynote.youtube_id.length"
+                        :video-id="keynote.youtube_id"
+                    >
+                    </youtube>
                 </tab>
                 <tab v-if="!!keynote.slido.length" title="Slido">
                     <iframe
@@ -157,6 +159,11 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.intro {
+    @apply text-xs md:text-sm;
+    line-height: 33px;
+}
+
 .keynote__photo {
     @apply h-32 w-32 mx-auto my-6;
 }
@@ -167,13 +174,13 @@ export default {
 }
 
 .keynote__name {
-    @apply font-black text-center text-base py-2;
+    @apply font-semibold text-sm text-center py-2;
     color: #c2a53a;
     font-family: 'Noto Serif TC', serif;
 }
 
 .keynote__title {
-    @apply font-black text-center text-base py-2;
+    @apply font-semibold text-sm text-center py-2;
     color: #c2a53a;
     font-family: 'Noto Serif TC', serif;
 }
@@ -188,6 +195,7 @@ export default {
 
 .keynote__extLink {
     @apply font-bold;
+    color: #e6ba17;
 }
 
 .keynote__extLink:hover {
