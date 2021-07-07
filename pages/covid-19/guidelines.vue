@@ -2,12 +2,7 @@
     <i18n-page-wrapper class="covid19 px-10 md:px-20 lg:px-36 xl:px-60">
         <core-h1 :title="$t('pageTitle')" class="covid19__pageTitle"></core-h1>
         <div class="covid19__summary">
-            <p
-                v-for="(item, index) in $t('latestEditedTime')"
-                :key="`latestEditedTime_${index}`"
-            >
-                {{ item }}
-            </p>
+            <p>(CC BY-SA 3.0 TW) {{ $t('latestEdited') }}: 2021-06-15</p>
             <core-hr></core-hr>
             <p path="pageSummary">
                 {{ $t('pageSummary') }}
@@ -18,7 +13,10 @@
             <h3 path="guidelinesTitle">
                 {{ $t('guidelinesTitle') }}
             </h3>
-            <ol>
+            <p path="guidelinesSummary">
+                {{ $t('guidelinesSummary') }}
+            </p>
+            <ol class="px-5 md:px-10">
                 <li
                     v-for="(item, index) in $t('guidelinesContent')"
                     :key="`guidelinesContent_${index}`"
@@ -32,13 +30,12 @@
                 {{ $t('governmentDocumentsTitle') }}
             </h3>
             <ol>
-                <ul
-                    v-for="(item, index) in $t('governmentDocumentsContent')"
-                    :key="`governmentDocumentsContent_${index}`"
-                >
-                    <ext-link :href="item.link" highlight>{{
-                        item.title
-                    }}</ext-link>
+                <ul>
+                    <ext-link
+                        :href="governmentDocumentsContent.link"
+                        highlight
+                        >{{ governmentDocumentsContent.title }}</ext-link
+                    >
                 </ul>
             </ol>
         </div>
@@ -48,14 +45,12 @@
             </h3>
             <i18n tag="p" path="licenseContent">
                 <template #license>
-                    <ext-link
-                        href="https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW"
-                        highlight
-                        >&nbsp;{{ $t('otherLinks.license') }}&nbsp;</ext-link
+                    <ext-link :href="$t('license.href')" highlight
+                        >&nbsp;{{ $t('license.name') }}&nbsp;</ext-link
                     >
                 </template>
             </i18n>
-            <img :src="$t('licensePic')" alt="License Link" />
+            <img :src="licensePic" alt="License Link" />
         </div>
     </i18n-page-wrapper>
 </template>
@@ -76,19 +71,49 @@ export default {
         CoreHr,
         ExtLink,
     },
+    data() {
+        return {
+            governmentDocumentsContent: {
+                title: '衛生福利部疾病管制署-嚴重急性呼吸道症候群防治工作手冊',
+                link: 'https://www.cdc.gov.tw/File/Get/s8bfTZsDHo4V2CE2-ozrDg',
+            },
+            licensePic: 'https://i.imgur.com/cVjN760.jpg=200x',
+        }
+    },
 }
 </script>
 <style lang="postcss" scoped>
 .covid19 h3 {
-    @apply text-center pt-5 pb-5;
+    @apply text-center pt-5 pb-5 text-base;
     color: #9387ff;
 }
 
-.covid19__summary p {
-    @apply flex justify-center;
+.covid19 p,
+.covid19 ol,
+.covid19 a {
+    @apply text-sm;
 }
 
 .covid19__guidelines ol {
     @apply list-decimal;
+}
+
+.covid19__guidelines ol li {
+    @apply text-xs;
+}
+
+@media (min-width: 768px) {
+    .covid19 h3 {
+        @apply text-xl;
+    }
+
+    .covid19 p,
+    .covid19 ol,
+    .covid19 a {
+        @apply text-base;
+    }
+    .covid19__guidelines ol li {
+        @apply text-base;
+    }
 }
 </style>

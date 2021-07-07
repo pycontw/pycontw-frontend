@@ -12,7 +12,7 @@ export default genI18nMessages({
             'The promotion will adopt any changes required by CECC without further notifications. ' +
             'Please pay attention to our website in particular to relevant modifications. ' +
             'The final guideline will be announced on August 1st, 2021. ',
-        latestEditedTime: ['(CC BY-SA 3.0 TW)', 'Last Updated：2021-06-15'],
+        latestEdited: 'Last Updated',
         guidelinesTitle: 'Epidemic Prevention Guidelines',
         guidelinesSummary:
             'According to Taiwan Centers for Disease Control (CDC), ' +
@@ -26,18 +26,12 @@ export default genI18nMessages({
             'Avoid unnecessary travel between Level 2 and Level 3 alert zones. ',
         ],
         governmentDocumentsTitle: 'Government Documents',
-        governmentDocumentsContent: [
-            {
-                title: '衛生福利部疾病管制署-嚴重急性呼吸道症候群防治工作手冊',
-                link: 'https://www.cdc.gov.tw/File/Get/s8bfTZsDHo4V2CE2-ozrDg',
-            },
-        ],
         licenseTitle: 'License (CC BY-SA 3.0 TW)',
         licenseContent:
             'This document is licensed under an {license} license. ',
-        licensePic: 'https://i.imgur.com/cVjN760.jpg=200x',
-        otherLinks: {
-            license: 'Attribution-ShareAlike 3.0 Taiwan',
+        license: {
+            name: 'Attribution-ShareAlike 3.0 Taiwan',
+            href: 'https://creativecommons.org/licenses/by-sa/3.0/tw/deed.en',
         },
     },
     'zh-hant': {
@@ -50,7 +44,7 @@ export default genI18nMessages({
             '此防疫宣導將視疫情發展與我國中央疫情疫情指揮中心指示有所變動，' +
             '所有更動將不另通知，請在會前持續回來關心。' +
             '最終版預計在 2021 年 08 月 01 日發布。',
-        latestEditedTime: ['(CC BY-SA 3.0 TW)', '最後更新時間：2021-06-15'],
+        latestEdited: '最後更新時間',
         guidelinesTitle: '防疫要點',
         guidelinesSummary:
             '儘管本次會議改為線上舉行，仍請大家不要群聚，並落實防疫守則保護自己也保護他人。' +
@@ -64,17 +58,12 @@ export default genI18nMessages({
             '二三級警戒區域之間，避免不必要的移動。',
         ],
         governmentDocumentsTitle: '政府機關公文',
-        governmentDocumentsContent: [
-            {
-                title: '衛生福利部疾病管制署-嚴重急性呼吸道症候群防治工作手冊',
-                link: 'https://www.cdc.gov.tw/File/Get/s8bfTZsDHo4V2CE2-ozrDg',
-            },
-        ],
         licenseTitle: '授權 (CC BY-SA 3.0 TW)',
         licenseContent: '此文件採用 {license} 授權條款。',
-        licensePic: 'https://i.imgur.com/cVjN760.jpg=200x',
-        otherLinks: {
-            license: '姓名標示-相同方式分享 3.0 台灣',
+        license: {
+            name: '姓名標示-相同方式分享 3.0 台灣',
+            href:
+                'https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW',
         },
     },
 })
