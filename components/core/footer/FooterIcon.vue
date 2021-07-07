@@ -6,11 +6,7 @@
             :href="icon.link"
             class="core-footerLink"
         >
-            <img
-                :src="icon.src"
-                :alt="`${icon.src.split('/')[3].split('.')[0]} Footer Icon`"
-                class="core-footerIcon"
-            />
+            <img :src="icon.src" :alt="icon.altName" class="core-footerIcon" />
         </ext-link>
         <svg class="svg-filter">
             <defs>
@@ -43,30 +39,37 @@ export default {
                 {
                     src: '/img/footer/Blog.svg',
                     link: 'https://pycontw.blogspot.tw/',
+                    altName: 'Blog Footer Icon',
                 },
                 {
                     src: '/img/footer/Facebook.svg',
                     link: 'https://www.facebook.com/pycontw',
+                    altName: 'Facebook Footer Icon',
                 },
                 {
                     src: '/img/footer/Telegram.svg',
                     link: 'https://t.me/pycontw_chat',
+                    altName: 'Telegram Footer Icon',
                 },
                 {
                     src: '/img/footer/Twitter.svg',
                     link: 'https://twitter.com/pycontw',
+                    altName: 'Twitter Footer Icon',
                 },
                 {
                     src: '/img/footer/Email.svg',
                     link: 'mailto:organizers@pycon.tw',
+                    altName: 'Email Footer Icon',
                 },
                 {
                     src: '/img/footer/Youtube.svg',
                     link: 'https://www.youtube.com/PyConTaiwan',
+                    altName: 'Youtube Footer Icon',
                 },
                 {
                     src: '/img/footer/Discord.svg',
                     link: 'https://discord.com/invite/94hgCQv',
+                    altName: 'Discord Footer Icon',
                 },
             ],
         }
