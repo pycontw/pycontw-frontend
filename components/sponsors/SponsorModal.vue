@@ -4,15 +4,15 @@
             <div class="lightBox__closeButton" @click="close">✕</div>
             <div class="lightBox__title">
                 <sponsor-card :logo-url="context.logo_url" small></sponsor-card>
-                <h1 class="text-xl mx-8 border-b-8 border-solid">
+                <h1 class="text-xl mx-8">
                     {{ context.name }}
                 </h1>
             </div>
-            <h2 class="text-xl text-yellow-500 mt-4">{{ $t('about') }}</h2>
+            <h2 class="lightBox__subtitle">{{ $t('about') }}</h2>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ getAttributeByLocale('intro') }}</p>
             </div>
-            <div class="lightBox__buttons">
+            <div class="lightBox__buttons mt-28 sm:mt-10">
                 <text-button :href="context.website_url">{{
                     $t('website')
                 }}</text-button>
@@ -70,7 +70,7 @@ export default {
 }
 
 .lightBox {
-    @apply flex flex-col px-8 py-4 rounded-2xl border-4 border-yellow-500;
+    @apply flex flex-col px-8 py-4 rounded-2xl border-4;
     width: 95%;
     padding: 32px 28px 28px 32px;
     @media (min-width: 415px) {
@@ -79,12 +79,14 @@ export default {
     }
     height: 80%;
     background-color: #121023;
+    border-color: #f3cc39;
 }
 
 .lightBox__closeButton {
-    @apply relative flex justify-end text-yellow-500 cursor-pointer;
+    @apply relative flex justify-end cursor-pointer;
     top: -24px;
     right: -12px;
+    color: #f3cc39;
 
     @media (min-width: 415px) {
         top: -40px;
@@ -96,8 +98,13 @@ export default {
     @apply flex items-center;
 }
 
+.lightBox__subtitle {
+    @apply text-xl mt-7;
+    color: #f3cc39;
+}
+
 .lightBox__intro {
-    @apply flex mb-4 overflow-y-scroll;
+    @apply flex mt-3.5 mb-4 overflow-y-scroll;
     white-space: pre-line;
 }
 

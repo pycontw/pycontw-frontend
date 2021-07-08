@@ -28,8 +28,7 @@ export default {
 
 <style scoped>
 .milestone {
-    @apply text-center font-bold;
-    font-family: 'Noto Serif TC';
+    @apply text-center font-bold font-serif;
 }
 
 .milestone__achievement,

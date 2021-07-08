@@ -1,6 +1,6 @@
 <template>
     <i18n-page-wrapper>
-        <h1>2021 {{ $t('title') }}</h1>
+        <core-h1 :title="`2021 ${$t('title')}`"></core-h1>
         <div
             v-for="(contents, i) in $t('contents')"
             :key="`privacy_policy_contents_${i}`"
@@ -42,6 +42,7 @@
 
 <script>
 import i18n from '@/i18n/about/privacy-policy.i18n'
+import CoreH1 from '@/components/core/titles/H1'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 
@@ -50,6 +51,7 @@ export default {
     name: 'PagePrivacyPolicy',
     components: {
         I18nPageWrapper,
+        CoreH1,
         ExtLink,
     },
 }

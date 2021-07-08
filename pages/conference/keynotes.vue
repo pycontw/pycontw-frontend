@@ -174,15 +174,13 @@ export default {
 }
 
 .keynote__name {
-    @apply font-semibold text-sm text-center py-2;
+    @apply font-serif font-semibold text-sm text-center py-2;
     color: #c2a53a;
-    font-family: 'Noto Serif TC', serif;
 }
 
 .keynote__title {
-    @apply font-semibold text-sm text-center py-2;
+    @apply font-serif font-semibold text-sm text-center py-2;
     color: #c2a53a;
-    font-family: 'Noto Serif TC', serif;
 }
 
 .keynote__tabs {

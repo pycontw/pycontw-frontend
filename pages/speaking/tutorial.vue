@@ -1,6 +1,6 @@
 <template>
     <i18n-page-wrapper>
-        <h1>{{ $t('title') }}</h1>
+        <core-h1 :title="$t('title')"></core-h1>
         <i18n
             v-for="(content, i) in $t('intro')"
             :key="`tutorial_intro_${i}`"
@@ -47,6 +47,7 @@
 
 <script>
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
+import CoreH1 from '@/components/core/titles/H1'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import i18n from '@/i18n/speaking/tutorial.i18n'
@@ -56,6 +57,7 @@ export default {
     name: 'PageSpeakingTutorial',
     components: {
         I18nPageWrapper,
+        CoreH1,
         LocaleLink,
         ExtLink,
     },

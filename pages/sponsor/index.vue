@@ -1,6 +1,6 @@
 <template>
     <i18n-page-wrapper>
-        <h1>{{ $t('title') }}</h1>
+        <core-h1 :title="$t('title')"></core-h1>
         <i18n path="intro.0" tag="p"></i18n>
         <i18n path="intro.1" tag="p"></i18n>
         <i18n path="intro.2" tag="p"></i18n>
@@ -29,6 +29,7 @@
 
 <script>
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
+import CoreH1 from '@/components/core/titles/H1'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import i18n from '@/i18n/sponsor/index.i18n'
@@ -38,6 +39,7 @@ export default {
     name: 'PageSponsor',
     components: {
         I18nPageWrapper,
+        CoreH1,
         ExtLink,
         LocaleLink,
     },

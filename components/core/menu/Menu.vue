@@ -20,7 +20,7 @@ export default {
     },
     data() {
         return {
-            originalClasses: ['core-menu', 'bg-golden-primary'],
+            originalClasses: ['core-menu'],
         }
     },
     computed: {
