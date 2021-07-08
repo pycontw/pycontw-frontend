@@ -25,9 +25,7 @@
         <I18nPageWrapper class="pt-8 px-8 md:px-57 lg:px-56">
             <div class="flex flex-col w-full m-auto">
                 <div v-for="(rule, i) in $t('contents')" :key="`coc-rule-${i}`">
-                    <p
-                        class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                    >
+                    <p class="paragraph-title text-base md:text-lg lg:text-lg">
                         {{ rule.title }}
                     </p>
                     <p
@@ -86,7 +84,7 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    font-family: 'Noto Serif TC';
+    @apply font-serif font-bold;
     color: #c2a53a;
 }
 </style>
