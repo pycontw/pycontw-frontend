@@ -31,8 +31,7 @@
             :class="getPageClassesByPath('registration')"
         >
         </nav-bar-item-dropdown>
-        <!--
-        <nav-bar-item-dropdown
+        <!-- <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
             :class="getPageClassesByPath('conference')"
@@ -40,14 +39,14 @@
         </nav-bar-item-dropdown>
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}
-        </locale-link>
+        </locale-link> -->
         <locale-link
             to="/covid-19/guidelines"
             :class="getPageClassesByPath('covid-19', true)"
+            customized
         >
             {{ $t('covid19Guidelines') }}
         </locale-link>
-        -->
         <ext-link
             :href="signInUrl"
             :class="getPageClassesByPath('signIn', true)"
