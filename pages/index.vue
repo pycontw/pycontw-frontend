@@ -4,7 +4,7 @@
             <div
                 class="w-full flex flex-col items-start text-golden mx-4 sm:mx-8 md:mx-16"
             >
-                <div class="font-serif text-3xl lg:text-5xl">
+                <div class="font-serif text-3xl lg:text-5xl lg:leading-snug">
                     PyCon Taiwan <br />
                     10th Anniversary
                 </div>
