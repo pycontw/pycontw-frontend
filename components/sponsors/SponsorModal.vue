@@ -104,7 +104,7 @@ export default {
 }
 
 .lightBox__intro {
-    @apply flex mt-3.5 mb-4 overflow-y-scroll;
+    @apply flex mt-3.5 mb-4 overflow-y-auto;
     white-space: pre-line;
 }
 
