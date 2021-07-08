@@ -25,7 +25,7 @@
                 </li>
             </ol>
         </div>
-        <div class="covid19__governmentDocuments">
+        <!-- <div class="covid19__governmentDocuments">
             <h3 path="governmentDocumentsTitle">
                 {{ $t('governmentDocumentsTitle') }}
             </h3>
@@ -38,7 +38,7 @@
                     >
                 </ul>
             </ol>
-        </div>
+        </div> -->
         <div class="covid19__license">
             <h3 path="licenseTitle">
                 {{ $t('licenseTitle') }}
@@ -73,10 +73,10 @@ export default {
     },
     data() {
         return {
-            governmentDocumentsContent: {
-                title: '衛生福利部疾病管制署-嚴重急性呼吸道症候群防治工作手冊',
-                link: 'https://www.cdc.gov.tw/File/Get/s8bfTZsDHo4V2CE2-ozrDg',
-            },
+            // governmentDocumentsContent: {
+            //     title: '衛生福利部疾病管制署-嚴重急性呼吸道症候群防治工作手冊',
+            //     link: 'https://www.cdc.gov.tw/File/Get/s8bfTZsDHo4V2CE2-ozrDg',
+            // },
             licensePic: 'https://i.imgur.com/cVjN760.jpg=200x',
         }
     },
@@ -84,14 +84,14 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .covid19 h3 {
-    @apply text-center pt-5 pb-5 text-base;
+    @apply text-center pt-5 pb-5 text-base md:text-xl;
     color: #9387ff;
 }
 
 .covid19 p,
 .covid19 ol,
 .covid19 a {
-    @apply text-sm;
+    @apply text-sm md:text-base;
 }
 
 .covid19__guidelines ol {
@@ -99,21 +99,6 @@ export default {
 }
 
 .covid19__guidelines ol li {
-    @apply text-xs;
-}
-
-@media (min-width: 768px) {
-    .covid19 h3 {
-        @apply text-xl;
-    }
-
-    .covid19 p,
-    .covid19 ol,
-    .covid19 a {
-        @apply text-base;
-    }
-    .covid19__guidelines ol li {
-        @apply text-base;
-    }
+    @apply text-xs md:text-base;
 }
 </style>
