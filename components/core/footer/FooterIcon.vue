@@ -37,37 +37,37 @@ export default {
         return {
             iconArray: [
                 {
-                    src: '/img/footer/Blog.svg',
+                    src: require('~/static/img/footer/Blog.svg'),
                     link: 'https://pycontw.blogspot.tw/',
                     altName: 'Blog Footer Icon',
                 },
                 {
-                    src: '/img/footer/Facebook.svg',
+                    src: require('~/static/img/footer/Facebook.svg'),
                     link: 'https://www.facebook.com/pycontw',
                     altName: 'Facebook Footer Icon',
                 },
                 {
-                    src: '/img/footer/Telegram.svg',
+                    src: require('~/static/img/footer/Telegram.svg'),
                     link: 'https://t.me/pycontw_chat',
                     altName: 'Telegram Footer Icon',
                 },
                 {
-                    src: '/img/footer/Twitter.svg',
+                    src: require('~/static/img/footer/Twitter.svg'),
                     link: 'https://twitter.com/pycontw',
                     altName: 'Twitter Footer Icon',
                 },
                 {
-                    src: '/img/footer/Email.svg',
+                    src: require('~/static/img/footer/Email.svg'),
                     link: 'mailto:organizers@pycon.tw',
                     altName: 'Email Footer Icon',
                 },
                 {
-                    src: '/img/footer/Youtube.svg',
+                    src: require('~/static/img/footer/Youtube.svg'),
                     link: 'https://www.youtube.com/PyConTaiwan',
                     altName: 'Youtube Footer Icon',
                 },
                 {
-                    src: '/img/footer/Discord.svg',
+                    src: require('~/static/img/footer/Discord.svg'),
                     link: 'https://discord.com/invite/94hgCQv',
                     altName: 'Discord Footer Icon',
                 },
