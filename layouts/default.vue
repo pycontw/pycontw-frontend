@@ -61,9 +61,18 @@ export default {
                     href: '/2021/favicon.ico',
                 },
                 {
+                    rel: 'preconnect',
+                    href: 'https://fonts.googleapis.com',
+                },
+                {
+                    rel: 'preconnect',
+                    href: 'https://fonts.gstatic.com',
+                    crossorigin: 'anonymous',
+                },
+                {
                     rel: 'stylesheet',
                     href:
-                        'https://fonts.googleapis.com/css?family=Noto%20Serif%20TC',
+                        'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap',
                 },
 
                 {
@@ -78,8 +87,7 @@ export default {
 
 <style>
 html {
-    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    @apply font-sans;
     font-size: 20px;
     color: #c7c7c7;
     word-spacing: 1px;

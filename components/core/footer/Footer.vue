@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="w-full flex flex-col justify-between bg-dark-secondary text-golden"
+        class="core-footer w-full flex flex-col justify-between text-golden"
     >
         <div class="w-full p-10">
             <div class="h-24 flex justify-center">
@@ -25,7 +25,7 @@
             <footer-icon />
         </div>
         <div
-            class="w-full flex py-4 justify-center cursor-default bg-dark-primary"
+            class="core-footer__copyright w-full flex py-4 justify-center cursor-default"
         >
             © 2021 PyCon Taiwan
         </div>
@@ -49,4 +49,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.core-footer {
+    background-color: #18152d;
+}
+
+.core-footer__copyright {
+    background-color: #0e0d1c;
+}
+</style>

@@ -28,6 +28,14 @@ export default {
             type: Boolean,
             default: false,
         },
+        large: {
+            type: Boolean,
+            default: false,
+        },
+        small: {
+            type: Boolean,
+            default: false,
+        },
         rounded: {
             type: Boolean,
             default: true,
@@ -51,10 +59,16 @@ export default {
                 'core-button': true,
                 '--primary': this.primary,
                 '--secondary': this.secondary,
+                '--large': this.large,
+                '--medium': this.medium,
+                '--small': this.small,
                 '--rounded': this.rounded,
                 '--block': this.block,
                 '--is-link': this.isLink,
             }
+        },
+        medium() {
+            return !this.large && !this.small
         },
         isLink() {
             return this.href || this.to
@@ -65,6 +79,7 @@ export default {
 
 <style scoped>
 .core-button {
+    @apply font-sans;
     outline: none;
     background-color: transparent;
 }
@@ -74,15 +89,29 @@ export default {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 88px;
-    height: 2.25rem;
-    padding: 24px 40px;
     line-height: 1.25rem;
     border-radius: 5px;
     text-transform: uppercase;
     outline: none;
-    font-weight: 700;
-    font-size: 1rem;
+}
+
+.core-button.--large:not(.--is-link),
+.core-button.--large.--is-link > a {
+    @apply h-20 px-16 py-5 font-bold text-2xl border-4;
+    min-width: 128px;
+}
+
+.core-button.--medium:not(.--is-link),
+.core-button.--medium.--is-link > a {
+    @apply h-12 px-7 py-3.5 font-bold text-base border-4;
+    min-width: 108px;
+}
+
+.core-button.--small:not(.--is-link),
+.core-button.--small.--is-link > a {
+    @apply h-10 px-5 py-3 text-xs;
+    min-width: 80px;
+    border-width: 3px;
 }
 
 .core-button.--rounded:not(.--is-link),
@@ -93,14 +122,13 @@ export default {
 .core-button.--primary:not(.--is-link),
 .core-button.--primary.--is-link > a {
     color: #c2a53a;
-    border: 0.25rem solid #c2a53a;
+    border-color: currentColor;
 }
 
 .core-button.--secondary:not(.--is-link),
 .core-button.--secondary.--is-link > a {
     color: #c7c7c7;
-    border: 0.25rem solid #c7c7c7;
-    font-size: 0.8rem;
+    border-color: currentColor;
 }
 
 .core-button:not(.--is-link):hover,

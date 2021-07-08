@@ -12,7 +12,7 @@
                 <p
                     v-for="(content, i) in $t('pageAbstract')"
                     :key="`abstract_${i}`"
-                    class="w-full md:w-3/4 lg:w-3/4 leading-6"
+                    class="w-full font-serif md:w-3/4 lg:w-3/4 leading-6"
                 >
                     {{ content }}
                 </p>
@@ -192,14 +192,14 @@ export default {
 
 <style scoped>
 .h3 {
-    font-family: 'Noto Serif TC';
+    @apply font-serif;
     color: #d1d1d1;
 }
 .highlight {
     color: #c2a53a;
 }
 .paragraph-highlight {
-    font-family: 'Noto Serif TC';
+    @apply font-serif;
     color: #7568f6;
     text-shadow: 4px 6px 0px #4f4f4f;
     font-weight: bold;
