@@ -4,14 +4,6 @@ export default genI18nMessages({
     'en-us': {
         bulletins: [
             {
-                title: 'Volunteer',
-                description:
-                    'Get involved and make difference! ' +
-                    "Join us and let's make this place better!",
-                linkTitle: 'Join Us',
-                linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
-            },
-            {
                 title: 'PyCast',
                 description:
                     'Checkout our brand new podcast channel, PyCast. ' +
@@ -42,17 +34,26 @@ export default genI18nMessages({
                 linkTitle: 'Subscribe',
                 linkHref: 'https://www.youtube.com/c/pycontaiwan',
             },
+            {
+                title: 'Epidemic Prevention',
+                description:
+                    'Stay home, stay safe. ' +
+                    "Let's spread the knowledge, not the virus.",
+                linkTitle: 'Read',
+                linkTo: '/covid19_guidelines',
+            },
+            {
+                title: 'Volunteer',
+                description:
+                    'Get involved and make difference! ' +
+                    "Join us and let's make this place better!",
+                linkTitle: 'Join Us',
+                linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
+            },
         ],
     },
     'zh-hant': {
         bulletins: [
-            {
-                title: '志工招募',
-                description:
-                    '我們歡迎所有對 Python 有興趣的朋友一同加入，用行動支持 PyCon，讓這裡變得更好！',
-                linkTitle: '線上報名',
-                linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
-            },
             {
                 title: 'PyCast',
                 description:
@@ -80,6 +81,20 @@ export default genI18nMessages({
                     'PyCon 也有 YouTube 頻道了！歡迎訂閱我們～每年都會固定整理議程的錄影讓大家能一同觀看。',
                 linkTitle: '線上訂閱',
                 linkHref: 'https://www.youtube.com/c/pycontaiwan',
+            },
+            {
+                title: '防疫守則',
+                description:
+                    '病毒退散！讓我們一同線上參與 PyCon TW 盛會，阻隔病毒傳播！',
+                linkTitle: '閱讀',
+                linkTo: '/covid19_guidelines',
+            },
+            {
+                title: '志工招募',
+                description:
+                    '我們歡迎所有對 Python 有興趣的朋友一同加入，用行動支持 PyCon，讓這裡變得更好！',
+                linkTitle: '線上報名',
+                linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
             },
         ],
     },

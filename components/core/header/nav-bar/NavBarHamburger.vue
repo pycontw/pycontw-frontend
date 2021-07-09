@@ -49,12 +49,6 @@
                 :expanding="expandingItem === 'registration'"
                 @click.native="toggleAccordion('registration')"
             ></nav-bar-item-accordion>
-            <locale-link
-                class="core-navBarHamburgerSlideInMenu__item"
-                to="/covid-19/guidelines"
-                customized
-                >{{ $t('covid19Guidelines') }}</locale-link
-            >
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
