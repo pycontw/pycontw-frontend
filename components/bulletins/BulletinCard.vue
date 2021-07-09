@@ -4,7 +4,7 @@
             {{ title }}
         </h2>
         <p>{{ description }}</p>
-        <div class="mt-6 mb-2">
+        <div class="bulletinCard__button">
             <text-button :href="linkHref" :to="linkTo" secondary>{{
                 linkTitle
             }}</text-button>
@@ -48,8 +48,13 @@ export default {
     color: #4b4b4b;
 }
 
+.bulletinCard:hover {
+    @apply cursor-pointer;
+    border-color: #413f5a;
+}
+
 .bulletinCard > h2 {
-    @apply text-xl mt-4 mb-6;
+    @apply text-xl text-center mt-4 mb-6;
     color: #808080;
 }
 
@@ -61,5 +66,9 @@ export default {
     @apply mx-2;
     font-size: 0.8rem;
     color: #c7c7c7;
+}
+
+.bulletinCard__button {
+    @apply absolute mt-6 mb-2 bottom-3;
 }
 </style>
