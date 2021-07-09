@@ -6,36 +6,40 @@ export default genI18nMessages({
             {
                 title: 'Volunteer',
                 description:
-                    'Welcome friends who are interested in Python, support PyCon with action, and make this place better!',
-                linkTitle: 'Sign up',
+                    'Get involved and make difference! ' +
+                    "Join us and let's make this place better!",
+                linkTitle: 'Join Us',
                 linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
             },
             {
                 title: 'PyCast',
                 description:
-                    "There are podcasts for PyCon, and it's trendy! Teenagers are listening to PyCast now! Every episode is interesting!",
-                linkTitle: 'Go Listen',
+                    'Checkout our brand new podcast channel, PyCast. ' +
+                    'Our passion, your entertainment!',
+                linkTitle: 'Launch',
                 linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
             },
             {
                 title: 'Financial',
                 description:
-                    'You can apply for financial aid as long as you need it. We will help you to participate in the conference.',
+                    'We actively encourage people to apply for financial aid and ' +
+                    'welcome applications from students.',
                 linkTitle: 'Apply Now',
                 linkTo: '/registration/financial-aid',
             },
             {
                 title: 'Blog',
                 description:
-                    'Want to receive the latest news? Must not miss the blog, we post the latest information to the blog!',
-                linkTitle: 'Go and See',
+                    'Get the latest news of the conference in our blog!',
+                linkTitle: 'Learn More',
                 linkHref: 'https://pycontw.blogspot.com/',
             },
             {
                 title: 'YouTube',
                 description:
-                    'PyCon has a YouTube channel! Welcome to subscribe to us! We will update it so you can watch it together.',
-                linkTitle: 'Go and See',
+                    'Checkout all speeches on our channel. ' +
+                    "Don't forget to subscribe!",
+                linkTitle: 'Subscribe',
                 linkHref: 'https://www.youtube.com/c/pycontaiwan',
             },
         ],
