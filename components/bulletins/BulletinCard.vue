@@ -1,13 +1,26 @@
 <template>
     <div v-show="!!title" :class="classObject">
-        <h2>
-            {{ title }}
-        </h2>
-        <p>{{ description }}</p>
+        <div class="dummy"></div>
+        <div class="bulletinCard__content">
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
+        </div>
         <div class="bulletinCard__button">
-            <text-button :href="linkHref" :to="linkTo" secondary>{{
-                linkTitle
-            }}</text-button>
+            <text-button
+                :href="linkHref"
+                :to="linkTo"
+                secondary
+                class="hidden md:block"
+                >{{ linkTitle }}</text-button
+            >
+            <text-button
+                :href="linkHref"
+                :to="linkTo"
+                secondary
+                small
+                class="md:hidden"
+                >{{ linkTitle }}</text-button
+            >
         </div>
     </div>
 </template>
@@ -42,8 +55,11 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply h-64 relative flex flex-col items-center font-serif rounded-3xl border-4;
-    width: 11rem;
+    @apply relative flex flex-col items-center font-serif rounded-3xl border-4;
+    width: 47%;
+    @media (min-width: 415px) {
+        width: 11rem;
+    }
     border-color: #4b4b4b;
     color: #4b4b4b;
 }
@@ -53,22 +69,44 @@ export default {
     border-color: #413f5a;
 }
 
-.bulletinCard > h2 {
-    @apply text-xl text-center mt-4 mb-6;
+/* A trick to set height to be equal to width. */
+/* Checkout: https://stackoverflow.com/a/6615994/7969188 */
+.bulletinCard > .dummy {
+    margin-top: 200%;
+    @media (min-width: 370px) {
+        margin-top: 150%;
+    }
+}
+
+.bulletinCard__content {
+    @apply absolute;
+}
+
+.bulletinCard__content > h2 {
+    @apply text-base text-center mt-2 mb-3;
+    @media (min-width: 415px) {
+        @apply text-xl mt-4 mb-6;
+    }
     color: #808080;
 }
 
-.bulletinCard:hover > h2 {
+.bulletinCard__content:hover > h2 {
     color: #7568f6;
 }
 
-.bulletinCard > p {
+.bulletinCard__content > p {
     @apply mx-2;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #c7c7c7;
+    @media (min-width: 415px) {
+        font-size: 0.8rem;
+    }
 }
 
 .bulletinCard__button {
-    @apply absolute mt-6 mb-2 bottom-3;
+    @apply absolute bottom-2;
+    @media (min-width: 415px) {
+        @apply bottom-3;
+    }
 }
 </style>

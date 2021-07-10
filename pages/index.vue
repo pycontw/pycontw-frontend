@@ -31,7 +31,11 @@
 
         <landing-img-swiper />
 
-        <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
+        <i18n-page-wrapper
+            custom-x
+            custom-y
+            class="py-12 px-4 sm:px-10 md:px-12 lg:px-20 bg-blue-primary"
+        >
             <h1 class="bulletin-title">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
