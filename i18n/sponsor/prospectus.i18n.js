@@ -3,12 +3,15 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Sponsorship Prospectus',
+        contactTitle: 'Contact',
         contact: 'Contact: {mail} to Sponsorship Team of PyCon Taiwan 2021',
+        contactWindowsTitle: 'Contact person',
         contactWindows: [
             'PyCon Taiwan 2021 Chair, Wei Lee',
             'PyCon Taiwan 2021 Program Chair, Wen-Hua Ke',
             'PyCon Taiwan 2021 Sponsorship Director, Pin-Chun Wang',
         ],
+        introTitle: 'About Us',
         intro: [
             'PyCon Taiwan is the largest annual gathering for the community using and ' +
                 'developing the open-source Python programming language in Taiwan. "PyCon Taiwan" is a ' +
@@ -21,33 +24,35 @@ export default genI18nMessages({
                 'we are able to provide financial aid to needed attendees.',
             'We have several sponsorship packages including but not limited to the list below:',
         ],
-
+        statsTitle: 'Quick stats from the past',
         stats: [
-            'Quick stats from the past',
-            [
-                '675 attendees (latest PyConTW hosted in Taipei)',
-                '52% of attendees are software engineers. ' +
-                    'Others are: data scientists (11%), students (9%), managers (8%) etc',
-                '62% of attendees are Python users for 1-5 years, and ' +
-                    'around 15% have been using Python for 5-10 years.',
-            ],
+            '675 attendees (latest PyConTW hosted in Taipei)',
+            '52% of attendees are software engineers. ' +
+                'Others are: data scientists (11%), students (9%), managers (8%) etc',
+            '62% of attendees are Python users for 1-5 years, and ' +
+                'around 15% have been using Python for 5-10 years.',
         ],
-
+        importantDatesTitle: 'Conference Schedule',
+        importantDatesSubtitle: 'Taiwan timezone (UTC+8) if not specified',
         importantDates: [
-            'Conference Schedule',
-            'Taiwan timezone (UTC+8) if not specified',
-            [
-                'Call for Proposal: March 1st',
-                'Deadline of Call for Proposal: April 26th 23:59:59 ({AoE})',
-                'Schedule Announcement: June 27th',
-                'Job Fair: October 2nd (Sat)',
-                'Main Conference: October 2nd (Sat) ~ October 3rd (Sun)',
-            ],
+            'Call for Proposal: March 1st',
+            'Deadline of Call for Proposal: April 26th 23:59:59 ({AoE})',
+            'Schedule Announcement: June 27th',
+            'Job Fair: October 2nd (Sat)',
+            'Main Conference: October 2nd (Sat) ~ October 3rd (Sun)',
         ],
 
-        'package-title': 'Sponsorship Packages',
+        'package-title': [
+            'Sponsorship Packages',
+            'Level',
+            'Quota',
+            'Amount',
+            'Benefit',
+        ],
         'package-diamond': [
-            'Diamond Level Sponsorship - USD$ 14,400 (Available: 1)',
+            'Diamond Level',
+            '1',
+            'USD$ 14,400',
             [
                 'Two Virtual Booth',
                 'One Text Channel',
@@ -69,7 +74,9 @@ export default genI18nMessages({
             ],
         ],
         'package-platinum': [
-            'Platinum Level Sponsorship - USD$ 7,200 (Available: 1)',
+            'Platinum Level',
+            '1',
+            'USD$ 7,200',
             [
                 'Two Virtual Booth',
                 'One Text Channel',
@@ -91,7 +98,9 @@ export default genI18nMessages({
             ],
         ],
         'package-gold': [
-            'Gold Level Sponsorship - USD$ 6,120 (Available: 2)',
+            'Gold Level',
+            '2',
+            'USD$ 6,120',
             [
                 'Two Virtual Booth',
                 'One Text Channel',
@@ -111,7 +120,9 @@ export default genI18nMessages({
             ],
         ],
         'package-silver': [
-            'Silver Level Sponsorship - USD$ 3,240 (Available: 8)',
+            'Silver Level',
+            '8',
+            'USD$ 3,240',
             [
                 'One Virtual Booth',
                 'One Text Channel',
@@ -128,7 +139,9 @@ export default genI18nMessages({
             ],
         ],
         'package-bronze': [
-            'Bronze Level Sponsorship - USD$ 1,300 (Available: 10)',
+            'Bronze Level',
+            '10',
+            'USD$ 1,300',
             [
                 '4 Enterprise Tickets',
                 'One Text Channel',
@@ -186,9 +199,17 @@ export default genI18nMessages({
             ],
         ],
 
-        'specialSponsorship-title': 'Special Sponsorship Packages',
+        'specialSponsorship-title': [
+            'Special Sponsorship Packages',
+            'Level',
+            'Quota',
+            'Amount',
+            'Benefit',
+        ],
         'specialSponsorship-fa': [
-            'Community Financial Aid Sponsorship - USD$ 1,700 (Limit: 5)',
+            'Community Financial Aid',
+            '5',
+            'USD$ 1,700',
             [
                 'Provide financial aid to needed attendees.',
                 'Exclusive promotions to aid receivers.*',
@@ -196,7 +217,9 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-sprint': [
-            'Sprints Meetup - USD$ 500 (Limit: 1)',
+            'Sprints Meetup',
+            '1',
+            'USD$ 500',
             [
                 'Host virtual meetup for open source project developing ' +
                     'and is held out of the main conference',
@@ -206,7 +229,9 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-youngPyckathon': [
-            'Young Inspires - USD$ 720 (Limit: 1)',
+            'Young Inspires',
+            '1',
+            'USD$ 720',
             [
                 'Event is held out of the main conference',
                 'Roughly 60 high school students as attendees',
@@ -217,7 +242,9 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-mask': [
-            'Special Souvenirs Mask - USD$ 850 (Limit: 1)',
+            'Special Souvenirs Mask',
+            '1',
+            'USD$ 850',
             [
                 'Every attendee will rechieve 3 masks as welcome package',
                 'Logo will be reveal on masks',
@@ -261,12 +288,15 @@ export default genI18nMessages({
     },
     'zh-hant': {
         title: '贊助方案',
-        contact: '聯絡方式：電子信箱 {mail} 致「台灣 Python 年會贊助組」收',
+        contactTitle: '聯絡方式',
+        contact: '電子信箱 {mail} 致「台灣 Python 年會贊助組」收',
+        contactWindowsTitle: '聯絡人員',
         contactWindows: [
             '台灣 Python 年會 2021 大會主席 李唯',
             '台灣 Python 年會 2021 議程主席 柯彣樺',
             '台灣 Python 年會 2021 贊助總監 王品淳',
         ],
+        introTitle: '關於我們',
         intro: [
             '台灣 Python 年會，是每年在台灣舉辦、並且聚集了最多的在地的使用、開發 Python 的社群技術研討會。' +
                 '台灣 Python 年會是在 Python Software Foundation 授權下，由 Python 社群與財團法人開放文化基金會' +
@@ -278,31 +308,33 @@ export default genI18nMessages({
             '我們期待您的來訊洽詢，請隨時透過上方的聯繫方式與我們聯繫、洽談最適合您的贊助方式，' +
                 '以達到您想要在 Python 社群曝光、徵才或是單純回饋 Python 社群的初衷與期待。',
         ],
-
+        statsTitle: '快速總覽',
         stats: [
-            '快速總覽',
-            [
-                '出席人數 675（最近一次在台北舉辦的大會）',
-                '會眾以軟體工程師為主 (52%)，亦有會眾為：資料工程師 (11%)，學生 (9%)，主管 (8%)。',
-                '62% 的會眾為 Python 1~5 年的使用者，更有 15% 左右為 Python 5~10年的使用者',
-            ],
+            '出席人數 675（最近一次在台北舉辦的大會）',
+            '會眾以軟體工程師為主 (52%)，亦有會眾為：資料工程師 (11%)，學生 (9%)，主管 (8%)。',
+            '62% 的會眾為 Python 1~5 年的使用者，更有 15% 左右為 Python 5~10年的使用者',
         ],
-
+        importantDatesTitle: '大會重要日期',
+        importantDatesSubtitle: '若未註明則以台灣時區 (UTC+8) 為準',
         importantDates: [
-            '大會重要日期',
-            '若未註明則以台灣時區 (UTC+8) 為準',
-            [
-                '議程、課程 開放徵稿：3 月 1 日',
-                '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
-                '稿件錄取通知：6 月 27 日',
-                'Job Fair：10 月 2 日 (六)',
-                '研討會日：10 月 2 日 (六) 至 10 月 3 日 (日)',
-            ],
+            '議程、課程 開放徵稿：3 月 1 日',
+            '議程、課程 投稿截止：4 月 26 日 23:59:59 ({AoE})',
+            '稿件錄取通知：6 月 27 日',
+            'Job Fair：10 月 2 日 (六)',
+            '研討會日：10 月 2 日 (六) 至 10 月 3 日 (日)',
         ],
 
-        'package-title': '各級贊助方案',
+        'package-title': [
+            '各級贊助方案',
+            '贊助級別',
+            '名額',
+            '贊助金額',
+            '贊助福利',
+        ],
         'package-diamond': [
-            '鑽石級贊助 - 名額 1 名，贊助金額：400,000 元',
+            '鑽石級贊助',
+            '1名',
+            '400,000元',
             [
                 '虛擬攤位 2 個',
                 '專屬文字頻道 1 個',
@@ -324,7 +356,9 @@ export default genI18nMessages({
             ],
         ],
         'package-platinum': [
-            '白金級贊助 - 名額 1 名，贊助金額：200,000 元',
+            '白金級贊助',
+            '1名',
+            '200,000元',
             [
                 '虛擬攤位 2 個',
                 '專屬文字頻道 1 個',
@@ -346,7 +380,9 @@ export default genI18nMessages({
             ],
         ],
         'package-gold': [
-            '金級贊助 - 名額 2 名，贊助金額：170,000 元',
+            '金級贊助',
+            '2名',
+            '170,000元',
             [
                 '虛擬攤位 2 個',
                 '專屬文字頻道 1 個',
@@ -366,7 +402,9 @@ export default genI18nMessages({
             ],
         ],
         'package-silver': [
-            '銀級贊助 - 名額 8 名，贊助金額：90,000 元',
+            '銀級贊助',
+            '8名',
+            '90,000元',
             [
                 '虛擬攤位 1 個',
                 '專屬文字頻道 1 個',
@@ -383,7 +421,9 @@ export default genI18nMessages({
             ],
         ],
         'package-bronze': [
-            '銅級贊助 - 名額 10 名，贊助金額：40,000 元',
+            '銅級贊助',
+            '10名',
+            '40,000元',
             [
                 '企業票 4 張',
                 '專屬文字頻道 1 個',
@@ -404,7 +444,7 @@ export default genI18nMessages({
             '銅級',
         ],
         'extraPurchase-table-body': [
-            ['技術演講（30 分鐘）', '已包含', '已包含', 25000, '無', '無'],
+            ['技術演講 / 30分鐘', '已包含', '已包含', 25000, '無', '無'],
             ['社群媒體宣傳 / 篇', 6000, 9000, 9000, 15000, 18000],
             ['網站徵才牆 / 篇', 6000, 9000, 9000, 15000, 18000],
             ['議程間推播訊息', '已包含', '已包含', '已包含', '已包含', 6000],
@@ -419,10 +459,17 @@ export default genI18nMessages({
                 '滿 40 張九折',
             ],
         ],
-
-        'specialSponsorship-title': '特別贊助方案',
+        'specialSponsorship-title': [
+            '特別贊助方案',
+            '贊助級別',
+            '名額',
+            '贊助金額',
+            '贊助福利',
+        ],
         'specialSponsorship-fa': [
-            '社群參與財務補助認養 - 名額 5 名，單一贊助金額：50,000 元，可以總額認養',
+            '社群參與財務補助認養',
+            '5名',
+            '50,000元，可以總額認養',
             [
                 '贊助需財務補助之會眾',
                 '針對個別被贊助之會眾的公司宣傳*',
@@ -430,7 +477,9 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-sprint': [
-            '衝刺開發場地認養 - 名額 1 名, 單一贊助金額: 15,000 元',
+            '衝刺開發場地認養',
+            '1名',
+            '15,000元',
             [
                 '衝刺開發將安排在大會會期之外',
                 '專案領導人帶領參加者專案待解決的問題、待開發的功能',
@@ -440,7 +489,9 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-youngPyckathon': [
-            'Young Inspires - 名額 1 名, 單一贊助金額: 20,000 元',
+            'Young Inspires',
+            '1名',
+            '20,000元',
             [
                 'Young Inspires 將安排在大會會期之外',
                 '參與規模預計為 60 名高中生',
@@ -451,7 +502,9 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-mask': [
-            '防疫紀念品口罩 - 名額 1 名, 單一贊助金額: 25,000 元',
+            '防疫紀念品口罩',
+            '1名',
+            '25,000元',
             [
                 '參加會眾將獲得 3 份 1 組的防疫口罩作為迎賓禮',
                 '企業 Logo 將印製在口罩上',
