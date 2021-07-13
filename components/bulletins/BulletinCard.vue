@@ -55,7 +55,8 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply relative flex flex-col items-center font-serif rounded-3xl border-4;
+    @apply relative flex flex-col items-center font-serif rounded-3xl;
+    border-width: 3px;
     width: 47%;
     @media (min-width: 415px) {
         width: 11rem;
@@ -65,16 +66,15 @@ export default {
 }
 
 .bulletinCard:hover {
-    @apply cursor-pointer;
     border-color: #413f5a;
 }
 
 /* A trick to set height to be equal to width. */
 /* Checkout: https://stackoverflow.com/a/6615994/7969188 */
 .bulletinCard > .dummy {
-    margin-top: 200%;
+    margin-top: 230%;
     @media (min-width: 370px) {
-        margin-top: 150%;
+        margin-top: 170%;
     }
 }
 
@@ -83,9 +83,9 @@ export default {
 }
 
 .bulletinCard__content > h2 {
-    @apply text-base text-center mt-2 mb-3;
+    @apply text-base text-center mt-6 mb-5;
     @media (min-width: 415px) {
-        @apply text-xl mt-4 mb-6;
+        @apply text-xl mt-8 mb-5;
     }
     color: #808080;
 }
@@ -104,9 +104,9 @@ export default {
 }
 
 .bulletinCard__button {
-    @apply absolute bottom-2;
+    @apply absolute bottom-5 cursor-pointer;
     @media (min-width: 415px) {
-        @apply bottom-3;
+        @apply bottom-7;
     }
 }
 </style>
