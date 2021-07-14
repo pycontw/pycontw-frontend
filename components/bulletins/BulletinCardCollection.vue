@@ -1,8 +1,6 @@
 <template>
     <div class="flex flex-col w-full">
-        <div
-            class="bulletinCardCollection__cardContainer justify-center md:justify-start"
-        >
+        <div class="bulletinCardCollection__cardContainer justify-start">
             <!-- <slot></slot> -->
             <bulletin-card
                 v-for="(bulletin, i) in $t('bulletins')"
@@ -32,18 +30,15 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCardCollection__cardContainer {
-    @apply flex flex-wrap justify-center m-5;
+    @apply flex flex-wrap;
+    @apply md:m-4;
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard {
+    margin: 3px;
     @media (min-width: 415px) {
-        margin: 30px 20px 22px 21px;
+        margin: 30px 20px;
         padding: 5px;
     }
-}
-
-.bulletinCardCollection__cardContainer > .bulletinCard:hover {
-    @apply cursor-pointer;
-    border-color: #413f5a;
 }
 </style>

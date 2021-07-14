@@ -116,4 +116,8 @@ html {
     display: grid;
     grid-template-columns: 100%;
 }
+
+body.modal-open {
+    overflow: hidden;
+}
 </style>
