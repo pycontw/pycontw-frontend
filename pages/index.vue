@@ -4,7 +4,7 @@
             <div
                 class="w-full flex flex-col items-start text-golden mx-4 sm:mx-8 md:mx-16"
             >
-                <div class="font-serif text-3xl lg:text-5xl lg:leading-snug">
+                <div class="page-home__title">
                     PyCon Taiwan <br />
                     10th Anniversary
                 </div>
@@ -31,7 +31,11 @@
 
         <landing-img-swiper />
 
-        <i18n-page-wrapper custom-y class="py-12 bg-blue-primary">
+        <i18n-page-wrapper
+            custom-x
+            custom-y
+            class="py-12 px-4 sm:px-10 md:px-12 lg:px-20 bg-blue-primary"
+        >
             <h1 class="bulletin-title">{{ $t('bulletinList') }}</h1>
             <bulletin-card-collection></bulletin-card-collection>
         </i18n-page-wrapper>
@@ -126,7 +130,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .page-home .page-homeLandingFocus,
 .page-home .page-homeLandingFocus::after {
     position: relative;
@@ -143,6 +147,14 @@ export default {
     background-image: url('~@/static/page-home-background.png');
     background-position: center center;
     background-size: cover;
+}
+
+.page-home__title {
+    @apply font-serif text-3xl font-semibold;
+    @media (min-width: 1024px) {
+        @apply leading-snug;
+        font-size: 2.8rem;
+    }
 }
 
 .text-golden {
