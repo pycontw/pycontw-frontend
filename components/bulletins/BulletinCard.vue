@@ -56,9 +56,10 @@ export default {
 <style lang="postcss" scoped>
 .bulletinCard {
     @apply relative flex flex-col items-center font-serif rounded-3xl;
-    border-width: 3px;
+    border-width: 4px;
     width: 47%;
     @media (min-width: 415px) {
+        border-width: 3px;
         width: 11rem;
     }
     border-color: #4b4b4b;
