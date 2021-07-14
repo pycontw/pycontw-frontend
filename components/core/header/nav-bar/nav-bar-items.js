@@ -52,10 +52,10 @@ export default Object.freeze({
         },
     ],
     registrationItems: [
-        // {
-        //     i18nKey: 'conferenceTickets',
-        //     value: '/registration/tickets',
-        // },
+        {
+            i18nKey: 'conferenceTickets',
+            value: '/registration/tickets',
+        },
         {
             i18nKey: 'financialAid',
             value: '/registration/financial-aid',
