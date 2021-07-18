@@ -2,13 +2,15 @@
     <div v-show="!!logoUrl" :class="classObject">
         <div class="dummy"></div>
         <img :src="logoUrl" alt="" />
-        <div v-if="!!tag" class="sponsorCard__tag">
-            <img
-                class="diamond"
-                src="~@/static/sponsor-logo-diamond.svg"
-                alt="sponsor-logo-diamond"
-            />
-            {{ tag }}
+        <div class="hidden md:block">
+            <div v-if="!!tag" class="sponsorCard__tag">
+                <img
+                    class="diamond"
+                    src="~@/static/sponsor-logo-diamond.svg"
+                    alt="sponsor-logo-diamond"
+                />
+                {{ tag }}
+            </div>
         </div>
     </div>
 </template>
