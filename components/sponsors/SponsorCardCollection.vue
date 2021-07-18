@@ -36,15 +36,4 @@ export default {
     @apply cursor-pointer box-content;
     margin: 0 5px 50px 5px;
 }
-
-img.snake-with-py {
-    position: absolute;
-    right: 3rem;
-    top: -8.5rem;
-    @media (max-width: 767px) {
-        zoom: 90%;
-        right: 1rem;
-        top: -2.5rem;
-    }
-}
 </style>
