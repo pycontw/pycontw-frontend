@@ -4,9 +4,9 @@ export default genI18nMessages({
     'en-us': {
         pageTitle: 'Online Ticket',
         pageSummary:
-            'Welcome to participate in PyCon. You can purchase different ticket types, ' +
+            'Welcome to PyCon TW. You can purchase different ticket types, ' +
             'and find the most suitable plan. If you need financial assistance, ' +
-            'you can go to the financial assistance application below. ',
+            'please read the financial aid section below. ',
         individualTicket: {
             title: 'Individual',
             summary: {
@@ -15,16 +15,16 @@ export default genI18nMessages({
                     'We will send out electronic invoices by email after the conference. ' +
                     '{highlight} All ticket sales end on September 4th. ',
                 pySafe:
-                    'The souvenirs of Pysafe include stickers, wine glasses, T-shirt and thankful card. ',
+                    'The souvenirs of PySafe include stickers, Taiwanese beer glass, T-shirt, and thankful card. ',
             },
-            highlight: 'Individual tickets cannot use reimbursement. ',
+            highlight: 'We do not provide VAT receipt for individual tickets. ',
             type: [
                 {
                     name: 'Regular',
                     discount: 'Regular',
                 },
                 {
-                    name: 'Regular(with Pysafe)',
+                    name: 'Regular (with PySafe)',
                     discount: 'Regular',
                 },
             ],
@@ -33,21 +33,20 @@ export default genI18nMessages({
             title: 'Corporate',
             summary: {
                 text:
-                    'Provide company name and Unified Business Number, ' +
+                    'Provide company name and VAT Number, ' +
                     'or N/A if re­im­burse­ment is not required. ' +
                     'We will send out electronic invoices by email after the conference. ' +
                     '{groupDiscount}The sales of corporate tickets ended on September 4th. ',
                 pySafe:
-                    'The souvenirs of Pysafe include stickers, wine glasses, T-shirt and thankful card. ',
+                    'The souvenirs of PySafe include stickers, Taiwanese beer glass, T-shirt and thankful card. ',
             },
-            highlight: 'For group purchase, please contact us! ',
             type: {
-                name: 'Corporate(with Pysafe)',
+                name: 'Corporate (with PySafe)',
                 discount: 'Regular',
             },
             groupDiscount: {
                 text:
-                    'Group purchase discounts are provided for more than five people. ' +
+                    'We offer discounts for groups of five or more people. ' +
                     'For group purchase, please fill out the {formLink}! ',
                 formLink: 'Google form',
             },
@@ -55,28 +54,31 @@ export default genI18nMessages({
         notices: {
             title: 'Notices',
             description: [
-                'If you need reimbursement, please purchase corporate ticket, ' +
-                    'other ticket cannot be provided. ',
-                'Tickets provide access to the main conference from 10 / 2 to 10 / 3. ' +
-                    'Please refer to their own pages for tutorial. ',
-                'Please provide valid means of contact (phone number and email) on purchase, ' +
-                    'so that we will be able to inform you of any important notices. ',
-                'You can pay through credit card, PayPal, or ATM transfer. ',
-                'You may ask for refund earlier than ten days before the conference, ' +
-                    'by contacting us, or directly via KKTIX. ',
+                'If you need reimbursement, please purchase the corporate ticket.' +
+                    'VAT receipts are not provided for other ticket types. ',
+                'Tickets provide access to the main conference from Oct. 2nd to Oct. 3rd. ' +
+                    'Events like Tutorials or Sprints might need a separate registration. ' +
+                    "Be sure to check out the related details on the event's page.",
+                'Please provide the valid phone number and email address when purchasing the ticket, ' +
+                    "so that you won't be missed if we have important announcements. " +
+                    'If you have any questions, please send us an e-mail to ' +
+                    "organizers@pycon.tw, and we'll reply as soon as possible.",
+                'You can pay through credit card, PayPal, or bank transfer. ',
+                'You may ask for a refund not later than ten days before the conference, ' +
+                    'by contacting us or directly applying with KKTIX. ',
             ],
             everybodyPays: {
                 text: 'Everybody Pays',
                 description:
-                    'PyCon Taiwan is a paid conference. Everybody, including staffs and speakers, ' +
-                    'contributes or pays for attending (see PyCon: {everybodyPays}). ',
+                    '{everybodyPays} is one of PyCon’s core principles. ' +
+                    'All attendees, including speakers and volunteers, have to pay for registering.',
             },
         },
         financialAid: {
             title: 'Financial Aid',
             description:
-                'You can contact us for a financial aid if you feel any difficulty affording a ticket ' +
-                'and/or other expanses attending the conference. {highlight}. ' +
+                'All who look for help attending the conference are welcomed ' +
+                'to apply for financial aid. {highlight}. ' +
                 'More info about applications can be found {financialAidLink}.',
             financialAidLink: 'here',
             highlight: 'Please apply before your purchase',
@@ -87,7 +89,7 @@ export default genI18nMessages({
         pageTitle: '購票',
         pageSummary:
             '歡迎大家參與 PyCon 精彩的議程。不同的身份可以購買不同的票種，' +
-            '每個人都可以找到最適合自己的方案，有興趣的會眾歡迎搶先購買早鳥票！ ' +
+            '每個人都可以找到最適合自己的方案，有興趣的會眾請儘早購買！ ' +
             '若需要財務補助，請見頁底財務補助申請。',
         individualTicket: {
             title: '個人票',
@@ -96,7 +98,7 @@ export default genI18nMessages({
                     '限時限量，請及早購買。電子發票於會後統一以 email 寄送，' +
                     '{highlight} 一般票種販售於 9 月 4 日結束。',
                 pySafe:
-                    'Pysafe 內容物包含紀念貼紙、紀念酒杯、紀念 T-shirt以及感謝小卡。',
+                    'PySafe 內容物包含紀念貼紙、紀念酒杯、紀念 T-shirt以及感謝小卡。',
             },
             highlight: '個人票一律無法使用統一編號。',
             type: [
@@ -105,7 +107,7 @@ export default genI18nMessages({
                     discount: '一般價',
                 },
                 {
-                    name: '一般票(附 Pysafe)',
+                    name: '一般票（附 PySafe）',
                     discount: '一般價',
                 },
             ],
@@ -118,10 +120,10 @@ export default genI18nMessages({
                     '企業票的電子發票標示買方統編可用於公司報帳。電子發票於會後統一以 email 寄送。' +
                     '{groupDiscount}企業票販售於 9 月 4 日結束。',
                 pySafe:
-                    'Pysafe 內容物包含紀念貼紙、紀念酒杯、紀念 T- shirt以及感謝小卡。',
+                    'PySafe 內容物包含紀念貼紙、紀念酒杯、紀念 T- shirt 以及感謝小卡。',
             },
             type: {
-                name: '企業票(附 Pysafe)',
+                name: '企業票（附 PySafe）',
                 discount: '一般價',
             },
             groupDiscount: {
@@ -136,7 +138,7 @@ export default genI18nMessages({
                 '上列票種用於報名 10 月 2 日至 3 日的議程活動；tutorial、衝刺開發等其他課程報名方式，請至首頁報名。',
                 '報名時請留下正確的聯絡方式以便通知。如有問題請寄信至 organizers＠pycon.tw 洽詢，我們將盡快回應。',
                 '我們提供三種付款方式：信用卡、PayPal、ATM 轉帳。',
-                '部份票種 (例如個人票) 可由 KKTIX 逕行辦理退票，您可於會議十天前聯絡我們。',
+                '部份票種（例如個人票）可由 KKTIX 逕行辦理退票，您可於會議十天前聯絡我們。',
             ],
             everybodyPays: {
                 text: '公平付費',
@@ -149,8 +151,8 @@ export default genI18nMessages({
             title: '財務補助',
             description:
                 '歡迎申請大會 Financial Aid 計劃。{highlight}，' +
-                '再依獲得的憑證購買補助用票券。若您想申請請至{financialAidLink}。',
-            financialAidLink: '財務補助說明',
+                '再依獲得的憑證購買補助用票券。若有意願申請請至{financialAidLink}。',
+            financialAidLink: '財務補助說明頁面',
             highlight: '請於購票之前先行申請',
         },
         ticketLinkText: '線上購票',

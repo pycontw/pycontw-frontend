@@ -74,13 +74,15 @@
                             class="purple__highlight"
                         >
                             <template #formLink>
-                                <ext-link :href="links.corporateGroup" underline
+                                <ext-link
+                                    :href="links.corporateGroup"
+                                    underline
                                     >{{
                                         $t(
                                             'corporateTicket.groupDiscount.formLink',
                                         )
-                                    }}
-                                </ext-link>
+                                    }}</ext-link
+                                >
                             </template>
                         </i18n>
                         <span>
