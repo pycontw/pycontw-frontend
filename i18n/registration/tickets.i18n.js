@@ -4,61 +4,59 @@ export default genI18nMessages({
     'en-us': {
         pageTitle: 'Online Ticket',
         pageSummary:
-            'Welcome to participate in PyCon’s agenda. You can purchase different ticket types, ' +
+            'Welcome to participate in PyCon. You can purchase different ticket types, ' +
             'and find the most suitable plan. If you need financial assistance, ' +
             'you can go to the financial assistance application below. ',
         individualTicket: {
             title: 'Individual',
-            summary:
-                'Tickets are limited. Please buy as soon as possible. ' +
-                'We will send out electronic invoices by email after the conference. ' +
-                '{highlight} All ticket sales end on August 21. ',
-            highlight:
-                'Individual tickets cannot use reimbursement. ' +
-                'Early bird ticket sales end on July 20, or upon sold out. ',
+            summary: {
+                text:
+                    'Tickets are limited. Be sure to get your ticket as soon as possible before they are sold out. ' +
+                    'We will send out electronic invoices by email after the conference. ' +
+                    '{highlight} All ticket sales end on September 4th. ',
+                pySafe:
+                    'The souvenirs of Pysafe include stickers, wine glasses, T-shirt and thankful card. ',
+            },
+            highlight: 'Individual tickets cannot use reimbursement. ',
             type: [
                 {
-                    name: 'EarlyBird',
-                    discount: 'Discount',
+                    name: 'Regular',
+                    discount: 'Regular',
                 },
                 {
-                    name: 'Regular',
+                    name: 'Regular(with Pysafe)',
                     discount: 'Regular',
                 },
             ],
         },
         corporateTicket: {
             title: 'Corporate',
-            summary:
-                'Provide company name and Unified Business Number, ' +
-                'or N/A if re­im­burse­ment is not required. ' +
-                'We will send out electronic invoices by email after the conference. ' +
-                '{highlight}The sales of corporate tickets ended on July 31. ',
+            summary: {
+                text:
+                    'Provide company name and Unified Business Number, ' +
+                    'or N/A if re­im­burse­ment is not required. ' +
+                    'We will send out electronic invoices by email after the conference. ' +
+                    '{groupDiscount}The sales of corporate tickets ended on September 4th. ',
+                pySafe:
+                    'The souvenirs of Pysafe include stickers, wine glasses, T-shirt and thankful card. ',
+            },
             highlight: 'For group purchase, please contact us! ',
             type: {
-                name: 'Corporate',
+                name: 'Corporate(with Pysafe)',
                 discount: 'Regular',
             },
-        },
-        reservedTicket: {
-            title: 'Reserved',
-            summary: 'Please enter your invitation code on checkout. ',
-            type: [
-                {
-                    name: 'Speaker',
-                    discount: 'Regular',
-                },
-                {
-                    name: 'Contributor',
-                    discount: 'Regular',
-                },
-            ],
+            groupDiscount: {
+                text:
+                    'Group purchase discounts are provided for more than five people. ' +
+                    'For group purchase, please fill out the {formLink}! ',
+                formLink: 'Google form',
+            },
         },
         notices: {
             title: 'Notices',
             description: [
                 'If you need reimbursement, please purchase corporate ticket, ' +
-                    'other ticket cannot provide. ',
+                    'other ticket cannot be provided. ',
                 'Tickets provide access to the main conference from 10 / 2 to 10 / 3. ' +
                     'Please refer to their own pages for tutorial. ',
                 'Please provide valid means of contact (phone number and email) on purchase, ' +
@@ -90,51 +88,46 @@ export default genI18nMessages({
         pageSummary:
             '歡迎大家參與 PyCon 精彩的議程。不同的身份可以購買不同的票種，' +
             '每個人都可以找到最適合自己的方案，有興趣的會眾歡迎搶先購買早鳥票！ ' +
-            '若需要財務補助，可以至下方財務補助申請。',
+            '若需要財務補助，請見頁底財務補助申請。',
         individualTicket: {
             title: '個人票',
-            summary:
-                '限時限量，請及早購買。電子發票於會後統一以 email 寄送，' +
-                '{highlight} 一般票種販售於 7 月 31 日結束。',
-            highlight:
-                '個人票一律無法使用統一編號。早鳥票售完即止，最晚在 6 月 30 日結束販售。',
+            summary: {
+                text:
+                    '限時限量，請及早購買。電子發票於會後統一以 email 寄送，' +
+                    '{highlight} 一般票種販售於 9 月 4 日結束。',
+                pySafe:
+                    'Pysafe 內容物包含紀念貼紙、紀念酒杯、紀念 T-shirt以及感謝小卡。',
+            },
+            highlight: '個人票一律無法使用統一編號。',
             type: [
                 {
-                    name: '早鳥票',
-                    discount: '早鳥優惠價',
+                    name: '一般票',
+                    discount: '一般價',
                 },
                 {
-                    name: '一般票',
+                    name: '一般票(附 Pysafe)',
                     discount: '一般價',
                 },
             ],
         },
         corporateTicket: {
             title: '企業票',
-            summary:
-                '有統編需求請填寫公司抬頭與統一編號。無統編需求請於抬頭與統編填寫 N/A。' +
-                '企業票的電子發票標示買方統編可用於公司報帳。電子發票於會後統一以 email 寄送。' +
-                '{highlight}企業票販售於7 月 31 日結束。',
-            highlight: '若需團購請洽詢！',
+            summary: {
+                text:
+                    '有統編需求請填寫公司抬頭與統一編號。無統編需求請於抬頭與統編填寫 N/A。' +
+                    '企業票的電子發票標示買方統編可用於公司報帳。電子發票於會後統一以 email 寄送。' +
+                    '{groupDiscount}企業票販售於 9 月 4 日結束。',
+                pySafe:
+                    'Pysafe 內容物包含紀念貼紙、紀念酒杯、紀念 T- shirt以及感謝小卡。',
+            },
             type: {
-                name: '企業票',
+                name: '企業票(附 Pysafe)',
                 discount: '一般價',
             },
-        },
-        reservedTicket: {
-            title: '講者票',
-            summary:
-                '我們誠摯邀請您以貴賓身份參與本會議。請於報名時輸入邀請碼。',
-            type: [
-                {
-                    name: '講者票',
-                    discount: '一般價',
-                },
-                {
-                    name: '志工票',
-                    discount: '一般價',
-                },
-            ],
+            groupDiscount: {
+                text: '若五人以上購買提供團購優惠，如需團購請填寫{formLink}！',
+                formLink: '表單',
+            },
         },
         notices: {
             title: '購票須知',
