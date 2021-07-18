@@ -51,6 +51,7 @@ export default {
         close() {
             this.shouldShowModal = false
             this.$emit('input', false)
+            document.body.classList.remove('modal-open')
         },
         getAttributeByLocale(attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }

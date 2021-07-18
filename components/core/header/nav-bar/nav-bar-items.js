@@ -1,22 +1,18 @@
 export default Object.freeze({
     conferenceItems: [
-        {
-            i18nKey: 'schedule',
-            value: '/conference/schedule',
-        },
+        // {
+        //     i18nKey: 'schedule',
+        //     value: '/conference/schedule',
+        // },
         {
             i18nKey: 'keynotes',
             value: '/conference/keynotes',
         },
-        { i18nKey: 'talks', value: '/conference/talks' },
-        {
-            i18nKey: 'tutorials',
-            value: '/conference/tutorials',
-        },
-        {
-            i18nKey: 'communityTracks',
-            value: '/conference/community-tracks',
-        },
+        // { i18nKey: 'talks', value: '/conference/talks' },
+        // {
+        //     i18nKey: 'tutorials',
+        //     value: '/conference/tutorials',
+        // },
     ],
     speakingItems: [
         {
