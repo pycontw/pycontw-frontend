@@ -20,7 +20,7 @@
                 <div class="tickets__summary">
                     <i18n path="individualTicket.summary" tag="p">
                         <template #highlight>
-                            <span class="purple__highlight">
+                            <span class="customHighlight">
                                 {{ $t('individualTicket.highlight') }}
                             </span>
                         </template>
@@ -32,7 +32,7 @@
                         v-for="(individual, index) in $t(
                             'individualTicket.type',
                         )"
-                        :key="`individual_${index}`"
+                        :key="`ticket_individual_type_${index}`"
                         class="tickets__box"
                     >
                         <h5>{{ individual.name }}</h5>
@@ -66,7 +66,7 @@
                             v-for="(text, index) in $t(
                                 'corporateTicket.summary',
                             )"
-                            :key="`text_${index}`"
+                            :key="`ticket_corporate_summary_${index}`"
                             :path="`corporateTicket.summary.${index}`"
                             tag="span"
                         >
@@ -74,15 +74,16 @@
                                 <i18n
                                     path="corporateTicket.discount"
                                     tag="span"
-                                    class="purple__highlight"
+                                    class="customHighlight"
                                 >
                                     <template #formLink>
                                         <ext-link
                                             :href="links.corporateGroup"
                                             underline
+                                            >{{
+                                                $t('corporateTicket.formLink')
+                                            }}</ext-link
                                         >
-                                            {{ $t('corporateTicket.formLink') }}
-                                        </ext-link>
                                     </template>
                                 </i18n>
                             </template>
@@ -120,12 +121,12 @@
                 <ul class="list-disc">
                     <i18n
                         v-for="(notice, index) in $t('notices.description')"
-                        :key="`notice_${index}`"
+                        :key="`ticket_notice_${index}`"
                         :path="`notices.description.${index}`"
                         tag="li"
                     >
                         <template #reimbursement>
-                            <li class="purple__highlight">
+                            <li class="customHighlight">
                                 {{ $t('notices.reimbursement') }}
                             </li>
                         </template>
@@ -134,9 +135,16 @@
                                 :href="links.everybodyPays"
                                 highlight
                                 underline
+                                >{{ $t('notices.everybodyPays') }}</ext-link
                             >
-                                {{ $t('notices.everybodyPays') }}
-                            </ext-link>
+                        </template>
+                        <template #organizers>
+                            <ext-link
+                                href="mailto:organizers＠pycon.tw"
+                                highlight
+                                underline
+                                >organizers＠pycon.tw</ext-link
+                            >
                         </template>
                     </i18n>
                 </ul>
@@ -156,7 +164,7 @@
                 <ul class="list-disc">
                     <i18n path="financialAid.description" tag="li">
                         <template #highlight>
-                            <span class="purple__highlight">{{
+                            <span class="customHighlight">{{
                                 $t('financialAid.highlight')
                             }}</span>
                         </template>
@@ -221,17 +229,34 @@ export default {
             }
         },
     },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('pageAbstract'),
+                },
+            ],
+        }
+    },
 }
 </script>
 
-<style scoped>
-.purple__highlight {
+<style lang="postcss" scoped>
+.customHighlight {
     color: #9387ff;
 }
 
 .tickets h2 {
     @apply font-serif font-bold text-center;
-    @apply text-xl mt-14 mb-10 md:text-2xl tracking-widest;
+    @apply mt-14 mb-10 text-xl md:text-2xl tracking-widest;
     color: #f3cc39;
 }
 
@@ -240,8 +265,8 @@ export default {
 }
 
 .tickets h5 {
-    @apply text-center text-base sm:text-lg;
-    @apply md:text-xl font-bold mt-6 md:mt-8;
+    @apply text-center text-base sm:text-lg md:text-xl;
+    @apply font-bold mt-6 md:mt-8;
     color: #c2a53a;
 }
 
@@ -287,7 +312,7 @@ export default {
 
 .tickets__notices li,
 .tickets__financialAid li {
-    @apply text-xs mb-2 md:text-base;
+    @apply mb-2 text-xs md:text-base;
 }
 
 .tickets__individualCircle {

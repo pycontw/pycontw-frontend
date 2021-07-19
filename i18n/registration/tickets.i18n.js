@@ -57,7 +57,7 @@ export default genI18nMessages({
                 'Please provide the valid phone number and email address when purchasing the ticket, ' +
                     "so that you won't be missed if we have important announcements. " +
                     'If you have any questions, please send us an e-mail to ' +
-                    "organizers@pycon.tw, and we'll reply as soon as possible.",
+                    "{organizers}, and we'll reply as soon as possible.",
                 'PyCon Taiwan is a paid conference. Everybody, including staffs and speakers, ' +
                     'contributes or pays for attending (see PyCon: {everybodyPays}).',
                 'You can pay through credit card, PayPal, or bank transfer.',
@@ -127,7 +127,7 @@ export default genI18nMessages({
             description: [
                 '{reimbursement}',
                 '上列票種用於報名 10 月 2 日至 3 日的議程活動；tutorial、衝刺開發等其他課程報名方式，請至首頁報名。',
-                '報名時請留下正確的聯絡方式以便通知。如有問題請寄信至 organizers＠pycon.tw 洽詢，我們將盡快回應。',
+                '報名時請留下正確的聯絡方式以便通知。如有問題請寄信至 {organizers} 洽詢，我們將盡快回應。',
                 'PyCon Taiwan 是需付費的活動。所有參加者，包括籌備人員和講者，' +
                     '均需透過貢獻 PyCon Taiwan 社群或是付費而來參加。見{everybodyPays}。',
                 '我們提供三種付款方式：信用卡、PayPal、ATM 轉帳。',
