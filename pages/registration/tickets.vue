@@ -1,28 +1,31 @@
 <template>
-    <div class="tickets">
-        <banner class="tickets__banner">
+    <div class="tickets py-10 md:py-24 lg:py24">
+        <banner>
             <template #default>
-                <div class="tickets__bannerImage" :style="bannerStyle"></div>
+                <div
+                    class="hidden md:block md:w-full md:h-full"
+                    :style="bannerStyle"
+                ></div>
             </template>
             <template #text>
-                <core-h1 :title="$t('pageTitle')"></core-h1>
-                <p class="tickets__bannerSummary">
-                    {{ $t('pageSummary') }}
+                <core-h1 :title="$t('title')"></core-h1>
+                <p class="w-full md:w-3/4 leading-6">
+                    {{ $t('pageAbstract') }}
                 </p>
             </template>
         </banner>
-        <i18n-page-wrapper class="i18n__custom">
+        <i18n-page-wrapper class="i18n__custom pt-8 px-8 md:px-57 lg:px-56">
             <div class="tickets__individual">
                 <h3>{{ $t('individualTicket.title') }}</h3>
                 <div class="tickets__summary">
-                    <i18n path="individualTicket.summary.text" tag="p">
+                    <i18n path="individualTicket.summary" tag="p">
                         <template #highlight>
                             <span class="purple__highlight">
                                 {{ $t('individualTicket.highlight') }}
                             </span>
                         </template>
                     </i18n>
-                    <p>{{ $t('individualTicket.summary.pySafe') }}</p>
+                    <p>{{ $t('individualTicket.pySafe') }}</p>
                 </div>
                 <div class="tickets__boxWrapper">
                     <div
@@ -44,15 +47,13 @@
                                 <p>NTD</p>
                             </div>
                         </div>
-                        <ext-link
-                            :href="links.individual"
-                            class="tickets__boxLink"
-                            >{{ $t('ticketLinkText') }}</ext-link
-                        >
+                        <text-button :href="links.individual" secondary>{{
+                            $t('ticketLinkText')
+                        }}</text-button>
                     </div>
                 </div>
                 <img
-                    class="images tickets__individualCircle"
+                    class="tickets__individualCircle"
                     src="~/static/img/registration/TicketsRightCircle.svg"
                     alt="PyConTW Tickets Page Circle Icon"
                 />
@@ -61,39 +62,33 @@
                 <h3>{{ $t('corporateTicket.title') }}</h3>
                 <div class="tickets__summary">
                     <p>
-                        <span>
-                            {{
-                                $t('corporateTicket.summary.text').split(
-                                    '{groupDiscount}',
-                                )[0]
-                            }}
-                        </span>
                         <i18n
-                            path="corporateTicket.groupDiscount.text"
+                            v-for="(text, index) in $t(
+                                'corporateTicket.summary',
+                            )"
+                            :key="`text_${index}`"
+                            :path="`corporateTicket.summary.${index}`"
                             tag="span"
-                            class="purple__highlight"
                         >
-                            <template #formLink>
-                                <ext-link
-                                    :href="links.corporateGroup"
-                                    underline
-                                    >{{
-                                        $t(
-                                            'corporateTicket.groupDiscount.formLink',
-                                        )
-                                    }}</ext-link
+                            <template #discount>
+                                <i18n
+                                    path="corporateTicket.discount"
+                                    tag="span"
+                                    class="purple__highlight"
                                 >
+                                    <template #formLink>
+                                        <ext-link
+                                            :href="links.corporateGroup"
+                                            underline
+                                        >
+                                            {{ $t('corporateTicket.formLink') }}
+                                        </ext-link>
+                                    </template>
+                                </i18n>
                             </template>
                         </i18n>
-                        <span>
-                            {{
-                                $t('corporateTicket.summary.text').split(
-                                    '{groupDiscount}',
-                                )[1]
-                            }}
-                        </span>
                     </p>
-                    <p>{{ $t('corporateTicket.summary.pySafe') }}</p>
+                    <p>{{ $t('corporateTicket.pySafe') }}</p>
                 </div>
                 <div class="tickets__boxWrapper">
                     <div class="tickets__box">
@@ -109,15 +104,13 @@
                                 <p>NTD</p>
                             </div>
                         </div>
-                        <ext-link
-                            :href="links.corporate"
-                            class="tickets__boxLink"
-                            >{{ $t('ticketLinkText') }}</ext-link
-                        >
+                        <text-button :href="links.corporate" secondary>{{
+                            $t('ticketLinkText')
+                        }}</text-button>
                     </div>
                 </div>
                 <img
-                    class="images tickets__corporateCircle"
+                    class="tickets__corporateCircle"
                     src="~/static/img/registration/TicketsLeftCircle.svg"
                     alt="PyConTW Tickets Page Circle Icon"
                 />
@@ -125,43 +118,35 @@
             <div class="tickets__notices">
                 <h2>{{ $t('notices.title') }}</h2>
                 <ul class="list-disc">
-                    <li
-                        v-for="(notice, index) in $t(
-                            'notices.description',
-                        ).slice(0, 3)"
+                    <i18n
+                        v-for="(notice, index) in $t('notices.description')"
                         :key="`notice_${index}`"
-                        :style="highlightNotices(index)"
+                        :path="`notices.description.${index}`"
+                        tag="li"
                     >
-                        {{ notice }}
-                    </li>
-                    <i18n path="notices.everybodyPays.description" tag="li">
+                        <template #reimbursement>
+                            <li class="purple__highlight">
+                                {{ $t('notices.reimbursement') }}
+                            </li>
+                        </template>
                         <template #everybodyPays>
                             <ext-link
-                                :href="everybodyPays"
+                                :href="links.everybodyPays"
                                 highlight
                                 underline
-                                >{{
-                                    $t('notices.everybodyPays.text')
-                                }}</ext-link
                             >
+                                {{ $t('notices.everybodyPays') }}
+                            </ext-link>
                         </template>
                     </i18n>
-                    <li
-                        v-for="(notice, index) in $t(
-                            'notices.description',
-                        ).slice(-2)"
-                        :key="`notice_${index}`"
-                    >
-                        {{ notice }}
-                    </li>
                 </ul>
                 <img
-                    class="images tickets__curveDecorate"
+                    class="tickets__curveDecorate"
                     src="~/static/img/registration/TicketsCurve.svg"
                     alt="PyConTW Tickets Page Curve Icon"
                 />
                 <img
-                    class="images tickets__noticesCircle"
+                    class="tickets__noticesCircle"
                     src="~/static/img/registration/TicketsRightCircle.svg"
                     alt="PyConTW Tickets Page Circle Icon"
                 />
@@ -179,6 +164,7 @@
                             <locale-link
                                 to="/registration/financial-aid"
                                 highlight
+                                class="underline"
                                 >{{
                                     $t('financialAid.financialAidLink')
                                 }}</locale-link
@@ -198,7 +184,8 @@ import CoreH1 from '@/components/core/titles/H1'
 import Banner from '@/components/core/layout/Banner'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
-import TicketsBanner from '@/static/img/registration/TicketsBanner.svg'
+import TicketsBanner from '@/static/img/about/Banner.svg'
+import TextButton from '@/components/core/buttons/TextButton'
 
 export default {
     i18n,
@@ -209,6 +196,7 @@ export default {
         Banner,
         ExtLink,
         LocaleLink,
+        TextButton,
     },
     data() {
         return {
@@ -219,9 +207,9 @@ export default {
                 individual: 'https://pycontw.kktix.cc/events/2021-individual',
                 corporate: 'https://pycontw.kktix.cc/events/2021-corporate',
                 corporateGroup: 'https://forms.gle/3DRBk24HBZLMsV7w6',
+                everybodyPays:
+                    'http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays',
             },
-            everybodyPays:
-                'http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays',
         }
     },
     computed: {
@@ -232,30 +220,18 @@ export default {
                 'background-position': 'center',
             }
         },
-        highlightNotices() {
-            return (noticeIndex) => {
-                if (noticeIndex === 0) {
-                    return {
-                        color: '#9387ff',
-                    }
-                }
-            }
-        },
     },
 }
 </script>
 
 <style scoped>
-.i18n__custom {
-    @apply pt-8 pb-7 md:pb-20 px-10 md:px-20 lg:px-36 xl:px-56 2xl:px-80;
-}
-
-.tickets {
-    @apply pt-1 md:pt-24;
+.purple__highlight {
+    color: #9387ff;
 }
 
 .tickets h2 {
-    @apply font-serif font-bold text-center text-xl mt-14 mb-10 md:text-2xl tracking-widest;
+    @apply font-serif font-bold text-center;
+    @apply text-xl mt-14 mb-10 md:text-2xl tracking-widest;
     color: #f3cc39;
 }
 
@@ -264,68 +240,17 @@ export default {
 }
 
 .tickets h5 {
-    @apply text-center text-base sm:text-lg md:text-xl font-bold mt-4 md:mt-5;
+    @apply text-center text-base sm:text-lg;
+    @apply md:text-xl font-bold mt-6 md:mt-8;
     color: #c2a53a;
-}
-
-.tickets ul {
-    @apply pl-3;
 }
 
 .tickets span {
     @apply text-xs md:text-base;
 }
 
-.tickets .images {
-    @apply hidden md:block z-0;
-}
-
-.tickets__banner {
-    @apply px-2 sm:px-12 md:px-10 pt-28 md:pt-0;
-}
-
-.tickets__bannerImage {
-    @apply hidden md:block lg:block md:w-full lg:w-full md:h-full lg:h-full;
-}
-
-.tickets__bannerSummary {
-    @apply w-full md:w-3/4 lg:w-3/4 leading-relaxed text-sm sm:text-base md:text-lg;
-}
-
-.tickets__reserved {
-    @apply hidden md:block;
-}
-
-.tickets .tickets__box {
-    @apply text-center box-border rounded-3xl h-48 md:h-56 z-10;
-    border: 2px solid #c2a53a;
-    box-shadow: 6px 6px 0px #c2a53a;
-}
-
-.tickets__boxWrapper {
-    @apply grid md:grid-cols-2 gap-10;
-}
-
-.tickets__boxPrice {
-    @apply flex justify-evenly mt-5 mb-3 md:mt-4 md:mb-6 text-xs sm:text-sm md:text-base leading-10;
-    @media (min-width: 768px) {
-        line-height: 2.85rem;
-    }
-}
-
-.tickets__boxPrice .tickets__boxPriceHighlight {
-    @apply font-bold mr-1 text-2xl md:text-3xl;
-    color: #f3cc39;
-}
-
-.tickets__boxLink {
-    @apply rounded-3xl px-5 py-3 md:px-9 md:py-3 font-bold text-xs md:text-sm;
-    border: 4px solid #c7c7c7;
-}
-
-.tickets__boxLink:hover {
-    color: #9387ff;
-    border: 4px solid #9387ff;
+.tickets ul.list-disc {
+    @apply pl-4 md:pl-14;
 }
 
 .tickets__summary {
@@ -336,12 +261,28 @@ export default {
     @apply text-xs md:text-base my-0;
 }
 
-.purple__highlight {
-    color: #9387ff;
+.tickets .tickets__box {
+    @apply text-center box-border rounded-3xl h-56 md:h-72 z-10;
+    border: 2px solid #c2a53a;
+    box-shadow: 6px 6px 0px #c2a53a;
 }
 
-.tickets__financialAid a {
-    @apply underline;
+.tickets__boxWrapper {
+    @apply grid md:grid-cols-2 gap-10;
+}
+
+.tickets__boxPrice {
+    @apply flex justify-evenly mt-8 mb-3 md:mt-10 md:mb-6;
+    @apply text-xs sm:text-sm md:text-base;
+    line-height: 2.4rem;
+    @media (min-width: 768px) {
+        line-height: 2.85rem;
+    }
+}
+
+.tickets__boxPrice .tickets__boxPriceHighlight {
+    @apply font-bold mr-1 text-2xl md:text-3xl;
+    color: #f3cc39;
 }
 
 .tickets__notices li,
@@ -350,44 +291,27 @@ export default {
 }
 
 .tickets__individualCircle {
-    @apply absolute md:right-2 lg:right-6 xl:right-14 2xl:right-28;
+    @apply hidden absolute md:block md:right-2 lg:right-12 z-0;
     top: 40rem;
 }
 
 .tickets__noticesCircle {
-    @apply absolute md:right-2 lg:right-6 xl:right-14 2xl:right-28;
+    @apply hidden absolute md:block md:right-2 lg:right-12 z-0;
     top: 107.5rem;
 }
 
 .tickets__corporateCircle {
-    @apply absolute md:left-2 lg:left-6 xl:left-14 2xl:left-20;
-    top: 51rem;
+    @apply hidden absolute md:block md:left-2 lg:left-10 z-0;
+    top: 54rem;
 }
 
 .tickets__curveDecorate {
-    @apply absolute md:left-0;
-}
-
-@media (min-width: 768px) {
-    .tickets__curveDecorate {
-        top: 74rem;
+    @apply hidden absolute md:block md:left-0;
+    z-index: -1;
+    @media (min-width: 768px) {
+        top: 78rem;
     }
-}
-
-@media (min-width: 1024px) {
-    .tickets__curveDecorate {
-        top: 70rem;
-    }
-}
-
-@media (min-width: 1280px) {
-    .tickets__curveDecorate {
-        top: 66rem;
-    }
-}
-
-@media (min-width: 1440px) {
-    .tickets__curveDecorate {
+    @media (min-width: 1440px) {
         top: 62rem;
     }
 }
