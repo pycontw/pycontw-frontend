@@ -3,6 +3,11 @@
         <div class="dummy"></div>
         <img :src="logoUrl" alt="" />
         <div v-if="!!tag" class="sponsorCard__tag">
+            <img
+                class="diamond"
+                src="~@/static/sponsor-logo-diamond.svg"
+                alt="sponsor-logo-diamond"
+            />
             {{ tag }}
         </div>
     </div>
@@ -54,7 +59,18 @@ export default {
 }
 
 .sponsorCard__tag {
-    @apply h-6 w-full absolute flex justify-center items-center text-xs bg-indigo-700;
+    @apply h-6 w-full absolute flex justify-center items-center text-xs;
     bottom: 20px;
+    background-color: #2a36a4;
+    color: #ffffff;
+
+    /* simply use hidden does not overwrite flex */
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+}
+
+img.diamond {
+    @apply mr-1 mb-1;
 }
 </style>
