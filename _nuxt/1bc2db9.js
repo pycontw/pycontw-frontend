@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[41],{413:function(e,t,n){"use strict";n.r(t);var o=n(63);t.default=Object(o.a)({"en-us":{website:"Website",about:"About"},"zh-hant":{website:"官方網站",about:"關於"}})}}]);
