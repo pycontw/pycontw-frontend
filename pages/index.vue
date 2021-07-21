@@ -61,6 +61,13 @@
                 >
                 </sponsor-card>
             </sponsor-card-collection>
+            <div class="flex justify-end">
+                <img
+                    src="~@/static/page-home-snake-with-py.svg"
+                    alt="snake-with-py"
+                    class="hidden md:block"
+                />
+            </div>
             <div class="text-center">
                 <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
             </div>
