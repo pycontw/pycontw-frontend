@@ -100,29 +100,30 @@
         <p class="section-title text-sm md:text-lg lg:hidden">
             {{ $t('package-title.0') }}
         </p>
-        <div class="grid mt-8 lg:hidden">
-            <div
-                v-for="(sponsorPackages, i) in sponsorLevels"
-                :key="`sponsor_packages_${i}`"
-                class="grid sponsor-packages gap-x-3 mt-2"
-            >
-                <div class="section-title">
-                    <div class="mt-24 md:mt-36"></div>
+        <div class="grid gap-x-3 mt-8 lg:hidden sponsor-packages">
+            <template v-for="row in Array.from(Array(15).keys())">
+                <div
+                    :key="`sponsor_package_title_${row}`"
+                    class="section-title"
+                >
+                    <div v-if="row % 5 === 0" class="mt-20 md:mt-36"></div>
                     <p
-                        v-for="j in [1, 2, 3, 4]"
-                        :key="`package_title_${j}`"
+                        v-else
                         class="text-xs md:text-sm"
+                        :style="fixParagaphMarginBottom()"
                     >
-                        {{ $t(`package-title.${j}`) }}
+                        {{ $t(`package-title.${row % 5}`) }}
                     </p>
                 </div>
                 <div
-                    v-for="sponsorPackage in sponsorPackages"
-                    :key="`sponsor_package_${sponsorPackage}`"
-                    class="text-xs md:text-sm"
+                    v-for="sponsorPackage in sponsorLevels[Math.floor(row / 5)]"
+                    :key="`sponsor_package_${row}_${sponsorPackage}`"
+                    :class="{ 'mt-2': row % 5 == 0 }"
                 >
+                    <div v-if="!sponsorPackage"></div>
                     <div
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-8 mx-auto"
+                        v-else-if="row % 5 == 0"
+                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-4 md:mb-8"
                         :style="
                             getImgStyle(
                                 sponsorLevelImgs[
@@ -132,52 +133,52 @@
                         "
                     ></div>
                     <p
-                        v-for="j in Array.from(Array(3).keys())"
-                        :key="`package_${j}`"
-                        class="text-center"
+                        v-else-if="row % 5 > 0 && row % 5 < 4"
+                        class="text-center text-xs md:text-sm"
                     >
-                        {{ $t(`package-${sponsorPackage}.${j}`) }}
+                        {{ $t(`package-${sponsorPackage}.${(row % 5) - 1}`) }}
                     </p>
-                    <ul>
+                    <ul v-else class="text-xs md:text-sm">
                         <li
                             v-for="(item, j) in $t(
                                 `package-${sponsorPackage}.3`,
                             )"
-                            :key="`prospectus_package_${sponsorPackage}_detail_${j}`"
+                            :key="`prospectus_package_${sponsorPackage}_item_${j}`"
                         >
                             {{ item }}
                         </li>
                     </ul>
                 </div>
-            </div>
+            </template>
         </div>
         <!-- sponsor package pc -->
-        <div class="mt-16 hidden lg:grid">
-            <div
-                v-for="(sponsorPackages, i) in sponsorLevelsMd"
-                :key="`sponsor_packages_${i}`"
-                class="grid gap-x-8 sponsor-packages mt-2"
-            >
-                <div class="section-title">
+        <div class="mt-16 hidden lg:grid gap-x-8 sponsor-packages">
+            <template v-for="row in Array.from(Array(10).keys())">
+                <div
+                    :key="`sponsor_package_title_${row}`"
+                    class="section-title flex"
+                    :class="{ 'items-center': row % 5 === 0 }"
+                >
                     <p
-                        v-for="j in Array.from(Array(5).keys())"
-                        :key="`package_title_${j}`"
                         :class="{
-                            'inline-flex items-center justify-center text-lg h-16 md:h-28':
-                                j === 0,
+                            'text-lg': row % 5 === 0,
                         }"
                         :style="fixParagaphMarginBottom()"
                     >
-                        {{ $t(`package-title.${j}`) }}
+                        {{ $t(`package-title.${row % 5}`) }}
                     </p>
                 </div>
                 <div
-                    v-for="sponsorPackage in sponsorPackages"
-                    :key="`sponsor_package_${sponsorPackage}`"
-                    class="md:text-sm lg:text-sm"
+                    v-for="sponsorPackage in sponsorLevelsMd[
+                        Math.floor(row / 5)
+                    ]"
+                    :key="`sponsor_package_${row}_${sponsorPackage}`"
+                    :class="{ 'mt-2': row % 5 == 0 }"
                 >
+                    <div v-if="!sponsorPackage"></div>
                     <div
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-6 mx-auto"
+                        v-else-if="row % 5 == 0"
+                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-6"
                         :style="
                             getImgStyle(
                                 sponsorLevelImgs[
@@ -187,24 +188,23 @@
                         "
                     ></div>
                     <p
-                        v-for="j in Array.from(Array(3).keys())"
-                        :key="`package_${j}`"
-                        class="text-center"
+                        v-else-if="row % 5 > 0 && row % 5 < 4"
+                        class="text-center md:text-sm lg:text-sm"
                     >
-                        {{ $t(`package-${sponsorPackage}.${j}`) }}
+                        {{ $t(`package-${sponsorPackage}.${(row % 5) - 1}`) }}
                     </p>
-                    <ul class="list-disc">
+                    <ul v-else class="list-disc md:text-sm lg:text-sm ml-2vw">
                         <li
                             v-for="(item, j) in $t(
                                 `package-${sponsorPackage}.3`,
                             )"
-                            :key="`prospectus_package_${sponsorPackage}_detail_${j}`"
+                            :key="`prospectus_package_${sponsorPackage}_item_${j}`"
                         >
                             {{ item }}
                         </li>
                     </ul>
                 </div>
-            </div>
+            </template>
         </div>
         <core-hr></core-hr>
         <!-- Extra Purchase -->
@@ -267,29 +267,32 @@
         <p class="section-title text-sm md:text-lg lg:hidden">
             {{ $t('specialSponsorship-title.0') }}
         </p>
-        <div class="grid mt-8 lg:hidden">
-            <div
-                v-for="(specialSponsorShipTypes, i) in specialSponsorshipTypes"
-                :key="`prospectus_specials_${i}`"
-                class="grid sponsor-packages gap-x-3 mt-2"
-            >
-                <div class="section-title">
-                    <div class="mt-24 md:mt-36"></div>
+        <div class="grid gap-x-3 mt-8 lg:hidden sponsor-packages">
+            <template v-for="row in Array.from(Array(10).keys())">
+                <div
+                    :key="`special_sponsorship_title_${row}`"
+                    class="section-title"
+                >
+                    <div v-if="row % 5 === 0" class="mt-20 md:mt-36"></div>
                     <p
-                        v-for="j in [1, 2, 3, 4]"
-                        :key="`special_sponsorship_title_${j}`"
+                        v-else
                         class="text-xs md:text-sm"
+                        :style="fixParagaphMarginBottom()"
                     >
-                        {{ $t(`specialSponsorship-title.${j}`) }}
+                        {{ $t(`specialSponsorship-title.${row % 5}`) }}
                     </p>
                 </div>
                 <div
-                    v-for="specialSponsorShipType in specialSponsorShipTypes"
-                    :key="`prospectus_special_${specialSponsorShipType}`"
-                    class="text-xs md:text-sm"
+                    v-for="specialSponsorShipType in specialSponsorshipTypes[
+                        Math.floor(row / 5)
+                    ]"
+                    :key="`prospectus_special_${row}_${specialSponsorShipType}`"
+                    :class="{ 'mt-2': row % 5 == 0 }"
                 >
+                    <div v-if="!specialSponsorShipType"></div>
                     <div
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-8 mx-auto"
+                        v-else-if="row % 5 == 0"
+                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-4 md:mb-8"
                         :style="
                             getImgStyle(
                                 specialSponsorshipTypeImgs[
@@ -299,58 +302,58 @@
                         "
                     ></div>
                     <p
-                        v-for="j in Array.from(Array(3).keys())"
-                        :key="`special_sponsorship_${j}`"
-                        class="text-center"
+                        v-else-if="row % 5 > 0 && row % 5 < 4"
+                        class="text-center text-xs md:text-sm"
                     >
                         {{
                             $t(
-                                `specialSponsorship-${specialSponsorShipType}.${j}`,
+                                `specialSponsorship-${specialSponsorShipType}.${
+                                    (row % 5) - 1
+                                }`,
                             )
                         }}
                     </p>
-                    <ul>
+                    <ul v-else class="text-xs md:text-sm">
                         <li
                             v-for="(item, j) in $t(
                                 `specialSponsorship-${specialSponsorShipType}.3`,
                             )"
-                            :key="`prospectus_special_${specialSponsorShipType}_item_${j}`"
+                            :key="`special_sponsorship_${specialSponsorShipType}_item_${j}`"
                         >
                             {{ item }}
                         </li>
                     </ul>
                 </div>
-            </div>
+            </template>
         </div>
         <!-- special sponsorship pc -->
-        <div class="mt-16 hidden lg:grid">
-            <div
-                v-for="(
-                    specialSponsorShipTypes, i
-                ) in specialSponsorshipTypesMd"
-                :key="`prospectus_specials_${i}`"
-                class="gap-x-8 grid sponsor-packages mt-2"
-            >
-                <div class="section-title">
+        <div class="mt-16 hidden lg:grid gap-x-8 sponsor-packages">
+            <template v-for="row in Array.from(Array(10).keys())">
+                <div
+                    :key="`special_sponsorship_title_${row}`"
+                    class="section-title flex"
+                    :class="{ 'items-center': row % 5 === 0 }"
+                >
                     <p
-                        v-for="j in Array.from(Array(5).keys())"
-                        :key="`package_title_${j}`"
                         :class="{
-                            'inline-flex items-center justify-center text-lg h-16 md:h-28 font-bold':
-                                j === 0,
+                            'text-lg': row % 5 === 0,
                         }"
                         :style="fixParagaphMarginBottom()"
                     >
-                        {{ $t(`specialSponsorship-title.${j}`) }}
+                        {{ $t(`specialSponsorship-title.${row % 5}`) }}
                     </p>
                 </div>
                 <div
-                    v-for="specialSponsorShipType in specialSponsorShipTypes"
-                    :key="`prospectus_special_${specialSponsorShipType}`"
-                    class="md:text-sm lg:text-sm"
+                    v-for="specialSponsorShipType in specialSponsorshipTypesMd[
+                        Math.floor(row / 5)
+                    ]"
+                    :key="`prospectus_special_${row}_${specialSponsorShipType}`"
+                    :class="{ 'mt-2': row % 5 == 0 }"
                 >
+                    <div v-if="!specialSponsorShipType"></div>
                     <div
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-6 mx-auto"
+                        v-else-if="row % 5 == 0"
+                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-6"
                         :style="
                             getImgStyle(
                                 specialSponsorshipTypeImgs[
@@ -360,17 +363,18 @@
                         "
                     ></div>
                     <p
-                        v-for="j in Array.from(Array(3).keys())"
-                        :key="`special_sponsorship_${j}`"
-                        class="text-center"
+                        v-else-if="row % 5 > 0 && row % 5 < 4"
+                        class="text-center md:text-sm lg:text-sm"
                     >
                         {{
                             $t(
-                                `specialSponsorship-${specialSponsorShipType}.${j}`,
+                                `specialSponsorship-${specialSponsorShipType}.${
+                                    (row % 5) - 1
+                                }`,
                             )
                         }}
                     </p>
-                    <ul class="list-disc">
+                    <ul v-else class="list-disc md:text-sm lg:text-sm">
                         <li
                             v-for="(item, j) in $t(
                                 `specialSponsorship-${specialSponsorShipType}.3`,
@@ -381,7 +385,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </template>
         </div>
         <core-hr></core-hr>
         <!-- Note -->
@@ -435,11 +439,11 @@ export default {
             sponsorLevels: [
                 ['diamond', 'platinum'],
                 ['gold', 'silver'],
-                ['bronze'],
+                ['bronze', ''], // add an empty string to fulfill grid layout
             ],
             sponsorLevelsMd: [
                 ['diamond', 'platinum', 'gold'],
-                ['silver', 'bronze'],
+                ['silver', 'bronze', ''], // add an empty string to fulfill grid layout
             ],
             sponsorLevelImgs: {
                 'sponsor-level-diamond': SponsorLevelDiamond,
@@ -454,7 +458,7 @@ export default {
             ],
             specialSponsorshipTypesMd: [
                 ['fa', 'sprint', 'youngPyckathon'],
-                ['mask'],
+                ['mask', '', ''], // add an empty string to fulfill grid layout
             ],
             specialSponsorshipTypeImgs: {
                 'special-sponsorship-fa': SpecialSponsorshipFa,
@@ -516,8 +520,15 @@ export default {
 ul.list-disc {
     @apply pl-0;
 }
+.ml-2vw {
+    margin-left: 2vw;
+}
 p.text-center {
     @apply text-center;
+    max-width: 4rem;
+    @media (min-width: 768px) {
+        max-width: 7rem;
+    }
 }
 .sponsor-packages {
     grid-template-columns: 2fr 3fr 3fr;
