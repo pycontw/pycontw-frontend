@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="md:px-57 lg:px-56">
+    <i18n-page-wrapper class="text-xs md:text-lg md:px-57 lg:px-56">
         <core-h1 :title="$t('title')"></core-h1>
         <i18n path="intro.0" tag="p"></i18n>
         <i18n path="intro.1" tag="p"></i18n>
@@ -14,7 +14,9 @@
                     class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat"
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
-                <div class="mt-3 sm:mt-8 mb-0 text-sm text-center">
+                <div
+                    class="text-xs md:text-lg mt-3 sm:mt-8 mb-0 text-sm text-center"
+                >
                     {{ service }}
                 </div>
             </div>

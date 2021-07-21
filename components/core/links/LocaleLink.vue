@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 /* TODO: Update highlight variant style with the design */
 .highlight {
     color: #c2a53a;
@@ -48,7 +48,7 @@ export default {
 }
 
 .underline {
-    text-decoration-line: underline;
+    @apply underline;
 }
 
 .core-localeLink:not(.highlight):not(.--customized) {

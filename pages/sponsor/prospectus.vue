@@ -53,18 +53,6 @@
             </template>
         </two-col-wrapper>
         <core-hr></core-hr>
-        <!-- anchors to sponsor level -->
-        <!-- <ul class="list-disc">
-            <li
-                v-for="(level, i) in [...sponsorLevels, 'special']"
-                :key="`prospectus_anchors_${i}`"
-                class="text-blue-600 hover:text-blue-800"
-            >
-                <router-link :to="`#${level}`">{{
-                    $t(`terms.${level}`)
-                }}</router-link>
-            </li>
-        </ul> -->
 
         <!-- 2020 stats -->
         <two-col-wrapper>
@@ -87,7 +75,6 @@
         <two-col-wrapper>
             <template #default>
                 <p>{{ $t('importantDatesTitle') }}</p>
-                <!-- <i18n path="importantDatesSubtitle" tag="p"></i18n> -->
             </template>
             <template #right-col>
                 <ul class="list-disc ml-4">
@@ -120,19 +107,13 @@
                 class="grid sponsor-packages gap-x-3 mt-2"
             >
                 <div class="section-title">
-                    <div class="mt-24 md:mt-36">
-                        <p class="text-xs md:text-sm">
-                            {{ $t('package-title.1') }}
-                        </p>
-                    </div>
-                    <p class="text-xs md:text-sm">
-                        {{ $t('package-title.2') }}
-                    </p>
-                    <p class="text-xs md:text-sm">
-                        {{ $t('package-title.3') }}
-                    </p>
-                    <p class="text-xs md:text-sm">
-                        {{ $t('package-title.4') }}
+                    <div class="mt-24 md:mt-36"></div>
+                    <p
+                        v-for="j in [1, 2, 3, 4]"
+                        :key="`package_title_${j}`"
+                        class="text-xs md:text-sm"
+                    >
+                        {{ $t(`package-title.${j}`) }}
                     </p>
                 </div>
                 <div
@@ -150,14 +131,12 @@
                             )
                         "
                     ></div>
-                    <p class="text-center">
-                        {{ $t(`package-${sponsorPackage}.0`) }}
-                    </p>
-                    <p class="text-center">
-                        {{ $t(`package-${sponsorPackage}.1`) }}
-                    </p>
-                    <p class="text-center">
-                        {{ $t(`package-${sponsorPackage}.2`) }}
+                    <p
+                        v-for="j in Array.from(Array(3).keys())"
+                        :key="`package_${j}`"
+                        class="text-center"
+                    >
+                        {{ $t(`package-${sponsorPackage}.${j}`) }}
                     </p>
                     <ul>
                         <li
@@ -181,7 +160,7 @@
             >
                 <div class="section-title">
                     <p
-                        v-for="(title, j) in $t('package-title')"
+                        v-for="j in Array.from(Array(5).keys())"
                         :key="`package_title_${j}`"
                         :class="{
                             'inline-flex items-center justify-center text-lg h-16 md:h-28':
@@ -189,7 +168,7 @@
                         }"
                         :style="fixParagaphMarginBottom()"
                     >
-                        {{ title }}
+                        {{ $t(`package-title.${j}`) }}
                     </p>
                 </div>
                 <div
@@ -207,14 +186,12 @@
                             )
                         "
                     ></div>
-                    <p class="text-center">
-                        {{ $t(`package-${sponsorPackage}.0`) }}
-                    </p>
-                    <p class="text-center">
-                        {{ $t(`package-${sponsorPackage}.1`) }}
-                    </p>
-                    <p class="text-center">
-                        {{ $t(`package-${sponsorPackage}.2`) }}
+                    <p
+                        v-for="j in Array.from(Array(3).keys())"
+                        :key="`package_${j}`"
+                        class="text-center"
+                    >
+                        {{ $t(`package-${sponsorPackage}.${j}`) }}
                     </p>
                     <ul class="list-disc">
                         <li
@@ -229,22 +206,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div
-            v-for="(level, i) in sponsorLevels"
-            :key="`prospectus_package_${i}`"
-        >
-            <h3 :id="level">
-                <b>{{ $t(`package-${level}.0`) }}</b>
-            </h3>
-            <ul class="list-disc">
-                <li
-                    v-for="(item, j) in $t(`package-${level}.3`)"
-                    :key="`prospectus_package_${i}_detail_${j}`"
-                >
-                    {{ item }}
-                </li>
-            </ul>
-        </div> -->
         <core-hr></core-hr>
         <!-- Extra Purchase -->
         <p
@@ -313,19 +274,13 @@
                 class="grid sponsor-packages gap-x-3 mt-2"
             >
                 <div class="section-title">
-                    <div class="mt-24 md:mt-36">
-                        <p class="text-xs md:text-sm">
-                            {{ $t('specialSponsorship-title.1') }}
-                        </p>
-                    </div>
-                    <p class="text-xs md:text-sm">
-                        {{ $t('specialSponsorship-title.2') }}
-                    </p>
-                    <p class="text-xs md:text-sm">
-                        {{ $t('specialSponsorship-title.3') }}
-                    </p>
-                    <p class="text-xs md:text-sm">
-                        {{ $t('specialSponsorship-title.4') }}
+                    <div class="mt-24 md:mt-36"></div>
+                    <p
+                        v-for="j in [1, 2, 3, 4]"
+                        :key="`special_sponsorship_title_${j}`"
+                        class="text-xs md:text-sm"
+                    >
+                        {{ $t(`specialSponsorship-title.${j}`) }}
                     </p>
                 </div>
                 <div
@@ -343,19 +298,15 @@
                             )
                         "
                     ></div>
-                    <p class="text-center">
+                    <p
+                        v-for="j in Array.from(Array(3).keys())"
+                        :key="`special_sponsorship_${j}`"
+                        class="text-center"
+                    >
                         {{
-                            $t(`specialSponsorship-${specialSponsorShipType}.0`)
-                        }}
-                    </p>
-                    <p class="text-center">
-                        {{
-                            $t(`specialSponsorship-${specialSponsorShipType}.1`)
-                        }}
-                    </p>
-                    <p class="text-center">
-                        {{
-                            $t(`specialSponsorship-${specialSponsorShipType}.2`)
+                            $t(
+                                `specialSponsorship-${specialSponsorShipType}.${j}`,
+                            )
                         }}
                     </p>
                     <ul>
@@ -382,7 +333,7 @@
             >
                 <div class="section-title">
                     <p
-                        v-for="(title, j) in $t('specialSponsorship-title')"
+                        v-for="j in Array.from(Array(5).keys())"
                         :key="`package_title_${j}`"
                         :class="{
                             'inline-flex items-center justify-center text-lg h-16 md:h-28 font-bold':
@@ -390,7 +341,7 @@
                         }"
                         :style="fixParagaphMarginBottom()"
                     >
-                        {{ title }}
+                        {{ $t(`specialSponsorship-title.${j}`) }}
                     </p>
                 </div>
                 <div
@@ -408,19 +359,15 @@
                             )
                         "
                     ></div>
-                    <p class="text-center">
+                    <p
+                        v-for="j in Array.from(Array(3).keys())"
+                        :key="`special_sponsorship_${j}`"
+                        class="text-center"
+                    >
                         {{
-                            $t(`specialSponsorship-${specialSponsorShipType}.0`)
-                        }}
-                    </p>
-                    <p class="text-center">
-                        {{
-                            $t(`specialSponsorship-${specialSponsorShipType}.1`)
-                        }}
-                    </p>
-                    <p class="text-center">
-                        {{
-                            $t(`specialSponsorship-${specialSponsorShipType}.2`)
+                            $t(
+                                `specialSponsorship-${specialSponsorShipType}.${j}`,
+                            )
                         }}
                     </p>
                     <ul class="list-disc">
@@ -443,7 +390,7 @@
                 <p>{{ $t('note-title') }}</p>
             </template>
             <template #right-col>
-                <ul class="list-disc list-inside">
+                <ul class="list-disc ml-4">
                     <li
                         v-for="(item, i) in $t(`note-items`)"
                         :key="`prospectus_note_${i}`"
@@ -471,7 +418,7 @@ import SponsorLevelBronze from '@/static/img/sponsor/SponsorPackageBronze.svg'
 import SpecialSponsorshipFa from '../../static/img/sponsor/SpecialSponsorPackageFinancialAid.svg'
 import SpecialSponsorshipMask from '../../static/img/sponsor/SpecialSponsorPackageSouvenirsMask.svg'
 import SpecialSponsorshipSprint from '../../static/img/sponsor/SpecialSponsorPackageSprintsMeetup.svg'
-import SpecialSponsorshipYoungPycakathon from '../../static/img/sponsor/SpecialSponsorPackageYounInspires.svg'
+import SpecialSponsorshipYoungPyckathon from '../../static/img/sponsor/SpecialSponsorPackageYounInspires.svg'
 
 export default {
     i18n,
@@ -512,7 +459,7 @@ export default {
             specialSponsorshipTypeImgs: {
                 'special-sponsorship-fa': SpecialSponsorshipFa,
                 'special-sponsorship-sprint': SpecialSponsorshipSprint,
-                'special-sponsorship-youngPyckathon': SpecialSponsorshipYoungPycakathon,
+                'special-sponsorship-youngPyckathon': SpecialSponsorshipYoungPyckathon,
                 'special-sponsorship-mask': SpecialSponsorshipMask,
             },
         }
@@ -533,10 +480,27 @@ export default {
             return { 'margin-bottom': '0.8rem' }
         },
     },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('intro'),
+                },
+            ],
+        }
+    },
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .table-th {
     color: #9387ff;
 }
@@ -547,19 +511,17 @@ export default {
     color: #9387ff;
 }
 .section-title p {
-    text-align: center;
+    @apply text-center;
 }
 ul.list-disc {
-    padding-left: 0;
+    @apply pl-0;
 }
 p.text-center {
-    text-align: center;
+    @apply text-center;
 }
 .sponsor-packages {
     grid-template-columns: 2fr 3fr 3fr;
-}
-@media (min-width: 1024px) {
-    .sponsor-packages {
+    @media (min-width: 1024px) {
         grid-template-columns: 3fr 2.4fr 2.4fr 2.4fr;
     }
 }
