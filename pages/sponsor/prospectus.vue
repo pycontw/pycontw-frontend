@@ -101,7 +101,7 @@
             {{ $t('package-title.0') }}
         </p>
         <div class="grid gap-x-3 mt-8 lg:hidden sponsor-packages">
-            <template v-for="row in Array.from(Array(15).keys())">
+            <template v-for="row in Array.from(Array(sponsorLevelRows).keys())">
                 <div
                     :key="`sponsor_package_title_${row}`"
                     class="section-title"
@@ -153,7 +153,9 @@
         </div>
         <!-- sponsor package pc -->
         <div class="mt-16 hidden lg:grid gap-x-8 sponsor-packages">
-            <template v-for="row in Array.from(Array(10).keys())">
+            <template
+                v-for="row in Array.from(Array(sponsorLevelRowsPC).keys())"
+            >
                 <div
                     :key="`sponsor_package_title_${row}`"
                     class="section-title flex"
@@ -169,7 +171,7 @@
                     </p>
                 </div>
                 <div
-                    v-for="sponsorPackage in sponsorLevelsMd[
+                    v-for="sponsorPackage in sponsorLevelsPC[
                         Math.floor(row / 5)
                     ]"
                     :key="`sponsor_package_${row}_${sponsorPackage}`"
@@ -268,7 +270,9 @@
             {{ $t('specialSponsorship-title.0') }}
         </p>
         <div class="grid gap-x-3 mt-8 lg:hidden sponsor-packages">
-            <template v-for="row in Array.from(Array(10).keys())">
+            <template
+                v-for="row in Array.from(Array(specialSponsorshipRows).keys())"
+            >
                 <div
                     :key="`special_sponsorship_title_${row}`"
                     class="section-title"
@@ -328,7 +332,11 @@
         </div>
         <!-- special sponsorship pc -->
         <div class="mt-16 hidden lg:grid gap-x-8 sponsor-packages">
-            <template v-for="row in Array.from(Array(10).keys())">
+            <template
+                v-for="row in Array.from(
+                    Array(specialSponsorshipRowsPC).keys(),
+                )"
+            >
                 <div
                     :key="`special_sponsorship_title_${row}`"
                     class="section-title flex"
@@ -344,7 +352,7 @@
                     </p>
                 </div>
                 <div
-                    v-for="specialSponsorShipType in specialSponsorshipTypesMd[
+                    v-for="specialSponsorShipType in specialSponsorshipTypesPC[
                         Math.floor(row / 5)
                     ]"
                     :key="`prospectus_special_${row}_${specialSponsorShipType}`"
@@ -436,12 +444,14 @@ export default {
     },
     data() {
         return {
+            sponsorLevelRows: 3 * 5, // 3 rows on design and each row needs 5 grid-template-rows (length of package-title)
             sponsorLevels: [
                 ['diamond', 'platinum'],
                 ['gold', 'silver'],
                 ['bronze', ''], // add an empty string to fulfill grid layout
             ],
-            sponsorLevelsMd: [
+            sponsorLevelRowsPC: 2 * 5, // 2 rows on design and each row needs 5 grid-template-rows (length of package-title)
+            sponsorLevelsPC: [
                 ['diamond', 'platinum', 'gold'],
                 ['silver', 'bronze', ''], // add an empty string to fulfill grid layout
             ],
@@ -452,11 +462,13 @@ export default {
                 'sponsor-level-silver': SponsorLevelSilver,
                 'sponsor-level-bronze': SponsorLevelBronze,
             },
+            specialSponsorshipRows: 2 * 5, // 2 rows on design and each row needs 5 grid-template-rows (length of specialSponsorship-title)
             specialSponsorshipTypes: [
                 ['fa', 'sprint'],
                 ['youngPyckathon', 'mask'],
             ],
-            specialSponsorshipTypesMd: [
+            specialSponsorshipRowsPC: 2 * 5, // 2 rows on design and each row needs 5 grid-template-rows (length of specialSponsorship-title)
+            specialSponsorshipTypesPC: [
                 ['fa', 'sprint', 'youngPyckathon'],
                 ['mask', '', ''], // add an empty string to fulfill grid layout
             ],
