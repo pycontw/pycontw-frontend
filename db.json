@@ -5,7 +5,8 @@
                 "level_name": "platinum",
                 "sponsors": [
                     {
-                        "name": "國泰金控",
+                        "name_en_us" : "Cathay Financial Holdings",
+                        "name_zh_hant": "國泰金控",
                         "subtitle_en_us": "3-year-sponsorship",
                         "subtitle_zh_hant": "連續三年贊助",
                         "intro_en_us": "國泰於金控層級設立「數位暨數據發展中心（簡稱數數發中心）」",
@@ -19,7 +20,8 @@
                 "level_name": "gold",
                 "sponsors": [
                     {
-                        "name": "名字超級長 Have a LONG Name",
+                        "name_en_us" : "名字超級超級超級超級超級長",
+                        "name_zh_hant": "Have a LOOOOOOOOOOOOOOONG Name",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "but short content",
@@ -28,7 +30,8 @@
                         "logo_url": "https://tw.pycon.org/2020/media/sponsors/%E6%88%90%E5%8A%9F%E5%A4%A7%E5%AD%B8%E8%B3%87%E8%A8%8A%E5%B7%A5%E7%A8%8B%E5%AD%B8%E7%B3%BB/NCKU_CSIE_new.png"
                     },
                     {
-                        "name": "Elon Musk",
+                        "name_en_us" : "Elon Musk",
+                        "name_zh_hant": "馬誼郎",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "He runs gigantic business",
@@ -37,7 +40,8 @@
                         "logo_url": "https://i.imgur.com/RK2bZI7.jpeg"
                     },
                     {
-                        "name": "Elon Musk",
+                        "name_en_us" : "Elon Musk",
+                        "name_zh_hant": "馬誼郎",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "He runs gigantic business",
@@ -46,7 +50,8 @@
                         "logo_url": "https://i.imgur.com/xiAfNVQ.jpeg"
                     },
                     {
-                        "name": "Elon Musk",
+                        "name_en_us" : "Elon Musk",
+                        "name_zh_hant": "馬誼郎",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "He runs gigantic business",
@@ -55,7 +60,8 @@
                         "logo_url": "https://i.imgur.com/p1Ln71T.jpg"
                     },
                     {
-                        "name": "Elon Musk",
+                        "name_en_us" : "Elon Musk",
+                        "name_zh_hant": "馬誼郎",
                         "subtitle_en_us": "Tesla",
                         "subtitle_zh_hant": "特斯拉",
                         "intro_en_us": "He runs gigantic business",
@@ -64,7 +70,8 @@
                         "logo_url": "https://i.imgur.com/nY1SVr7.gif"
                     },
                     {
-                        "name": "Elon Musk",
+                        "name_en_us" : "Elon Musk",
+                        "name_zh_hant": "馬誼郎",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "He runs gigantic business",
@@ -78,7 +85,8 @@
                 "level_name": "silver",
                 "sponsors": [
                     {
-                        "name": "Jeff Bezos",
+                        "name_en_us" : "Jeff Bezos",
+                        "name_zh_hant": "傑佛瑞·貝佐斯",
                         "subtitle_en_us": "Amazon!!!",
                         "subtitle_zh_hant": "Amazon!!!",
                         "intro_en_us": "",
@@ -92,7 +100,8 @@
                 "level_name": "bronze",
                 "sponsors": [
                     {
-                        "name": "Mark Zuckerberg",
+                        "name_en_us" : "Mark Zuckerberg",
+                        "name_zh_hant": "馬克·艾略特·祖克柏",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "Mark Elliot Zuckerberg (born May 14, 1984) is an American media magnate, internet entrepreneur, and philanthropist. He is known for co-founding Facebook, Inc. and serves as its chairman, chief executive officer, and controlling shareholder. He also is a co-founder of the solar sail spacecraft development project Breakthrough Starshot and serves as one of its board members.",
@@ -106,7 +115,8 @@
                 "level_name": "co-organizer",
                 "sponsors": [
                     {
-                        "name": "test",
+                        "name_en_us" : "test",
+                        "name_zh_hant": "測試",
                         "subtitle_en_us": "",
                         "subtitle_zh_hant": "",
                         "intro_en_us": "sponsor with empty logo & shouldn't be displayed",
@@ -115,7 +125,8 @@
                         "logo_url": ""
                     },
                     {
-                        "name": "test",
+                        "name_en_us" : "test",
+                        "name_zh_hant": "測試",
                         "subtitle_en_us": "test",
                         "subtitle_zh_hant": "test",
                         "intro_en_us": "test",
@@ -129,7 +140,8 @@
                 "level_name": "organizer",
                 "sponsors": [
                     {
-                        "name": "test",
+                        "name_en_us" : "test",
+                        "name_zh_hant": "測試",
                         "subtitle_en_us": "test",
                         "subtitle_zh_hant": "test",
                         "intro_en_us": "test",
