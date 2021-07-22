@@ -5,7 +5,7 @@
             <div class="lightBox__title">
                 <sponsor-card :logo-url="context.logo_url" small></sponsor-card>
                 <h1 class="text-xl mx-8">
-                    {{ context.name }}
+                    {{ getAttributeByLocale('name') }}
                 </h1>
             </div>
             <h2 class="lightBox__subtitle">{{ $t('about') }}</h2>
