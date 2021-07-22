@@ -2,7 +2,7 @@
     <div class="error">
         <img
             src="~/static/img/error/Error.svg"
-            alt="Error Picture"
+            alt="Error picture of PyConTW 2021"
             width="93px"
             height="93px"
         />

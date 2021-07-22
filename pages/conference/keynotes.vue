@@ -152,6 +152,11 @@ export default {
                     property: 'og:description',
                     content: this.$i18n.t('intro'),
                 },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('intro'),
+                },
             ],
         }
     },

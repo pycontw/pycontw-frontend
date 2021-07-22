@@ -36,7 +36,11 @@ export default {
                     name: 'viewport',
                     content: 'width=device-width, initial-scale=1',
                 },
-                { hid: 'description', name: 'description', content: '' },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'PyCon Taiwan 2021',
+                },
                 {
                     hid: 'og:title',
                     property: 'og:title',
@@ -50,7 +54,13 @@ export default {
                 {
                     hid: 'og:image',
                     property: 'og:image',
-                    content: require('@/static/og-img.jpg'),
+                    content:
+                        'https://tw.pycon.org/2021/_nuxt/img/og-img.bb9ef30.jpg',
+                },
+                {
+                    hid: 'og:url',
+                    property: 'og:url',
+                    content: 'https://tw.pycon.org' + this.$route.path,
                 },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
             ],
@@ -74,10 +84,37 @@ export default {
                     href:
                         'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap',
                 },
-
                 {
                     rel: 'canonical',
                     href: 'https://tw.pycon.org' + this.$route.path,
+                },
+                {
+                    rel: 'alternate',
+                    hreflang: 'x-default',
+                    href: 'https://tw.pycon.org/2021/en-us',
+                },
+                {
+                    rel: 'alternate',
+                    hreflang: 'en-us',
+                    href: 'https://tw.pycon.org/2021/en-us',
+                },
+                {
+                    rel: 'alternate',
+                    hreflang: 'zh-hant-tw',
+                    href: 'https://tw.pycon.org/2021/zh-hant',
+                },
+            ],
+            script: [
+                {
+                    type: 'application/ld+json',
+                    json: {
+                        '@context': 'https://schema.org',
+                        '@type': 'Organization',
+                        name: 'PyCon Taiwan 2021',
+                        url: 'https://tw.pycon.org/2021/en-us',
+                        logo:
+                            'https://tw.pycon.org/2021/_nuxt/img/og-img.bb9ef30.jpg',
+                    },
                 },
             ],
         }

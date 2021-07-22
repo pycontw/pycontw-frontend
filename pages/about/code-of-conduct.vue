@@ -79,6 +79,28 @@ export default {
             }
         },
     },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('pageAbstract'),
+                },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('pageAbstract'),
+                },
+            ],
+        }
+    },
 }
 </script>
 
