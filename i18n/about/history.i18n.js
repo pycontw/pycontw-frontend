@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'History of PyCon Taiwan',
         pageAbstract:
-            'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Talent sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
+            'This year, in addition to inheriting ten years of community communication experience, we have also made some new attempts, such as Podcasts and Young Inspires sharing sessions. It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between different ethnic groups and spark different sparks.',
         beforePyCon: {
             title: 'Before PyCon Taiwan',
             pyctw2008: '2008 PyCTW',
@@ -59,7 +59,7 @@ export default genI18nMessages({
         pycon2021: {
             title: '2021 is the Tenth Anniversary of PyCon Taiwan',
             content:
-                'In 2021, as the 10th anniversary of PyCon Taiwan is approaching, we could be the world’s only offline PyCon. Besides passing on experience in communities, we also take new steps in activities, like Podcast and Young Talent, to facilitate and encourage the exchanging of views among different groups. As a platform for Python communities, PyCon Taiwan invites all Python users, developers, and promoters in Taiwan to join our events.',
+                'In 2021, as the 10th anniversary of PyCon Taiwan is approaching, we could be the world’s only offline PyCon. Besides passing on experience in communities, we also take new steps in activities, like Podcast and Young Inspires, to facilitate and encourage the exchanging of views among different groups. As a platform for Python communities, PyCon Taiwan invites all Python users, developers, and promoters in Taiwan to join our events.',
         },
         og: {
             title: 'History of PyCon Taiwan',
@@ -70,7 +70,7 @@ export default genI18nMessages({
     'zh-hant': {
         title: '年會歷史',
         pageAbstract:
-            '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Talent 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
+            '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Inspires 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
         beforePyCon: {
             title: '在 PyCon Taiwan 之前',
             pyctw2008: '2008 PyCTW',
@@ -125,7 +125,7 @@ export default genI18nMessages({
         pycon2021: {
             title: '2021  是 PyCon Taiwan 十周年',
             content:
-                '面對疫情當前的現在，PyCon Taiwan 可能是今年全球少數能實體舉辦的 PyCon 。今年 PyCon Taiwan 除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Talent 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。台灣 Python 年會自許為一個交流平台，我們誠摯邀請每一個台灣 Python 使用者、開發者、推廣者一起多加利用與參與。',
+                '面對疫情當前的現在，PyCon Taiwan 可能是今年全球少數能實體舉辦的 PyCon 。今年 PyCon Taiwan 除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Inspires 分享會等。以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。台灣 Python 年會自許為一個交流平台，我們誠摯邀請每一個台灣 Python 使用者、開發者、推廣者一起多加利用與參與。',
         },
         og: {
             title: '年會歷史',
