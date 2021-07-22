@@ -530,7 +530,7 @@ export default {
     @apply text-center;
 }
 ul.list-disc {
-    @apply pl-0;
+    padding-left: 0 !important;
 }
 .ml-2vw {
     margin-left: 2vw;
