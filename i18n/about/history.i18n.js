@@ -107,10 +107,7 @@ export default genI18nMessages({
         pycon2021: {
             title: '2021 is the Tenth Anniversary of PyCon Taiwan',
             content:
-                'In the current COVID-19 pandemic situation, it is impossible to hold physical events. ' +
-                'The preparation team hopes to break the boundaries of time and space through a new method. ' +
-                'Let us share and exchange knowledge of python in the PyCon Taiwan remote conference. ' +
-                'We also hope that we will be able to hold a physical conference next year. ' +
+                'This year, 10th anniversary of PyCon Taiwan will be celebrated in our first virtual conference. ' +
                 'Besides passing on experience in communities, we also take new steps in activities, ' +
                 'like Podcast and Young Inspirers, to facilitate and encourage the exchanging of ' +
                 'views among different groups. As a platform for Python communities, ' +
@@ -201,10 +198,9 @@ export default genI18nMessages({
         pycon2021: {
             title: '2021 是 PyCon Taiwan 十周年',
             content:
-                '疫情當前，無法舉行實體活動的現在，籌備團隊希冀透過嶄新的方式，打破時間與空間的疆界，' +
-                '讓我們一同在 PyCon Taiwan 遠距會議環境裡，共享、交流 Python 領域知識，' +
-                '也期許明年我們能夠再次舉辦實體會議。今年 PyCon Taiwan 除了傳承十年來的社群交流經驗，' +
-                '我們更做了一些新嘗試，像是 Podcast 及 Young Inspirers 分享會等。' +
+                '今年我們即將迎來 PyCon Taiwan 第十週年、同時也是首次改以線上舉行。' +
+                '除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，' +
+                '像是 Podcast 及 Young Inspirers 分享會等。' +
                 '以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。' +
                 '台灣 Python 年會自許為一個交流平台，我們誠摯邀請每一個台灣 Python 使用者、開發者、' +
                 '推廣者一起多加利用與參與。',
