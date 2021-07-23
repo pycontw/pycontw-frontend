@@ -229,7 +229,7 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-youngPyckathon': [
-            'Young Inspires',
+            'Young Inspirers',
             '1',
             'USD$ 720',
             [
@@ -489,7 +489,7 @@ export default genI18nMessages({
             ],
         ],
         'specialSponsorship-youngPyckathon': [
-            'Young Inspires',
+            'Young Inspirers',
             '1名',
             '20,000元',
             [
