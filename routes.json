@@ -1,5 +1,5 @@
 {
-    "/api/sponsors": "/sponsors",
-    "/api/sponsors/jobs": "/jobs",
-    "/api/events/keynotes": "/keynotes"
+    "/api/sponsors/": "/sponsors",
+    "/api/sponsors/jobs/": "/jobs",
+    "/api/events/keynotes/": "/keynotes"
 }

@@ -14,15 +14,15 @@ export const mutations = {
 
 export const actions = {
     async $getSponsorsData({ commit }) {
-        const { data } = await this.$http.$get('/api/sponsors')
+        const { data } = await this.$http.$get('/api/sponsors/')
         commit('setSponsorsData', data)
     },
     async $getJobsData({ commit }) {
-        const { data } = await this.$http.$get('/api/sponsors/jobs')
+        const { data } = await this.$http.$get('/api/sponsors/jobs/')
         commit('setJobsData', data)
     },
     async $getKeynotesData({ commit }) {
-        const keynoteList = await this.$http.$get('/api/events/keynotes')
+        const keynoteList = await this.$http.$get('/api/events/keynotes/')
         commit('setKeynotesData', keynoteList)
     },
 }
