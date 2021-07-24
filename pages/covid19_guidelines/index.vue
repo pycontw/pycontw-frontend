@@ -1,11 +1,11 @@
 <template>
     <i18n-page-wrapper class="covid19 px-10 md:px-20 lg:px-36 xl:px-60">
-        <core-h1 :title="$t('pageTitle')" class="covid19__pageTitle"></core-h1>
+        <core-h1 :title="$t('title')"></core-h1>
         <div class="covid19__summary">
             <p>(CC BY-SA 3.0 TW) {{ $t('latestEdited') }}: 2021-06-15</p>
             <core-hr></core-hr>
-            <p path="pageSummary">
-                {{ $t('pageSummary') }}
+            <p path="summary">
+                {{ $t('summary') }}
             </p>
             <core-hr></core-hr>
         </div>
@@ -78,6 +78,28 @@ export default {
             //     link: 'https://www.cdc.gov.tw/File/Get/s8bfTZsDHo4V2CE2-ozrDg',
             // },
             licensePic: 'https://i.imgur.com/cVjN760.jpg=200x',
+        }
+    },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('summary'),
+                },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('summary'),
+                },
+            ],
         }
     },
 }

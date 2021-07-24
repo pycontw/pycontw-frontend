@@ -54,8 +54,7 @@ export default {
                 {
                     hid: 'og:image',
                     property: 'og:image',
-                    content:
-                        'https://tw.pycon.org/2021/_nuxt/img/og-img.bb9ef30.jpg',
+                    content: 'https://tw.pycon.org/2021/og-img.jpg',
                 },
                 {
                     hid: 'og:url',
@@ -110,10 +109,18 @@ export default {
                     json: {
                         '@context': 'https://schema.org',
                         '@type': 'Organization',
-                        name: 'PyCon Taiwan 2021',
-                        url: 'https://tw.pycon.org/2021/en-us',
-                        logo:
-                            'https://tw.pycon.org/2021/_nuxt/img/og-img.bb9ef30.jpg',
+                        name: 'PyCon Taiwan',
+                        url: 'https://tw.pycon.org',
+                        logo: 'https://tw.pycon.org/2021/og-img.jpg',
+                        sameAs: [
+                            'https://www.facebook.com/pycontw/',
+                            'https://twitter.com/PyConTW/',
+                            'https://www.linkedin.com/company/pycontw',
+                            'https://www.youtube.com/PyConTaiwan',
+                            'https://instagram.com/pycontw/',
+                            'https://github.com/pycontw/',
+                            'https://pycontw.blogspot.com/',
+                        ],
                     },
                 },
             ],
