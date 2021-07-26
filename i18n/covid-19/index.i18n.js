@@ -2,8 +2,8 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        pageTitle: 'PyCon Taiwan COVID-19 Epidemic Prevention Guidelines',
-        pageSummary:
+        title: 'PyCon Taiwan COVID-19 Epidemic Prevention Guidelines',
+        summary:
             'In response to the 2019 novel coronavirus (COVID-19) outbreak, ' +
             'the PyCon TW host team (We) announced PyCon Taiwan COVID-19 Guidelines' +
             'that are based on the COVID-19 prevention guidelines from Taiwan Central Epidemic Command Center (CECC). ' +
@@ -35,8 +35,8 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        pageTitle: 'PyCon Taiwan COVID-19 防疫宣導',
-        pageSummary:
+        title: 'PyCon Taiwan COVID-19 防疫宣導',
+        summary:
             '因應 2019 年新型冠狀病毒 (COVID-19) 疫情，' +
             '「PyCon TW 主辦團隊」(以下簡稱「我們」) 參照我國中央流行疫情指揮中心的防疫措施，' +
             '發布臺灣 Python 年會 (以下簡稱「PyCon TW」) 活動防疫宣導。' +

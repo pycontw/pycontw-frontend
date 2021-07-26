@@ -1,6 +1,6 @@
 <template>
     <div>
-        <core-h1 :title="$t('jobListing')" class="mt-24"></core-h1>
+        <core-h1 :title="$t('title')" class="mt-24"></core-h1>
         <jobs-card-collection ref="jobsCardCollection">
             <jobs-card
                 v-for="sponsor in jobsData"
@@ -62,6 +62,28 @@ export default {
         setPivot() {
             this.pivot = this.$refs.jobsCardCollection.$el.offsetTop
         },
+    },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('og.title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('og.description'),
+                },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('og.description'),
+                },
+            ],
+        }
     },
 }
 </script>

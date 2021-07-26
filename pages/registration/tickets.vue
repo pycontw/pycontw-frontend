@@ -243,6 +243,11 @@ export default {
                     property: 'og:description',
                     content: this.$i18n.t('pageAbstract'),
                 },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('pageAbstract'),
+                },
             ],
         }
     },

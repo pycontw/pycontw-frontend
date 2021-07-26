@@ -53,6 +53,10 @@ export default genI18nMessages({
                 organization: 'Photography',
             },
         ],
+        og: {
+            title: 'Staff',
+            description: 'Staff of PyConTW 2021',
+        },
     },
     'zh-hant': {
         title: '工作人員',
@@ -106,5 +110,9 @@ export default genI18nMessages({
                 organization: '攝影',
             },
         ],
+        og: {
+            title: '工作人員',
+            description: 'PyConTW 2021 工作人員',
+        },
     },
 })

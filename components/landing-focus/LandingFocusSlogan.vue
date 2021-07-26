@@ -1,12 +1,15 @@
 <template>
     <div class="flex items-center">
         <div class="my-4 mr-8">
-            <img src="~/static/page-home-slogan-code.png" alt="" />
+            <img
+                src="~/static/page-home-slogan-code.png"
+                alt="Slogan of PyConTW 2021"
+            />
         </div>
         <div class="w-10 md:w-16 lg:w-20">
             <img
                 src="~/static/page-home-slogan.png"
-                alt=""
+                alt="Homepage icon of PyConTW 2021"
                 class="object-contain"
             />
         </div>

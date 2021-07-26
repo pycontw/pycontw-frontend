@@ -137,6 +137,17 @@ export default genI18nMessages({
             contact: 'organizers@pycon.tw.',
             MeetingManagement: 'Personal Information Protection Act 130',
         },
+        og: {
+            title: 'Privacy Policy of PyCon Taiwan',
+            description:
+                'In 2021, as the 10th anniversary of PyCon Taiwan ' +
+                'is approaching, we could be the world’s only offline PyCon. ' +
+                'Besides passing on experience in communities, ' +
+                'we also take new steps in activities, ' +
+                'like Podcast and Young Talent, ' +
+                'to facilitate and encourage the exchanging ' +
+                'of views among different groups.',
+        },
     },
     'zh-hant': {
         title: 'PyCon Taiwan 個人資料保護聲明',
@@ -240,6 +251,13 @@ export default genI18nMessages({
         terms: {
             contact: 'organizers@pycon.tw.',
             MeetingManagement: '其法定特定目的為一三〇會議管理',
+        },
+        og: {
+            title: 'PyCon Taiwan 個人資料保護聲明',
+            description:
+                '感謝您參與臺灣 Python 年會 (以下簡稱「PyCon TW」)。「PyCon TW 主辦團隊」(以下簡稱「我們」) ' +
+                '將依個人資料保護法之規定來使用、保管您於報名時所提供的個人資料，並維護您的隱私權。同時，' +
+                '我們在此對於您個人資料之使用蒐集將依下列聲明為利用、管理。',
         },
     },
 })
