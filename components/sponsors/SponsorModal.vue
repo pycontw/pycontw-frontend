@@ -1,18 +1,18 @@
 <template>
     <div v-show="shouldShowModal" class="sponsorModal">
         <div class="lightBox">
-            <div class="lightBox__closeButton" @click="close">✕</div>
-            <div class="lightBox__title">
+            <div class="lightBox__header">
                 <sponsor-card :logo-url="context.logo_url" small></sponsor-card>
-                <h1 class="text-xl mx-8">
+                <h1 class="lightBox__title">
                     {{ getAttributeByLocale('name') }}
                 </h1>
+                <div class="lightBox__closeButton" @click="close">✕</div>
             </div>
             <h2 class="lightBox__subtitle">{{ $t('about') }}</h2>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ getAttributeByLocale('intro') }}</p>
             </div>
-            <div class="lightBox__buttons mt-28 sm:mt-10">
+            <div class="lightBox__buttons">
                 <text-button :href="context.website_url">{{
                     $t('website')
                 }}</text-button>
@@ -74,7 +74,7 @@ export default {
     @apply flex flex-col px-8 py-4 rounded-2xl border-4;
     width: 95%;
     padding: 32px 28px 28px 32px;
-    @media (min-width: 415px) {
+    @media (min-width: 768px) {
         width: 66%;
         padding: 60px 48px 48px 60px;
     }
@@ -84,19 +84,23 @@ export default {
 }
 
 .lightBox__closeButton {
-    @apply relative flex justify-end cursor-pointer;
+    @apply relative flex ml-auto mr-3 md:mr-6 cursor-pointer;
     top: -24px;
     right: -12px;
     color: #f3cc39;
 
-    @media (min-width: 415px) {
+    @media (min-width: 768px) {
         top: -40px;
         right: -20px;
     }
 }
 
-.lightBox__title {
+.lightBox__header {
     @apply flex items-center;
+}
+
+.lightBox__title {
+    @apply text-xl ml-1 sm:ml-4 md:ml-8;
 }
 
 .lightBox__subtitle {
@@ -110,6 +114,6 @@ export default {
 }
 
 .lightBox__buttons {
-    @apply flex;
+    @apply relative bottom-0;
 }
 </style>
