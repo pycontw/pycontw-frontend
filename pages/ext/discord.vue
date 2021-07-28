@@ -28,9 +28,18 @@
                         {{ $t('stepOneDescription') }}
                     </p>
                     <br />
-                    <p class="bold-title">
-                        {{ $t('registerAction.action') }}
-                    </p>
+                    <i18n
+                        path="registerAction.action"
+                        tag="p"
+                        class="bold-title"
+                    >
+                        <template #token>
+                            <span v-if="!isValidAttendee">{{
+                                $t('token')
+                            }}</span>
+                            <span v-else>{{ token }}</span>
+                        </template>
+                    </i18n>
                     <p class="paragraph-content">
                         {{ $t('registerAction.note') }}
                     </p>
@@ -201,6 +210,7 @@ export default {
     async asyncData({ store, query }) {
         const token = query.token
         await store.dispatch('$verifyAttendee', { token })
+        return { token }
     },
     data() {
         return {

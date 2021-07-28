@@ -11,8 +11,9 @@ export default genI18nMessages({
         stepOne: '1. Register',
         stepOneDescription:
             'Users can find a #registration-desk channel under PYCON TW 2021 category. There is a PyCon TW RegBot in this channel to help you register to your roles.',
+        token: '[TOKEN]',
         registerAction: {
-            action: 'Enter !register [TOKEN] in this channel to register',
+            action: 'Enter !register {token} in this channel to register',
             note:
                 '(If you want to get your own Token, please click the link in the letter.)',
         },
@@ -201,8 +202,9 @@ export default genI18nMessages({
         stepOne: '1. 註冊',
         stepOneDescription:
             '使用者會看到在 PYCON TW 2021 的類別下會有一個 #registration-desk 頻道。在此頻道會有一個 PyCon TW RegBot 負責註冊使用者到對應身分組。',
+        token: '[TOKEN]',
         registerAction: {
-            action: '輸入 !register [TOKEN] 以進行註冊',
+            action: '輸入 !register {token} 以進行註冊',
             note: '(如要取得您的專屬 Token 請點擊行前信中的連結)',
         },
         helpAction: {
