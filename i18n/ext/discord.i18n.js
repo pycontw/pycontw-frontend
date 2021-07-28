@@ -2,6 +2,8 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
+        invalidAttendee:
+            'The token within the link is invalid. Please contact staff for further help.',
         title: 'PyCon TW Discord Guideline',
         pageAbstract:
             'If you have not installed Discord or joined Python Taiwan Discord server, follow Setting up Discord and setup your Discord first.',
@@ -190,6 +192,8 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
+        invalidAttendee:
+            '連結中附帶的驗證碼錯誤。請聯繫工作人員取得更進一步的協助。',
         title: 'PyCon TW Discord 指南',
         pageAbstract:
             '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
