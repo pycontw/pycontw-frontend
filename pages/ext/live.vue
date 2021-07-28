@@ -25,12 +25,8 @@ export default {
         CoreH1,
         Youtube,
     },
-    async asyncData({ store, query, redirect }) {
+    async asyncData({ store, query }) {
         const token = query.token
-        if (!token) {
-            redirect('/')
-            return
-        }
         await store.dispatch('$verifyAttendee', { token })
     },
     computed: {
