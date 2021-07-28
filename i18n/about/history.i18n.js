@@ -28,41 +28,41 @@ export default genI18nMessages({
                 'distinguishes PyCon Taiwan from other conferences in Taiwan.',
         },
         pycon2014: {
-            title: 'In 2014, the Python community hosted the APAC',
+            title: 'In 2014, the Python Taiwan community hosted the APAC',
             checkIO: 'CheckIO',
             content:
-                'We turned to host PyCon APAC/Taiwan, as PyCon for the APAC area, in both 2014 and 2015, ' +
+                'We hosted the PyCon APAC/Taiwan, as PyCon for the APAC area, in both 2014 and 2015, ' +
                 'lead by chairpersons Tim Hsu and Keith Yang. We were lucky to invite Jessica McKellar, ' +
                 'director of Python Software Foundation, and many prestigious contributors in the ' +
                 'community as our keynote speakers. During the BoF, we launched a problem-solving ' +
                 'competition in collaboration with {check-io}, as an entertaining activity. ' +
-                'We also arranged programs like Show Time and Job Event in order to promote sponsors. ' +
+                'We also arranged programs like Show Time and Job Event in order to promote the sponsors. ' +
                 'Tutorials covering several topics were held, ranging from Python introduction to ' +
                 'web crawling, data mining, signal processing, and even interaction with Raspberry Pi.',
         },
         pycon2015: {
-            title: 'The 2015 PyConAPAC held an additional paid PyDay',
+            title: 'The 2015 PyConAPAC held an additional fee-based PyDay',
             content:
                 'PyDay, an activity for new programmers hosted jointly by PyCon Taiwan and ' +
-                'top universities in Taiwan, was also held at the first time in 2015. ' +
+                'top universities in Taiwan, was also held for the first time in 2015. ' +
                 'Keynote speakers from PyCon Taiwan came to the PyDay event, and share their experience ' +
-                'throughout sessions.',
+                'throughout the sessions.',
         },
         pycon2016: {
             title: '2016 「Implement the Future, Together!」',
             pyconBlog2016: 'local keynote speakers',
             pyconTWFlickr: 'photo albums',
             content:
-                'We passed the APAC flag to South Korea in 2016, and put our focus back to the ' +
+                'We passed the APAC flag to South Korea in 2016, and brought our focus back to the ' +
                 'native Taiwanese community. But PyCon Taiwan, now under the slogan ' +
-                '“Implement the Future, Together!”, was strong as ever, and received a overwhelming ' +
+                '“Implement the Future, Together!”, was stronger than ever, and received a overwhelming ' +
                 'amount of proposals and participants. We were lucky to invite jserv and Audrey Tang, ' +
-                'both famous Taiwanese community leaders and established hackers, ' +
+                'who are both famous Taiwanese community leaders and established hackers, ' +
                 'as well as foreign speakers including Paul Hildebrandt, senior engineer at ' +
                 'Disney Animation Studio, Steve Dower, software developer at Microsoft, ' +
                 'and Amber Brown, manager of the Twisted project. ' +
                 'Paul brought us an enlightening speech about how Python is applied to ' +
-                'animation production in Disney, which the audience greatly enjoyed. ' +
+                'animation production in Disney, which the audience thoroughly enjoyed. ' +
                 'Along with the first {pycon-blog-2016} at PyCon Taiwan, we also made new attempts ' +
                 'including a FinTech session, interactive games combining sensor technology and ' +
                 'a vending machine, and experience-sharing talks about teaching programming to ' +
@@ -71,56 +71,56 @@ export default genI18nMessages({
         pycon2017: {
             title: '2017 「Future」',
             content:
-                '2017 is our most futuristic PyCon Taiwan ever. All of our keynote speakers, ' +
+                '2017 was our most futuristic PyCon Taiwan ever. All of our keynote speakers, ' +
                 'including globally renowned machine-learning expert Hsuan-Tien Lin, are not only ' +
                 'recognized in their respective fields, but also community leaders, trend-setters, ' +
                 'and visionaries for the next generation. In line with the community-focused theme, ' +
-                'we also held an unconference session for the first time, looking forward to spurring ' +
-                'discussion in the community, to great success. The late-night party is also expanded ' +
-                'to include contributions from community members with great talent. ' +
-                'Adrian Liaw’s piano performance was such a treat.',
+                'we also held an "unconference conference" for the first time, looking forward to spurring ' +
+                'discussion in the community, to great success. The late-night party was also expanded ' +
+                'to include contributions from community members with various talent. ' +
+                'Adrian Liaw’s piano performance was such a treat!',
         },
         pycon2018: {
-            title: '2018 「Acceletation」',
+            title: '2018 「Acceleration」',
             content:
-                'The largely same team were brought back to host PyCon Taiwan in 2018. ' +
-                'Continuing the established theme, the image is set to “acceletation”, ' +
+                'Largely the same team were brought back to host PyCon Taiwan in 2018. ' +
+                'Continuing the established theme, the image was set to “acceletation”, ' +
                 'both in the technical sense and community-wise.',
         },
         pycon2019: {
             title: '2019 「Innovation」',
             content:
                 'We retrospected the role of PyCon Taiwan as a community platform in Taiwan in 2019. ' +
-                'We have continued improving our agenda and events by introducing wonderful thoughts ' +
+                'We have continued to improve our agenda and events by introducing wonderful activities ' +
                 'and experience from the other Python Conferences in the world to PyCon Taiwan. ' +
                 'We also enhanced the exchange of experience between local-to-local and ' +
-                'local-to-international Python communities, and kept adopting innovative plans.',
+                'local-to-international Python communities, and adopted innovative plans.',
         },
         pycon2020: {
-            title: '2020「Migration Southward」',
+            title: '2020「Moving Southward」',
             content:
-                'In 2020, we hosted PyCon Taiwan in Tainan. This is the first time we host PyCon Taiwan ' +
-                'in southern Taiwan. Another new attempt is Community Track. While interacting with ' +
-                'local Communities, attendees can get a taste of local culture in a different ambience. ' +
-                'We hope we could bring local communities more and different experience.',
+                'To promote local communities to the attendees, we hosted PyCon Taiwan in Tainan ' +
+                'for the first time. And we introduced {communityTrack}, hosted by eight local communities such as ' +
+                'Taipei.py, Taichung.py, Tainan.py, Kaohsiung.py, etc. ' +
+                'People can decide which local communities to interact with, and while doing so, ' +
+                'understand the unique culture of different communities.',
         },
         pycon2021: {
-            title: '2021 is the Tenth Anniversary of PyCon Taiwan',
+            title: '2020「Reunion」',
             content:
-                'This year, 10th anniversary of PyCon Taiwan will be celebrated in our first virtual conference. ' +
-                'Besides passing on experience in communities, we also take new steps in activities, ' +
-                'like Podcast and Young Inspirers, to facilitate and encourage the exchanging of ' +
-                'views among different groups. As a platform for Python communities, ' +
-                'PyCon Taiwan invites all Python users, developers, ' +
-                'and promoters in Taiwan to join our events.',
+                'This year is the 10th anniversary of PyCon Taiwan. ' +
+                'Due to COVID-19, we will be hosting our first ever online conference. ' +
+                'This is a big challenge for us, but we will overcome it with our passion. ' +
+                'Besides passing on the experience in communities, ' +
+                'we are also introducing brand new activities, like PyCasts and Young Inspirers, ' +
+                'to facilitate and encourage discussions among different groups. ' +
+                'We hope to invite all of you, either a python user, developer, or promoter, ' +
+                'to join our gathering. ' +
+                'Let’s get together and make PyCon Taiwan more professional, accessible, and ' +
+                'energetic than ever.',
         },
-        og: {
-            title: 'History of PyCon Taiwan',
-            description:
-                'This year, in addition to inheriting ten years of community communication experience, ' +
-                'we have also made some new attempts, such as Podcasts and Young Inspirers sharing sessions. ' +
-                'It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between ' +
-                'different ethnic groups and spark different sparks.',
+        terms: {
+            communityTrack: 'Community Track',
         },
     },
     'zh-hant': {
@@ -192,24 +192,24 @@ export default genI18nMessages({
         pycon2020: {
             title: '2020 「南遷」',
             content:
-                '2020 我們首次嘗試將 PyCon Taiwan 搬到濁水溪以南的台南，以期能替更多台灣在地社群，' +
-                '注入新的活水與帶來更多彼此交流後不一樣的火花。',
+                '為了更進一步的替更多在地社群注入活水，我們特地將 PyCon Taiwan 搬到濁水溪以南的台南，' +
+                '並且在議程的設計上我們也首次加入專屬於在地社群的{communityTrack}，' +
+                '透過這樣的安排讓與會的會眾能自由選擇參與，包含了台北.py、台中.py、台南.py、高雄.py ' +
+                '等等多達 8 個在地社群，一方面為在地社群增加曝光的機會，另方面也透過活動的交流產生出不一樣的火花。',
         },
         pycon2021: {
-            title: '2021 是 PyCon Taiwan 十周年',
+            title: '2021 「聚」',
             content:
-                '今年我們即將迎來 PyCon Taiwan 第十週年、同時也是首次改以線上舉行。' +
-                '除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，' +
-                '像是 Podcast 及 Young Inspirers 分享會等。' +
-                '以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。' +
-                '台灣 Python 年會自許為一個交流平台，我們誠摯邀請每一個台灣 Python 使用者、開發者、' +
-                '推廣者一起多加利用與參與。',
+                '今年我們迎來 PyCon Taiwan 的第十年，由於疫情因素，我們首次嘗試新的年會形式 - 全線上年會。' +
+                '對我們來說這是一個新的挑戰，但並不澆熄 PyCon Taiwan 志工群的熱忱。' +
+                '除了傳承過往的社群交流經驗，我們更做了一些大膽的創新嘗試，' +
+                '像是 PyCast 及 Young Inspirers 分享會等活動，' +
+                '期望 PyCon Taiwan 的第十年能站在過去的基礎上更進一步的促進不同族群間的交流。' +
+                '我們誠摯的邀請每一位國內外的 Python 使用者、開發者、推廣者參與這次的盛會，' +
+                '和我們「聚」在一起。讓這次的盛會變得更專業、更自由以及更有活力！',
         },
-        og: {
-            title: '年會歷史',
-            description:
-                '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像是 Podcast 及 Young Inspirers 分享會等。' +
-                '以期 PyCon Taiwan 十周年能促進不同族群間的交流，激盪出不一樣的火花。',
+        terms: {
+            communityTrack: '社群體驗式議程軌',
         },
     },
 })

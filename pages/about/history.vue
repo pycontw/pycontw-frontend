@@ -14,7 +14,7 @@
                 </p>
             </template>
         </banner>
-        <I18nPageWrapper class="pt-8 px-8 md:px-57 lg:px-56">
+        <i18n-page-wrapper class="pt-8 px-8 md:px-57 lg:px-56">
             <div class="flex flex-col w-full m-auto">
                 <p
                     class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
@@ -173,7 +173,16 @@
                     tag="p"
                     class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
                     path="pycon2020.content"
-                ></i18n>
+                >
+                    <template #communityTrack>
+                        <ext-link
+                            href="https://tw.pycon.org/2020/en-us/conference/community-track/"
+                            highlight
+                            underline
+                            >{{ $t('terms.communityTrack') }}</ext-link
+                        >
+                    </template>
+                </i18n>
                 <p
                     class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
                 >
@@ -185,7 +194,7 @@
                     path="pycon2021.content"
                 ></i18n>
             </div>
-        </I18nPageWrapper>
+        </i18n-page-wrapper>
     </div>
 </template>
 
@@ -227,17 +236,17 @@ export default {
                 {
                     hid: 'og:title',
                     property: 'og:title',
-                    content: this.$i18n.t('og.title'),
+                    content: this.$i18n.t('title'),
                 },
                 {
                     hid: 'og:description',
                     property: 'og:description',
-                    content: this.$i18n.t('og.description'),
+                    content: this.$i18n.t('pageAbstract'),
                 },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: this.$i18n.t('og.description'),
+                    content: this.$i18n.t('pageAbstract'),
                 },
             ],
         }
