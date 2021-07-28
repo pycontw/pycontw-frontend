@@ -191,7 +191,7 @@ import discordIntro2 from '@/static/img/ext/discord-2.png'
 
 export default {
     i18n,
-    name: 'PageCodeOfConduct',
+    name: 'DiscordGuide',
     components: {
         I18nPageWrapper,
         CoreH1,
@@ -227,13 +227,6 @@ export default {
                 this.$store.state.youtubeInfo &&
                 this.$store.state.youtubeInfo.length !== 0
             )
-        },
-    },
-    methods: {
-        getImgStyle(img) {
-            return {
-                'background-image': `url(${img})`,
-            }
         },
     },
     head() {
