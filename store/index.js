@@ -28,16 +28,10 @@ export const actions = {
         commit('setKeynotesData', keynoteList)
     },
     async $verifyAttendee({ commit }, payload = { token: '' }) {
-        try {
-            const youtubeInfo = await this.$http.$post(
-                '/api/attendee/verify/',
-                {
-                    ...payload,
-                },
-            )
-            commit('setYoutubeInfo', youtubeInfo.youtube_infos)
-        } catch (e) {
-            console.error(e)
-        }
+        const youtubeInfo = await this.$http.$post(
+            '/api/attendee/verify/',
+            payload,
+        )
+        commit('setYoutubeInfo', youtubeInfo.youtube_infos)
     },
 }
