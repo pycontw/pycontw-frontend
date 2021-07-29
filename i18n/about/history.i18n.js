@@ -106,7 +106,7 @@ export default genI18nMessages({
                 'understand the unique culture of different communities.',
         },
         pycon2021: {
-            title: '2020「Reunion」',
+            title: '2021「Reunion」',
             content:
                 'This year is the 10th anniversary of PyCon Taiwan. ' +
                 'Due to COVID-19, we will be hosting our first ever online conference. ' +
