@@ -7,14 +7,14 @@ export default genI18nMessages({
             'This year, in addition to inheriting ten years of community communication experience, ' +
             'we have also made some new attempts, such as Podcasts and Young Inspirers sharing sessions. ' +
             'It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between ' +
-            'different ethnic groups and spark different sparks.',
+            'the diverse ethnic groups and ignite different sparks.',
         beforePyCon: {
             title: 'Before PyCon Taiwan',
             pyctw2008: '2008 PyCTW',
             pyctw2011: '2011 PyCTW',
             content:
-                'Thinker organized PyCTW, the predecessor of PyCon Taiwan, in both {pyctw2008} and ' +
-                '{pyctw2011}. They are one-day events gathering Pythonistas in Taiwan together.',
+                'Thinker Li organized PyCTW, the predecessor of PyCon Taiwan, in both {pyctw2008} and ' +
+                '{pyctw2011}. They were one-day events gathering Pythonistas in Taiwan together.',
         },
         pycon2012: {
             title: '2012 is the first year of PyCon Taiwan',
