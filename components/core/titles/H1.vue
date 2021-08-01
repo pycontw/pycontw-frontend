@@ -1,10 +1,6 @@
 <template>
-    <div class="flex justify-center font-serif whitespace-nowrap">
-        <h1
-            :class="`py-2 font-semibold leading-loose text-lg mb-3 ${langSpacing} md:text-2xl lg:text-2xl md:mb-9 lg:mb-9`"
-        >
-            {{ title }}
-        </h1>
+    <div class="flex justify-center font-serif">
+        <h1 :class="classObject">{{ title }}</h1>
     </div>
 </template>
 
@@ -16,18 +12,27 @@ export default {
             type: String,
             required: true,
         },
+        center: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
-        langSpacing() {
-            return this.$i18n.locale === 'en-us'
-                ? 'tracking-wider'
-                : 'tracking-widest'
+        classObject() {
+            return {
+                'tracking-wider': this.$i18n.locale === 'en-us',
+                'tracking-widest': this.$i18n.locale !== 'en-us',
+                'text-center': this.center,
+            }
         },
     },
 }
 </script>
-<style scoped>
+
+<style lang="postcss" scoped>
 h1 {
+    @apply py-2 font-semibold leading-loose text-lg;
+    @apply mb-3 md:text-2xl md:mb-9;
     color: #f3cc39;
 }
 </style>
