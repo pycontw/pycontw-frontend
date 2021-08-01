@@ -144,6 +144,7 @@ export default {
     top: 48px;
     width: 100vw;
     height: calc(100vh - 48px);
+    min-height: 720px;
 }
 
 .page-home .page-homeLandingFocus::after {
@@ -154,6 +155,15 @@ export default {
     background-image: url('~@/static/page-home-background.png');
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 567px) {
+    .page-home .page-homeLandingFocus::after {
+        background-position: -40vw center;
+        background-size: 200vw;
+        background-repeat: no-repeat;
+    }
 }
 
 .page-home__title {

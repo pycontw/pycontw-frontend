@@ -1,8 +1,9 @@
 <template>
     <div class="flex items-center">
-        <div class="my-4 mr-8">
+        <div class="my-4 mr-6 md:mr-8">
             <img
-                src="~/static/page-home-slogan-code.png"
+                class="slogan-img"
+                src="~/static/page-home-slogan-code.svg"
                 alt="Slogan of PyConTW 2021"
             />
         </div>
@@ -22,4 +23,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.slogan-img {
+    width: 100%;
+}
+</style>
