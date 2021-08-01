@@ -133,12 +133,16 @@
                     </div>
                 </div>
             </tab>
-            <tab v-if="!!speechData.slido_embed_link" title="Slido">
+            <!--
+            TODO: This tab is commented out due to a unresolve issue that
+            this tab is displayed with the first tab after rendering.
+            -->
+            <!-- <tab v-if="!!speechData.slido_embed_link" title="Slido">
                 <iframe
                     class="speech__slido"
                     :src="speechData.slido_embed_link"
                 ></iframe>
-            </tab>
+            </tab> -->
         </tabs>
     </i18n-page-wrapper>
 </template>
