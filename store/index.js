@@ -5,6 +5,8 @@ export const state = () => ({
     jobsData: [],
     keynotesData: [],
     youtubeInfo: [],
+    speechesData: [],
+    speechData: {},
 })
 
 export const mutations = {
@@ -12,6 +14,8 @@ export const mutations = {
     setJobsData: set('jobsData'),
     setKeynotesData: set('keynotesData'),
     setYoutubeInfo: set('youtubeInfo'),
+    setSpeechesData: set('speechesData'),
+    setSpeechDetailData: set('speechData'),
 }
 
 export const actions = {
@@ -33,5 +37,20 @@ export const actions = {
             payload,
         )
         commit('setYoutubeInfo', youtubeInfo.youtube_infos)
+    },
+    async $getSpeechesData({ commit }, eventType) {
+        let endpoint = '/api/events/speeches/'
+        if (eventType === 'talks') {
+            endpoint = `${endpoint}?event_types=talk,sponsored`
+        } else if (eventType === 'tutorials') {
+            endpoint = `${endpoint}?event_types=tutorial`
+        }
+        const speechList = await this.$http.$get(endpoint)
+        commit('setSpeechesData', speechList)
+    },
+    async $getSpeechDetailData({ commit }, { eventType, eventId }) {
+        const endpoint = `/api/events/speeches/${eventType}/${eventId}/`
+        const SpeechData = await this.$http.$get(endpoint)
+        commit('setSpeechDetailData', SpeechData)
     },
 }
