@@ -6,4 +6,4 @@ RUN npm install -g json-server
 
 COPY db.json routes.json ./
 
-CMD ["json-server", "--watch", "db.json", "--routes", "routes.json", "--host", "0.0.0.0", "--port", "9876"]
+CMD ["json-server", "--watch", "db.json", "--routes", "routes.json", "--host", "0.0.0.0", "--port", "9876", "--middlewares", "json-server-middlewares.js"]
