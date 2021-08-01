@@ -1,5 +1,5 @@
 <template>
-    <div class="scheduleRooms sticky grid w-full justify-center">
+    <div class="scheduleRooms sticky hidden w-full justify-center">
         <slot></slot>
     </div>
 </template>

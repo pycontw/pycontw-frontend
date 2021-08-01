@@ -12,7 +12,7 @@
                     {{ day.label }}
                 </schedule-day-tab>
             </schedule-day-tabs>
-            <schedule-rooms>
+            <schedule-rooms class="lg:grid">
                 <schedule-block></schedule-block>
                 <schedule-room
                     v-for="(room, i) in rooms"
@@ -20,7 +20,7 @@
                     :value="room"
                 ></schedule-room>
             </schedule-rooms>
-            <schedule-table>
+            <schedule-table class="lg:grid">
                 <schedule-tick
                     v-for="(tick, i) in table.ticks"
                     :key="$makeKey(i, 'schedule_tick')"
@@ -35,7 +35,7 @@
                     :timeline-begin="table.timeline.begin"
                 ></schedule-event>
             </schedule-table>
-            <schedule-list>
+            <schedule-list class="lg:hidden">
                 <schedule-list-group
                     v-for="(group, i) in list.groups"
                     :key="$makeKey(i, 'schedule_list_group')"

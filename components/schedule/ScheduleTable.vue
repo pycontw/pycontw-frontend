@@ -1,5 +1,5 @@
 <template>
-    <div class="scheduleTable grid w-full">
+    <div class="scheduleTable hidden w-full">
         <slot></slot>
     </div>
 </template>

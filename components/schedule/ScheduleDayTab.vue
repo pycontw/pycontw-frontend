@@ -1,8 +1,8 @@
 <template>
     <schedule-block
         :active="active"
-        padding-x="px-8"
-        class="m-2 font-bold whitespace-nowrap"
+        padding-x="px-4 sm:px-8"
+        class="m-0 font-bold whitespace-nowrap lg:m-2"
         primary
         @click="onClick"
     >

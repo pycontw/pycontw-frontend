@@ -1,11 +1,14 @@
 <template>
-    <div class="scheduleDayTabs flex w-full mb-8 justify-center">
+    <div
+        class="scheduleDayTabs flex w-full justify-between mb-8 lg:justify-center"
+    >
         <slot></slot>
     </div>
 </template>
 
 <script>
 import dayjs from 'dayjs'
+
 export default {
     name: 'ScheduleDayTabs',
     mounted() {
