@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-52" custom-x>
+    <i18n-page-wrapper class="px-4 sm:px-10 md:px-32 lg:px-52" custom-x>
         <core-h1 :title="$t(eventType ? `${eventType}.title` : '')"></core-h1>
         <i18n
             :path="eventType ? `${eventType}.intro` : ''"

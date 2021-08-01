@@ -251,12 +251,12 @@ export default {
 
 .speech__infoSection {
     @apply inline-block text-xs md:text-sm mb-12 md:mb-24;
+    @apply p-2 md:p-6;
     @apply rounded-2xl w-full border-2 bg-opacity-0;
     line-height: 29px;
     color: #c7c7c7;
     border-color: #c2a53a;
     box-shadow: 6px 6px 0 #c2a53a;
-    padding: 30px;
 }
 .speech__infos {
     @apply grid grid-cols-1 sm:grid-cols-2;
