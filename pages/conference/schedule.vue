@@ -35,6 +35,27 @@
                     :timeline-begin="table.timeline.begin"
                 ></schedule-event>
             </schedule-table>
+            <schedule-list>
+                <schedule-list-group
+                    v-for="(group, i) in list.groups"
+                    :key="$makeKey(i, 'schedule_list_group')"
+                >
+                    <schedule-tick>{{ group.tick }}</schedule-tick>
+                    <schedule-event
+                        v-for="event in group.events"
+                        :key="$makeKey(event.event_id, 'schedule_list_event')"
+                        :value="event"
+                        in-list
+                    >
+                        <template #prepend>
+                            <schedule-room
+                                :value="event.room"
+                                inline
+                            ></schedule-room>
+                        </template>
+                    </schedule-event>
+                </schedule-list-group>
+            </schedule-list>
         </schedule>
     </i18n-page-wrapper>
 </template>
@@ -49,6 +70,8 @@ import ScheduleBlock from '@/components/schedule/ScheduleBlock'
 import ScheduleDayTab from '@/components/schedule/ScheduleDayTab'
 import ScheduleDayTabs from '@/components/schedule/ScheduleDayTabs'
 import ScheduleEvent from '@/components/schedule/ScheduleEvent'
+import ScheduleList from '@/components/schedule/ScheduleList'
+import ScheduleListGroup from '@/components/schedule/ScheduleListGroup'
 import ScheduleRoom from '@/components/schedule/ScheduleRoom'
 import ScheduleRooms from '@/components/schedule/ScheduleRooms'
 import ScheduleTable from '@/components/schedule/ScheduleTable'
@@ -63,6 +86,8 @@ export default {
         ScheduleBlock,
         ScheduleDayTab,
         ScheduleDayTabs,
+        ScheduleList,
+        ScheduleListGroup,
         ScheduleRoom,
         ScheduleRooms,
         ScheduleTable,
@@ -75,10 +100,14 @@ export default {
             rooms: [],
             days: [],
             tables: [],
+            lists: [],
             defaultTable: {
                 events: [],
                 ticks: [],
                 timeline: {},
+            },
+            defaultList: {
+                groups: [],
             },
         }
     },
@@ -86,6 +115,9 @@ export default {
         ...mapState(['schedulesData']),
         table() {
             return this.tables[this.selectedDayIndex] || this.defaultTable
+        },
+        list() {
+            return this.lists[this.selectedDayIndex] || this.defaultList
         },
     },
     async created() {
@@ -97,6 +129,7 @@ export default {
             this.makeDays()
             this.makeRooms()
             this.makeTables()
+            this.makeLists()
         },
         makeDays() {
             this.days = this.schedulesData.map(({ date, name }) => {
@@ -118,6 +151,11 @@ export default {
                 events: this.getEvents(schedule),
                 ticks: this.getTicks(schedule),
                 timeline: schedule.timeline,
+            }))
+        },
+        makeLists() {
+            this.lists = this.schedulesData.map((schedule) => ({
+                groups: this.getGroups(schedule),
             }))
         },
         getEvents(schedule) {
@@ -146,6 +184,35 @@ export default {
                 const style = { gridRowStart, gridRowEnd }
                 return { label, style }
             })
+        },
+        getGroups(schedule) {
+            const slotsByBeginTime = schedule.rooms.reduce((result, room) => {
+                schedule.slots[room].forEach((slot) => {
+                    const item = { ...slot, room }
+                    if (result[slot.begin_time]) {
+                        result[slot.begin_time].push(item)
+                    } else {
+                        result[slot.begin_time] = [item]
+                    }
+                })
+                return result
+            }, {})
+            return Object.keys(slotsByBeginTime)
+                .sort((timeA, timeB) => {
+                    if (timeA > timeB) {
+                        return 1
+                    } else if (timeA < timeB) {
+                        return -1
+                    } else {
+                        return 0
+                    }
+                })
+                .map((beginTime) => ({
+                    tick: this.$datetimeToString(this.$padTimezone(beginTime), {
+                        outputFormat: 'HH:mm',
+                    }),
+                    events: slotsByBeginTime[beginTime],
+                }))
         },
     },
 }

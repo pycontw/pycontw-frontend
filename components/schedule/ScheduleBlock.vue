@@ -12,6 +12,7 @@ export default {
         secondary: { type: Boolean, default: false },
         tertiary: { type: Boolean, default: false },
         active: { type: Boolean, default: false },
+        mini: { type: Boolean, default: false },
         textAlignCenter: { type: Boolean, default: true },
         paddingX: { type: String, default: 'px-2' },
         paddingY: { type: String, default: 'py-3.5' },
@@ -27,6 +28,7 @@ export default {
                 '-secondary': this.secondary,
                 '-tertiary': this.tertiary,
                 '-active': this.active,
+                '-mini': this.mini,
                 '-transparent': this.transparent,
                 'text-center': this.textAlignCenter,
                 'cursor-pointer': this.primary,
@@ -50,6 +52,11 @@ export default {
     border-radius: 10px;
 }
 
+.scheduleBlock.-transparent,
+.scheduleBlock.-mini {
+    min-width: unset;
+}
+
 .scheduleBlock.-primary.-active {
     color: #000000;
     background-color: #d1ac23;
@@ -67,5 +74,9 @@ export default {
 .scheduleBlock.-tertiary {
     color: #d1ac23;
     background-color: #243f73;
+}
+
+.scheduleBlock.-mini {
+    @apply text-xs;
 }
 </style>

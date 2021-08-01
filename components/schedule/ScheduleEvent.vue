@@ -7,6 +7,9 @@
         :secondary="isCustomEvent"
         active
     >
+        <div v-if="$slots.prepend" class="scheduleEvent__prepend flex">
+            <slot name="prepend"></slot>
+        </div>
         <div class="scheduleEvent__context sticky">
             <div class="font-bold">{{ value.title }}</div>
             <br v-if="!isCustomEvent" />
@@ -45,6 +48,7 @@ export default {
             }),
         },
         timelineBegin: { type: String, default: '08:30' },
+        inList: { type: Boolean, default: false },
     },
     data() {
         const format = 'HH:mm'
@@ -82,6 +86,9 @@ export default {
             return ['scheduleEvent', 'p-0', this.roomClass]
         },
         styles() {
+            if (this.inList) {
+                return
+            }
             return {
                 gridRowStart: this.getGridRow(this.value.begin_time),
                 gridRowEnd: this.getGridRow(this.value.end_time),

@@ -1,6 +1,9 @@
 <template>
     <schedule-block
         class="scheduleRoom font-semibold whitespace-nowrap"
+        :mini="inline"
+        :padding-x="paddingX"
+        :padding-y="paddingY"
         tertiary
     >
         {{ name }}
@@ -17,6 +20,7 @@ export default {
     },
     props: {
         value: { type: String, default: 'Room' },
+        inline: { type: Boolean, default: false },
     },
     computed: {
         name() {
@@ -28,6 +32,12 @@ export default {
                 '2-all': 'All',
                 '3-r012': 'R1, R2, R3',
             }[this.value]
+        },
+        paddingX() {
+            return this.inline ? 'px-2' : undefined
+        },
+        paddingY() {
+            return this.inline ? 'py-2' : undefined
         },
     },
 }
