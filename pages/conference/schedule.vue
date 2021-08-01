@@ -1,6 +1,6 @@
 <template>
     <i18n-page-wrapper>
-        <core-h1 title="Schedules"></core-h1>
+        <core-h1 :title="$t('Schedule')"></core-h1>
         <schedule>
             <schedule-day-tabs v-model="selectedDayIndex">
                 <schedule-day-tab
@@ -63,6 +63,8 @@
 <script>
 import { mapState } from 'vuex'
 
+import i18n from '@/i18n/conference/schedule.i18n'
+
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Schedule from '@/components/schedule/Schedule'
@@ -78,6 +80,7 @@ import ScheduleTable from '@/components/schedule/ScheduleTable'
 import ScheduleTick from '@/components/schedule/ScheduleTick'
 
 export default {
+    i18n,
     name: 'PageConferenceSchedule',
     components: {
         CoreH1,
