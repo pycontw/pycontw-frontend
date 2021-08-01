@@ -1,7 +1,7 @@
 <template>
     <div class="mt-10 mb-3">
         <div class="flex justify-center cursor-default">
-            <p class="py-3 font-bold">{{ $t('history') }}</p>
+            <p class="py-3 font-bold highlight">{{ $t('history') }}</p>
         </div>
         <div
             v-for="(count, index) in rowCount"
@@ -89,4 +89,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.highlight {
+    color: #c2a53a;
+}
+</style>
