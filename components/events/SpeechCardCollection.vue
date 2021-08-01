@@ -15,6 +15,9 @@ export default {
     @apply flex flex-wrap justify-start;
 }
 .speechCardCollection > .speechCard {
-    margin: 0 22px 44px 0;
+    margin: 0 6px 10px 6px;
+    @media (min-width: 415px) {
+        margin: 0 10px 44px 10px;
+    }
 }
 </style>
