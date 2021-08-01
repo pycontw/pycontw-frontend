@@ -8,11 +8,11 @@ export default Object.freeze({
             i18nKey: 'keynotes',
             value: '/conference/keynotes',
         },
-        // { i18nKey: 'talks', value: '/conference/talks' },
-        // {
-        //     i18nKey: 'tutorials',
-        //     value: '/conference/tutorials',
-        // },
+        { i18nKey: 'talks', value: '/conference/talks' },
+        {
+            i18nKey: 'tutorials',
+            value: '/conference/tutorials',
+        },
     ],
     speakingItems: [
         {
