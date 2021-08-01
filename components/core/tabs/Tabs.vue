@@ -63,7 +63,7 @@ export default {
 }
 
 .tab {
-    @apply inline-block text-xs md:text-sm rounded-2xl min-w-full border-2 bg-opacity-0;
+    @apply inline-block text-xs md:text-sm rounded-2xl w-full border-2 bg-opacity-0;
     line-height: 29px;
     color: #c7c7c7;
     border-color: #c2a53a;
