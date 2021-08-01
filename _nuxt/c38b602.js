@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{514:function(r,o,e){"use strict";e.r(o);var n=e(63);o.default=Object(n.a)({"en-us":{errorTitle:"Ooops! It\b’s a 404 problem.",errorDescription:"We cannot find what you’re looking for."},"zh-hant":{errorTitle:"糟惹！這是個 404 錯誤。",errorDescription:"我們無法找到您想去的頁面。"}})}}]);
