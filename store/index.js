@@ -15,7 +15,7 @@ export const mutations = {
     setKeynotesData: set('keynotesData'),
     setYoutubeInfo: set('youtubeInfo'),
     setSpeechesData: set('speechesData'),
-    setSpeechDetailData: set('speechData'),
+    setSpeechData: set('speechData'),
 }
 
 export const actions = {
@@ -51,9 +51,9 @@ export const actions = {
         )
         commit('setSpeechesData', speechList)
     },
-    async $getSpeechDetailData({ commit }, { eventType, eventId }) {
+    async $getSpeechData({ commit }, { eventType, eventId }) {
         const endpoint = `/api/events/speeches/${eventType}/${eventId}/`
-        const SpeechData = await this.$http.$get(endpoint)
-        commit('setSpeechDetailData', SpeechData)
+        const speechData = await this.$http.$get(endpoint)
+        commit('setSpeechData', speechData)
     },
 }

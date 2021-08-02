@@ -1,9 +1,9 @@
 <template>
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
-        <core-h1 :title="speechData.title" center class="font-black"></core-h1>
+        <core-h1 :title="data.title" center class="font-black"></core-h1>
         <div class="speech__speakers">
             <div
-                v-for="(speaker, index) in speechData.speakers"
+                v-for="(speaker, index) in data.speakers"
                 :key="`speech_details_speaker_${index}`"
                 class="speech_speakerContainer"
             >
@@ -18,26 +18,25 @@
             <div class="speech__infos">
                 <div class="speech__info">
                     <img :src="icons.location" class="mx-2" />
-                    {{ locationMapping[speechData.location] }}
+                    {{ locationMapping[data.location] }}
                 </div>
                 <div class="speech__info">
                     <img :src="icons.language" class="mx-2" />
-                    {{ $t(`languages.${speechData.language}`) }}
+                    {{ $t(`languages.${data.language}`) }}
                 </div>
                 <div class="speech__info">
                     <img :src="icons.datetime" class="mx-2" />
-                    {{ $t(`terms.${getDateTag(speechData.begin_time)}`) }} •
-                    {{ getTime(speechData.begin_time) }}-{{
-                        getTime(speechData.end_time)
+                    {{ $t(data.dateTag) }} • {{ getTime(data.begin_time) }}-{{
+                        getTime(data.end_time)
                     }}
                 </div>
                 <div class="speech__info">
                     <img :src="icons.level" class="mx-2" />
-                    {{ $t(`levels.${speechData.python_level}`) }}
+                    {{ $t(`levels.${data.python_level}`) }}
                 </div>
                 <div class="speech__info">
                     <img :src="icons.category" class="mx-2" />
-                    {{ $t(`categories.${speechData.category}`) }}
+                    {{ $t(`categories.${data.category}`) }}
                 </div>
             </div>
         </div>
@@ -49,7 +48,7 @@
                         {{ $t('terms.abstract') }}
                     </p>
                     <p class="speech__tabParagraph">
-                        {{ speechData.abstract }}
+                        {{ data.abstract }}
                     </p>
                 </span>
                 <span class="whitespace-pre-line break-words">
@@ -57,14 +56,11 @@
                         {{ $t('terms.description') }}
                     </p>
                     <p class="speech__tabParagraph">
-                        {{ speechData.detailed_description }}
+                        {{ data.detailed_description }}
                     </p>
                 </span>
-                <div
-                    v-show="!!speechData.slide_link"
-                    class="speech__extLink mt-4"
-                >
-                    <ext-link :href="speechData.slide_link">
+                <div v-show="!!data.slide_link" class="speech__extLink mt-4">
+                    <ext-link :href="data.slide_link">
                         <fa
                             :icon="['fa', 'link']"
                             aria-hidden="true"
@@ -74,15 +70,15 @@
                     </ext-link>
                 </div>
                 <youtube
-                    v-show="!!speechData.youtube_id"
-                    :video-id="speechData.youtube_id"
+                    v-if="!!data.youtube_id"
+                    :video-id="data.youtube_id"
                     class="mt-4"
                 >
                 </youtube>
             </tab>
             <tab :title="$t('terms.bio')">
                 <div
-                    v-for="(speaker, index) in speechData.speakers"
+                    v-for="(speaker, index) in data.speakers"
                     :key="`speech_details_tab_speaker_${index}`"
                     class="mb-4 whitespace-pre-line"
                 >
@@ -137,10 +133,10 @@
             TODO: This tab is commented out due to a unresolve issue that
             this tab is displayed with the first tab after rendering.
             -->
-            <!-- <tab v-if="!!speechData.slido_embed_link" title="Slido">
+            <!-- <tab v-if="!!data.slido_embed_link" title="Slido">
                 <iframe
                     class="speech__slido"
-                    :src="speechData.slido_embed_link"
+                    :src="data.slido_embed_link"
                 ></iframe>
             </tab> -->
         </tabs>
@@ -148,7 +144,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import i18n from '@/i18n/conference/speeches.i18n'
+
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Tab from '@/components/core/tabs/Tab.vue'
@@ -169,12 +168,11 @@ export default {
     },
     data() {
         return {
-            eventId: 0,
-            eventType: '',
-            speechData: {
+            data: {
                 title: '',
-                slido_embed_link: '',
-                youtube_id: '',
+                language: 'ENEN',
+                python_level: 'NOVICE',
+                category: 'WEB',
                 begin_time: new Date(),
                 end_time: new Date(),
             },
@@ -193,30 +191,39 @@ export default {
             },
         }
     },
-    async mounted() {
-        this.eventId = this.$route.params.id
-        this.eventType = this.$route.params.eventType
-        await this.$store.dispatch('$getSpeechDetailData', {
-            eventType: this.eventType,
-            eventId: this.eventId,
+    computed: {
+        ...mapState(['speechData']),
+    },
+    async created() {
+        await this.$store.dispatch('$getSpeechData', {
+            eventType: this.$route.params.eventType,
+            eventId: this.$route.params.id,
         })
-        const speechData = this.$store.state.speechData
-        this.speechData = {
-            ...speechData,
-            begin_time: this.getDatetimeFromString(speechData.begin_time),
-            end_time: this.getDatetimeFromString(speechData.end_time),
-        }
+        this.processData()
     },
     methods: {
-        getDatetimeFromString: (datetimeString) => {
+        processData() {
+            const beginTime = this.getDatetimeFromString(
+                this.speechData.begin_time,
+            )
+            const endTime = this.getDatetimeFromString(this.speechData.end_time)
+
+            this.data = {
+                ...this.speechData,
+                begin_time: beginTime,
+                end_time: endTime,
+                dateTag: this.getDateTag(beginTime),
+            }
+        },
+        getDatetimeFromString(datetimeString) {
             const datetimeUtc = new Date(datetimeString)
             const offset = new Date().getTimezoneOffset()
             const datetime = new Date(datetimeUtc - offset)
             return datetime
         },
-        getDateTag: (datetime) => {
-            const month = datetime.getMonth() + 1
-            const date = datetime.getDate()
+        getDateTag(beginTime) {
+            const month = beginTime.getMonth() + 1
+            const date = beginTime.getDate()
             if (month === 10 && date === 2) {
                 return 'day1'
             }
