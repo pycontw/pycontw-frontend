@@ -1,14 +1,8 @@
 <template>
     <div>
         <i18n-page-wrapper class="pt-24 pb-4" custom-y>
-            <core-h1
-                :title="$t(eventType ? `${eventType}.title` : '')"
-            ></core-h1>
-            <i18n
-                :path="eventType ? `${eventType}.intro` : ''"
-                tag="p"
-                class="intro"
-            ></i18n>
+            <core-h1 :title="title"></core-h1>
+            <p class="intro">{{ intro }}</p>
         </i18n-page-wrapper>
         <i18n-page-wrapper
             class="px-2 sm:px-8 md:px-16 lg:px-32 pb-24"
@@ -58,6 +52,14 @@ export default {
             eventType: '',
             speechesData: [],
         }
+    },
+    computed: {
+        title() {
+            return this.$i18n.t(`${this.$route.params.eventType}.title`)
+        },
+        intro() {
+            return this.$i18n.t(`${this.$route.params.eventType}.intro`)
+        },
     },
     async mounted() {
         this.eventType = this.$route.params.eventType
