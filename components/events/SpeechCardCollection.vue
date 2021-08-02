@@ -12,12 +12,13 @@ export default {
 
 <style lang="postcss" scoped>
 .speechCardCollection {
-    @apply flex flex-wrap justify-start;
-}
-.speechCardCollection > .speechCard {
-    margin: 0 6px 10px 6px;
+    @apply grid grid-cols-2 sm:grid-cols-3 justify-items-center;
+    margin: 0 12px;
+    column-gap: 24px;
+    row-gap: 32px;
     @media (min-width: 415px) {
-        margin: 0 10px 44px 10px;
+        column-gap: 20px;
+        row-gap: 44px;
     }
 }
 </style>

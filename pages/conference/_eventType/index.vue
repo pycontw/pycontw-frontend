@@ -1,24 +1,34 @@
 <template>
-    <i18n-page-wrapper class="px-4 sm:px-10 md:px-32 lg:px-52" custom-x>
-        <core-h1 :title="$t(eventType ? `${eventType}.title` : '')"></core-h1>
-        <i18n
-            :path="eventType ? `${eventType}.intro` : ''"
-            tag="p"
-            class="intro"
-        ></i18n>
-        <speech-card-collection>
-            <speech-card
-                v-for="speech in speechesData"
-                :id="speech.id"
-                :key="`speech_${speech.id}`"
-                :title="speech.title"
-                :category="speech.category"
-                :speakers="speech.speakers"
-                :to="`/conference/${speech.event_type}/${speech.id}/`"
-            >
-            </speech-card>
-        </speech-card-collection>
-    </i18n-page-wrapper>
+    <div>
+        <i18n-page-wrapper class="pt-24 pb-4" custom-y>
+            <core-h1
+                :title="$t(eventType ? `${eventType}.title` : '')"
+            ></core-h1>
+            <i18n
+                :path="eventType ? `${eventType}.intro` : ''"
+                tag="p"
+                class="intro"
+            ></i18n>
+        </i18n-page-wrapper>
+        <i18n-page-wrapper
+            class="px-2 sm:px-8 md:px-16 lg:px-32 pb-24"
+            custom-x
+            custom-y
+        >
+            <speech-card-collection>
+                <speech-card
+                    v-for="speech in speechesData"
+                    :id="speech.id"
+                    :key="`speech_${speech.id}`"
+                    :title="speech.title"
+                    :category="speech.category"
+                    :speakers="speech.speakers"
+                    :to="`/conference/${speech.event_type}/${speech.id}/`"
+                >
+                </speech-card>
+            </speech-card-collection>
+        </i18n-page-wrapper>
+    </div>
 </template>
 
 <script>

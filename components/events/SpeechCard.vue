@@ -40,8 +40,7 @@ export default {
 
 <style lang="postcss" scoped>
 .speechCard {
-    @apply relative flex flex-col;
-    width: 45%;
+    @apply relative inline-flex flex-col w-full break-words;
     min-height: 180px;
     border-radius: 24px;
     border: 2px solid #c2a53a;
@@ -49,7 +48,6 @@ export default {
     padding: 15px;
 
     @media (min-width: 415px) {
-        width: 270px;
         min-height: 362px;
         padding: 34px 30px 38px;
     }
@@ -112,6 +110,7 @@ export default {
     bottom: 10px;
     @media (min-width: 415px) {
         @apply scale-100;
+        border-radius: 12px;
         font-size: 12px;
         padding: 7px 14px;
         min-width: 100px;
