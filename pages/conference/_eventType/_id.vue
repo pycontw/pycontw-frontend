@@ -1,6 +1,6 @@
 <template>
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
-        <core-h1 :title="speechData.title" center></core-h1>
+        <core-h1 :title="speechData.title" center class="font-black"></core-h1>
         <div class="speech__speakers">
             <div
                 v-for="(speaker, index) in speechData.speakers"
@@ -249,13 +249,13 @@ export default {
     height: 100%;
 }
 .speech__speakerName {
-    @apply font-serif text-center;
+    @apply font-serif font-black text-center mt-7;
     color: #f3cc39;
 }
 
 .speech__infoSection {
     @apply inline-block text-xs md:text-sm mb-12 md:mb-24;
-    @apply p-2 md:p-6;
+    @apply px-2 py-4 md:p-6;
     @apply rounded-2xl w-full border-2 bg-opacity-0;
     line-height: 29px;
     color: #c7c7c7;
@@ -263,8 +263,7 @@ export default {
     box-shadow: 6px 6px 0 #c2a53a;
 }
 .speech__infos {
-    @apply grid grid-cols-1 sm:grid-cols-2;
-    @apply gap-y-4 md:gap-y-8 gap-x-2 md:gap-x-4;
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-y-6;
 }
 .speech__info {
     @apply flex items-center font-serif;
