@@ -237,7 +237,33 @@ export default {
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
         },
+        // FIXME: cannot sucessfully insert the correct value into head()
+        metaInfo() {
+            return {
+                title: this.data.title,
+                meta: [
+                    {
+                        hid: 'og:title',
+                        property: 'og:title',
+                        content: this.data.title,
+                    },
+                    {
+                        hid: 'og:description',
+                        property: 'og:description',
+                        content: this.data.abstract,
+                    },
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: this.data.abstract,
+                    },
+                ],
+            }
+        },
     },
+    // head() {
+    //     return this.metaInfo()
+    // },
 }
 </script>
 

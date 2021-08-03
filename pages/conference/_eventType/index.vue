@@ -66,6 +66,33 @@ export default {
         await this.$store.dispatch('$getSpeechesData', this.eventType)
         this.speechesData = this.$store.state.speechesData
     },
+    methods: {
+        metaInfo() {
+            return {
+                title: this.title,
+                meta: [
+                    {
+                        hid: 'og:title',
+                        property: 'og:title',
+                        content: this.title,
+                    },
+                    {
+                        hid: 'og:description',
+                        property: 'og:description',
+                        content: this.intro,
+                    },
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: this.intro,
+                    },
+                ],
+            }
+        },
+    },
+    head() {
+        return this.metaInfo()
+    },
 }
 </script>
 
