@@ -63,7 +63,8 @@ export default {
                 },
                 {
                     src: require('~/static/img/footer/Youtube.svg'),
-                    link: 'https://www.youtube.com/PyConTaiwan',
+                    link:
+                        'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
                     altName: 'Youtube Footer Icon',
                 },
                 {

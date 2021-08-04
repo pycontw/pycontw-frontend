@@ -32,7 +32,8 @@ export default genI18nMessages({
                     'Checkout all speeches on our channel. ' +
                     "Don't forget to subscribe!",
                 linkTitle: 'Subscribe',
-                linkHref: 'https://www.youtube.com/c/pycontaiwan',
+                linkHref:
+                    'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
             },
             {
                 title: 'Epidemic Prevention',
@@ -80,7 +81,8 @@ export default genI18nMessages({
                 description:
                     'PyCon 也有 YouTube 頻道了！歡迎訂閱我們～每年都會固定整理議程的錄影讓大家能一同觀看。',
                 linkTitle: '線上訂閱',
-                linkHref: 'https://www.youtube.com/c/pycontaiwan',
+                linkHref:
+                    'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
             },
             {
                 title: '防疫守則',

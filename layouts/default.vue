@@ -116,7 +116,7 @@ export default {
                             'https://www.facebook.com/pycontw/',
                             'https://twitter.com/PyConTW/',
                             'https://www.linkedin.com/company/pycontw',
-                            'https://www.youtube.com/PyConTaiwan',
+                            'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
                             'https://instagram.com/pycontw/',
                             'https://github.com/pycontw/',
                             'https://pycontw.blogspot.com/',
