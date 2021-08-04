@@ -38,10 +38,6 @@ export default Object.freeze({
         //     value: '/events/overview',
         // },
         // {
-        //     i18nKey: 'warmUpSessions',
-        //     value: '/events/warm-up-sessions',
-        // },
-        // {
         //     i18nKey: 'openSpaces',
         //     value: '/events/open-spaces',
         // },
