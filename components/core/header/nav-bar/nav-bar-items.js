@@ -13,6 +13,10 @@ export default Object.freeze({
             i18nKey: 'tutorials',
             value: '/conference/tutorials',
         },
+        {
+            i18nKey: 'youngInspirers',
+            value: '/conference/young-inspirers',
+        },
     ],
     speakingItems: [
         {
