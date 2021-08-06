@@ -9,19 +9,26 @@
 
         <ul class="list-disc">
             <li class="listTitle">活動時間：</li>
-            <p>2021/08/14 13:30-17:00</p>
+            <li class="list-none">2021/08/14 13:30-17:00</li>
             <li class="listTitle">活動形式：</li>
-            <span>Youtube 線上直播：</span
-            ><ext-link href="https://youtu.be/SWnwRHgt-RA" highlight underline
-                >點我看直播</ext-link
-            ><br />
-            <span>線上共同筆記：</span
-            ><ext-link
-                href="https://hackmd.io/OXhLGazIRs6v4a_U_Zwq0g"
-                highlight
-                underline
-                >點我看共筆</ext-link
-            >
+            <li class="list-none">
+                Youtube 線上直播：
+                <ext-link
+                    href="https://youtu.be/SWnwRHgt-RA"
+                    highlight
+                    underline
+                    >點我看直播</ext-link
+                >
+            </li>
+            <li class="list-none">
+                線上共同筆記：
+                <ext-link
+                    href="https://hackmd.io/OXhLGazIRs6v4a_U_Zwq0g"
+                    highlight
+                    underline
+                    >點我看共筆</ext-link
+                >
+            </li>
         </ul>
 
         <div class="scheduleSection">
@@ -31,7 +38,7 @@
                     <div
                         v-for="(item, index) in schedules"
                         :key="`item_${index}`"
-                        class="table-row font-serif font-semibold"
+                        class="table-row font-sans"
                     >
                         <div class="table-cell w-5/12 text-right pb-4">
                             {{ item[0] }}
@@ -65,11 +72,11 @@
             <p class="speechTitle">{{ speechData.title }}</p>
             <tabs class="tabs">
                 <tab :title="$t('terms.speech')">
-                    <span class="whitespace-pre-line break-words">
+                    <div class="whitespace-pre-line break-words">
                         <p class="tabParagraph">
                             {{ speechData.description }}
                         </p>
-                    </span>
+                    </div>
                 </tab>
                 <tab :title="$t('terms.bio')">
                     <div
@@ -77,12 +84,12 @@
                         :key="`young_inspirers_tab_speaker_${index}`"
                         class="mb-4 whitespace-pre-line"
                     >
-                        <span class="whitespace-pre-line">
+                        <div class="whitespace-pre-line">
                             <p class="tabParagraphTitle">
                                 {{ speaker.name }}
                             </p>
                             <p class="tabParagraph">{{ speaker.bio }}</p>
-                        </span>
+                        </div>
                     </div>
                 </tab>
             </tabs>
@@ -248,7 +255,7 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply text-xs md:text-sm font-serif mb-8;
+    @apply text-xs md:text-sm font-sans mb-8;
     line-height: 33px;
 }
 
@@ -306,13 +313,6 @@ h2 {
     color: #e6ba17;
 }
 .tabParagraph {
-    @apply font-serif mb-2;
-}
-.extLink {
-    @apply font-bold;
-    color: #e6ba17;
-}
-.extLink:hover {
-    color: #9387ff;
+    @apply font-sans mb-2;
 }
 </style>
