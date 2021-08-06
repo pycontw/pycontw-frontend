@@ -78,7 +78,7 @@ export default genI18nMessages({
                 '議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
         },
         tutorials: {
-            title: 'Tutorials',
+            title: '專業課程',
             intro:
                 '專業課程（Tutotiral）是 PyCon Taiwan 的一部分，只要有購票都有資格參與；' +
                 '專業課程的時間為 90 分鐘。議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
