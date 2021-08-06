@@ -17,25 +17,41 @@
         <div class="speech__infoSection">
             <div class="speech__infos">
                 <div class="speech__info">
-                    <img :src="icons.location" class="mx-2" />
+                    <img
+                        :src="icons.location"
+                        class="icon"
+                        alt="icon-location"
+                    />
                     {{ locationMapping[data.location] }}
                 </div>
                 <div class="speech__info">
-                    <img :src="icons.language" class="mx-2" />
+                    <img
+                        :src="icons.language"
+                        class="icon"
+                        alt="icon-language"
+                    />
                     {{ $t(`languages.${data.language}`) }}
                 </div>
                 <div class="speech__info">
-                    <img :src="icons.datetime" class="mx-2" />
+                    <img
+                        :src="icons.datetime"
+                        class="icon"
+                        alt="icon-datetime"
+                    />
                     {{ $t(data.dateTag) }} • {{ getTime(data.begin_time) }}-{{
                         getTime(data.end_time)
                     }}
                 </div>
                 <div class="speech__info">
-                    <img :src="icons.level" class="mx-2" />
+                    <img :src="icons.level" class="icon" alt="icon-level" />
                     {{ $t(`levels.${data.python_level}`) }}
                 </div>
                 <div class="speech__info">
-                    <img :src="icons.category" class="mx-2" />
+                    <img
+                        :src="icons.category"
+                        class="icon"
+                        alt="icon-category"
+                    />
                     {{ $t(`categories.${data.category}`) }}
                 </div>
             </div>
@@ -43,22 +59,22 @@
 
         <tabs class="speech__tabs">
             <tab :title="$t('terms.speech')">
-                <span class="whitespace-pre-line break-words">
+                <div class="whitespace-pre-line break-words">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.abstract') }}
                     </p>
                     <p class="speech__tabParagraph">
                         {{ data.abstract }}
                     </p>
-                </span>
-                <span class="whitespace-pre-line break-words">
+                </div>
+                <div class="whitespace-pre-line break-words">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.description') }}
                     </p>
                     <p class="speech__tabParagraph">
                         {{ data.detailed_description }}
                     </p>
-                </span>
+                </div>
                 <div v-show="!!data.slide_link" class="speech__extLink mt-4">
                     <ext-link :href="data.slide_link">
                         <fa
@@ -82,12 +98,12 @@
                     :key="`speech_details_tab_speaker_${index}`"
                     class="mb-4 whitespace-pre-line"
                 >
-                    <span class="whitespace-pre-line">
+                    <div class="whitespace-pre-line">
                         <p class="speech__tabParagraphTitle">
                             {{ speaker.name }}
                         </p>
                         <p class="speech__tabParagraph">{{ speaker.bio }}</p>
-                    </span>
+                    </div>
 
                     <div class="flex">
                         <div class="speech__extLink">
@@ -130,7 +146,7 @@
                 </div>
             </tab>
             <!--
-            TODO: This tab is commented out due to a unresolve issue that
+            TODO: This tab is commented out due to an unresolve issue that
             this tab is displayed with the first tab after rendering.
             -->
             <!-- <tab v-if="!!data.slido_embed_link" title="Slido">
@@ -237,7 +253,7 @@ export default {
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
         },
-        // FIXME: cannot sucessfully insert the correct value into head()
+        // FIXME: cannot successfully insert the correct value into head()
         metaInfo() {
             return {
                 title: this.data.title,
@@ -268,6 +284,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.icon {
+    @apply ml-2 mr-8;
+}
+
 .speech__speakers {
     @apply flex justify-center mt-6 mb-8 md:mb-16;
 }
@@ -278,8 +298,7 @@ export default {
     @apply h-32 w-32 mx-12;
 }
 .speech__speakerThumbnail img {
-    @apply object-cover rounded-full;
-    height: 100%;
+    @apply h-full object-cover rounded-full;
 }
 .speech__speakerName {
     @apply font-serif font-black text-center mt-7;
@@ -312,7 +331,7 @@ export default {
     color: #e6ba17;
 }
 .speech__tabParagraph {
-    @apply font-serif mb-2;
+    @apply font-sans mb-2;
 }
 
 .speech__extLink {
