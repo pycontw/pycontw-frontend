@@ -6,6 +6,7 @@
         :primary="!isCustomEvent"
         :secondary="isCustomEvent"
         active
+        @click="navigateToDetailPage()"
     >
         <div v-if="$slots.prepend" class="scheduleEvent__prepend flex">
             <slot name="prepend"></slot>
@@ -101,6 +102,22 @@ export default {
             const diff = this.$parseDate(time).diff(this.startPoint, 'minute')
             const unit = 5
             return parseInt(`${diff / unit}`, 10) + 1
+        },
+        navigateToDetailPage() {
+            let targetPath
+            if (this.value.event_type === 'keynote') {
+                // TODO: navigate to specific anchor (hash)
+                targetPath = `/conference/keynotes/`
+            } else if (this.value.event_type === 'talk') {
+                targetPath = `/conference/talk/${this.value.event_id}/`
+            } else if (this.value.event_type === 'tutorial') {
+                targetPath = `/conference/tutorial/${this.value.event_id}/`
+            } else {
+                return
+            }
+            this.$router.push({
+                path: this.localePath(targetPath),
+            })
         },
     },
 }
