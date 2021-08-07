@@ -218,6 +218,28 @@ export default {
                 }))
         },
     },
+    head() {
+        return {
+            title: this.$i18n.t('Schedule'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('Schedule'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('Schedule'),
+                },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('Schedule'),
+                },
+            ],
+        }
+    },
 }
 </script>
 
