@@ -30,7 +30,7 @@ export const actions = {
         commit('setJobsData', data)
     },
     async $getSchedulesData({ commit }) {
-        const { data } = await this.$http.$get('/api/events/schedule')
+        const { data } = await this.$http.$get('/api/events/schedule/')
         commit('setSchedulesData', data)
     },
     async $getKeynotesData({ commit }) {
