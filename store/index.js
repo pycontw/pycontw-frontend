@@ -3,6 +3,7 @@ import { set } from '~/utils/store.utils'
 export const state = () => ({
     sponsorsData: [],
     jobsData: [],
+    schedulesData: [],
     keynotesData: [],
     youtubeInfo: [],
     speechesData: [],
@@ -12,6 +13,7 @@ export const state = () => ({
 export const mutations = {
     setSponsorsData: set('sponsorsData'),
     setJobsData: set('jobsData'),
+    setSchedulesData: set('schedulesData'),
     setKeynotesData: set('keynotesData'),
     setYoutubeInfo: set('youtubeInfo'),
     setSpeechesData: set('speechesData'),
@@ -26,6 +28,10 @@ export const actions = {
     async $getJobsData({ commit }) {
         const { data } = await this.$http.$get('/api/sponsors/jobs/')
         commit('setJobsData', data)
+    },
+    async $getSchedulesData({ commit }) {
+        const { data } = await this.$http.$get('/api/events/schedule/')
+        commit('setSchedulesData', data)
     },
     async $getKeynotesData({ commit }) {
         const keynoteList = await this.$http.$get('/api/events/keynotes/')

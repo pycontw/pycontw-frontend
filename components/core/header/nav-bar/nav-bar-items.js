@@ -1,9 +1,9 @@
 export default Object.freeze({
     conferenceItems: [
-        // {
-        //     i18nKey: 'schedule',
-        //     value: '/conference/schedule',
-        // },
+        {
+            i18nKey: 'schedule',
+            value: '/conference/schedule',
+        },
         {
             i18nKey: 'keynotes',
             value: '/conference/keynotes',
