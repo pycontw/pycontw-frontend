@@ -33,12 +33,12 @@
 
         <div class="scheduleSection">
             <h2>活動流程</h2>
-            <div class="table w-full mt-8">
+            <div class="table w-full mt-4">
                 <div class="table-row-group w-full">
                     <div
                         v-for="(item, index) in schedules"
                         :key="`item_${index}`"
-                        class="table-row font-sans"
+                        class="table-row font-serif"
                     >
                         <div class="table-cell w-5/12 text-right pb-4">
                             {{ item[0] }}
@@ -255,20 +255,23 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply text-xs md:text-sm font-sans mb-8;
+    @apply text-xs md:text-sm font-serif mb-8;
     line-height: 33px;
 }
 
 ul.list-disc {
+    @apply text-xs md:text-sm font-serif;
     padding-left: 20px !important;
 }
 .listTitle {
-    @apply font-bold;
+    @apply font-bold text-base;
     color: #f3cc39;
 }
 
 h2 {
-    @apply font-serif font-black text-center mt-0 mb-2 mx-auto;
+    @apply font-serif font-black text-center mx-auto;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0 !important;
     font-size: 24px;
     color: #f3cc39;
 }
@@ -313,6 +316,6 @@ h2 {
     color: #e6ba17;
 }
 .tabParagraph {
-    @apply font-sans mb-2;
+    @apply font-serif mb-2;
 }
 </style>
