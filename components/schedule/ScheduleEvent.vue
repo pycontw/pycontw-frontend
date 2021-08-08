@@ -96,20 +96,14 @@ export default {
             }
         },
         eventPagePath() {
-            let targetPath
-            if (this.value.event_type === 'keynote') {
+            const { event_type: eventType, event_id: eventId } = this.value
+            if (eventType === 'keynote') {
                 // TODO: navigate to specific anchor (hash)
-                targetPath = `/conference/keynotes/`
-            } else if (
-                ['talk', 'tutorial', 'sponsored'].includes(
-                    this.value.event_type,
-                )
-            ) {
-                targetPath = `/conference/${this.value.event_type}/${this.value.event_id}/`
-            } else {
-                return ''
+                return '/conference/keynotes/'
+            } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
+                return `/conference/${eventType}/${eventId}/`
             }
-            return targetPath
+            return ''
         },
     },
     methods: {
