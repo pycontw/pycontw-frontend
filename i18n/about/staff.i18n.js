@@ -29,8 +29,16 @@ export default genI18nMessages({
                 organization: 'Venue',
             },
             {
+                key: 'sponsorship',
+                organization: 'Marketing - Sponsorship',
+            },
+            {
                 key: 'marketing',
-                organization: 'Marketing',
+                organization: 'Marketing - Plan',
+            },
+            {
+                key: 'pr',
+                organization: 'Marketing - Public',
             },
             {
                 key: 'registration',
@@ -86,8 +94,16 @@ export default genI18nMessages({
                 organization: '場務',
             },
             {
+                key: 'sponsorship',
+                organization: '贊助執行',
+            },
+            {
                 key: 'marketing',
-                organization: '行銷',
+                organization: '行銷企劃',
+            },
+            {
+                key: 'pr',
+                organization: '社群媒體',
             },
             {
                 key: 'registration',
@@ -107,7 +123,7 @@ export default genI18nMessages({
             },
             {
                 key: 'photography',
-                organization: '攝影',
+                organization: '紀錄',
             },
         ],
         og: {
