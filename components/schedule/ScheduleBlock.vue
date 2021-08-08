@@ -1,12 +1,19 @@
 <template>
     <div :class="classObject" @click="onClick">
-        <slot></slot>
+        <locale-link v-if="!!to" :to="to" customized>
+            <slot></slot>
+        </locale-link>
+        <slot v-else></slot>
     </div>
 </template>
 
 <script>
+import LocaleLink from '@/components/core/links/LocaleLink'
 export default {
     name: 'ScheduleBlock',
+    components: {
+        LocaleLink,
+    },
     props: {
         primary: { type: Boolean, default: false },
         secondary: { type: Boolean, default: false },
@@ -16,6 +23,7 @@ export default {
         textAlignCenter: { type: Boolean, default: true },
         paddingX: { type: String, default: 'px-2' },
         paddingY: { type: String, default: 'py-3.5' },
+        to: { type: String, default: '' },
     },
     computed: {
         transparent() {
