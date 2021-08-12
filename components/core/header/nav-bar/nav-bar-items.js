@@ -37,10 +37,10 @@ export const navBarItems = Object.freeze({
         },
     ],
     eventsItems: [
-        // {
-        //     i18nKey: 'overview',
-        //     value: '/events/overview',
-        // },
+        {
+            i18nKey: 'overview',
+            value: '/events/overview',
+        },
         // {
         //     i18nKey: 'openSpaces',
         //     value: '/events/open-spaces',
