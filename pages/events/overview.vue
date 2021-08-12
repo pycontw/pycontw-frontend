@@ -25,6 +25,8 @@
                     :tag-color="event.tagColor"
                     :img-url="event.imgUrl"
                     :img-alt="event.imgAlt"
+                    :to="event.to"
+                    :href="event.href"
                 ></event-card>
             </event-card-collection>
         </i18n-page-wrapper>
@@ -60,6 +62,7 @@ export default {
                     tagColor: 'orange',
                     imgUrl: require('~/static/img/events/overview/young-inspirers.png'),
                     imgAlt: 'Young Inspirers',
+                    to: '/conference/young-inspirers',
                 },
                 {
                     tag: 'sprint',
@@ -74,6 +77,7 @@ export default {
                     tagColor: 'red',
                     imgUrl: require('~/static/img/events/overview/pycast.png'),
                     imgAlt: 'PyCast',
+                    href: 'https://podcasts.apple.com/podcast/id1559843325',
                 },
                 {
                     tag: 'keynote',
@@ -81,6 +85,7 @@ export default {
                     tagColor: 'blue',
                     imgUrl: require('~/static/img/events/overview/keynote.png'),
                     imgAlt: 'Keynote',
+                    to: '/conference/keynotes',
                 },
                 {
                     tag: 'talk',
@@ -88,6 +93,7 @@ export default {
                     tagColor: 'blue',
                     imgUrl: require('~/static/img/events/overview/talk.png'),
                     imgAlt: 'Talk',
+                    to: '/conference/talks',
                 },
                 {
                     tag: 'tutorial',
@@ -95,6 +101,7 @@ export default {
                     tagColor: 'blue',
                     imgUrl: require('~/static/img/events/overview/tutorial.png'),
                     imgAlt: 'Tutorial',
+                    to: '/conference/tutorials',
                 },
                 {
                     tag: 'openSpace',
@@ -123,6 +130,7 @@ export default {
                     tagColor: 'green',
                     imgUrl: require('~/static/img/events/overview/job-fair.png'),
                     imgAlt: 'Job Fair',
+                    // to: '/events/jobs'
                 },
             ],
         }

@@ -1,5 +1,10 @@
 <template>
-    <div class="card">
+    <component
+        :is="!!to ? 'locale-link' : !!href ? 'ext-link' : 'div'"
+        :class="cardClasses"
+        :to="to"
+        :href="href"
+    >
         <div class="title_block">
             <div class="title">{{ title }}</div>
             <div class="tag" :class="tagClasses">{{ tag }}</div>
@@ -11,12 +16,19 @@
         <div class="card_img">
             <img :src="imgUrl" :alt="imgAlt" />
         </div>
-    </div>
+    </component>
 </template>
 
 <script>
+import ExtLink from '~/components/core/links/ExtLink'
+import LocaleLink from '~/components/core/links/LocaleLink'
+
 export default {
     name: 'EventCard',
+    components: {
+        ExtLink,
+        LocaleLink,
+    },
     props: {
         title: { type: String, default: '' },
         description: { type: String, default: '' },
@@ -24,10 +36,21 @@ export default {
         tagColor: { type: String, default: '' }, // red, blue, orange, green
         imgUrl: { type: String, default: '' },
         imgAlt: { type: String, default: '' },
+        to: { type: String, default: '' },
+        href: { type: String, default: '' },
     },
     computed: {
+        cardClasses() {
+            return {
+                card: true,
+                '-isLink': this.isLink,
+            }
+        },
         tagClasses() {
             return [this.tagColor]
+        },
+        isLink() {
+            return this.href || this.to
         },
     },
 }
@@ -47,7 +70,7 @@ export default {
         padding: 34px 30px 38px;
     }
 }
-.card:hover {
+.card.-isLink:hover {
     background-color: #e6ba17;
 }
 
@@ -55,7 +78,7 @@ export default {
     @apply flex items-center justify-between;
     padding-bottom: 24px;
 }
-.card:hover .title {
+.card.-isLink:hover .title {
     color: #000;
 }
 .title {
@@ -64,7 +87,7 @@ export default {
     line-height: 30px;
     color: #c2a53a;
 }
-.card:hover .tag {
+.card.-isLink:hover .tag {
     color: #000;
     border: 2px solid #000;
 }
@@ -94,7 +117,7 @@ export default {
     @apply text-sm font-serif;
     color: #c7c7c7;
 }
-.card:hover .card_txt {
+.card.-isLink:hover .card_txt {
     color: #000;
 }
 
