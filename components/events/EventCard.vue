@@ -7,6 +7,7 @@
         <p class="card_txt">
             {{ description }}
         </p>
+        <div class="dummy"></div>
         <div class="card_img">
             <img :src="imgUrl" :alt="imgAlt" />
         </div>
@@ -32,31 +33,33 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 .card {
-    width: 380px;
-    min-height: 486px;
+    @apply relative inline-flex flex-col w-full break-words;
+    min-height: 180px;
     border-radius: 24px;
     border: 2px solid #c2a53a;
     box-shadow: 6px 6px 0 #c2a53a;
-    padding: 34px 30px 38px;
-    margin: 0 22px 44px;
+    padding: 15px;
+
+    @media (min-width: 415px) {
+        min-height: 362px;
+        padding: 34px 30px 38px;
+    }
 }
 .card:hover {
     background-color: #e6ba17;
 }
 
 .title_block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @apply flex items-center justify-between;
     padding-bottom: 24px;
 }
 .card:hover .title {
     color: #000;
 }
 .title {
-    font-weight: bold;
+    @apply font-bold font-serif;
     font-size: 24px;
     line-height: 30px;
     color: #c2a53a;
@@ -88,10 +91,26 @@ export default {
     border: 2px solid #22c86e;
 }
 .card_txt {
-    padding-bottom: 30px;
+    @apply text-sm font-serif;
     color: #c7c7c7;
 }
 .card:hover .card_txt {
     color: #000;
+}
+
+.dummy {
+    margin-top: 75%;
+    @media (min-width: 1024px) {
+        margin-top: 65%;
+    }
+}
+
+.card_img {
+    @apply absolute bottom-6 w-10/12;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card_img img {
+    @apply w-full;
 }
 </style>
