@@ -6,8 +6,11 @@ export default genI18nMessages({
         applyNow: 'Apply Now',
         noJobs: 'No Jobs',
         og: {
-            title: 'Job Listing',
-            description: 'Job Listing',
+            title:
+                '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
+            description:
+                '2021年知名企業內部Python熱門工作職缺、Python工程師職缺一覽表，' +
+                '提供知名品牌企業內部Python工程師職缺、Python工作機會！',
         },
     },
     'zh-hant': {
@@ -15,8 +18,11 @@ export default genI18nMessages({
         applyNow: '前往應徵',
         noJobs: '尚無資訊',
         og: {
-            title: '徵才資訊',
-            description: '徵才資訊',
+            title:
+                '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
+            description:
+                '2021年知名企業內部Python熱門工作職缺、Python工程師職缺一覽表，' +
+                '提供知名品牌企業內部Python工程師職缺、Python工作機會！',
         },
     },
 })
