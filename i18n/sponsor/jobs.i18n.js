@@ -5,6 +5,8 @@ export default genI18nMessages({
         title: 'Job Listing',
         applyNow: 'Apply Now',
         noJobs: 'No Jobs',
+        jobDescription: 'What you will be doing:',
+        jobRequirement: 'Requirements:',
         og: {
             title:
                 '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
@@ -17,6 +19,8 @@ export default genI18nMessages({
         title: '徵才資訊',
         applyNow: '前往應徵',
         noJobs: '尚無資訊',
+        jobDescription: '【職務內容】',
+        jobRequirement: '【具備條件】',
         og: {
             title:
                 '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
