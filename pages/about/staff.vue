@@ -33,6 +33,13 @@ export default {
         I18nPageWrapper,
         CoreH1,
     },
+    layout({ query }) {
+        if (query.mode === 'app') {
+            return 'empty'
+        } else {
+            return 'default'
+        }
+    },
     data() {
         return {
             member_list: {
