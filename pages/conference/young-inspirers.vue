@@ -14,7 +14,7 @@
             <li class="list-none">
                 Youtube 線上直播：
                 <ext-link
-                    href="https://youtu.be/SWnwRHgt-RA"
+                    href="https://www.youtube.com/watch?v=FAB5C7V7h-o"
                     highlight
                     underline
                     >點我看直播</ext-link
@@ -93,6 +93,16 @@
                     </div>
                 </tab>
             </tabs>
+        </div>
+        <h2>特別感謝</h2>
+        <div>
+            <div
+                v-for="(logo, index) in sponsorLogos"
+                :key="`young_inspirers_sponsors_${index}`"
+                class="sponsors"
+            >
+                <img :src="logo.img" :alt="logo.alt" />
+            </div>
         </div>
     </i18n-page-wrapper>
 </template>
@@ -216,6 +226,12 @@ export default {
                         '我們希望藉由今天的 30 分鐘和各位一起探討這些問題。',
                 },
             ],
+            sponsorLogos: [
+                {
+                    img: require('~/static/img/young-inspirers/WQTW.png'),
+                    alt: 'WORLDQUANT',
+                },
+            ],
         }
     },
     computed: {
@@ -309,7 +325,7 @@ h2 {
 }
 
 .tabs {
-    @apply mb-4 md:mb-8 w-full;
+    @apply mb-4 md:mb-16 w-full;
 }
 .tabParagraphTitle {
     @apply font-serif font-bold mb-2;
@@ -317,5 +333,9 @@ h2 {
 }
 .tabParagraph {
     @apply font-serif mb-2;
+}
+
+.sponsors {
+    @apply w-3/4 sm:w-1/2 mx-auto mt-4;
 }
 </style>
