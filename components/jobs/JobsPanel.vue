@@ -9,12 +9,15 @@
                 {{ job[$makeKey(locale, 'job_name')] || '-' }}
             </div>
             <div class="jobsPanelJob__description">
-                {{ job[$makeKey(locale, 'job_description')] || '-' }}
+                <div class="font-bold">{{ $t('jobDescription') }}</div>
+                <p>{{ job[$makeKey(locale, 'job_description')] || '-' }}</p>
             </div>
+            <br />
             <div class="jobsPanelJob__requirements">
-                {{ job[$makeKey(locale, 'job_requirements')] || '-' }}
+                <div class="font-bold">{{ $t('jobRequirement') }}</div>
+                <p>{{ job[$makeKey(locale, 'job_requirements')] || '-' }}</p>
             </div>
-            <core-text-button :href="job.job_url" class="mt-4 mb-8">
+            <core-text-button :href="job.job_url" class="mt-4 mb-12">
                 {{ ctaLabel }}
             </core-text-button>
         </div>
@@ -25,9 +28,11 @@
 </template>
 
 <script>
+import i18n from '@/i18n/sponsor/jobs.i18n'
 import CoreTextButton from '@/components/core/buttons/TextButton'
 
 export default {
+    i18n,
     name: 'JobsPanel',
     components: {
         CoreTextButton,
@@ -45,7 +50,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .jobsPanel {
     @apply relative p-8 mb-12 rounded-2xl;
     background-color: #1d1a37;
@@ -58,7 +63,7 @@ export default {
 
 .jobsPanelJob__description,
 .jobsPanelJob__requirements {
-    @apply whitespace-pre-line;
+    @apply whitespace-pre-line text-sm md:text-base;
     color: #ffffff;
 }
 </style>
