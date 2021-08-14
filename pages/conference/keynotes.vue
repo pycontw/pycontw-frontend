@@ -179,12 +179,12 @@ export default {
 }
 
 .keynote__name {
-    @apply font-serif font-semibold text-sm text-center py-2;
+    @apply font-serif font-black text-base text-center py-2;
     color: #c2a53a;
 }
 
 .keynote__title {
-    @apply font-serif font-semibold text-sm text-center py-2;
+    @apply font-serif font-black text-base text-center py-2;
     color: #c2a53a;
 }
 
