@@ -115,10 +115,10 @@ export default genI18nMessages({
             '可以說是非常多元有趣，讓你可以從演講中吸取知識的同時，' +
             '還能在交流活動中結識許多各方好友。',
         eventInfo: {
-            youngTalent: {
-                title: 'Young Talent',
+            youngInspirers: {
+                title: 'Young Inspirers',
                 description:
-                    'Young Talent 是首次籌畫的新活動，旨在於創建一個屬於青少年的學習、交流空間。' +
+                    'Young Inspirers 是首次籌畫的新活動，旨在於創建一個屬於青少年的學習、交流空間。' +
                     '讓青少年們透過這個活動去分享自身經歷，並培養多元思考、跨族群合作、系統整合的能力，' +
                     '交流不同世代間的資訊。',
             },
