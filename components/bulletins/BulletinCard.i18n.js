@@ -88,7 +88,7 @@ export default genI18nMessages({
                 title: '防疫守則',
                 description:
                     '病毒退散！讓我們一同線上參與 PyCon TW 盛會，阻隔病毒傳播！',
-                linkTitle: '閱讀',
+                linkTitle: '前往閱讀',
                 linkTo: '/covid19_guidelines',
             },
             {

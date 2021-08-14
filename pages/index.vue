@@ -48,17 +48,16 @@
 
         <landing-img-swiper />
 
-        <i18n-page-wrapper
-            custom-x
-            custom-y
-            class="py-12 px-4 sm:px-10 md:px-12 lg:px-20 bg-blue-primary"
-        >
-            <h1 class="bulletin-title">{{ $t('bulletinList') }}</h1>
+        <div class="bulletin-section">
+            <landing-h2
+                :sub-title="$t('bulletinList')"
+                bulletin-color
+            ></landing-h2>
             <bulletin-card-collection></bulletin-card-collection>
-        </i18n-page-wrapper>
+        </div>
 
         <div class="intro-section">
-            <h2 class="intro-title">{{ $t('pyconIntro') }}</h2>
+            <landing-h2 :sub-title="$t('pyconIntro')"></landing-h2>
             <intro></intro>
         </div>
 
@@ -98,6 +97,7 @@
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
+import LandingH2 from '~/components/core/titles/LandingH2'
 // import TextButton from '~/components/core/buttons/TextButton'
 import {
     SponsorCardCollection,
@@ -126,6 +126,7 @@ export default {
         SponsorModal,
         Intro,
         BulletinCardCollection,
+        LandingH2,
     },
     data() {
         return {
@@ -200,22 +201,13 @@ export default {
     background-color: #121023;
 }
 
-.intro-section h2.intro-title {
-    @apply mt-8 mb-16 font-serif font-bold text-center text-3xl;
-    color: #e6ba17;
-    @media (max-width: 767px) {
-        @apply mt-2 mb-8 text-2xl;
-    }
-}
-
 .intro-section {
     @apply pt-8 pb-20;
     background-color: #16132a;
 }
 
-.bulletin-title {
-    @apply font-serif;
-    color: #f3cc39;
+.bulletin-section {
+    @apply py-12 px-4 sm:px-10 md:px-12 lg:px-20;
 }
 
 .sponsor-title {
