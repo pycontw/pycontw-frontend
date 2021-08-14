@@ -52,6 +52,10 @@ export default {
             type: String,
             default: undefined,
         },
+        bulletin: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         coreButtonClasses() {
@@ -65,6 +69,7 @@ export default {
                 '--rounded': this.rounded,
                 '--block': this.block,
                 '--is-link': this.isLink,
+                '--bulletin': this.bulletin,
             }
         },
         medium() {
@@ -135,5 +140,10 @@ export default {
 .core-button.--is-link > a:hover {
     color: #7568f6;
     border-color: #7568f6;
+}
+
+.core-button.--medium.--bulletin:not(.--is-link),
+.core-button.--medium.--bulletin.--is-link > a {
+    border-width: 3px;
 }
 </style>

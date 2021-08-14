@@ -10,6 +10,7 @@
                 :href="linkHref"
                 :to="linkTo"
                 secondary
+                bulletin
                 class="hidden md:block"
                 >{{ linkTitle }}</text-button
             >
@@ -55,12 +56,10 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply relative flex flex-col items-center font-serif rounded-3xl;
-    border-width: 4px;
+    @apply relative flex flex-col items-center font-serif rounded-3xl border-4;
     width: 47%;
     @media (min-width: 415px) {
-        border-width: 3px;
-        width: 11rem;
+        width: 214px;
     }
     border-color: #4b4b4b;
     color: #4b4b4b;
@@ -84,7 +83,7 @@ export default {
 }
 
 .bulletinCard__content > h2 {
-    @apply text-base text-center mt-6 mb-5;
+    @apply text-base text-center mt-6 mb-5 font-bold;
     @media (min-width: 415px) {
         @apply text-xl mt-8 mb-5;
     }
