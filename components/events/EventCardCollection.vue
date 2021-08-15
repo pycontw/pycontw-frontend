@@ -17,7 +17,7 @@ export default {
     column-gap: 24px;
     row-gap: 32px;
     @media (min-width: 415px) {
-        column-gap: 20px;
+        column-gap: 46px;
         row-gap: 44px;
     }
 }
