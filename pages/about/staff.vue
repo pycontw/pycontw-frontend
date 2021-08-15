@@ -669,17 +669,44 @@ img.photo {
     border-radius: 50%;
     border: 3px solid white;
     margin: auto;
+    @media (max-width: 1024px) {
+        width: 100px;
+        height: 100px;
+    }
+    @media (max-width: 768px) {
+        width: 86px;
+        height: 86px;
+    }
+    @media (max-width: 415px) {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 .staff-group {
     position: relative;
     margin-left: 100px;
+    @media (max-width: 1024px) {
+        margin-left: 10px;
+    }
 }
 
 .staff {
     width: 164px;
     height: 200px;
     float: left;
+    @media (max-width: 1024px) {
+        width: 130px;
+        height: 160px;
+    }
+    @media (max-width: 768px) {
+        width: 110px;
+        height: 145px;
+    }
+    @media (max-width: 415px) {
+        width: 90px;
+        height: 130px;
+    }
 }
 
 .staff-name {
