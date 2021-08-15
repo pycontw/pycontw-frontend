@@ -5,15 +5,15 @@
         :to="to"
         :href="href"
     >
-        <div class="title_block">
+        <div class="titleBlock">
             <div class="title">{{ title }}</div>
             <div class="tag" :class="tagClasses">{{ tag }}</div>
         </div>
-        <p class="card_txt">
+        <p class="cardTxt">
             {{ description }}
         </p>
         <div class="dummy"></div>
-        <div class="card_img">
+        <div class="cardImg">
             <img :src="imgUrl" :alt="imgAlt" />
         </div>
     </component>
@@ -47,7 +47,10 @@ export default {
             }
         },
         tagClasses() {
-            return [this.tagColor]
+            return {
+                tag: true,
+                [this.tagColor]: true,
+            }
         },
         isLink() {
             return this.href || this.to
@@ -74,7 +77,7 @@ export default {
     background-color: #e6ba17;
 }
 
-.title_block {
+.titleBlock {
     @apply flex items-center justify-between;
     padding-bottom: 24px;
 }
@@ -87,6 +90,7 @@ export default {
     line-height: 30px;
     color: #c2a53a;
 }
+
 .card.--isLink:hover .tag {
     color: #000;
     border: 2px solid #000;
@@ -113,11 +117,12 @@ export default {
     color: #22c86e;
     border: 2px solid #22c86e;
 }
-.card_txt {
+
+.cardTxt {
     @apply text-sm font-serif;
     color: #c7c7c7;
 }
-.card.--isLink:hover .card_txt {
+.card.--isLink:hover .cardTxt {
     color: #000;
 }
 
@@ -127,13 +132,12 @@ export default {
         margin-top: 65%;
     }
 }
-
-.card_img {
+.cardImg {
     @apply absolute bottom-6 w-10/12;
     left: 50%;
     transform: translateX(-50%);
 }
-.card_img img {
+.cardImg img {
     @apply w-full;
 }
 </style>
