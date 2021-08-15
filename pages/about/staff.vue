@@ -5,19 +5,21 @@
             <div
                 v-for="(content, i) in $t('contents')"
                 :key="`staff_content_${i}`"
-                class="clear-both"
+                class="team"
             >
-                <h2 class="teamName">
+                <div class="teamName">
                     {{ content.organization }}
-                </h2>
-                <div class="staff-group">
+                </div>
+                <div class="staffGroup">
                     <div
                         v-for="(member, j) in member_list[content.key]"
                         :key="`staff_members_${j}`"
                         class="staff"
                     >
-                        <img class="photo" :src="member.photo" />
-                        <div class="staff-name">
+                        <div class="staffPhoto">
+                            <img :src="member.photo" />
+                        </div>
+                        <div class="staffName">
                             {{ member.name }}
                         </div>
                     </div>
@@ -663,31 +665,33 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-img.photo {
-    @apply w-14 sm:w-16 md:w-20 lg:w-24;
-    @apply h-14 sm:h-16 md:h-20 lg:h-24;
-    @apply m-auto rounded-full;
-    border: 3px solid white;
+.team {
+    @apply mb-12;
 }
 
 .teamName {
-    @apply font-serif text-white;
+    @apply font-serif text-white mb-10;
     font-size: 24px;
 }
 
-.staff-group {
-    @apply relative ml-0.5 lg:ml-20;
+.staffGroup {
+    @apply grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4;
+    @apply lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8;
+    @apply gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-4;
+    @apply ml-0.5 lg:ml-14;
 }
 
-.staff {
-    @apply float-left;
-    @apply w-16 sm:w-20 md:w-24 lg:w-32;
-    @apply h-24 sm:h-28 md:h-32 lg:h-40;
+.staffPhoto {
+    @apply w-full aspect-w-1 aspect-h-1 mb-3;
 }
 
-.staff-name {
-    @apply font-serif;
-    @apply text-white text-center p-0.5;
-    font-size: 16px;
+.staffPhoto img {
+    @apply rounded-full;
+    border: 3px solid white;
+}
+
+.staffName {
+    @apply font-serif text-white text-xs md:text-sm;
+    @apply text-center p-0.5;
 }
 </style>
