@@ -6,59 +6,59 @@ export default genI18nMessages({
         contents: [
             {
                 key: 'chairperson',
-                organization: 'Chairperson',
+                teamName: 'Chairperson',
             },
             {
                 key: 'program',
-                organization: 'Program',
+                teamName: 'Program',
             },
             {
                 key: 'development_web',
-                organization: 'Development (web)',
+                teamName: 'Development (web)',
             },
             {
                 key: 'development_data',
-                organization: 'Development (data)',
+                teamName: 'Development (data)',
             },
             {
                 key: 'development_infra',
-                organization: 'Development (infra)',
+                teamName: 'Development (infra)',
             },
             {
                 key: 'venue',
-                organization: 'Venue',
+                teamName: 'Venue',
             },
             {
                 key: 'sponsorship',
-                organization: 'Marketing - Sponsorship',
+                teamName: 'Marketing - Sponsorship',
             },
             {
                 key: 'marketing',
-                organization: 'Marketing - Plan',
+                teamName: 'Marketing - Plan',
             },
             {
                 key: 'pr',
-                organization: 'Marketing - Public',
+                teamName: 'Marketing - Public',
             },
             {
                 key: 'registration',
-                organization: 'Registration',
+                teamName: 'Registration',
             },
             {
                 key: 'recruitment',
-                organization: 'Recruitment',
+                teamName: 'Recruitment',
             },
             {
                 key: 'design',
-                organization: 'Design',
+                teamName: 'Design',
             },
             {
                 key: 'finance',
-                organization: 'Finance',
+                teamName: 'Finance',
             },
             {
                 key: 'photography',
-                organization: 'Photography',
+                teamName: 'Photography',
             },
         ],
         og: {
@@ -71,59 +71,59 @@ export default genI18nMessages({
         contents: [
             {
                 key: 'chairperson',
-                organization: '主席',
+                teamName: '主席',
             },
             {
                 key: 'program',
-                organization: '議程',
+                teamName: '議程',
             },
             {
                 key: 'development_web',
-                organization: '開發（網站）',
+                teamName: '開發（網站）',
             },
             {
                 key: 'development_data',
-                organization: '開發（資料）',
+                teamName: '開發（資料）',
             },
             {
                 key: 'development_infra',
-                organization: '開發（基礎設施）',
+                teamName: '開發（基礎設施）',
             },
             {
                 key: 'venue',
-                organization: '場務',
+                teamName: '場務',
             },
             {
                 key: 'sponsorship',
-                organization: '贊助執行',
+                teamName: '贊助執行',
             },
             {
                 key: 'marketing',
-                organization: '行銷企劃',
+                teamName: '行銷企劃',
             },
             {
                 key: 'pr',
-                organization: '社群媒體',
+                teamName: '社群媒體',
             },
             {
                 key: 'registration',
-                organization: '註冊',
+                teamName: '註冊',
             },
             {
                 key: 'recruitment',
-                organization: '招募',
+                teamName: '招募',
             },
             {
                 key: 'design',
-                organization: '設計',
+                teamName: '設計',
             },
             {
                 key: 'finance',
-                organization: '財務',
+                teamName: '財務',
             },
             {
                 key: 'photography',
-                organization: '紀錄',
+                teamName: '紀錄',
             },
         ],
         og: {

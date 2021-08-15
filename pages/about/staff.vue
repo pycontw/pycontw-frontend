@@ -8,11 +8,11 @@
                 class="team"
             >
                 <div class="teamName">
-                    {{ content.organization }}
+                    {{ content.teamName }}
                 </div>
                 <div class="staffGroup">
                     <div
-                        v-for="(member, j) in member_list[content.key]"
+                        v-for="(member, j) in memberList[content.key]"
                         :key="`staff_members_${j}`"
                         class="staff"
                     >
@@ -43,7 +43,7 @@ export default {
     },
     data() {
         return {
-            member_list: {
+            memberList: {
                 chairperson: [
                     {
                         name: 'Wei Lee',
