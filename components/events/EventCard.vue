@@ -72,17 +72,26 @@ export default {
         min-height: 362px;
         padding: 34px 30px 38px;
     }
-}
-.card.--isLink:hover {
-    background-color: #e6ba17;
+
+    &.--isLink:hover {
+        background-color: #e6ba17;
+
+        & .title {
+            color: #000;
+        }
+        & .tag {
+            color: #000;
+            border: 2px solid #000;
+        }
+        & .cardTxt {
+            color: #000;
+        }
+    }
 }
 
 .titleBlock {
     @apply flex items-center justify-between;
     padding-bottom: 24px;
-}
-.card.--isLink:hover .title {
-    color: #000;
 }
 .title {
     @apply font-bold font-serif;
@@ -91,39 +100,32 @@ export default {
     color: #c2a53a;
 }
 
-.card.--isLink:hover .tag {
-    color: #000;
-    border: 2px solid #000;
-}
 .tag {
     border-radius: 8px;
     font-weight: 600;
     font-size: 12px;
     padding: 7px 14px;
-}
-.tag.orange {
-    color: #ffa357;
-    border: 2px solid #ffa357;
-}
-.tag.blue {
-    color: #7aafff;
-    border: 2px solid #7aafff;
-}
-.tag.red {
-    color: #ff7a7a;
-    border: 2px solid #ff7a7a;
-}
-.tag.green {
-    color: #22c86e;
-    border: 2px solid #22c86e;
-}
 
+    &.orange {
+        color: #ffa357;
+        border: 2px solid #ffa357;
+    }
+    &.blue {
+        color: #7aafff;
+        border: 2px solid #7aafff;
+    }
+    &.red {
+        color: #ff7a7a;
+        border: 2px solid #ff7a7a;
+    }
+    &.green {
+        color: #22c86e;
+        border: 2px solid #22c86e;
+    }
+}
 .cardTxt {
     @apply text-sm font-serif;
     color: #c7c7c7;
-}
-.card.--isLink:hover .cardTxt {
-    color: #000;
 }
 
 .dummy {
