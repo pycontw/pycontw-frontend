@@ -5,9 +5,9 @@
             <div
                 v-for="(content, i) in $t('contents')"
                 :key="`staff_content_${i}`"
-                style="clear: both"
+                class="clear-both"
             >
-                <h2 style="color: white">
+                <h2 class="teamName">
                     {{ content.organization }}
                 </h2>
                 <div class="staff-group">
@@ -17,7 +17,7 @@
                         class="staff"
                     >
                         <img class="photo" :src="member.photo" />
-                        <div class="justify-center font-serif staff-name">
+                        <div class="staff-name">
                             {{ member.name }}
                         </div>
                     </div>
@@ -662,57 +662,32 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 img.photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    @apply w-14 sm:w-16 md:w-20 lg:w-24;
+    @apply h-14 sm:h-16 md:h-20 lg:h-24;
+    @apply m-auto rounded-full;
     border: 3px solid white;
-    margin: auto;
-    @media (max-width: 1024px) {
-        width: 100px;
-        height: 100px;
-    }
-    @media (max-width: 768px) {
-        width: 86px;
-        height: 86px;
-    }
-    @media (max-width: 415px) {
-        width: 70px;
-        height: 70px;
-    }
+}
+
+.teamName {
+    @apply font-serif text-white;
+    font-size: 24px;
 }
 
 .staff-group {
-    position: relative;
-    margin-left: 100px;
-    @media (max-width: 1024px) {
-        margin-left: 10px;
-    }
+    @apply relative ml-0.5 lg:ml-20;
 }
 
 .staff {
-    width: 164px;
-    height: 200px;
-    float: left;
-    @media (max-width: 1024px) {
-        width: 130px;
-        height: 160px;
-    }
-    @media (max-width: 768px) {
-        width: 110px;
-        height: 145px;
-    }
-    @media (max-width: 415px) {
-        width: 90px;
-        height: 130px;
-    }
+    @apply float-left;
+    @apply w-16 sm:w-20 md:w-24 lg:w-32;
+    @apply h-24 sm:h-28 md:h-32 lg:h-40;
 }
 
 .staff-name {
-    color: white;
-    text-align: center;
+    @apply font-serif;
+    @apply text-white text-center p-0.5;
     font-size: 16px;
-    padding: 10px;
 }
 </style>
