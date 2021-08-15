@@ -76,10 +76,6 @@ export default {
                         photo: require('~/static/img/staff/program/Jordan.jpg'),
                     },
                     {
-                        name: 'Gina',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
                         name: 'Kyle',
                         photo: require('~/static/img/staff/program/Kyle.jpg'),
                     },
@@ -136,16 +132,8 @@ export default {
                         photo: require('~/static/img/staff/data/Shirley.jpg'),
                     },
                     {
-                        name: 'Joesph',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
                         name: 'ZhengTing',
                         photo: require('~/static/img/staff/program/lzt.JPG'),
-                    },
-                    {
-                        name: 'Timothy',
-                        photo: require('~/static/img/staff/smile.svg'),
                     },
                     {
                         name: 'Derick',
