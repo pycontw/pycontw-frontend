@@ -242,20 +242,12 @@ export default {
                         photo: require('~/static/img/staff/infra/mozix.jpeg'),
                     },
                     {
-                        name: 'Cloudy',
-                        photo: require('~/static/img/staff/infra/cloudy.jpg'),
-                    },
-                    {
                         name: 'GaryPai',
                         photo: require('~/static/img/staff/infra/gary9630.jpg'),
                     },
                     {
                         name: 'Jacky',
                         photo: require('~/static/img/staff/infra/jacky.jpg'),
-                    },
-                    {
-                        name: 'Ray',
-                        photo: require('~/static/img/staff/smile.svg'),
                     },
                     {
                         name: 'where',
