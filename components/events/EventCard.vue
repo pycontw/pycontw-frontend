@@ -43,7 +43,7 @@ export default {
         cardClasses() {
             return {
                 card: true,
-                '-isLink': this.isLink,
+                '--isLink': this.isLink,
             }
         },
         tagClasses() {
@@ -70,7 +70,7 @@ export default {
         padding: 34px 30px 38px;
     }
 }
-.card.-isLink:hover {
+.card.--isLink:hover {
     background-color: #e6ba17;
 }
 
@@ -78,7 +78,7 @@ export default {
     @apply flex items-center justify-between;
     padding-bottom: 24px;
 }
-.card.-isLink:hover .title {
+.card.--isLink:hover .title {
     color: #000;
 }
 .title {
@@ -87,7 +87,7 @@ export default {
     line-height: 30px;
     color: #c2a53a;
 }
-.card.-isLink:hover .tag {
+.card.--isLink:hover .tag {
     color: #000;
     border: 2px solid #000;
 }
@@ -117,7 +117,7 @@ export default {
     @apply text-sm font-serif;
     color: #c7c7c7;
 }
-.card.-isLink:hover .card_txt {
+.card.--isLink:hover .card_txt {
     color: #000;
 }
 
