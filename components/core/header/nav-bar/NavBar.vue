@@ -12,13 +12,13 @@
             :class="getPageClassesByPath('conference')"
         >
         </nav-bar-item-dropdown>
-        <locale-link
+        <!-- <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
             customized
         >
             {{ $t('sponsor') }}
-        </locale-link>
+        </locale-link> -->
         <!-- <nav-bar-item-dropdown
             :label="$t('speaking')"
             :items="speakingItems"
@@ -54,14 +54,13 @@
 import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
-import { LocaleLink, ExtLink } from '~/components/core/links'
+import ExtLink from '~/components/core/links/ExtLink'
 
 export default {
     i18n,
     name: 'CoreHeaderNavBar',
     components: {
         NavBarItemDropdown,
-        LocaleLink,
         ExtLink,
     },
     computed: {
