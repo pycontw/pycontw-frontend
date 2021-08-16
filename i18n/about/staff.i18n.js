@@ -9,6 +9,10 @@ export default genI18nMessages({
                 teamName: 'Chairperson',
             },
             {
+                key: 'everywhere',
+                teamName: 'Everywhere',
+            },
+            {
                 key: 'program',
                 teamName: 'Program',
             },
@@ -34,11 +38,11 @@ export default genI18nMessages({
             },
             {
                 key: 'marketing',
-                teamName: 'Marketing - Plan',
+                teamName: 'Marketing - Planning',
             },
             {
                 key: 'pr',
-                teamName: 'Marketing - Public',
+                teamName: 'Marketing - Public Relations',
             },
             {
                 key: 'registration',
@@ -72,6 +76,10 @@ export default genI18nMessages({
             {
                 key: 'chairperson',
                 teamName: '主席',
+            },
+            {
+                key: 'everywhere',
+                teamName: '到處都看得到他們',
             },
             {
                 key: 'program',

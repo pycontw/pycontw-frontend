@@ -25,12 +25,12 @@
                 :expanding="expandingItem === 'conference'"
                 @click.native="toggleAccordion('conference')"
             ></nav-bar-item-accordion>
-            <locale-link
+            <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/sponsor"
                 customized
                 >{{ $t('sponsor') }}</locale-link
-            >
+            > -->
             <!-- <nav-bar-item-accordion
                 :label="$t('speaking')"
                 :items="speakingItems"
@@ -61,7 +61,7 @@
 <script>
 import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon'
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
-import { ExtLink, LocaleLink } from '@/components/core/links'
+import ExtLink from '@/components/core/links/ExtLink'
 import navBarItems from './nav-bar-items'
 import i18n from './NavBar.i18n'
 
@@ -72,7 +72,6 @@ export default {
         IconHamburgerMenuIcon,
         NavBarItemAccordion,
         ExtLink,
-        LocaleLink,
     },
     data() {
         return {

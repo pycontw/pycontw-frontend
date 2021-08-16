@@ -50,6 +50,24 @@ export default {
                         photo: require('~/static/img/staff/everywhere/Wei_Lee.jpeg'),
                     },
                 ],
+                everywhere: [
+                    {
+                        name: 'Marr',
+                        photo: require('~/static/img/staff/everywhere/marr.jpg'),
+                    },
+                    {
+                        name: 'TP',
+                        photo: require('~/static/img/staff/smile.svg'),
+                    },
+                    {
+                        name: 'Tai',
+                        photo: require('~/static/img/staff/everywhere/tai271828.png'),
+                    },
+                    {
+                        name: 'Joe',
+                        photo: require('~/static/img/staff/everywhere/joe.jpg'),
+                    },
+                ],
                 program: [
                     {
                         name: 'Winnie',
@@ -321,7 +339,7 @@ export default {
                     },
                     {
                         name: 'ZhengTing',
-                        photo: require('~/static/img/staff/program/lzt.JPG'),
+                        photo: require('~/static/img/staff/venue/鴨嘴獸.jpg'),
                     },
                     {
                         name: 'Ray',
@@ -410,15 +428,11 @@ export default {
                         photo: require('~/static/img/staff/smile.svg'),
                     },
                     {
-                        name: 'Mitchelle',
-                        photo: require('~/static/img/staff/smile.svg'),
+                        name: 'Michelle',
+                        photo: require('~/static/img/staff/registration/Michelle.png'),
                     },
                     {
                         name: 'Anson',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Tina',
                         photo: require('~/static/img/staff/smile.svg'),
                     },
                     {
@@ -442,6 +456,10 @@ export default {
                         photo: require('~/static/img/staff/smile.svg'),
                     },
                     {
+                        name: 'Rain',
+                        photo: require('~/static/img/staff/sponsorship/rain.jpg'),
+                    },
+                    {
                         name: 'Tai',
                         photo: require('~/static/img/staff/sponsorship/tai271828.png'),
                     },
@@ -453,10 +471,6 @@ export default {
                     },
                     {
                         name: 'Gobby Chen',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Rain',
                         photo: require('~/static/img/staff/smile.svg'),
                     },
                 ],
@@ -471,7 +485,7 @@ export default {
                     },
                     {
                         name: '9ukei',
-                        photo: require('~/static/img/staff/smile.svg'),
+                        photo: require('~/static/img/staff/pr/9ukei.jpg'),
                     },
                     {
                         name: 'Derek',
@@ -483,7 +497,7 @@ export default {
                     },
                     {
                         name: 'JennyChu',
-                        photo: require('~/static/img/staff/smile.svg'),
+                        photo: require('~/static/img/staff/pr/jenny.jpg'),
                     },
                     {
                         name: '可晴',
@@ -525,7 +539,7 @@ export default {
                     },
                     {
                         name: 'Marr',
-                        photo: require('~/static/img/staff/registration/marr.jpg'),
+                        photo: require('~/static/img/staff/everywhere/marr.jpg'),
                     },
                 ],
                 recruitment: [
@@ -569,7 +583,7 @@ export default {
                     },
                     {
                         name: 'Sandy',
-                        photo: require('~/static/img/staff/smile.svg'),
+                        photo: require('~/static/img/staff/design/sandy.jpg'),
                     },
                     {
                         name: 'Carol Cho',
