@@ -17,7 +17,11 @@
                         class="staff"
                     >
                         <div class="staffPhoto">
-                            <img :src="member.photo" />
+                            <img
+                                :src="
+                                    require(`~/static/img/staff/${member.photo}`)
+                                "
+                            />
                         </div>
                         <div class="staffName">
                             {{ member.name }}
@@ -45,590 +49,173 @@ export default {
         return {
             memberList: {
                 chairperson: [
-                    {
-                        name: 'Wei Lee',
-                        photo: require('~/static/img/staff/everywhere/Wei_Lee.jpeg'),
-                    },
+                    { name: 'Wei Lee', photo: 'everywhere/Wei_Lee.jpeg' },
                 ],
                 everywhere: [
-                    {
-                        name: 'Marr',
-                        photo: require('~/static/img/staff/everywhere/marr.jpg'),
-                    },
-                    {
-                        name: 'TP',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Tai',
-                        photo: require('~/static/img/staff/everywhere/tai271828.png'),
-                    },
-                    {
-                        name: 'Joe',
-                        photo: require('~/static/img/staff/everywhere/joe.jpg'),
-                    },
+                    { name: 'Marr', photo: 'everywhere/marr.jpg' },
+                    { name: 'TP', photo: 'smile.svg' },
+                    { name: 'Tai', photo: 'everywhere/tai271828.png' },
+                    { name: 'Joe', photo: 'everywhere/joe.jpg' },
                 ],
                 program: [
-                    {
-                        name: 'Winnie',
-                        photo: require('~/static/img/staff/program/Winnie.jpeg'),
-                    },
-                    {
-                        name: 'Pochun',
-                        photo: require('~/static/img/staff/program/pochun.jpg'),
-                    },
-                    {
-                        name: 'Petertc',
-                        photo: require('~/static/img/staff/program/petertc.jpg'),
-                    },
-                    {
-                        name: 'JunWei Song',
-                        photo: require('~/static/img/staff/program/JunWeiSong.jpeg'),
-                    },
-                    {
-                        name: 'Annie Bu',
-                        photo: require('~/static/img/staff/program/AnnieBu.jpg'),
-                    },
-                    {
-                        name: 'Jordan Su',
-                        photo: require('~/static/img/staff/program/Jordan.jpg'),
-                    },
-                    {
-                        name: 'Kyle',
-                        photo: require('~/static/img/staff/program/Kyle.jpg'),
-                    },
-                    {
-                        name: 'Yider',
-                        photo: require('~/static/img/staff/venue/Yider.jpg'),
-                    },
-                    {
-                        name: 'TengLin Yu',
-                        photo: require('~/static/img/staff/program/TENGLIN.jpg'),
-                    },
-                    {
-                        name: '黃坤賢',
-                        photo: require('~/static/img/staff/program/黃坤賢.jpeg'),
-                    },
-                    {
-                        name: 'TingYi',
-                        photo: require('~/static/img/staff/program/Kevin.jpg'),
-                    },
-                    {
-                        name: 'Winfred',
-                        photo: require('~/static/img/staff/program/Winfred.jpg'),
-                    },
-                    {
-                        name: 'Shihchi',
-                        photo: require('~/static/img/staff/program/Shihchi.jpg'),
-                    },
-                    {
-                        name: 'Huei Lin',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Benson',
-                        photo: require('~/static/img/staff/web/Benson.jpg'),
-                    },
-                    {
-                        name: 'Jason',
-                        photo: require('~/static/img/staff/venue/Jason.png'),
-                    },
-                    {
-                        name: 'Kir',
-                        photo: require('~/static/img/staff/program/Kir.jpeg'),
-                    },
-                    {
-                        name: 'Leonard',
-                        photo: require('~/static/img/staff/program/Leonard.jpg'),
-                    },
-                    {
-                        name: 'Lance',
-                        photo: require('~/static/img/staff/program/Lance.png'),
-                    },
-                    {
-                        name: 'Shirley',
-                        photo: require('~/static/img/staff/data/Shirley.jpg'),
-                    },
-                    {
-                        name: 'ZhengTing',
-                        photo: require('~/static/img/staff/program/lzt.JPG'),
-                    },
-                    {
-                        name: 'Derick',
-                        photo: require('~/static/img/staff/program/derick.png'),
-                    },
+                    { name: 'Winnie', photo: 'program/Winnie.jpeg' },
+                    { name: 'Pochun', photo: 'program/pochun.jpg' },
+                    { name: 'Petertc', photo: 'program/petertc.jpg' },
+                    { name: 'JunWei Song', photo: 'program/JunWeiSong.jpeg' },
+                    { name: 'Annie Bu', photo: 'program/AnnieBu.jpg' },
+                    { name: 'Jordan Su', photo: 'program/Jordan.jpg' },
+                    { name: 'Kyle', photo: 'program/Kyle.jpg' },
+                    { name: 'Yider', photo: 'venue/Yider.jpg' },
+                    { name: 'TengLin Yu', photo: 'program/TENGLIN.jpg' },
+                    { name: '黃坤賢', photo: 'program/黃坤賢.jpeg' },
+                    { name: 'TingYi', photo: 'program/Kevin.jpg' },
+                    { name: 'Winfred', photo: 'program/Winfred.jpg' },
+                    { name: 'Shihchi', photo: 'program/Shihchi.jpg' },
+                    { name: 'Huei Lin', photo: 'program/hueilin.jpg' },
+                    { name: 'Benson', photo: 'web/Benson.jpg' },
+                    { name: 'Jason', photo: 'venue/Jason.png' },
+                    { name: 'Kir', photo: 'program/Kir.jpeg' },
+                    { name: 'Leonard', photo: 'program/Leonard.jpg' },
+                    { name: 'Lance', photo: 'program/Lance.png' },
+                    { name: 'Shirley', photo: 'data/Shirley.jpg' },
+                    { name: 'lzt', photo: 'program/lzt.JPG' },
+                    { name: 'Derick', photo: 'program/derick.png' },
                 ],
                 development_web: [
-                    {
-                        name: 'Matt Wang',
-                        photo: require('~/static/img/staff/web/matt.jpg'),
-                    },
-                    {
-                        name: 'Flynn',
-                        photo: require('~/static/img/staff/web/flynn.png'),
-                    },
-                    {
-                        name: 'Set Mao',
-                        photo: require('~/static/img/staff/web/set.jpg'),
-                    },
-                    {
-                        name: 'Josix',
-                        photo: require('~/static/img/staff/infra/josix.png'),
-                    },
-                    {
-                        name: 'Ethan Lin',
-                        photo: require('~/static/img/staff/web/ethan.jpg'),
-                    },
-                    {
-                        name: 'yuyanghh',
-                        photo: require('~/static/img/staff/web/yuyanghh.png'),
-                    },
-                    {
-                        name: 'Phil',
-                        photo: require('~/static/img/staff/web/Phil.JPG'),
-                    },
-                    {
-                        name: 'Benson',
-                        photo: require('~/static/img/staff/web/Benson.jpg'),
-                    },
-                    {
-                        name: 'Max',
-                        photo: require('~/static/img/staff/web/Max_Su.jpg'),
-                    },
-                    {
-                        name: 'Maliao',
-                        photo: require('~/static/img/staff/web/Maliao.png'),
-                    },
-                    {
-                        name: 'Alice Chang',
-                        photo: require('~/static/img/staff/web/Alice.jpeg'),
-                    },
-                    {
-                        name: 'Kaka Lin',
-                        photo: require('~/static/img/staff/web/kaka.jpg'),
-                    },
+                    { name: 'Matt Wang', photo: 'web/matt.jpg' },
+                    { name: 'Flynn', photo: 'web/flynn.png' },
+                    { name: 'Phil', photo: 'web/Phil.JPG' },
+                    { name: 'Benson', photo: 'web/Benson.jpg' },
+                    { name: 'Josix', photo: 'infra/josix.png' },
+                    { name: 'Set Mao', photo: 'web/set.jpg' },
+                    { name: 'Max', photo: 'web/Max_Su.jpg' },
+                    { name: 'Ethan Lin', photo: 'web/ethan.jpg' },
+                    { name: 'Maliao', photo: 'web/Maliao.png' },
+                    { name: 'Alice Chang', photo: 'web/Alice.jpeg' },
+                    { name: 'yuyanghh', photo: 'web/yuyanghh.png' },
+                    { name: 'Kaka Lin', photo: 'web/kaka.jpg' },
                 ],
                 development_data: [
-                    {
-                        name: '泰瑋',
-                        photo: require('~/static/img/staff/data/DavidJr.jpeg'),
-                    },
-                    {
-                        name: 'Hane',
-                        photo: require('~/static/img/staff/data/hane.jpg'),
-                    },
-                    {
-                        name: 'Max',
-                        photo: require('~/static/img/staff/web/Max_Su.jpg'),
-                    },
-                    {
-                        name: 'Jacky',
-                        photo: require('~/static/img/staff/infra/jacky.jpg'),
-                    },
-                    {
-                        name: 'Grimmer',
-                        photo: require('~/static/img/staff/data/grimmer.jpeg'),
-                    },
-                    {
-                        name: 'Howard',
-                        photo: require('~/static/img/staff/data/howard.jpg'),
-                    },
-                    {
-                        name: 'Juihsiang',
-                        photo: require('~/static/img/staff/venue/Juihsiang.jpeg'),
-                    },
-                    {
-                        name: 'solana',
-                        photo: require('~/static/img/staff/data/solana.jpeg'),
-                    },
-                    {
-                        name: 'Shirley',
-                        photo: require('~/static/img/staff/data/Shirley.jpg'),
-                    },
-                    {
-                        name: 'Tai',
-                        photo: require('~/static/img/staff/everywhere/tai271828.png'),
-                    },
+                    { name: '泰瑋', photo: 'data/DavidJr.jpeg' },
+                    { name: 'Hane', photo: 'data/hane.jpg' },
+                    { name: 'Max', photo: 'web/Max_Su.jpg' },
+                    { name: 'Jacky', photo: 'infra/jacky.jpg' },
+                    { name: 'Grimmer', photo: 'data/grimmer.jpeg' },
+                    { name: 'Howard', photo: 'data/howard.jpg' },
+                    { name: 'Juihsiang', photo: 'venue/Juihsiang.jpeg' },
+                    { name: 'solana', photo: 'data/solana.jpeg' },
+                    { name: 'Shirley', photo: 'data/Shirley.jpg' },
+                    { name: 'Tai', photo: 'everywhere/tai271828.png' },
                 ],
                 development_infra: [
-                    {
-                        name: 'Josix',
-                        photo: require('~/static/img/staff/infra/josix.png'),
-                    },
-                    {
-                        name: 'Mozix',
-                        photo: require('~/static/img/staff/infra/mozix.jpeg'),
-                    },
-                    {
-                        name: 'GaryPai',
-                        photo: require('~/static/img/staff/infra/gary9630.jpg'),
-                    },
-                    {
-                        name: 'Jacky',
-                        photo: require('~/static/img/staff/infra/jacky.jpg'),
-                    },
-                    {
-                        name: 'where',
-                        photo: require('~/static/img/staff/infra/where.png'),
-                    },
-                    {
-                        name: 'Tai',
-                        photo: require('~/static/img/staff/everywhere/tai271828.png'),
-                    },
+                    { name: 'Josix', photo: 'infra/josix.png' },
+                    { name: 'Mozix', photo: 'infra/mozix.jpeg' },
+                    { name: 'GaryPai', photo: 'infra/gary9630.jpg' },
+                    { name: 'Jacky', photo: 'infra/jacky.jpg' },
+                    { name: 'where', photo: 'infra/where.png' },
+                    { name: 'Tai', photo: 'everywhere/tai271828.png' },
                 ],
                 venue: [
-                    {
-                        name: 'David Lu',
-                        photo: require('~/static/img/staff/venue/DavidLu.jpg'),
-                    },
-                    {
-                        name: '地瓜',
-                        photo: require('~/static/img/staff/venue/SuperCold.jpg'),
-                    },
-                    {
-                        name: 'Yider',
-                        photo: require('~/static/img/staff/venue/Yider.jpg'),
-                    },
-                    {
-                        name: 'Macs',
-                        photo: require('~/static/img/staff/venue/Macs.jpg'),
-                    },
-                    {
-                        name: '阿嘉',
-                        photo: require('~/static/img/staff/venue/阿嘉.jpeg'),
-                    },
-                    {
-                        name: 'liyu',
-                        photo: require('~/static/img/staff/venue/Liyu.JPG'),
-                    },
-                    {
-                        name: 'Matthew',
-                        photo: require('~/static/img/staff/venue/Matthew.jpg'),
-                    },
-                    {
-                        name: 'Ching',
-                        photo: require('~/static/img/staff/venue/Ching.jpg'),
-                    },
-                    {
-                        name: 'J魚',
-                        photo: require('~/static/img/staff/venue/J魚.jpg'),
-                    },
-                    {
-                        name: 'Julie',
-                        photo: require('~/static/img/staff/venue/Julie.jpeg'),
-                    },
-                    {
-                        name: 'Allen',
-                        photo: require('~/static/img/staff/venue/Allen.jpg'),
-                    },
-                    {
-                        name: '真瑜',
-                        photo: require('~/static/img/staff/venue/真瑜.JPG'),
-                    },
-                    {
-                        name: 'Luke',
-                        photo: require('~/static/img/staff/venue/Luke.PNG'),
-                    },
-                    {
-                        name: '陳彥愷',
-                        photo: require('~/static/img/staff/venue/陳彥愷.png'),
-                    },
-                    {
-                        name: 'Tim',
-                        photo: require('~/static/img/staff/venue/Tim.jpeg'),
-                    },
-                    {
-                        name: 'ZhengTing',
-                        photo: require('~/static/img/staff/venue/鴨嘴獸.jpg'),
-                    },
-                    {
-                        name: 'Ray',
-                        photo: require('~/static/img/staff/venue/RayChen.JPG'),
-                    },
-                    {
-                        name: 'Derek',
-                        photo: require('~/static/img/staff/venue/Derek.JPG'),
-                    },
-                    {
-                        name: 'JoJo',
-                        photo: require('~/static/img/staff/venue/JoJo.jpeg'),
-                    },
-                    {
-                        name: 'masao',
-                        photo: require('~/static/img/staff/venue/masao.jpg'),
-                    },
-                    {
-                        name: 'Jason',
-                        photo: require('~/static/img/staff/venue/Jason.png'),
-                    },
-                    {
-                        name: 'Kevin',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Ben',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Frank',
-                        photo: require('~/static/img/staff/venue/Frank.jpg'),
-                    },
-                    {
-                        name: 'Juihsiang',
-                        photo: require('~/static/img/staff/venue/Juihsiang.jpeg'),
-                    },
+                    { name: 'David Lu', photo: 'venue/DavidLu.jpg' },
+                    { name: '地瓜', photo: 'venue/SuperCold.jpg' },
+                    { name: 'Yider', photo: 'venue/Yider.jpg' },
+                    { name: 'Macs', photo: 'venue/Macs.jpg' },
+                    { name: '阿嘉', photo: 'venue/阿嘉.jpeg' },
+                    { name: 'liyu', photo: 'venue/Liyu.JPG' },
+                    { name: 'Matthew', photo: 'venue/Matthew.jpg' },
+                    { name: 'Ching', photo: 'venue/Ching.jpg' },
+                    { name: 'J魚', photo: 'venue/J魚.jpg' },
+                    { name: 'Julie', photo: 'venue/Julie.jpeg' },
+                    { name: 'Allen', photo: 'venue/Allen.jpg' },
+                    { name: '真瑜', photo: 'venue/真瑜.JPG' },
+                    { name: 'Luke', photo: 'venue/Luke.PNG' },
+                    { name: '陳彥愷', photo: 'venue/陳彥愷.png' },
+                    { name: 'Tim', photo: 'venue/Tim.jpeg' },
+                    { name: '鴨嘴獸', photo: 'venue/鴨嘴獸.jpg' },
+                    { name: 'Ray', photo: 'venue/RayChen.JPG' },
+                    { name: 'Derek', photo: 'venue/Derek.JPG' },
+                    { name: 'JoJo', photo: 'venue/JoJo.jpeg' },
+                    { name: 'masao', photo: 'venue/masao.jpg' },
+                    { name: 'Jason', photo: 'venue/Jason.png' },
+                    { name: 'Kevin', photo: 'smile.svg' },
+                    { name: 'Ben', photo: 'smile.svg' },
+                    { name: 'Frank', photo: 'venue/Frank.jpg' },
+                    { name: 'Juihsiang', photo: 'venue/Juihsiang.jpeg' },
                 ],
                 sponsorship: [
-                    {
-                        name: '品淳',
-                        photo: require('~/static/img/staff/sponsorship/pcwang.PNG'),
-                    },
-                    {
-                        name: '寬寬',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: '小玖',
-                        photo: require('~/static/img/staff/design/小玖.jpg'),
-                    },
-                    {
-                        name: 'Allen',
-                        photo: require('~/static/img/staff/venue/Allen.jpg'),
-                    },
-                    {
-                        name: 'Tony',
-                        photo: require('~/static/img/staff/sponsorship/Tony.jpg'),
-                    },
-                    {
-                        name: 'Ken',
-                        photo: require('~/static/img/staff/sponsorship/Ken.jpeg'),
-                    },
-                    {
-                        name: 'Mary',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Cynthia Lu',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'yuhow5566',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: '坤賢',
-                        photo: require('~/static/img/staff/program/黃坤賢.jpeg'),
-                    },
-                    {
-                        name: 'where',
-                        photo: require('~/static/img/staff/infra/where.png'),
-                    },
-                    {
-                        name: 'Benson',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Michelle',
-                        photo: require('~/static/img/staff/registration/Michelle.png'),
-                    },
-                    {
-                        name: 'Anson',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Frank',
-                        photo: require('~/static/img/staff/venue/Frank.jpg'),
-                    },
-                    {
-                        name: 'Louis',
-                        photo: require('~/static/img/staff/sponsorship/Louis.JPEG'),
-                    },
-                    {
-                        name: 'Holis',
-                        photo: require('~/static/img/staff/sponsorship/Holis.png'),
-                    },
-                    {
-                        name: 'JoJo',
-                        photo: require('~/static/img/staff/venue/JoJo.jpeg'),
-                    },
-                    {
-                        name: 'johnathon',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Rain',
-                        photo: require('~/static/img/staff/sponsorship/rain.jpg'),
-                    },
-                    {
-                        name: 'Tai',
-                        photo: require('~/static/img/staff/sponsorship/tai271828.png'),
-                    },
+                    { name: '品淳', photo: 'sponsorship/pcwang.PNG' },
+                    { name: '寬寬', photo: 'smile.svg' },
+                    { name: '小玖', photo: 'design/小玖.jpg' },
+                    { name: 'Allen', photo: 'venue/Allen.jpg' },
+                    { name: 'Tony', photo: 'sponsorship/Tony.jpg' },
+                    { name: 'Ken', photo: 'sponsorship/Ken.jpeg' },
+                    { name: 'Mary', photo: 'smile.svg' },
+                    { name: 'Cynthia Lu', photo: 'smile.svg' },
+                    { name: 'yuhow5566', photo: 'smile.svg' },
+                    { name: '坤賢', photo: 'program/黃坤賢.jpeg' },
+                    { name: 'where', photo: 'infra/where.png' },
+                    { name: 'Benson', photo: 'sponsorship/benson.jpg' },
+                    { name: 'Michelle', photo: 'registration/Michelle.png' },
+                    { name: 'Anson', photo: 'smile.svg' },
+                    { name: 'Frank', photo: 'venue/Frank.jpg' },
+                    { name: 'Louis', photo: 'sponsorship/Louis.JPEG' },
+                    { name: 'Holis', photo: 'sponsorship/Holis.png' },
+                    { name: 'JoJo', photo: 'venue/JoJo.jpeg' },
+                    { name: 'johnathon', photo: 'smile.svg' },
+                    { name: 'Rain', photo: 'sponsorship/rain.jpg' },
+                    { name: 'Tai', photo: 'sponsorship/tai271828.png' },
                 ],
                 marketing: [
-                    {
-                        name: 'Tumi',
-                        photo: require('~/static/img/staff/registration/tumi.jpg'),
-                    },
-                    {
-                        name: 'Gobby Chen',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
+                    { name: 'Tumi', photo: 'registration/tumi.jpg' },
+                    { name: 'Gobby Chen', photo: 'smile.svg' },
                 ],
                 pr: [
-                    {
-                        name: '四貓',
-                        photo: require('~/static/img/staff/recruitment/catcatcatcat.JPG'),
-                    },
-                    {
-                        name: 'Zonghan',
-                        photo: require('~/static/img/staff/pr/Zonghan.jpg'),
-                    },
-                    {
-                        name: '9ukei',
-                        photo: require('~/static/img/staff/pr/9ukei.jpg'),
-                    },
-                    {
-                        name: 'Derek',
-                        photo: require('~/static/img/staff/venue/Derek.JPG'),
-                    },
-                    {
-                        name: 'Tai',
-                        photo: require('~/static/img/staff/everywhere/tai271828.png'),
-                    },
-                    {
-                        name: 'JennyChu',
-                        photo: require('~/static/img/staff/pr/jenny.jpg'),
-                    },
-                    {
-                        name: '可晴',
-                        photo: require('~/static/img/staff/smile.svg'),
-                    },
-                    {
-                        name: 'Lyra',
-                        photo: require('~/static/img/staff/pr/lyra.jpg'),
-                    },
+                    { name: '四貓', photo: 'recruitment/catcatcatcat.JPG' },
+                    { name: 'Zonghan', photo: 'pr/Zonghan.jpg' },
+                    { name: '9ukei', photo: 'pr/9ukei.jpg' },
+                    { name: 'Derek', photo: 'venue/Derek.JPG' },
+                    { name: 'Tai', photo: 'everywhere/tai271828.png' },
+                    { name: 'JennyChu', photo: 'pr/jenny.jpg' },
+                    { name: '可晴', photo: 'smile.svg' },
+                    { name: 'Lyra', photo: 'pr/lyra.jpg' },
                 ],
                 registration: [
-                    {
-                        name: '育承',
-                        photo: require('~/static/img/staff/registration/Yucheng.JPG'),
-                    },
-                    {
-                        name: 'Tumi',
-                        photo: require('~/static/img/staff/registration/tumi.jpg'),
-                    },
-                    {
-                        name: 'GTB',
-                        photo: require('~/static/img/staff/registration/GTB.jpg'),
-                    },
-                    {
-                        name: '岱瑾',
-                        photo: require('~/static/img/staff/registration/TaiChin.jpg'),
-                    },
-                    {
-                        name: 'twtrubiks',
-                        photo: require('~/static/img/staff/registration/twtrubiks.png'),
-                    },
-                    {
-                        name: 'Angela Chen',
-                        photo: require('~/static/img/staff/registration/Angela.png'),
-                    },
-                    {
-                        name: 'Michelle',
-                        photo: require('~/static/img/staff/registration/Michelle.png'),
-                    },
-                    {
-                        name: 'Marr',
-                        photo: require('~/static/img/staff/everywhere/marr.jpg'),
-                    },
+                    { name: '育承', photo: 'registration/Yucheng.JPG' },
+                    { name: 'Tumi', photo: 'registration/tumi.jpg' },
+                    { name: 'GTB', photo: 'registration/GTB.jpg' },
+                    { name: '岱瑾', photo: 'registration/TaiChin.jpg' },
+                    { name: 'twtrubiks', photo: 'registration/twtrubiks.png' },
+                    { name: 'Angela Chen', photo: 'registration/Angela.png' },
+                    { name: 'Michelle', photo: 'registration/Michelle.png' },
+                    { name: 'Marr', photo: 'everywhere/marr.jpg' },
                 ],
                 recruitment: [
-                    {
-                        name: 'Rex',
-                        photo: require('~/static/img/staff/recruitment/Rex.jpg'),
-                    },
-                    {
-                        name: 'Josix',
-                        photo: require('~/static/img/staff/infra/josix.png'),
-                    },
-                    {
-                        name: '四貓',
-                        photo: require('~/static/img/staff/recruitment/catcatcatcat.JPG'),
-                    },
-                    {
-                        name: 'Tai',
-                        photo: require('~/static/img/staff/recruitment/tai271828.jpg'),
-                    },
-                    {
-                        name: 'Leila',
-                        photo: require('~/static/img/staff/recruitment/Leila.jpg'),
-                    },
+                    { name: 'Rex', photo: 'recruitment/Rex.jpg' },
+                    { name: 'Josix', photo: 'infra/josix.png' },
+                    { name: '四貓', photo: 'recruitment/catcatcatcat.JPG' },
+                    { name: 'Tai', photo: 'recruitment/tai271828.jpg' },
+                    { name: 'Leila', photo: 'recruitment/Leila.jpg' },
                 ],
                 design: [
-                    {
-                        name: 'Ben',
-                        photo: require('~/static/img/staff/design/Ben.JPG'),
-                    },
-                    {
-                        name: '小玖',
-                        photo: require('~/static/img/staff/design/小玖.jpg'),
-                    },
-                    {
-                        name: '王禹翔',
-                        photo: require('~/static/img/staff/design/禹翔.jpg'),
-                    },
-                    {
-                        name: '安安',
-                        photo: require('~/static/img/staff/design/anan.jpg'),
-                    },
-                    {
-                        name: 'Sandy',
-                        photo: require('~/static/img/staff/design/sandy.jpg'),
-                    },
-                    {
-                        name: 'Carol Cho',
-                        photo: require('~/static/img/staff/design/小Carol.JPG'),
-                    },
-                    {
-                        name: 'Cailin',
-                        photo: require('~/static/img/staff/design/Cailin.jpg'),
-                    },
-                    {
-                        name: 'Andy',
-                        photo: require('~/static/img/staff/design/Andy.JPG'),
-                    },
+                    { name: 'Ben', photo: 'design/Ben.JPG' },
+                    { name: '小玖', photo: 'design/小玖.jpg' },
+                    { name: '王禹翔', photo: 'design/禹翔.jpg' },
+                    { name: '安安', photo: 'design/anan.jpg' },
+                    { name: 'Sandy', photo: 'design/sandy.jpg' },
+                    { name: 'Carol Cho', photo: 'design/小Carol.JPG' },
+                    { name: 'Cailin', photo: 'design/Cailin.jpg' },
+                    { name: 'Andy', photo: 'design/Andy.JPG' },
                 ],
                 finance: [
-                    {
-                        name: 'Rock',
-                        photo: require('~/static/img/staff/finance/Rock.png'),
-                    },
-                    {
-                        name: 'Leila',
-                        photo: require('~/static/img/staff/recruitment/Leila.jpg'),
-                    },
+                    { name: 'Rock', photo: 'finance/Rock.png' },
+                    { name: 'Leila', photo: 'recruitment/Leila.jpg' },
                 ],
                 photography: [
-                    {
-                        name: 'Andy Chuang',
-                        photo: require('~/static/img/staff/design/Andy.JPG'),
-                    },
-                    {
-                        name: 'Deimos',
-                        photo: require('~/static/img/staff/photography/Deimos.jpg'),
-                    },
-                    {
-                        name: 'Phil',
-                        photo: require('~/static/img/staff/web/Phil.JPG'),
-                    },
-                    {
-                        name: 'William Mou',
-                        photo: require('~/static/img/staff/photography/WilliamMou.jpg'),
-                    },
-                    {
-                        name: '餅乾',
-                        photo: require('~/static/img/staff/photography/餅乾.jpg'),
-                    },
+                    { name: 'Andy Chuang', photo: 'design/Andy.JPG' },
+                    { name: 'Deimos', photo: 'photography/Deimos.jpg' },
+                    { name: 'Phil', photo: 'web/Phil.JPG' },
+                    { name: 'William Mou', photo: 'photography/william.jpg' },
+                    { name: '餅乾', photo: 'photography/餅乾.jpg' },
                 ],
             },
         }
