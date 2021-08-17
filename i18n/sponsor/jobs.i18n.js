@@ -8,8 +8,7 @@ export default genI18nMessages({
         jobDescription: 'What you will be doing:',
         jobRequirement: 'Requirements:',
         og: {
-            title:
-                '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
+            title: '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
             description:
                 '2021年知名企業內部Python熱門工作職缺、Python工程師職缺一覽表，' +
                 '提供知名品牌企業內部Python工程師職缺、Python工作機會！',
@@ -22,8 +21,7 @@ export default genI18nMessages({
         jobDescription: '【職務內容】',
         jobRequirement: '【具備條件】',
         og: {
-            title:
-                '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
+            title: '【2021年Python熱門工作】Python知名企業職缺一覽表－PyCon Taiwan',
             description:
                 '2021年知名企業內部Python熱門工作職缺、Python工程師職缺一覽表，' +
                 '提供知名品牌企業內部Python工程師職缺、Python工作機會！',

@@ -3,7 +3,7 @@
         <banner>
             <template #default>
                 <div
-                    class="hidden md:block lg:block md:w-full lg:w-full md:h-full lg:h-full"
+                    class="hidden md:block md:w-full md:h-full"
                     :style="bannerStyle"
                 ></div>
             </template>
@@ -16,14 +16,12 @@
         </banner>
         <i18n-page-wrapper class="pt-8 px-8 md:px-57 lg:px-56">
             <div class="flex flex-col w-full m-auto">
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('beforePyCon.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="beforePyCon.content"
                     >\
                     <template #pyctw2008>
@@ -43,14 +41,12 @@
                         >
                     </template>
                 </i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2012.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2012.content"
                 >
                     <template #everybody-pays>
@@ -78,14 +74,12 @@
                         >
                     </template>
                 </i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2014.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2014.content"
                 >
                     <template #check-io>
@@ -97,24 +91,20 @@
                         >
                     </template>
                 </i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2015.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2015.content"
                 ></i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2016.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2016.content"
                 >
                     <template #pycon-blog-2016>
@@ -134,44 +124,36 @@
                         >
                     </template>
                 </i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2017.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2017.content"
                 ></i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2018.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2018.content"
                 ></i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2019.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2019.content"
                 ></i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2020.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2020.content"
                 >
                     <template #communityTrack>
@@ -183,14 +165,12 @@
                         >
                     </template>
                 </i18n>
-                <p
-                    class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                >
+                <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('pycon2021.title') }}
                 </p>
                 <i18n
                     tag="p"
-                    class="text-xs md:text-base lg:text-base leading-5 md:leading-8 lg:leading-8"
+                    class="text-xs md:text-base leading-5 md:leading-8"
                     path="pycon2021.content"
                 ></i18n>
             </div>

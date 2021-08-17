@@ -51,14 +51,12 @@ export default {
             communityLink: {
                 taipei: 'http://www.meetup.com/Taipei-py/',
                 pyhug: 'http://www.meetup.com/pythonhug/',
-                tainan:
-                    'http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/',
+                tainan: 'http://www.meetup.com/Tainan-py-Python-Tainan-User-Group/',
                 pyladiestw: 'https://tw.pyladies.com/',
                 kaohsiung: 'http://www.meetup.com/Kaohsiung-Python-Meetup/',
                 hualien: 'http://www.meetup.com/Hualien-Py/',
                 djangogirlstaipei: 'https://djangogirls.org/taipei/',
-                nantou:
-                    'https://www.facebook.com/%E5%8D%97%E6%8A%95python-113209870215893/',
+                nantou: 'https://www.facebook.com/%E5%8D%97%E6%8A%95python-113209870215893/',
                 taichung: 'https://www.facebook.com/groups/780250978715991/',
             },
         }

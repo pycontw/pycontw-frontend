@@ -13,8 +13,7 @@ export default genI18nMessages({
                 'Tickets are limited. Be sure to get your ticket as soon as possible before they are sold out. ' +
                 'We will send out electronic invoices by email after the conference. ' +
                 '{highlight} All ticket sales end on September 4th.',
-            pySafe:
-                'The souvenirs of PySafe include stickers, Taiwanese beer glass, T-shirt, and thankful card.',
+            pySafe: 'The souvenirs of PySafe include stickers, Taiwanese beer glass, T-shirt, and thankful card.',
             highlight: 'We do not provide VAT receipt for individual tickets. ',
             type: [
                 {
@@ -36,8 +35,7 @@ export default genI18nMessages({
                 '{discount}',
                 'The sales of corporate tickets ended on September 4th.',
             ],
-            pySafe:
-                'The souvenirs of PySafe include stickers, Taiwanese beer glass, T-shirt and thankful card.',
+            pySafe: 'The souvenirs of PySafe include stickers, Taiwanese beer glass, T-shirt and thankful card.',
             type: {
                 name: 'Corporate (with PySafe)',
                 discount: 'Regular',
@@ -91,8 +89,7 @@ export default genI18nMessages({
             summary:
                 '限時限量，請及早購買。電子發票於會後統一以 email 寄送，' +
                 '{highlight} 一般票種販售於 9 月 4 日結束。',
-            pySafe:
-                'PySafe 內容物包含紀念貼紙、紀念酒杯、紀念 T-shirt以及感謝小卡。',
+            pySafe: 'PySafe 內容物包含紀念貼紙、紀念酒杯、紀念 T-shirt以及感謝小卡。',
             highlight: '個人票一律無法使用統一編號。',
             type: [
                 {
@@ -113,8 +110,7 @@ export default genI18nMessages({
                 '{discount}',
                 '企業票販售於 9 月 4 日結束。',
             ],
-            pySafe:
-                'PySafe 內容物包含紀念貼紙、紀念酒杯、紀念 T- shirt 以及感謝小卡。',
+            pySafe: 'PySafe 內容物包含紀念貼紙、紀念酒杯、紀念 T- shirt 以及感謝小卡。',
             type: {
                 name: '企業票（附 PySafe）',
                 discount: '一般價',

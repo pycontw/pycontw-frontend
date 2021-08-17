@@ -1,6 +1,13 @@
 <template>
     <div
-        class="scheduleDayTabs flex w-full justify-between mb-8 lg:justify-center"
+        class="
+            scheduleDayTabs
+            flex
+            w-full
+            justify-between
+            mb-8
+            lg:justify-center
+        "
     >
         <slot></slot>
     </div>

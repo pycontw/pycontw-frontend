@@ -2,7 +2,15 @@
     <div class="page-home">
         <div class="page-homeLandingFocus flex py-8 md:py-12">
             <div
-                class="w-full flex flex-col items-start text-golden mx-4 sm:mx-8 md:mx-16"
+                class="
+                    w-full
+                    flex flex-col
+                    items-start
+                    text-golden
+                    mx-4
+                    sm:mx-8
+                    md:mx-16
+                "
             >
                 <div class="page-home__title">
                     PyCon Taiwan <br />
@@ -10,7 +18,13 @@
                 </div>
                 <landing-focus-info class="my-12 md:my-8" />
                 <div
-                    class="w-full flex flex-col justify-between items-center md:flex-row"
+                    class="
+                        w-full
+                        flex flex-col
+                        justify-between
+                        items-center
+                        md:flex-row
+                    "
                 >
                     <text-button
                         to="/sponsor"

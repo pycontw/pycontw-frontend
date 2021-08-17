@@ -80,8 +80,7 @@ export default {
                 },
                 {
                     rel: 'stylesheet',
-                    href:
-                        'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap',
+                    href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap',
                 },
                 {
                     rel: 'canonical',

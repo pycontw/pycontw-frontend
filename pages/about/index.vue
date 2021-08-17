@@ -3,7 +3,7 @@
         <banner>
             <template #default>
                 <div
-                    class="hidden md:block lg:block md:w-full lg:w-full md:h-full lg:h-full"
+                    class="hidden md:block md:w-full md:h-full"
                     :style="bannerStyle"
                 ></div>
             </template>
@@ -21,7 +21,15 @@
         <div class="flex flex-wrap justify-center mx-2 my-7">
             <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
                 <div
-                    class="w-32 md:w-56 lg:w-56 h-24 md:h-40 lg:h-40 bg-contain bg-no-repeat mx-2 my-3"
+                    class="
+                        w-32
+                        md:w-56
+                        h-24
+                        md:h-40
+                        bg-contain bg-no-repeat
+                        mx-2
+                        my-3
+                    "
                     :style="getImgStyle(img)"
                 ></div>
             </div>
@@ -39,16 +47,21 @@
             <p class="w-full text-xs md:text-base lg:text-base">
                 {{ $t('reason') }}
             </p>
-            <div
-                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-2 my-10"
-            >
+            <div class="grid grid-cols-2 md:grid-cols-4 mx-2 my-10">
                 <div
                     v-for="img in reasonImgs"
                     :key="img.text"
                     class="flex flex-col items-center"
                 >
                     <div
-                        class="w-24 md:w-24 lg:w-24 h-24 md:h-24 lg:h-24 bg-contain bg-no-repeat mx-0 md:mx-10 lg:mx-10 my-5"
+                        class="
+                            w-24
+                            h-24
+                            bg-contain bg-no-repeat
+                            mx-0
+                            md:mx-10
+                            my-5
+                        "
                         :style="getImgStyle(img.src)"
                     ></div>
                     <span class="text-xs md:text-base lg:text-base">{{
@@ -66,8 +79,7 @@
                     class="text-xs md:text-base lg:text-base"
                 >
                     <template #talkNumber>
-                        <span
-                            class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                        <span class="paragraph-highlight text-5xl md:text-6xl"
                             >3</span
                         >
                     </template>
@@ -82,8 +94,7 @@
                     class="text-xs md:text-base lg:text-base"
                 >
                     <template #activityNumber>
-                        <span
-                            class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                        <span class="paragraph-highlight text-5xl md:text-6xl"
                             >7</span
                         >
                     </template>
