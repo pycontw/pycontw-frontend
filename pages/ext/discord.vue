@@ -3,7 +3,7 @@
         <banner>
             <template #default>
                 <div
-                    class="hidden md:block lg:block md:w-full lg:w-full md:h-full lg:h-full"
+                    class="hidden md:block md:w-full md:h-full"
                     :style="bannerStyle"
                 ></div>
             </template>
@@ -19,9 +19,7 @@
             <div v-else>
                 <div class="section">
                     <core-h1 :title="$t('tutorialsHeader')"></core-h1>
-                    <p
-                        class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                    >
+                    <p class="paragraph-title font-bold text-base md:text-lg">
                         {{ $t('stepOne') }}
                     </p>
                     <p class="paragraph-content">
@@ -54,9 +52,7 @@
                     <p class="paragraph-content">
                         {{ $t('stepOneNote') }}
                     </p>
-                    <p
-                        class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                    >
+                    <p class="paragraph-title font-bold text-base md:text-lg">
                         {{ $t('stepTwo') }}
                     </p>
                     <p
@@ -66,9 +62,7 @@
                     >
                         {{ content }}
                     </p>
-                    <p
-                        class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
-                    >
+                    <p class="paragraph-title font-bold text-base md:text-lg">
                         {{ $t('stepThree') }}
                     </p>
                     <p class="paragraph-content">
@@ -94,7 +88,12 @@
                     </p>
                     <div v-for="role in $t('roleList')" :key="role.name">
                         <p
-                            class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
+                            class="
+                                paragraph-title
+                                font-bold
+                                text-base
+                                md:text-lg
+                            "
                         >
                             {{ role.name }}
                         </p>
@@ -108,7 +107,12 @@
                         :key="channelGroup.type"
                     >
                         <p
-                            class="paragraph-title font-bold text-base md:text-lg lg:text-lg"
+                            class="
+                                paragraph-title
+                                font-bold
+                                text-base
+                                md:text-lg
+                            "
                         >
                             {{ channelGroup.type }}
                         </p>
@@ -260,7 +264,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .paragraph-title {
     @apply font-serif font-bold mt-10;
     color: #c2a53a;

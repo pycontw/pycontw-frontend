@@ -14,9 +14,7 @@
                     class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat"
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
-                <div
-                    class="text-xs md:text-lg mt-3 sm:mt-8 mb-0 text-sm text-center"
-                >
+                <div class="text-xs md:text-lg mt-3 sm:mt-8 mb-0 text-center">
                     {{ service }}
                 </div>
             </div>

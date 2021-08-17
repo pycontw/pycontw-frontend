@@ -24,11 +24,7 @@
             <footer-history />
             <footer-icon />
         </div>
-        <div
-            class="core-footer__copyright w-full flex py-4 justify-center cursor-default"
-        >
-            © 2021 PyCon Taiwan
-        </div>
+        <div class="core-footer__copyright">© 2021 PyCon Taiwan</div>
     </footer>
 </template>
 
@@ -49,12 +45,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-footer {
     background-color: #18152d;
 }
 
 .core-footer__copyright {
+    @apply w-full flex py-4 justify-center cursor-default;
     background-color: #0e0d1c;
 }
 </style>

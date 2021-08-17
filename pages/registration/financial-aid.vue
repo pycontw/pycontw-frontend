@@ -7,7 +7,15 @@
             </template>
             <template #right-col>
                 <p
-                    class="mb-8 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                    class="
+                        mb-8
+                        w-full
+                        my-0.5
+                        md:w-10/12
+                        lg:w-10/12
+                        md:my-0
+                        lg:my-0
+                    "
                 >
                     <ext-link
                         href="https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html"
@@ -18,9 +26,7 @@
                     </ext-link>
                     {{ $t('coreValueContent')[0] }}
                 </p>
-                <p
-                    class="mb-8 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
-                >
+                <p class="mb-8 w-full my-0.5 md:w-10/12 md:my-0">
                     {{ $t('coreValueContent')[1] }}
                 </p>
             </template>
@@ -63,7 +69,7 @@
             </template>
             <template #right-col>
                 <div
-                    class="mt-5 mb-2 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                    class="mt-5 mb-2 w-full my-0.5 md:w-10/12 md:my-0"
                     :style="getImage"
                 ></div>
             </template>
@@ -87,7 +93,7 @@
                     <li
                         v-for="(content, i) in $t('remarkContent')"
                         :key="`remark_content_${i}`"
-                        class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                        class="w-full my-0.5 md:w-10/12 md:my-0"
                     >
                         {{ content }}
                     </li>
@@ -104,7 +110,7 @@
                     <li
                         v-for="(content, i) in $t('applicationTipsContent')"
                         :key="`application_tips_content_${i}`"
-                        class="w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                        class="w-full my-0.5 md:w-10/12 md:my-0"
                     >
                         {{ content }}
                     </li>

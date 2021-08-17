@@ -62,8 +62,7 @@ export default genI18nMessages({
         licenseContent: '此文件採用 {license} 授權條款。',
         license: {
             name: '姓名標示-相同方式分享 3.0 台灣',
-            href:
-                'https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW',
+            href: 'https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW',
         },
     },
 })

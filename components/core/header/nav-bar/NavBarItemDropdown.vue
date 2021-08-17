@@ -3,13 +3,28 @@
         class="relative flex h-full px-8 justify-center items-center text-left"
     >
         <div
-            class="relative flex h-full flex-col rounded-md items-start cursor-pointer"
+            class="
+                relative
+                flex
+                h-full
+                flex-col
+                rounded-md
+                items-start
+                cursor-pointer
+            "
             @mouseenter="showMenu"
             @mouseleave="hideMenu"
         >
             <div
                 id="options-menu"
-                class="options-menu focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                class="
+                    options-menu
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-offset-2
+                    focus:ring-offset-gray-100
+                    focus:ring-indigo-500
+                "
                 aria-haspopup="true"
                 aria-expanded="true"
             >

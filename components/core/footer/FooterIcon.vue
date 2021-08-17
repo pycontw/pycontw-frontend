@@ -63,8 +63,7 @@ export default {
                 },
                 {
                     src: require('~/static/img/footer/Youtube.svg'),
-                    link:
-                        'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
+                    link: 'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
                     altName: 'Youtube Footer Icon',
                 },
                 {
@@ -78,7 +77,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-footer {
     @apply w-full flex justify-center items-center flex-wrap;
 }

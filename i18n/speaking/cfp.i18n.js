@@ -3,8 +3,7 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Call for Proposals',
-        intro:
-            'The Call for Proposals is now open. PyCon 2021 Taiwan is accepting talks and tutorials!',
+        intro: 'The Call for Proposals is now open. PyCon 2021 Taiwan is accepting talks and tutorials!',
 
         importantDates: [
             'Important Dates',
@@ -131,8 +130,7 @@ export default genI18nMessages({
     },
     'zh-hant': {
         title: '稿件募集',
-        intro:
-            'PyCon Taiwan 2021 正式開始徵稿，接受包括議程（talk）與課程（tutorial）的稿件！',
+        intro: 'PyCon Taiwan 2021 正式開始徵稿，接受包括議程（talk）與課程（tutorial）的稿件！',
 
         importantDates: [
             '重要日期',

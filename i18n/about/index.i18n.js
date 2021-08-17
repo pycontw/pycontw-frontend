@@ -7,8 +7,7 @@ export default genI18nMessages({
             'PyCon, also known as the Python Annual Conference, is the annual event of the global Python community.',
             'PyCon is spontaneously organized by fellow locals, and now Taiwan has its own Python annual conference. This event aims to gather people who use Python in various fields in Taiwan to exchange their experiences, share the latest technological developments, and experience the unique enthusiasm of the community.',
         ],
-        reason:
-            'In addition to the speeches from the language features of Python to various application cases, we also attach great importance to the exchanges between participants and the possibility of cooperation between developers, providing a forum for entrepreneurs to exchange and discuss, and reach the community. The purpose of group skills and development.',
+        reason: 'In addition to the speeches from the language features of Python to various application cases, we also attach great importance to the exchanges between participants and the possibility of cooperation between developers, providing a forum for entrepreneurs to exchange and discuss, and reach the community. The purpose of group skills and development.',
         reasonTitle: '{number} not to miss PyCon Taiwan',
         reasonNumber: 'Four reasons',
         skill: 'Python skills',
@@ -39,8 +38,7 @@ export default genI18nMessages({
         ],
         reasonTitle: '{number}不能錯過 PyCon Taiwan 的理由',
         reasonNumber: '四個',
-        reason:
-            '年會除了有從 Python 的語言特性到各方面應用案例實例的精彩演講之外，我們也很重視與會者之間的交流與促成開發者與廠商合作可能，提供創業者交流討論的園地，達到社群技能和發展的目的。',
+        reason: '年會除了有從 Python 的語言特性到各方面應用案例實例的精彩演講之外，我們也很重視與會者之間的交流與促成開發者與廠商合作可能，提供創業者交流討論的園地，達到社群技能和發展的目的。',
         skill: 'Python 技術分享',
         speech: '精彩出色的演講',
         share: '重視交流討論',

@@ -1,13 +1,17 @@
 <template>
     <div class="two-col-layout">
         <div
-            class="left-col mb-2 justify-self-start text-sm md:justify-self-center lg:justify-self-center md:mb-0 lg:mb-0 md:text-lg lg:text-lg"
+            class="
+                left-col
+                mb-2
+                justify-self-start
+                text-sm
+                md:justify-self-center md:mb-0 md:text-lg
+            "
         >
             <slot></slot>
         </div>
-        <div
-            class="right-col leading-4 text-xs md:text-sm lg:text-sm md:leading-6 lg:leading-6"
-        >
+        <div class="right-col leading-4 text-xs md:text-sm md:leading-6">
             <slot name="right-col"></slot>
         </div>
     </div>

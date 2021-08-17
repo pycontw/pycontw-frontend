@@ -167,8 +167,7 @@ export default {
                         '剛出社會打滾的身份，和大家聊聊我當時自學的故事，以及我現在的反思。',
                 },
                 {
-                    title:
-                        'HighSchooler in Technological Startup–高中生科技新創實習經驗談',
+                    title: 'HighSchooler in Technological Startup–高中生科技新創實習經驗談',
                     speakers: [
                         {
                             name: 'Chia-En Tsai',

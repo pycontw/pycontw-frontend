@@ -10,7 +10,15 @@
                 <i18n
                     path="contact"
                     tag="p"
-                    class="mb-8 w-full my-0.5 md:w-10/12 lg:w-10/12 md:my-0 lg:my-0"
+                    class="
+                        mb-8
+                        w-full
+                        my-0.5
+                        md:w-10/12
+                        lg:w-10/12
+                        md:my-0
+                        lg:my-0
+                    "
                 >
                     <template #mail>
                         <ext-link href="mailto:sponsorship@pycon.tw" highlight>
@@ -123,7 +131,15 @@
                     <div v-if="!sponsorPackage"></div>
                     <div
                         v-else-if="row % 5 == 0"
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-4 md:mb-8"
+                        class="
+                            w-16
+                            md:w-28
+                            h-16
+                            md:h-28
+                            bg-contain bg-no-repeat
+                            mb-4
+                            md:mb-8
+                        "
                         :style="
                             getImgStyle(
                                 sponsorLevelImgs[
@@ -180,7 +196,14 @@
                     <div v-if="!sponsorPackage"></div>
                     <div
                         v-else-if="row % 5 == 0"
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-6"
+                        class="
+                            w-16
+                            md:w-28
+                            h-16
+                            md:h-28
+                            bg-contain bg-no-repeat
+                            mb-6
+                        "
                         :style="
                             getImgStyle(
                                 sponsorLevelImgs[
@@ -211,19 +234,49 @@
         <core-hr></core-hr>
         <!-- Extra Purchase -->
         <p
-            class="section-title text-sm md:text-lg xl:ml-20 lg:font-bold -ml-3 sm:ml-0"
+            class="
+                section-title
+                text-sm
+                md:text-lg
+                xl:ml-20
+                lg:font-bold
+                -ml-3
+                sm:ml-0
+            "
         >
             {{ $t('extraPurchase-title') }}
         </p>
         <table
-            class="relative w-screen sm:w-full xl:w-4/5 table-fixed border-collapse -ml-6 sm:ml-0 xl:mx-auto mt-6 xl:mt-10 text-xs md:text-sm lg:text-base"
+            class="
+                relative
+                w-screen
+                sm:w-full
+                xl:w-4/5
+                table-fixed
+                border-collapse
+                -ml-6
+                sm:ml-0
+                xl:mx-auto
+                mt-6
+                xl:mt-10
+                text-xs
+                md:text-sm
+                lg:text-base
+            "
         >
             <thead>
                 <tr>
                     <th
                         v-for="(item, i) in $t('extraPurchase-table-header')"
                         :key="`prospectus_extra_purchase_header_${i}`"
-                        class="text-left px-2 py-2 table-cell tracking-wider font-semibold"
+                        class="
+                            text-left
+                            px-2
+                            py-2
+                            table-cell
+                            tracking-wider
+                            font-semibold
+                        "
                         :class="{
                             'text-center': !isFirstTh(i),
                             'font-normal': isFirstTh(i),
@@ -242,7 +295,15 @@
                     :class="{ 'table-stripe': isEvenRow(row_idx) }"
                 >
                     <th
-                        class="text-left font-normal leading-tight px-2 py-2 align-middle table-th"
+                        class="
+                            text-left
+                            font-normal
+                            leading-tight
+                            px-2
+                            py-2
+                            align-middle
+                            table-th
+                        "
                     >
                         <span v-if="Array.isArray(row[0])">
                             {{ row[0][0] }} <br />
@@ -253,7 +314,14 @@
                     <td
                         v-for="(cell, i) in row.slice(1)"
                         :key="`prospectus_extra_purchase_row_${row_idx}_cell_${i}`"
-                        class="text-center leading-tight px-2 py-2 align-middle font-bold"
+                        class="
+                            text-center
+                            leading-tight
+                            px-2
+                            py-2
+                            align-middle
+                            font-bold
+                        "
                     >
                         <span v-if="Array.isArray(cell)">
                             {{ cell[0] }} <br />
@@ -296,7 +364,15 @@
                     <div v-if="!specialSponsorShipType"></div>
                     <div
                         v-else-if="row % 5 == 0"
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-4 md:mb-8"
+                        class="
+                            w-16
+                            md:w-28
+                            h-16
+                            md:h-28
+                            bg-contain bg-no-repeat
+                            mb-4
+                            md:mb-8
+                        "
                         :style="
                             getImgStyle(
                                 specialSponsorshipTypeImgs[
@@ -361,7 +437,14 @@
                     <div v-if="!specialSponsorShipType"></div>
                     <div
                         v-else-if="row % 5 == 0"
-                        class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat mb-6"
+                        class="
+                            w-16
+                            md:w-28
+                            h-16
+                            md:h-28
+                            bg-contain bg-no-repeat
+                            mb-6
+                        "
                         :style="
                             getImgStyle(
                                 specialSponsorshipTypeImgs[
@@ -475,7 +558,8 @@ export default {
             specialSponsorshipTypeImgs: {
                 'special-sponsorship-fa': SpecialSponsorshipFa,
                 'special-sponsorship-sprint': SpecialSponsorshipSprint,
-                'special-sponsorship-youngPyckathon': SpecialSponsorshipYoungPyckathon,
+                'special-sponsorship-youngPyckathon':
+                    SpecialSponsorshipYoungPyckathon,
                 'special-sponsorship-mask': SpecialSponsorshipMask,
             },
         }

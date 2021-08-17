@@ -14,13 +14,11 @@ export default genI18nMessages({
         token: '[TOKEN]',
         registerAction: {
             action: 'Enter !register {token} in this channel to register',
-            note:
-                '(If you want to get your own Token, please click the link in the letter.)',
+            note: '(If you want to get your own Token, please click the link in the letter.)',
         },
         helpAction: {
             action: 'Enter !help if you need command help from RegBot.',
-            note:
-                'If you register successfully, you can see several new channels appear in the left.',
+            note: 'If you register successfully, you can see several new channels appear in the left.',
         },
         stepOneNote:
             'If you keep failing to register, you can directly raise your question in #registration-desk channel and mention 2021-staff。',

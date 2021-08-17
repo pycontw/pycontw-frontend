@@ -35,8 +35,7 @@ export default genI18nMessages({
                 summary: [],
             },
             {
-                title:
-                    'The Way We Collect and the Scope that We Use Your Personal Information',
+                title: 'The Way We Collect and the Scope that We Use Your Personal Information',
                 description: [
                     'While registering for PyCon TW, we will obtain information about you by asking ' +
                         'you to fill in the form on the registration page. The information that we ' +
@@ -93,8 +92,7 @@ export default genI18nMessages({
                 ],
             },
             {
-                title:
-                    'Cancelling Your Participating and Deleting Your Personal Information',
+                title: 'Cancelling Your Participating and Deleting Your Personal Information',
                 description: [
                     'You may request us to cease the use of your personal information by notifying us ' +
                         'through email, and we shall refrain from using your personal information from ' +
@@ -116,8 +114,7 @@ export default genI18nMessages({
                 summary: [],
             },
             {
-                title:
-                    'Privacy: Collecting Personal Information during COVID-19 Outbreak',
+                title: 'Privacy: Collecting Personal Information during COVID-19 Outbreak',
                 description: [
                     'The purpose of collecting personal information in accordance with the Personal Data Protection ' +
                         'Law and epidemic prevention and control requirements is to best respond and ensure health ' +
@@ -235,8 +232,7 @@ export default genI18nMessages({
                 summary: [],
             },
             {
-                title:
-                    '針對 2019 年新型冠狀病毒 (COVID-19) 防疫工作之個人資料收集聲明',
+                title: '針對 2019 年新型冠狀病毒 (COVID-19) 防疫工作之個人資料收集聲明',
                 description: [
                     '蒐集您的個人資料目的及法令依據，係為確保會眾健康安全及「嚴重特殊傳染性肺炎」防疫安全管理所必須，我們將依個人資料保護法，' +
                         '以公共衛生或傳染病防治及場所進出安全管理等目的，故有必要蒐集、處理或利用相關個人資料，請您詳閱。',
