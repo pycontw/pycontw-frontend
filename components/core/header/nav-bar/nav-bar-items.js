@@ -1,4 +1,4 @@
-export default Object.freeze({
+export const navBarItems = Object.freeze({
     conferenceItems: [
         {
             i18nKey: 'schedule',
