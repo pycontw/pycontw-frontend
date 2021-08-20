@@ -25,6 +25,12 @@
                 :expanding="expandingItem === 'conference'"
                 @click.native="toggleAccordion('conference')"
             ></nav-bar-item-accordion>
+            <nav-bar-item-accordion
+                :label="$t('events')"
+                :items="eventsItems"
+                :expanding="expandingItem === 'events'"
+                @click.native="toggleAccordion('events')"
+            ></nav-bar-item-accordion>
             <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/sponsor"
@@ -36,12 +42,6 @@
                 :items="speakingItems"
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
-            ></nav-bar-item-accordion> -->
-            <!-- <nav-bar-item-accordion
-                :label="$t('events')"
-                :items="eventsItems"
-                :expanding="expandingItem === 'events'"
-                @click.native="toggleAccordion('events')"
             ></nav-bar-item-accordion> -->
             <nav-bar-item-accordion
                 :label="$t('registration')"

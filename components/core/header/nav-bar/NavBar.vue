@@ -12,6 +12,12 @@
             :class="getPageClassesByPath('conference')"
         >
         </nav-bar-item-dropdown>
+        <nav-bar-item-dropdown
+            :label="$t('events')"
+            :items="eventsItems"
+            :class="getPageClassesByPath('events')"
+        >
+        </nav-bar-item-dropdown>
         <!-- <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
@@ -23,12 +29,6 @@
             :label="$t('speaking')"
             :items="speakingItems"
             :class="getPageClassesByPath('speaking')"
-        >
-        </nav-bar-item-dropdown> -->
-        <!-- <nav-bar-item-dropdown
-            :label="$t('events')"
-            :items="eventsItems"
-            :class="getPageClassesByPath('events')"
         >
         </nav-bar-item-dropdown> -->
         <nav-bar-item-dropdown

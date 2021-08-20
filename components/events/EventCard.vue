@@ -1,21 +1,34 @@
 <template>
-    <div class="card">
-        <div class="title_block">
+    <component
+        :is="!!to ? 'locale-link' : !!href ? 'ext-link' : 'div'"
+        :class="cardClasses"
+        :to="to"
+        :href="href"
+    >
+        <div class="titleBlock">
             <div class="title">{{ title }}</div>
             <div class="tag" :class="tagClasses">{{ tag }}</div>
         </div>
-        <p class="card_txt">
+        <p class="cardTxt">
             {{ description }}
         </p>
-        <div class="card_img">
+        <div class="dummy"></div>
+        <div class="cardImg">
             <img :src="imgUrl" :alt="imgAlt" />
         </div>
-    </div>
+    </component>
 </template>
 
 <script>
+import ExtLink from '~/components/core/links/ExtLink'
+import LocaleLink from '~/components/core/links/LocaleLink'
+
 export default {
     name: 'EventCard',
+    components: {
+        ExtLink,
+        LocaleLink,
+    },
     props: {
         title: { type: String, default: '' },
         description: { type: String, default: '' },
@@ -23,75 +36,110 @@ export default {
         tagColor: { type: String, default: '' }, // red, blue, orange, green
         imgUrl: { type: String, default: '' },
         imgAlt: { type: String, default: '' },
+        to: { type: String, default: '' },
+        href: { type: String, default: '' },
     },
     computed: {
+        cardClasses() {
+            return {
+                card: true,
+                '--isLink': this.isLink,
+            }
+        },
         tagClasses() {
-            return [this.tagColor]
+            return {
+                tag: true,
+                [this.tagColor]: true,
+            }
+        },
+        isLink() {
+            return this.href || this.to
         },
     },
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="postcss" scoped>
 .card {
-    width: 380px;
-    min-height: 486px;
+    @apply relative inline-flex flex-col w-full break-words;
+    min-height: 180px;
     border-radius: 24px;
     border: 2px solid #c2a53a;
     box-shadow: 6px 6px 0 #c2a53a;
-    padding: 34px 30px 38px;
-    margin: 0 22px 44px;
-}
-.card:hover {
-    background-color: #e6ba17;
+    padding: 15px;
+
+    @media (min-width: 415px) {
+        min-height: 362px;
+        padding: 34px 30px 38px;
+    }
+
+    &.--isLink:hover {
+        background-color: #e6ba17;
+
+        & .title {
+            color: #000;
+        }
+        & .tag {
+            color: #000;
+            border: 2px solid #000;
+        }
+        & .cardTxt {
+            color: #000;
+        }
+    }
 }
 
-.title_block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.titleBlock {
+    @apply flex items-center justify-between;
     padding-bottom: 24px;
 }
-.card:hover .title {
-    color: #000;
-}
 .title {
-    font-weight: bold;
+    @apply font-bold font-serif;
     font-size: 24px;
     line-height: 30px;
     color: #c2a53a;
 }
-.card:hover .tag {
-    color: #000;
-    border: 2px solid #000;
-}
+
 .tag {
     border-radius: 8px;
     font-weight: 600;
     font-size: 12px;
     padding: 7px 14px;
+
+    &.orange {
+        color: #ffa357;
+        border: 2px solid #ffa357;
+    }
+    &.blue {
+        color: #7aafff;
+        border: 2px solid #7aafff;
+    }
+    &.red {
+        color: #ff7a7a;
+        border: 2px solid #ff7a7a;
+    }
+    &.green {
+        color: #22c86e;
+        border: 2px solid #22c86e;
+    }
 }
-.tag.orange {
-    color: #ffa357;
-    border: 2px solid #ffa357;
-}
-.tag.blue {
-    color: #7aafff;
-    border: 2px solid #7aafff;
-}
-.tag.red {
-    color: #ff7a7a;
-    border: 2px solid #ff7a7a;
-}
-.tag.green {
-    color: #22c86e;
-    border: 2px solid #22c86e;
-}
-.card_txt {
-    padding-bottom: 30px;
+.cardTxt {
+    @apply text-sm font-serif;
     color: #c7c7c7;
 }
-.card:hover .card_txt {
-    color: #000;
+
+.dummy {
+    margin-top: 75%;
+    @media (min-width: 1024px) {
+        margin-top: 65%;
+    }
+}
+.cardImg {
+    @apply absolute bottom-6 w-10/12;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cardImg img {
+    @apply w-full;
 }
 </style>
