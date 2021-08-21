@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[70],{858:function(e,n,t){"use strict";t.r(n);var c={name:"PageEventsOpenSpaces"},o=t(6),component=Object(o.a)(c,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("p",[e._v("Events open spaces")])}),[],!1,null,"884f68a4",null);n.default=component.exports}}]);
