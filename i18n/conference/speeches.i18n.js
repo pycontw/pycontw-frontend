@@ -56,6 +56,7 @@ export default genI18nMessages({
             TEST: 'Testing',
             WEB: 'Web Frameworks',
             OTHER: 'Other',
+            ALL: 'All',
         },
         terms: {
             day1: 'Day 1',
@@ -116,6 +117,7 @@ export default genI18nMessages({
             TEST: '測試',
             WEB: '網站框架',
             OTHER: '其他',
+            ALL: '全選',
         },
         terms: {
             day1: '第一天',
