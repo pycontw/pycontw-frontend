@@ -62,7 +62,7 @@
 import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon'
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
 import ExtLink from '@/components/core/links/ExtLink'
-import { navBarItems } from './nav-bar-items'
+import navBarItems from './nav-bar-items'
 import i18n from './NavBar.i18n'
 
 export default {
