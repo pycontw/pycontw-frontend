@@ -83,7 +83,6 @@ export default {
             eventType: '',
             speechesData: [],
             checkedCategories: [],
-            checkedAllCategories: true,
         }
     },
     computed: {
@@ -107,7 +106,10 @@ export default {
             )
         },
         computedSpeechesData() {
-            if (this.eventType === 'talks') {
+            if (
+                this.eventType === 'talks' &&
+                this.checkedCategories.length > 0
+            ) {
                 return this.filteredSpeechesData
             } else {
                 return this.speechesData
@@ -123,9 +125,6 @@ export default {
         this.eventType = this.$route.params.eventType
         await this.$store.dispatch('$getSpeechesData', this.eventType)
         this.speechesData = this.$store.state.speechesData
-        if (this.eventType === 'talks') {
-            this.selectAllCategories()
-        }
     },
     methods: {
         metaInfo() {
