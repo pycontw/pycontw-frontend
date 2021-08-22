@@ -59,7 +59,7 @@
 
         <tabs class="speech__tabs">
             <tab :title="$t('terms.speech')">
-                <div class="whitespace-pre-line break-words">
+                <div class="break-words">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.abstract') }}
                     </p>
@@ -67,13 +67,12 @@
                         {{ data.abstract }}
                     </p>
                 </div>
-                <div class="whitespace-pre-line break-words">
+                <div class="break-words">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.description') }}
                     </p>
-                    <p class="speech__tabParagraph">
-                        {{ data.detailed_description }}
-                    </p>
+                    <markdown-renderer :markdown="data.detailed_description">
+                    </markdown-renderer>
                 </div>
                 <div v-show="!!data.slide_link" class="speech__extLink mt-4">
                     <ext-link :href="data.slide_link">
@@ -96,9 +95,9 @@
                 <div
                     v-for="(speaker, index) in data.speakers"
                     :key="`speech_details_tab_speaker_${index}`"
-                    class="mb-4 whitespace-pre-line"
+                    class="mb-4"
                 >
-                    <div class="whitespace-pre-line">
+                    <div>
                         <p class="speech__tabParagraphTitle">
                             {{ speaker.name }}
                         </p>
@@ -166,6 +165,7 @@ import i18n from '@/i18n/conference/speeches.i18n'
 
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
+import MarkdownRenderer from '@/components/core/markdown/MarkdownRenderer'
 import Tab from '@/components/core/tabs/Tab.vue'
 import Tabs from '@/components/core/tabs/Tabs.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
@@ -181,11 +181,13 @@ export default {
         Tabs,
         ExtLink,
         Youtube,
+        MarkdownRenderer,
     },
     data() {
         return {
             data: {
                 title: '',
+                detailed_description: '',
                 language: 'ENEN',
                 python_level: 'NOVICE',
                 category: 'WEB',
