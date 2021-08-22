@@ -58,6 +58,7 @@ export default {
         '~/plugins/iterator.js',
         '~/plugins/http.js',
         '~/plugins/strings.js',
+        '~/plugins/vue-dompurify.js',
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
