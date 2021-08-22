@@ -26,7 +26,8 @@
         "nuxt-fontawesome": "^0.4.0",
         "nuxt-i18n": "^6.18.0",
         "uuid": "^8.3.2",
-        "vue-cool-lightbox": "^2.7.3"
+        "vue-cool-lightbox": "^2.7.3",
+        "vue-dompurify-html": "^2.3.0"
     },
     "devDependencies": {
         "@nuxt/types": "^2.14.11",
