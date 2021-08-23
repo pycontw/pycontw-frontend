@@ -9,6 +9,42 @@ export default {
     // Re-route for GitHub Pages to serve with /assets
     router: {
         base: process.env.ROUTER_BASE || DEFAULT_ROUTER_BASE,
+        // scroll behavior config for scroll to hash
+        // https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-router#scrollbehavior
+        // https://stackoverflow.com/questions/60952725/anchor-in-nuxt-component-not-working-on-same-page-the-anchor-is-included-on
+        async scrollBehavior(to, from, savedPosition) {
+            if (savedPosition) {
+                return savedPosition
+            }
+
+            const findEl = (hash, x = 0) => {
+                return (
+                    document.querySelector(hash) ||
+                    new Promise((resolve) => {
+                        if (x > 50) {
+                            return resolve(document.querySelector('#app'))
+                        }
+                        setTimeout(() => {
+                            resolve(findEl(hash, ++x || 1))
+                        }, 100)
+                    })
+                )
+            }
+
+            if (to.hash) {
+                const el = await findEl(to.hash)
+                if ('scrollBehavior' in document.documentElement.style) {
+                    return window.scrollTo({
+                        top: el.offsetTop,
+                        behavior: 'smooth',
+                    })
+                } else {
+                    return window.scrollTo(0, el.offsetTop)
+                }
+            }
+
+            return { x: 0, y: 0 }
+        },
     },
     // Global page headers (https://go.nuxtjs.dev/config-head)
     // Move to layout/default.vue due to gtm-module not support head function (https://github.com/nuxt-community/gtm-module/issues/56)
