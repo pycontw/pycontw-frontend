@@ -10,13 +10,14 @@
             custom-x
             custom-y
         >
-            <p class="filter ml-2">Filter</p>
-            <core-hr :margin-vertical="10" color="#c2a53a"></core-hr>
+            <p class="filterTitle">Filter</p>
+            <core-hr class="filterHr" custom-margin-y custom-color></core-hr>
             <checkbox-collection>
                 <core-checkbox
                     id="ALL"
                     key="category_ALL"
                     :value="isAllCategoriesSelected"
+                    :is-checked="isAllCategoriesSelected"
                     :label="$t('categories.ALL')"
                     @input="selectAllCategories()"
                 ></core-checkbox>
@@ -26,6 +27,7 @@
                     :key="`category_${category}`"
                     v-model="checkedCategories"
                     :label="$t(`categories.${category}`)"
+                    :is-checked="isCategoriesChecked(category)"
                 ></core-checkbox>
             </checkbox-collection>
         </i18n-page-wrapper>
@@ -36,7 +38,7 @@
         >
             <speech-card-collection>
                 <speech-card
-                    v-for="speech in computedSpeechesData"
+                    v-for="speech in selectedSpeechesData"
                     :id="speech.id"
                     :key="`speech_${speech.id}`"
                     :title="speech.title"
@@ -93,19 +95,18 @@ export default {
             return this.$i18n.t(`${this.$route.params.eventType}.intro`)
         },
         speechCategories() {
-            const speechCategories = []
-            this.speechesData.map((speech) => {
-                if (!speechCategories.includes(speech.category))
-                    speechCategories.push(speech.category)
-            })
-            return speechCategories
+            const speechCategories = this.speechesData.map(
+                (speech) => speech.category,
+            )
+            const uniqueSpeechCategories = [...new Set(speechCategories)]
+            return uniqueSpeechCategories
         },
         filteredSpeechesData() {
             return this.speechesData.filter((speech) =>
                 this.checkedCategories.includes(speech.category),
             )
         },
-        computedSpeechesData() {
+        selectedSpeechesData() {
             if (
                 this.eventType === 'talks' &&
                 this.checkedCategories.length > 0
@@ -116,9 +117,13 @@ export default {
             }
         },
         isAllCategoriesSelected() {
-            return (
-                this.checkedCategories.length === this.speechCategories.length
-            )
+            if (this.speechCategories.length > 0)
+                return (
+                    this.checkedCategories.length ===
+                    this.speechCategories.length
+                )
+            // Before receiving speech data, set isAllCategoriesSelected to false
+            return false
         },
     },
     async mounted() {
@@ -156,6 +161,9 @@ export default {
                 this.checkedCategories = []
             }
         },
+        isCategoriesChecked(category) {
+            return this.checkedCategories.includes(category)
+        },
     },
     head() {
         return this.metaInfo()
@@ -168,8 +176,12 @@ export default {
     @apply text-xs md:text-sm mb-8;
     line-height: 33px;
 }
-.filter {
-    @apply text-sm md:text-base;
+.filterTitle {
+    @apply ml-2 text-sm md:text-base;
+    color: #f3cc39;
+}
+.filterHr {
+    @apply my-2;
     color: #f3cc39;
 }
 </style>

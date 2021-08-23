@@ -1,24 +1,28 @@
 <template>
-    <div
-        class="hr"
-        :style="{
-            margin: `${marginVertical}px auto`,
-            borderColor: color,
-        }"
-    ></div>
+    <div :class="classObject"></div>
 </template>
 
 <script>
 export default {
     name: 'CoreHr',
     props: {
-        color: {
-            type: String,
-            default: '#868686',
+        customColor: {
+            type: Boolean,
+            default: false,
         },
-        marginVertical: {
-            type: Number,
-            default: 40,
+        customMarginY: {
+            type: Boolean,
+            default: false,
+        },
+    },
+    computed: {
+        classObject() {
+            return {
+                hr: true,
+                'mx-auto': true,
+                'my-8': !this.customMarginY,
+                defaultColor: !this.customColor,
+            }
         },
     },
 }
@@ -28,5 +32,8 @@ export default {
 .hr {
     width: 100%;
     border: 1px solid;
+}
+.defaultColor {
+    color: #868686;
 }
 </style>

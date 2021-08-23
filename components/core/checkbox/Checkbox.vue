@@ -50,14 +50,9 @@ export default {
                 return []
             },
         },
-    },
-    computed: {
-        isChecked() {
-            if (typeof this.value === 'boolean') {
-                return this.value
-            } else {
-                return this.value.includes(this.id)
-            }
+        isChecked: {
+            type: Boolean,
+            default: false,
         },
     },
     methods: {
