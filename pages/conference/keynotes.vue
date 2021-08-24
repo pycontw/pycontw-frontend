@@ -2,7 +2,11 @@
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
         <core-h1 :title="$t('title')"></core-h1>
         <i18n path="intro" tag="p" class="intro"></i18n>
-        <div v-for="keynote in keynotesData" :key="keynote.id">
+        <div
+            v-for="keynote in keynotesData"
+            :id="getKeynoteId(keynote)"
+            :key="keynote.id"
+        >
             <div class="keynote__photo">
                 <img
                     :src="keynote.speaker.photo"
@@ -132,6 +136,9 @@ export default {
         }))
     },
     methods: {
+        getKeynoteId(keynote) {
+            return keynote.speaker.name_en_us.split(' ').join('_')
+        },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
             const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`

@@ -96,10 +96,14 @@ export default {
             }
         },
         eventPagePath() {
-            const { event_type: eventType, event_id: eventId } = this.value
+            const {
+                event_type: eventType,
+                event_id: eventId,
+                speakers,
+            } = this.value
             if (eventType === 'keynote') {
-                // TODO: navigate to specific anchor (hash)
-                return '/conference/keynotes/'
+                const keynoteSpeakerId = speakers[0].split(' ').join('_')
+                return `/conference/keynotes#${keynoteSpeakerId}`
             } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
                 return `/conference/${eventType}/${eventId}/`
             }
