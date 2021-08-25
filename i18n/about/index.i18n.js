@@ -21,7 +21,7 @@ export default genI18nMessages({
             'There are a total of 3 speeches and 7 different activities in the annual meeting. It can be said to be very diverse, allowing you to absorb knowledge from the speech, and at the same time to meet many friends from various parties in the exchange activities.',
         activityDetails: [
             'Speeches include: keynote speeches, general speeches, professional courses',
-            'Activities include: warm-up, sprint, open space, lightning, JobFair, PyNight, PyCast',
+            'Activities include: warm-up events, sprint, open space, lightning talk, JobFair, PyNight, PyCast',
         ],
         moreInfo:
             'If you want to learn more about each event or want to register for the above events, welcome to watch the agenda overview page.',
