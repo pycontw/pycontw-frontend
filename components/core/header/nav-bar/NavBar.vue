@@ -12,12 +12,6 @@
             :class="getPageClassesByPath('conference')"
         >
         </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
-            :label="$t('events')"
-            :items="eventsItems"
-            :class="getPageClassesByPath('events')"
-        >
-        </nav-bar-item-dropdown>
         <!-- <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
@@ -71,9 +65,6 @@ export default {
         },
         speakingItems() {
             return this.generateI18nItems(navBarItems.speakingItems)
-        },
-        eventsItems() {
-            return this.generateI18nItems(navBarItems.eventsItems)
         },
         aboutItems() {
             return this.generateI18nItems(navBarItems.aboutItems)

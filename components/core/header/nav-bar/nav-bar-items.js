@@ -1,23 +1,4 @@
 export default Object.freeze({
-    conferenceItems: [
-        {
-            i18nKey: 'schedule',
-            value: '/conference/schedule',
-        },
-        {
-            i18nKey: 'keynotes',
-            value: '/conference/keynotes',
-        },
-        { i18nKey: 'talks', value: '/conference/talks' },
-        {
-            i18nKey: 'tutorials',
-            value: '/conference/tutorials',
-        },
-        {
-            i18nKey: 'youngInspirers',
-            value: '/conference/young-inspirers',
-        },
-    ],
     speakingItems: [
         {
             i18nKey: 'cfp',
@@ -36,10 +17,19 @@ export default Object.freeze({
             value: '/speaking/recording',
         },
     ],
-    eventsItems: [
+    conferenceItems: [
         {
             i18nKey: 'overview',
             value: '/events/overview',
+        },
+        {
+            i18nKey: 'keynotes',
+            value: '/conference/keynotes',
+        },
+        { i18nKey: 'talks', value: '/conference/talks' },
+        {
+            i18nKey: 'tutorials',
+            value: '/conference/tutorials',
         },
         // {
         //     i18nKey: 'openSpaces',
@@ -49,6 +39,10 @@ export default Object.freeze({
         {
             i18nKey: 'jobs',
             value: '/events/jobs',
+        },
+        {
+            i18nKey: 'youngInspirers',
+            value: '/conference/young-inspirers',
         },
     ],
     aboutItems: [
