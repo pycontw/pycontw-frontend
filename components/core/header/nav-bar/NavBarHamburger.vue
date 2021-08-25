@@ -43,12 +43,12 @@
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
             ></nav-bar-item-accordion> -->
-            <nav-bar-item-accordion
-                :label="$t('registration')"
-                :items="registrationItems"
-                :expanding="expandingItem === 'registration'"
-                @click.native="toggleAccordion('registration')"
-            ></nav-bar-item-accordion>
+            <locale-link
+                class="core-navBarHamburgerSlideInMenu__item"
+                to="/registration/tickets"
+                customized
+                >{{ $t('registration') }}</locale-link
+            >
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
@@ -61,9 +61,9 @@
 <script>
 import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon'
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
-import ExtLink from '@/components/core/links/ExtLink'
-import navBarItems from './nav-bar-items'
 import i18n from './NavBar.i18n'
+import navBarItems from './nav-bar-items'
+import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -72,6 +72,7 @@ export default {
         IconHamburgerMenuIcon,
         NavBarItemAccordion,
         ExtLink,
+        LocaleLink,
     },
     data() {
         return {
@@ -91,9 +92,6 @@ export default {
         },
         aboutItems() {
             return this.generateI18nItems(navBarItems.aboutItems)
-        },
-        registrationItems() {
-            return this.generateI18nItems(navBarItems.registrationItems)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`

@@ -51,16 +51,6 @@ export default Object.freeze({
             value: '/events/jobs',
         },
     ],
-    registrationItems: [
-        {
-            i18nKey: 'conferenceTickets',
-            value: '/registration/tickets',
-        },
-        {
-            i18nKey: 'financialAid',
-            value: '/registration/financial-aid',
-        },
-    ],
     aboutItems: [
         {
             i18nKey: 'pycontw',

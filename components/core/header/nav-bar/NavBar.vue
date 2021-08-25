@@ -31,12 +31,13 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown> -->
-        <nav-bar-item-dropdown
-            :label="$t('registration')"
-            :items="registrationItems"
-            :class="getPageClassesByPath('registration')"
+        <locale-link
+            to="/registration/tickets"
+            :class="getPageClassesByPath('registration', true)"
+            customized
         >
-        </nav-bar-item-dropdown>
+            {{ $t('registration') }}
+        </locale-link>
         <!-- 
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}
@@ -54,7 +55,7 @@
 import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
-import ExtLink from '~/components/core/links/ExtLink'
+import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -62,6 +63,7 @@ export default {
     components: {
         NavBarItemDropdown,
         ExtLink,
+        LocaleLink,
     },
     computed: {
         conferenceItems() {
@@ -75,9 +77,6 @@ export default {
         },
         aboutItems() {
             return this.generateI18nItems(navBarItems.aboutItems)
-        },
-        registrationItems() {
-            return this.generateI18nItems(navBarItems.registrationItems)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
