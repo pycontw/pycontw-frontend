@@ -27,7 +27,7 @@
         </nav-bar-item-dropdown> -->
         <locale-link
             to="/registration/tickets"
-            :class="getPageClassesByPath('registration', true)"
+            :class="getPageClassesByPath('tickets', true)"
             customized
         >
             {{ $t('registration') }}
@@ -61,13 +61,13 @@ export default {
     },
     computed: {
         conferenceItems() {
-            return this.generateI18nItems(navBarItems.conferenceItems)
+            return this.generateI18nItems(navBarItems.conference)
         },
         speakingItems() {
-            return this.generateI18nItems(navBarItems.speakingItems)
+            return this.generateI18nItems(navBarItems.speaking)
         },
         aboutItems() {
-            return this.generateI18nItems(navBarItems.aboutItems)
+            return this.generateI18nItems(navBarItems.about)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
@@ -80,8 +80,24 @@ export default {
                 value,
             }))
         },
-        getPageClassesByPath(pathPrefix = '', isLink = false) {
-            const isOnCurrentPath = this.$route.name.startsWith(pathPrefix)
+        getPageClassesByPath(category, isLink = false) {
+            const items = navBarItems[category]
+            let isOnCurrentPath = false
+            if (items && !isLink) {
+                const paths = items.map(
+                    (item) => `/${this.$i18n.locale}${item.value}`,
+                )
+                isOnCurrentPath = paths.includes(this.$route.path)
+            }
+            if (isLink) {
+                const re = RegExp(
+                    String.raw`\w+-${category}___${this.$i18n.locale}`,
+                    'g',
+                )
+                if (this.$route.name.match(re)) {
+                    isOnCurrentPath = true
+                }
+            }
             return {
                 'core-navBarItem': true,
                 flex: isLink,

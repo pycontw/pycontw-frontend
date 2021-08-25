@@ -1,5 +1,5 @@
 export default Object.freeze({
-    speakingItems: [
+    speaking: [
         {
             i18nKey: 'cfp',
             value: '/speaking/cfp',
@@ -17,7 +17,7 @@ export default Object.freeze({
             value: '/speaking/recording',
         },
     ],
-    conferenceItems: [
+    conference: [
         {
             i18nKey: 'overview',
             value: '/events/overview',
@@ -45,7 +45,7 @@ export default Object.freeze({
             value: '/conference/young-inspirers',
         },
     ],
-    aboutItems: [
+    about: [
         {
             i18nKey: 'pycontw',
             value: '/about',

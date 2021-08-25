@@ -76,13 +76,13 @@ export default {
     },
     computed: {
         conferenceItems() {
-            return this.generateI18nItems(navBarItems.conferenceItems)
+            return this.generateI18nItems(navBarItems.conference)
         },
         speakingItems() {
-            return this.generateI18nItems(navBarItems.speakingItems)
+            return this.generateI18nItems(navBarItems.speaking)
         },
         aboutItems() {
-            return this.generateI18nItems(navBarItems.aboutItems)
+            return this.generateI18nItems(navBarItems.about)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
