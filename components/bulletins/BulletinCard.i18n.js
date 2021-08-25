@@ -4,6 +4,14 @@ export default genI18nMessages({
     'en-us': {
         bulletins: [
             {
+                title: 'Hiring',
+                description:
+                    'The companies are here to recruit talents, hurry up! ' +
+                    "Yes, I'm talking to you! Come here, they NEED YOU!",
+                linkTitle: 'Go',
+                linkTo: '/events/jobs',
+            },
+            {
                 title: 'PyCast',
                 description:
                     'Checkout our brand new podcast channel, PyCast. ' +
@@ -55,6 +63,13 @@ export default genI18nMessages({
     },
     'zh-hant': {
         bulletins: [
+            {
+                title: '徵才資訊',
+                description:
+                    '厲害的公司都在這邊徵才還不趕快來看！對就是在說你！快點點進來這邊，他們 NEED YOU！',
+                linkTitle: '前往看看',
+                linkTo: '/events/jobs',
+            },
             {
                 title: 'PyCast',
                 description:
