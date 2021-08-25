@@ -6,6 +6,12 @@
             :class="getPageClassesByPath('about')"
         >
         </nav-bar-item-dropdown>
+        <locale-link
+            to="/conference/schedule"
+            :class="getPageClassesByPath('schedule', true)"
+            customized
+            >{{ $t('schedule') }}</locale-link
+        >
         <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
