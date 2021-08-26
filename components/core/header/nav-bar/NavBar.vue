@@ -88,21 +88,27 @@ export default {
         },
         getPageClassesByPath(category, isLink = false) {
             const items = navBarItems[category]
-            let isOnCurrentPath = false
+
+            const nameRegex = RegExp(
+                String.raw`${category}-[\w-]+___${this.$i18n.locale}`,
+                'g',
+            )
+            let isOnCurrentPath = !!this.$route.name.match(nameRegex)
+
             if (items && !isLink) {
                 const paths = items.map(
                     (item) => `/${this.$i18n.locale}${item.value}`,
                 )
-                isOnCurrentPath = paths.includes(this.$route.path)
+                isOnCurrentPath =
+                    isOnCurrentPath || paths.includes(this.$route.path)
             }
             if (isLink) {
                 const re = RegExp(
                     String.raw`\w+-${category}___${this.$i18n.locale}`,
                     'g',
                 )
-                if (this.$route.name.match(re)) {
-                    isOnCurrentPath = true
-                }
+                isOnCurrentPath =
+                    isOnCurrentPath || !!this.$route.name.match(re)
             }
             return {
                 'core-navBarItem': true,
