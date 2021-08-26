@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/conference/warmups/taichungpy", {data:[{}],fetch:{},mutations:[]});
