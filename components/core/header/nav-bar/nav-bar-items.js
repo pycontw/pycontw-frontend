@@ -41,8 +41,8 @@ export default Object.freeze({
             value: '/events/jobs',
         },
         {
-            i18nKey: 'youngInspirers',
-            value: '/conference/young-inspirers',
+            i18nKey: 'warmups',
+            value: '/conference/warmups',
         },
     ],
     about: [
