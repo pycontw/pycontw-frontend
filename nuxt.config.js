@@ -1,5 +1,5 @@
 const DEFAULT_BASE_URL = 'http://staging.pycon.tw/prs'
-const DEFAULT_ROUTER_BASE = '/pycontw-2021/'
+const DEFAULT_ROUTER_BASE = '/2021/'
 const DEFAULT_BUILD_TARGET = 'static'
 
 export default {

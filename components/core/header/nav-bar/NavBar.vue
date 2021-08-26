@@ -6,16 +6,16 @@
             :class="getPageClassesByPath('about')"
         >
         </nav-bar-item-dropdown>
+        <locale-link
+            to="/conference/schedule"
+            :class="getPageClassesByPath('schedule', true)"
+            customized
+            >{{ $t('schedule') }}</locale-link
+        >
         <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
             :class="getPageClassesByPath('conference')"
-        >
-        </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
-            :label="$t('events')"
-            :items="eventsItems"
-            :class="getPageClassesByPath('events')"
         >
         </nav-bar-item-dropdown>
         <!-- <locale-link
@@ -31,12 +31,13 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown> -->
-        <nav-bar-item-dropdown
-            :label="$t('registration')"
-            :items="registrationItems"
-            :class="getPageClassesByPath('registration')"
+        <locale-link
+            to="/registration/tickets"
+            :class="getPageClassesByPath('tickets', true)"
+            customized
         >
-        </nav-bar-item-dropdown>
+            {{ $t('registration') }}
+        </locale-link>
         <!-- 
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}
@@ -54,7 +55,7 @@
 import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
-import ExtLink from '~/components/core/links/ExtLink'
+import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -62,22 +63,17 @@ export default {
     components: {
         NavBarItemDropdown,
         ExtLink,
+        LocaleLink,
     },
     computed: {
         conferenceItems() {
-            return this.generateI18nItems(navBarItems.conferenceItems)
+            return this.generateI18nItems(navBarItems.conference)
         },
         speakingItems() {
-            return this.generateI18nItems(navBarItems.speakingItems)
-        },
-        eventsItems() {
-            return this.generateI18nItems(navBarItems.eventsItems)
+            return this.generateI18nItems(navBarItems.speaking)
         },
         aboutItems() {
-            return this.generateI18nItems(navBarItems.aboutItems)
-        },
-        registrationItems() {
-            return this.generateI18nItems(navBarItems.registrationItems)
+            return this.generateI18nItems(navBarItems.about)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
@@ -90,8 +86,24 @@ export default {
                 value,
             }))
         },
-        getPageClassesByPath(pathPrefix = '', isLink = false) {
-            const isOnCurrentPath = this.$route.name.startsWith(pathPrefix)
+        getPageClassesByPath(category, isLink = false) {
+            const items = navBarItems[category]
+            let isOnCurrentPath = false
+            if (items && !isLink) {
+                const paths = items.map(
+                    (item) => `/${this.$i18n.locale}${item.value}`,
+                )
+                isOnCurrentPath = paths.includes(this.$route.path)
+            }
+            if (isLink) {
+                const re = RegExp(
+                    String.raw`\w+-${category}___${this.$i18n.locale}`,
+                    'g',
+                )
+                if (this.$route.name.match(re)) {
+                    isOnCurrentPath = true
+                }
+            }
             return {
                 'core-navBarItem': true,
                 flex: isLink,
