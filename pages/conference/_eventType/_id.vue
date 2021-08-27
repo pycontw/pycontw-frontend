@@ -136,7 +136,7 @@
                                 :href="speaker.facebook_profile_url"
                             >
                                 <fa
-                                    :icon="['fab', 'linkedin']"
+                                    :icon="['fab', 'facebook']"
                                     aria-hidden="true"
                                     class="mr-2"
                                 ></fa>
