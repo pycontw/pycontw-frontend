@@ -137,7 +137,7 @@ export default {
             ],
             speeches: [
                 {
-                    title: 'How to process ECG signal for Machine Learnin',
+                    title: 'How to process ECG signal for Machine Learning',
                     speakers: [
                         {
                             name: 'Jimmy Chuo',

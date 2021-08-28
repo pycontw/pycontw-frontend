@@ -71,8 +71,8 @@ export default genI18nMessages({
                     'in any way you like. ' +
                     'You can take other partners to participate and make friends!',
             },
-            lighteningTalk: {
-                title: 'Lightening Talk',
+            lightningTalk: {
+                title: 'Lightning Talk',
                 description:
                     'The Lightning Talk is held every afternoon ' +
                     'before the end of the annual meeting. ' +
@@ -163,7 +163,7 @@ export default genI18nMessages({
                     '開放空間讓你能用任何你喜歡的方式定義、組織、規劃你自己的小聚。' +
                     '歡迎你揪其他好夥伴一起來參與、分享、聊天、交朋友！',
             },
-            lighteningTalk: {
+            lightningTalk: {
                 title: '閃電秀',
                 description:
                     '閃電秀在年會每天下午結束之前舉辦，是每個演講包含設置投影片僅限五分鐘的刺激活動。' +

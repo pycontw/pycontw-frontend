@@ -111,11 +111,11 @@ export default {
                     imgAlt: 'Open Space',
                 },
                 {
-                    tag: 'lighteningTalk',
+                    tag: 'lightningTalk',
                     eventTag: 'activity',
                     tagColor: 'green',
-                    imgUrl: require('~/static/img/events/overview/lightening-talk.png'),
-                    imgAlt: 'Lightening Talk',
+                    imgUrl: require('~/static/img/events/overview/lightning-talk.png'),
+                    imgAlt: 'Lightning Talk',
                 },
                 {
                     tag: 'pynight',
