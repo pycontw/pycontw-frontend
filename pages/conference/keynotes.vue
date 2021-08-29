@@ -137,7 +137,8 @@ export default {
     },
     methods: {
         getKeynoteId(keynote) {
-            return keynote.speaker.name_en_us.split(' ').join('_')
+            // adjust for schedule data format
+            return keynote.speaker.name_zh_hant.split(' ').join('_')
         },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
