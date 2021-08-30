@@ -149,18 +149,18 @@ export default {
                         '時下穿戴式手環非常流行的測量心電圖訊號功能，究竟 Apple watch 是怎麼判斷出心電圖異常與否，' +
                         '而這些日常穿戴的裝置收集到的心電訊號又跟醫療級的心電圖機有哪些不同呢？' +
                         '本次的主題會環繞在如果運用 Python 各個套件來處理心電訊號，' +
-                        '並頗析一維生理訊號在訓練深度學習神經網路內會遇到的問題和如何解決。\n\n' +
+                        '並剖析一維生理訊號在訓練深度學習神經網路內會遇到的問題和如何解決。\n\n' +
                         '本主題需要的背景知識: 基礎的深度學習理，基礎訊號處理理論，基礎 Tensorflow 概念。',
                 },
                 {
-                    title: 'Machine Learning Applied to Stock Index Performance Enhancement',
+                    title: 'Use machine learning to generate medical report',
                     speakers: [
                         {
-                            name: '巫旻諺',
+                            name: 'Miya',
                             bio:
                                 '喜歡與人討論和分享新技術，並期許自己能持續的進步以成為一個能獨當一面的資料科學家為目標，' +
                                 '今年剛前往中國醫藥大學大數據中心就職，主要負責模型演算法開發，' +
-                                '對醫療資料或大數據分析有興趣，或正在尋求相關職缺的人， 歡迎找我聊聊~',
+                                '對醫療資料或大數據分析有興趣，或正在尋求相關職缺的人，歡迎找我聊聊~',
                             photo: require('~/static/img/warmups/wu.png'),
                         },
                     ],
