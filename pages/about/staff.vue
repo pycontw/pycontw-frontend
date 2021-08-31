@@ -173,7 +173,6 @@ export default {
                     { name: '四貓', photo: 'recruitment/catcatcatcat.JPG' },
                     { name: 'Zonghan', photo: 'pr/Zonghan.jpg' },
                     { name: '9ukei', photo: 'pr/9ukei.jpg' },
-                    { name: 'Derek', photo: 'venue/Derek.JPG' },
                     { name: 'Tai', photo: 'everywhere/tai271828.png' },
                     { name: 'JennyChu', photo: 'pr/jenny.jpg' },
                     { name: '可晴', photo: 'smile.svg' },
