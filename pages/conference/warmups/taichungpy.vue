@@ -79,6 +79,12 @@
                         <p class="tabParagraph">
                             {{ speechData.description }}
                         </p>
+                        <ext-link
+                            v-if="!!speechData.link"
+                            :href="speechData.link"
+                            highlight
+                            >文章連結</ext-link
+                        >
                     </div>
                 </tab>
                 <tab :title="$t('terms.bio')">
@@ -150,7 +156,8 @@ export default {
                         '而這些日常穿戴的裝置收集到的心電訊號又跟醫療級的心電圖機有哪些不同呢？' +
                         '本次的主題會環繞在如果運用 Python 各個套件來處理心電訊號，' +
                         '並剖析一維生理訊號在訓練深度學習神經網路內會遇到的問題和如何解決。\n\n' +
-                        '本主題需要的背景知識: 基礎的深度學習理，基礎訊號處理理論，基礎 Tensorflow 概念。',
+                        '本主題需要的背景知識: 基礎的深度學習理論，基礎訊號處理理論，基礎 Tensorflow 概念。',
+                    link: 'https://link.springer.com/article/10.1007%2Fs42786-021-00025-6',
                 },
                 {
                     title: 'Use machine learning to generate medical report',
