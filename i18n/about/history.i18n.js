@@ -149,7 +149,7 @@ export default genI18nMessages({
             checkIO: 'CheckIO',
             content:
                 '台灣的 Python 社群與國際 Python 社群的交流在2014年達到了高峰。主要議程涵蓋豐富而且廣泛。' +
-                '基調演講除了邀請到 Python Software Foundation 的董事 Jessica McKellar 之外，' +
+                '主題演講除了邀請到 Python Software Foundation 的董事 Jessica McKellar 之外，' +
                 '還有如 PyCuda, Mezzanine, IPython 等專案的重要開發者。我們還與 {check-io} 合作，' +
                 '試辦了解題競賽，相當多人參加現場十分熱鬧。為了顧及議程品質與贊助商曝光，特別規劃了贊助商 Show time，' +
                 '以及 Job fair 活動。',
