@@ -1,6 +1,6 @@
 <template>
     <div :class="classObject" @click="onClick">
-        <img :src="logoUrl" alt="" />
+        <img :src="logoUrl" :alt="sponsorName" />
     </div>
 </template>
 
@@ -8,6 +8,7 @@
 export default {
     name: 'JobsCard',
     props: {
+        sponsorName: { type: String, default: '' },
         logoUrl: { type: String, default: '' },
         active: { type: Boolean, default: false },
     },
