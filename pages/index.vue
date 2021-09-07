@@ -26,7 +26,10 @@
                         md:flex-row
                     "
                 >
-                    <text-button
+                    <!-- dummy, delete it if the button is needed to be displayed -->
+                    <div></div>
+
+                    <!-- <text-button
                         to="/sponsor"
                         class="hidden md:block md:mb-0 md:self-center"
                         large
@@ -37,7 +40,7 @@
                         to="/sponsor"
                         class="block mb-8 self-start md:hidden"
                         >{{ $t('sponsor') }}</text-button
-                    >
+                    > -->
                     <landing-focus-slogan />
                 </div>
             </div>
@@ -83,9 +86,9 @@
                     class="hidden md:block"
                 />
             </div>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
-            </div>
+            </div> -->
         </i18n-page-wrapper>
         <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
     </div>
@@ -95,7 +98,7 @@
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import TextButton from '~/components/core/buttons/TextButton'
+// import TextButton from '~/components/core/buttons/TextButton'
 import {
     SponsorCardCollection,
     SponsorModal,
@@ -113,7 +116,7 @@ export default {
     i18n,
     name: 'PageIndex',
     components: {
-        TextButton,
+        // TextButton,
         I18nPageWrapper,
         LandingFocusSlogan,
         LandingFocusInfo,
