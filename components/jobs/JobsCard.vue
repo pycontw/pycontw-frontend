@@ -20,9 +20,9 @@ export default {
                 'h-20': true,
                 'm-1': true,
                 'cursor-pointer': !this.active,
-                'md:w-40': true,
-                'md:h-32': true,
-                'md:m-3': true,
+                'md:w-24': true,
+                'md:h-20': true,
+                'md:m-2': true,
                 '-active': this.active,
             }
         },
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .jobsCard {
     @apply flex bg-white rounded-2xl;
     opacity: 0.2;
