@@ -58,6 +58,7 @@ export default {
         '~/plugins/iterator.js',
         '~/plugins/http.js',
         '~/plugins/strings.js',
+        '~/plugins/vue-dompurify.js',
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -101,6 +102,8 @@ export default {
                 ],
             },
         ],
+        // https://github.com/nuxt-community/markdownit-module
+        '@nuxtjs/markdownit',
     ],
 
     i18n: {
@@ -124,6 +127,14 @@ export default {
 
     gtm: {
         id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+
+    markdownit: {
+        runtime: true,
+        html: true,
+        preset: 'default',
+        linkify: true,
+        breaks: true,
     },
 
     publicRuntimeConfig: {
