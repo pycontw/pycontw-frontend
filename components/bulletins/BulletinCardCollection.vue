@@ -1,6 +1,12 @@
 <template>
     <div class="flex flex-col w-full">
-        <div class="bulletinCardCollection__cardContainer justify-center lg:justify-start">
+        <div
+            class="
+                bulletinCardCollection__cardContainer
+                justify-center
+                lg:justify-start
+            "
+        >
             <!-- <slot></slot> -->
             <bulletin-card
                 v-for="(bulletin, i) in $t('bulletins')"
