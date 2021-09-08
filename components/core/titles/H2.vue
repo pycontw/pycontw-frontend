@@ -1,14 +1,14 @@
 <template>
     <div class="flex justify-center">
-        <h2 :class="classObject">{{ subTitle }}</h2>
+        <h2 :class="classObject">{{ title }}</h2>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'LandingH2',
+    name: 'CoreH2',
     props: {
-        subTitle: {
+        title: {
             type: String,
             required: true,
         },

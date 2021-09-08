@@ -1,4 +1,4 @@
 import CoreH1 from './H1'
-import LandingH2 from './LandingH2'
+import CoreH2 from './H2'
 
-export { CoreH1, LandingH2 }
+export { CoreH1, CoreH2 }

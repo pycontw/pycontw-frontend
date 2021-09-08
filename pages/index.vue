@@ -49,15 +49,12 @@
         <landing-img-swiper />
 
         <div class="bulletin-section">
-            <landing-h2
-                :sub-title="$t('bulletinList')"
-                bulletin-color
-            ></landing-h2>
+            <core-h2 :title="$t('bulletinList')" bulletin-color></core-h2>
             <bulletin-card-collection></bulletin-card-collection>
         </div>
 
         <div class="intro-section">
-            <landing-h2 :sub-title="$t('pyconIntro')"></landing-h2>
+            <core-h2 :title="$t('pyconIntro')"></core-h2>
             <intro></intro>
         </div>
 
@@ -97,7 +94,7 @@
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import LandingH2 from '~/components/core/titles/LandingH2'
+import CoreH2 from '~/components/core/titles/H2'
 // import TextButton from '~/components/core/buttons/TextButton'
 import {
     SponsorCardCollection,
@@ -126,7 +123,7 @@ export default {
         SponsorModal,
         Intro,
         BulletinCardCollection,
-        LandingH2,
+        CoreH2,
     },
     data() {
         return {
