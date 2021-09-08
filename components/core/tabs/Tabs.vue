@@ -27,6 +27,9 @@ export default {
     },
     mounted() {
         this.selectTab(0)
+        this.$root.$on('initTabs', () => {
+            this.selectTab(0)
+        })
     },
     methods: {
         selectTab(i) {

@@ -144,16 +144,12 @@
                     </div>
                 </div>
             </tab>
-            <!--
-            TODO: This tab is commented out due to an unresolve issue that
-            this tab is displayed with the first tab after rendering.
-            -->
-            <!-- <tab v-if="!!data.slido_embed_link" title="Slido">
+            <tab v-if="!!data.slido_embed_link" title="Slido">
                 <iframe
                     class="speech__slido"
                     :src="data.slido_embed_link"
                 ></iframe>
-            </tab> -->
+            </tab>
         </tabs>
     </i18n-page-wrapper>
 </template>
@@ -217,7 +213,8 @@ export default {
             eventType: this.$route.params.eventType,
             eventId: this.$route.params.id,
         })
-        this.processData()
+        await this.processData()
+        this.$root.$emit('initTabs')
     },
     methods: {
         processData() {
