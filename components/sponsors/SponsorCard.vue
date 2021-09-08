@@ -1,7 +1,7 @@
 <template>
     <div v-show="!!logoUrl" :class="classObject">
         <div class="dummy"></div>
-        <img :src="logoUrl" alt="" />
+        <img :src="logoUrl" :alt="sponsorName" />
         <div v-if="!!tag" class="sponsorCard__tag">
             <img
                 class="diamond"
@@ -17,6 +17,7 @@
 export default {
     name: 'SponsorCard',
     props: {
+        sponsorName: { type: String, default: '' },
         logoUrl: { type: String, default: '' },
         tag: { type: String, default: '' },
         small: { type: Boolean, default: false },

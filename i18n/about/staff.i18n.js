@@ -64,6 +64,10 @@ export default genI18nMessages({
                 key: 'photography',
                 teamName: 'Photography',
             },
+            {
+                key: 'reviewer',
+                teamName: 'Review Committee',
+            },
         ],
         og: {
             title: 'Staff',
@@ -132,6 +136,10 @@ export default genI18nMessages({
             {
                 key: 'photography',
                 teamName: '紀錄',
+            },
+            {
+                key: 'reviewer',
+                teamName: '審稿委員',
             },
         ],
         og: {

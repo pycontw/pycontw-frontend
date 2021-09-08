@@ -83,6 +83,12 @@
                         <p class="tabParagraph">
                             {{ speechData.description }}
                         </p>
+                        <ext-link
+                            v-if="!!speechData.link"
+                            :href="speechData.link"
+                            highlight
+                            >文章連結</ext-link
+                        >
                     </div>
                 </tab>
                 <tab :title="$t('terms.bio')">
@@ -191,6 +197,7 @@ export default {
                         '本次演講將與大家詳細分享裡頭的內容，包含特徵建構、模型建構、回測以及績效評估等等。' +
                         '希望本次的演講能夠摒除大家對"機器學習好複雜"的刻板印象，' +
                         '並且激發各位動手打造屬於自己的 AI 選股系統。',
+                    link: 'https://link.springer.com/article/10.1007%2Fs42786-021-00025-6',
                 },
                 {
                     title: 'The 2020 CVPR Workshop of Low-Power Computer Vision Challenge 參加經驗分享',

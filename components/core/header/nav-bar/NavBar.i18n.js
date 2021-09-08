@@ -46,7 +46,7 @@ export default genI18nMessages({
         recording: '錄影釋出',
         conference: '議程',
         schedule: '時間表',
-        keynotes: '基調演講',
+        keynotes: '主題演講',
         talks: '一般演講',
         tutorials: '專業課程',
         youngInspirers: 'Young Inspirers',

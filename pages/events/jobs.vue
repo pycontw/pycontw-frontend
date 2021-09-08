@@ -5,6 +5,7 @@
             <jobs-card
                 v-for="sponsor in jobsData"
                 :key="sponsor.id"
+                :sponsor-name="sponsor.sponsor_name"
                 :logo-url="sponsor.sponsor_logo_url"
                 :active="selectedSponsor.id === sponsor.id"
                 @click="setSelectedSponsor(sponsor)"
