@@ -70,6 +70,7 @@ export default {
                     tagColor: 'orange',
                     imgUrl: require('~/static/img/events/overview/sprint.png'),
                     imgAlt: 'Sprint',
+                    to: '/events/sprints',
                 },
                 {
                     tag: 'pycast',
