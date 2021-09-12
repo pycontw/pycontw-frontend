@@ -1,6 +1,12 @@
 <template>
     <div :class="classObject" @click="onClick">
-        <locale-link v-if="!!to" :to="to" customized>
+        <locale-link
+            v-if="!!to"
+            :to="to"
+            customized
+            @mouseenter="setHoveringState"
+            @mouseleave="removeHoveringState"
+        >
             <slot></slot>
         </locale-link>
         <slot v-else></slot>
@@ -25,6 +31,11 @@ export default {
         paddingY: { type: String, default: 'py-3.5' },
         to: { type: String, default: '' },
     },
+    data() {
+        return {
+            isHovering: false,
+        }
+    },
     computed: {
         transparent() {
             return !this.primary && !this.secondary && !this.tertiary
@@ -40,6 +51,7 @@ export default {
                 '-transparent': this.transparent,
                 'text-center': this.textAlignCenter,
                 'cursor-pointer': this.primary,
+                hover: this.isHovering,
                 [this.paddingX]: true,
                 [this.paddingY]: true,
             }
@@ -49,13 +61,19 @@ export default {
         onClick(e) {
             this.$emit('click', e)
         },
+        setHoveringState() {
+            this.isHovering = true
+        },
+        removeHoveringState() {
+            this.isHovering = false
+        },
     },
 }
 </script>
 
 <style lang="postcss" scoped>
 .scheduleBlock {
-    @apply relative font-serif;
+    @apply relative font-serif transition;
     min-width: 120px;
     border-radius: 10px;
 }
@@ -68,11 +86,9 @@ export default {
 .scheduleBlock.-primary.-active {
     color: #c7c7c7;
     background-color: #354970;
-    @media (hover: hover) {
-        &:hover {
-            color: #000000;
-            background-color: #d1ac23;
-        }
+    &.hover {
+        color: #000000;
+        background-color: #d1ac23;
     }
 }
 
@@ -87,22 +103,11 @@ export default {
         color: #d1ac23;
         background-color: rgba(31, 63, 92, 0.8);
     }
-    @media (hover: hover) {
-        &:hover {
-            color: #d1ac23;
-            background-color: rgba(31, 63, 92, 0.8);
-        }
-    }
 }
 
 .scheduleBlock.-tertiary {
     color: #d1ac23;
     background-color: #243f73;
-    @media (hover: hover) {
-        &:hover {
-            background-color: #2c64b7;
-        }
-    }
 }
 
 .scheduleBlock.-mini {
