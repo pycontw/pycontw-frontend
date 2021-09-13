@@ -1,11 +1,73 @@
 <template>
-    <p>Events springs</p>
+    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+        <core-h1 :title="$t('title')"></core-h1>
+        <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
+        <h2>{{ $t('mode') }}</h2>
+        <i18n
+            v-for="(paragraph, i) in $t('modeDescriptions')"
+            :key="`mode_descriptions_${i}`"
+            :path="`modeDescriptions.${i}`"
+            tag="p"
+        >
+            <template #kktix>
+                <ext-link
+                    href="https://pycontw.kktix.cc/events/20210926-sprints"
+                    highlight
+                    >KKTIX</ext-link
+                >
+            </template>
+            <template #hackmd>
+                <ext-link href="https://hackmd.io/@pycontw/r1RRIJF__" highlight
+                    >HackMD</ext-link
+                >
+            </template>
+        </i18n>
+    </i18n-page-wrapper>
 </template>
 
 <script>
+import i18n from '@/i18n/events/sprints.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
+import CoreH1 from '@/components/core/titles/H1'
+import ExtLink from '@/components/core/links/ExtLink'
+
 export default {
+    i18n,
     name: 'PageEventsSprints',
+    components: {
+        I18nPageWrapper,
+        CoreH1,
+        ExtLink,
+    },
+    head() {
+        return {
+            title: this.$i18n.t('title'),
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.$i18n.t('title'),
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.$i18n.t('intro'),
+                },
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$i18n.t('intro'),
+                },
+            ],
+        }
+    },
 }
 </script>
 
-<style scoped></style>
+<style lang="postcss" scoped>
+h2 {
+    @apply font-serif font-black text-base md:text-lg text-center mx-auto;
+    margin-top: 3rem !important;
+    color: #f3cc39;
+}
+</style>
