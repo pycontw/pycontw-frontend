@@ -1,7 +1,7 @@
 <template>
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p" class="intro"></i18n>
+        <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
         <h2>{{ $t('mode') }}</h2>
         <i18n
             v-for="(paragraph, i) in $t('modeDescriptions')"
