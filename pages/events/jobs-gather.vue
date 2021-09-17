@@ -1,24 +1,30 @@
 <template>
     <div>
         <core-h1 :title="$t('title')" class="mt-24"></core-h1>
-        <jobs-card-collection ref="jobsCardCollection" site>
-            <jobs-card
-                v-for="sponsor in jobsData"
-                :key="sponsor.id"
-                :sponsor-name="sponsor.sponsor_name"
-                :logo-url="sponsor.sponsor_logo_url"
-                :active="selectedSponsor.id === sponsor.id"
-                @click="setSelectedSponsor(sponsor)"
-            ></jobs-card>
-        </jobs-card-collection>
-        <i18n-page-wrapper class="pt-8 pb-12" custom-y>
-            <jobs-panel
-                ref="jobsPanel"
-                :jobs="selectedSponsor.jobs"
-                :cta-label="$t('applyNow')"
-                :empty-message="$t('noJobs')"
-            ></jobs-panel>
-        </i18n-page-wrapper>
+        <div class="flex flex-row">
+            <jobs-card-collection ref="jobsCardCollection" gather>
+                <jobs-card
+                    v-for="sponsor in jobsData"
+                    :key="sponsor.id"
+                    :sponsor-name="sponsor.sponsor_name"
+                    :logo-url="sponsor.sponsor_logo_url"
+                    :active="selectedSponsor.id === sponsor.id"
+                    @click="setSelectedSponsor(sponsor)"
+                ></jobs-card>
+            </jobs-card-collection>
+            <i18n-page-wrapper
+                class="pt-8 pb-12 px-0 sm:px-4 md:pr-8 md:pl-4"
+                custom-y
+                custom-x
+            >
+                <jobs-panel
+                    ref="jobsPanel"
+                    :jobs="selectedSponsor.jobs"
+                    :cta-label="$t('applyNow')"
+                    :empty-message="$t('noJobs')"
+                ></jobs-panel>
+            </i18n-page-wrapper>
+        </div>
     </div>
 </template>
 
