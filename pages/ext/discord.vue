@@ -214,7 +214,11 @@ export default {
     async asyncData({ store, query }) {
         const token = query.token
         await store.dispatch('$verifyAttendee', { token })
-        return { token }
+        return {
+            token,
+            isValidAttendee:
+                store.state.youtubeInfo && store.state.youtubeInfo.length !== 0,
+        }
     },
     data() {
         return {
@@ -231,12 +235,6 @@ export default {
                 'background-repeat': 'no-repeat',
                 'background-position': 'center',
             }
-        },
-        isValidAttendee() {
-            return (
-                this.$store.state.youtubeInfo &&
-                this.$store.state.youtubeInfo.length !== 0
-            )
         },
     },
     head() {

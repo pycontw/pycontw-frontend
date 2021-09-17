@@ -28,17 +28,11 @@ export default {
     async asyncData({ store, query }) {
         const token = query.token
         await store.dispatch('$verifyAttendee', { token })
-    },
-    computed: {
-        isValidAttendee() {
-            return (
-                this.$store.state.youtubeInfo &&
-                this.$store.state.youtubeInfo.length !== 0
-            )
-        },
-        youtubeInfo() {
-            return this.$store.state.youtubeInfo
-        },
+        return {
+            isValidAttendee:
+                store.state.youtubeInfo && store.state.youtubeInfo.length !== 0,
+            youtubeInfo: store.state.youtubeInfo,
+        }
     },
     head() {
         return {
