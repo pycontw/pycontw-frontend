@@ -47,13 +47,13 @@ export default {
                     title: 'PyCon TW x Taichung.py 聯合線上直播',
                     link: '/conference/warmups/taichungpy',
                     description:
-                        '接續 Young Inspirers 活動的經驗，PyCon Taiwan 這次合併 Taichung.py 聚會進行線上聯播活動，同時也可以在 Gather Town 上進行虛擬互動。',
+                        '接續 Young Inspirers 活動的經驗，PyCon Taiwan 這次合併 Taichung.py 聚會進行線上 Meetup，同時也可以在 Gather Town 上進行虛擬互動。',
                 },
                 {
                     title: 'PyCon TW x PyHUG.py 聯合線上直播',
                     link: '/conference/warmups/pyhug',
                     description:
-                        '暖身活動來到第三場，PyCon Taiwan 與地方社群 PyHUG 聚會進行線上聯播活動。',
+                        '暖身活動來到第三場，PyCon Taiwan 與地方社群 PyHUG 聚會進行線上 Meetup。',
                 },
             ],
         }
