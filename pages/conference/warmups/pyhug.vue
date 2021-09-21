@@ -22,12 +22,12 @@
             <li class="list-none">2021/09/25 13:30-17:45</li>
             <li class="listTitle">活動形式：</li>
             <li class="list-none">
-                Youtube 線上直播：
+                於 Gather Town 中進行活動：
                 <ext-link
-                    href="https://youtu.be/m_zePKuim0E"
+                    href="https://gather.town/app/pp5WuaEQ2CChMMxy/PyCon%20TW%20x%20Local%20Meetup"
                     highlight
                     underline
-                    >點我看直播</ext-link
+                    >點我進入空間</ext-link
                 >
             </li>
             <li class="list-none">
@@ -39,6 +39,7 @@
                     >點我看共筆</ext-link
                 >
             </li>
+            <li class="list-none">YouTube 活動錄影： 將於活動後釋出</li>
         </ul>
 
         <div class="scheduleSection">

@@ -12,15 +12,15 @@
 
         <ul class="list-disc">
             <li class="listTitle">活動時間：</li>
-            <li class="list-none">2021/09/18 14:00-17:00</li>
+            <li class="list-none">2021/09/25 10:00-11:45</li>
             <li class="listTitle">活動形式：</li>
             <li class="list-none">
-                Youtube 線上直播：
+                於 Gather Town 中進行活動：
                 <ext-link
-                    href="https://youtu.be/4xdXRQ9O0HM"
+                    href="https://gather.town/app/pp5WuaEQ2CChMMxy/PyCon%20TW%20x%20Local%20Meetup"
                     highlight
                     underline
-                    >點我看直播</ext-link
+                    >點我進入空間</ext-link
                 >
             </li>
             <li class="list-none">
@@ -32,6 +32,7 @@
                     >點我看共筆</ext-link
                 >
             </li>
+            <li class="list-none">YouTube 活動錄影：將於活動後釋出</li>
         </ul>
 
         <div class="scheduleSection">
@@ -127,13 +128,11 @@ export default {
                 '希望在台中可以跟 Python 同好分享 Python 有關的訊息或活動，' +
                 '以及相關的技術或知識。',
             schedules: [
-                ['14:00 - 14:05', '活動開場'],
-                ['14:05 - 14:20', '	主持人開場與社群介紹－Taichung.py'],
-                ['14:20 - 15:00', '講者分享: Jimmy Chuo'],
-                ['15:00 - 15:05', '休息時間'],
-                ['15:05 - 15:45', '講者分享: 巫旻諺'],
-                ['15:45 - 16:00', '活動結尾'],
-                ['16:00 - 17:00', '自由交流 at Gather.Town'],
+                ['10:00 - 10:10', '活動開場'],
+                ['10:10 - 10:50', '講者分享: Jimmy Chuo'],
+                ['10:50 - 10:55', '休息時間'],
+                ['10:55 - 11:35', '講者分享: 巫旻諺'],
+                ['11:35 - 11:45', '活動結尾'],
             ],
             speeches: [
                 {
