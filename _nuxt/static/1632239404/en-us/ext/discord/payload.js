@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-us/ext/discord", (function(a){return {data:[{token:a}],fetch:{},mutations:[["setYoutubeInfo",a]]}}(void 0)));
