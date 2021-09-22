@@ -11,7 +11,6 @@ export default genI18nMessages({
         stepOne: '1. Register',
         stepOneDescription:
             'Users can find a #registration-desk channel under PYCON TW 2021 category. There is a PyCon TW RegBot in this channel to help you register to your roles.',
-        token: '[TOKEN]',
         registerAction: {
             action: 'Enter !register {token} in this channel to register',
             note: '(If you want to get your own Token, please click the link in the letter.)',
@@ -186,7 +185,7 @@ export default genI18nMessages({
         },
         og: {
             title: 'PyCon TW Discord Guideline',
-            pageAbstract:
+            description:
                 'If you have not installed Discord or joined Python Taiwan Discord server, follow Setting up Discord and setup your Discord first.',
         },
     },
@@ -200,7 +199,6 @@ export default genI18nMessages({
         stepOne: '1. 註冊',
         stepOneDescription:
             '使用者會看到在 PYCON TW 2021 的類別下會有一個 #registration-desk 頻道。在此頻道會有一個 PyCon TW RegBot 負責註冊使用者到對應身分組。',
-        token: '[TOKEN]',
         registerAction: {
             action: '輸入 !register {token} 以進行註冊',
             note: '(如要取得您的專屬 Token 請點擊行前信中的連結)',
@@ -369,10 +367,10 @@ export default genI18nMessages({
                 '複製上面的邀請連結，並把它貼到對話方塊中，接著按下加入即可。',
             ],
         },
-    },
-    og: {
-        title: 'PyCon TW Discord 指南',
-        description:
-            '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
+        og: {
+            title: 'PyCon TW Discord 指南',
+            description:
+                '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
+        },
     },
 })

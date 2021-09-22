@@ -14,9 +14,8 @@
                 </p>
             </template>
         </banner>
-        <I18nPageWrapper class="pt-8 px-8 md:px-57 lg:px-56">
-            <div v-if="!isValidAttendee">{{ $t('invalidAttendee') }}</div>
-            <div v-else>
+        <i18n-page-wrapper class="pt-8 px-8 md:px-57 lg:px-56">
+            <div>
                 <div class="section">
                     <core-h1 :title="$t('tutorialsHeader')"></core-h1>
                     <p class="paragraph-title font-bold text-base md:text-lg">
@@ -32,9 +31,7 @@
                         class="bold-title"
                     >
                         <template #token>
-                            <span v-if="!isValidAttendee">{{
-                                $t('token')
-                            }}</span>
+                            <span v-if="!isValidAttendee">[TOKEN]</span>
                             <span v-else>{{ token }}</span>
                         </template>
                     </i18n>
@@ -187,7 +184,7 @@
                     />
                 </div>
             </div>
-        </I18nPageWrapper>
+        </i18n-page-wrapper>
     </div>
 </template>
 
@@ -211,17 +208,18 @@ export default {
         Banner,
         ExtLink,
     },
-    async asyncData({ store, query }) {
-        const token = query.token
-        await store.dispatch('$verifyAttendee', { token })
-        return {
-            token,
-            isValidAttendee:
-                store.state.youtubeInfo && store.state.youtubeInfo.length !== 0,
-        }
+    fetchOnServer: false,
+    async fetch() {
+        this.token = this.$nuxt.context.query.token
+        const store = this.$nuxt.context.store
+        await store.dispatch('$verifyAttendee', { token: this.token })
+        this.isValidAttendee =
+            store.state.youtubeInfo && store.state.youtubeInfo.length !== 0
     },
     data() {
         return {
+            isValidAttendee: false,
+            token: '[TOKEN]',
             aboutBanner: AboutBanner,
             discordIntro0,
             discordIntro1,

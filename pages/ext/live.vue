@@ -1,5 +1,5 @@
 <template>
-    <I18nPageWrapper>
+    <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
         <div v-if="!isValidAttendee">{{ $t('invalidAttendee') }}</div>
         <div v-else>
@@ -8,7 +8,7 @@
                 <youtube :video-id="videoInfo.video_id"></youtube>
             </div>
         </div>
-    </I18nPageWrapper>
+    </i18n-page-wrapper>
 </template>
 
 <script>
@@ -25,13 +25,19 @@ export default {
         CoreH1,
         Youtube,
     },
-    async asyncData({ store, query }) {
-        const token = query.token
+    fetchOnServer: false,
+    async fetch() {
+        const token = this.$nuxt.context.query.token
+        const store = this.$nuxt.context.store
         await store.dispatch('$verifyAttendee', { token })
+        this.isValidAttendee =
+            store.state.youtubeInfo && store.state.youtubeInfo.length !== 0
+        this.youtubeInfo = store.state.youtubeInfo
+    },
+    data() {
         return {
-            isValidAttendee:
-                store.state.youtubeInfo && store.state.youtubeInfo.length !== 0,
-            youtubeInfo: store.state.youtubeInfo,
+            isValidAttendee: false,
+            youtubeInfo: [],
         }
     },
     head() {
