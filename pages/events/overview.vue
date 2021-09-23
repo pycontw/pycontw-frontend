@@ -110,6 +110,7 @@ export default {
                     tagColor: 'green',
                     imgUrl: require('~/static/img/events/overview/open-space.png'),
                     imgAlt: 'Open Space',
+                    to: 'events/open-spaces',
                 },
                 {
                     tag: 'lightningTalk',
