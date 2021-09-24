@@ -38,9 +38,8 @@
                         class="icon"
                         alt="icon-datetime"
                     />
-                    {{ $t(data.dateTag) }} • {{ getTime(data.begin_time) }}-{{
-                        getTime(data.end_time)
-                    }}
+                    {{ $t(`terms.${data.dateTag}`) }} •
+                    {{ getTime(data.begin_time) }}-{{ getTime(data.end_time) }}
                 </div>
                 <div class="speech__info">
                     <img :src="icons.level" class="icon" alt="icon-level" />
