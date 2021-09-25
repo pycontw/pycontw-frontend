@@ -31,10 +31,10 @@ export default Object.freeze({
             i18nKey: 'tutorials',
             value: '/conference/tutorials',
         },
-        // {
-        //     i18nKey: 'openSpaces',
-        //     value: '/events/open-spaces',
-        // },
+        {
+            i18nKey: 'openSpaces',
+            value: '/events/open-spaces',
+        },
         { i18nKey: 'sprints', value: '/events/sprints' },
         {
             i18nKey: 'jobs',
