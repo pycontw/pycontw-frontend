@@ -217,6 +217,9 @@ export default {
                     events: slotsByBeginTime[beginTime],
                 }))
         },
+        log(msg) {
+            console.log(msg)
+        },
     },
     head() {
         return {

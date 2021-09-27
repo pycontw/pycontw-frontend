@@ -15,6 +15,20 @@
             <div class="font-bold">{{ value.title }}</div>
             <br v-if="!isCustomEvent" />
             <div v-if="byLine" class="font-medium text-sm">by {{ byLine }}</div>
+            <div>
+                <img
+                    v-if="metaLang"
+                    :src="metaLang"
+                    class="icon"
+                    alt="icon-location"
+                />
+                <img
+                    v-if="metaLevel"
+                    :src="metaLevel"
+                    class="icon"
+                    alt="icon-location"
+                />
+            </div>
             <div v-if="duration" class="font-medium text-sm">
                 {{ duration }}
             </div>
@@ -57,6 +71,14 @@ export default {
             format,
             options: { outputFormat: format },
             startPoint: this.$parseDate(this.$padTimezone(this.timelineBegin)),
+            icons: {
+                enen: require('~/static/img/schedule/icon-language-enen.svg'),
+                zhen: require('~/static/img/schedule/icon-language-zhen.svg'),
+                zhzh: require('~/static/img/schedule/icon-language-zhzh.svg'),
+                level1: require('~/static/img/schedule/icon-level-1.svg'),
+                level2: require('~/static/img/schedule/icon-level-2.svg'),
+                level3: require('~/static/img/schedule/icon-level-3.svg'),
+            },
         }
     },
     computed: {
@@ -68,6 +90,30 @@ export default {
         },
         byLine() {
             return this.value.speakers.join(', ')
+        },
+        metaLang() {
+            switch (this.value.language) {
+                case 'ENEN':
+                    return this.icons.enen
+                case 'ZHEN':
+                    return this.icons.zhen
+                case 'ZHZH':
+                    return this.icons.zhzh
+                default:
+                    return ''
+            }
+        },
+        metaLevel() {
+            switch (this.value.python_level) {
+                case 'NOVICE':
+                    return this.icons.level1
+                case 'INTERMEDIATE':
+                    return this.icons.level2
+                case 'EXPERIENCED':
+                    return this.icons.level3
+                default:
+                    return ''
+            }
         },
         duration() {
             const startTime = this.$datetimeToString(
@@ -124,5 +170,8 @@ export default {
 <style lang="postcss" scoped>
 .scheduleEvent__context {
     top: 132px;
+}
+.icon {
+    display: inline;
 }
 </style>
