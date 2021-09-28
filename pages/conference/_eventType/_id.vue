@@ -178,14 +178,6 @@ export default {
         Youtube,
         MarkdownRenderer,
     },
-    async fetch() {
-        await this.$store.dispatch('$getSpeechData', {
-            eventType: this.$route.params.eventType,
-            eventId: this.$route.params.id,
-        })
-        await this.processData()
-        this.$root.$emit('initTabs')
-    },
     data() {
         return {
             data: {
@@ -214,6 +206,14 @@ export default {
     },
     computed: {
         ...mapState(['speechData']),
+    },
+    async created() {
+        await this.$store.dispatch('$getSpeechData', {
+            eventType: this.$route.params.eventType,
+            eventId: this.$route.params.id,
+        })
+        await this.processData()
+        this.$root.$emit('initTabs')
     },
     methods: {
         processData() {
@@ -251,6 +251,7 @@ export default {
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
         },
+        // FIXME: cannot successfully insert the correct value into head()
         metaInfo() {
             return {
                 title: this.data.title,
@@ -274,9 +275,9 @@ export default {
             }
         },
     },
-    head() {
-        return this.metaInfo()
-    },
+    // head() {
+    //     return this.metaInfo()
+    // },
 }
 </script>
 
