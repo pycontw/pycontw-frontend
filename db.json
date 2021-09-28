@@ -284,8 +284,16 @@
                         {
                             "event_id": 20,
                             "event_type": "keynote",
-                            "title": "When everyone knows how to code in Python",
-                            "speakers": ["Tze-Jen Wei"],
+                            "title": {
+                                "en_us": "When everyone knows how to code in Python",
+                                "zh_hant": "當大家都會 Python 時"
+                            },
+                            "speakers": [
+                                {
+                                    "en_us": "Tze-Jen Wei",
+                                    "zh_hant": "魏澤人"
+                                }
+                            ],
                             "begin_time": "2021-10-02 00:55:00",
                             "end_time": "2021-10-02 01:55:00",
                             "is_remote": false,
@@ -362,8 +370,16 @@
                         {
                             "event_id": 21,
                             "event_type": "keynote",
-                            "title": "Building next-level AI assistants",
-                            "speakers": ["Yenny Cheung"],
+                            "title": {
+                                "en_us": "Building next-level AI assistants",
+                                "zh_hant": "打造下一個時代的 AI 助理"
+                            },
+                            "speakers": [
+                                {
+                                    "en_us": "Yenny Cheung",
+                                    "zh_hant": "Yenny Cheung"
+                                }
+                            ],
                             "begin_time": "2021-10-02 08:15:00",
                             "end_time": "2021-10-02 09:15:00",
                             "is_remote": false,
@@ -827,8 +843,16 @@
                         {
                             "event_id": 19,
                             "event_type": "keynote",
-                            "title": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                            "speakers": ["Marc-Andre Lemburg"],
+                            "title": {
+                                "en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                                "zh_hant": "想法、展望與現實：回望過去二十年的社群耕耘成果"
+                            },
+                            "speakers": [
+                                {
+                                    "en_us": "Marc-Andre Lemburg",
+                                    "zh_hant": "Marc-Andre Lemburg"
+                                }
+                            ],
                             "begin_time": "2021-10-03 07:30:00",
                             "end_time": "2021-10-03 08:30:00",
                             "is_remote": false,
