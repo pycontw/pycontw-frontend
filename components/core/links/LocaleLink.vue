@@ -1,5 +1,10 @@
 <template>
-    <nuxt-link :to="localePath(to)" :class="classObject">
+    <nuxt-link
+        :to="localePath(to)"
+        :class="classObject"
+        @mouseenter.native="onMouseEnter"
+        @mouseleave.native="onMouseLeave"
+    >
         <slot></slot>
     </nuxt-link>
 </template>
@@ -33,6 +38,14 @@ export default {
                 underline: this.underline,
                 '--customized': this.customized,
             }
+        },
+    },
+    methods: {
+        onMouseEnter() {
+            this.$emit('mouseenter')
+        },
+        onMouseLeave() {
+            this.$emit('mouseleave')
         },
     },
 }
