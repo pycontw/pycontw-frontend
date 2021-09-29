@@ -1,6 +1,6 @@
 <template>
     <div>
-        <core-h1 :title="$t('title')" class="mt-24"></core-h1>
+        <core-h1 :title="$t('title')" class="mt-12 mb-0"></core-h1>
         <div class="flex flex-row">
             <jobs-card-collection ref="jobsCardCollection" gather>
                 <jobs-card
@@ -13,7 +13,7 @@
                 ></jobs-card>
             </jobs-card-collection>
             <i18n-page-wrapper
-                class="pt-8 pb-12 px-0 sm:px-4 md:pr-8 md:pl-4"
+                class="pt-0 pb-12 px-0 sm:px-4 md:pr-8 md:pl-4"
                 custom-y
                 custom-x
             >
