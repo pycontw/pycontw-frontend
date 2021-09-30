@@ -20,12 +20,18 @@ export default genI18nMessages({
                 linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
             },
             {
-                title: 'Financial',
+                title: 'HackMD Note',
+                description: 'Checkout our collaborative note on HackMD.',
+                linkTitle: 'Learn More',
+                linkHref: 'https://hackmd.io/@pycontw/2021',
+            },
+            {
+                title: 'Open Space',
                 description:
-                    'We actively encourage people to apply for financial aid and ' +
-                    'welcome applications from students.',
-                linkTitle: 'Apply Now',
-                linkTo: '/registration/financial-aid',
+                    'Enjoy the Open Space & make some new friends, ' +
+                    'discuss any topic you’d like at the same time.',
+                linkTitle: 'Learn More',
+                linkHref: 'https://hackmd.io/W8rybslFTey1M0zublqHAQ',
             },
             {
                 title: 'Blog',
@@ -78,11 +84,17 @@ export default genI18nMessages({
                 linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
             },
             {
-                title: '財務補助申請',
+                title: 'HackMD 共筆',
+                description: '線上共同筆記，歡迎一起來協作！',
+                linkTitle: '前往看看',
+                linkHref: 'https://hackmd.io/@pycontw/2021',
+            },
+            {
+                title: 'Open Space',
                 description:
-                    '只要你有需要都可以申請門票補助，我們盡力協助讓更多人能藉由補助參與會議。',
-                linkTitle: '線上申請',
-                linkTo: '/registration/financial-aid',
+                    '開放空間讓你能用任何你喜歡的方式定義、組織、規劃你自己的小聚，想聊技術或是聊八卦都可以！',
+                linkTitle: '前往看看',
+                linkHref: 'https://hackmd.io/W8rybslFTey1M0zublqHAQ',
             },
             {
                 title: 'Blog',
