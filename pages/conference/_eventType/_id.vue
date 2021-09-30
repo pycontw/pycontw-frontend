@@ -223,10 +223,8 @@ export default {
     },
     methods: {
         processData() {
-            const beginTime = this.getDatetimeFromString(
-                this.speechData.begin_time,
-            )
-            const endTime = this.getDatetimeFromString(this.speechData.end_time)
+            const beginTime = new Date(this.speechData.begin_time)
+            const endTime = new Date(this.speechData.end_time)
 
             this.data = {
                 ...this.speechData,
@@ -235,22 +233,13 @@ export default {
                 dateTag: this.getDateTag(beginTime),
             }
         },
-        getDatetimeFromString(datetimeString) {
-            const datetimeUtc = new Date(datetimeString)
-            const offset = new Date().getTimezoneOffset()
-            const datetime = new Date(datetimeUtc - offset)
-            return datetime
-        },
         getDateTag(beginTime) {
-            const month = beginTime.getMonth() + 1
-            const date = beginTime.getDate()
-            if (month === 10 && date === 2) {
+            const dayOneMidnight = new Date('2021-10-02 16:00:00')
+            if (beginTime < dayOneMidnight) {
                 return 'day1'
-            }
-            if (month === 10 && date === 3) {
+            } else {
                 return 'day2'
             }
-            return ''
         },
         getTime: (datetime) => {
             const hour = ('0' + datetime.getHours()).slice(-2)
