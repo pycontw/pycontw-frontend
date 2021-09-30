@@ -21,7 +21,7 @@
             </div>
 
             <tabs class="keynote__tabs">
-                <tab :title="$t('bio')">
+                <tab :title="$t('terms.bio')">
                     <div class="pb-4 whitespace-pre-line">
                         {{ keynote.speaker[$makeKey(locale, 'bio')] }}
                         <div class="flex pt-4">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </tab>
-                <tab :title="$t('speech')">
+                <tab :title="$t('terms.intro')">
                     <div class="pb-4 whitespace-pre-line">
                         {{ keynote.session[$makeKey(locale, 'description')] }}
                         <div
@@ -91,6 +91,15 @@
                     <iframe
                         class="keynote__slido"
                         :src="keynote.slido"
+                    ></iframe>
+                </tab>
+                <tab
+                    v-if="!!keynote.hackmd_embed_link.length"
+                    :title="$t('terms.note')"
+                >
+                    <iframe
+                        class="keynote__hackmd"
+                        :src="keynote.hackmd_embed_link"
                     ></iframe>
                 </tab>
             </tabs>
@@ -199,7 +208,8 @@ export default {
     @apply my-10;
 }
 
-.keynote__slido {
+.keynote__slido,
+.keynote__hackmd {
     @apply w-full h-96;
 }
 
