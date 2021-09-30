@@ -93,6 +93,12 @@
                         :src="keynote.slido"
                     ></iframe>
                 </tab>
+                <tab v-if="!!keynote.hackmd_embed_link.length" title="HackMD">
+                    <iframe
+                        class="keynote__hackmd"
+                        :src="keynote.hackmd_embed_link"
+                    ></iframe>
+                </tab>
             </tabs>
         </div>
     </i18n-page-wrapper>
@@ -199,7 +205,8 @@ export default {
     @apply my-10;
 }
 
-.keynote__slido {
+.keynote__slido,
+.keynote__hackmd {
     @apply w-full h-96;
 }
 

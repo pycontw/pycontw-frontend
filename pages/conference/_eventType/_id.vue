@@ -149,6 +149,12 @@
                     :src="data.slido_embed_link"
                 ></iframe>
             </tab>
+            <tab v-if="!!data.hackmd_embed_link" title="HackMD">
+                <iframe
+                    class="speech__hackmd"
+                    :src="data.hackmd_embed_link"
+                ></iframe>
+            </tab>
         </tabs>
     </i18n-page-wrapper>
 </template>
@@ -340,7 +346,8 @@ export default {
     color: #9387ff;
 }
 
-.speech__slido {
+.speech__slido,
+.speech__hackmd {
     @apply w-full h-96;
 }
 </style>
