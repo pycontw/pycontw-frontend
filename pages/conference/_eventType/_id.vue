@@ -57,7 +57,7 @@
         </div>
 
         <tabs class="speech__tabs">
-            <tab :title="$t('terms.speech')">
+            <tab :title="$t('terms.intro')">
                 <div class="break-words">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.abstract') }}
@@ -149,7 +149,7 @@
                     :src="data.slido_embed_link"
                 ></iframe>
             </tab>
-            <tab v-if="!!data.hackmd_embed_link" title="HackMD">
+            <tab v-if="!!data.hackmd_embed_link" :title="$t('terms.note')">
                 <iframe
                     class="speech__hackmd"
                     :src="data.hackmd_embed_link"
