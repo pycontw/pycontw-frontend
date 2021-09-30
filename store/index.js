@@ -8,6 +8,7 @@ export const state = () => ({
     youtubeInfo: [],
     speechesData: [],
     speechData: {},
+    pycastData: [],
 })
 
 export const mutations = {
@@ -18,6 +19,7 @@ export const mutations = {
     setYoutubeInfo: set('youtubeInfo'),
     setSpeechesData: set('speechesData'),
     setSpeechData: set('speechData'),
+    setPycastData: set('pycastData'),
 }
 
 export const actions = {
@@ -61,5 +63,9 @@ export const actions = {
         const endpoint = `/api/events/speeches/${eventType}/${eventId}/`
         const speechData = await this.$http.$get(endpoint)
         commit('setSpeechData', speechData)
+    },
+    async $getPycastData({ commit }) {
+        const pycastList = await this.$http.$get('/api/events/pycast/')
+        commit('setPycastData', pycastList)
     },
 }
