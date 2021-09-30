@@ -363,6 +363,7 @@ export default {
                 onedegree: { name: '🦸｜onedegree' },
                 ctbc: { name: '🦸｜中國信託' },
                 tagtoo: { name: '🦸｜塔圖科技' },
+                tenlong: { name: '🦸｜天瓏書局' },
             },
         }
     },
