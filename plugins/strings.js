@@ -22,7 +22,9 @@ export const datetimeToString = (source, options = defaultDatetimeOptions) => {
         options.inputFormat || defaultDatetimeOptions.inputFormat
     const outputFormat =
         options.outputFormat || defaultDatetimeOptions.outputFormat
-    return dayjs(source, inputFormat).format(outputFormat)
+
+    const offset = new Date().getTimezoneOffset()
+    return dayjs(source, inputFormat).subtract(offset, 'm').format(outputFormat)
 }
 
 export const parseDate = (
