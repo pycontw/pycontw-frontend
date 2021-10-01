@@ -162,7 +162,7 @@ export default {
 }
 
 .speechCard__title {
-    @apply font-serif font-bold mt-2;
+    @apply font-serif font-bold mt-2 mb-8;
     font-size: 14px;
     line-height: 30px;
     color: #c2a53a;
