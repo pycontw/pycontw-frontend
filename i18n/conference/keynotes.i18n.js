@@ -9,9 +9,11 @@ export default genI18nMessages({
             'Each keynote speaker is considered one of the most important figures ' +
             'in their respective fields. ' +
             'They share their professional experience and the image of their domain’s future.',
-        bio: 'Bio',
-        speech: 'Speech',
-        video: 'Video',
+        terms: {
+            bio: 'Bio',
+            intro: 'Intro',
+            note: 'Note',
+        },
     },
     'zh-hant': {
         title: '主題演講',
@@ -19,8 +21,10 @@ export default genI18nMessages({
             '為期兩天的議程中，將有三位講者於不同場次進行主題演講（Keynote）。' +
             '主題演講講者都是在全球而言各領域非常頂尖的人士；' +
             '他們將帶來對自己的領域、專案的經驗分享，或者對於未來數年發展的方向與想像。',
-        bio: '講者',
-        speech: '演講',
-        video: '錄影',
+        terms: {
+            bio: '講者',
+            intro: '介紹',
+            note: '共筆',
+        },
     },
 })

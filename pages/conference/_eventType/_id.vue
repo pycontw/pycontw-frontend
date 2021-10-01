@@ -57,7 +57,7 @@
         </div>
 
         <tabs class="speech__tabs">
-            <tab :title="$t('terms.speech')">
+            <tab :title="$t('terms.intro')">
                 <div class="break-words">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.abstract') }}
@@ -149,6 +149,12 @@
                     :src="data.slido_embed_link"
                 ></iframe>
             </tab>
+            <tab v-if="!!data.hackmd_embed_link" :title="$t('terms.note')">
+                <iframe
+                    class="speech__hackmd"
+                    :src="data.hackmd_embed_link"
+                ></iframe>
+            </tab>
         </tabs>
     </i18n-page-wrapper>
 </template>
@@ -178,14 +184,6 @@ export default {
         Youtube,
         MarkdownRenderer,
     },
-    async fetch() {
-        await this.$store.dispatch('$getSpeechData', {
-            eventType: this.$route.params.eventType,
-            eventId: this.$route.params.id,
-        })
-        await this.processData()
-        this.$root.$emit('initTabs')
-    },
     data() {
         return {
             data: {
@@ -214,6 +212,14 @@ export default {
     },
     computed: {
         ...mapState(['speechData']),
+    },
+    async created() {
+        await this.$store.dispatch('$getSpeechData', {
+            eventType: this.$route.params.eventType,
+            eventId: this.$route.params.id,
+        })
+        await this.processData()
+        this.$root.$emit('initTabs')
     },
     methods: {
         processData() {
@@ -251,6 +257,7 @@ export default {
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
         },
+        // FIXME: cannot successfully insert the correct value into head()
         metaInfo() {
             return {
                 title: this.data.title,
@@ -274,9 +281,9 @@ export default {
             }
         },
     },
-    head() {
-        return this.metaInfo()
-    },
+    // head() {
+    //     return this.metaInfo()
+    // },
 }
 </script>
 
@@ -339,7 +346,8 @@ export default {
     color: #9387ff;
 }
 
-.speech__slido {
+.speech__slido,
+.speech__hackmd {
     @apply w-full h-96;
 }
 </style>

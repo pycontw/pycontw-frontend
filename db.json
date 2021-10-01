@@ -284,8 +284,16 @@
                         {
                             "event_id": 20,
                             "event_type": "keynote",
-                            "title": "When everyone knows how to code in Python",
-                            "speakers": ["Tze-Jen Wei"],
+                            "title": {
+                                "en_us": "When everyone knows how to code in Python",
+                                "zh_hant": "當大家都會 Python 時"
+                            },
+                            "speakers": [
+                                {
+                                    "en_us": "Tze-Jen Wei",
+                                    "zh_hant": "魏澤人"
+                                }
+                            ],
                             "begin_time": "2021-10-02 00:55:00",
                             "end_time": "2021-10-02 01:55:00",
                             "is_remote": false,
@@ -362,8 +370,16 @@
                         {
                             "event_id": 21,
                             "event_type": "keynote",
-                            "title": "Building next-level AI assistants",
-                            "speakers": ["Yenny Cheung"],
+                            "title": {
+                                "en_us": "Building next-level AI assistants",
+                                "zh_hant": "打造下一個時代的 AI 助理"
+                            },
+                            "speakers": [
+                                {
+                                    "en_us": "Yenny Cheung",
+                                    "zh_hant": "Yenny Cheung"
+                                }
+                            ],
                             "begin_time": "2021-10-02 08:15:00",
                             "end_time": "2021-10-02 09:15:00",
                             "is_remote": false,
@@ -827,8 +843,16 @@
                         {
                             "event_id": 19,
                             "event_type": "keynote",
-                            "title": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                            "speakers": ["Marc-Andre Lemburg"],
+                            "title": {
+                                "en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                                "zh_hant": "想法、展望與現實：回望過去二十年的社群耕耘成果"
+                            },
+                            "speakers": [
+                                {
+                                    "en_us": "Marc-Andre Lemburg",
+                                    "zh_hant": "Marc-Andre Lemburg"
+                                }
+                            ],
                             "begin_time": "2021-10-03 07:30:00",
                             "end_time": "2021-10-03 08:30:00",
                             "is_remote": false,
@@ -1173,6 +1197,7 @@
                 "slides": "https://google.com"
             },
             "slido": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "social_item": {
                 "linkedin": "https://google.com",
@@ -1197,6 +1222,7 @@
                 "slides": ""
             },
             "slido": "",
+            "hackmd_embed_link": "",
             "youtube_id": "",
             "social_item": {
                 "linkedin": "https://google.com",
@@ -1217,6 +1243,7 @@
             "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1245,6 +1272,7 @@
             "detailed_description": "**Introduction of ourselves**\r\nIn this talk, we will briefly introduce the place where we come from.",
             "slide_link": "",
             "slido_embed_link": "",
+            "hackmd_embed_link": "",
             "speakers": [
                 {
                     "facebook_profile_url": "https://www.facebook.com/",
@@ -1280,6 +1308,7 @@
             "detailed_description": "**Introduction of AWS**\r\nIn this talk, I will briefly introduce AWS",
             "slide_link": "",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1308,6 +1337,7 @@
             "detailed_description": "**Introduction of Facebook**\r\nIn this talk, I will briefly introduce Facebook",
             "slide_link": "",
             "slido_embed_link": "",
+            "hackmd_embed_link": "",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1336,6 +1366,7 @@
             "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1364,6 +1395,7 @@
             "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1392,6 +1424,7 @@
             "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1420,6 +1453,7 @@
             "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1448,6 +1482,7 @@
             "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
@@ -1476,6 +1511,7 @@
             "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
             "slide_link": "https://www.facebook.com/",
             "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {

@@ -12,7 +12,7 @@
             <slot name="prepend"></slot>
         </div>
         <div class="scheduleEvent__context sticky">
-            <div class="font-bold">{{ value.title }}</div>
+            <div class="font-bold">{{ getValueByLocale(value.title) }}</div>
             <br v-if="!isCustomEvent" />
             <div v-if="byLine" class="font-medium text-sm">by {{ byLine }}</div>
             <div>
@@ -89,7 +89,9 @@ export default {
             return ['custom', 'keynote'].includes(this.value.event_type)
         },
         byLine() {
-            return this.value.speakers.join(', ')
+            return this.value.speakers
+                .map((speaker) => this.getValueByLocale(speaker))
+                .join(', ')
         },
         metaLang() {
             switch (this.value.language) {
@@ -148,7 +150,7 @@ export default {
                 speakers,
             } = this.value
             if (eventType === 'keynote') {
-                const keynoteSpeakerId = speakers[0].split(' ').join('_')
+                const keynoteSpeakerId = speakers[0].en_us.split(' ').join('_')
                 return `/conference/keynotes#${keynoteSpeakerId}`
             } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
                 return `/conference/${eventType}/${eventId}/`
@@ -162,6 +164,16 @@ export default {
             const diff = this.$parseDate(time).diff(this.startPoint, 'minute')
             const unit = 5
             return parseInt(`${diff / unit}`, 10) + 1
+        },
+        getValueByLocale(data) {
+            // Get value from the data with i18n based on current locale setting.
+            // Note that the value of `title` and each item of `speakers` for keynote
+            // data is an object. Each object has two keys: 'en_us' & 'zh_hant'.
+            if (typeof data === 'object') {
+                const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
+                return data[localeMap[this.$i18n.locale]]
+            }
+            return data
         },
     },
 }
