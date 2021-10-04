@@ -9,9 +9,15 @@
                 <img :src="speaker.thumbnail_url" :alt="speaker.name" />
             </div>
         </div>
-        <p class="speechCard__speakerNames">
-            {{ speakers.map((speaker) => speaker.name).join(' • ') }}
-        </p>
+        <div class="speechCard__sub">
+            <p class="speechCard__speakerNames">
+                {{ speakers.map((speaker) => speaker.name).join(' • ') }}
+            </p>
+            <div class="speechCard__icon">
+                <img :src="icon.level[level]" />
+                <img :src="icon.lang[lang]" />
+            </div>
+        </div>
         <div class="speechCard__title">{{ title }}</div>
         <div class="speechCard__category">{{ $t(`category.${category}`) }}</div>
     </locale-link>
@@ -33,14 +39,32 @@ export default {
         category: { type: String, default: '' },
         speakers: { type: Array, default: () => [] },
         shouldShow: { type: Boolean, default: true },
+        level: { type: String, default: null },
+        lang: { type: String, default: null },
         to: { type: String, default: '/' },
+    },
+    data() {
+        return {
+            icon: {
+                lang: {
+                    ENEN: require('~/static/img/icons/lang/ENEN.svg'),
+                    ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
+                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'),
+                },
+                level: {
+                    NOVICE: require('~/static/img/icons/level/novice.svg'),
+                    INTERMEDIATE: require('~/static/img/icons/level/intermediate.svg'),
+                    EXPERIENCED: require('~/static/img/icons/level/experienced.svg'),
+                },
+            },
+        }
     },
 }
 </script>
 
 <style lang="postcss" scoped>
 .speechCard {
-    @apply relative inline-flex flex-col w-full break-words;
+    @apply relative inline-flex flex-col w-full break-words transition;
     min-height: 180px;
     border-radius: 24px;
     border: 2px solid #c2a53a;
@@ -68,18 +92,40 @@ export default {
     height: 100%;
 }
 
+.speechCard__sub {
+    @apply flex flex-col md:flex-row justify-between;
+    @apply my-0.5 sm:my-2;
+    color: #c2a53a;
+    & .speechCard__icon {
+        @apply flex-row;
+        height: 13px;
+        @media (min-width: 415px) {
+            height: 26px;
+        }
+        /* equivalent to {color: #c2a53a} for svg */
+        filter: invert(65%) sepia(76%) saturate(366%) hue-rotate(9deg)
+            brightness(87%) contrast(88%);
+    }
+    & img {
+        @apply relative inline h-full -top-2 sm:top-0;
+    }
+}
+.speechCard:hover > .speechCard__sub {
+    color: #000;
+    & .speechCard__icon {
+        /* equivalent to {color: black} for svg */
+        filter: brightness(0%);
+    }
+}
+
 .speechCard__speakerNames {
-    @apply font-serif font-bold my-0.5 sm:my-2;
+    @apply font-serif font-bold;
     @apply origin-top-left scale-75;
     font-size: 12px;
-    color: #c2a53a;
     @media (min-width: 415px) {
         @apply scale-100;
         font-size: 14px;
     }
-}
-.speechCard:hover > .speechCard__speakerNames {
-    color: #000;
 }
 
 .speechCard__title {

@@ -44,6 +44,8 @@
                     :title="speech.title"
                     :category="speech.category"
                     :speakers="speech.speakers"
+                    :lang="speech.language"
+                    :level="speech.python_level"
                     :to="`/conference/${speech.event_type}/${speech.id}/`"
                 >
                 </speech-card>

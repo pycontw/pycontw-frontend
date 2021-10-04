@@ -15,6 +15,10 @@
             <div class="font-bold">{{ getValueByLocale(value.title) }}</div>
             <br v-if="!isCustomEvent" />
             <div v-if="byLine" class="font-medium text-sm">by {{ byLine }}</div>
+            <div class="scheduleEvent__icon">
+                <img :src="icon.level[value.python_level]" />
+                <img :src="icon.lang[value.language]" />
+            </div>
             <div v-if="duration" class="font-medium text-sm">
                 {{ duration }}
             </div>
@@ -57,6 +61,18 @@ export default {
             format,
             options: { outputFormat: format },
             startPoint: this.$parseDate(this.$padTimezone(this.timelineBegin)),
+            icon: {
+                lang: {
+                    ENEN: require('~/static/img/icons/lang/ENEN.svg'),
+                    ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
+                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'),
+                },
+                level: {
+                    NOVICE: require('~/static/img/icons/level/novice.svg'),
+                    INTERMEDIATE: require('~/static/img/icons/level/intermediate.svg'),
+                    EXPERIENCED: require('~/static/img/icons/level/experienced.svg'),
+                },
+            },
         }
     },
     computed: {
@@ -136,5 +152,13 @@ export default {
 <style lang="postcss" scoped>
 .scheduleEvent__context {
     top: 132px;
+}
+
+.scheduleEvent__icon > img {
+    @apply inline transition;
+    filter: brightness(0) invert(1);
+}
+.scheduleEvent__context:hover > .scheduleEvent__icon > img {
+    filter: brightness(0%);
 }
 </style>
