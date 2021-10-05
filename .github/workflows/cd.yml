@@ -34,6 +34,12 @@ jobs:
 
             -   name: Build 👷🏽
                 run: npm run generate
+                env:
+                    ROUTER_BASE: /pycontw-2021/  # repo name
+                    BUILD_TARGET: static
+                    API_URL_BROWSER: https://staging.pycon.tw/prs
+                    AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+                    GOOGLE_TAG_MANAGER_ID: ${{ secrets.GOOGLE_TAG_MANAGER_ID }}
 
             -   name: Deploy 🚀
                 uses: JamesIves/github-pages-deploy-action@3.7.1
