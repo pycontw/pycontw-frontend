@@ -210,7 +210,8 @@ export default {
 
 .keynote__slido,
 .keynote__hackmd {
-    @apply w-full h-96;
+    @apply w-full;
+    height: 800px;
 }
 
 .keynote__extLink {
