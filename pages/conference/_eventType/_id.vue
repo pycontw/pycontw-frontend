@@ -337,6 +337,7 @@ export default {
 
 .speech__slido,
 .speech__hackmd {
-    @apply w-full h-96;
+    @apply w-full;
+    height: 800px;
 }
 </style>
