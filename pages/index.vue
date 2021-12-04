@@ -46,21 +46,19 @@
                         md:flex-row
                     "
                 >
-                    <!-- dummy, delete it if the button is needed to be displayed -->
-                    <div></div>
-
-                    <!-- <text-button
-                        to="/sponsor"
+                    <text-button
+                        href="https://forms.gle/DTGfR5znmQCk1PW96"
                         class="hidden md:block md:mb-0 md:self-center"
                         large
                     >
-                        {{ $t('sponsor') }}
+                        {{ $t('joinUs') }}
                     </text-button>
                     <text-button
-                        to="/sponsor"
+                        href="https://forms.gle/DTGfR5znmQCk1PW96"
                         class="block mb-8 self-start md:hidden"
-                        >{{ $t('sponsor') }}</text-button
-                    > -->
+                    >
+                        {{ $t('joinUs') }}
+                    </text-button>
                     <landing-focus-slogan />
                 </div>
             </div>
@@ -115,7 +113,7 @@ import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH2 from '~/components/core/titles/H2'
-// import TextButton from '~/components/core/buttons/TextButton'
+import TextButton from '~/components/core/buttons/TextButton'
 import {
     SponsorCardCollection,
     SponsorModal,
@@ -133,7 +131,7 @@ export default {
     i18n,
     name: 'PageIndex',
     components: {
-        // TextButton,
+        TextButton,
         I18nPageWrapper,
         LandingFocusSlogan,
         LandingFocusInfo,
@@ -212,6 +210,10 @@ export default {
 
 .text-golden {
     color: #c2a53a;
+}
+
+.text-purple {
+    color: #8c83f5;
 }
 
 .bg-blue-primary {
