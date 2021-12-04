@@ -17,6 +17,26 @@
                     10th Anniversary
                 </div>
                 <landing-focus-info class="my-12 md:my-8" />
+
+                <div
+                    class="
+                        w-full
+                        justify-between
+                        items-center
+                        md:flex-row
+                        mb-12
+                        md:mb-8
+                    "
+                >
+                    <strong class="text-golden text-xl">
+                        PyCon APAC 2022 in Taiwan
+                    </strong>
+                    <br />
+                    <strong class="text-purple text-xl">
+                        Join us as a volunteer!
+                    </strong>
+                </div>
+
                 <div
                     class="
                         w-full
