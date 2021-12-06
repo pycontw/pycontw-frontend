@@ -83,12 +83,13 @@
                         >Slides
                     </ext-link>
                 </div>
-                <youtube
-                    v-if="!!data.youtube_id"
-                    :video-id="data.youtube_id"
-                    class="mt-4"
-                >
-                </youtube>
+
+                <div v-if="!!data.youtube_id" class="mt-4">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.video') }}
+                    </p>
+                    <youtube :video-id="data.youtube_id"></youtube>
+                </div>
             </tab>
             <tab :title="$t('terms.bio')">
                 <div

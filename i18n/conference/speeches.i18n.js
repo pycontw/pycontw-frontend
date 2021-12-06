@@ -66,6 +66,7 @@ export default genI18nMessages({
             intro: 'Intro',
             abstract: 'Abstract',
             description: 'Description',
+            video: 'Video',
         },
     },
     'zh-hant': {
@@ -128,6 +129,7 @@ export default genI18nMessages({
             intro: '介紹',
             abstract: '摘要',
             description: '說明',
+            video: '影片',
         },
     },
 })
