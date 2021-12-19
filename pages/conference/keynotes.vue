@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </tab>
-                <tab :title="$t('terms.intro')">
+                <tab :title="$t('terms.talk')">
                     <div class="pb-4 whitespace-pre-line">
                         {{ keynote.session[$makeKey(locale, 'description')] }}
                         <div

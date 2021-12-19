@@ -11,7 +11,7 @@ export default genI18nMessages({
             'They share their professional experience and the image of their domain’s future.',
         terms: {
             bio: 'Bio',
-            intro: 'Intro',
+            talk: 'Talk',
             note: 'Note',
         },
     },
@@ -24,6 +24,7 @@ export default genI18nMessages({
         terms: {
             bio: '講者',
             intro: '介紹',
+            talk: '演講',
             note: '共筆',
         },
     },
