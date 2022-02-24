@@ -27,7 +27,7 @@
             </template>
             <template #contact>
                 <ext-link
-                    href="mailto:sponsorship@pycon.tw"
+                    href="mailto:sponsorship@python.tw"
                     highlight
                     underline
                     >{{ $t('terms.contact') }}</ext-link
