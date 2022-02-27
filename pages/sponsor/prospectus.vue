@@ -21,8 +21,8 @@
                     "
                 >
                     <template #mail>
-                        <ext-link href="mailto:sponsorship@pycon.tw" highlight>
-                            sponsorship@pycon.tw
+                        <ext-link href="mailto:sponsorship@python.tw" highlight>
+                            sponsorship@python.tw
                         </ext-link>
                     </template>
                 </i18n>
