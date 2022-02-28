@@ -4,15 +4,16 @@ export default genI18nMessages({
     'en-us': {
         title: 'Sprints',
         intro:
-            'Sprints are held out of the main conference (9/26 10:00 ~ 17:00). ' +
+            'There will be two sprint events for PyCon APAC 2022, ' +
+            'the first event will be held on 3/13 (Sun.) 10:00 ~ 17:00 (TST).\n\n' +
             'A sprint event gathers open source project owners, contributors, ' +
-            'and people who want to contribute but trying to find a place to start. ' +
+            'and people who want to contribute but are trying to find a place to start. ' +
             'During a sprint, project hosts bring their unresolved issues or ' +
             'new features under development and share with everyone. ' +
             'You can join a project of your choice, or bring your own project here!\n\n' +
             'For those who already know fundamentals of Python and ' +
             'want to participate open source projects, ' +
-            'but doesn’t know where to start, sprints are great opportunities to ' +
+            'but don’t know where to start, sprints are great opportunities to ' +
             'get yourself involved! As for project hosts, ' +
             'this is a great chance for you to find people with similar interests, ' +
             'having face-to-face interactions with contributors, ' +
@@ -20,18 +21,21 @@ export default genI18nMessages({
             'Be prepared to get your hands dirty!',
         mode: 'Mode',
         modeDescriptions: [
-            'Due to COVID-19, we will host the event on Gather Town. ' +
+            'Due to COVID-19, we will host the event in Gather Town. ' +
                 'The project hosts can keep communicating with the attendees online. ' +
-                'For each project, we would build a unique room on gather space. ' +
-                'We also have a spare Google Meet link if we face a poor internet connection.',
-            'Please RSVP on our {kktix}.',
-            'Check projects on {hackmd}.',
+                'For each project, we would build a unique room in Gather Town space. ' +
+                'We also prepare a Google Meet link for a backup plan if we face a poor internet connection.',
+            'Please be aware, due to the policy of Gather Town, ' +
+                'you have to be 18 years old or above to join this event.',
+            'Join us now on {kktix}.',
+            'You can find the project list on {hackmd}.',
         ],
     },
     'zh-hant': {
         title: '衝刺開發 (Sprints)',
         intro:
-            '衝刺開發 (Sprints) 安排在大會的兩天之外 (9/26 10:00 ~ 17:00)。' +
+            'PyCon APAC 2022 將會有兩次的衝刺開發 (Sprint)，' +
+            '第一次的活動時間是 3/13 (日) 10:00 ~ 16:30。' +
             '衝刺開發是一個聚集開源專案負責人、貢獻者、想貢獻但不知道從何開始的人的活動。' +
             '在活動中，將會有專案領導人帶著他們專案待解決的問題、待開發的功能來現場分享與解說。' +
             '你可以選擇加入自己喜歡的專案，或是帶著自己的專案和大家分享！\n\n' +
@@ -44,7 +48,8 @@ export default genI18nMessages({
             '今年由於疫情的因素我們將 Sprints 搬至 Gather Town 舉行，' +
                 '讓專案主持人和會眾能放心的在線上盡情的與專案主持人進行衝刺開發。' +
                 '對每一個專案，我們會開設在 Gather 的場地內的一個專屬房間，在此專屬房間一起討論，' +
-                '並有 Google Meet 連結作為連線不佳時的預備用。',
+                '並有 Google Meet 連結作為連線不佳時的備用方案。',
+            '請留意，因應 Gather Town 的政策，本次活動僅開放年滿 18 歲以上的會眾參加。',
             '報名方式請至 {kktix} 報名。',
             '專案列表可參考 {hackmd}。',
         ],
