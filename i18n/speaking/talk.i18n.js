@@ -5,17 +5,17 @@ export default genI18nMessages({
         title: 'How to Propose a Talk?',
         intro: [
             'For general proposal calling information, see {cfp}. ',
-            'First of all, thank you for contributing to PyCon Taiwan! ' +
+            'First of all, thank you for your interest in speaking at PyCon APAC 2022! ' +
                 'The following will help you submit a successful proposal. ' +
-                'In the following, we are going to provide you the tips to make your proposal strong ' +
-                'and informative and get the best chance of acceptance.',
+                'In the following, we will provide tips to make your proposal strong ' +
+                'and informative to increase the chance of your proposal to be accepted. ',
         ],
 
         tips: [
             'What’s your topic?',
             'Who is your target audience?',
-            'What will the audience gain after your talk?',
-            'How will you organize your time slot?',
+            'What will the audience gain after listening to your talk?',
+            'How will you structure your talk to keep it within the time limit?',
         ],
 
         'requiredFields-description':
@@ -27,37 +27,43 @@ export default genI18nMessages({
             'Language',
             'Abstract',
             'Python Level',
-            'Objectives',
+            'Objective',
             'Detailed Description (optional)',
             'Outline (optional)',
             'Supplementary (optional)',
-            'Recording Policy',
+            'Recording Release',
+            'First time speaker',
             'Slide Link (optional)',
+            'Referral policy',
+            'Preferred event time',
+            'Living in Taiwan',
         ],
         'requiredFields-encouragement':
-            'Hmmm, that is a lot. Well, if you skip all optional fields, it would only take you about 500 characters. ' +
-            'But we encourage you to fill most of the fields to help reviewers understand your proposal.',
+            'Hmmm, that might seem a lot, but if you skip all optional fields, it would only take you about 500 letters to write your proposal. ' +
+            'We would still like to encourage you to complete the entire form to help reviewers better understand your proposal.' +
+            '',
         'requiredFields-reviewOnly':
-            'Some of the fields are for reviewers only, so don’t worry about spoilers:',
+            'Some of the fields are for proposal reviewers only, so there is no need to worry about spoilers:',
         'requiredFields-reviewOnlyFields': [
             'Objectives',
             'Outline',
             'Supplementary',
         ],
         'requiredFields-summaries': [
-            'If you are a very experienced speaker, you can directly enter the {myPyCon} page to propose！',
-            'Next, we will give more detailed advice on each aspect.',
+            'If you are an experienced speaker, you can directly enter the {myPyCon} page to start working on your proposal!',
+            'If this is your first time submitting a talk proposal or don’t quite understand how PyCon talks are structured, ' +
+                'read on for more detailed advice.',
         ],
 
         'advice-title': 'Topics and General Advice',
         'advice-previousConf':
-            'To pick a topic that suits PyCon Taiwan, ' +
-            'you can first find out what accepted talks are about from the previous PyCons:',
+            'To help you pick a topic that will be suitable for PyCon APAC 2022, ' +
+            'you can first find out the accepted talks from the previous PyCon APAC and PyCon Taiwan:',
 
         'advice-goodIdea-title': 'Good Ideas',
         'advice-goodIdea-ideas': [
             [
-                'The abstract or detail description should include but not limited to:',
+                'The abstract or detailed description should answer all of the following questions:',
                 [
                     'Who is the intended audience?',
                     'What should they know before the talk?',
@@ -66,18 +72,19 @@ export default genI18nMessages({
                 ],
             ],
             [
-                'The abstract and the content are as close as possible to the title.',
+                'The abstract and the content of the talk should be related to the title of the talk.',
             ],
             [
-                'Content must be original. Should let the audience and reviewer understand which part is original content in your proposal.',
+                'Talk content must be original and not replicated from some other talks. ' +
+                    'Please let the reviewer understand which part of your talks contain original content developed by you.',
             ],
             [
-                'Enumerate each of your talk section in outline with estimated time length.',
+                'Outline major sections of your talk along with the estimated time you will spend in each of these sections.',
             ],
             [
-                'If your topic is not that familiar to normal Pythonistas, ' +
-                    'make sure you provide sufficient information through links of blog posts, wiki, source codes, ' +
-                    'or materials that help the understanding of your content.',
+                'If you feel that your topic will not be familiar to most Pythonistas, ' +
+                    'be sure to provide additional references such as links to wiki, source codes, ' +
+                    'or materials that will help them better understand your talk.',
             ],
         ],
 
@@ -86,66 +93,66 @@ export default genI18nMessages({
             [
                 'Avoid infomercials.',
                 [
-                    'Try not to merely sell your products or introduce how to use them in your talk. ' +
-                        'However, we do welcome talks about how your company solves the problem or your open source project ' +
-                        'that can benefit the general attendees.',
+                    'Try not to focus on selling your products or introduce how to use them in your talk. ' +
+                        'However, we do welcome talks about how your company solved a problem previously or how your open source project ' +
+                        'can be useful to the attendees.',
                 ],
             ],
             [
-                'Don’t assume everyone in the review committee knows you. Please always submit a full proposal.',
+                'Don’t assume that everyone in the review committee knows who you are. ' +
+                    'Always submit a complete proposal with all the information that you are able to provide.',
             ],
             [
                 'Avoiding plagiarism. We welcome all forms of sharing, ' +
-                    'but it should be clear which sections are original and which are the citation of previous work.',
+                    'but it should be clear which sections are original and which are citations from previous work.',
             ],
         ],
 
         'chooseLevel-title': 'How to Choose the Python Level?',
         'chooseLevel-descriptions': [
-            'It is {important} for you to choose an appropriate Python level.',
-            'Your talk won’t be simply accepted because it is either super hard or deadly simple. ' +
-                'The acceptance correlates with the specified Python level and your targeted audience.',
-            'If your talk is for Python first-timers and it is about your Python learning experience and ' +
-                'how you solve some tricky issues you face. ' +
-                'This is a proper proposal. If your talk is about inspecting the Python memory usage and ' +
-                'coordinating two GC systems together with reusing pointers, ' +
-                'and you specify your talk as being novice or intermediate, it is not a good idea.',
-            'For the extreme conditions (like topics above), it will be easy to decide. ' +
-                'But topics lie somewhere in between are not. ' +
-                'Therefore, there are more descriptions below to help you find the proper level.',
+            'It is {important} for you to choose an appropriate Python level for your talk.',
+            'Your talk won’t be readily accepted because it is either super hard or deadly simple. ' +
+                'Its acceptance correlates with the specified Python level and your targeted audience.',
+            'If your talk is designed for Python beginners and you are sharing about your Python learning experience and ' +
+                'how you solved some tricky issues you face, then it is a good proposal with content suitable for the right audience group. ' +
+                'It will not be a good idea to share about how to inspect Python’s memory usage and GC systems together in a talk ' +
+                'for beginners learning Python.',
+            'Talks that have mismatched audience groups (like topics above) are easy for the committee to decide. ' +
+                'However, most topics lie somewhere in between and it will be hard for the committee to decide. ' +
+                'Therefore, do have a look at the following description to help you find the right audience level for your talk.',
         ],
         'chooseLevel-levels': [
             [
                 'Novice',
                 [
-                    'People who have little to none Python knowledge. ' +
+                    'People who have little to no Python knowledge. ' +
                         'One can expect them to have basic knowledge about Python syntax and control flow (e.g. if-else, for loops; functions), ' +
-                        'but the audience does not understand every module in stdlib, ' +
+                        'but the audience will not not understand every module in stdlib, ' +
                         'nor the concepts of tricky variables visible scope and OOP (and MRO inheritance).',
-                    'Sharing your experience learning Python, leading a community perfectly fits in this level. ' +
-                        'Generally, a talk about non-builtin Python packages, say pandas and Django, is not a novice talk. ' +
-                        'Unless people can actually learn all the content you give right after your talk.',
+                    'Sharing your experience learning Python, or how you lead a community are suitable for an audience at this level. ' +
+                        'Generally, a talk about non-stdlib Python packages, such as pandas or Django, is not suitable for novices, ' +
+                        'unless they are able to learn and master all the concepts from just your talk alone.',
                 ],
             ],
             [
                 'Intermediate',
                 [
                     'The possible applications are more diverse than novice talks. ' +
-                        'Intermediate talks are for those who just learned how Python works and ' +
-                        'wish to know more about how it can be used in different tasks. ' +
-                        'The talk topic can be about setting up web frameworks, talking to databases, ' +
-                        'monitoring web traffic, auto trading in the stock market and so on.',
-                    'From previous submissions over the past few years, around half of the talks should fall into this category. ' +
-                        'Note that we may contact you to adjust your talk to be novice or experienced based on your proposal.',
+                        'Intermediate talks are for those who have learned how Python works and ' +
+                        'wish to know more about how it can be used in various different tasks. ' +
+                        'Suitable talk topics include setting up web frameworks, working with databases, ' +
+                        'monitoring web traffic, auto trading in the stock market, and so on.',
+                    'From our past experience, around half of the talks will fall into this category. ' +
+                        'Note that we may contact you to adjust your talk for the novice or experienced audience groups based on your proposal.',
                 ],
             ],
             [
                 'Experienced',
                 [
-                    'People coming to experienced talks should have a good proficiency in Python (or programming).',
+                    'People coming to experienced talks already have a good proficiency in Python (or programming in general).',
                     'The main difference between intermediate and experienced talks is ' +
                         'that experienced talks assume more domain knowledge about the talk topic. ' +
-                        'For example, talks about optimization and tool’s internals should be at this level.',
+                        'For example, talks about performance optimization and the internals of how a module works should be at this level.',
                 ],
             ],
         ],
@@ -158,16 +165,17 @@ export default genI18nMessages({
         og: {
             title: 'How to Propose a Talk?',
             description:
-                'First of all, thank you for contributing to PyCon Taiwan! ' +
+                'First of all, thank you for your interest in speaking at PyCon APAC 2022! ' +
                 'The following will help you submit a successful proposal. ' +
-                'In the following, we are going to provide you the tips to make your proposal strong.',
+                'In the following, we will provide tips to make your proposal strong ' +
+                'and informative to increase the chance of your proposal to be accepted. ',
         },
     },
     'zh-hant': {
         title: '如何投稿演講（Talk）？',
         intro: [
             '有關投稿的整體流程說明，請參考{cfp}頁面。',
-            '首先，感謝您投稿 PyCon Taiwan！下面的內容將會幫助您成功地送出一份投稿。' +
+            '首先，感謝您投稿 PyCon APAC 2022！下面的內容將會幫助您成功地送出一份投稿。' +
                 '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
                 '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路：',
         ],
@@ -189,11 +197,15 @@ export default genI18nMessages({
             '摘要',
             'Python 難易度',
             '演講目標',
-            '詳細講題說明（選填）',
+            '詳細說明（選填）',
             '大綱（選填）',
             '補充資訊（選填）',
-            '議程錄影',
+            '議程錄影釋出',
+            '第一次擔任講者',
             '投影片連結（選填）',
+            '轉介至地方社群',
+            '偏好議程時間',
+            '是否住在台灣',
         ],
         'requiredFields-encouragement':
             '看起來有很多欄位需要填寫吧。嗯⋯⋯不過如果您跳過所有選填的欄位的話，那麼整個投稿就只需要約 500 字就能完成。' +
@@ -208,7 +220,7 @@ export default genI18nMessages({
 
         'advice-title': '主題與一般建議',
         'advice-previousConf':
-            '在判斷題目適不適合 PyCon Taiwan 時，可以先看看過去幾屆有哪些被接受的講題：',
+            '在判斷題目適不適合 PyCon APAC 2022 時，可以先看看過去的 PyCon APAC 及 PyCon Taiwan 有哪些被接受的講題：',
         'advice-goodIdea-title': '投稿好主意',
         'advice-goodIdea-ideas': [
             [
@@ -239,7 +251,7 @@ export default genI18nMessages({
                 '避免流於資訊型廣告（infomercials）。',
                 [
                     '議程不該僅止於促銷您的產品或者是介紹如何使用您的產品。' +
-                        '儘管如此，PyConTW 仍然非常歡迎分享在您公司遭遇的問題與解決問題方法、貴公司維護的專案內容或是可以給予聽眾收穫的開源專案內容。',
+                        '我們仍然非常歡迎分享在您公司遭遇的問題與解決問題方法、貴公司維護的專案內容或是可以給予聽眾收穫的開源專案內容。',
                 ],
             ],
             ['請勿假設審稿人員都認識您。請務必提交完整以及足夠資訊的稿件。'],
@@ -294,8 +306,9 @@ export default genI18nMessages({
         og: {
             title: '如何投稿演講（Talk）？',
             description:
-                '首先，感謝您投稿 PyCon Taiwan！下面的內容將會幫助您成功地送出一份投稿。' +
-                '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。',
+                '首先，感謝您投稿 PyCon APAC 2022！下面的內容將會幫助您成功地送出一份投稿。' +
+                '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
+                '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路',
         },
     },
 })

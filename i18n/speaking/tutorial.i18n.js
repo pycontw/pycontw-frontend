@@ -4,50 +4,55 @@ export default genI18nMessages({
     'en-us': {
         title: 'How to Propose a Tutorial?',
         intro: [
-            'For general proposal calling information, see {cfp}.',
-            'First of all, thank you for considering giving a tutorial in PyCon Taiwan 2021.',
-            'Generally speaking, Good tutorials possess most of the traits good talks have. ' +
-                'The most discernible differences of a tutorial from a talk are the hands-on nature and the longer duration. ' +
-                'By longer duration, generally more content is required and it should remain interesting and ' +
-                'keep the attendees awake and hyped even after hours of lecture and exercises. ' +
-                'By containing hands-on exercises, the experience of teaching coding to people is necessary. ' +
-                'You might also need teaching assistants who you should be able to comfortably communicate during the tutorial, ' +
-                'usually at least two teaching assistants for a general class size of 20 people is needed.',
-            'Both differences require many times of practice and experience. ' +
-                'Therefore, a tutorial speaker usually satisfies at least one of the following prerequisites:',
+            'For information on the overall CfP process, see {cfp}.',
+            'First of all, thank you for your interest in conducting a tutorial at PyCon APAC 2022.',
+            'Generally speaking, good tutorials possess most of the traits that good talks have. ' +
+                'The biggest differences between a tutorial and a talk are the hands-on nature of a tutorial, ' +
+                'and the duration of the tutorial. As tutorials last longer than talks, well-prepared content is required ' +
+                'but the content must stay interesting to keep the attendees engaged. ' +
+                'Hence, you must have prior experience teaching coding to people. ' +
+                'You might also want to consider bringing along teaching assistants for tutorials to assist you. ' +
+                'We recommend at least two teaching assistants for a general class size of 20 people.',
+            'Due to the differences mentioned above, speakers who are interested in conducting tutorials ' +
+                'must satisfy at least one of the following prerequisites:',
         ],
         requirements: [
             'A previous tutorial speaker in any programming conferences or communities',
-            'More than one time of speaking experience in open source communities, preferably the local Python communities',
-            'Teaching assistant in previous tutorials',
+            'At least one time of speaking experience in open source events or communities, preferably local Python communities',
+            'Prior experience as a teaching assistant in tutorials conducted by others',
         ],
         proviso:
-            'We might ask you to give the tutorial to the community before the conference if you lack the experience.',
+            'We might ask you to give the tutorial at a local Python meetup before the conference if you lack the experience ' +
+            'mentioned above.',
 
         policies: [
             [
                 'Tutorial Duration',
                 [
                     'The length of the tutorial is 1 hour and 30 minutes.',
-                    'In our previous experiences, tutorials with a length of 6 hours are exhausted for both instructors and students, ' +
-                        'students usually find it difficult to consistently follow in the second half of the tutorial. ' +
-                        'Full-day tutorials require a relatively experienced instructor, ' +
-                        'thus the length of the tutorial is 1 hour and 30 minutes this year. ' +
-                        'We strongly recommend you to clearly define prerequisites and goals, ' +
-                        'which helps building the best learning experience.',
+                    'In our previous experiences, tutorials that run for 6 hours were exhausting for both instructors and students, ' +
+                        'and students usually find it difficult to follow along in the second half of the tutorial. ' +
+                        'Full-day tutorials require an experienced instructor, and hence we have decided to limit the length of a tutorial ' +
+                        'to 1 hour and 30 minutes this year. ' +
+                        'We strongly recommend you to clearly define prerequisites and goals in your tutorial and tutorial proposal, ' +
+                        'which will help ensure the best learning experience for the participants.',
                 ],
             ],
             [
                 'Tutorial Dates and Location',
                 [
-                    'Tutorials are held in parallel with the main conference, therefore, the classroom would be outside of the venue.',
+                    'Tutorials are held in parallel with the main conference, and tutorials will be held at the same online venue ' +
+                        'as the main conference, albeit in different rooms.',
                 ],
             ],
-            ['Charging Policy', ['No additional charge.']],
             [
-                'How to become a tutorial speaker?',
+                'Charging Policy',
+                ['All tutorials will be free for conference participants.'],
+            ],
+            [
+                'How can I become a better instructor?',
                 [
-                    'The easiest and the best answer: Go speak and involved in the local Python communities!',
+                    'The easiest way is to get involved in your local Python communities by speaking at these events.',
                     'If you have any questions or suggestions, please don’t hesitate to {contact}.',
                 ],
             ],
@@ -60,22 +65,23 @@ export default genI18nMessages({
         og: {
             title: 'How to Propose a Tutorial?',
             description:
-                'First of all, thank you for considering giving a tutorial in PyCon Taiwan 2021. ' +
-                'Generally speaking, Good tutorials possess most of the traits good talks have. ' +
-                'The most discernible differences of a tutorial from a talk are the hands-on nature and the longer duration. ' +
-                'By longer duration, generally more content is required and it should remain interesting and ' +
-                'keep the attendees awake and hyped even after hours of lecture and exercises. ' +
-                'By containing hands-on exercises, the experience of teaching coding to people is necessary. ' +
-                'You might also need teaching assistants who you should be able to comfortably communicate during the tutorial, ' +
-                'usually at least two teaching assistants for a general class size of 20 people is needed. ' +
-                'Both differences require many times of practice and experience. ',
+                'First of all, thank you for your interest in conducting a tutorial at PyCon APAC 2022. ' +
+                'Generally speaking, good tutorials possess most of the traits that good talks have. ' +
+                'The biggest differences between a tutorial and a talk are the hands-on nature of a tutorial, ' +
+                'and the duration of the tutorial. As tutorials last longer than talks, well-prepared content is required ' +
+                'but the content must stay interesting to keep the attendees engaged. ' +
+                'Hence, you must have prior experience teaching coding to people. ' +
+                'You might also want to consider bringing along teaching assistants for tutorials to assist you. ' +
+                'We recommend at least two teaching assistants for a general class size of 20 people. ' +
+                'Due to the differences mentioned above, speakers who are interested in conducting tutorials ' +
+                'must satisfy at least one of the following prerequisites.',
         },
     },
     'zh-hant': {
         title: '如何投稿專業課程（Tutorial）？',
         intro: [
             '有關投稿的整體流程說明，請參考{cfp}一頁。',
-            '首先，謝謝您考慮投稿專業課程至 PyCon Taiwan 2021。',
+            '首先，謝謝您考慮投稿專業課程至 PyCon APAC 2022。',
             '一般來說，好的課程滿足一場好演講的諸多特性。不過專業課程較演講最大的差異在課程有手把手的指導，以及較長的時間。' +
                 '因為有更長的時間，專業課程需要準備更多的內容，並且讓聽眾即便在數個小時的講課與操作之後還能覺得有趣且清醒；' +
                 '由於有手把手的指導，一個 20 名學員的課程通常要有兩位（以上）的助教來協助，過程中必須能與助教保持良好的溝通。',
@@ -93,7 +99,7 @@ export default genI18nMessages({
             [
                 '專業課程的長度',
                 [
-                    '專業課程的長度為一個半小時',
+                    '專業課程的長度為 1.5 小時',
                     '在過往的經驗中，6 小時的課程對於講師以及學員而言都非常的累，學員容易因為疲勞而無法持續跟上進度，且難以吸收所學。' +
                         '全天的課程需要相當的教學經驗，為此今年改為 1.5 小時的課程。' +
                         '我們強烈建議清楚定義先備知識以及課程目標，以達到最佳的教學效果。',
@@ -102,7 +108,7 @@ export default genI18nMessages({
             [
                 '專業課程的時間與場地',
                 [
-                    '專業課程與會期同時，將和 PyCon Taiwan 大會平行舉行，教室待定。',
+                    '專業課程與會期同時，將和 PyCon APAC 大會平行舉行，場地為與大會相同之線上會場。',
                 ],
             ],
             ['專業課程售票政策', ['本次會議專業課程不額外收費。']],
@@ -122,7 +128,7 @@ export default genI18nMessages({
         og: {
             title: '如何投稿專業課程（Tutorial）？',
             description:
-                '首先，謝謝您考慮投稿專業課程至 PyCon Taiwan 2021。' +
+                '首先，謝謝您考慮投稿專業課程至 PyCon APAC 2022。' +
                 '一般來說，好的課程滿足一場好演講的諸多特性。不過專業課程較演講最大的差異在課程有手把手的指導，以及較長的時間。' +
                 '因為有更長的時間，專業課程需要準備更多的內容，並且讓聽眾即便在數個小時的講課與操作之後還能覺得有趣且清醒；' +
                 '由於有手把手的指導，一個 20 名學員的課程通常要有兩位（以上）的助教來協助，過程中必須能與助教保持良好的溝通。' +
