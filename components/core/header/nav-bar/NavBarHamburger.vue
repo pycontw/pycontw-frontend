@@ -19,12 +19,18 @@
                 :expanding="expandingItem === 'about'"
                 @click.native="toggleAccordion('about')"
             ></nav-bar-item-accordion>
-            <locale-link
+            <nav-bar-item-accordion
+                :label="$t('speaking')"
+                :items="speakingItems"
+                :expanding="expandingItem === 'speaking'"
+                @click.native="toggleAccordion('speaking')"
+            ></nav-bar-item-accordion>
+            <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/conference/schedule"
                 customized
                 >{{ $t('schedule') }}</locale-link
-            >
+            > -->
             <nav-bar-item-accordion
                 :label="$t('conference')"
                 :items="conferenceItems"
@@ -37,18 +43,12 @@
                 customized
                 >{{ $t('sponsor') }}</locale-link
             > -->
-            <!-- <nav-bar-item-accordion
-                :label="$t('speaking')"
-                :items="speakingItems"
-                :expanding="expandingItem === 'speaking'"
-                @click.native="toggleAccordion('speaking')"
-            ></nav-bar-item-accordion> -->
-            <locale-link
+            <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/registration/tickets"
                 customized
                 >{{ $t('registration') }}</locale-link
-            >
+            > -->
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
