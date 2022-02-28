@@ -5,11 +5,11 @@
         customized
     >
         <img
-            src="~/static/snake-icon.svg"
+            src="~/static/icon.svg"
             alt="Home icon of PyConTW 2021"
-            class="w-8"
+            class="w-6"
         />
-        <span class="font-bold"> PyConTW </span>
+        <span class="font-bold ml-2"> PyCon APAC </span>
     </locale-link>
 </template>
 
