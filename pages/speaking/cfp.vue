@@ -186,18 +186,12 @@ export default {
         },
         previousConfLinks() {
             return [
-                [
-                    'PyCon APAC 2021',
-                    `https://th.pycon.org/pages/schedule`,
-                ],
+                ['PyCon APAC 2021', `https://th.pycon.org/pages/schedule`],
                 [
                     'PyCon APAC 2020',
                     `https://pycon.my/pycon-apac-2020-conference-talks/`,
                 ],
-                [
-                    'PyCon APAC 2019',
-                    `https://pycon.python.ph/`,
-                ],
+                ['PyCon APAC 2019', `https://pycon.python.ph/`],
                 [
                     'PyCon Taiwan 2021',
                     `https://tw.pycon.org/2021/${this.$i18n.locale}/conference/schedule/`,

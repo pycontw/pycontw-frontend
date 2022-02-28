@@ -27,22 +27,22 @@ export default genI18nMessages({
                     'With an activated account, you can fill up the speaker profile and ' +
                     'create new proposals through the {myPyCon} page.',
                 'We encourage you to submit the proposal as early as possible. ' +
-                    'You are welcomed to submit multiple proposals.'
+                    'You are welcomed to submit multiple proposals.',
             ],
         ],
 
         recordingPolicy: [
             'Recording policy',
-            'Due to the ongoing global pandemic, PyCon APAC 2022 will be held fully remote and all online talks this year ' + 
+            'Due to the ongoing global pandemic, PyCon APAC 2022 will be held fully remote and all online talks this year ' +
                 'will be pre-recorded. After your proposal is accepted, a pre-recording of the presentation will be provided ' +
                 'to the PyCon APAC 2022 organizing team prior to the conference. For speakers who reside in Taiwan, we will ' +
-                'offer a slot and assist you to record the presentation in a professional video studio in Taipei (travel expenses covered).'
+                'offer a slot and assist you to record the presentation in a professional video studio in Taipei (travel expenses covered).',
         ],
 
         sponsorsLogos: [
             'Sponsors logos',
-            'Thanks to our sponsors, we could make PyCon APAC one of the greatest events. We will embed sponsors\' logos ' +
-            'in the presentation videos that play during and after the conference.'
+            "Thanks to our sponsors, we could make PyCon APAC one of the greatest events. We will embed sponsors' logos " +
+                'in the presentation videos that play during and after the conference.',
         ],
 
         'guidelines-title': 'Guidelines for Proposal Submission',
@@ -160,20 +160,20 @@ export default genI18nMessages({
             '如何提交您的稿件',
             [
                 '您需要先在系統上 {signUp} 一個新的帳號。在啟用您的帳號之後，就可以填寫講者資訊，並從 My PyCon 頁面中建立新的投搞。',
-                '我們強烈建議您儘早送出您的投稿。'
+                '我們強烈建議您儘早送出您的投稿。',
             ],
         ],
 
         recordingPolicy: [
             '錄影方式',
-            '因應 COVID-19 疫情，今年演講皆採取預先錄影的模式。在錄取議程名單確定後，' + 
+            '因應 COVID-19 疫情，今年演講皆採取預先錄影的模式。在錄取議程名單確定後，' +
                 '我們將會通知您並請您按照指定格式提供您的議程預錄影片。居住在台灣的講者，' +
-                '會為您安排時間到位於台北的中央攝影棚進行演講錄影，我們會為您支出所需之交通費用。'
+                '會為您安排時間到位於台北的中央攝影棚進行演講錄影，我們會為您支出所需之交通費用。',
         ],
 
         sponsorsLogos: [
             '贊助商標誌',
-            'PyCon APAC 能夠順利舉辦需感謝贊助商夥伴的協助。我們會在演講影片的下方嵌入並輪播贊助商的標誌。'
+            'PyCon APAC 能夠順利舉辦需感謝贊助商夥伴的協助。我們會在演講影片的下方嵌入並輪播贊助商的標誌。',
         ],
 
         'guidelines-title': '稿件提交指南',
@@ -192,7 +192,7 @@ export default genI18nMessages({
                 '您可以投稿長度為 15 分鐘、 30 分鐘或 45 分鐘的演講，根據您自己評估所需的時間而決定。' +
                     '需要注意的是，議程的時間長度將會包含開場與 Q&A 的時間。',
                 '若您是第一次投稿 PyCon APAC，請您參考「{talk}」一文，以了解更多相關規範以及協助您組織投稿的想法。',
-                '此外，我們會邀請部分未錄取 PyCon APAC 的講者到其所在國家之 PyCon 社群進行分享（僅限 APAC 地區）。'
+                '此外，我們會邀請部分未錄取 PyCon APAC 的講者到其所在國家之 PyCon 社群進行分享（僅限 APAC 地區）。',
             ],
         ],
         'guidelines-tutorials': [
