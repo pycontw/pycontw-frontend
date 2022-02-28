@@ -133,11 +133,17 @@ export default {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`
         },
         previousConfLinks() {
-            // use 'en' & 'zh' before 2016
-            const shortLocale = { 'en-us': 'en', 'zh-hant': 'zh' }[
-                this.$i18n.locale
-            ]
             return [
+                ['PyCon APAC 2021', `https://th.pycon.org/pages/schedule`],
+                [
+                    'PyCon APAC 2020',
+                    `https://pycon.my/pycon-apac-2020-conference-talks/`,
+                ],
+                ['PyCon APAC 2019', `https://pycon.python.ph/`],
+                [
+                    'PyCon Taiwan 2021',
+                    `https://tw.pycon.org/2021/${this.$i18n.locale}/conference/schedule/`,
+                ],
                 [
                     'PyCon Taiwan 2020',
                     `https://tw.pycon.org/2020/${this.$i18n.locale}/conference/schedule/`,
@@ -145,30 +151,6 @@ export default {
                 [
                     'PyCon Taiwan 2019',
                     `https://tw.pycon.org/2019/${this.$i18n.locale}/events/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2018',
-                    `https://tw.pycon.org/2018/${this.$i18n.locale}/events/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2017',
-                    `https://tw.pycon.org/2017/${this.$i18n.locale}/events/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2016',
-                    `https://tw.pycon.org/2016/${this.$i18n.locale}/events/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan PyCon APAC 2015',
-                    `https://tw.pycon.org/2015apac/${shortLocale}/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan PyCon APAC 2014',
-                    `https://tw.pycon.org/2014apac/${shortLocale}/program/`,
-                ],
-                [
-                    'PyCon Taiwan 2013',
-                    `https://tw.pycon.org/2013/${shortLocale}/program/`,
                 ],
             ]
         },
