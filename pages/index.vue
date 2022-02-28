@@ -13,30 +13,12 @@
                 "
             >
                 <div class="page-home__title">
-                    PyCon Taiwan <br />
-                    10th Anniversary
+                    <img
+                        class="title-img"
+                        src="~/static/index-title.svg"
+                        alt="Title of PyCon APAC 2022"
+                    />
                 </div>
-                <landing-focus-info class="my-12 md:my-8" />
-
-                <div
-                    class="
-                        w-full
-                        justify-between
-                        items-center
-                        md:flex-row
-                        mb-12
-                        md:mb-8
-                    "
-                >
-                    <strong class="text-golden text-xl">
-                        PyCon APAC 2022 in Taiwan
-                    </strong>
-                    <br />
-                    <strong class="text-purple text-xl">
-                        Join us as a volunteer!
-                    </strong>
-                </div>
-
                 <div
                     class="
                         w-full
@@ -44,39 +26,27 @@
                         justify-between
                         items-center
                         md:flex-row
+                        mt-48
                     "
                 >
                     <text-button
-                        href="https://forms.gle/DTGfR5znmQCk1PW96"
+                        to="/speaking/cfp"
                         class="hidden md:block md:mb-0 md:self-center"
                         large
                     >
-                        {{ $t('joinUs') }}
+                        {{ $t('callForProposals') }}
                     </text-button>
                     <text-button
-                        href="https://forms.gle/DTGfR5znmQCk1PW96"
+                        to="/speaking/cfp"
                         class="block mb-8 self-start md:hidden"
                     >
-                        {{ $t('joinUs') }}
+                        {{ $t('callForProposals') }}
                     </text-button>
-                    <landing-focus-slogan />
                 </div>
             </div>
         </div>
 
-        <landing-img-swiper />
-
-        <div class="bulletin-section">
-            <core-h2 :title="$t('bulletinList')" bulletin-color></core-h2>
-            <bulletin-card-collection></bulletin-card-collection>
-        </div>
-
-        <div class="intro-section">
-            <core-h2 :title="$t('pyconIntro')"></core-h2>
-            <intro></intro>
-        </div>
-
-        <i18n-page-wrapper class="sponsor-section pt-12">
+        <!--<i18n-page-wrapper class="sponsor-section pt-12">
             <h1 class="sponsor-title">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
                 v-for="(leveledSponsors, i) in sponsorsData"
@@ -100,48 +70,24 @@
                     class="hidden md:block"
                 />
             </div>
-            <!-- <div class="text-center">
+            <div class="text-center">
                 <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
-            </div> -->
+            </div>
         </i18n-page-wrapper>
-        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
+        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />-->
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
-import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH2 from '~/components/core/titles/H2'
 import TextButton from '~/components/core/buttons/TextButton'
-import {
-    SponsorCardCollection,
-    SponsorModal,
-    SponsorCard,
-} from '~/components/sponsors'
-import { BulletinCardCollection } from '~/components/bulletins'
-import {
-    LandingFocusSlogan,
-    LandingFocusInfo,
-} from '~/components/landing-focus'
-import Intro from '~/components/intro/Intro'
-import { LandingImgSwiper } from '~/components/landing-swiper'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
         TextButton,
-        I18nPageWrapper,
-        LandingFocusSlogan,
-        LandingFocusInfo,
-        LandingImgSwiper,
-        SponsorCard,
-        SponsorCardCollection,
-        SponsorModal,
-        Intro,
-        BulletinCardCollection,
-        CoreH2,
     },
     data() {
         return {
@@ -186,7 +132,7 @@ export default {
     top: -48px;
     z-index: -10;
     content: '';
-    background-image: url('~@/static/page-home-background.png');
+    background-image: url('~@/static/page-home-background.svg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -209,7 +155,7 @@ export default {
 }
 
 .text-golden {
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .text-purple {
@@ -231,7 +177,7 @@ export default {
 
 .sponsor-title {
     @apply font-serif;
-    color: #f3cc39;
+    color: #c386ae;
 }
 .sponsor-section {
     background-color: #121023;

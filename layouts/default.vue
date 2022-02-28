@@ -25,7 +25,7 @@ export default {
     head() {
         return {
             titleTemplate: (titleChunk) => {
-                const title = 'PyCon Taiwan 2021'
+                const title = 'PyCon APAC 2022'
                 return titleChunk && titleChunk !== title
                     ? `${titleChunk} | ${title}`
                     : title
@@ -39,17 +39,17 @@ export default {
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'PyCon Taiwan 2021',
+                    content: 'PyCon APAC 2022',
                 },
                 {
                     hid: 'og:title',
                     property: 'og:title',
-                    content: 'PyCon Taiwan 2021',
+                    content: 'PyCon APAC 2022',
                 },
                 {
                     hid: 'og:description',
                     property: 'og:description',
-                    content: 'PyCon Taiwan 2021',
+                    content: 'PyCon APAC 2022',
                 },
                 {
                     hid: 'og:image',

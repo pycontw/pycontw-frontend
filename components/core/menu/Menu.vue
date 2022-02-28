@@ -46,6 +46,5 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     background-color: #1b1a2e;
-    border: 1px solid #c2a53a;
 }
 </style>
