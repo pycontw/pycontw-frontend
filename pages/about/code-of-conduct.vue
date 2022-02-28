@@ -37,8 +37,28 @@
                     <p class="paragraph-title text-base md:text-lg lg:text-lg">
                         {{ rule.title }}
                     </p>
-                    <p class="text-xs md:text-base leading-5 md:leading-8">
-                        {{ rule.description }}
+                    <p
+                        v-for="(
+                            description, descriptionsIndex
+                        ) in rule.descriptions"
+                        :key="`coc-description-${descriptionsIndex}`"
+                        class="text-xs md:text-base leading-5 md:leading-8"
+                    >
+                        {{ description }}
+                    </p>
+                    <ol v-if="rule.list" class="list-decimal ml-5">
+                        <li
+                            v-for="(li, liIndex) in rule.list"
+                            :key="`coc-list-${liIndex}`"
+                        >
+                            {{ li }}
+                        </li>
+                    </ol>
+                    <p
+                        v-if="rule.addition"
+                        class="text-xs md:text-base leading-5 md:leading-8"
+                    >
+                        {{ rule.addition }}
                     </p>
                 </div>
             </div>
@@ -114,6 +134,6 @@ export default {
 <style scoped>
 .paragraph-title {
     @apply font-serif font-bold;
-    color: #c2a53a;
+    color: #c386ae;
 }
 </style>

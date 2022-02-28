@@ -11,13 +11,15 @@
         >
             <template #kktix>
                 <ext-link
-                    href="https://pycontw.kktix.cc/events/20210926-sprints"
+                    href="https://pycontw.kktix.cc/events/pyconsprint2022-1"
                     highlight
                     >KKTIX</ext-link
                 >
             </template>
             <template #hackmd>
-                <ext-link href="https://hackmd.io/@pycontw/r1RRIJF__" highlight
+                <ext-link
+                    href="https://hackmd.io/oWg32ha4TOG2v8Dt4QDH0A"
+                    highlight
                     >HackMD</ext-link
                 >
             </template>
