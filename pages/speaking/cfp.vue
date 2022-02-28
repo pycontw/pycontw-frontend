@@ -14,7 +14,7 @@
             >
                 <template #AoE>
                     <ext-link
-                        href="https://www.timeanddate.com/worldclock/converter.html?iso=20210427T115900&p1=tz_aoe&p2=241&p3=1440"
+                        href="https://www.timeanddate.com/worldclock/converter.html?iso=20220416T115900&p1=tz_aoe&p2=241&p3=1440"
                         highlight
                         >AoE</ext-link
                     >
@@ -59,13 +59,18 @@
                     $t('terms.signUp')
                 }}</ext-link>
             </template>
-            <template #main>
-                <locale-link to="/" highlight>tw.pycon.org</locale-link>
-            </template>
             <template #myPyCon>
                 <ext-link :href="myPyConLink" highlight>My PyCon</ext-link>
             </template>
         </i18n>
+
+        <!-- Recording Policy -->
+        <i18n path="recordingPolicy.0" tag="h2"></i18n>
+        <i18n path="recordingPolicy.1" tag="p"></i18n>
+
+        <!-- Sponsors logo -->
+        <i18n path="sponsorsLogos.0" tag="h2"></i18n>
+        <i18n path="sponsorsLogos.1" tag="p"></i18n>
 
         <!-- Guidelines -->
         <i18n path="guidelines-title" tag="h2"></i18n>
@@ -182,20 +187,28 @@ export default {
         previousConfLinks() {
             return [
                 [
+                    'PyCon APAC 2021',
+                    `https://th.pycon.org/pages/schedule`,
+                ],
+                [
+                    'PyCon APAC 2020',
+                    `https://pycon.my/pycon-apac-2020-conference-talks/`,
+                ],
+                [
+                    'PyCon APAC 2019',
+                    `https://pycon.python.ph/`,
+                ],
+                [
+                    'PyCon Taiwan 2021',
+                    `https://tw.pycon.org/2021/${this.$i18n.locale}/conference/schedule/`,
+                ],
+                [
                     'PyCon Taiwan 2020',
                     `https://tw.pycon.org/2020/${this.$i18n.locale}/conference/schedule/`,
                 ],
                 [
                     'PyCon Taiwan 2019',
                     `https://tw.pycon.org/2019/${this.$i18n.locale}/events/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2018',
-                    `https://tw.pycon.org/2018/${this.$i18n.locale}/events/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2017',
-                    `https://tw.pycon.org/2017/${this.$i18n.locale}/events/schedule/`,
                 ],
             ]
         },
