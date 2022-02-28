@@ -58,6 +58,6 @@ export default {
 }
 
 .core-menuItem:hover {
-    color: #7568f6;
+    color: #c386ae;
 }
 </style>

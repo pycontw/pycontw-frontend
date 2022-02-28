@@ -45,7 +45,7 @@ a {
     color: inherit;
 }
 .highlight {
-    color: #c2a53a;
+    color: #c386ae;
 }
 .highlight:hover {
     color: #9387ff;

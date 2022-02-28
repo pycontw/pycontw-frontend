@@ -43,21 +43,21 @@ export default {
 }
 
 .header-container.--desktop {
-    color: #c2a53a;
+    color: #c386ae;
     background-color: #121023;
 }
 
 .header-container.--desktop .core-localeSwitch:hover {
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .header-container.--mobile {
-    color: #c2a53a;
+    color: #c386ae;
     background-color: #1c1a38;
 }
 
 .header-container.--mobile .core-localeSwitch {
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .header-container.--mobile .core-localeSwitch:hover {

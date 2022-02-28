@@ -35,6 +35,6 @@ h2 {
     color: #e6ba17;
 }
 .bulletin-color {
-    color: #f3cc39;
+    color: #c386ae;
 }
 </style>

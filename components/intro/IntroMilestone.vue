@@ -42,7 +42,7 @@ export default {
 }
 
 .milestone__number {
-    color: #c2a53a;
+    color: #c386ae;
     font-size: 5.4rem;
     filter: drop-shadow(4px 6px 0px #4f4f4f);
     @media (max-width: 767px) {

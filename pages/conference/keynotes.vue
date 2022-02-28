@@ -196,12 +196,12 @@ export default {
 
 .keynote__name {
     @apply font-serif font-black text-base text-center py-2;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .keynote__title {
     @apply font-serif font-black text-base text-center py-2;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .keynote__tabs {

@@ -262,7 +262,7 @@ export default {
 .tickets h2 {
     @apply font-serif font-bold text-center;
     @apply mt-14 mb-10 text-xl md:text-2xl tracking-widest;
-    color: #f3cc39;
+    color: #c386ae;
 }
 
 .tickets h3 {
@@ -272,7 +272,7 @@ export default {
 .tickets h5 {
     @apply text-center text-base sm:text-lg md:text-xl;
     @apply font-bold mt-6 md:mt-8;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .tickets span {
@@ -293,8 +293,8 @@ export default {
 
 .tickets .tickets__box {
     @apply text-center box-border rounded-3xl h-56 md:h-72 z-10;
-    border: 2px solid #c2a53a;
-    box-shadow: 6px 6px 0px #c2a53a;
+    border: 2px solid #c386ae;
+    box-shadow: 6px 6px 0px #c386ae;
 }
 
 .tickets__boxWrapper {
@@ -312,7 +312,7 @@ export default {
 
 .tickets__boxPrice .tickets__boxPriceHighlight {
     @apply font-bold mr-1 text-2xl md:text-3xl;
-    color: #f3cc39;
+    color: #c386ae;
 }
 
 .tickets__notices li,

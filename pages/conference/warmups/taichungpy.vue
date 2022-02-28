@@ -214,7 +214,7 @@ ul.list-disc {
 }
 .listTitle {
     @apply font-bold text-base;
-    color: #f3cc39;
+    color: #c386ae;
 }
 
 h2 {
@@ -222,7 +222,7 @@ h2 {
     margin-top: 0.5rem !important;
     margin-bottom: 0 !important;
     font-size: 24px;
-    color: #f3cc39;
+    color: #c386ae;
 }
 
 .scheduleSection {
@@ -231,8 +231,8 @@ h2 {
     @apply rounded-2xl w-full border-2 bg-opacity-0;
     line-height: 29px;
     color: #c7c7c7;
-    border-color: #c2a53a;
-    box-shadow: 6px 6px 0 #c2a53a;
+    border-color: #c386ae;
+    box-shadow: 6px 6px 0 #c386ae;
 }
 
 .speakers {
@@ -250,11 +250,11 @@ h2 {
 }
 .speakerName {
     @apply font-serif font-black text-center mb-4;
-    color: #f3cc39;
+    color: #c386ae;
 }
 .speechTitle {
     @apply font-serif font-black text-center mb-7;
-    color: #f3cc39;
+    color: #c386ae;
 }
 
 .tabs {

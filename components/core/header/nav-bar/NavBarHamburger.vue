@@ -19,12 +19,18 @@
                 :expanding="expandingItem === 'about'"
                 @click.native="toggleAccordion('about')"
             ></nav-bar-item-accordion>
-            <locale-link
+            <nav-bar-item-accordion
+                :label="$t('speaking')"
+                :items="speakingItems"
+                :expanding="expandingItem === 'speaking'"
+                @click.native="toggleAccordion('speaking')"
+            ></nav-bar-item-accordion>
+            <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/conference/schedule"
                 customized
                 >{{ $t('schedule') }}</locale-link
-            >
+            > -->
             <nav-bar-item-accordion
                 :label="$t('conference')"
                 :items="conferenceItems"
@@ -37,18 +43,12 @@
                 customized
                 >{{ $t('sponsor') }}</locale-link
             > -->
-            <!-- <nav-bar-item-accordion
-                :label="$t('speaking')"
-                :items="speakingItems"
-                :expanding="expandingItem === 'speaking'"
-                @click.native="toggleAccordion('speaking')"
-            ></nav-bar-item-accordion> -->
-            <locale-link
+            <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/registration/tickets"
                 customized
                 >{{ $t('registration') }}</locale-link
-            >
+            > -->
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
@@ -63,7 +63,7 @@ import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
 import i18n from './NavBar.i18n'
 import navBarItems from './nav-bar-items'
-import { ExtLink, LocaleLink } from '~/components/core/links'
+import { ExtLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -72,7 +72,6 @@ export default {
         IconHamburgerMenuIcon,
         NavBarItemAccordion,
         ExtLink,
-        LocaleLink,
     },
     data() {
         return {
@@ -132,7 +131,7 @@ export default {
 
 .core-navBarHamburgerSlideInMenu__item {
     @apply flex w-full p-4 justify-center items-center;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .core-navBarHamburgerSlideInMenu__item:hover {
@@ -142,6 +141,6 @@ export default {
 .close-icon-button {
     @apply relative transform rotate-45 text-4xl cursor-pointer;
     z-index: 1001;
-    color: #c2a53a;
+    color: #c386ae;
 }
 </style>

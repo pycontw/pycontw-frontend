@@ -99,13 +99,13 @@ export default {
 <style lang="postcss" scoped>
 .community-title {
     @apply mt-1 mb-4 font-serif font-bold text-xl cursor-pointer;
-    color: #c2a53a;
+    color: #c386ae;
 }
 .box {
     background: #121023;
-    border: 2px solid #c2a53a;
+    border: 2px solid #c386ae;
     box-sizing: border-box;
-    box-shadow: 6px 6px 0px #c2a53a;
+    box-shadow: 6px 6px 0px #c386ae;
     border-radius: 24px;
 }
 </style>

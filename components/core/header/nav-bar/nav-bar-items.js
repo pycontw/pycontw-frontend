@@ -18,46 +18,46 @@ export default Object.freeze({
         },
     ],
     conference: [
-        {
-            i18nKey: 'overview',
-            value: '/events/overview',
-        },
-        {
-            i18nKey: 'keynotes',
-            value: '/conference/keynotes',
-        },
-        { i18nKey: 'talks', value: '/conference/talks' },
-        {
-            i18nKey: 'tutorials',
-            value: '/conference/tutorials',
-        },
-        {
-            i18nKey: 'openSpaces',
-            value: '/events/open-spaces',
-        },
+        // {
+        //     i18nKey: 'overview',
+        //     value: '/events/overview',
+        // },
+        // {
+        //     i18nKey: 'keynotes',
+        //     value: '/conference/keynotes',
+        // },
+        // { i18nKey: 'talks', value: '/conference/talks' },
+        // {
+        //     i18nKey: 'tutorials',
+        //     value: '/conference/tutorials',
+        // },
+        // {
+        //     i18nKey: 'openSpaces',
+        //     value: '/events/open-spaces',
+        // },
         { i18nKey: 'sprints', value: '/events/sprints' },
-        {
-            i18nKey: 'jobs',
-            value: '/events/jobs',
-        },
-        {
-            i18nKey: 'warmups',
-            value: '/conference/warmups',
-        },
+        // {
+        //     i18nKey: 'jobs',
+        //     value: '/events/jobs',
+        // },
+        // {
+        //     i18nKey: 'warmups',
+        //     value: '/conference/warmups',
+        // },
     ],
     about: [
-        {
-            i18nKey: 'pycontw',
-            value: '/about',
-        },
-        {
-            i18nKey: 'history',
-            value: '/about/history',
-        },
-        {
-            i18nKey: 'community',
-            value: '/about/community',
-        },
+        // {
+        //     i18nKey: 'pycontw',
+        //     value: '/about',
+        // },
+        // {
+        //     i18nKey: 'history',
+        //     value: '/about/history',
+        // },
+        // {
+        //     i18nKey: 'community',
+        //     value: '/about/community',
+        // },
         {
             i18nKey: 'codeOfConduct',
             value: '/about/code-of-conduct',

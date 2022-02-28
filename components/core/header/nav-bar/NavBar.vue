@@ -6,12 +6,18 @@
             :class="getPageClassesByPath('about')"
         >
         </nav-bar-item-dropdown>
-        <locale-link
+        <!-- <locale-link
             to="/conference/schedule"
             :class="getPageClassesByPath('schedule', true)"
             customized
             >{{ $t('schedule') }}</locale-link
+        > -->
+        <nav-bar-item-dropdown
+            :label="$t('speaking')"
+            :items="speakingItems"
+            :class="getPageClassesByPath('speaking')"
         >
+        </nav-bar-item-dropdown>
         <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
@@ -31,14 +37,14 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown> -->
-        <locale-link
+        <!-- <locale-link
             to="/registration/tickets"
             :class="getPageClassesByPath('tickets', true)"
             customized
         >
             {{ $t('registration') }}
-        </locale-link>
-        <!-- 
+        </locale-link> -->
+        <!--
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}
         </locale-link> -->
@@ -55,7 +61,8 @@
 import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
-import { ExtLink, LocaleLink } from '~/components/core/links'
+import { ExtLink } from '~/components/core/links'
+// import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -63,7 +70,7 @@ export default {
     components: {
         NavBarItemDropdown,
         ExtLink,
-        LocaleLink,
+        // LocaleLink,
     },
     computed: {
         conferenceItems() {
@@ -133,11 +140,11 @@ export default {
 }
 
 .core-navBarItem:hover {
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .core-navBarItem.--active,
 .core-navBarItem.--active .options-menu {
-    color: #c2a53a;
+    color: #c386ae;
 }
 </style>

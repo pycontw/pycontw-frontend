@@ -180,10 +180,10 @@ export default {
 }
 .filterTitle {
     @apply ml-2 text-sm md:text-base;
-    color: #f3cc39;
+    color: #c386ae;
 }
 .filterHr {
     @apply my-2;
-    color: #f3cc39;
+    color: #c386ae;
 }
 </style>

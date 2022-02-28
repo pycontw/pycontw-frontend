@@ -9,6 +9,7 @@ export default genI18nMessages({
         sponsorUs: 'Be a Sponsor',
         bulletinList: 'Latest Announcement',
         joinUs: 'Join Us',
+        callForProposals: 'Call For Proposals',
     },
     'zh-hant': {
         pyconWelcome: '歡迎來到 PyCon TW 2021',
@@ -18,5 +19,6 @@ export default genI18nMessages({
         sponsorUs: '成為贊助夥伴',
         bulletinList: '最新公告',
         joinUs: '成為志工',
+        callForProposals: '投稿募集',
     },
 })

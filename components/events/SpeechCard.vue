@@ -67,8 +67,8 @@ export default {
     @apply relative inline-flex flex-col w-full break-words transition;
     min-height: 180px;
     border-radius: 24px;
-    border: 2px solid #c2a53a;
-    box-shadow: 6px 6px 0 #c2a53a;
+    border: 2px solid #c386ae;
+    box-shadow: 6px 6px 0 #c386ae;
     padding: 15px;
 
     @media (min-width: 415px) {
@@ -95,14 +95,14 @@ export default {
 .speechCard__sub {
     @apply flex flex-col md:flex-row justify-between;
     @apply my-0.5 sm:my-2;
-    color: #c2a53a;
+    color: #c386ae;
     & .speechCard__icon {
         @apply flex-row;
         height: 13px;
         @media (min-width: 415px) {
             height: 26px;
         }
-        /* equivalent to {color: #c2a53a} for svg */
+        /* equivalent to {color: #c386ae} for svg */
         filter: invert(65%) sepia(76%) saturate(366%) hue-rotate(9deg)
             brightness(87%) contrast(88%);
     }
@@ -132,7 +132,7 @@ export default {
     @apply font-serif font-bold mt-2 mb-8;
     font-size: 14px;
     line-height: 30px;
-    color: #c2a53a;
+    color: #c386ae;
     @media (min-width: 415px) {
         @apply break-normal;
         font-size: 24px;
@@ -146,8 +146,8 @@ export default {
 .speechCard__category {
     @apply font-serif absolute text-center;
     @apply origin-bottom-left scale-75;
-    color: #c2a53a;
-    border: 2px solid #c2a53a;
+    color: #c386ae;
+    border: 2px solid #c386ae;
     border-radius: 8px;
     font-weight: 600;
     font-size: 12px;

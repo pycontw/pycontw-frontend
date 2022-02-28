@@ -7,6 +7,7 @@ export default genI18nMessages({
         community: 'Community',
         privacyPolicy: 'Privacy Policy',
         history: 'History',
+        joinUs: 'Join Us',
     },
     'zh-hant': {
         codeOfConduct: '行為準則',
@@ -14,5 +15,6 @@ export default genI18nMessages({
         community: '社群',
         privacyPolicy: '個人資料保護聲明',
         history: '歷年網站',
+        joinUs: '成為志工',
     },
 })

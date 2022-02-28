@@ -126,7 +126,7 @@ export default {
 
 .core-button.--primary:not(.--is-link),
 .core-button.--primary.--is-link > a {
-    color: #c2a53a;
+    color: #c386ae;
     border-color: currentColor;
 }
 
