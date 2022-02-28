@@ -132,7 +132,7 @@ export default {
 
 .core-navBarHamburgerSlideInMenu__item {
     @apply flex w-full p-4 justify-center items-center;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .core-navBarHamburgerSlideInMenu__item:hover {
@@ -142,6 +142,6 @@ export default {
 .close-icon-button {
     @apply relative transform rotate-45 text-4xl cursor-pointer;
     z-index: 1001;
-    color: #c2a53a;
+    color: #c386ae;
 }
 </style>

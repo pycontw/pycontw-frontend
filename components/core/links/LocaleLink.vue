@@ -54,7 +54,7 @@ export default {
 <style lang="postcss" scoped>
 /* TODO: Update highlight variant style with the design */
 .highlight {
-    color: #c2a53a;
+    color: #c386ae;
 }
 .highlight:hover {
     color: #9387ff;
@@ -65,7 +65,7 @@ export default {
 }
 
 .core-localeLink:not(.highlight):not(.--customized) {
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .core-localeLink:not(.highlight):not(.--customized):hover {

@@ -97,7 +97,7 @@ export default {
 }
 
 .scheduleBlock.-secondary {
-    color: #c2a53a;
+    color: #c386ae;
     background-color: rgba(6, 35, 85, 0.8);
     &:active {
         color: #d1ac23;

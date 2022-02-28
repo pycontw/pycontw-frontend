@@ -34,7 +34,7 @@ export default {
 
 .error h2,
 .error p {
-    color: #c2a53a;
+    color: #c386ae;
     font-weight: 700;
     padding-top: 40px;
 }

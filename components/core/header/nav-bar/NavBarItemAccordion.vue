@@ -58,7 +58,7 @@ export default {
 
 .core-navBarItemAccordion__label {
     @apply inline-flex justify-center items-center;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .core-navBarItemAccordion__items {
@@ -68,7 +68,7 @@ export default {
 
 .core-navBarItemAccordion__items > .core-localeLink {
     @apply inline-flex py-4 justify-center;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .core-navBarItemAccordion__items > .core-localeLink:hover {

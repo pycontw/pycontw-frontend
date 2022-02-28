@@ -80,14 +80,14 @@ export default {
     }
     height: 80%;
     background-color: #121023;
-    border-color: #f3cc39;
+    border-color: #c386ae;
 }
 
 .lightBox__closeButton {
     @apply relative flex ml-auto mr-3 md:mr-6 cursor-pointer;
     top: -24px;
     right: -12px;
-    color: #f3cc39;
+    color: #c386ae;
 
     @media (min-width: 768px) {
         top: -40px;
@@ -105,7 +105,7 @@ export default {
 
 .lightBox__subtitle {
     @apply text-xl mt-7;
-    color: #f3cc39;
+    color: #c386ae;
 }
 
 .lightBox__intro {

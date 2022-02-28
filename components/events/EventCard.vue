@@ -64,8 +64,8 @@ export default {
     @apply relative inline-flex flex-col w-full break-words;
     min-height: 180px;
     border-radius: 24px;
-    border: 2px solid #c2a53a;
-    box-shadow: 6px 6px 0 #c2a53a;
+    border: 2px solid #c386ae;
+    box-shadow: 6px 6px 0 #c386ae;
     padding: 15px;
 
     @media (min-width: 415px) {
@@ -97,7 +97,7 @@ export default {
     @apply font-bold font-serif;
     font-size: 24px;
     line-height: 30px;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .tag {

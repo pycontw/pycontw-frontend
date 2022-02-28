@@ -68,6 +68,6 @@ export default {
 h2 {
     @apply font-serif font-black text-base md:text-lg text-center mx-auto;
     margin-top: 3rem !important;
-    color: #f3cc39;
+    color: #c386ae;
 }
 </style>

@@ -89,6 +89,6 @@ h2 {
     margin-top: 3rem !important;
     margin-bottom: 0.5rem !important;
     font-size: 24px;
-    color: #f3cc39;
+    color: #c386ae;
 }
 </style>

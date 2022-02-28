@@ -58,7 +58,7 @@ export default {
 
 .jobsPanelJob__title {
     @apply mb-4 font-bold text-2xl;
-    color: #c2a53a;
+    color: #c386ae;
 }
 
 .jobsPanelJob__description,

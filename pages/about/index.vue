@@ -212,7 +212,7 @@ export default {
     color: #d1d1d1;
 }
 .highlight {
-    color: #c2a53a;
+    color: #c386ae;
 }
 .paragraph-highlight {
     @apply font-serif;
