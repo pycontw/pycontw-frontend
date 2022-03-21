@@ -39,12 +39,13 @@ export default {
 
 <style lang="postcss" scoped>
 .header-container {
-    @apply w-full h-full px-4 justify-between items-center text-sm;
+    @apply w-full h-full px-4 justify-between items-center;
+    font-size: 19px;
 }
 
 .header-container.--desktop {
     color: #c386ae;
-    background-color: #121023;
+    background-color: #1a1a30;
 }
 
 .header-container.--desktop .core-localeSwitch:hover {

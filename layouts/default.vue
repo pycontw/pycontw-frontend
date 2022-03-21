@@ -152,7 +152,7 @@ html {
 .default-layout__header {
     @apply fixed w-full;
     z-index: 1000;
-    height: 48px;
+    height: 56px;
 }
 
 .default-layout__body {
