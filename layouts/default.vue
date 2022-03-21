@@ -67,7 +67,7 @@ export default {
                 {
                     rel: 'icon',
                     type: 'image/x-icon',
-                    href: '/2021/favicon.ico',
+                    href: '/2022/favicon.ico',
                 },
                 {
                     rel: 'preconnect',
