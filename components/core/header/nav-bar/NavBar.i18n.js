@@ -8,7 +8,7 @@ export default genI18nMessages({
         history: 'History',
         sponsor: 'Sponsor',
         jobs: 'Job Listing',
-        speaking: 'Speaking',
+        speaking: 'Proposal',
         cfp: 'Call for Proposals',
         talk: 'Propose a Talk',
         tutorial: 'Propose a Tutorial',
