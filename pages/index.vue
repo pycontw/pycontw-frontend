@@ -31,14 +31,13 @@
                 >
                     <text-button
                         to="/speaking/cfp"
-                        class="hidden md:block md:mb-0 md:self-center"
+                        class="
+                            proposalButton
+                            hidden
+                            md:block md:mb-0 md:self-center
+                        "
+                        :uppercase="false"
                         large
-                    >
-                        {{ $t('callForProposals') }}
-                    </text-button>
-                    <text-button
-                        to="/speaking/cfp"
-                        class="block mb-8 self-start md:hidden"
                     >
                         {{ $t('callForProposals') }}
                     </text-button>
