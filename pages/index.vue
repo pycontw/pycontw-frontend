@@ -1,15 +1,16 @@
 <template>
     <div class="page-home">
-        <div class="page-homeLandingFocus flex py-8 md:py-12">
+        <div class="page-homeLandingFocus flex pt-16 md:pt-24">
             <div
                 class="
                     w-full
                     flex flex-col
                     items-start
                     text-golden
-                    mx-4
+                    mx-6
                     sm:mx-8
-                    md:mx-16
+                    md:mx-12
+                    lg:mx-32
                 "
             >
                 <div class="page-home__title">
@@ -26,7 +27,7 @@
                         justify-between
                         items-center
                         md:flex-row
-                        mt-48
+                        mt-32
                     "
                 >
                     <text-button

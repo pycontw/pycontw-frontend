@@ -45,7 +45,7 @@ export default {
 
 .header-container.--desktop {
     color: #c386ae;
-    background-color: #1a1a30;
+    background-color: #121023;
 }
 
 .header-container.--desktop .core-localeSwitch:hover {
@@ -54,7 +54,7 @@ export default {
 
 .header-container.--mobile {
     color: #c386ae;
-    background-color: #1c1a38;
+    background-color: #121023;
 }
 
 .header-container.--mobile .core-localeSwitch {

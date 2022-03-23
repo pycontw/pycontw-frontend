@@ -90,7 +90,7 @@ export default {
 <style lang="postcss" scoped>
 .core-button > a {
     @apply font-serif outline-none;
-    background-color: #1a1a30;
+    background-color: #c386ae;
 }
 
 .core-button.--uppercase > a {
@@ -134,7 +134,7 @@ export default {
 
 .core-button.--primary:not(.--is-link),
 .core-button.--primary.--is-link > a {
-    color: #c386ae;
+    color: #1a1a30;
     border-color: currentColor;
 }
 
@@ -146,8 +146,8 @@ export default {
 
 .core-button:not(.--is-link):hover,
 .core-button.--is-link > a:hover {
-    color: #1a1a30;
-    background-color: #c386ae;
+    color: #c386ae;
+    background-color: #121023;
 }
 
 .core-button.--medium.--bulletin:not(.--is-link),
