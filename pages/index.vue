@@ -122,7 +122,8 @@ export default {
 .page-home .page-homeLandingFocus::after {
     position: relative;
     top: 48px;
-    width: 100vw;
+    left: 0;
+    right: 0;
     height: calc(100vh - 48px);
     min-height: 720px;
 }
