@@ -22,7 +22,8 @@ export default {
 <style scoped>
 .error {
     position: relative;
-    width: 100vw;
+    left: 0;
+    right: 0;
     height: 1000px;
     background-color: #121023;
     top: -80px;
