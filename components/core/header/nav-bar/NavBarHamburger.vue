@@ -122,10 +122,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-navBarHamburgerSlideInMenu {
     @apply fixed top-0 right-0 flex w-2/3 h-full pt-10 flex-col text-black font-bold;
-    background-color: #191731;
+    background-color: #1a1a30;
     z-index: 1000;
 }
 

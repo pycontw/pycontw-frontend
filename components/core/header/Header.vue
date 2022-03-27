@@ -39,7 +39,8 @@ export default {
 
 <style lang="postcss" scoped>
 .header-container {
-    @apply w-full h-full px-4 justify-between items-center text-sm;
+    @apply w-full h-full px-4 justify-between items-center;
+    font-size: 19px;
 }
 
 .header-container.--desktop {
@@ -53,7 +54,7 @@ export default {
 
 .header-container.--mobile {
     color: #c386ae;
-    background-color: #1c1a38;
+    background-color: #121023;
 }
 
 .header-container.--mobile .core-localeSwitch {

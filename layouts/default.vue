@@ -67,7 +67,7 @@ export default {
                 {
                     rel: 'icon',
                     type: 'image/x-icon',
-                    href: '/2021/favicon.ico',
+                    href: '/2022/favicon.ico',
                 },
                 {
                     rel: 'preconnect',
@@ -152,7 +152,7 @@ html {
 .default-layout__header {
     @apply fixed w-full;
     z-index: 1000;
-    height: 48px;
+    height: 52px;
 }
 
 .default-layout__body {
