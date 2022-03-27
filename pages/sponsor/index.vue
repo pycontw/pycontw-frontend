@@ -2,7 +2,7 @@
     <i18n-page-wrapper class="text-xs md:text-lg">
         <core-h1 :title="$t('title')"></core-h1>
         <div v-for="(intro, i) in $t('intro')" :key="`sponsor_intro_${i}`">
-            <p>{{ intro }}</p>
+            <p class="sponsor-intro">{{ intro }}</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-0 mb-10">
             <div
@@ -113,4 +113,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.sponsor-intro {
+    font-size: 20px;
+}
+</style>
