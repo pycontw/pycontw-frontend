@@ -1,9 +1,9 @@
 <template>
-    <i18n-page-wrapper class="text-xs md:text-lg md:px-57 lg:px-56">
+    <i18n-page-wrapper class="text-xs md:text-lg">
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro.0" tag="p"></i18n>
-        <i18n path="intro.1" tag="p"></i18n>
-        <i18n path="intro.2" tag="p"></i18n>
+        <div v-for="(intro, i) in $t('intro')" :key="`sponsor_intro_${i}`">
+            <p>{{ intro }}</p>
+        </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-0 mb-10">
             <div
                 v-for="(service, i) in $t('services')"
@@ -34,12 +34,24 @@
                 >
             </template>
         </i18n>
+        <div class="text-center mt-10">
+            <text-button
+                :href="$t('cta.link')"
+                :to="linkTo"
+                secondary
+                medium
+                block
+            >
+                {{ $t('cta.text') }}
+            </text-button>
+        </div>
     </i18n-page-wrapper>
 </template>
 
 <script>
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
+import TextButton from '@/components/core/buttons/TextButton'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import i18n from '@/i18n/sponsor/index.i18n'
@@ -56,6 +68,7 @@ export default {
         CoreH1,
         ExtLink,
         LocaleLink,
+        TextButton,
     },
     data() {
         return {
