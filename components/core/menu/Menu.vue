@@ -18,22 +18,17 @@ export default {
         sm: Boolean,
         lg: Boolean,
     },
-    data() {
-        return {
-            originalClasses: ['core-menu'],
-        }
-    },
     computed: {
+        md() {
+            return !this.lg && !this.sm
+        },
         menuClasses() {
-            let width
-            if (this.sm) {
-                width = 'w-24'
-            } else if (this.lg) {
-                width = 'w-36'
-            } else {
-                width = 'w-32'
+            return {
+                'core-menu': true,
+                '--large': this.lg,
+                '--small': this.sm,
+                '--medium': this.md,
             }
-            return [...this.originalClasses, width]
         },
     },
 }
@@ -46,5 +41,15 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     background-color: #1b1a2e;
+
+    &.--small {
+        width: 120px;
+    }
+    &.--medium {
+        width: 192px;
+    }
+    &.--large {
+        width: 224px;
+    }
 }
 </style>

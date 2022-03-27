@@ -52,6 +52,10 @@ export default {
             type: String,
             default: undefined,
         },
+        uppercase: {
+            type: Boolean,
+            default: true,
+        },
         bulletin: {
             type: Boolean,
             default: false,
@@ -69,6 +73,7 @@ export default {
                 '--rounded': this.rounded,
                 '--block': this.block,
                 '--is-link': this.isLink,
+                '--uppercase': this.uppercase,
                 '--bulletin': this.bulletin,
             }
         },
@@ -82,27 +87,30 @@ export default {
 }
 </script>
 
-<style scoped>
-.core-button {
-    @apply font-sans;
-    outline: none;
-    background-color: transparent;
+<style lang="postcss" scoped>
+.core-button > a {
+    @apply font-serif outline-none;
+    background-color: #c386ae;
+}
+
+.core-button.--uppercase > a {
+    @apply uppercase;
 }
 
 .core-button:not(.--is-link),
 .core-button.--is-link > a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @apply inline-flex items-center justify-center outline-none;
     line-height: 1.25rem;
     border-radius: 5px;
-    text-transform: uppercase;
-    outline: none;
 }
 
 .core-button.--large:not(.--is-link),
 .core-button.--large.--is-link > a {
-    @apply h-20 px-16 py-5 font-bold text-2xl border-4;
+    @apply font-bold;
+    height: 87px;
+    font-size: 28px;
+    padding: 12px 40px;
+    border-width: 3px;
     min-width: 128px;
 }
 
@@ -121,32 +129,25 @@ export default {
 
 .core-button.--rounded:not(.--is-link),
 .core-button.--rounded.--is-link > a {
-    border-radius: 9999px;
+    border-radius: 40px;
 }
 
 .core-button.--primary:not(.--is-link),
 .core-button.--primary.--is-link > a {
-    color: #c386ae;
+    color: #1a1a30;
     border-color: currentColor;
 }
 
 .core-button.--secondary:not(.--is-link),
 .core-button.--secondary.--is-link > a {
     color: #1a1a30;
-    background: #c386ae;
-    border-color: #c386ae;
+    border-color: currentColor;
 }
 
-.core-button.--primary:not(.--is-link):hover,
-.core-button.--primary.--is-link > a:hover {
-    color: #7568f6;
-    border-color: #7568f6;
-}
-
-.core-button.--secondary:not(.--is-link):hover,
-.core-button.--secondary.--is-link > a:hover {
-    color: #7568f6;
-    border-color: #c386ae;
+.core-button:not(.--is-link):hover,
+.core-button.--is-link > a:hover {
+    color: #c386ae;
+    background-color: #121023;
 }
 
 .core-button.--medium.--bulletin:not(.--is-link),

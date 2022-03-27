@@ -31,14 +31,7 @@ export default {
     },
     computed: {
         itemClasses() {
-            return [
-                'core-menuItem',
-                'block',
-                'px-4',
-                'py-2',
-                'text-center',
-                'text-xs',
-            ]
+            return ['core-menuItem', 'block', 'px-4', 'py-2', 'text-center']
         },
         readonly() {
             return !this.href
@@ -55,6 +48,7 @@ export default {
 <style scoped>
 .core-menuItem {
     color: #b5b5b5;
+    font-size: 18px;
 }
 
 .core-menuItem:hover {
