@@ -132,14 +132,21 @@ export default {
 
 .core-button.--secondary:not(.--is-link),
 .core-button.--secondary.--is-link > a {
-    color: #c7c7c7;
-    border-color: currentColor;
+    color: #1a1a30;
+    background: #c386ae;
+    border-color: #c386ae;
 }
 
-.core-button:not(.--is-link):hover,
-.core-button.--is-link > a:hover {
+.core-button.--primary:not(.--is-link):hover,
+.core-button.--primary.--is-link > a:hover {
     color: #7568f6;
     border-color: #7568f6;
+}
+
+.core-button.--secondary:not(.--is-link):hover,
+.core-button.--secondary.--is-link > a:hover {
+    color: #7568f6;
+    border-color: #c386ae;
 }
 
 .core-button.--medium.--bulletin:not(.--is-link),
