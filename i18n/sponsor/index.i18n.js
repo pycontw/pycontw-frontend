@@ -23,6 +23,10 @@ export default genI18nMessages({
             prospectus: 'full prospectus',
             contact: 'sponsorship@python.tw',
         },
+        cta: {
+            text: 'Application Form',
+            link: 'https://docs.google.com/forms/d/1b-SHv1JO_8gyPe3385l-3y78qg4njmV7MLFIL4VxIPg/',
+        },
         og: {
             title: 'Sponsor page',
             description:
@@ -49,6 +53,10 @@ export default genI18nMessages({
         terms: {
             prospectus: '2021 PyCon Taiwan 贊助書',
             contact: '聯絡我們',
+        },
+        cta: {
+            text: '索取贊助書',
+            link: 'https://docs.google.com/forms/d/1o_Wizu0BCUvh2DcS9jhI0lUamrn7AEz4tPzQ3I98XFw/',
         },
         og: {
             title: '贊助召集令',
