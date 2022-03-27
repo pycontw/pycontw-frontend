@@ -41,6 +41,7 @@
                 secondary
                 medium
                 block
+                :uppercase="false"
             >
                 {{ $t('cta.text') }}
             </text-button>
