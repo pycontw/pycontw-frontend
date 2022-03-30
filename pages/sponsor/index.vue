@@ -1,8 +1,16 @@
 <template>
     <i18n-page-wrapper class="text-xs md:text-lg">
         <core-h1 :title="$t('title')"></core-h1>
-        <div v-for="(intro, i) in $t('intro')" :key="`sponsor_intro_${i}`">
-            <p class="text-base">{{ intro }}</p>
+        <div>
+            <i18n
+                v-for="(intro, i) in $t('intro')"
+                :key="`sponsor_intro_${i}`"
+                :path="`intro.${i}`"
+                tag="p"
+                class="text-base"
+            >
+                <template #br><br /></template>
+            </i18n>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-0 mb-10">
             <div
@@ -11,7 +19,7 @@
                 class="flex flex-col items-center mt-5 sm:mt-12"
             >
                 <div
-                    class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat"
+                    class="icon"
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
                 <div class="text-xs md:text-base mt-3 sm:mt-8 mb-0 text-center">
@@ -105,4 +113,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="postcss" scoped>
+.icon {
+    @apply w-16 md:w-24 h-16 md:h-24 bg-contain bg-no-repeat;
+}
+</style>
