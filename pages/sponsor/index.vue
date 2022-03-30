@@ -2,7 +2,7 @@
     <i18n-page-wrapper class="text-xs md:text-lg">
         <core-h1 :title="$t('title')"></core-h1>
         <div v-for="(intro, i) in $t('intro')" :key="`sponsor_intro_${i}`">
-            <p class="sponsor-intro">{{ intro }}</p>
+            <p class="text-base">{{ intro }}</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-0 mb-10">
             <div
@@ -14,12 +14,12 @@
                     class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat"
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
-                <div class="text-xs md:text-lg mt-3 sm:mt-8 mb-0 text-center">
+                <div class="text-xs md:text-base mt-3 sm:mt-8 mb-0 text-center">
                     {{ service }}
                 </div>
             </div>
         </div>
-        <i18n path="summary" tag="p">
+        <i18n path="summary" tag="p" class="text-base">
             <template #prospectus>
                 <locale-link to="/sponsor/prospectus" highlight underline>{{
                     $t('terms.prospectus')
@@ -112,8 +112,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.sponsor-intro {
-    font-size: 20px;
-}
-</style>
+<style scoped></style>
