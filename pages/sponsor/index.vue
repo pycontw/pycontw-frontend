@@ -37,7 +37,6 @@
         <div class="text-center mt-10">
             <text-button
                 :href="$t('cta.link')"
-                :to="linkTo"
                 secondary
                 medium
                 block
