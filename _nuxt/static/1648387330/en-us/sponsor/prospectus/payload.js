@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-us/sponsor/prospectus", {data:[{}],fetch:{},mutations:[]});
