@@ -1,9 +1,9 @@
 <template>
-    <i18n-page-wrapper class="text-xs md:text-lg md:px-57 lg:px-56">
+    <i18n-page-wrapper class="text-xs md:text-lg">
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro.0" tag="p"></i18n>
-        <i18n path="intro.1" tag="p"></i18n>
-        <i18n path="intro.2" tag="p"></i18n>
+        <div v-for="(intro, i) in $t('intro')" :key="`sponsor_intro_${i}`">
+            <p class="text-base">{{ intro }}</p>
+        </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-0 mb-10">
             <div
                 v-for="(service, i) in $t('services')"
@@ -14,17 +14,12 @@
                     class="w-16 md:w-28 h-16 md:h-28 bg-contain bg-no-repeat"
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
-                <div class="text-xs md:text-lg mt-3 sm:mt-8 mb-0 text-center">
+                <div class="text-xs md:text-base mt-3 sm:mt-8 mb-0 text-center">
                     {{ service }}
                 </div>
             </div>
         </div>
-        <i18n path="summary" tag="p">
-            <template #prospectus>
-                <locale-link to="/sponsor/prospectus" highlight underline>{{
-                    $t('terms.prospectus')
-                }}</locale-link>
-            </template>
+        <i18n path="summary" tag="p" class="text-base">
             <template #contact>
                 <ext-link
                     href="mailto:sponsorship@python.tw"
@@ -34,14 +29,25 @@
                 >
             </template>
         </i18n>
+        <div class="text-center mt-10">
+            <text-button
+                :href="$t('cta.link')"
+                secondary
+                medium
+                block
+                :uppercase="false"
+            >
+                {{ $t('cta.text') }}
+            </text-button>
+        </div>
     </i18n-page-wrapper>
 </template>
 
 <script>
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
-import LocaleLink from '@/components/core/links/LocaleLink.vue'
-import ExtLink from '@/components/core/links/ExtLink.vue'
+import TextButton from '@/components/core/buttons/TextButton'
+import { ExtLink } from '@/components/core/links'
 import i18n from '@/i18n/sponsor/index.i18n'
 import ServiceImg1 from '@/static/img/sponsor/CommunityVisibility.svg'
 import ServiceImg2 from '@/static/img/sponsor/Recruitment.svg'
@@ -55,7 +61,7 @@ export default {
         I18nPageWrapper,
         CoreH1,
         ExtLink,
-        LocaleLink,
+        TextButton,
     },
     data() {
         return {

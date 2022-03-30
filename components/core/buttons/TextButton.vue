@@ -140,7 +140,7 @@ export default {
 
 .core-button.--secondary:not(.--is-link),
 .core-button.--secondary.--is-link > a {
-    color: #c7c7c7;
+    color: #1a1a30;
     border-color: currentColor;
 }
 
