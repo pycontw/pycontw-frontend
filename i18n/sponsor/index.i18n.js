@@ -21,7 +21,6 @@ export default genI18nMessages({
             'and we will provide the sponsorship packages detail to you. Or contact us ' +
             'directly via {contact} to get any further information.',
         terms: {
-            prospectus: 'full prospectus',
             contact: 'sponsorship@python.tw',
         },
         cta: {
@@ -53,7 +52,6 @@ export default genI18nMessages({
             '若想了解 PyCon APAC 2022 完整的贊助方案，歡迎點擊下方按鈕填寫表單留下您的聯絡資料' +
             '索取贊助書或是直接透過贊助組信箱 {contact} 聯絡我們，讓我們了解貴單位的需求',
         terms: {
-            prospectus: '2021 PyCon Taiwan 贊助書',
             contact: 'sponsorship@python.tw',
         },
         cta: {

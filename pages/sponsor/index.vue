@@ -20,11 +20,6 @@
             </div>
         </div>
         <i18n path="summary" tag="p" class="text-base">
-            <template #prospectus>
-                <locale-link to="/sponsor/prospectus" highlight underline>{{
-                    $t('terms.prospectus')
-                }}</locale-link>
-            </template>
             <template #contact>
                 <ext-link
                     href="mailto:sponsorship@python.tw"
@@ -52,8 +47,7 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
-import LocaleLink from '@/components/core/links/LocaleLink.vue'
-import ExtLink from '@/components/core/links/ExtLink.vue'
+import { ExtLink } from '@/components/core/links'
 import i18n from '@/i18n/sponsor/index.i18n'
 import ServiceImg1 from '@/static/img/sponsor/CommunityVisibility.svg'
 import ServiceImg2 from '@/static/img/sponsor/Recruitment.svg'
@@ -67,7 +61,6 @@ export default {
         I18nPageWrapper,
         CoreH1,
         ExtLink,
-        LocaleLink,
         TextButton,
     },
     data() {
