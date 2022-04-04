@@ -15,8 +15,8 @@ export default {
         classObject() {
             return {
                 'w-full': true,
-                'px-8': !this.customX,
-                'py-24': !this.customY,
+                'px-5': !this.customX,
+                'py-12': !this.customY,
                 'sm:px-20': !this.customX,
                 'md:px-32': !this.customX,
                 'lg:px-32': !this.customX,
@@ -41,7 +41,7 @@ h3 {
 
 p,
 .paragraph {
-    @apply w-full mt-1 mb-4 text-justify;
+    @apply w-full mt-1 mb-4;
 }
 
 span.text-2s {

@@ -7,7 +7,8 @@
                 :key="`sponsor_intro_${i}`"
                 :path="`intro.${i}`"
                 tag="p"
-                class="text-base"
+                class="text-xs md:text-sm"
+                style="line-height: 176%"
             >
                 <template #br><br /></template>
             </i18n>
@@ -27,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <i18n path="summary" tag="p" class="text-base">
+        <i18n path="summary" tag="p" class="text-xs" style="line-height: 176%">
             <template #contact>
                 <ext-link
                     href="mailto:sponsorship@python.tw"
@@ -115,6 +116,6 @@ export default {
 
 <style lang="postcss" scoped>
 .icon {
-    @apply w-16 md:w-24 h-16 md:h-24 bg-contain bg-no-repeat;
+    @apply w-24 md:w-24 h-24 md:h-24 bg-contain bg-no-repeat;
 }
 </style>
