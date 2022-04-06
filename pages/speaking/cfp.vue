@@ -139,8 +139,8 @@
             tag="p"
         >
             <template #programMail>
-                <ext-link href="mailto:program@pycon.tw" highlight>
-                    program@pycon.tw
+                <ext-link href="mailto:program@python.tw" highlight>
+                    program@python.tw
                 </ext-link>
             </template>
         </i18n>
