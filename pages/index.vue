@@ -46,9 +46,10 @@
             </div>
         </div>
 
-        <!--<i18n-page-wrapper class="sponsor-section pt-12">
+        <i18n-page-wrapper class="sponsor-section pt-12">
             <h1 class="sponsor-title">{{ $t('sponsorList') }}</h1>
             <sponsor-card-collection
+                class="px-16"
                 v-for="(leveledSponsors, i) in sponsorsData"
                 :key="`index_sponsor_level_${i}`"
                 :level-name="leveledSponsors.level_name"
@@ -74,7 +75,7 @@
                 <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
             </div>
         </i18n-page-wrapper>
-        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />-->
+        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
     </div>
 </template>
 
@@ -82,12 +83,18 @@
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import TextButton from '~/components/core/buttons/TextButton'
+import SponsorCard from '~/components/sponsors/SponsorCard'
+import SponsorModal from '~/components/sponsors/SponsorModal'
+import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
         TextButton,
+        SponsorCard,
+        SponsorModal,
+        SponsorCardCollection,
     },
     data() {
         return {
