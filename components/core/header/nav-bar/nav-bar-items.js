@@ -63,4 +63,14 @@ export default Object.freeze({
             value: '/about/code-of-conduct',
         },
     ],
+    registration: [
+        {
+            i18nKey: 'tickets',
+            value: '/registration/tickets',
+        },
+        {
+            i18nKey: 'financialAid',
+            value: '/registration/financial-aid',
+        },
+    ],
 })
