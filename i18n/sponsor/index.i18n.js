@@ -37,9 +37,9 @@ export default genI18nMessages({
     'zh-hant': {
         title: '贊助召集令',
         intro: [
-            '您的支持是推進 PyCon Taiwan 的強大動力！{br}' +
-                'PyCon Taiwan 在此召集您的加入，透過贊助以具體行動支持 Python 社群的成長！{br}' +
-                '透過參與 PyCon Taiwan ，我們也提供贊助廠商以下的服務：',
+            '您的支持是推進 PyCon Taiwan 的強大動力。{br}' +
+                'PyCon Taiwan 在此召集您的加入，透過贊助以具體行動支持 python 社群的成長！{br}' +
+                '透過參與 PyCon APAC 2022，我們也提供贊助廠商以下的服務：',
         ],
         services: [
             '接觸專業人士',
