@@ -132,7 +132,7 @@ export default {
 html {
     @apply font-sans;
     font-size: 20px;
-    color: #c7c7c7;
+    color: #f0ebf5;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
