@@ -131,7 +131,7 @@ export default genI18nMessages({
             },
         ],
         terms: {
-            contact: 'organizers@pycon.tw.',
+            contact: 'organizers@python.tw.',
             MeetingManagement: 'Personal Information Protection Act 130',
         },
         og: {
@@ -245,7 +245,7 @@ export default genI18nMessages({
             },
         ],
         terms: {
-            contact: 'organizers@pycon.tw.',
+            contact: 'organizers@python.tw.',
             MeetingManagement: '其法定特定目的為一三〇會議管理',
         },
         og: {
