@@ -31,7 +31,7 @@
                 ></div>
             </div>
         </div>
-        <I18nPageWrapper class="pt-8 px-8 md:px-57 lg:px-56">
+        <I18nPageWrapper class="pt-0 md:pt-20">
             <div class="flex flex-col w-full m-auto">
                 <div v-for="(rule, i) in $t('contents')" :key="`coc-rule-${i}`">
                     <p class="paragraph-title text-base md:text-lg lg:text-lg">

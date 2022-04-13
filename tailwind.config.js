@@ -13,7 +13,26 @@ module.exports = {
             ],
             serif: ['Noto Serif TC', '-apple-system', 'serif'],
         },
-        extend: {},
+        extend: {
+            width: {
+                '272px': '272px',
+                '706px': '706px',
+                '1112px': '1112px',
+            },
+            padding: {
+                '24px': '24px',
+                '32px': '32px',
+                '168px': '168px',
+            },
+        },
+        screens: {
+            xs: '360px',
+            sm: '600px',
+            md: '834px',
+            lg: '1194px',
+            xl: '1440px',
+            '2xl': '1600px',
+        },
     },
     variants: {
         extend: {},
