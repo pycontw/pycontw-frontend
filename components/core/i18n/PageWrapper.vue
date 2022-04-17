@@ -15,8 +15,8 @@ export default {
         classObject() {
             return {
                 'w-full': true,
-                'px-5': !this.customX,
-                'py-12': !this.customY,
+                'px-8': !this.customX,
+                'py-24': !this.customY,
                 'sm:px-20': !this.customX,
                 'md:px-32': !this.customX,
                 'lg:px-32': !this.customX,
