@@ -115,10 +115,19 @@ export default {
 
 <style lang="postcss" scoped>
 .icon {
-    @apply w-24 md:w-24 h-24 md:h-24 bg-contain bg-no-repeat;
+    @apply bg-contain bg-no-repeat;
+    width: 112px;
+    height: 112px;
+    @media (min-width: 768px) {
+        width: 138px;
+        height: 138px;
+    }
 }
 .sponsor_context {
-    @apply text-xs md:text-sm;
+    font-size: 16px;
     line-height: 176%;
+    @media (min-width: 768px) {
+        font-size: 20px;
+    }
 }
 </style>
