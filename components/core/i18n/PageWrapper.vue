@@ -41,7 +41,7 @@ h3 {
 
 p,
 .paragraph {
-    @apply w-full mt-1 mb-4;
+    @apply w-full mt-1 mb-4 text-justify;
 }
 
 span.text-2s {
