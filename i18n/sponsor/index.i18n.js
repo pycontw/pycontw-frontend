@@ -38,8 +38,8 @@ export default genI18nMessages({
         title: '贊助召集令',
         intro: [
             '您的支持是推進 PyCon Taiwan 的強大動力。{br}' +
-                'PyCon Taiwan 在此召集您的加入，透過贊助以具體行動支持 Python 社群的成長！',
-            '透過參與 PyCon APAC 2022，我們也提供贊助廠商以下的服務：',
+                'PyCon Taiwan 在此召集您的加入，透過贊助以具體行動支持 Python 社群的成長！{br}' +
+                '透過參與 PyCon APAC 2022，我們也提供贊助廠商以下的服務：',
         ],
         services: [
             '接觸專業人士',
@@ -49,7 +49,7 @@ export default genI18nMessages({
         ],
         summary:
             '若想了解 PyCon APAC 2022 完整的贊助方案，歡迎點擊下方按鈕填寫表單留下您的聯絡資料' +
-            '索取贊助書或是直接透過贊助組信箱 {contact} 聯絡我們，讓我們了解貴單位的需求',
+            '索取贊助書或是直接透過贊助組信箱 {contact} 聯絡我們，讓我們了解貴單位的需求！',
         terms: {
             contact: 'sponsorship@python.tw',
         },
