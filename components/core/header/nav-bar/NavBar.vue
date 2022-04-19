@@ -135,10 +135,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-navBarItem {
-    color: #c7c7c7;
-    font-weight: 700;
+    @apply font-bold;
 }
 
 .core-navBarItem:hover {

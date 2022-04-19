@@ -53,22 +53,23 @@ export default {
 
 <style scoped>
 .core-navBarItemAccordion {
-    @apply flex w-full my-4 flex-col justify-center cursor-pointer;
+    @apply flex w-full flex-col justify-center cursor-pointer;
 }
 
 .core-navBarItemAccordion__label {
-    @apply inline-flex justify-center items-center;
-    color: #c386ae;
+    @apply inline-flex items-center;
+    padding: 17px 72px;
 }
 
 .core-navBarItemAccordion__items {
-    @apply flex mt-4 flex-col justify-center;
-    background-color: #27244c;
+    @apply flex flex-col justify-center;
+    background-color: #1a1a30;
 }
 
 .core-navBarItemAccordion__items > .core-localeLink {
-    @apply inline-flex py-4 justify-center;
-    color: #c386ae;
+    @apply inline-flex;
+    color: #e099e1;
+    padding: 17px 64px;
 }
 
 .core-navBarItemAccordion__items > .core-localeLink:hover {
