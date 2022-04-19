@@ -90,20 +90,25 @@ export default {
         },
         getPageClassesByPath(category, isLink = false) {
             const items = navBarItems[category]
-
             const nameRegex = RegExp(
                 String.raw`${category}-[\w-]+___${this.$i18n.locale}`,
                 'g',
             )
             let isOnCurrentPath = !!this.$route.name.match(nameRegex)
-
             if (items && !isLink) {
+                // use for the case, e.g. category is "conference", but have subpath like "events/...."
                 const paths = items.map(
                     (item) => `/${this.$i18n.locale}${item.value}`,
                 )
                 isOnCurrentPath =
                     isOnCurrentPath || paths.includes(this.$route.path)
             }
+            if (isLink) {
+                isOnCurrentPath =
+                    isOnCurrentPath ||
+                    this.$route.name === `${category}___${this.$i18n.locale}`
+            }
+            /*
             if (isLink) {
                 const re = RegExp(
                     String.raw`\w+-${category}___${this.$i18n.locale}`,
@@ -112,6 +117,8 @@ export default {
                 isOnCurrentPath =
                     isOnCurrentPath || !!this.$route.name.match(re)
             }
+            */
+
             return {
                 'core-navBarItem': true,
                 flex: isLink,
