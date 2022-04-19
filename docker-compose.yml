@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 
 services:
   pycontw-2022-frontend:
@@ -6,8 +6,10 @@ services:
     restart: always
     build:
       context: .
+    networks:
+      - network
 
 networks:
-    default:
-        external:
-            name: pycontw-net
+    network:
+        external: true
+        name: network-2022
