@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  pycontw-2021-frontend:
+  pycontw-2022-frontend:
     container_name: pycontw-2022-frontend
     restart: always
     build:

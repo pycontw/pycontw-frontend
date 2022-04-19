@@ -9,8 +9,8 @@ services:
       context: .
       dockerfile: mock-server.Dockerfile
 
-  pycontw-2021:
-    container_name: pycontw-2021-frontend-dev
+  pycontw-2022:
+    container_name: pycontw-2022-frontend-dev
     build:
       context: .
       dockerfile: dev.Dockerfile
