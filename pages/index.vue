@@ -20,7 +20,7 @@
                         alt="Title of PyCon APAC 2022"
                     />
                 </div>
-                <div
+                <!-- <div
                     class="
                         w-full
                         flex flex-col
@@ -42,7 +42,7 @@
                     >
                         {{ $t('callForProposals') }}
                     </text-button>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -81,13 +81,13 @@
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
-import TextButton from '~/components/core/buttons/TextButton'
+// import TextButton from '~/components/core/buttons/TextButton'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
-        TextButton,
+        // TextButton,
     },
     data() {
         return {
