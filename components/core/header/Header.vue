@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full h-full">
+    <header class="w-full" :style="{ height: '64px' }">
         <div class="header-container --desktop hidden md:flex">
             <home-icon />
             <nav-bar />
@@ -20,7 +20,6 @@ import HomeIcon from './HomeIcon'
 import NavBar from './nav-bar/NavBar'
 import NavBarHamburger from './nav-bar/NavBarHamburger'
 import LocaleSwitch from './locale-switch/LocaleSwitch'
-
 export default {
     name: 'CoreHeader',
     components: {
@@ -40,28 +39,17 @@ export default {
 <style lang="postcss" scoped>
 .header-container {
     @apply w-full h-full px-4 justify-between items-center;
-    font-size: 19px;
-}
-
-.header-container.--desktop {
-    color: #c386ae;
+    font-size: 20px;
+    color: #f0ebf5;
     background-color: #121023;
 }
-
 .header-container.--desktop .core-localeSwitch:hover {
     color: #c386ae;
 }
-
-.header-container.--mobile {
-    color: #c386ae;
-    background-color: #121023;
-}
-
-.header-container.--mobile .core-localeSwitch {
-    color: #c386ae;
-}
-
 .header-container.--mobile .core-localeSwitch:hover {
     background-color: unset;
+}
+.header-container.--mobile .core-localeSwitch {
+    z-index: 1002;
 }
 </style>

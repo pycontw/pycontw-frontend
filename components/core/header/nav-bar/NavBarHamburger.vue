@@ -1,18 +1,27 @@
 <template>
     <div class="relative">
-        <icon-hamburger-menu-icon
-            v-show="!isMenuSlidedIn"
-            class="cursor-pointer"
-            @click.native="toggleMenu"
-        />
-        <div
-            v-show="isMenuSlidedIn"
-            class="close-icon-button"
-            @click="toggleMenu"
-        >
-            +
+        <div class="core-navBarHamburger__icon-button">
+            <button>
+                <icon-hamburger-menu-icon
+                    v-show="!isMenuSlidedIn"
+                    @click.native="toggleMenu"
+                />
+            </button>
+            <button
+                v-show="isMenuSlidedIn"
+                class="core-navBarHamburger__close"
+                @click="toggleMenu"
+            >
+                +
+            </button>
         </div>
-        <div v-if="isMenuSlidedIn" class="core-navBarHamburgerSlideInMenu">
+        <div
+            v-if="isMenuSlidedIn"
+            class="
+                core-navBarHamburgerSlideInMenu
+                core-navBarHamburgerSlideInMenu__overflow
+            "
+        >
             <nav-bar-item-accordion
                 :label="$t('about')"
                 :items="aboutItems"
@@ -125,23 +134,41 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarHamburgerSlideInMenu {
-    @apply fixed top-0 right-0 flex w-2/3 h-full pt-10 flex-col text-black font-bold;
-    background-color: #1a1a30;
+    @apply fixed right-0 flex w-full h-full flex-col font-bold;
+    top: 64px;
+    padding-top: 20px;
+    background-color: #121023;
     z-index: 1000;
 }
-
+.core-navBarHamburgerSlideInMenu__overflow {
+    /*if the height is too small*/
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.core-navBarHamburgerSlideInMenu__overflow::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
 .core-navBarHamburgerSlideInMenu__item {
-    @apply flex w-full p-4 justify-center items-center;
-    color: #c386ae;
+    @apply flex w-full items-center;
+    padding: 17px 72px;
 }
 
 .core-navBarHamburgerSlideInMenu__item:hover {
     color: #7568f6;
 }
-
-.close-icon-button {
-    @apply relative transform rotate-45 text-4xl cursor-pointer;
+.core-navBarHamburger__icon-button {
+    @apply relative text-center;
     z-index: 1001;
-    color: #c386ae;
+    width: 20px;
+}
+
+.core-navBarHamburger__close {
+    @apply absolute text-4xl;
+    transform: translate(-50%, -50%) rotate(45deg);
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
 }
 </style>
