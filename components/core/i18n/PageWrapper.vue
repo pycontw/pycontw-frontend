@@ -34,28 +34,19 @@ export default {
         },
         classObject() {
             return {
-                // grid: true,
                 'py-8': true,
                 'md:py-20': true,
                 'min-w-[272px]': true,
                 'mx-[24px]': true,
                 'w-auto': true,
-                // 'gap-2': true,
-                // 'grid-cols-4': true, // col-4
                 'sm:mx-[32px]': !this.customX,
                 'sm:w-auto': !this.customX,
-                // 'sm:gap-2': true,
-                // 'sm:grid-cols-8': true, // col-8
                 'md:mx-auto': !this.customX,
                 'md:w-[706px]': !this.customX,
-                // 'md:gap-3': true,
-                // 'md:grid-cols-12': true, // col-12
                 'lg:mx-[168px]': !this.customX,
                 'lg:w-auto': !this.customX,
-                // 'lg:gap-5': true,
                 'xl:mx-auto': !this.customX,
                 'xl:w-[1040px]': !this.customX,
-                // 'xl:gap-6': true,
             }
         },
     },
