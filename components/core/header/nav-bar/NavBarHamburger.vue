@@ -19,12 +19,12 @@
                 :expanding="expandingItem === 'about'"
                 @click.native="toggleAccordion('about')"
             ></nav-bar-item-accordion>
-            <nav-bar-item-accordion
+            <!-- <nav-bar-item-accordion
                 :label="$t('speaking')"
                 :items="speakingItems"
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
-            ></nav-bar-item-accordion>
+            ></nav-bar-item-accordion> -->
             <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/conference/schedule"
