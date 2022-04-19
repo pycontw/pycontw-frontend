@@ -1,5 +1,6 @@
 <template>
     <svg
+        class="core-iconHamburgerMenuIcon"
         width="20"
         height="17"
         viewBox="0 0 20 17"
@@ -11,7 +12,6 @@
             y1="1.75"
             x2="18.75"
             y2="1.75"
-            stroke="#c386ae"
             stroke-width="2.5"
             stroke-linecap="round"
         />
@@ -20,7 +20,6 @@
             y1="8.75"
             x2="18.75"
             y2="8.75"
-            stroke="#c386ae"
             stroke-width="2.5"
             stroke-linecap="round"
         />
@@ -29,7 +28,6 @@
             y1="15.75"
             x2="18.75"
             y2="15.75"
-            stroke="#c386ae"
             stroke-width="2.5"
             stroke-linecap="round"
         />
@@ -42,4 +40,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.core-iconHamburgerMenuIcon {
+    stroke: #f0ebf5;
+}
+</style>
