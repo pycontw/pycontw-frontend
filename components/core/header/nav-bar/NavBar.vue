@@ -112,16 +112,6 @@ export default {
                     isOnCurrentPath ||
                     this.$route.name === `${category}___${this.$i18n.locale}`
             }
-            /*
-            if (isLink) {
-                const re = RegExp(
-                    String.raw`\w+-${category}___${this.$i18n.locale}`,
-                    'g',
-                )
-                isOnCurrentPath =
-                    isOnCurrentPath || !!this.$route.name.match(re)
-            }
-            */
 
             return {
                 'core-navBarItem': true,
