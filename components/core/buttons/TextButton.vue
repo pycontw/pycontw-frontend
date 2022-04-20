@@ -38,10 +38,6 @@ export default {
             type: Boolean,
             default: false,
         },
-        rounded: {
-            type: Boolean,
-            default: true,
-        },
         block: {
             type: Boolean,
             default: false,
@@ -72,7 +68,6 @@ export default {
                 '--large': this.large,
                 '--medium': this.medium,
                 '--small': this.small,
-                '--rounded': this.rounded,
                 '--block': this.block,
                 '--is-link': this.isLink,
                 '--uppercase': this.uppercase,
@@ -102,6 +97,7 @@ export default {
 .core-button.--is-link > a {
     @apply inline-flex items-center justify-center outline-none;
     line-height: 1.25rem;
+    border-radius: 40px;
 }
 
 .core-button:not(.--is-link) {
@@ -113,11 +109,6 @@ export default {
 
 .core-button.--uppercase > a {
     @apply uppercase;
-}
-
-.core-button.--rounded:not(.--is-link),
-.core-button.--rounded.--is-link > a {
-    border-radius: 40px;
 }
 
 .core-button.--primary {
@@ -160,7 +151,7 @@ export default {
 
     &.--small:not(.--is-link),
     &.--small > a {
-        @apply h-12 font-semibold;
+        @apply h-12 font-semibold text-base;
         padding: 12px 36px;
         min-width: 80px;
     }
