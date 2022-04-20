@@ -17,6 +17,14 @@
 
         <i18n-page-wrapper class="i18n__custom pt-8 px-8 md:px-57 lg:px-56">
             <!-- intro -->
+
+            <div class="pb-12">
+                <h2>{{ $t('introConference') }}</h2>
+                <i18n path="conferenceContent" tag="p" class="introContent">
+                    <template #br><br /></template>
+                </i18n>
+            </div>
+
             <div class="pb-12">
                 <h2>{{ $t('introTitle') }}</h2>
                 <i18n path="introContent" tag="p" class="introContent">
@@ -122,7 +130,7 @@ export default {
                         'pyckage',
                         'conference',
                     ],
-                    link: 'https://pycontw.kktix.cc',
+                    link: 'https://pycontw.kktix.cc/events/2022-individual',
                 },
                 {
                     tag: 'regular',
@@ -183,6 +191,14 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.conferenceContent {
+    @apply leading-5;
+    font-size: 16px;
+    @media (min-width: 1280px) {
+        font-size: 18px;
+    }
+}
+
 .introContent {
     @apply leading-5;
     font-size: 16px;
