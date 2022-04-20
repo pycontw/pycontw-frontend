@@ -1,15 +1,21 @@
 <template>
     <header class="w-full">
-        <div class="header-container --desktop hidden md:flex">
-            <home-icon />
-            <nav-bar />
-            <locale-switch />
+        <div class="header-container --desktop hidden md:block">
+            <scrollable-nav-bar>
+                <div class="header__nav-bar">
+                    <home-icon />
+                    <nav-bar />
+                    <locale-switch />
+                </div>
+            </scrollable-nav-bar>
         </div>
-        <div class="header-container --mobile flex md:hidden">
-            <home-icon />
-            <div class="h-full flex items-center">
-                <locale-switch />
-                <nav-bar-hamburger />
+        <div class="header-container --mobile md:hidden">
+            <div class="header__nav-bar">
+                <home-icon />
+                <div class="h-full flex items-center">
+                    <locale-switch />
+                    <nav-bar-hamburger />
+                </div>
             </div>
         </div>
     </header>
@@ -19,6 +25,7 @@
 import HomeIcon from './HomeIcon'
 import NavBar from './nav-bar/NavBar'
 import NavBarHamburger from './nav-bar/NavBarHamburger'
+import ScrollableNavBar from './nav-bar/ScrollableNavBar'
 import LocaleSwitch from './locale-switch/LocaleSwitch'
 export default {
     name: 'CoreHeader',
@@ -27,6 +34,7 @@ export default {
         LocaleSwitch,
         NavBar,
         NavBarHamburger,
+        ScrollableNavBar,
     },
     computed: {
         myPyConUrl() {
@@ -38,22 +46,31 @@ export default {
 
 <style lang="postcss" scoped>
 .header-container {
-    @apply w-full h-full px-4 justify-between items-center;
+    @apply w-full;
     font-size: 20px;
     color: #f0ebf5;
     background-color: #121023;
     height: 64px;
 }
 
-.header-container.--desktop .core-localeSwitch:hover {
+.header-container.--desktop.core-localeSwitch:hover {
     color: #c386ae;
 }
 
-.header-container.--mobile .core-localeSwitch:hover {
+.header-container.--mobile.core-localeSwitch:hover {
     background-color: unset;
 }
 
-.header-container.--mobile .core-localeSwitch {
+.header-container.--mobile.core-localeSwitch {
     z-index: 1002;
+}
+
+.header__nav-bar {
+    @apply w-full flex justify-between items-center px-4;
+    pointer-events: auto; /*enable click-through ScrollableNavBar*/
+}
+.header-container,
+.header__nav-bar {
+    height: 64px;
 }
 </style>
