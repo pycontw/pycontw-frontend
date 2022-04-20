@@ -120,10 +120,13 @@ export default {
 }
 @keyframes core-scrollableNavBar__blink {
     0% {
-        opacity: 0.7;
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
     }
     100% {
-        opacity: 1;
+        opacity: 0.5;
     }
 }
 @media (max-width: 1193px) {
