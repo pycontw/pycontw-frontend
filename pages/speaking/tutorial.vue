@@ -36,7 +36,7 @@
                 tag="p"
             >
                 <template #contact>
-                    <ext-link href="mailto:organizers@pycon.tw" highlight>{{
+                    <ext-link href="mailto:organizers@python.tw" highlight>{{
                         $t('terms.contact')
                     }}</ext-link>
                 </template>

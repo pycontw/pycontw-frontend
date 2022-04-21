@@ -38,13 +38,7 @@
             </template>
         </i18n>
         <div class="text-center mt-10">
-            <text-button
-                :href="$t('cta.link')"
-                secondary
-                medium
-                block
-                :uppercase="false"
-            >
+            <text-button :href="$t('cta.link')">
                 {{ $t('cta.text') }}
             </text-button>
         </div>
