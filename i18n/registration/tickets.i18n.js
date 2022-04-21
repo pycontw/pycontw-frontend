@@ -6,15 +6,20 @@ export default genI18nMessages({
         pageAbstract:
             'Welcome on board the PyCon APAC 2022 Formosa for discovering' +
             ' the Python Universe. More with multiple ticket types to choose from.' +
-            ' Engage with experts and learn from peers. Expose impossible Python secrets across PyCon APAC 2022.',
+            ' Engage with experts and learn from peers. ' +
+            'Expose impossible Python secrets across PyCon APAC 2022.',
         introConference: 'Conference Information',
         conferenceContent:
-            'PyCon APAC 2022 will be held on 03-04 September,' +
-            ' It will be run online',
+            'Date: September 3-4, 2022{br}' +
+            'How to Attend: You can watch the live stream of the whole conference on YouTube, ' +
+            'or come join our Gather Town and Discord to meet the speakers and other attendees!. ',
         introTitle: 'Ticket',
         introContent:
-            '100 Early Bird Passes are ready to sell and it is ending on May 22, 2022. Register now and take the chance to get a 35% off discount with our Super Early Bird prices. ' +
-            'The fee you spend will be put straight back into the community to support our diversity initiatives and financial aid programs.' +
+            '100 Early Bird Passes are on sale now but will soon end on May 22, 2022. ' +
+            'Register now and take the chance to get a 35% off discount ' +
+            'with our Super Early Bird prices. ' +
+            'The fee you spend will be put straight back into the community to ' +
+            'support our diversity initiatives and financial aid programs. ' +
             'If you need financial aid, please visit {fa}.{br}' +
             'Limited edition conference swags Pyckage will be revealed soon.',
         features: {
@@ -27,9 +32,12 @@ export default genI18nMessages({
         ticketEarlyBird: 'Early Bird Pass',
         ticketRegular: 'Individual Pass',
         ticketEnterprise: 'Corporate Pass',
-        buttonText: 'On sale',
+        buttonText: 'On Sale Now',
         buttonDisabledText: 'Coming Soon',
         fa: 'financial aid',
+        og: {
+            title: 'Ticket Info',
+        },
     },
     'zh-hant': {
         title: '探索無疆界宇宙，福爾摩沙號準備啟程。',
@@ -38,7 +46,10 @@ export default genI18nMessages({
             '多元化學習與多視角觀察技術應用，深入淺出引你進入 Python 學習殿堂。' +
             '跨越地球距離阻礙，串連亞太地區，與您一同揭露不可能的可能秘密。',
         introConference: '大會資訊',
-        conferenceContent: 'PyCon 2022 APAC 將於 9月 3-4 日線上舉行。',
+        conferenceContent:
+            '會議時間：2022 年 9 月 3-4 日{br}' +
+            '進行方式：大會進行方式皆為線上進行，形式包含 YouTube 直播大會演講、' +
+            'Gather 大地遊戲及攤位交流、Discord 線上即時討論及客服。',
         introTitle: '購票方案簡介',
         introContent:
             '從早鳥票到一般票，企業票至個人贊助票，您可以依照您的需求選擇您需要的票種，' +
@@ -57,5 +68,8 @@ export default genI18nMessages({
         buttonText: '立即搶購',
         buttonDisabledText: '即將開賣',
         fa: '財務補助申請',
+        og: {
+            title: '購票資訊',
+        },
     },
 })

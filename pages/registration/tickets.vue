@@ -9,7 +9,7 @@
             </template>
             <template #text>
                 <core-h1 :title="$t('title')"></core-h1>
-                <p class="w-full md:w-3/4 leading-6">
+                <p class="w-full md:w-3/4 leading-6 text-justify">
                     {{ $t('pageAbstract') }}
                 </p>
             </template>
@@ -18,7 +18,7 @@
         <i18n-page-wrapper class="i18n__custom pt-8 px-8 md:px-57 lg:px-56">
             <!-- intro -->
 
-            <div class="pb-12">
+            <div class="pb-8">
                 <h2>{{ $t('introConference') }}</h2>
                 <i18n path="conferenceContent" tag="p" class="introContent">
                     <template #br><br /></template>
@@ -53,7 +53,7 @@
                             :alt="ticketInfo.tag"
                             class="icon"
                         />
-                        <div class="title">
+                        <div class="title" :style="ticketTitleStyle">
                             {{ $t(ticketInfo.titleI18NPath) }}
                         </div>
                     </div>
@@ -159,6 +159,11 @@ export default {
                 'background-position': 'center',
             }
         },
+        ticketTitleStyle() {
+            return {
+                'font-size': this.$i18n.locale === 'en-us' ? '22px' : '32px',
+            }
+        },
     },
     methods: {
         isStrikethrough(indicator) {
@@ -167,12 +172,12 @@ export default {
     },
     head() {
         return {
-            title: this.$i18n.t('title'),
+            title: this.$i18n.t('og.title'),
             meta: [
                 {
                     hid: 'og:title',
                     property: 'og:title',
-                    content: this.$i18n.t('title'),
+                    content: this.$i18n.t('og.title'),
                 },
                 {
                     hid: 'og:description',
@@ -217,7 +222,7 @@ export default {
 }
 
 .ticketContainer .tickerHeader {
-    @apply my-auto;
+    @apply m-auto;
     padding: 0 0 24px;
     @media (min-width: 1280px) {
         padding: 0;
@@ -229,9 +234,9 @@ export default {
 }
 .ticketContainer .title {
     @apply font-serif font-semibold text-center;
-    font-size: 22px;
-    @media (min-width: 1280px) {
-        font-size: 32px;
+
+    @media (max-width: 1280px) {
+        font-size: 24px;
     }
 }
 
