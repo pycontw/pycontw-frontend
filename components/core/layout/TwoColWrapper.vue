@@ -19,14 +19,14 @@ export default {
 @media (min-width: 1024px) {
     .two-col-layout {
         @apply gap-6;
-        grid-template-columns: 3fr 8fr;
+        grid-template-columns: 1fr 5fr;
     }
 }
 .two-col-layout {
     @apply grid my-4;
 }
 .left-col {
-    @apply justify-self-start  mb-2 lg:my-auto;
+    @apply justify-self-start  mb-2;
     color: #9387ff;
     font-size: 20px;
     @media (min-width: 1024px) {

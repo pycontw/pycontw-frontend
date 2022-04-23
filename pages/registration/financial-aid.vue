@@ -14,29 +14,13 @@
                     <p>{{ field.content }}</p>
                 </template>
             </two-col-wrapper>
-            <two-col-wrapper class="spacing">
-                <template #default>
-                    <p>{{ $t('visaTitle') }}</p>
-                </template>
-                <template #right-col>
-                    <p>
-                        {{ $t('visaContent') }}
-                        <ext-link
-                            href="mailto:organizers@python.tw"
-                            highlight
-                            underline
-                            >organizers@python.tw</ext-link
-                        >
-                    </p>
-                </template>
-            </two-col-wrapper>
 
             <two-col-wrapper class="spacing">
                 <template #default>
                     <p>{{ $t('applicationHowTo') }}</p>
                 </template>
                 <template #right-col>
-                    <div :style="getImage"></div>
+                    <div class="bg-img" :style="bgImgStyle"></div>
                 </template>
             </two-col-wrapper>
 
@@ -111,16 +95,12 @@ export default {
         }
     },
     computed: {
-        getImage() {
+        bgImgStyle() {
             return {
                 'background-image':
                     this.$i18n.locale === 'en-us'
                         ? `url(${this.applicationHowToEN})`
                         : `url(${this.applicationHowToZH})`,
-                'background-size': 'contain',
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
-                'padding-top': '23%',
             }
         },
     },
@@ -158,11 +138,15 @@ export default {
     }
 }
 
+.bg-img {
+    @apply bg-left bg-no-repeat bg-contain mt-4 pt-20 lg:pt-52;
+}
+
 .container {
-    @apply w-full;
+    @apply w-full lg:w-9/12 mx-auto;
 }
 
 .spacing {
-    @apply pb-6 lg:pb-14;
+    @apply py-2 lg:py-5;
 }
 </style>
