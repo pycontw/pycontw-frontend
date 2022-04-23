@@ -33,21 +33,18 @@ export default genI18nMessages({
                     'if your application is accepted.',
             },
             {
-                title: 'Acceptance Deadline',
+                title: 'Deadline',
                 content:
                     'The Financial Aid Program will be closed on July 1st (15:30 UTC).',
             },
         ],
-        visaTitle: 'Visitor Visa',
-        visaContent:
-            'If you need to apply for a Visitor VISA, feel free to contact us at',
-        applicationHowTo: 'Application How-Tos',
+        applicationHowTo: 'Application Process',
         remarkTitle: 'Remarks',
         remarkContent: [
             'We will inform you of the results before the end of the conference registration.',
             'You will receive instructions about how to claim your aid. Please make sure to bring papers and/or proofs as appropriate to the conference for the claim process.',
         ],
-        applicationTipsTitle: 'Some Tips on Application',
+        applicationTipsTitle: 'Some Tips',
         applicationTipsContent: [
             'Describe your interests, what you did in the Python community, and what you plan to do in the future',
             'Describe why you would require additional help to attend. For example, higher transportation cost than average attendees is needed, that cause financial difficulty.',
@@ -80,22 +77,18 @@ export default genI18nMessages({
             },
             {
                 title: '補助項目',
-                content:
-                    '若審核通過，大會將以電子郵件寄送 KKTIX 優惠碼，' +
-                    '收到後請至 KKTIX 使用優惠碼購票（補助金額依審核結果決定）。',
+                content: '大會門票（補助金額依審核結果決定）',
             },
             {
                 title: '領取方式',
                 content:
-                    '原則上本國人以匯款方式進行，外國人在會場櫃檯以現金方式領取。',
+                    '大會將寄送 KKTIX 優惠碼，請至 KKTIX 上使用優惠碼購票。',
             },
             {
                 title: '受理期限',
                 content: '即日起至 2022 年 7 月  1 日 23:30 （台北時間）截止。',
             },
         ],
-        visaTitle: '入境簽證',
-        visaContent: '如果需要申請台灣入境簽證，可寄信至',
         applicationHowTo: '申請流程',
         remarkTitle: '備註',
         remarkContent: [
