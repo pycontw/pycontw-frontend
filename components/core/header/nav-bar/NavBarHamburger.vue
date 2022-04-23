@@ -43,12 +43,12 @@
                 customized
                 >{{ $t('sponsor') }}</locale-link
             >
-            <!-- <locale-link
-                class="core-navBarHamburgerSlideInMenu__item"
-                to="/registration/tickets"
-                customized
-                >{{ $t('registration') }}</locale-link
-            > -->
+            <nav-bar-item-accordion
+                :label="$t('registration')"
+                :items="registrationItems"
+                :expanding="expandingItem === 'registration'"
+                @click.native="toggleAccordion('registration')"
+            ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"
@@ -61,9 +61,9 @@
 <script>
 import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon'
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
+import { ExtLink, LocaleLink } from '@/components/core/links'
 import i18n from './NavBar.i18n'
 import navBarItems from './nav-bar-items'
-import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -89,6 +89,9 @@ export default {
         },
         aboutItems() {
             return this.generateI18nItems(navBarItems.about)
+        },
+        registrationItems() {
+            return this.generateI18nItems(navBarItems.registration)
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`

@@ -16,8 +16,9 @@ export default {
 </script>
 
 <style lang="postcss" scpoed>
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     .two-col-layout {
+        @apply gap-6;
         grid-template-columns: 3fr 8fr;
     }
 }
@@ -25,19 +26,18 @@ export default {
     @apply grid my-4;
 }
 .left-col {
-    @apply justify-self-start md:justify-self-center mb-2 md:my-auto;
+    @apply justify-self-start  mb-2 lg:my-auto;
     color: #9387ff;
     font-size: 20px;
-    @media (min-width: 640px) {
+    @media (min-width: 1024px) {
         font-size: 24px;
     }
 }
 .right-col {
-    @apply leading-4 md:leading-6 my-auto;
-    color: #c7c7c7;
+    @apply leading-4 lg:leading-6 my-auto;
     font-size: 16px;
     line-height: 28px;
-    @media (min-width: 640px) {
+    @media (min-width: 1024px) {
         font-size: 18px;
     }
 }

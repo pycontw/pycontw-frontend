@@ -4,32 +4,33 @@ export default genI18nMessages({
     'en-us': {
         title: 'Financial Aid',
         intro:
-            '財務補助方案採取審核制，所以請有需求的朋友主動與我們聯絡，' +
-            '我們收到所有申請後會根據預算及申請者狀況等因素，決定是否給予補助以及其資源多寡。' +
-            '由於會議經費有限，因此能補助的數量不多；' +
-            '這種情況下我們希望受理的對象大致為最需要被幫助的人或對與會者幫助最大的人。' +
-            '舉例而言，若拿家庭收入欠佳的學生與已有穩定工作的工程師相比，我們會優先協助學生。',
+            'All who look for help attending the conference are welcomed to apply. ' +
+            'The organizers will review all applications and allocate resources ' +
+            'based on both the conference budget and the applicants’ conditions. ' +
+            'While we hope to support everyone to participate in the community, ' +
+            'the budget is unfortunately limited, and so is the financial aid program. ' +
+            'In cases of insufficient resources, ' +
+            'we wish to support those who are most in need and to ' +
+            'maximize community gain available from the applicant’s participation. ' +
+            'As such, we may be forced to turn down your application to prioritize others.',
         plainTextFields: [
             {
                 title: 'Eligibility',
                 content:
                     'The financial aid program is open to all contributors, attendees, students,' +
-                    'and speakers and aims to provide assistance to those who otherwise might not be able to attend the conference.',
+                    'and speakers and aims to provide assistance to ' +
+                    'those who otherwise might not be able to attend the conference.',
             },
             {
                 title: 'Auxiliary Items',
-                content: '大會門票（補助金額依審核結果決定）',
-            },
-            {
-                title: '補助上限',
                 content:
-                    '原則上最高 NTD 20,000，如果需要更多的話，在填寫時需提供更詳細資訊。',
+                    'The Financial Aid accepts conference fee only since PyCon APAC is held virtually.',
             },
             {
                 title: 'Reimbursement',
                 content:
-                    'The native residents would get the funds via wire transfer, and for the foreigners,' +
-                    'you can get the cash funds at the conference counter.',
+                    'PyCon APAC will e-mail you the discount code for registration ' +
+                    'if your application is accepted.',
             },
             {
                 title: 'Acceptance Deadline',
@@ -79,12 +80,9 @@ export default genI18nMessages({
             },
             {
                 title: '補助項目',
-                content: '大會門票（補助金額依審核結果決定）',
-            },
-            {
-                title: '補助上限',
                 content:
-                    '原則上最高 NTD 20,000，如果需要更多的話，在填寫時需提供更詳細資訊。',
+                    '若審核通過，大會將以電子郵件寄送 KKTIX 優惠碼，' +
+                    '收到後請至 KKTIX 使用優惠碼購票（補助金額依審核結果決定）。',
             },
             {
                 title: '領取方式',

@@ -6,7 +6,6 @@
             <two-col-wrapper
                 v-for="(field, i) in $t('plainTextFields')"
                 :key="`financial_plain_text_field_${i}`"
-                class=""
             >
                 <template #default>
                     <p>{{ field.title }}</p>
@@ -50,7 +49,7 @@
                         <i18n path="fillFormProcess" tag="li">
                             <template #form>
                                 <ext-link
-                                    href="https://forms.gle/vXZNwRPhu84G4NM49"
+                                    href="https://forms.gle/8pBsZX9j3Hy3fpwM8"
                                     highlight
                                     underline
                                     >{{ $t('form') }}</ext-link
@@ -154,16 +153,16 @@ export default {
     @apply mb-14;
     font-size: 16px;
     line-height: 28px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         font-size: 18px;
     }
 }
 
 .container {
-    @apply w-full md:w-10/12;
+    @apply w-full;
 }
 
 .spacing {
-    @apply pb-6 md:pb-14;
+    @apply pb-6 lg:pb-14;
 }
 </style>
