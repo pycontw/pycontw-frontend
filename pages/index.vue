@@ -20,7 +20,8 @@
                         alt="Title of PyCon APAC 2022"
                     />
                 </div>
-                <!-- <div
+                <div
+                    v-if="isCallingForProposals"
                     class="
                         w-full
                         flex flex-col
@@ -42,7 +43,7 @@
                     >
                         {{ $t('callForProposals') }}
                     </text-button>
-                </div> -->
+                </div>
             </div>
         </div>
 
@@ -95,6 +96,7 @@ export default {
     data() {
         return {
             isOpened: false,
+            isCallingForProposals: false,
             selectedSponsor: {},
         }
     },
