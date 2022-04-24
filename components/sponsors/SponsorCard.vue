@@ -36,10 +36,6 @@ export default {
 <style lang="postcss" scoped>
 .sponsorCard {
     @apply relative flex flex-col justify-center items-center rounded-2xl;
-    width: 25%;
-    @media (min-width: 767px) {
-        @apply w-1/5;
-    }
     background-color: #f7f6fe;
 }
 
