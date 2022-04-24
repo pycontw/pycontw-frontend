@@ -29,7 +29,7 @@ export default {
 }
 
 .sponsorCardCollection__cardContainer {
-    @apply grid gap-4 grid-cols-2 md:grid-cols-4 md:gap-10 md:mb-6;
+    @apply grid gap-4 grid-cols-2 md:grid-cols-5 md:gap-8 md:mb-6;
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard {
