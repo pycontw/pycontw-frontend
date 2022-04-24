@@ -58,7 +58,7 @@ export default {
                 },
                 {
                     src: require('~/static/img/footer/Email.svg'),
-                    link: 'mailto:organizers@pycon.tw',
+                    link: 'mailto:organizers@python.tw',
                     altName: 'Email Footer Icon',
                 },
                 {

@@ -1,17 +1,9 @@
 <template>
     <div class="two-col-layout">
-        <div
-            class="
-                left-col
-                mb-2
-                justify-self-start
-                text-sm
-                md:justify-self-center md:mb-0 md:text-lg
-            "
-        >
+        <div class="left-col">
             <slot></slot>
         </div>
-        <div class="right-col leading-4 text-xs md:text-sm md:leading-6">
+        <div class="right-col">
             <slot name="right-col"></slot>
         </div>
     </div>
@@ -23,19 +15,30 @@ export default {
 }
 </script>
 
-<style scpoed>
-@media (min-width: 640px) {
+<style lang="postcss" scpoed>
+@media (min-width: 1024px) {
     .two-col-layout {
-        grid-template-columns: 3fr 8fr;
+        @apply gap-6;
+        grid-template-columns: 1fr 5fr;
     }
 }
 .two-col-layout {
     @apply grid my-4;
 }
 .left-col {
+    @apply justify-self-start  mb-2;
     color: #9387ff;
+    font-size: 20px;
+    @media (min-width: 1024px) {
+        font-size: 24px;
+    }
 }
 .right-col {
-    color: #c7c7c7;
+    @apply leading-4 lg:leading-6 my-auto;
+    font-size: 16px;
+    line-height: 28px;
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }
 }
 </style>

@@ -63,4 +63,14 @@ export default Object.freeze({
         //     value: '/conference/warmups',
         // },
     ],
+    registration: [
+        {
+            i18nKey: 'tickets',
+            value: '/registration/tickets',
+        },
+        {
+            i18nKey: 'financialAid',
+            value: '/registration/financial-aid',
+        },
+    ],
 })
