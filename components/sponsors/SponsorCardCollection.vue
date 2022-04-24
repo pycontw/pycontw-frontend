@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col w-full">
+    <div class="container">
         <h3 class="sponsorCardCollection__title">{{ $t(levelName) }}</h3>
-        <div class="sponsorCardCollection__cardContainer justify-start">
+        <div class="sponsorCardCollection__cardContainer">
             <slot></slot>
         </div>
     </div>
@@ -19,21 +19,28 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.container {
+    @apply lg:px-16;
+}
+
 .sponsorCardCollection__title {
-    @apply mt-12 mb-8 mx-1 text-xl font-serif;
+    @apply mt-8 mb-7 font-semibold text-xl font-serif md:font-bold md:text-2xl md:mt-12 md:mb-8 md:mx-1;
+    color: hsla(226, 27%, 85%, 1);
 }
 
 .sponsorCardCollection__cardContainer {
-    @apply flex flex-wrap;
+    @apply grid gap-4 grid-cols-2 md:grid-cols-4 md:gap-10 md:mb-6;
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard {
-    margin: 5px 10px 55px 10px;
-    padding: 5px;
+    @apply w-full;
+    opacity: 90%;
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard:hover {
-    @apply cursor-pointer box-content;
-    margin: 0 5px 50px 5px;
+    @apply cursor-pointer;
+    opacity: 100%;
+    transform: scale(1.1);
+    transition: all 0.2s;
 }
 </style>
