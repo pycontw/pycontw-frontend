@@ -1,5 +1,12 @@
 <template>
-    <div class="flex justify-center">
+    <div class="container">
+        <div v-if="isBulleted">
+            <img
+                class="bullet"
+                src="@/static/heading-bullet.svg"
+                alt="heading-bullet"
+            />
+        </div>
         <h2 :class="classObject">{{ title }}</h2>
     </div>
 </template>
@@ -16,6 +23,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        isBulleted: {
+            type: Boolean,
+            default: true,
+        },
     },
     computed: {
         classObject() {
@@ -29,12 +40,25 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.container {
+    @apply flex items-center md:mb-7;
+}
 h2 {
-    @apply mt-2 md:mt-10 mb-8 md:mb-16 text-2xl md:text-3xl;
-    @apply font-serif text-center font-bold;
-    color: #e6ba17;
+    @apply text-2xl md:text-3xl;
+    @apply font-serif font-bold;
+    background: linear-gradient(
+        302.44deg,
+        #8be1c2 0.18%,
+        #5b69e2 43.9%,
+        #a764c9 53.21%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .bulletin-color {
     color: #c386ae;
+}
+.bullet {
+    @apply w-10 md:w-16;
 }
 </style>

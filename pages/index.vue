@@ -49,7 +49,10 @@
 
         <i18n-page-wrapper>
             <div class="sponsor-section">
-                <h1 class="sponsor-title">{{ $t('sponsorList') }}</h1>
+                <core-h2
+                    :title="$t('sponsorList')"
+                    :is-bulleted="isBulleted"
+                ></core-h2>
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
                     :key="`index_sponsor_level_${i}`"
@@ -80,6 +83,7 @@
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import TextButton from '~/components/core/buttons/TextButton'
+import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
 import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
@@ -88,6 +92,7 @@ export default {
     i18n,
     name: 'PageIndex',
     components: {
+        CoreH2,
         TextButton,
         SponsorCard,
         SponsorModal,
@@ -103,6 +108,15 @@ export default {
     fetchOnServer: false,
     computed: {
         ...mapState(['sponsorsData']),
+        isBulleted() {
+            if (process.client) {
+                const width = window.innerWidth
+                if (width < 768) {
+                    return false
+                }
+            }
+            return true
+        },
     },
     created() {
         this.$store.dispatch('$getSponsorsData')
@@ -164,10 +178,6 @@ export default {
     color: #c386ae;
 }
 
-.sponsor-title {
-    @apply font-serif;
-    color: #c386ae;
-}
 .sponsor-section {
     @apply pt-12 mx-4 lg:mx-auto lg:w-9/12;
 }
