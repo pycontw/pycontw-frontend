@@ -1,5 +1,6 @@
 <template>
     <div v-show="shouldShowModal" class="sponsorModal">
+        <div class="closingArea" @click="close"></div>
         <div class="lightBox">
             <div class="lightBox__header">
                 <sponsor-card :logo-url="context.logo_url" small></sponsor-card>
@@ -67,7 +68,11 @@ export default {
     @apply flex justify-center items-center fixed top-0 left-0 w-full h-screen;
     background-color: rgba(18, 16, 35, 0.6);
     backdrop-filter: blur(5px);
-    z-index: 10000;
+}
+
+.closingArea {
+    @apply w-full h-full absolute;
+    z-index: 9999;
 }
 
 .lightBox {
@@ -81,6 +86,7 @@ export default {
     height: 80%;
     background-color: #121023;
     border-color: #c386ae;
+    z-index: 10000;
 }
 
 .lightBox__closeButton {
