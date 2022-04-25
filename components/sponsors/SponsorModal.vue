@@ -72,6 +72,7 @@ export default {
     @apply flex justify-center items-center fixed top-0 left-0 w-full h-screen;
     background-color: rgba(18, 16, 35, 0.6);
     backdrop-filter: blur(5px);
+    z-index: 9998;
 }
 
 .closingArea {
