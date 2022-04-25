@@ -75,7 +75,13 @@
                 </div>
             </div>
         </i18n-page-wrapper>
-        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />
+        <transition name="fade">
+            <sponsor-modal
+                v-if="isOpened"
+                v-model="isOpened"
+                :context="selectedSponsor"
+            />
+        </transition>
     </div>
 </template>
 
@@ -184,5 +190,14 @@ export default {
 
 .text-button-wrapper {
     @apply flex justify-center mt-16 mb-28;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
