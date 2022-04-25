@@ -52,8 +52,8 @@ export default {
 }
 
 .sponsorCard.-small {
-    @apply w-20 h-20;
-    min-width: 100px;
+    @apply w-16 h-16;
+    @apply md:w-24 md:h-24;
 }
 
 .sponsorCard__tag {
