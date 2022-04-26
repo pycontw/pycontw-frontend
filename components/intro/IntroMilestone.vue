@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .milestone {
     @apply text-center font-bold font-serif;
 }
@@ -42,7 +42,14 @@ export default {
 }
 
 .milestone__number {
-    color: #c386ae;
+    background: linear-gradient(
+        302.44deg,
+        #8be1c2 0.18%,
+        #5b69e2 43.9%,
+        #a764c9 53.21%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 5.4rem;
     filter: drop-shadow(4px 6px 0px #4f4f4f);
     @media (max-width: 767px) {
