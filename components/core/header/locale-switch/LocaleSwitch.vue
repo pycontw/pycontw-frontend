@@ -44,9 +44,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-localeSwitch {
-    color: #c7c7c7;
-    font-weight: 700;
+    @apply font-bold;
 }
 </style>

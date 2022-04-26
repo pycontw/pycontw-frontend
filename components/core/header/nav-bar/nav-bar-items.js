@@ -1,4 +1,22 @@
 export default Object.freeze({
+    about: [
+        // {
+        //     i18nKey: 'pycontw',
+        //     value: '/about',
+        // },
+        // {
+        //     i18nKey: 'history',
+        //     value: '/about/history',
+        // },
+        // {
+        //     i18nKey: 'community',
+        //     value: '/about/community',
+        // },
+        {
+            i18nKey: 'codeOfConduct',
+            value: '/about/code-of-conduct',
+        },
+    ],
     speaking: [
         {
             i18nKey: 'cfp',
@@ -44,24 +62,6 @@ export default Object.freeze({
         //     i18nKey: 'warmups',
         //     value: '/conference/warmups',
         // },
-    ],
-    about: [
-        // {
-        //     i18nKey: 'pycontw',
-        //     value: '/about',
-        // },
-        // {
-        //     i18nKey: 'history',
-        //     value: '/about/history',
-        // },
-        // {
-        //     i18nKey: 'community',
-        //     value: '/about/community',
-        // },
-        {
-            i18nKey: 'codeOfConduct',
-            value: '/about/code-of-conduct',
-        },
     ],
     registration: [
         {

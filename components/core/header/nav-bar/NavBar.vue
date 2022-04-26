@@ -90,14 +90,13 @@ export default {
         },
         getPageClassesByPath(category, isLink = false) {
             const items = navBarItems[category]
-
             const nameRegex = RegExp(
                 String.raw`${category}-[\w-]+___${this.$i18n.locale}`,
                 'g',
             )
             let isOnCurrentPath = !!this.$route.name.match(nameRegex)
-
             if (items && !isLink) {
+                // use for the case, e.g. category is "conference", but have subpath like "events/...."
                 const paths = items.map(
                     (item) => `/${this.$i18n.locale}${item.value}`,
                 )
@@ -105,13 +104,11 @@ export default {
                     isOnCurrentPath || paths.includes(this.$route.path)
             }
             if (isLink) {
-                const re = RegExp(
-                    String.raw`\w+-${category}___${this.$i18n.locale}`,
-                    'g',
-                )
                 isOnCurrentPath =
-                    isOnCurrentPath || !!this.$route.name.match(re)
+                    isOnCurrentPath ||
+                    this.$route.name === `${category}___${this.$i18n.locale}`
             }
+
             return {
                 'core-navBarItem': true,
                 flex: isLink,
@@ -128,10 +125,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .core-navBarItem {
-    color: #c7c7c7;
-    font-weight: 700;
+    @apply font-bold;
 }
 
 .core-navBarItem:hover {

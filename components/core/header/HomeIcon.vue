@@ -24,4 +24,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.core-homeIcon {
+    color: #c386ae;
+}
+</style>
