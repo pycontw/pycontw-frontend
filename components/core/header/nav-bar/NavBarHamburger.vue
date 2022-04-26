@@ -137,9 +137,8 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarHamburgerSlideInMenu {
-    @apply fixed right-0 flex w-full h-full flex-col font-bold;
+    @apply fixed right-0 flex w-full h-full flex-col font-bold pt-4;
     top: 64px;
-    padding-top: 20px;
     background-color: #121023;
     z-index: 1000;
 }
@@ -162,16 +161,12 @@ export default {
     color: #7568f6;
 }
 .core-navBarHamburger__icon-button {
-    @apply relative text-center;
+    @apply relative w-4	 text-center;
     z-index: 1001;
-    width: 20px;
 }
 
 .core-navBarHamburger__close {
-    @apply absolute text-4xl;
+    @apply absolute text-4xl whitespace-nowrap top-1/2 left-1/2;
     transform: translate(-50%, -50%) rotate(45deg);
-    white-space: nowrap;
-    top: 50%;
-    left: 50%;
 }
 </style>
