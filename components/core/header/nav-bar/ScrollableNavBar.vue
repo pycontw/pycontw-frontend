@@ -72,18 +72,20 @@ export default {
         },
         horizontalScroll(delta) {
             const el = this.$refs.scrollableNavBarScroll
-            const newScrollleft = el?.scrollLeft + delta
-            const leftClickable = !this.checkHorizontalScrollStart(
-                el,
-                newScrollleft,
-            )
-            const rightClickable = !this.checkHorizontalScrollEnd(
-                el,
-                newScrollleft,
-            )
-            el?.scrollTo({ left: newScrollleft, behavior: 'smooth' }) // be aware this is async
-            this.leftClickable = leftClickable
-            this.rightClickable = rightClickable
+            const newScrollLeft = el && el.scrollLeft + delta
+            if (el && newScrollLeft) {
+                const leftClickable = !this.checkHorizontalScrollStart(
+                    el,
+                    newScrollLeft,
+                )
+                const rightClickable = !this.checkHorizontalScrollEnd(
+                    el,
+                    newScrollLeft,
+                )
+                el.scrollTo({ left: newScrollLeft, behavior: 'smooth' }) // be aware this is async
+                this.leftClickable = leftClickable
+                this.rightClickable = rightClickable
+            }
         },
         onLeftArrowClick(event) {
             this.horizontalScroll(-this.scrollDelta)
@@ -104,16 +106,15 @@ export default {
 }
 .core-scrollableNavBar__left-arrow,
 .core-scrollableNavBar__right-arrow {
-    @apply h-full absolute justify-center items-center cursor-pointer hidden;
-    width: 30px;
+    @apply h-full absolute justify-center items-center cursor-pointer w-6 hidden;
     background-color: #121023;
     z-index: 101; /*dropdown label< z-index < dropdown items in navbar*/
 }
 .core-scrollableNavBar__left-arrow {
-    left: 0px;
+    left: 0;
 }
 .core-scrollableNavBar__right-arrow {
-    right: 0px;
+    right: 0;
 }
 .core-scrollableNavBar__arrow-clickable {
     animation: core-scrollableNavBar__blink 3s infinite;
