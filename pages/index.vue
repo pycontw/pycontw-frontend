@@ -20,7 +20,8 @@
                         alt="Title of PyCon APAC 2022"
                     />
                 </div>
-                <!-- <div
+                <div
+                    v-if="isCallingForProposals"
                     class="
                         w-full
                         flex flex-col
@@ -42,62 +43,86 @@
                     >
                         {{ $t('callForProposals') }}
                     </text-button>
-                </div> -->
+                </div>
             </div>
         </div>
 
-        <!--<i18n-page-wrapper class="sponsor-section pt-12">
-            <h1 class="sponsor-title">{{ $t('sponsorList') }}</h1>
-            <sponsor-card-collection
-                v-for="(leveledSponsors, i) in sponsorsData"
-                :key="`index_sponsor_level_${i}`"
-                :level-name="leveledSponsors.level_name"
-            >
-                <sponsor-card
-                    v-for="(sponsor, j) in leveledSponsors.sponsors"
-                    :key="`index_sponsor_level_${i}_sponsor_${j}`"
-                    :sponsor-name="sponsor.name_en_us"
-                    :logo-url="sponsor.logo_url"
-                    :tag="getAttributeByLocale(sponsor, 'subtitle')"
-                    @click.native="showModal(sponsor)"
+        <i18n-page-wrapper>
+            <div class="sponsor-section">
+                <core-h2
+                    :title="$t('sponsorList')"
+                    :is-bulleted="isBulleted"
+                ></core-h2>
+                <sponsor-card-collection
+                    v-for="(leveledSponsors, i) in sponsorsData"
+                    :key="`index_sponsor_level_${i}`"
+                    :level-name="leveledSponsors.level_name"
                 >
-                </sponsor-card>
-            </sponsor-card-collection>
-            <div class="flex justify-end">
-                <img
-                    src="~@/static/page-home-snake-with-py.svg"
-                    alt="snake-with-py"
-                    class="hidden md:block"
-                />
-            </div>
-            <div class="text-center">
-                <text-button to="/sponsor">{{ $t('sponsorUs') }}</text-button>
+                    <sponsor-card
+                        v-for="(sponsor, j) in leveledSponsors.sponsors"
+                        :key="`index_sponsor_level_${i}_sponsor_${j}`"
+                        :sponsor-name="sponsor.name_en_us"
+                        :logo-url="sponsor.logo_url"
+                        :tag="getAttributeByLocale(sponsor, 'subtitle')"
+                        @click.native="showModal(sponsor)"
+                    >
+                    </sponsor-card>
+                </sponsor-card-collection>
+                <div class="text-button-wrapper">
+                    <text-button to="/sponsor">{{
+                        $t('sponsorUs')
+                    }}</text-button>
+                </div>
             </div>
         </i18n-page-wrapper>
-        <sponsor-modal v-model="isOpened" :context="selectedSponsor" />-->
+        <transition name="fade">
+            <sponsor-modal
+                v-if="isOpened"
+                v-model="isOpened"
+                :context="selectedSponsor"
+            />
+        </transition>
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
-// import TextButton from '~/components/core/buttons/TextButton'
+import TextButton from '~/components/core/buttons/TextButton'
+import CoreH2 from '~/components/core/titles/H2'
+import SponsorCard from '~/components/sponsors/SponsorCard'
+import SponsorModal from '~/components/sponsors/SponsorModal'
+import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
 
 export default {
     i18n,
     name: 'PageIndex',
     components: {
-        // TextButton,
+        CoreH2,
+        TextButton,
+        SponsorCard,
+        SponsorModal,
+        SponsorCardCollection,
     },
     data() {
         return {
             isOpened: false,
+            isCallingForProposals: false,
             selectedSponsor: {},
         }
     },
     fetchOnServer: false,
     computed: {
         ...mapState(['sponsorsData']),
+        isBulleted() {
+            if (process.client) {
+                const width = window.innerWidth
+                if (width < 768) {
+                    return false
+                }
+            }
+            return true
+        },
     },
     created() {
         this.$store.dispatch('$getSponsorsData')
@@ -159,28 +184,20 @@ export default {
     color: #c386ae;
 }
 
-.text-purple {
-    color: #8c83f5;
-}
-
-.bg-blue-primary {
-    background-color: #121023;
-}
-
-.intro-section {
-    @apply pt-8 pb-20;
-    background-color: #16132a;
-}
-
-.bulletin-section {
-    @apply py-12 px-4 sm:px-10 md:px-12 lg:px-20;
-}
-
-.sponsor-title {
-    @apply font-serif;
-    color: #c386ae;
-}
 .sponsor-section {
-    background-color: #121023;
+    @apply pt-12 mx-4 lg:mx-auto lg:w-9/12;
+}
+
+.text-button-wrapper {
+    @apply flex justify-center mt-16 mb-28;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
