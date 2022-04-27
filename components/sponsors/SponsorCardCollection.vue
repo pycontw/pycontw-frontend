@@ -33,13 +33,11 @@ export default {
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard {
-    @apply w-full;
-    opacity: 90%;
+    @apply w-full opacity-90;
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard:hover {
-    @apply cursor-pointer;
-    opacity: 100%;
+    @apply cursor-pointer opacity-100;
     transform: scale(1.1);
     transition: all 0.2s;
 }
