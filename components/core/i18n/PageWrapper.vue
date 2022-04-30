@@ -1,5 +1,5 @@
 <template>
-    <div id="page-wrapper" :style="backgroundStyle">
+    <div class="page-wrapper">
         <div :class="classObject">
             <slot></slot>
         </div>
@@ -7,31 +7,9 @@
 </template>
 
 <script>
-import bgImg1 from '@/static/img/background/l1.svg'
-import bgImg2 from '@/static/img/background/l2.svg'
-import bgImg3 from '@/static/img/background/l3.svg'
-import bgImg4 from '@/static/img/background/r1.svg'
-import bgImg5 from '@/static/img/background/r2.svg'
-import bgImg6 from '@/static/img/background/r3.svg'
 export default {
     name: 'I18nPageWrapper',
-    props: {
-        customX: { type: Boolean, default: false },
-        customY: { type: Boolean, default: false },
-    },
-    data() {
-        return {
-            bgImgs: [bgImg1, bgImg2, bgImg3, bgImg4, bgImg5, bgImg6],
-        }
-    },
     computed: {
-        backgroundStyle() {
-            return {
-                'background-image': `url(${this.bgImgs[0]}),url(${this.bgImgs[1]}),url(${this.bgImgs[2]}),url(${this.bgImgs[3]}),url(${this.bgImgs[4]}),url(${this.bgImgs[5]}),url(${this.bgImgs[0]}),url(${this.bgImgs[1]}),url(${this.bgImgs[2]}),url(${this.bgImgs[3]}),url(${this.bgImgs[4]}),url(${this.bgImgs[5]})`,
-                'background-repeat': 'no-repeat',
-                'background-position': `4% 100px, 4% 958px, 4% 1816px, 96% 200px, 96% 1058px, 96% 1916px, 4% 2674px, 4% 3532px, 4% 4390px, 96% 2774px, 96% 3632px, 96% 4490px`,
-            }
-        },
         classObject() {
             return {
                 'py-8': true,
@@ -87,9 +65,7 @@ li {
     @apply my-1;
 }
 
-@media (max-width: 1009px) {
-    #page-wrapper {
-        background-image: none !important;
-    }
+.page-wrapper {
+    @apply bg-none lg:bg-wrapper bg-no-repeat bg-wrapper-top-left;
 }
 </style>

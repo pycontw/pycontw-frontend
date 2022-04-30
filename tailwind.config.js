@@ -14,15 +14,13 @@ module.exports = {
             serif: ['Noto Serif TC', '-apple-system', 'serif'],
         },
         extend: {
-            width: {
-                '272px': '272px',
-                '706px': '706px',
-                '1040px': '1040px',
+            backgroundImage: {
+                wrapper:
+                    'url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg"), url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg")',
             },
-            padding: {
-                '24px': '24px',
-                '32px': '32px',
-                '168px': '168px',
+            backgroundPosition: {
+                'wrapper-top-left':
+                    '4% 100px, 4% 958px, 4% 1816px, 96% 200px, 96% 1058px, 96% 1916px, 4% 2674px, 4% 3532px, 4% 4390px, 96% 2774px, 96% 3632px, 96% 4490px',
             },
         },
         screens: {
