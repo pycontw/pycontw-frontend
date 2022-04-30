@@ -1,6 +1,8 @@
 <template>
     <div
         class="relative flex h-full px-8 justify-center items-center text-left"
+        @mouseenter="showMenu"
+        @mouseleave="hideMenu"
     >
         <div
             class="
@@ -12,8 +14,6 @@
                 items-start
                 cursor-pointer
             "
-            @mouseenter="showMenu"
-            @mouseleave="hideMenu"
         >
             <div
                 id="options-menu"
@@ -36,17 +36,29 @@
                     class="ml-3"
                 ></fa>
             </div>
-            <core-menu v-show="isHovering" :lg="lg" :sm="sm">
-                <slot :hideMenu="hideMenu" name="items"></slot>
-                <core-menu-item
-                    v-for="item in items"
-                    :key="item.value"
-                    :href="item.value"
-                    @click="hideMenu"
-                >
-                    {{ item.label }}
-                </core-menu-item>
-            </core-menu>
+            <div>
+                <transition name="core-menu-fade">
+                    <core-menu
+                        v-show="isHovering"
+                        :lg="lg"
+                        :sm="sm"
+                        :isHovering="isHovering"
+                    >
+                        <transition name="core-menu-mask">
+                            <div v-show="isHovering" class="menu-mask"></div>
+                        </transition>
+                        <slot :hideMenu="hideMenu" name="items"></slot>
+                        <core-menu-item
+                            v-for="item in items"
+                            :key="item.value"
+                            :href="item.value"
+                            @click="hideMenu"
+                        >
+                            {{ item.label }}
+                        </core-menu-item>
+                    </core-menu>
+                </transition>
+            </div>
         </div>
     </div>
 </template>
@@ -94,5 +106,35 @@ export default {
 .options-menu {
     @apply inline-flex w-full h-full justify-center items-center bg-transparent;
     z-index: 100;
+}
+.core-menu-fade-enter-active {
+    transition: all 0.2s;
+}
+.core-menu-fade-leave-active {
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+}
+.core-menu-fade-enter,
+.core-menu-fade-leave-to {
+    opacity: 0;
+}
+.menu-mask {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 100%;
+    background: #121023;
+}
+.core-menu-mask-enter-active {
+    transition: all 0.2s;
+}
+.core-menu-mask-leave-active {
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+}
+.core-menu-mask-enter,
+.core-menu-mask-leave-to {
+    height: 100%;
+    top: 0px;
 }
 </style>
