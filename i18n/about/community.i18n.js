@@ -117,78 +117,88 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: '在地社群',
+        title: '台灣在地社群',
+        content: [
+            '在臺灣，除了參與每年的 PyCon TW，還可以加入許多在地的社群認識更多的 Pythonistas，' +
+                '一起討論我們共通的語言為 Python 貢獻己力。' +
+                'PyCon TW 的成長有賴於臺灣各地 Python 社群的幫忙，才能讓每一年的年會順利舉行。' +
+                '一個人走，可以走得很快；但一群人走，可以走得更遠！',
+        ],
         communities: [
             {
                 tag: 'taipei',
                 title: '台北 - Taipei.py',
                 desc: [
-                    '2012 年 Keith、Tim 與其快樂夥伴們創立了 Taipei.py。每個月固定在 CLBC 聚會，聚會分享主題以網路相關技術為主，近期也越來越多大數據相關的分享。',
-                    '由於創辦者們多數在網路相關行業，因此除了每月例會，也會舉辦讀書會等活動。',
+                    '2012 年 Keith、Tim 與其快樂夥伴們創立了 Taipei.py。每個月固定在 CLBC 聚會，聚會分享主題以網路相關技術為主，近期也越來越多大數據相關的分享。' +
+                        '由於創辦者們多數在網路相關行業，因此除了每月例會，也會舉辦讀書會等活動。',
                 ],
+                imgUrl: require('~/static/img/about/community/taipeiPy.png'),
             },
             {
                 tag: 'pyhug',
                 title: '新竹 - PyHUG',
                 desc: [
-                    '台灣第一個 Python 社群，2011 年由 yyc 和 Albert Huang 成立。每月定期邀請講者分享。參加成員以大學生為主，聚會偏重Python 在科學上的應用。',
-                    '近幾年每週三在咖啡館聚會，漸漸變成「吃吃喝喝聊 Python 及雜七雜八」的形式。目前由 Dainese 擔任負責人，需要地方的新血加入。',
+                    '台灣第一個 Python 社群，2011 年由 yyc 和 Albert Huang 成立。每月定期邀請講者分享。參加成員以大學生為主，聚會偏重Python 在科學上的應用。' +
+                        '近幾年每週三在咖啡館聚會，漸漸變成「吃吃喝喝聊 Python 及雜七雜八」的形式。目前由 Dainese 擔任負責人，需要地方的新血加入。',
                 ],
+                imgUrl: require('~/static/img/about/community/pyhug.png'),
             },
             {
                 tag: 'taichung',
                 title: '台中 - Taichung.py',
                 desc: [
-                    '唐元亮老師於 2014 年發起了 Taichung.py 。初期流浪在各餐廳與咖啡館，後期由微程式科技提供場地空間，告別流浪的生活。',
-                    '每月聚會一次，時間在星期六下午，剛好可以在聚會結束後，到附近的逢甲夜市散步、覓食。',
+                    '唐元亮老師於 2014 年發起了 Taichung.py 。初期流浪在各餐廳與咖啡館，後期由微程式科技提供場地空間，告別流浪的生活。' +
+                        '每月聚會一次，時間在星期六下午，剛好可以在聚會結束後，到附近的逢甲夜市散步、覓食。',
                 ],
+                imgUrl: require('~/static/img/about/community/taichungPy.png'),
             },
             {
                 tag: 'tainan',
                 title: '台南 - Tainan.py',
                 desc: [
-                    '2013 年搬到台南的 Joe 成立了 Tainan.py。決定與同在台南的 MOSUT 社群合辦聚會，成為「Tainan.py × MOSUT」。',
-                    '聚會一個月一次，時間通常會在週末下午， Tainan.py 的中場休息時間，會推廣台南在地美食，讓大家邊交流邊品嘗在地風味。',
+                    '2013 年搬到台南的 Joe 成立了 Tainan.py。決定與同在台南的 MOSUT 社群合辦聚會，成為「Tainan.py × MOSUT」。' +
+                        '聚會一個月一次，時間通常會在週末下午， Tainan.py 的中場休息時間，會推廣台南在地美食，讓大家邊交流邊品嘗在地風味。',
                 ],
             },
             {
                 tag: 'kaohsiung',
                 title: '高雄 - Kaohsiung.py',
                 desc: [
-                    'Victor Gau 在成立 Kaohsiung.py 之前，定期會去參加 Joe 安排的 Tainan.py 活動，直到有一次回程時，與超速的機車擦撞，讓 Victor 萌生在高雄成立社群的念頭。',
-                    '2014 年，Victor 在高雄發起了 Kaohsiung.py ，除了不定期的在禮拜六安排專家來分享，每個月會挑一個星期一，在文藻外語大學聚會。',
+                    'Victor Gau 在成立 Kaohsiung.py 之前，定期會去參加 Joe 安排的 Tainan.py 活動，直到有一次回程時，與超速的機車擦撞，讓 Victor 萌生在高雄成立社群的念頭。' +
+                        '2014 年，Victor 在高雄發起了 Kaohsiung.py ，除了不定期的在禮拜六安排專家來分享，每個月會挑一個星期一，在文藻外語大學聚會。',
                 ],
             },
             {
                 tag: 'hualien',
                 title: '花蓮 - Hualien.py',
                 desc: [
-                    '2013年，魏澤人老師有感於東部較缺乏開源及技術社群，開始邀約各地的 Python 講者。在 Mosky 等人爽快答應下，花蓮.py 在 2014 年順利展開。',
-                    '現在花蓮本地的講者也越來越多了。目前聚會的形式，除了演講分享外，也常有自由聚會及特定主題的workshop。',
+                    '2013年，魏澤人老師有感於東部較缺乏開源及技術社群，開始邀約各地的 Python 講者。在 Mosky 等人爽快答應下，花蓮.py 在 2014 年順利展開。' +
+                        '現在花蓮本地的講者也越來越多了。目前聚會的形式，除了演講分享外，也常有自由聚會及特定主題的workshop。',
                 ],
             },
             {
                 tag: 'nantou',
                 title: '南投 - Nantou.py',
                 desc: [
-                    '2019年底，南開科技大學副校長林正敏教授，創立了 Nantou.py。聚會地點在草屯768藝術空間，固定每月舉行分享會，來自各地的大夥也無私地向大家分享技術。',
-                    '在南投人稱科技沙漠的地區，有著這一群人為python貢獻己力，並為有意學習的大家，帶來一場無私、無限的學習地。',
+                    '2019年底，南開科技大學副校長林正敏教授，創立了 Nantou.py。聚會地點在草屯768藝術空間，固定每月舉行分享會，來自各地的大夥也無私地向大家分享技術。' +
+                        '在南投人稱科技沙漠的地區，有著這一群人為python貢獻己力，並為有意學習的大家，帶來一場無私、無限的學習地。',
                 ],
+                imgUrl: require('~/static/img/about/community/nantouPy.png'),
             },
             {
                 tag: 'pyladiestw',
                 title: 'PyLadies Taiwan',
                 desc: [
-                    'PyLadies 是一個專屬於女生的 Python 愛好者聚會，想瞭解 Python 的女生彼此交流、聊天認識朋友的地方。',
-                    '透過 Workshop 的方式讓女生成為主動的參與者。每個月舉辦不同主題的活動，例：初學者的入門、Python 的應用與經驗分享。只要對 Python 有興趣，歡迎妳來參加喔！',
+                    'PyLadies 是一個專屬於女生的 Python 愛好者聚會，想瞭解 Python 的女生彼此交流、聊天認識朋友的地方。' +
+                        '透過 Workshop 的方式讓女生成為主動的參與者。每個月舉辦不同主題的活動，例：初學者的入門、Python 的應用與經驗分享。只要對 Python 有興趣，歡迎妳來參加喔！',
                 ],
             },
             {
                 tag: 'djangogirlstaipei',
                 title: 'Django Girls Taipei',
                 desc: [
-                    '2014 年，是 Michelle 成立 Django Girls Taipei 的一年。藉由不定期舉辦教學活動，帶領女孩們一步步製作自己的網站。',
-                    '也和 Python Web Meetup 一起合辦新手村活動，給對 Django 有一點點了解，又想要瞭解更多的女孩們參加。',
+                    '2014 年，是 Michelle 成立 Django Girls Taipei 的一年。藉由不定期舉辦教學活動，帶領女孩們一步步製作自己的網站。' +
+                        '也和 Python Web Meetup 一起合辦新手村活動，給對 Django 有一點點了解，又想要瞭解更多的女孩們參加。',
                 ],
             },
         ],
