@@ -36,24 +36,22 @@
                     class="ml-3"
                 ></fa>
             </div>
-            <div>
-                <transition name="core-menu-fade">
-                    <core-menu v-show="isHovering" :lg="lg" :sm="sm">
-                        <transition name="core-menu-mask">
-                            <div v-show="isHovering" class="menu-mask"></div>
-                        </transition>
-                        <slot :hideMenu="hideMenu" name="items"></slot>
-                        <core-menu-item
-                            v-for="item in items"
-                            :key="item.value"
-                            :href="item.value"
-                            @click="hideMenu"
-                        >
-                            {{ item.label }}
-                        </core-menu-item>
-                    </core-menu>
-                </transition>
-            </div>
+            <transition name="core-menu-fade">
+                <core-menu v-show="isHovering" :lg="lg" :sm="sm">
+                    <transition name="core-menu-mask">
+                        <div v-show="isHovering" class="menu-mask"></div>
+                    </transition>
+                    <slot :hideMenu="hideMenu" name="items"></slot>
+                    <core-menu-item
+                        v-for="item in items"
+                        :key="item.value"
+                        :href="item.value"
+                        @click="hideMenu"
+                    >
+                        {{ item.label }}
+                    </core-menu-item>
+                </core-menu>
+            </transition>
         </div>
     </div>
 </template>
