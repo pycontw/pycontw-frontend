@@ -38,12 +38,7 @@
             </div>
             <div>
                 <transition name="core-menu-fade">
-                    <core-menu
-                        v-show="isHovering"
-                        :lg="lg"
-                        :sm="sm"
-                        :isHovering="isHovering"
-                    >
+                    <core-menu v-show="isHovering" :lg="lg" :sm="sm">
                         <transition name="core-menu-mask">
                             <div v-show="isHovering" class="menu-mask"></div>
                         </transition>
@@ -119,10 +114,7 @@ export default {
     opacity: 0;
 }
 .menu-mask {
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    top: 100%;
+    @apply absolute w-full h-0 top-full;
     background: #121023;
 }
 .core-menu-mask-enter-active {
