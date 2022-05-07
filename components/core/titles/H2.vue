@@ -43,9 +43,15 @@ export default {
 .container {
     @apply flex items-center md:mb-7;
 }
+
 h2 {
-    @apply text-2xl md:text-3xl;
     @apply font-serif font-bold;
+
+    font-size: 26px;
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+
     background: linear-gradient(
         302.44deg,
         #8be1c2 0.18%,
