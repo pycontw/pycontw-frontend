@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <div class="description-wrapper">
-            <div class="what-is-pyCon-wrapper">
+            <div>
                 <core-h2
                     :title="$t('whatIsPyConAPAC')"
                     :is-bulleted="isBulleted"
@@ -10,7 +10,7 @@
                     {{ $t('whatIsPyConAPACContent') }}
                 </p>
             </div>
-            <div class="pyCon-held-online-wrapper">
+            <div>
                 <core-h2
                     :title="$t('pyConWillBeHeldOnline')"
                     :is-bulleted="isBulleted"
@@ -20,12 +20,8 @@
                 </p>
             </div>
         </div>
-        <core-h2
-            class="intro-milestones-title"
-            :title="$t('pyconIntro')"
-            :is-bulleted="isBulleted"
-        >
-        </core-h2>
+
+        <core-h2 :title="$t('pyconIntro')" :is-bulleted="isBulleted"> </core-h2>
         <div class="intro-milestones">
             <intro-milestone
                 v-for="(item, index) in $t('milestone')"
@@ -62,50 +58,28 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply relative font-serif my-0 mx-auto;
-    max-width: 1040px;
-    @media (max-width: 767px) {
-        @apply px-0 py-4;
-    }
+    @apply relative font-serif px-0 py-4 md:py-0 my-0 mx-auto;
 }
 
 .intro-milestones {
-    @apply grid grid-cols-3;
-    @media (max-width: 767px) {
-        @apply flex flex-col;
-    }
+    @apply flex flex-col;
+    @apply md:grid md:grid-cols-3;
 }
 
 .description-wrapper {
-    @apply flex mb-28;
-    @media (max-width: 767px) {
-        @apply mb-0 flex-col;
-    }
+    @apply flex flex-col md:flex-row mb-0 md:mb-28;
 }
 
 .description-wrapper > div {
-    @apply flex-1;
-    @media (max-width: 767px) {
-        @apply mb-24;
-    }
+    @apply flex-1 mb-24 md:mb-0;
 }
 
 .description-wrapper > div > * {
-    @media (max-width: 767px) {
-        @apply pb-7;
-    }
+    @apply pb-7 md:pb-0;
 }
 
 .info-section-description {
-    @apply pl-14;
-    @media (max-width: 767px) {
-        @apply pl-0 my-0 mx-auto;
-    }
-}
-
-.intro-milestones-title {
-    @media (max-width: 767px) {
-        @apply hidden;
-    }
+    @apply pl-0 md:pl-14 my-0 mx-auto;
+    @apply text-justify;
 }
 </style>
