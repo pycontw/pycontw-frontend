@@ -3,12 +3,12 @@
         <core-h1 :title="$t('title')" class="page-title"></core-h1>
         <div class="flex flex-col justify-between lg:flex-row">
             <div class="map-area">
-                <p v-text="$t('content')[0]"></p>
+                <p v-text="$t('content')"></p>
                 <div class="map" :style="communityMapStyle"></div>
             </div>
             <div class="communities">
                 <div class="arrow-top" :class="{ hide: boxScroll }">⌃</div>
-                <div class="content" ref="communities">
+                <div ref="communities" class="content">
                     <div
                         v-for="(community, index) in $t('communities')"
                         :key="`community_${community.tag}`"
@@ -18,11 +18,8 @@
                                 <h3 class="title">
                                     {{ community.title }}
                                 </h3>
-                                <p
-                                    v-for="(paragraph, i) in community.desc"
-                                    :key="`paragraph_${i}`"
-                                >
-                                    {{ paragraph }}
+                                <p>
+                                    {{ community.description }}
                                 </p>
                             </div>
                             <img :src="community.imgUrl" :alt="community.tag" />
@@ -41,12 +38,8 @@
                                 <h4 class="font-serif text-2xl mb-10 mt-5">
                                     {{ community.title }}
                                 </h4>
-                                <p
-                                    v-for="(paragraph, i) in community.desc"
-                                    :key="`paragraph_${i}`"
-                                    class="text-sm"
-                                >
-                                    {{ paragraph }}
+                                <p class="text-sm">
+                                    {{ community.description }}
                                 </p>
                                 <core-text-button
                                     :href="communityLink[community.tag]"
@@ -101,9 +94,6 @@ export default {
             boxScroll: true,
         }
     },
-    mounted() {
-        this.$refs.communities.addEventListener('scroll', this.handleScroll)
-    },
     computed: {
         communityMapStyle() {
             return {
@@ -113,6 +103,9 @@ export default {
                 'background-position': 'center',
             }
         },
+    },
+    mounted() {
+        this.$refs.communities.addEventListener('scroll', this.handleScroll)
     },
     methods: {
         popupShow(index) {
@@ -129,7 +122,6 @@ export default {
             } else if (scrollTop === 0) {
                 this.boxScroll = true
             } else if (scrollTop > offsetHeight) {
-                console.log('bottom')
                 this.boxScroll = false
             }
         },
@@ -161,21 +153,18 @@ export default {
 
 <style lang="postcss" scoped>
 .page-title {
-    @apply justify-start ml-10;
-    @media (max-width: 1024px) {
-        @apply justify-center ml-0;
-    }
+    @apply justify-center mr-10 lg:justify-start ml-10;
 }
 .map-area {
-    width: 55%;
-    @media (max-width: 1024px) {
-        width: 100%;
+    @apply w-full;
+    @media (min-width: 1024px) {
+        width: 55%;
     }
 }
 .map-area p {
-    @apply text-xs text-justify font-serif leading-6 tracking-widest px-10;
-    @media (max-width: 1024px) {
-        @apply text-sm tracking-normal leading-4 px-0 font-sans;
+    @apply text-xs tracking-normal leading-4 px-0 font-sans;
+    @media (min-width: 1024px) {
+        @apply text-sm text-justify font-serif leading-6 tracking-widest px-10;
     }
 }
 .map-area .map {
@@ -183,24 +172,20 @@ export default {
     aspect-ratio: 622/653;
 }
 .communities {
-    @apply relative w-2/5;
-    min-width: 450px;
-    height: 1010px;
-    @media (max-width: 1024px) {
-        width: 100%;
-        min-width: unset;
-        height: unset;
+    @apply relative w-full mx-auto lg:w-2/5;
+    max-width: 450px;
+    height: unset;
+    @media (min-width: 1024px) {
+        min-width: 450px;
+        height: 1010px;
     }
 }
 .communities .arrow-top,
 .communities .arrow-down {
-    @apply absolute text-xl left-1/2 z-10;
+    @apply hidden absolute text-xl left-1/2 z-10 lg:block;
     content: '⌃';
     transform: translateX(-50%) translateY(0%);
     transition: opacity 0.3s;
-    @media (max-width: 1024px) {
-        display: none;
-    }
 }
 .communities .arrow-down {
     @apply bottom-0;
@@ -208,72 +193,59 @@ export default {
 }
 .communities .arrow-top.hide,
 .communities .arrow-down.hide {
-    opacity: 0;
+    @apply opacity-0;
 }
 .communities .content {
-    @apply relative w-full h-full items-center;
-    overflow-y: auto;
+    @apply relative w-full h-full items-center overflow-y-auto;
 }
 .communities .content .box {
-    @apply flex justify-between items-center mt-6 cursor-pointer min-h-full px-7 py-6;
+    @apply flex flex-col justify-between items-center mx-auto mt-6 cursor-pointer min-h-full px-7 py-6 lg:flex-row;
     background: #1f1c3b;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
-    @media (max-width: 1024px) {
-        @apply flex-col items-center mx-auto;
-        max-width: 600px;
-    }
 }
 .communities .content div:first-of-type .box {
-    margin-top: 0px;
+    @apply mt-0;
 }
 .communities .content .box .title {
-    @apply mt-0 mb-3 font-serif font-bold text-xl;
+    @apply mt-0 mb-4 font-serif font-bold text-xl lg:mb-3;
     color: #a9a6d6;
-    @media (max-width: 1024px) {
-        @apply mb-4;
-    }
 }
 .communities .content .box p {
-    @apply text-xs mb-0 w-full pr-7;
+    @apply text-xs mb-5 w-full pr-0 leading-7 overflow-hidden;
     line-height: 146.9%;
-    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-
-    @media (max-width: 1024px) {
-        @apply mb-5 pr-0;
-        -webkit-line-clamp: unset;
+    -webkit-line-clamp: unset;
+    @media (min-width: 1024px) {
+        @apply mb-0 pr-7;
+        -webkit-line-clamp: 5;
     }
 }
 .communities .content .box img {
-    @apply w-32 h-32 object-cover rounded-lg;
-    @media (max-width: 1024px) {
-        @apply w-60;
-    }
+    @apply w-60 h-32 object-cover rounded-lg lg:w-32;
 }
 .communities .content .popup {
     @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0;
+    padding: 0 10%;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
-
-    @media (max-width: 1024px) {
-        padding: 0 10%;
+    @media (min-width: 1024px) {
+        @apply p-0;
     }
 }
 .communities .content .popup.show {
-    display: flex;
+    @apply flex;
 }
 .communities .content .popup .content {
     @apply relative flex justify-center items-center flex-col rounded-3xl p-10;
     border: 3px solid #e099e1;
     background-color: #121023;
     width: 724px;
-    height: 575px;
-    @media (max-width: 1024px) {
-        height: unset;
+    height: unset;
+    @media (min-width: 1024px) {
+        height: 575px;
     }
 }
 .communities .content .popup .content button {
