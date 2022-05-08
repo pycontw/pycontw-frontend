@@ -40,7 +40,7 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: '探索無疆界宇宙，挑戰號準備啟程。',
+        title: '探索無疆界宇宙，福爾摩斯號準備啟程。',
         pageAbstract:
             '多樣票價供您選擇，人人都可以找到適合自己的方案。{br}' +
             '多元化學習與多視角觀察技術應用，深入淺出引你進入 Python 學習殿堂。{br}' +

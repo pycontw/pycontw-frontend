@@ -31,8 +31,9 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-    @apply py-2 font-semibold leading-loose text-xl;
+    @apply py-2 font-bold leading-loose text-xl;
     @apply mb-0 md:text-2xl md:mb-9;
-    color: #c386ae;
+    color: #d69ddd;
+    text-shadow: #3841ae 2px 1px 0px;
 }
 </style>

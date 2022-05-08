@@ -2,10 +2,10 @@
     <div class="py-10 md:py-24 lg:py24">
         <banner>
             <template #default>
-                <core-h3 :title="$t('title')"></core-h3>
-                <p class="hidden md:block md:w-full md:h-full text-center">
-                    {{ $t('pageAbstract') }}
-                </p>
+                <core-h1 :title="$t('title')"></core-h1>
+                <i18n path="pageAbstract" tag="p" class="pageAbstract">
+                    <template #br><br /></template>
+                </i18n>
             </template>
         </banner>
 
@@ -89,8 +89,8 @@
 import i18n from '@/i18n/registration/tickets.i18n'
 
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH3 from '@/components/core/titles/H3'
-import Banner from '@/components/core/layout/NewBanner'
+import CoreH1 from '@/components/core/titles/H1'
+import Banner from '@/components/core/layout/Banner'
 import { LocaleLink } from '@/components/core/links'
 import TextButton from '@/components/core/buttons/TextButton'
 
@@ -98,7 +98,7 @@ export default {
     i18n,
     name: 'PageRegistrationConferenceTickets',
     components: {
-        CoreH3,
+        CoreH1,
         I18nPageWrapper,
         Banner,
         LocaleLink,
