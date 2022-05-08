@@ -2,14 +2,8 @@
     <div class="py-10 md:py-24 lg:py24">
         <banner>
             <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="$t('title')"></core-h1>
-                <p class="w-full md:w-3/4 leading-6 text-justify">
+                <core-h3 :title="$t('title')"></core-h3>
+                <p class="hidden md:block md:w-full md:h-full text-center">
                     {{ $t('pageAbstract') }}
                 </p>
             </template>
@@ -95,8 +89,8 @@
 import i18n from '@/i18n/registration/tickets.i18n'
 
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH1 from '@/components/core/titles/H1'
-import Banner from '@/components/core/layout/Banner'
+import CoreH3 from '@/components/core/titles/H3'
+import Banner from '@/components/core/layout/NewBanner'
 import { LocaleLink } from '@/components/core/links'
 import TextButton from '@/components/core/buttons/TextButton'
 
@@ -104,16 +98,15 @@ export default {
     i18n,
     name: 'PageRegistrationConferenceTickets',
     components: {
-        CoreH1,
+        CoreH3,
         I18nPageWrapper,
         Banner,
-
         LocaleLink,
         TextButton,
     },
     data() {
         return {
-            ticketsBanner: require('~/static/img/about/Banner.svg'),
+            ticketsBanner: require('~/static/img/about/WebBanner.svg'),
             ticketInfos: [
                 {
                     tag: 'earlyBird',
@@ -156,6 +149,7 @@ export default {
             return {
                 'background-image': `url(${this.ticketsBanner})`,
                 'background-repeat': 'no-repeat',
+                'background-size': 'cover',
                 'background-position': 'center',
             }
         },
