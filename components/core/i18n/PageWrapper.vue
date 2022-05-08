@@ -11,7 +11,7 @@ export default {
     name: 'I18nPageWrapper',
     props: {
         customX: { type: Boolean, default: false },
-    },    
+    },
     computed: {
         classObject() {
             return {
