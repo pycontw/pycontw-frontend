@@ -51,5 +51,6 @@ export default {
     &.--large {
         width: 224px;
     }
+    z-index: 1000;
 }
 </style>

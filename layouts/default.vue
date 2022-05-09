@@ -54,7 +54,7 @@ export default {
                 {
                     hid: 'og:image',
                     property: 'og:image',
-                    content: 'https://tw.pycon.org/2021/og-img.jpg',
+                    content: 'https://tw.pycon.org/2022/og-img.jpg',
                 },
                 {
                     hid: 'og:url',
@@ -110,7 +110,7 @@ export default {
                         '@type': 'Organization',
                         name: 'PyCon Taiwan',
                         url: 'https://tw.pycon.org',
-                        logo: 'https://tw.pycon.org/2021/og-img.jpg',
+                        logo: 'https://tw.pycon.org/2022/og-img.jpg',
                         sameAs: [
                             'https://www.facebook.com/pycontw/',
                             'https://twitter.com/PyConTW/',

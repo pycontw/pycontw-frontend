@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="md:px-20 lg:px-20">
+    <i18n-page-wrapper>
         <core-h1 :title="$t('title')" class="page-title"></core-h1>
         <div class="flex flex-col justify-between lg:flex-row">
             <div class="map-area">
