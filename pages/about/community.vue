@@ -1,6 +1,9 @@
 <template>
     <i18n-page-wrapper class="md:px-20 lg:px-20">
-        <core-h1 :title="$t('title')" class="page-title"></core-h1>
+        <core-h1
+            :title="$t('title')"
+            class="justify-center lg:justify-start ml-0 lg:ml-10"
+        ></core-h1>
         <div class="flex flex-col justify-between lg:flex-row">
             <div class="map-area">
                 <p v-text="$t('content')"></p>
@@ -152,9 +155,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.page-title {
-    @apply justify-center mr-10 lg:justify-start ml-10;
-}
 .map-area {
     @apply w-full;
     @media (min-width: 1024px) {
@@ -162,17 +162,15 @@ export default {
     }
 }
 .map-area p {
-    @apply text-xs tracking-normal leading-4 px-0 font-sans;
-    @media (min-width: 1024px) {
-        @apply text-sm text-justify font-serif leading-6 tracking-widest px-10;
-    }
+    @apply text-xs lg:text-sm leading-4 lg:leading-6 tracking-normal lg:tracking-widest;
+    @apply font-serif px-0 lg:px-10;
 }
 .map-area .map {
     @apply mt-20 mb-8 w-full;
     aspect-ratio: 622/653;
 }
 .communities {
-    @apply relative w-full mx-auto lg:w-2/5;
+    @apply relative mx-auto w-full lg:w-2/5;
     max-width: 450px;
     height: unset;
     @media (min-width: 1024px) {
@@ -182,7 +180,7 @@ export default {
 }
 .communities .arrow-top,
 .communities .arrow-down {
-    @apply hidden absolute text-xl left-1/2 z-10 lg:block;
+    @apply absolute text-xl left-1/2 z-10 hidden lg:block;
     content: '⌃';
     transform: translateX(-50%) translateY(0%);
     transition: opacity 0.3s;
@@ -199,7 +197,8 @@ export default {
     @apply relative w-full h-full items-center overflow-y-auto;
 }
 .communities .content .box {
-    @apply flex flex-col justify-between items-center mx-auto mt-6 cursor-pointer min-h-full px-7 py-6 lg:flex-row;
+    @apply mx-auto mt-6 min-h-full px-7 py-6 cursor-pointer;
+    @apply flex justify-between items-center flex-col lg:flex-row;
     background: #1f1c3b;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
@@ -208,32 +207,28 @@ export default {
     @apply mt-0;
 }
 .communities .content .box .title {
-    @apply mt-0 mb-4 font-serif font-bold text-xl lg:mb-3;
+    @apply font-serif font-bold text-xl mt-0 mb-4 lg:mb-3;
     color: #a9a6d6;
 }
 .communities .content .box p {
-    @apply text-xs mb-5 w-full pr-0 leading-7 overflow-hidden;
+    @apply text-xs w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-7;
     line-height: 146.9%;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: unset;
     @media (min-width: 1024px) {
-        @apply mb-0 pr-7;
         -webkit-line-clamp: 5;
     }
 }
 .communities .content .box img {
-    @apply w-60 h-32 object-cover rounded-lg lg:w-32;
+    @apply object-cover rounded-lg h-32 w-60 lg:w-32;
 }
 .communities .content .popup {
-    @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0;
+    @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0 lg:p-0;
     padding: 0 10%;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
-    @media (min-width: 1024px) {
-        @apply p-0;
-    }
 }
 .communities .content .popup.show {
     @apply flex;
