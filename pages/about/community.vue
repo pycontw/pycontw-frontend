@@ -25,7 +25,11 @@
                                     {{ community.description }}
                                 </p>
                             </div>
-                            <img :src="community.imgUrl" :alt="community.tag" />
+                            <img
+                                v-show="communityImgUrl[community.tag]"
+                                :src="communityImgUrl[community.tag]"
+                                :alt="community.tag"
+                            />
                         </div>
                         <div
                             class="popup"
@@ -34,9 +38,10 @@
                             <div class="content">
                                 <button @click="popupClose">✕</button>
                                 <img
-                                    :src="community.imgUrl"
+                                    v-show="communityImgUrl[community.tag]"
+                                    :src="communityImgUrl[community.tag]"
                                     :alt="community.tag"
-                                    class="w-32"
+                                    class="object-cover rounded-lg h-32 w-32"
                                 />
                                 <h4 class="font-serif text-2xl mb-10 mt-5">
                                     {{ community.title }}
@@ -92,6 +97,12 @@ export default {
                 djangogirlstaipei: 'https://djangogirls.org/taipei/',
                 nantou: 'https://www.facebook.com/%E5%8D%97%E6%8A%95python-113209870215893/',
                 taichung: 'https://www.facebook.com/groups/780250978715991/',
+            },
+            communityImgUrl: {
+                taipei: require('~/static/img/about/community/taipeiPy.png'),
+                pyhug: require('~/static/img/about/community/pyhug.png'),
+                nantou: require('~/static/img/about/community/nantouPy.png'),
+                taichung: require('~/static/img/about/community/taichungPy.png'),
             },
             popupIndex: null,
             boxScroll: true,
@@ -197,7 +208,7 @@ export default {
     @apply relative w-full h-full items-center overflow-y-auto;
 }
 .communities .content .box {
-    @apply mx-auto mt-6 min-h-full px-7 py-6 cursor-pointer;
+    @apply mx-auto mt-6 min-h-full px-7 py-6 cursor-default lg:cursor-pointer;
     @apply flex justify-between items-center flex-col lg:flex-row;
     background: #1f1c3b;
     border-radius: 24px;
@@ -231,7 +242,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .communities .content .popup.show {
-    @apply flex;
+    @apply hidden lg:flex;
 }
 .communities .content .popup .content {
     @apply relative flex justify-center items-center flex-col rounded-3xl p-10;

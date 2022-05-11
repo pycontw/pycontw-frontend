@@ -11,21 +11,18 @@ export default genI18nMessages({
                 title: 'Taipei - Taipei.py',
                 description:
                     'Keith, Tim, and some enthusiasts launched Taipei.py in 2012 and started hosting monthly events at CLBC. The topics are mainly focused on web technology and data science. Besides the monthly meetups, Andy also hosted Python Web Meetup and Django study group for web geeks!',
-                imgUrl: require('~/static/img/about/community/taipeiPy.png'),
             },
             {
                 tag: 'pyhug',
                 title: 'Hsinchu - PyHUG',
                 description:
                     'Taiwan’s first Python community was established in 2011 by yyc and Albert Huang. Speakers are invited to share every month. The participating are mainly students. In recent years, gatherings in cafes every Wednesday has become a form of "eating, drinking, talking about Python and sorts of things". New blood is needed to join.',
-                imgUrl: require('~/static/img/about/community/pyhug.png'),
             },
             {
                 tag: 'taichung',
                 title: 'Taichung - Taichung.py',
                 description:
                     'Taichung.py was started in 2014 by Prof. Yuan-Liang Tang and several enthusiasts. The events were held at restaurants or coffee shops until later Microprogram Co. supported the event venue. Now the events are held monthly in Saturday afternoon, which is best suited for a walk to have some snacks in Fengjia Night Market after the event.',
-                imgUrl: require('~/static/img/about/community/taichungPy.png'),
             },
             {
                 tag: 'tainan',
@@ -50,7 +47,6 @@ export default genI18nMessages({
                 title: 'Nantou - Nantou.py',
                 description:
                     'Led by the Vice President of Nan Kai University of Technology, Prof. Cheng-Min Lin, Nantou.py has regularly held a monthly meeting at 768 Art Space to share the latest information and newest experiences with all the Python lovers in central Taiwan. Members have contributed their efforts to bring along industry connection as well as a selfless and boundless location or all the Python learners.',
-                imgUrl: require('~/static/img/about/community/nantouPy.png'),
             },
             {
                 tag: 'pyladiestw',
@@ -80,21 +76,18 @@ export default genI18nMessages({
                 title: '台北 - Taipei.py',
                 description:
                     '2012 年 Keith、Tim 與其快樂夥伴們創立了 Taipei.py。每個月固定在 CLBC 聚會，聚會分享主題以網路相關技術為主，近期也越來越多大數據相關的分享。由於創辦者們多數在網路相關行業，因此除了每月例會，也會舉辦讀書會等活動。',
-                imgUrl: require('~/static/img/about/community/taipeiPy.png'),
             },
             {
                 tag: 'pyhug',
                 title: '新竹 - PyHUG',
                 description:
                     '台灣第一個 Python 社群，2011 年由 yyc 和 Albert Huang 成立。每月定期邀請講者分享。參加成員以大學生為主，聚會偏重Python 在科學上的應用。近幾年每週三在咖啡館聚會，漸漸變成「吃吃喝喝聊 Python 及雜七雜八」的形式。目前由 Dainese 擔任負責人，需要地方的新血加入。',
-                imgUrl: require('~/static/img/about/community/pyhug.png'),
             },
             {
                 tag: 'taichung',
                 title: '台中 - Taichung.py',
                 description:
                     '唐元亮老師於 2014 年發起了 Taichung.py 。初期流浪在各餐廳與咖啡館，後期由微程式科技提供場地空間，告別流浪的生活。每月聚會一次，時間在星期六下午，剛好可以在聚會結束後，到附近的逢甲夜市散步、覓食。',
-                imgUrl: require('~/static/img/about/community/taichungPy.png'),
             },
             {
                 tag: 'tainan',
@@ -119,7 +112,6 @@ export default genI18nMessages({
                 title: '南投 - Nantou.py',
                 description:
                     '2019年底，南開科技大學副校長林正敏教授，創立了 Nantou.py。聚會地點在草屯768藝術空間，固定每月舉行分享會，來自各地的大夥也無私地向大家分享技術。在南投人稱科技沙漠的地區，有著這一群人為python貢獻己力，並為有意學習的大家，帶來一場無私、無限的學習地。',
-                imgUrl: require('~/static/img/about/community/nantouPy.png'),
             },
             {
                 tag: 'pyladiestw',
@@ -136,7 +128,7 @@ export default genI18nMessages({
         ],
         og: {
             title: '在地社群',
-            descriptionription: '在地社群',
+            description: '在地社群',
         },
     },
 })
