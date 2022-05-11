@@ -88,6 +88,7 @@
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
 import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
@@ -103,6 +104,7 @@ export default {
         SponsorCard,
         SponsorModal,
         SponsorCardCollection,
+        I18nPageWrapper,
     },
     data() {
         return {
@@ -185,7 +187,7 @@ export default {
 }
 
 .sponsor-section {
-    @apply pt-12 mx-4 lg:mx-auto lg:w-9/12;
+    @apply pt-12 lg:mx-auto lg:w-full;
 }
 
 .text-button-wrapper {

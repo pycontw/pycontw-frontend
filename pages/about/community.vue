@@ -1,10 +1,10 @@
 <template>
-    <i18n-page-wrapper class="md:px-20 lg:px-20">
+    <i18n-page-wrapper class="md:px-20 xl:px-20">
         <core-h1
             :title="$t('title')"
-            class="justify-center lg:justify-start ml-0 lg:ml-10"
+            class="justify-center xl:justify-start ml-0 xl:ml-10"
         ></core-h1>
-        <div class="flex flex-col justify-between lg:flex-row">
+        <div class="flex flex-col justify-between xl:flex-row">
             <div class="map-area">
                 <p class="map-area__text" v-text="$t('content')"></p>
                 <div class="map-area__img" :style="communityMapStyle"></div>
@@ -209,30 +209,30 @@ export default {
 <style lang="postcss" scoped>
 .map-area {
     @apply w-full;
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
         width: 55%;
     }
 }
 .map-area__text {
-    @apply text-xs lg:text-sm leading-4 lg:leading-6 tracking-normal lg:tracking-widest;
-    @apply font-serif px-0 lg:px-10;
+    @apply text-xs xl:text-sm leading-4 xl:leading-6 tracking-normal xl:tracking-widest;
+    @apply font-serif px-0 xl:px-10;
 }
 .map-area__img {
     @apply mt-20 mb-8 w-full;
     aspect-ratio: 622/653;
 }
 .communities {
-    @apply relative mx-auto w-full lg:w-2/5;
+    @apply relative mx-auto w-full xl:w-2/5;
     max-width: 450px;
     height: unset;
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
         min-width: 450px;
         height: 1010px;
     }
 }
 .communities__arrow-top,
 .communities__arrow-down {
-    @apply absolute text-xl left-1/2 z-10 hidden lg:block;
+    @apply absolute text-xl left-1/2 z-10 hidden xl:block;
     content: '⌃';
     transform: translateX(-50%) translateY(0%);
     transition: opacity 0.3s;
@@ -249,8 +249,8 @@ export default {
     @apply relative w-full h-full items-center overflow-y-auto;
 }
 .communities__content__box__content {
-    @apply mx-auto mt-6 min-h-full px-7 py-6 cursor-default lg:cursor-pointer;
-    @apply flex justify-between items-center flex-col lg:flex-row;
+    @apply mx-auto mt-6 min-h-full px-7 py-6 cursor-default xl:cursor-pointer;
+    @apply flex justify-between items-center flex-col xl:flex-row;
     background: #1f1c3b;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
@@ -259,31 +259,31 @@ export default {
     @apply mt-0;
 }
 .communities__content__box__content__description__title {
-    @apply font-serif font-bold text-xl mt-0 mb-4 lg:mb-3;
+    @apply font-serif font-bold text-xl mt-0 mb-4 xl:mb-3;
     color: #a9a6d6;
 }
 .communities__content__box__content__description__text {
-    @apply text-xs w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-7;
+    @apply text-xs w-full leading-7 overflow-hidden mb-5 xl:mb-0 pr-0 xl:pr-7;
     line-height: 146.9%;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: unset;
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
         -webkit-line-clamp: 5;
     }
 }
 .communities__content__box__content__img {
-    @apply object-cover rounded-lg h-32 w-60 lg:w-32;
+    @apply object-cover rounded-lg h-32 w-60 xl:w-32;
 }
 .communities__content__box__popup {
-    @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0 lg:p-0;
+    @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0 xl:p-0;
     padding: 0 10%;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .communities__content__box__popup--show {
-    @apply hidden lg:flex;
+    @apply hidden xl:flex;
 }
 .communities__content__box__popup__content {
     @apply relative flex justify-center items-center flex-col rounded-3xl p-10;
@@ -291,7 +291,7 @@ export default {
     background-color: #121023;
     width: 724px;
     height: unset;
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
         height: 575px;
     }
 }
