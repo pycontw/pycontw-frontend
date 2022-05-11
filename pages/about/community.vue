@@ -6,37 +6,73 @@
         ></core-h1>
         <div class="flex flex-col justify-between lg:flex-row">
             <div class="map-area">
-                <p v-text="$t('content')"></p>
-                <div class="map" :style="communityMapStyle"></div>
+                <p class="map-area__text" v-text="$t('content')"></p>
+                <div class="map-area__img" :style="communityMapStyle"></div>
             </div>
             <div class="communities">
-                <div class="arrow-top" :class="{ hide: boxScroll }">⌃</div>
-                <div ref="communities" class="content">
+                <div
+                    class="communities__arrow-top"
+                    :class="{ 'communities__arrow-top--hide': boxScroll }"
+                >
+                    ⌃
+                </div>
+                <div ref="communities" class="communities__content">
                     <div
                         v-for="(community, index) in $t('communities')"
                         :key="`community_${community.tag}`"
+                        class="communities__content__box"
                     >
-                        <div class="box" @click="popupShow(index)">
-                            <div class="text">
-                                <h3 class="title">
+                        <div
+                            class="communities__content__box__content"
+                            @click="popupShow(index)"
+                        >
+                            <div
+                                class="
+                                    communities__content__box__content__description
+                                "
+                            >
+                                <h3
+                                    class="
+                                        communities__content__box__content__description__title
+                                    "
+                                >
                                     {{ community.title }}
                                 </h3>
-                                <p>
+                                <p
+                                    class="
+                                        communities__content__box__content__description__text
+                                    "
+                                >
                                     {{ community.description }}
                                 </p>
                             </div>
                             <img
                                 v-show="communityImgUrl[community.tag]"
+                                class="communities__content__box__content__img"
                                 :src="communityImgUrl[community.tag]"
                                 :alt="community.tag"
                             />
                         </div>
                         <div
-                            class="popup"
-                            :class="{ show: popupIndex === index }"
+                            class="communities__content__box__popup"
+                            :class="{
+                                'communities__content__box__popup--show':
+                                    popupIndex === index,
+                            }"
                         >
-                            <div class="content">
-                                <button @click="popupClose">✕</button>
+                            <div
+                                class="
+                                    communities__content__box__popup__content
+                                "
+                            >
+                                <button
+                                    class="
+                                        communities__content__box__popup__content__button
+                                    "
+                                    @click="popupClose"
+                                >
+                                    ✕
+                                </button>
                                 <img
                                     v-show="communityImgUrl[community.tag]"
                                     :src="communityImgUrl[community.tag]"
@@ -61,7 +97,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="arrow-down" :class="{ hide: boxScroll === false }">
+                <div
+                    class="communities__arrow-down"
+                    :class="{
+                        'communities__arrow-down--hide': boxScroll === false,
+                    }"
+                >
                     ⌃
                 </div>
             </div>
@@ -172,11 +213,11 @@ export default {
         width: 55%;
     }
 }
-.map-area p {
+.map-area__text {
     @apply text-xs lg:text-sm leading-4 lg:leading-6 tracking-normal lg:tracking-widest;
     @apply font-serif px-0 lg:px-10;
 }
-.map-area .map {
+.map-area__img {
     @apply mt-20 mb-8 w-full;
     aspect-ratio: 622/653;
 }
@@ -189,39 +230,39 @@ export default {
         height: 1010px;
     }
 }
-.communities .arrow-top,
-.communities .arrow-down {
+.communities__arrow-top,
+.communities__arrow-down {
     @apply absolute text-xl left-1/2 z-10 hidden lg:block;
     content: '⌃';
     transform: translateX(-50%) translateY(0%);
     transition: opacity 0.3s;
 }
-.communities .arrow-down {
+.communities__arrow-down {
     @apply bottom-0;
     transform: translateX(-55%) translateY(0%) scaleY(-1);
 }
-.communities .arrow-top.hide,
-.communities .arrow-down.hide {
+.communities__arrow-top--hide,
+.communities__arrow-down--hide {
     @apply opacity-0;
 }
-.communities .content {
+.communities__content {
     @apply relative w-full h-full items-center overflow-y-auto;
 }
-.communities .content .box {
+.communities__content__box__content {
     @apply mx-auto mt-6 min-h-full px-7 py-6 cursor-default lg:cursor-pointer;
     @apply flex justify-between items-center flex-col lg:flex-row;
     background: #1f1c3b;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
 }
-.communities .content div:first-of-type .box {
+.communities__content__box:first-of-type .communities__content__box__content {
     @apply mt-0;
 }
-.communities .content .box .title {
+.communities__content__box__content__description__title {
     @apply font-serif font-bold text-xl mt-0 mb-4 lg:mb-3;
     color: #a9a6d6;
 }
-.communities .content .box p {
+.communities__content__box__content__description__text {
     @apply text-xs w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-7;
     line-height: 146.9%;
     text-overflow: ellipsis;
@@ -232,19 +273,19 @@ export default {
         -webkit-line-clamp: 5;
     }
 }
-.communities .content .box img {
+.communities__content__box__content__img {
     @apply object-cover rounded-lg h-32 w-60 lg:w-32;
 }
-.communities .content .popup {
+.communities__content__box__popup {
     @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0 lg:p-0;
     padding: 0 10%;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.communities .content .popup.show {
+.communities__content__box__popup--show {
     @apply hidden lg:flex;
 }
-.communities .content .popup .content {
+.communities__content__box__popup__content {
     @apply relative flex justify-center items-center flex-col rounded-3xl p-10;
     border: 3px solid #e099e1;
     background-color: #121023;
@@ -254,7 +295,7 @@ export default {
         height: 575px;
     }
 }
-.communities .content .popup .content button {
+.communities__content__box__popup__content__button {
     @apply absolute top-5 right-7 text-2xl font-bold;
     color: #e099e1;
 }
