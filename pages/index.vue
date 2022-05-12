@@ -95,7 +95,7 @@ import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
 import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
-import Intro from '~/components/intro/intro'
+import Intro from '~/components/intro/Intro'
 
 export default {
     i18n,
