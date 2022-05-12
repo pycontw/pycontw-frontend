@@ -100,31 +100,24 @@ export default {
     @apply inline-flex w-full h-full justify-center items-center bg-transparent;
     z-index: 100;
 }
-.core-menu-fade-enter-active {
-    transition: all 0.2s;
+.core-menu-fade-enter-active,
+.core-menu-mask-enter-active {
+    @apply transition transition-all duration-200;
 }
-.core-menu-fade-leave-active {
-    transition: all 0.5s;
-    transition-delay: 0.2s;
+.core-menu-fade-leave-active,
+.core-menu-mask-leave-active {
+    @apply transition transition-all duration-500 delay-200;
 }
 .core-menu-fade-enter,
 .core-menu-fade-leave-to {
-    opacity: 0;
+    @apply opacity-0;
 }
 .menu-mask {
     @apply absolute w-full h-0 top-full;
-    background: #121023;
-}
-.core-menu-mask-enter-active {
-    transition: all 0.2s;
-}
-.core-menu-mask-leave-active {
-    transition: all 0.5s;
-    transition-delay: 0.2s;
+    background-color: #121023;
 }
 .core-menu-mask-enter,
 .core-menu-mask-leave-to {
-    height: 100%;
-    top: 0px;
+    @apply h-full top-0;
 }
 </style>
