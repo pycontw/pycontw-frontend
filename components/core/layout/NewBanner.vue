@@ -9,6 +9,12 @@
 <script>
 export default {
     name: 'Banner',
+    props: {
+        backgroundImagePath: {
+            type: String,
+            default: ' ~/static/img/about/WebBanner.svg',
+        },
+    },
 }
 </script>
 
