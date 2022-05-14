@@ -45,7 +45,7 @@ a {
     color: inherit;
 }
 .highlight {
-    @apply text-pink-500;
+    color: #e099e1;
 }
 .highlight:hover {
     @apply text-primary-500;
