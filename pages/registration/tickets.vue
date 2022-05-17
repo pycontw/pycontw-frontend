@@ -1,7 +1,7 @@
 <template>
     <div class="py-10 md:py-24 lg:py24">
         <banner>
-            <template #default>
+            <template #standard>
                 <core-h1 :title="$t('title')"></core-h1>
                 <i18n path="pageAbstract" tag="p" class="pageAbstract">
                     <template #br><br /></template>
