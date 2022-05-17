@@ -1,7 +1,7 @@
 <template>
     <div>
         <banner>
-            <template #default>
+            <template #standard>
                 <core-h1 :title="$t('title')"></core-h1>
                 <i18n path="pageAbstract" tag="p" class="pageAbstract">
                     <template #br><br /></template>
