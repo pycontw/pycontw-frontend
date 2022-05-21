@@ -4,7 +4,10 @@ export default genI18nMessages({
     'en-us': {
         title: 'Python Community',
         content:
-            '在臺灣，除了參與每年的 PyCon TW，還可以加入許多在地的社群認識更多的 Pythonistas，一起討論我們共通的語言為 Python 貢獻己力。PyCon TW 的成長有賴於臺灣各地 Python 社群的幫忙，才能讓每一年的年會順利舉行。一個人走，可以走得很快；但一群人走，可以走得更遠！',
+            'PyCon TW is a conference driven by multiple local Python communities across Taiwan, ' +
+            "and the event wouldn't be able to thrive without their support. " +
+            'If the conference is not enough for you, welcome to join the meetups and ' +
+            'seminars held by our community partners!',
         communities: [
             {
                 tag: 'taipei',
