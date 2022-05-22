@@ -5,7 +5,7 @@
             <h2>{{ title }}</h2>
             <p>{{ description }}</p>
         </div>
-        <div class="bulletinCard__button">
+        <div v-if="showButton" class="bulletinCard__button">
             <text-button
                 :href="linkHref"
                 :to="linkTo"
@@ -27,12 +27,12 @@
 </template>
 
 <script>
-// import TextButton from '@/components/core/buttons/TextButton'
+import TextButton from '@/components/core/buttons/TextButton'
 
 export default {
     name: 'BulletinCard',
     components: {
-        // TextButton,
+        TextButton,
     },
     props: {
         title: { type: String, default: '' },
@@ -40,15 +40,18 @@ export default {
             type: String,
             default: '',
         },
-        // linkTitle: { type: String, default: '' },
-        // linkHref: { type: String, default: '' },
-        // linkTo: { type: String, default: '' },
+        linkTitle: { type: String, default: '' },
+        linkHref: { type: String, default: '' },
+        linkTo: { type: String, default: '' },
     },
     computed: {
         classObject() {
             return {
                 bulletinCard: true,
             }
+        },
+        showButton() {
+            return false
         },
     },
 }
@@ -57,12 +60,8 @@ export default {
 <style lang="postcss" scoped>
 .bulletinCard {
     @apply relative flex flex-col justify-center items-center rounded-xl;
-    padding: 25px 3px;
-    width: 236px;
-    height: 310px;
-    left: 284px;
-    top: 0px;
-    margin: 48px;
+    min-width: 236px;
+    min-height: 310px;
     color: #a9a6d9;
     background: #1f1c3b;
 }
@@ -84,6 +83,8 @@ export default {
 
 .bulletinCard__content {
     @apply absolute;
+    top: 120px;
+    padding: inherit;
 }
 
 .bulletinCard__content > h2 {
@@ -103,10 +104,10 @@ export default {
     }
 }
 
-/* .bulletinCard__button {
+.bulletinCard__button {
     @apply absolute bottom-5 cursor-pointer;
     @media (min-width: 415px) {
         @apply bottom-7;
     }
-} */
+}
 </style>
