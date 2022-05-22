@@ -53,14 +53,6 @@ export default {
     height: 64px;
 }
 
-.header-container.--desktop.core-localeSwitch:hover {
-    color: #c386ae;
-}
-
-.header-container.--mobile.core-localeSwitch:hover {
-    background-color: unset;
-}
-
 .header-container.--mobile.core-localeSwitch {
     z-index: 1002;
 }
