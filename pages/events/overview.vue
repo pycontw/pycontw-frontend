@@ -132,7 +132,7 @@ export default {
                     tagColor: 'green',
                     imgUrl: require('~/static/img/events/overview/job-fair.png'),
                     imgAlt: 'Job Fair',
-                    // to: '/events/jobs'
+                    to: '/events/jobs',
                 },
             ],
         }
