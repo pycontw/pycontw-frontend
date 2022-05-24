@@ -48,4 +48,7 @@ export default {
 .core-localeSwitch {
     @apply font-bold;
 }
+.core-localeSwitch:hover {
+    color: #c386ae;
+}
 </style>

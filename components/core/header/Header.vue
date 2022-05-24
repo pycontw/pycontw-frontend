@@ -53,18 +53,6 @@ export default {
     height: 64px;
 }
 
-.header-container.--desktop.core-localeSwitch:hover {
-    color: #c386ae;
-}
-
-.header-container.--mobile.core-localeSwitch:hover {
-    background-color: unset;
-}
-
-.header-container.--mobile.core-localeSwitch {
-    z-index: 1002;
-}
-
 .header__nav-bar {
     @apply w-full flex justify-between items-center px-4;
     pointer-events: auto; /*enable click-through ScrollableNavBar*/
