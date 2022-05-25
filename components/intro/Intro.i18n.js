@@ -22,17 +22,18 @@ export default genI18nMessages({
         pyconIntro: 'PyCon Taiwan',
         whatIsPyConAPAC: 'What is PyCon APAC',
         whatIsPyConAPACContent:
-            'PyCon APAC is the annual gathering of the global Python community. ' +
-            'In addition to the wonderful speeches on various aspects of Python, ' +
-            'the annual meeting also gathers people who use Python in various fields ' +
-            'to exchange experiences and share the latest technological developments.',
+            'PyCon APAC is a worldwide gathering of the Python community. ' +
+            'In addition to diverse speech topics, the annual meeting also serves as ' +
+            'a platform for Python professionals along with enthusiasts to exchange ideas, ' +
+            'experiences, and the latest developments.',
         pyConWillBeHeldOnline: 'PyCon will be held online',
         pyConWillBeHeldOnlineContent:
-            'The conference will be held online. ' +
-            'All the speeches during the conference will be live streamed on YouTube. ' +
-            'Attendees are also encouraged to join our Gather Town and Discord, ' +
-            'where you can participate our special events (with swag gift giveaway!), ' +
-            'meet our sponsors, speakers, and other Pythonistas!',
+            'The conference is held on multiple virtual platforms. ' +
+            'All speeches are live streamed on YouTube while ' +
+            'attendees are encouraged to join our Gather Town and Discord space.  ' +
+            'The Gather Town platform allows attendees to participate in our ' +
+            'special events (Swag giveaway!) and meet with sponsors, ' +
+            'speakers, and other Pythonistas!',
     },
     'zh-hant': {
         milestone: [
