@@ -1,5 +1,5 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div>
         <banner>
             <template #default>
                 <div
@@ -15,7 +15,7 @@
             </template>
         </banner>
 
-        <i18n-page-wrapper class="i18n__custom pt-8 px-8 md:px-57 lg:px-56">
+        <i18n-page-wrapper>
             <!-- intro -->
 
             <div class="pb-8">
@@ -227,7 +227,7 @@ export default {
 .conferenceContent {
     @apply leading-5;
     font-size: 16px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 18px;
     }
 }
@@ -235,7 +235,7 @@ export default {
 .introContent {
     @apply leading-5;
     font-size: 16px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 18px;
     }
 }
@@ -252,7 +252,7 @@ export default {
 .ticketContainer .tickerHeader {
     @apply m-auto;
     padding: 0 0 24px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         padding: 0;
     }
 }
@@ -262,8 +262,8 @@ export default {
 }
 .ticketContainer .title {
     @apply font-serif font-semibold text-center;
-
-    @media (max-width: 1280px) {
+    min-width: 190px;
+    @media (max-width: 1440px) {
         font-size: 24px;
     }
 }
@@ -272,14 +272,16 @@ export default {
     @apply flex flex-col justify-center mx-auto;
     margin-bottom: 0 !important;
     padding: 0 0 24px;
-    @media (min-width: 1280px) {
+    min-width: 0;
+    @media (min-width: 1440px) {
+        min-width: 240px;
         padding: 0;
     }
 }
 .ticketContainer .feature {
     @apply font-sans;
     font-size: 16px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 18px;
     }
 }
@@ -289,7 +291,7 @@ export default {
     @apply text-center m-auto;
     padding: 0 0 24px;
     font-size: 22px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         padding: 0;
         font-size: 28px;
     }
@@ -309,7 +311,7 @@ h2 {
     font-size: 28px;
     color: #c386ae;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 32px;
     }
 }
