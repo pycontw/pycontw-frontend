@@ -120,6 +120,8 @@ export default {
                     titleI18NPath: 'ticketEarlyBird',
                     priceOnSale: 'NT$ 1,690',
                     price: 'NT$ 2,600',
+                    // TODO:
+                    //  需要變更為結束販售圖示
                     image: require('~/static/img/registration/tickets/earlyBird.svg'),
 
                     // The strings in this array are the tags listed in `features` object
@@ -136,17 +138,43 @@ export default {
                     tag: 'regular',
                     titleI18NPath: 'ticketRegular',
                     price: 'NT$ 2,600',
-                    image: require('~/static/img/registration/tickets/regular_disabled.svg'),
+                    // TODO:
+                    //  需要變更為正在販售圖示
+                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
                     features: ['pyckage', 'conference'],
+                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                },
+                {
+                    tag: 'sponsorship',
+                    titleI18NPath: 'ticketSponsorship',
+                    price: 'NT$ 5,000',
+                    // TODO:
+                    //  需要變更為尚未販售販售圖示
+                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
+                    // TODO:
+                    //  需要有一個連結可以連到贊助票說明
+                    features: ['SpecialThanks', 'pyckage', 'conference'],
+                    link: null,
+                },
+                {
+                    tag: 'latebird',
+                    titleI18NPath: 'ticketLateBird',
+                    price: 'NT$ 3,600',
+                    // TODO:
+                    //  需要變更為尚未販售圖示
+                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
+                    features: ['conference'],
                     link: null,
                 },
                 {
                     tag: 'enterprise',
                     titleI18NPath: 'ticketEnterprise',
                     price: 'NT$ 3,600',
+                    // TODO:
+                    //  需要變更為正在販售圖示
                     image: require('~/static/img/registration/tickets/enterprise_disabled.svg'),
                     features: ['vatAvailable', 'pyckage', 'conference'],
-                    link: null,
+                    link: 'https://pycontw.kktix.cc/events/2022-corporate',
                 },
             ],
         }
