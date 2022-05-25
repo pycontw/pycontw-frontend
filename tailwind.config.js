@@ -14,10 +14,10 @@ module.exports = {
             serif: ['Noto Serif TC', '-apple-system', 'serif'],
         },
         backgroundSize: {
-            'auto': 'auto',
-            'cover': 'cover',
-            'contain': 'contain',
-            'bgsize': '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
+            auto: 'auto',
+            cover: 'cover',
+            contain: 'contain',
+            bgsize: '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
         },
         extend: {
             backgroundImage: {
