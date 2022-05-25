@@ -34,7 +34,7 @@ export default {
 .milestone__achievement,
 .milestone__unit {
     @apply text-2xl;
-    @media (max-width: 767px) {
+    @media (max-width: 833px) {
         position: relative;
         bottom: -30px;
         font-size: 1.2rem;
@@ -52,14 +52,14 @@ export default {
     -webkit-text-fill-color: transparent;
     font-size: 5.4rem;
     filter: drop-shadow(4px 6px 0px #4f4f4f);
-    @media (max-width: 767px) {
+    @media (max-width: 833px) {
         font-size: 4.8rem;
     }
 }
 
 .milestone__unit {
     @apply mb-2;
-    @media (max-width: 767px) {
+    @media (max-width: 833px) {
         top: -8px;
     }
 }
