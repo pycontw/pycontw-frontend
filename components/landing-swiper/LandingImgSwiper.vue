@@ -157,7 +157,7 @@ export default {
 
 <style scoped>
 .swiper-collection {
-    @apply bg-black900;
+    @apply bg-black-900;
     width: 100%;
     overflow-x: hidden;
 }

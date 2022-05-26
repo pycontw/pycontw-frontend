@@ -101,7 +101,7 @@ export default {
 }
 
 .core-button:not(.--is-link) {
-    @apply cursor-default text-black200 bg-black300 border-black300;
+    @apply cursor-default text-black-200 bg-black-300 border-black-300;
 }
 
 .core-button.--uppercase > a {
@@ -110,7 +110,7 @@ export default {
 
 .core-button.--primary {
     & > a {
-        @apply z-10 border-0 text-prim100;
+        @apply z-10 border-0 text-prim-100;
         background-image: linear-gradient(
             276.15deg,
             #72dcb6 0.25%,
@@ -168,15 +168,15 @@ export default {
 
 .core-button.--secondary {
     & > a {
-        @apply z-10 bg-pink700;
+        @apply z-10 bg-pink-700;
         background-image: none;
 
         & span {
-            @apply relative z-30 text-black800;
+            @apply relative z-30 text-black-800;
         }
 
         &:hover span {
-            @apply text-pink700;
+            @apply text-pink-700;
         }
 
         &:hover:after {
@@ -204,7 +204,7 @@ export default {
 }
 .core-button.--secondary {
     & > a:after {
-        @apply absolute top-0 left-0 w-full h-full bg-black800 border-pink700;
+        @apply absolute top-0 left-0 w-full h-full bg-black-800 border-pink-700;
         @apply opacity-0 z-20;
         content: '';
         background-image: none;

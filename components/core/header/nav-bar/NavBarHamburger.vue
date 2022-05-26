@@ -137,7 +137,7 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarHamburgerSlideInMenu {
-    @apply fixed right-0 flex w-full h-full flex-col font-bold pt-4 bg-black900;
+    @apply fixed right-0 flex w-full h-full flex-col font-bold pt-4 bg-black-900;
     top: 64px;
     z-index: 1000;
 }

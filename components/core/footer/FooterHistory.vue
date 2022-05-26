@@ -95,6 +95,6 @@ export default {
 
 <style scoped>
 .highlight {
-    @apply text-pink500;
+    @apply text-pink-500;
 }
 </style>

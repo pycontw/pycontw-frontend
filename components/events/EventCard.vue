@@ -61,7 +61,7 @@ export default {
 
 <style lang="postcss" scoped>
 .card {
-    @apply relative inline-flex flex-col w-full break-words border-2 border-pink500 shadow-pink500;
+    @apply relative inline-flex flex-col w-full break-words border-2 border-pink-500 shadow-pink-500;
     min-height: 180px;
     border-radius: 24px;
     padding: 15px;
@@ -92,7 +92,7 @@ export default {
     padding-bottom: 24px;
 }
 .title {
-    @apply font-bold font-serif text-pink500;
+    @apply font-bold font-serif text-pink-500;
     font-size: 24px;
     line-height: 30px;
 }

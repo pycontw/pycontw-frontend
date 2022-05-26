@@ -77,9 +77,9 @@ export default {
 
 <style lang="postcss" scoped>
 .checkbox {
-    @apply text-pink500 border-pink500;
+    @apply text-pink-500 border-pink-500;
     &.checked {
-        @apply text-black900 bg-pink500;
+        @apply text-black-900 bg-pink-500;
     }
 }
 </style>

@@ -131,11 +131,11 @@ export default {
 }
 
 .core-navBarItem:hover {
-    @apply text-pink500;
+    @apply text-pink-500;
 }
 
 .core-navBarItem.--active,
 .core-navBarItem.--active .options-menu {
-    @apply text-pink500;
+    @apply text-pink-500;
 }
 </style>

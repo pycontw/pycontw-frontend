@@ -106,7 +106,7 @@ export default {
 }
 .core-scrollableNavBar__left-arrow,
 .core-scrollableNavBar__right-arrow {
-    @apply h-full absolute justify-center items-center cursor-pointer w-6 hidden bg-black900;
+    @apply h-full absolute justify-center items-center cursor-pointer w-6 hidden bg-black-900;
     z-index: 101; /*dropdown label< z-index < dropdown items in navbar*/
 }
 .core-scrollableNavBar__left-arrow {

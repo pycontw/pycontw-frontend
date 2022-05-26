@@ -98,9 +98,9 @@ export default {
 
 <style lang="postcss" scoped>
 .community-title {
-    @apply mt-1 mb-4 font-serif font-bold text-xl cursor-pointer text-pink500;
+    @apply mt-1 mb-4 font-serif font-bold text-xl cursor-pointer text-pink-500;
 }
 .box {
-    @apply bg-black900 border-2 border-pink500 box-border rounded-3xl shadow-pink500;
+    @apply bg-black-900 border-2 border-pink-500 box-border rounded-3xl shadow-pink-500;
 }
 </style>

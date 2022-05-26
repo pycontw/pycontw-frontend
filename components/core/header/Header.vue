@@ -46,21 +46,9 @@ export default {
 
 <style lang="postcss" scoped>
 .header-container {
-    @apply w-full bg-black900 text-prim100;
+    @apply w-full bg-black-900 text-prim-100;
     font-size: 20px;
     height: 64px;
-}
-
-.header-container.--desktop.core-localeSwitch:hover {
-    @apply text-pink500;
-}
-
-.header-container.--mobile.core-localeSwitch:hover {
-    background-color: unset;
-}
-
-.header-container.--mobile.core-localeSwitch {
-    z-index: 1002;
 }
 
 .header__nav-bar {

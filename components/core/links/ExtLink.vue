@@ -45,10 +45,10 @@ a {
     color: inherit;
 }
 .highlight {
-    @apply text-pink500;
+    @apply text-pink-500;
 }
 .highlight:hover {
-    @apply text-prim500;
+    @apply text-prim-500;
 }
 .underline {
     text-decoration: underline;

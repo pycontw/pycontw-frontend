@@ -267,7 +267,7 @@ export default {
     }
 }
 .ticketContainer .priceOnSale {
-    @apply font-bold text-center mx-1.5 my-auto text-pink500;
+    @apply font-bold text-center mx-1.5 my-auto text-pink-500;
 }
 
 .ticketContainer .button {
@@ -276,7 +276,7 @@ export default {
 
 h2 {
     @apply font-serif font-bold text-center pb-4 pt-8 xl:pb-10 xl:pt-14;
-    @apply mt-0 mb-2 tracking-widest text-pink500;
+    @apply mt-0 mb-2 tracking-widest text-pink-500;
     font-size: 28px;
 
     @media (min-width: 1280px) {

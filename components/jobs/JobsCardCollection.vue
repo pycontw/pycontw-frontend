@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .core-jobsCardCollection {
-    @apply flex px-0 bg-black900;
+    @apply flex px-0 bg-black-900;
 }
 
 .core-jobsCardCollection.--site {

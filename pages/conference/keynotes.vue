@@ -195,11 +195,11 @@ export default {
 }
 
 .keynote__name {
-    @apply font-serif font-black text-base text-center py-2 text-pink500;
+    @apply font-serif font-black text-base text-center py-2 text-pink-500;
 }
 
 .keynote__title {
-    @apply font-serif font-black text-base text-center py-2 text-pink500;
+    @apply font-serif font-black text-base text-center py-2 text-pink-500;
 }
 
 .keynote__tabs {
@@ -218,6 +218,6 @@ export default {
 }
 
 .keynote__extLink:hover {
-    @apply text-prim500;
+    @apply text-prim-500;
 }
 </style>

@@ -295,13 +295,13 @@ export default {
     @apply h-full object-cover rounded-full;
 }
 .speech__speakerName {
-    @apply font-serif font-black text-center mt-7 text-pink500;
+    @apply font-serif font-black text-center mt-7 text-pink-500;
 }
 
 .speech__infoSection {
     @apply inline-block text-xs md:text-sm mb-12 md:mb-24;
     @apply px-2 py-4 md:p-6;
-    @apply rounded-2xl w-full border-2 bg-opacity-0 border-pink500 shadow-pink500;
+    @apply rounded-2xl w-full border-2 bg-opacity-0 border-pink-500 shadow-pink-500;
     line-height: 29px;
     color: #c7c7c7;
 }
@@ -330,7 +330,7 @@ export default {
     color: #e6ba17;
 }
 .speech__extLink:hover {
-    @apply text-prim500;
+    @apply text-prim-500;
 }
 
 .speech__slido,

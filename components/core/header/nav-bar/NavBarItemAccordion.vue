@@ -62,11 +62,11 @@ export default {
 }
 
 .core-navBarItemAccordion__items {
-    @apply flex flex-col justify-center bg-black800;
+    @apply flex flex-col justify-center bg-black-800;
 }
 
 .core-navBarItemAccordion__items > .core-localeLink {
-    @apply inline-flex text-pink700;
+    @apply inline-flex text-pink-700;
     padding: 17px 64px;
 }
 

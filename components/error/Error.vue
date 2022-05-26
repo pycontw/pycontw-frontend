@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .error {
-    @apply bg-black900;
+    @apply bg-black-900;
     position: relative;
     left: 0;
     right: 0;
@@ -35,7 +35,7 @@ export default {
 
 .error h2,
 .error p {
-    @apply text-pink500;
+    @apply text-pink-500;
     font-weight: 700;
     padding-top: 40px;
 }

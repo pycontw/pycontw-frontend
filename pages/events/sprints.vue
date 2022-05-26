@@ -68,6 +68,6 @@ export default {
 
 <style lang="postcss" scoped>
 h2 {
-    @apply font-serif font-black text-base text-pink500 mt-12 md:text-lg text-center mx-auto;
+    @apply font-serif font-black text-base text-pink-500 mt-12 md:text-lg text-center mx-auto;
 }
 </style>

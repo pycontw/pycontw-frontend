@@ -52,7 +52,7 @@ export default {
 .tabs__headers > .header {
     @apply inline-block ml-1 py-2 px-2;
     @apply text-sm md:text-base text-center font-black;
-    @apply border rounded-t-lg bg-transparent cursor-pointer border-pink500;
+    @apply border rounded-t-lg bg-transparent cursor-pointer border-pink-500;
     color: #e6ba17;
     min-width: 20%;
     @media (min-width: 767px) {
@@ -60,12 +60,12 @@ export default {
     }
 }
 .tabs__headers > .header.-selected {
-    @apply text-black900;
+    @apply text-black-900;
     background: #e6ba17;
 }
 
 .tab {
-    @apply inline-block text-xs md:text-sm rounded-2xl w-full border-2 bg-opacity-0 border-pink500 shadow-pink500;
+    @apply inline-block text-xs md:text-sm rounded-2xl w-full border-2 bg-opacity-0 border-pink-500 shadow-pink-500;
     line-height: 29px;
     color: #c7c7c7;
     padding: 20px;
