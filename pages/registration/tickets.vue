@@ -81,8 +81,11 @@
                             :href="ticketInfo.link"
                             >{{ $t('buttonText') }}</text-button
                         >
+                        <text-button v-else-if="ticketInfo.hasEnded" small>{{
+                            $t('buttonTextSalesEnded')
+                        }}</text-button>
                         <text-button v-else small>{{
-                            $t('buttonDisabledText')
+                            $t('buttonTextNotStarted')
                         }}</text-button>
                     </div>
                 </div>
@@ -120,9 +123,7 @@ export default {
                     titleI18NPath: 'ticketEarlyBird',
                     priceOnSale: 'NT$ 1,690',
                     price: 'NT$ 2,600',
-                    // TODO:
-                    //  需要變更為結束販售圖示
-                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
+                    image: require('~/static/img/registration/tickets/earlyBird_disabled.svg'),
 
                     // The strings in this array are the tags listed in `features` object
                     // of i18n file (~i18n/registration/tickets.i18n.js).
@@ -132,15 +133,14 @@ export default {
                         'pyckage',
                         'conference',
                     ],
-                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                    hasEnded: true,
+                    link: null,
                 },
                 {
                     tag: 'regular',
                     titleI18NPath: 'ticketRegular',
                     price: 'NT$ 2,600',
-                    // TODO:
-                    //  需要變更為正在販售圖示
-                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
+                    image: require('~/static/img/registration/tickets/regular.svg'),
                     features: ['pyckage', 'conference'],
                     link: 'https://pycontw.kktix.cc/events/2022-individual',
                 },
@@ -148,11 +148,9 @@ export default {
                     tag: 'sponsorship',
                     titleI18NPath: 'ticketSponsorship',
                     price: 'NT$ 5,000',
+                    image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
                     // TODO:
-                    //  需要變更為尚未販售販售圖示
-                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
-                    // TODO:
-                    //  需要有一個連結可以連到贊助票說明
+                    //  開賣後需要有一個連結可以連到贊助票說明
                     features: ['SpecialThanks', 'pyckage', 'conference'],
                     link: null,
                 },
@@ -160,9 +158,7 @@ export default {
                     tag: 'latebird',
                     titleI18NPath: 'ticketLateBird',
                     price: 'NT$ 3,600',
-                    // TODO:
-                    //  需要變更為尚未販售圖示
-                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
+                    image: require('~/static/img/registration/tickets/lateBird_disabled.svg'),
                     features: ['conference'],
                     link: null,
                 },
@@ -170,9 +166,7 @@ export default {
                     tag: 'enterprise',
                     titleI18NPath: 'ticketEnterprise',
                     price: 'NT$ 3,600',
-                    // TODO:
-                    //  需要變更為正在販售圖示
-                    image: require('~/static/img/registration/tickets/enterprise_disabled.svg'),
+                    image: require('~/static/img/registration/tickets/corporate.svg'),
                     features: ['vatAvailable', 'pyckage', 'conference'],
                     link: 'https://pycontw.kktix.cc/events/2022-corporate',
                 },

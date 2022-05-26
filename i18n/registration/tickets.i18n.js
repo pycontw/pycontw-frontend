@@ -35,9 +35,9 @@ export default genI18nMessages({
         ticketEnterprise: 'Corporate Pass',
         ticketSponsorship: 'Sponsorship Pass',
         ticketLateBird: 'Late Bird Pass',
-        buttonClose: 'End of Sale',
+        buttonTextSalesEnded: 'Ticket Closed',
         buttonText: 'On Sale Now',
-        buttonDisabledText: 'Coming Soon',
+        buttonTextNotStarted: 'Coming Soon',
         fa: 'financial aid',
         og: {
             title: 'Ticket Info',
@@ -72,9 +72,9 @@ export default genI18nMessages({
         ticketEnterprise: '企業票',
         ticketSponsorship: '貢獻票',
         ticketLateBird: '晚鳥票',
-        buttonClose: '結束販售',
+        buttonTextSalesEnded: '結束販售',
         buttonText: '立即搶購',
-        buttonDisabledText: '即將開賣',
+        buttonTextNotStarted: '即將開賣',
         fa: '財務補助申請',
         og: {
             title: '購票資訊',
