@@ -130,16 +130,14 @@ export default {
 
 <style>
 html {
-    @apply font-sans;
+    @apply font-sans bg-black900 text-prim100;
     font-size: 20px;
-    color: #f0ebf5;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    background: #121023;
 }
 
 *,

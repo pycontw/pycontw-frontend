@@ -278,26 +278,22 @@ ul.list-disc {
     padding-left: 20px !important;
 }
 .listTitle {
-    @apply font-bold text-base;
-    color: #c386ae;
+    @apply font-bold text-base text-pink500;
 }
 
 h2 {
-    @apply font-serif font-black text-center mx-auto;
+    @apply font-serif font-black text-center mx-auto text-pink500;
     margin-top: 0.5rem !important;
     margin-bottom: 0 !important;
     font-size: 24px;
-    color: #c386ae;
 }
 
 .scheduleSection {
     @apply inline-block text-xs md:text-sm mb-12 md:mb-24;
     @apply px-1 sm:px-2 md:px-4 py-2 sm:py-4;
-    @apply rounded-2xl w-full border-2 bg-opacity-0;
+    @apply rounded-2xl w-full border-2 bg-opacity-0 border-pink500 shadow-pink500;
     line-height: 29px;
     color: #c7c7c7;
-    border-color: #c386ae;
-    box-shadow: 6px 6px 0 #c386ae;
 }
 
 .speakers {
@@ -314,12 +310,10 @@ h2 {
     height: 100%;
 }
 .speakerName {
-    @apply font-serif font-black text-center mb-4;
-    color: #c386ae;
+    @apply font-serif font-black text-center mb-4 text-pink500;
 }
 .speechTitle {
-    @apply font-serif font-black text-center mb-7;
-    color: #c386ae;
+    @apply font-serif font-black text-center mb-7 text-pink500;
 }
 
 .tabs {

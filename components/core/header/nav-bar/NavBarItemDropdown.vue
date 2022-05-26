@@ -113,8 +113,7 @@ export default {
     @apply opacity-0;
 }
 .menu-mask {
-    @apply absolute w-full h-0 top-full;
-    background-color: #121023;
+    @apply absolute w-full h-0 top-full bg-black900;
 }
 .core-menu-mask-enter,
 .core-menu-mask-leave-to {

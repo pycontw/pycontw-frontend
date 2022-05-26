@@ -46,15 +46,13 @@ export default {
 
 <style lang="postcss" scoped>
 .header-container {
-    @apply w-full;
+    @apply w-full bg-black900 text-prim100;
     font-size: 20px;
-    color: #f0ebf5;
-    background-color: #121023;
     height: 64px;
 }
 
 .header-container.--desktop.core-localeSwitch:hover {
-    color: #c386ae;
+    @apply text-pink500;
 }
 
 .header-container.--mobile.core-localeSwitch:hover {

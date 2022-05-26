@@ -26,8 +26,7 @@ export default {
     @apply grid my-4;
 }
 .left-col {
-    @apply justify-self-start  mb-2;
-    color: #9387ff;
+    @apply justify-self-start mb-2 text-prim500;
     font-size: 20px;
     @media (min-width: 1024px) {
         font-size: 24px;

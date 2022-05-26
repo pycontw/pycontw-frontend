@@ -137,9 +137,8 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarHamburgerSlideInMenu {
-    @apply fixed right-0 flex w-full h-full flex-col font-bold pt-4;
+    @apply fixed right-0 flex w-full h-full flex-col font-bold pt-4 bg-black900;
     top: 64px;
-    background-color: #121023;
     z-index: 1000;
 }
 .core-navBarHamburgerSlideInMenu__overflow {

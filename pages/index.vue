@@ -183,7 +183,7 @@ export default {
 }
 
 .text-golden {
-    color: #c386ae;
+    @apply text-pink500;
 }
 
 .sponsor-section {

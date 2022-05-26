@@ -212,7 +212,7 @@ export default {
     color: #d1d1d1;
 }
 .highlight {
-    color: #c386ae;
+    @apply text-pink500;
 }
 .paragraph-highlight {
     @apply font-serif;
@@ -223,6 +223,6 @@ export default {
 }
 
 .activity-detail {
-    color: #9387ff;
+    @apply text-prim500;
 }
 </style>

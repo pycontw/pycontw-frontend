@@ -21,11 +21,11 @@ export default {
 
 <style scoped>
 .error {
+    @apply bg-black900;
     position: relative;
     left: 0;
     right: 0;
     height: 1000px;
-    background-color: #121023;
     top: -80px;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@ export default {
 
 .error h2,
 .error p {
-    color: #c386ae;
+    @apply text-pink500;
     font-weight: 700;
     padding-top: 40px;
 }

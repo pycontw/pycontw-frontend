@@ -77,11 +77,9 @@ export default {
 
 <style lang="postcss" scoped>
 .checkbox {
-    border-color: #c386ae;
-    color: #c386ae;
+    @apply text-pink500 border-pink500;
     &.checked {
-        background: #c386ae;
-        color: #121023;
+        @apply text-black900 bg-pink500;
     }
 }
 </style>
