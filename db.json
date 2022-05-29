@@ -1183,14 +1183,14 @@
         {
             "id": 21,
             "speaker": {
-                "name_zh_hant": "馬誼郎",
-                "name_en_us": "Elon Musk",
-                "bio_zh_hant": "出生於南非的美國企業家",
-                "bio_en_us": "CEO and Product Architect of Tesla, Inc.",
-                "photo": "https://i.imgur.com/ARxWY48.gif"
+                "name_zh_hant": "蘇文鈺",
+                "name_en_us": "Marc-Andre Lemburg",
+                "bio_zh_hant": "在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。",
+                "bio_en_us": "在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。",
+                "photo": "https://storage.googleapis.com/pycontw-static/speaker/yenny-cheung/yenny_picture.jpeg"
             },
             "session": {
-                "title_zh_hant": "Ideas, Visions and Reality: Looking back on 20 years of community work",
+                "title_zh_hant": "新世代的教學思維 - 從機器學習線上平台與入門課程談起",
                 "title_en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
                 "description_zh_hant": "Paragraph 1\r\n\r\nParagraph 2\r\n\r\nParagraph 3",
                 "description_en_us": "Paragraph 1\r\n\r\nParagraph 2\r\n\r\nParagraph 3",
@@ -1202,7 +1202,8 @@
             "social_item": {
                 "linkedin": "https://google.com",
                 "twitter": "https://google.com",
-                "github": "https://google.com"
+                "github": "https://google.com",
+                "facebook": "https://google.com"
             }
         },
         {
@@ -1212,7 +1213,7 @@
                 "name_en_us": "Elon Musk",
                 "bio_zh_hant": "出生於南非的美國企業家",
                 "bio_en_us": "CEO and Product Architect of Tesla, Inc.",
-                "photo": "https://i.imgur.com/xiAfNVQ.jpeg"
+                "photo": "https://storage.googleapis.com/pycontw-static/speaker/yenny-cheung/yenny_picture.jpeg"
             },
             "session": {
                 "title_zh_hant": "Ideas, Visions and Reality: Looking back on 20 years of community work",
@@ -1227,7 +1228,8 @@
             "social_item": {
                 "linkedin": "https://google.com",
                 "twitter": "https://google.com",
-                "github": "https://google.com"
+                "github": "https://google.com",
+                "facebook": "https://google.com"
             }
         }
     ],
