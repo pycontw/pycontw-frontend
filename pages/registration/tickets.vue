@@ -90,6 +90,11 @@
                     </div>
                 </div>
             </div>
+            <!-- 
+                20220530 TODO:
+                    需要做一個 個人贊助票的回饋項目 列表
+                    回饋項目待提供
+            -->
         </i18n-page-wrapper>
     </div>
 </template>
@@ -150,8 +155,8 @@ export default {
                     price: 'NT$ 5,000',
                     image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
                     // TODO:
-                    //  開賣後需要有一個連結可以連到贊助票說明
-                    features: ['SpecialThanks', 'pyckage', 'conference'],
+                    //  個人贊助票需要有一個錨點可以連到個人贊助票回饋說明
+                    features: ['SpecialSouvenir', 'pyckage', 'conference'],
                     link: null,
                 },
                 {
