@@ -80,22 +80,57 @@
                                     v-show="communityImgUrl[community.tag]"
                                     :src="communityImgUrl[community.tag]"
                                     :alt="community.tag"
-                                    class="object-cover rounded-lg h-32 w-32"
+                                    class="
+                                        object-cover
+                                        rounded-lg
+                                        w-20
+                                        lg:w-32
+                                        h-20
+                                        lg:h-32
+                                    "
                                 />
-                                <h4 class="font-serif text-2xl mb-10 mt-5">
+                                <h4
+                                    class="
+                                        font-serif
+                                        text:md
+                                        lg:text-2xl
+                                        mb-10
+                                        mt-5
+                                    "
+                                >
                                     {{ community.title }}
                                 </h4>
-                                <p class="text-sm text-left">
+                                <p class="text-xs lg:text-sm text-left">
                                     {{ community.description }}
                                 </p>
-                                <core-text-button
-                                    :href="communityLink[community.tag]"
-                                    class="my-4"
-                                    secondary
-                                    large
+                                <div
+                                    class="
+                                        communities__content__box__popup__content__link--small
+                                    "
                                 >
-                                    官方網站
-                                </core-text-button>
+                                    <core-text-button
+                                        :href="communityLink[community.tag]"
+                                        class="my-4"
+                                        secondary
+                                        small
+                                    >
+                                        官方網站
+                                    </core-text-button>
+                                </div>
+                                <div
+                                    class="
+                                        communities__content__box__popup__content__link--large
+                                    "
+                                >
+                                    <core-text-button
+                                        :href="communityLink[community.tag]"
+                                        class="my-4"
+                                        secondary
+                                        large
+                                    >
+                                        官方網站
+                                    </core-text-button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -313,21 +348,28 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .communities__content__box__popup--show {
-    @apply hidden lg:flex;
+    @apply flex;
 }
 .communities__content__box__popup__content {
-    @apply relative flex justify-center items-center flex-col rounded-3xl p-10;
+    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 pb-2 lg:p-10;
     border: 3px solid #e099e1;
     background-color: #121023;
     width: 724px;
+    min-width: 350px;
     height: unset;
     @media (min-width: 1194px) {
         height: 575px;
     }
 }
 .communities__content__box__popup__content__button {
-    @apply absolute top-5 right-7 text-2xl font-bold;
+    @apply absolute font-bold top-2 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
     color: #e099e1;
+}
+.communities__content__box__popup__content__link--large {
+    @apply hidden lg:block mt-5;
+}
+.communities__content__box__popup__content__link--small {
+    @apply block lg:hidden;
 }
 @keyframes arrow-top-float {
     0% {
