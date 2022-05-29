@@ -103,34 +103,14 @@
                                 <p class="text-xs lg:text-sm text-left">
                                     {{ community.description }}
                                 </p>
-                                <div
-                                    class="
-                                        communities__content__box__popup__content__link--small
-                                    "
+                                <core-text-button
+                                    :href="communityLink[community.tag]"
+                                    class="mt-7 lg:mt-10"
+                                    secondary
+                                    large
                                 >
-                                    <core-text-button
-                                        :href="communityLink[community.tag]"
-                                        class="my-4"
-                                        secondary
-                                        small
-                                    >
-                                        官方網站
-                                    </core-text-button>
-                                </div>
-                                <div
-                                    class="
-                                        communities__content__box__popup__content__link--large
-                                    "
-                                >
-                                    <core-text-button
-                                        :href="communityLink[community.tag]"
-                                        class="my-4"
-                                        secondary
-                                        large
-                                    >
-                                        官方網站
-                                    </core-text-button>
-                                </div>
+                                    官方網站
+                                </core-text-button>
                             </div>
                         </div>
                     </div>
@@ -149,7 +129,6 @@
 </template>
 
 <script>
-// import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import i18n from '@/i18n/about/community.i18n'
 import CoreH1 from '@/components/core/titles/H1'
 import CommunityMap from '@/static/img/about/CommunityInTW.png'
@@ -159,7 +138,6 @@ export default {
     i18n,
     name: 'PageCommunity',
     components: {
-        // I18nPageWrapper,
         CoreH1,
         CoreTextButton,
     },
@@ -351,7 +329,7 @@ export default {
     @apply flex;
 }
 .communities__content__box__popup__content {
-    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 pb-2 lg:p-10;
+    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 lg:p-10;
     border: 3px solid #e099e1;
     background-color: #121023;
     width: 724px;
@@ -364,12 +342,6 @@ export default {
 .communities__content__box__popup__content__button {
     @apply absolute font-bold top-2 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
     color: #e099e1;
-}
-.communities__content__box__popup__content__link--large {
-    @apply hidden lg:block mt-5;
-}
-.communities__content__box__popup__content__link--small {
-    @apply block lg:hidden;
 }
 @keyframes arrow-top-float {
     0% {
