@@ -48,6 +48,7 @@
         </div>
 
         <i18n-page-wrapper>
+            <intro :is-bulleted="isBulleted"></intro>
             <div class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
@@ -94,6 +95,7 @@ import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
 import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
+import Intro from '~/components/intro/Intro'
 
 export default {
     i18n,
@@ -105,6 +107,7 @@ export default {
         SponsorModal,
         SponsorCardCollection,
         I18nPageWrapper,
+        Intro,
     },
     data() {
         return {

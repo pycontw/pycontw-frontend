@@ -1,15 +1,27 @@
 <template>
     <div class="intro">
-        <img
-            class="big-circle"
-            src="~@/static/page-home-intro-bigcircle.svg"
-            alt="big-circle"
-        />
-        <img
-            class="curve"
-            src="~@/static/page-home-intro-curve.svg"
-            alt="curve"
-        />
+        <div class="description-wrapper">
+            <div>
+                <core-h2
+                    :title="$t('whatIsPyConAPAC')"
+                    :is-bulleted="isBulleted"
+                ></core-h2>
+                <p class="info-section-description">
+                    {{ $t('whatIsPyConAPACContent') }}
+                </p>
+            </div>
+            <div>
+                <core-h2
+                    :title="$t('pyConWillBeHeldOnline')"
+                    :is-bulleted="isBulleted"
+                ></core-h2>
+                <p class="info-section-description">
+                    {{ $t('pyConWillBeHeldOnlineContent') }}
+                </p>
+            </div>
+        </div>
+
+        <core-h2 :title="$t('pyconIntro')" :is-bulleted="isBulleted"> </core-h2>
         <div class="intro-milestones">
             <intro-milestone
                 v-for="(item, index) in $t('milestone')"
@@ -20,84 +32,54 @@
             >
             </intro-milestone>
         </div>
-        <div class="intro-descriptions">
-            <intro-description
-                v-for="(item, index) in $t('description')"
-                :key="`description_${index}`"
-                :description="item"
-            >
-            </intro-description>
-        </div>
-        <img
-            class="small-circle"
-            src="~@/static/page-home-intro-smallcircle.svg"
-            alt="small-circle"
-        />
     </div>
 </template>
 
 <script>
 import i18n from './Intro.i18n'
 import IntroMilestone from './IntroMilestone'
-import IntroDescription from './IntroDescription'
+import CoreH2 from '~/components/core/titles/H2'
+
 export default {
     i18n,
     name: 'Intro',
     components: {
         IntroMilestone,
-        IntroDescription,
+        CoreH2,
+    },
+    props: {
+        isBulleted: {
+            type: Boolean,
+            default: true,
+        },
     },
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .intro {
-    @apply relative font-serif;
+    @apply relative font-serif px-0 py-4 md:py-0 my-0 mx-auto;
 }
 
 .intro-milestones {
-    @apply grid grid-cols-3;
-    @media (max-width: 767px) {
-        @apply flex flex-col;
-    }
+    @apply flex flex-col;
+    @apply md:grid md:grid-cols-3;
 }
 
-.intro-descriptions {
-    @apply mx-40;
-    @media (max-width: 1279px) {
-        @apply mx-12;
-    }
+.description-wrapper {
+    @apply flex flex-col md:flex-row mb-0 md:mb-28;
 }
 
-img.big-circle {
-    position: absolute;
-    right: 3rem;
-    top: -8.5rem;
-    @media (max-width: 767px) {
-        zoom: 90%;
-        right: 1rem;
-        top: -2.5rem;
-    }
+.description-wrapper > div {
+    @apply flex-1 mb-24 md:mb-0;
 }
 
-img.small-circle {
-    position: absolute;
-    left: 1.2rem;
-    top: 11rem;
-    @media (max-width: 767px) {
-        zoom: 90%;
-        left: 1rem;
-        top: 32.6rem;
-    }
+.description-wrapper > div > * {
+    @apply pb-7 md:pb-0;
 }
 
-img.curve {
-    display: none;
-    @media (max-width: 767px) {
-        position: absolute;
-        display: block;
-        left: 0rem;
-        top: 12.5rem;
-    }
+.info-section-description {
+    @apply pl-0 md:pl-14 my-0 mx-auto;
+    @apply text-justify;
 }
 </style>
