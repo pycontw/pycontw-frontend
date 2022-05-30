@@ -17,7 +17,7 @@ module.exports = {
             auto: 'auto',
             cover: 'cover',
             contain: 'contain',
-            scale: '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
+            'wrapper-size': '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
         },
         extend: {
             backgroundImage: {
