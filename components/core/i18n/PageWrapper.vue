@@ -69,6 +69,6 @@ li {
 }
 
 .page-wrapper {
-    @apply bg-none lg:bg-wrapper bg-no-repeat bg-wrapper-top-left bg-bgsize;
+    @apply bg-none lg:bg-wrapper bg-no-repeat bg-wrapper-top-left bg-scale;
 }
 </style>
