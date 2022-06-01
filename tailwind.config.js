@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
     mode: 'jit',
     purge: [],
@@ -23,11 +21,11 @@ module.exports = {
         },
         borderWidth: {
             DEFAULT: '1px',
-            '0': '0',
-            '2': '2px',
-            '3': '3px',
-            '4': '4px',
-            '6': '6px',
+            0: '0',
+            2: '2px',
+            3: '3px',
+            4: '4px',
+            6: '6px',
         },
         extend: {
             colors: {
@@ -56,8 +54,8 @@ module.exports = {
                     700: '#9258bf',
                 },
             },
-            stroke: theme => theme('colors'),
-            boxShadow: theme => ({
+            stroke: (theme) => theme('colors'),
+            boxShadow: (theme) => ({
                 'pink-500': `6px 6px 0 theme('colors.pink.500')`,
             }),
             backgroundImage: {
