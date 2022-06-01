@@ -15,6 +15,20 @@ module.exports = {
             ],
             serif: ['Noto Serif TC', '-apple-system', 'serif'],
         },
+        backgroundSize: {
+            auto: 'auto',
+            cover: 'cover',
+            contain: 'contain',
+            'wrapper-size': '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
+        },
+        borderWidth: {
+            DEFAULT: '1px',
+            '0': '0',
+            '2': '2px',
+            '3': '3px',
+            '4': '4px',
+            '6': '6px',
+        },
         extend: {
             colors: {
                 primary: {
@@ -52,7 +66,7 @@ module.exports = {
             },
             backgroundPosition: {
                 'wrapper-top-left':
-                    '4% 100px, 4% 958px, 4% 1816px, 96% 200px, 96% 1058px, 96% 1916px, 4% 2674px, 4% 3532px, 4% 4390px, 96% 2774px, 96% 3632px, 96% 4490px',
+                    '4% 100px, 4% 958px, 4% 1816px, 96% 529px, 96% 1125px, 96% 1721px, 4% 2674px, 4% 3532px, 4% 4390px, 96% 2317px, 96% 2913px, 96% 3509px',
             },
         },
         screens: {
