@@ -33,6 +33,6 @@ export default {
 h1 {
     @apply py-2 font-semibold leading-loose text-xl;
     @apply mb-0 md:text-2xl md:mb-9;
-    color: #c386ae;
+    color: #e099e1;
 }
 </style>

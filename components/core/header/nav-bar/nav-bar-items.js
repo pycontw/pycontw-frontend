@@ -8,10 +8,10 @@ export default Object.freeze({
         //     i18nKey: 'history',
         //     value: '/about/history',
         // },
-        // {
-        //     i18nKey: 'community',
-        //     value: '/about/community',
-        // },
+        {
+            i18nKey: 'community',
+            value: '/about/community',
+        },
         {
             i18nKey: 'codeOfConduct',
             value: '/about/code-of-conduct',
