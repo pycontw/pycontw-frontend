@@ -110,7 +110,7 @@ export default {
 
 .core-button.--primary {
     & > a {
-        @apply z-10 border-0 text-prim-100;
+        @apply z-10 border-0 text-primary-100;
         background-image: linear-gradient(
             276.15deg,
             #72dcb6 0.25%,

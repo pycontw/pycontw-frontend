@@ -130,7 +130,7 @@ export default {
 
 <style>
 html {
-    @apply font-sans bg-black-900 text-prim-100;
+    @apply font-sans bg-black-900 text-primary-100;
     font-size: 20px;
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;

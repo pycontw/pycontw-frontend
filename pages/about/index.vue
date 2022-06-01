@@ -223,6 +223,6 @@ export default {
 }
 
 .activity-detail {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 </style>

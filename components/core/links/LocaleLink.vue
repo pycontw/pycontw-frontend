@@ -57,7 +57,7 @@ export default {
     @apply text-pink-500;
 }
 .highlight:hover {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 
 .underline {
@@ -69,6 +69,6 @@ export default {
 }
 
 .core-localeLink:not(.highlight):not(.--customized):hover {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 </style>

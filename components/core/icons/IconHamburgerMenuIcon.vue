@@ -42,6 +42,6 @@ export default {
 
 <style scoped>
 .core-iconHamburgerMenuIcon {
-    @apply stroke-prim-100;
+    @apply stroke-primary-100;
 }
 </style>

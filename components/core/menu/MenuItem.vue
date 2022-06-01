@@ -47,11 +47,11 @@ export default {
 
 <style scoped>
 .core-menuItem {
-    @apply text-prim-100;
+    @apply text-primary-100;
     font-size: 18px;
 }
 
 .core-menuItem:hover {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 </style>

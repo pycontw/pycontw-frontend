@@ -218,6 +218,6 @@ export default {
 }
 
 .keynote__extLink:hover {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 </style>

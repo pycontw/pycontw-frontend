@@ -52,7 +52,7 @@ export default {
     color: #e6ba17;
 
     &:hover {
-        @apply text-prim-500;
+        @apply text-primary-500;
     }
 }
 </style>

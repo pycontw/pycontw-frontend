@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     mode: 'jit',
     purge: [],
@@ -15,29 +17,35 @@ module.exports = {
         },
         extend: {
             colors: {
-                'prim-100': '#F0EBF5',
-                'prim-300': '#AFAEE6',
-                'prim-500': '#9387FF',
-                'prim-700': '#6266CE',
-                'prim-800': '#352D66',
-                'prim-900': '#1F1C3B',
-                'black-200': '#CDD2E2',
-                'black-300': '#A8B4CA',
-                'black-500': '#20203A',
-                'black-700': '#1C1C38',
-                'black-800': '#1A1A30',
-                'black-900': '#121023',
-                'pink-500': '#C386AE',
-                'pink-700': '#E099E1',
-                'second-300': '#A9A6D6',
-                'second-700': '#9258BF',
+                primary: {
+                    100: '#f0ebf5',
+                    300: '#afaee6',
+                    500: '#9387ff',
+                    700: '#6266ce',
+                    800: '#352d66',
+                    900: '#1f1c3b',
+                },
+                black: {
+                    200: '#cdd2e2',
+                    300: '#a8b4ca',
+                    500: '#20203a',
+                    700: '#1c1c38',
+                    800: '#1a1a30',
+                    900: '#121023',
+                },
+                pink: {
+                    500: '#c386ae',
+                    700: '#e099e1',
+                },
+                secondary: {
+                    300: '#a9a6d6',
+                    700: '#9258bf',
+                },
             },
-            stroke: {
-                'prim-100': '#F0EBF5',
-            },
-            boxShadow: {
-                'pink-500': '6px 6px 0px #C386AE',
-            },
+            stroke: theme => theme('colors'),
+            boxShadow: theme => ({
+                'pink-500': `6px 6px 0 theme('colors.pink.500')`,
+            }),
             backgroundImage: {
                 wrapper:
                     'url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg"), url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg")',

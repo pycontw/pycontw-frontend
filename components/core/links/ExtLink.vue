@@ -48,7 +48,7 @@ a {
     @apply text-pink-500;
 }
 .highlight:hover {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 .underline {
     text-decoration: underline;

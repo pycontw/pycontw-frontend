@@ -330,7 +330,7 @@ export default {
     color: #e6ba17;
 }
 .speech__extLink:hover {
-    @apply text-prim-500;
+    @apply text-primary-500;
 }
 
 .speech__slido,
