@@ -45,10 +45,10 @@ a {
     color: inherit;
 }
 .highlight {
-    color: #c386ae;
+    @apply text-pink-500;
 }
 .highlight:hover {
-    color: #9387ff;
+    @apply text-primary-500;
 }
 .underline {
     text-decoration: underline;

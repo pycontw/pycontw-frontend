@@ -46,10 +46,8 @@ export default {
 
 <style lang="postcss" scoped>
 .header-container {
-    @apply w-full;
+    @apply w-full bg-black-900 text-primary-100;
     font-size: 20px;
-    color: #f0ebf5;
-    background-color: #121023;
     height: 64px;
 }
 

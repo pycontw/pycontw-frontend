@@ -61,11 +61,9 @@ export default {
 
 <style lang="postcss" scoped>
 .card {
-    @apply relative inline-flex flex-col w-full break-words;
+    @apply relative inline-flex flex-col w-full break-words border-2 border-pink-500 shadow-pink-500;
     min-height: 180px;
     border-radius: 24px;
-    border: 2px solid #c386ae;
-    box-shadow: 6px 6px 0 #c386ae;
     padding: 15px;
 
     @media (min-width: 415px) {
@@ -94,10 +92,9 @@ export default {
     padding-bottom: 24px;
 }
 .title {
-    @apply font-bold font-serif;
+    @apply font-bold font-serif text-pink-500;
     font-size: 24px;
     line-height: 30px;
-    color: #c386ae;
 }
 
 .tag {

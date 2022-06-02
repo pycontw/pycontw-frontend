@@ -236,7 +236,6 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply font-serif;
-    color: #c386ae;
+    @apply font-serif text-pink-500;
 }
 </style>

@@ -19,7 +19,45 @@ module.exports = {
             contain: 'contain',
             'wrapper-size': '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
         },
+        borderWidth: {
+            DEFAULT: '1px',
+            0: '0',
+            2: '2px',
+            3: '3px',
+            4: '4px',
+            6: '6px',
+        },
         extend: {
+            colors: {
+                primary: {
+                    100: '#f0ebf5',
+                    300: '#afaee6',
+                    500: '#9387ff',
+                    700: '#6266ce',
+                    800: '#352d66',
+                    900: '#1f1c3b',
+                },
+                black: {
+                    200: '#cdd2e2',
+                    300: '#a8b4ca',
+                    500: '#20203a',
+                    700: '#1c1c38',
+                    800: '#1a1a30',
+                    900: '#121023',
+                },
+                pink: {
+                    500: '#c386ae',
+                    700: '#e099e1',
+                },
+                secondary: {
+                    300: '#a9a6d6',
+                    700: '#9258bf',
+                },
+            },
+            stroke: (theme) => theme('colors'),
+            boxShadow: (theme) => ({
+                'pink-500': `6px 6px 0 theme('colors.pink.500')`,
+            }),
             backgroundImage: {
                 wrapper:
                     'url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg"), url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg")',

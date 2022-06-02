@@ -81,18 +81,15 @@ export default {
 }
 
 .lightBox {
-    @apply flex flex-col px-4 py-5 rounded-2xl border-4 w-11/12 relative;
+    @apply flex flex-col px-4 py-5 rounded-2xl border-4 w-11/12 relative bg-black-900 border-pink-500;
     @apply md:w-2/5 md:max-w-3xl md:pt-14 md:pb-6 md:px-12 md:border-2;
-    background-color: #121023;
-    border-color: #c386ae;
     z-index: 10000;
 }
 
 .lightBox__closeButtonContainer {
-    @apply absolute flex ml-auto cursor-pointer;
+    @apply absolute flex ml-auto cursor-pointer text-pink-500;
     top: 17px;
     right: 17px;
-    color: #c386ae;
 
     @media (min-width: 768px) {
         top: 39.25px;

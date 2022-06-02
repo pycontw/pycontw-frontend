@@ -95,6 +95,6 @@ export default {
 
 <style scoped>
 .highlight {
-    color: #c386ae;
+    @apply text-pink-500;
 }
 </style>

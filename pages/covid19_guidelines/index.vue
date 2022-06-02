@@ -106,8 +106,7 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .covid19 h3 {
-    @apply text-center pt-5 pb-5 text-base md:text-xl;
-    color: #9387ff;
+    @apply text-center pt-5 pb-5 text-base text-primary-500 md:text-xl;
 }
 
 .covid19 p,

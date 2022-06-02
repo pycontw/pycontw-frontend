@@ -26,6 +26,6 @@ export default {
 
 <style scoped>
 .core-homeIcon {
-    color: #c386ae;
+    @apply text-pink-500;
 }
 </style>

@@ -283,17 +283,15 @@ export default {
 }
 .communities__content__box__content {
     @apply mx-auto mt-6 min-h-full px-6 py-6 cursor-default lg:cursor-pointer;
-    @apply flex justify-between items-center flex-col lg:flex-row;
-    background: #1f1c3b;
+    @apply flex justify-between items-center flex-col bg-primary-900 border border-primary-900 lg:flex-row;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
-    border: 1px solid #1f1c3b;
     transition: background-color 0.5s, box-shadow 0.5s, border-color 0.5s;
 }
 .communities__content__box__content:hover {
     @media (min-width: 1194px) {
+        @apply bg-primary-800;
         border-color: #764bb8;
-        background-color: #352d66;
         box-shadow: 0 0 20px #352d66;
     }
 }
@@ -301,9 +299,8 @@ export default {
     @apply mt-0;
 }
 .communities__content__box__content__description__title {
-    @apply font-serif font-bold mt-0 mb-4 lg:mb-3;
+    @apply font-serif font-bold mt-0 mb-4 text-secondary-300 lg:mb-3;
     font-size: 25px;
-    color: #a9a6d6;
 }
 .communities__content__box__content__description__text {
     @apply text-xs text-left w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-6;
@@ -329,9 +326,7 @@ export default {
     @apply flex;
 }
 .communities__content__box__popup__content {
-    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 lg:p-10;
-    border: 3px solid #e099e1;
-    background-color: #121023;
+    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 border-3 border-pink-700 bg-black-900 lg:p-10;
     width: 724px;
     min-width: 350px;
     height: unset;
@@ -340,8 +335,7 @@ export default {
     }
 }
 .communities__content__box__popup__content__button {
-    @apply absolute font-bold top-2 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
-    color: #e099e1;
+    @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
 }
 @keyframes arrow-top-float {
     0% {
