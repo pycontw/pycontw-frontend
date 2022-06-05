@@ -64,11 +64,9 @@ export default {
 
 <style lang="postcss" scoped>
 .speechCard {
-    @apply relative inline-flex flex-col w-full break-words transition;
+    @apply relative inline-flex flex-col w-full break-words transition border-2 border-pink-500 shadow-pink-500;
     min-height: 180px;
     border-radius: 24px;
-    border: 2px solid #c386ae;
-    box-shadow: 6px 6px 0 #c386ae;
     padding: 15px;
 
     @media (min-width: 415px) {
@@ -93,9 +91,8 @@ export default {
 }
 
 .speechCard__sub {
-    @apply flex flex-col md:flex-row justify-between;
+    @apply flex flex-col md:flex-row justify-between text-pink-500;
     @apply my-0.5 sm:my-2;
-    color: #c386ae;
     & .speechCard__icon {
         @apply flex-row;
         height: 13px;
@@ -129,10 +126,9 @@ export default {
 }
 
 .speechCard__title {
-    @apply font-serif font-bold mt-2 mb-8;
+    @apply font-serif font-bold mt-2 mb-8 text-pink-500;
     font-size: 14px;
     line-height: 30px;
-    color: #c386ae;
     @media (min-width: 415px) {
         @apply break-normal;
         font-size: 24px;
@@ -144,10 +140,8 @@ export default {
 }
 
 .speechCard__category {
-    @apply font-serif absolute text-center;
+    @apply font-serif absolute text-center text-pink-500 border-2 border-pink-500;
     @apply origin-bottom-left scale-75;
-    color: #c386ae;
-    border: 2px solid #c386ae;
     border-radius: 8px;
     font-weight: 600;
     font-size: 12px;

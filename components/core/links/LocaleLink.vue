@@ -54,10 +54,10 @@ export default {
 <style lang="postcss" scoped>
 /* TODO: Update highlight variant style with the design */
 .highlight {
-    color: #c386ae;
+    @apply text-pink-500;
 }
 .highlight:hover {
-    color: #9387ff;
+    @apply text-primary-500;
 }
 
 .underline {
@@ -65,10 +65,10 @@ export default {
 }
 
 .core-localeLink:not(.highlight):not(.--customized) {
-    color: #c386ae;
+    @apply text-pink-500;
 }
 
 .core-localeLink:not(.highlight):not(.--customized):hover {
-    color: #9387ff;
+    @apply text-primary-500;
 }
 </style>

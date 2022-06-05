@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'Registration Is Now Open!',
         pageAbstract:
-            'Welcome on board the PyCon APAC 2022 Formosa for discovering' +
+            'Welcome on board the PyCon APAC 2022 Space Shuttle Formosa for discovering' +
             ' the Python Universe. More with multiple ticket types to choose from.' +
             ' Engage with experts and learn from peers. ' +
             'Expose impossible Python secrets across PyCon APAC 2022.',
@@ -28,12 +28,16 @@ export default genI18nMessages({
             pyckage: 'Pyckage conference gift',
             conference: 'Conference pass',
             vatAvailable: 'tax ID number',
+            SpecialSouvenir: 'PyCon APAC Special Souvenir',
         },
         ticketEarlyBird: 'Early Bird Pass',
         ticketRegular: 'Individual Pass',
         ticketEnterprise: 'Corporate Pass',
+        ticketSponsorship: 'Sponsorship Pass',
+        ticketLateBird: 'Late Bird Pass',
+        buttonTextSalesEnded: 'Ticket Closed',
         buttonText: 'On Sale Now',
-        buttonDisabledText: 'Coming Soon',
+        buttonTextNotStarted: 'Coming Soon',
         fa: 'financial aid',
         og: {
             title: 'Ticket Info',
@@ -61,12 +65,16 @@ export default genI18nMessages({
             pyckage: '限量大會紀念品 Pyckage',
             conference: '全程參與 PyCon APAC 2022',
             vatAvailable: '提供統一編號及抬頭',
+            SpecialSouvenir: 'PyCon APAC 神秘小禮物',
         },
         ticketEarlyBird: '早鳥票',
         ticketRegular: '一般票',
         ticketEnterprise: '企業票',
+        ticketSponsorship: '個人貢獻票',
+        ticketLateBird: '晚鳥票',
+        buttonTextSalesEnded: '結束販售',
         buttonText: '立即搶購',
-        buttonDisabledText: '即將開賣',
+        buttonTextNotStarted: '即將開賣',
         fa: '財務補助申請',
         og: {
             title: '購票資訊',

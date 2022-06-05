@@ -14,7 +14,7 @@
                 </p>
             </template>
         </banner>
-        <i18n-page-wrapper class="pt-8 px-8 md:px-57 lg:px-56">
+        <i18n-page-wrapper class="pt-8">
             <div class="flex flex-col w-full m-auto">
                 <p class="paragraph-title font-bold text-base md:text-lg">
                     {{ $t('beforePyCon.title') }}
@@ -236,7 +236,6 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply font-serif;
-    color: #c386ae;
+    @apply font-serif text-pink-500;
 }
 </style>

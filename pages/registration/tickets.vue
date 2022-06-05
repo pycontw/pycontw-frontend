@@ -1,5 +1,5 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div>
         <banner>
             <template #standard>
                 <core-h1 :title="$t('title')"></core-h1>
@@ -9,7 +9,7 @@
             </template>
         </banner>
 
-        <i18n-page-wrapper class="i18n__custom pt-8 px-8 md:px-57 lg:px-56">
+        <i18n-page-wrapper>
             <!-- intro -->
 
             <div class="pb-8">
@@ -75,12 +75,20 @@
                             :href="ticketInfo.link"
                             >{{ $t('buttonText') }}</text-button
                         >
+                        <text-button v-else-if="ticketInfo.hasEnded" small>{{
+                            $t('buttonTextSalesEnded')
+                        }}</text-button>
                         <text-button v-else small>{{
-                            $t('buttonDisabledText')
+                            $t('buttonTextNotStarted')
                         }}</text-button>
                     </div>
                 </div>
             </div>
+            <!-- 
+                20220530 TODO:
+                    需要做一個 個人贊助票的回饋項目 列表
+                    回饋項目待提供
+            -->
         </i18n-page-wrapper>
     </div>
 </template>
@@ -113,7 +121,7 @@ export default {
                     titleI18NPath: 'ticketEarlyBird',
                     priceOnSale: 'NT$ 1,690',
                     price: 'NT$ 2,600',
-                    image: require('~/static/img/registration/tickets/earlyBird.svg'),
+                    image: require('~/static/img/registration/tickets/earlyBird_disabled.svg'),
 
                     // The strings in this array are the tags listed in `features` object
                     // of i18n file (~i18n/registration/tickets.i18n.js).
@@ -123,23 +131,42 @@ export default {
                         'pyckage',
                         'conference',
                     ],
-                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                    hasEnded: true,
+                    link: null,
                 },
                 {
                     tag: 'regular',
                     titleI18NPath: 'ticketRegular',
                     price: 'NT$ 2,600',
-                    image: require('~/static/img/registration/tickets/regular_disabled.svg'),
+                    image: require('~/static/img/registration/tickets/regular.svg'),
                     features: ['pyckage', 'conference'],
+                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                },
+                {
+                    tag: 'sponsorship',
+                    titleI18NPath: 'ticketSponsorship',
+                    price: 'NT$ 5,000',
+                    image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
+                    // TODO:
+                    //  個人贊助票需要有一個錨點可以連到個人贊助票回饋說明
+                    features: ['SpecialSouvenir', 'pyckage', 'conference'],
+                    link: null,
+                },
+                {
+                    tag: 'latebird',
+                    titleI18NPath: 'ticketLateBird',
+                    price: 'NT$ 3,600',
+                    image: require('~/static/img/registration/tickets/lateBird_disabled.svg'),
+                    features: ['conference'],
                     link: null,
                 },
                 {
                     tag: 'enterprise',
                     titleI18NPath: 'ticketEnterprise',
                     price: 'NT$ 3,600',
-                    image: require('~/static/img/registration/tickets/enterprise_disabled.svg'),
+                    image: require('~/static/img/registration/tickets/corporate.svg'),
                     features: ['vatAvailable', 'pyckage', 'conference'],
-                    link: null,
+                    link: 'https://pycontw.kktix.cc/events/2022-corporate',
                 },
             ],
         }
@@ -193,7 +220,7 @@ export default {
 .conferenceContent {
     @apply leading-5;
     font-size: 16px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 18px;
     }
 }
@@ -201,7 +228,7 @@ export default {
 .introContent {
     @apply leading-5;
     font-size: 16px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 18px;
     }
 }
@@ -218,7 +245,7 @@ export default {
 .ticketContainer .tickerHeader {
     @apply m-auto;
     padding: 0 0 24px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         padding: 0;
     }
 }
@@ -228,8 +255,8 @@ export default {
 }
 .ticketContainer .title {
     @apply font-serif font-semibold text-center;
-
-    @media (max-width: 1280px) {
+    min-width: 190px;
+    @media (max-width: 1440px) {
         font-size: 24px;
     }
 }
@@ -238,14 +265,16 @@ export default {
     @apply flex flex-col justify-center mx-auto;
     margin-bottom: 0 !important;
     padding: 0 0 24px;
-    @media (min-width: 1280px) {
+    min-width: 0;
+    @media (min-width: 1440px) {
+        min-width: 240px;
         padding: 0;
     }
 }
 .ticketContainer .feature {
     @apply font-sans;
     font-size: 16px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 18px;
     }
 }
@@ -255,14 +284,13 @@ export default {
     @apply text-center m-auto;
     padding: 0 0 24px;
     font-size: 22px;
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         padding: 0;
         font-size: 28px;
     }
 }
 .ticketContainer .priceOnSale {
-    @apply font-bold text-center mx-1.5 my-auto;
-    color: #c386ae;
+    @apply font-bold text-center mx-1.5 my-auto text-pink-500;
 }
 
 .ticketContainer .button {
@@ -271,11 +299,10 @@ export default {
 
 h2 {
     @apply font-serif font-bold text-center pb-4 pt-8 xl:pb-10 xl:pt-14;
-    @apply mt-0 mb-2 tracking-widest;
+    @apply mt-0 mb-2 tracking-widest text-pink-500;
     font-size: 28px;
-    color: #c386ae;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1440px) {
         font-size: 32px;
     }
 }

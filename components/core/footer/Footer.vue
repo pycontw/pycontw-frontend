@@ -45,7 +45,7 @@ export default {
 
 <style lang="postcss" scoped>
 .core-footer {
-    background-color: #1a1a30;
+    @apply bg-black-800;
 }
 
 .core-footer__copyright {

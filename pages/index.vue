@@ -48,6 +48,7 @@
         </div>
 
         <i18n-page-wrapper>
+            <intro :is-bulleted="isBulleted"></intro>
             <div class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
@@ -88,11 +89,13 @@
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
 import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
 import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
+import Intro from '~/components/intro/Intro'
 
 export default {
     i18n,
@@ -103,6 +106,8 @@ export default {
         SponsorCard,
         SponsorModal,
         SponsorCardCollection,
+        I18nPageWrapper,
+        Intro,
     },
     data() {
         return {
@@ -181,11 +186,11 @@ export default {
 }
 
 .text-golden {
-    color: #c386ae;
+    @apply text-pink-500;
 }
 
 .sponsor-section {
-    @apply pt-12 mx-4 lg:mx-auto lg:w-9/12;
+    @apply pt-12 lg:mx-auto lg:w-full;
 }
 
 .text-button-wrapper {

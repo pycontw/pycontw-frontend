@@ -1,6 +1,8 @@
 <template>
     <div
         class="relative flex h-full px-8 justify-center items-center text-left"
+        @mouseenter="showMenu"
+        @mouseleave="hideMenu"
     >
         <div
             class="
@@ -12,8 +14,6 @@
                 items-start
                 cursor-pointer
             "
-            @mouseenter="showMenu"
-            @mouseleave="hideMenu"
         >
             <div
                 id="options-menu"
@@ -36,17 +36,22 @@
                     class="ml-3"
                 ></fa>
             </div>
-            <core-menu v-show="isHovering" :lg="lg" :sm="sm">
-                <slot :hideMenu="hideMenu" name="items"></slot>
-                <core-menu-item
-                    v-for="item in items"
-                    :key="item.value"
-                    :href="item.value"
-                    @click="hideMenu"
-                >
-                    {{ item.label }}
-                </core-menu-item>
-            </core-menu>
+            <transition name="core-menu-fade">
+                <core-menu v-show="isHovering" :lg="lg" :sm="sm">
+                    <transition name="core-menu-mask">
+                        <div v-show="isHovering" class="menu-mask"></div>
+                    </transition>
+                    <slot :hideMenu="hideMenu" name="items"></slot>
+                    <core-menu-item
+                        v-for="item in items"
+                        :key="item.value"
+                        :href="item.value"
+                        @click="hideMenu"
+                    >
+                        {{ item.label }}
+                    </core-menu-item>
+                </core-menu>
+            </transition>
         </div>
     </div>
 </template>
@@ -94,5 +99,24 @@ export default {
 .options-menu {
     @apply inline-flex w-full h-full justify-center items-center bg-transparent;
     z-index: 100;
+}
+.core-menu-fade-enter-active,
+.core-menu-mask-enter-active {
+    @apply transition transition-all duration-200;
+}
+.core-menu-fade-leave-active,
+.core-menu-mask-leave-active {
+    @apply transition transition-all duration-500 delay-200;
+}
+.core-menu-fade-enter,
+.core-menu-fade-leave-to {
+    @apply opacity-0;
+}
+.menu-mask {
+    @apply absolute w-full h-0 top-full bg-black-900;
+}
+.core-menu-mask-enter,
+.core-menu-mask-leave-to {
+    @apply h-full top-0;
 }
 </style>

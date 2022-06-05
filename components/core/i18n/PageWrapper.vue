@@ -1,6 +1,8 @@
 <template>
-    <div :class="classObject">
-        <slot></slot>
+    <div class="page-wrapper">
+        <div :class="classObject">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -9,17 +11,23 @@ export default {
     name: 'I18nPageWrapper',
     props: {
         customX: { type: Boolean, default: false },
-        customY: { type: Boolean, default: false },
     },
     computed: {
         classObject() {
             return {
-                'w-full': true,
-                'px-8': !this.customX,
-                'py-24': !this.customY,
-                'sm:px-20': !this.customX,
-                'md:px-32': !this.customX,
-                'lg:px-32': !this.customX,
+                'py-8': true,
+                'md:py-20': true,
+                'min-w-[272px]': true,
+                'mx-[24px]': true,
+                'w-auto': true,
+                'sm:mx-[32px]': !this.customX,
+                'sm:w-auto': !this.customX,
+                'md:mx-auto': !this.customX,
+                'md:w-[706px]': !this.customX,
+                'lg:mx-[168px]': !this.customX,
+                'lg:w-auto': !this.customX,
+                'xl:mx-auto': !this.customX,
+                'xl:w-[1040px]': !this.customX,
             }
         },
     },
@@ -58,5 +66,9 @@ ul.list-disc {
 
 li {
     @apply my-1;
+}
+
+.page-wrapper {
+    @apply bg-none lg:bg-wrapper bg-no-repeat bg-wrapper-top-left bg-wrapper-size;
 }
 </style>

@@ -179,11 +179,9 @@ export default {
     line-height: 33px;
 }
 .filterTitle {
-    @apply ml-2 text-sm md:text-base;
-    color: #c386ae;
+    @apply ml-2 text-sm md:text-base text-pink-500;
 }
 .filterHr {
-    @apply my-2;
-    color: #c386ae;
+    @apply my-2 text-pink-500;
 }
 </style>

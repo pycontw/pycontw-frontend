@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+    <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
         <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
         <div
@@ -74,8 +74,6 @@ export default {
 
 <style lang="postcss" scoped>
 h2 {
-    @apply font-serif font-black text-base md:text-lg text-center mx-auto;
-    margin-top: 3rem !important;
-    color: #c386ae;
+    @apply font-serif font-black text-base text-pink-500 mt-12 md:text-lg text-center mx-auto;
 }
 </style>
