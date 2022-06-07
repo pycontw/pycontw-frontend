@@ -1,15 +1,14 @@
 <template>
     <div>
-        <banner>
-            <template #standard>
-                <core-h1 :title="$t('title')"></core-h1>
-                <i18n path="pageAbstract" tag="p" class="pageAbstract">
-                    <template #br><br /></template>
-                </i18n>
-            </template>
-        </banner>
-
         <i18n-page-wrapper>
+            <banner>
+                <template #standard>
+                    <core-h1 :title="$t('title')"></core-h1>
+                    <i18n path="pageAbstract" tag="p" class="pageAbstract">
+                        <template #br><br /></template>
+                    </i18n>
+                </template>
+            </banner>
             <!-- intro -->
 
             <div class="pb-8">
@@ -114,7 +113,6 @@ export default {
     },
     data() {
         return {
-            ticketsBanner: require('~/static/img/about/WebBanner.svg'),
             ticketInfos: [
                 {
                     tag: 'earlyBird',

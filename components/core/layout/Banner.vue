@@ -1,9 +1,9 @@
 <template>
-    <div class="h-96 font-serif font-semibold w-full flex-1">
-        <div class="maxpage invisible md:visible md: w-full md:h-64">
+    <div class="container">
+        <div class="mainstyle horizstyle">
             <slot name="standard"></slot>
         </div>
-        <div class="minpage w-6/6 h-64 md:invisible md:w-full md:h-0">
+        <div class="mainstyle vertstyle">
             <slot name="standard"></slot>
         </div>
     </div>
@@ -16,25 +16,22 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.maxpage {
-    background-image: url('~/static/img/about/WebBanner.svg');
-    background-repeat: no-repeat;
-    background-position: 75% 75%;
-    background-size: 75%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+.container {
+    @apply h-96 w-full flex-1;
+    @apply font-serif font-semibold;
+    background-image: url('~/static/img/banner/BannerBody.svg');
 }
-.minpage {
-    background-image: url('~/static/img/about/RWDBanner.svg');
-    background-repeat: no-repeat;
-    background-position: 0% 65%;
-    background-size: 150%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    word-wrap: break-word;
+.mainstyle {
+    @apply flex flex-col justify-center bg-center bg-no-repeat;
+    @apply text-center;
+}
+.horizstyle {
+    @apply flex invisible md:visible md:mt-20 md:h-full;
+    @apply bg-contain;
+    background-image: url('~/static/img/banner/WEB2.png');
+}
+.vertstyle {
+    @apply w-full h-64 mt-16 md:invisible md:w-full md:h-0;
+    background-image: url('~/static/img/banner/RWD2.png');
 }
 </style>
