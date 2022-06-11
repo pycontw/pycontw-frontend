@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="bannercontainer">
         <div class="mainstyle horizstyle">
             <slot name="standard"></slot>
         </div>
@@ -16,22 +16,23 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.container {
-    @apply h-96 w-full flex-1;
+.bannercontainer {
+    @apply w-full mx-auto flex-1;
     @apply font-serif font-semibold;
     background-image: url('~/static/img/banner/BannerBody.svg');
 }
 .mainstyle {
-    @apply flex flex-col justify-center bg-center bg-no-repeat;
+    @apply flex-col bg-center bg-no-repeat bg-contain;
     @apply text-center;
 }
 .horizstyle {
-    @apply flex invisible md:visible md:mt-20 md:h-full;
-    @apply bg-contain;
+    @apply invisible h-0;
+    @apply md:visible md:mt-20 md:h-96 md:w-full md:pt-20;
     background-image: url('~/static/img/banner/WEB2.png');
 }
 .vertstyle {
-    @apply w-full h-64 mt-16 md:invisible md:w-full md:h-0;
+    @apply w-full mt-16 pt-24 h-96;
+    @apply md:mt-0 md:pt-0 md:h-0 md:invisible md:w-full;
     background-image: url('~/static/img/banner/RWD2.png');
 }
 </style>
