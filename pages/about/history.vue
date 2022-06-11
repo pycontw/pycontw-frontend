@@ -272,8 +272,7 @@ export default {
 
 <style scoped>
 .history__paragraph-title {
-    @apply mt-1 mb-1 font-serif font-bold text-left;
-    color: #e099e1;
+    @apply mt-1 mb-1 font-serif font-bold text-left text-pink-700;
     font-size: 28px;
 }
 .history__paragraph-content {
