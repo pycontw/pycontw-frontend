@@ -227,9 +227,8 @@ export default {
 }
 
 .keynote__name {
-    @apply py-2;
+    @apply py-2 text-primary-100;
     font-size: 18px;
-    color: #f0ebf5;
 }
 
 .keynote__title {
