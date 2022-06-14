@@ -12,6 +12,6 @@ export default {
 
 <style lang="postcss" scoped>
 .checkboxCollection {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap justify-center;
 }
 </style>

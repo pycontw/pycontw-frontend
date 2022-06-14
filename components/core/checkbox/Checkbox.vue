@@ -1,20 +1,5 @@
 <template>
-    <label
-        class="
-            checkbox
-            mt-3
-            ml-2
-            py-2
-            px-3
-            border
-            rounded-lg
-            transition-all
-            cursor-pointer
-            text-xs
-            lg:text-base
-        "
-        :class="{ checked: isChecked }"
-    >
+    <label class="checkbox" :class="{ checked: isChecked }">
         <input
             :id="id"
             type="checkbox"
@@ -24,9 +9,10 @@
             @change="toggleCheckbox()"
         />
         <fa
-            :icon="isChecked ? ['far', 'check-square'] : ['far', 'square']"
+            v-show="isChecked"
+            :icon="['fa', 'check']"
             aria-hidden="true"
-            class="mr-2 lg:mr-6"
+            class="mr-2"
         ></fa>
         {{ label }}
     </label>
@@ -77,9 +63,15 @@ export default {
 
 <style lang="postcss" scoped>
 .checkbox {
-    @apply text-pink-500 border-pink-500;
+    @apply mt-3 ml-2 transition cursor-pointer;
+    @apply py-[8px] px-4 md:py-[12px] md:px-[36px];
+    @apply border-solid border-2 rounded-[40px] border-pink-700;
+    @apply text-[16px] md:text-[18px] text-pink-700 font-semibold;
     &.checked {
-        @apply text-black-900 bg-pink-500;
+        @apply text-black-800 bg-pink-700;
     }
+}
+.checkbox:hover {
+    @apply text-black-800 bg-pink-700 opacity-90;
 }
 </style>
