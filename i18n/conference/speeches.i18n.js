@@ -14,6 +14,7 @@ export default genI18nMessages({
                 'and choose what you want ot listen based on your interests. ' +
                 'Many people take notes on the program schedule before ' +
                 'the meeting so they don’t run to wrong places.',
+            categoryFilter: 'Category',
         },
         tutorials: {
             title: 'Tutorials',
@@ -79,6 +80,7 @@ export default genI18nMessages({
                 '配合各個演講的難易度與類型，選擇自己有興趣的主題聆聽。' +
                 '許多人都會事先筆記想聽的議程，才不會跑錯地點。' +
                 '議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
+            categoryFilter: '演講類別',
         },
         tutorials: {
             title: '專業課程',

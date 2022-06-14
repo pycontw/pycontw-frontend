@@ -2,6 +2,11 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
+        levels: {
+            EXPERIENCED: 'H',
+            INTERMEDIATE: 'M',
+            NOVICE: 'L',
+        },
         category: {
             APPL: 'Application',
             PRAC: 'Best Practices & Patterns',
@@ -27,6 +32,11 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
+        levels: {
+            EXPERIENCED: '高',
+            INTERMEDIATE: '中',
+            NOVICE: '初',
+        },
         category: {
             APPL: '應用',
             PRAC: '最佳實踐與慣例',

@@ -1,24 +1,41 @@
 <template>
     <locale-link v-show="shouldShow" :to="to" class="speechCard">
-        <div class="speechCard__speakerThumbnails">
-            <div
-                v-for="(speaker, i) in speakers"
-                :key="`speech_card_speaker_thumbnail_${i}`"
-                class="speechCard__speakerThumbnail"
-            >
-                <img :src="speaker.thumbnail_url" :alt="speaker.name" />
+        <div>
+            <figure
+                class="speechCard__levelTriangle"
+                :style="getLevelTriangleStyle(level)"
+            ></figure>
+            <div class="speechCard__level">
+                {{ $t(`levels.${level}`) }}
             </div>
-        </div>
-        <div class="speechCard__sub">
-            <p class="speechCard__speakerNames">
-                {{ speakers.map((speaker) => speaker.name).join(' • ') }}
-            </p>
-            <div class="speechCard__icon">
-                <img :src="icon.level[level]" />
-                <img :src="icon.lang[lang]" />
+            <div class="text-right">
+                <div class="speechCard__date">
+                    {{ getDateTag(beginTime) + ' ' + getTime(beginTime) }}
+                </div>
+                <div class="speechCard__location">
+                    {{ locationMapping[location] }}
+                </div>
             </div>
         </div>
         <div class="speechCard__title">{{ title }}</div>
+        <div class="flex justify-between items-center">
+            <div class="speechCard__speakerThumbnails">
+                <div
+                    v-for="(speaker, i) in speakers"
+                    :key="`speech_card_speaker_thumbnail_${i}`"
+                    class="speechCard__speakerThumbnail"
+                >
+                    <img :src="speaker.thumbnail_url" :alt="speaker.name" />
+                </div>
+            </div>
+            <div
+                class="speechCard__lang"
+                :style="getMaskImgStyle(icon.lang[lang])"
+            ></div>
+        </div>
+        <div class="speechCard__speakerNames">
+            {{ speakers.map((speaker) => speaker.name).join('、') }}
+        </div>
         <div class="speechCard__category">{{ $t(`category.${category}`) }}</div>
     </locale-link>
 </template>
@@ -35,13 +52,19 @@ export default {
     },
     props: {
         id: { type: Number, default: null },
-        title: { type: String, default: '' },
-        category: { type: String, default: '' },
-        speakers: { type: Array, default: () => [] },
-        shouldShow: { type: Boolean, default: true },
         level: { type: String, default: null },
+        beginTime: { type: Date, default: null },
+        location: { type: String, default: null },
+        title: { type: String, default: '' },
+        speakers: { type: Array, default: () => [] },
         lang: { type: String, default: null },
+        category: { type: String, default: '' },
         to: { type: String, default: '/' },
+        shouldShow: { type: Boolean, default: true },
+        dayOneMidnight: {
+            type: Date,
+            default: () => new Date('2021-10-02T16:00:00Z'),
+        },
     },
     data() {
         return {
@@ -51,114 +74,131 @@ export default {
                     ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
                     ZHZH: require('~/static/img/icons/lang/ZHZH.svg'),
                 },
-                level: {
-                    NOVICE: require('~/static/img/icons/level/novice.svg'),
-                    INTERMEDIATE: require('~/static/img/icons/level/intermediate.svg'),
-                    EXPERIENCED: require('~/static/img/icons/level/experienced.svg'),
-                },
+            },
+            locationMapping: {
+                '4-r0': 'R0',
+                '5-r1': 'R1',
+                '6-r2': 'R2',
+                '1-r3': 'R3',
+            },
+            levelBgColorMapping: {
+                EXPERIENCED: '#ca7795',
+                INTERMEDIATE: '#6580dc',
+                NOVICE: '#65b1b7',
             },
         }
+    },
+    methods: {
+        getDateTag(beginTime) {
+            if (beginTime < this.dayOneMidnight) {
+                return 'Day 1'
+            } else {
+                return 'Day 2'
+            }
+        },
+        getTime: (datetime) => {
+            const hour = ('0' + datetime.getHours()).slice(-2)
+            const minute = ('0' + datetime.getMinutes()).slice(-2)
+            return `${hour}:${minute}`
+        },
+        getLevelTriangleStyle(level) {
+            return {
+                'background-color': this.levelBgColorMapping[level],
+            }
+        },
+        getMaskImgStyle(img) {
+            return {
+                '-webkit-mask-image': `url(${img})`,
+                'mask-image': `url(${img})`,
+            }
+        },
     },
 }
 </script>
 
 <style lang="postcss" scoped>
 .speechCard {
-    @apply relative inline-flex flex-col w-full break-words transition border-2 border-pink-500 shadow-pink-500;
-    min-height: 180px;
-    border-radius: 24px;
-    padding: 15px;
-
-    @media (min-width: 415px) {
-        min-height: 362px;
-        padding: 34px 30px 38px;
-    }
+    @apply relative px-4 pb-4 pt-[12px] rounded-[12px] bg-primary-900 transition;
+    @apply border border-solid border-transparent; /*keep position of the card*/
 }
+
 .speechCard:hover {
-    background-color: #e6ba17;
+    @apply bg-primary-800;
+    border-color: #746bb8;
+    box-shadow: 0px 0px 10px 7px #403778;
 }
 
-.speechCard__speakerThumbnails {
-    @apply flex;
-}
-.speechCard__speakerThumbnail {
-    @apply h-6 w-6 sm:h-11 sm:w-11;
-    @apply my-0.5 sm:my-2 mr-1;
-}
-.speechCard__speakerThumbnail img {
-    @apply object-cover rounded-full;
-    height: 100%;
+.speechCard:hover .speechCard__title {
+    @apply text-primary-100;
 }
 
-.speechCard__sub {
-    @apply flex flex-col md:flex-row justify-between text-pink-500;
-    @apply my-0.5 sm:my-2;
-    & .speechCard__icon {
-        @apply flex-row;
-        height: 13px;
-        @media (min-width: 415px) {
-            height: 26px;
-        }
-        /* equivalent to {color: #c386ae} for svg */
-        filter: invert(65%) sepia(76%) saturate(366%) hue-rotate(9deg)
-            brightness(87%) contrast(88%);
-    }
-    & img {
-        @apply relative inline h-full -top-2 sm:top-0;
-    }
-}
-.speechCard:hover > .speechCard__sub {
-    color: #000;
-    & .speechCard__icon {
-        /* equivalent to {color: black} for svg */
-        filter: brightness(0%);
-    }
+.speechCard__levelTriangle {
+    @apply absolute left-0 top-0;
+    content: '';
+    width: 70px;
+    height: 70px;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    border-top-left-radius: 12px;
 }
 
-.speechCard__speakerNames {
-    @apply font-serif font-bold;
-    @apply origin-top-left scale-75;
-    font-size: 12px;
-    @media (min-width: 415px) {
-        @apply scale-100;
-        font-size: 14px;
-    }
+.speechCard__level {
+    @apply absolute left-2 text-[16px] text-primary-900 font-black;
+}
+
+.speechCard__date,
+.speechCard__location {
+    @apply text-[16px] text-black-200 font-semibold;
+}
+
+.speechCard__location {
+    @apply text-right;
 }
 
 .speechCard__title {
-    @apply font-serif font-bold mt-2 mb-8 text-pink-500;
-    font-size: 14px;
-    line-height: 30px;
-    @media (min-width: 415px) {
-        @apply break-normal;
-        font-size: 24px;
-        line-height: 36px;
-    }
+    @apply mb-4 text-[27px] font-bold;
+    font-family: 'Noto Serif TC';
+    line-height: 46px;
+    letter-spacing: 1px;
+    color: #cecbff;
 }
-.speechCard:hover > .speechCard__title {
-    color: #000;
+
+.speechCard__speakerThumbnails {
+    /*WARNING: too many speakers may affect the layout*/
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 32px);
+}
+
+.speechCard__speakerThumbnail {
+    @apply w-8 h-8 rounded-full overflow-hidden;
+}
+
+.speechCard__speakerThumbnail img {
+    @apply object-cover min-h-full;
+}
+
+.speechCard__lang {
+    @apply w-12 h-5 bg-black-200;
+    -webkit-mask-position: right;
+    mask-position: right;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.speechCard__speakerNames {
+    @apply mt-[7px] mb-[36px] text-[18px];
+    color: #bb75bc;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 .speechCard__category {
-    @apply font-serif absolute text-center text-pink-500 border-2 border-pink-500;
-    @apply origin-bottom-left scale-75;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 12px;
-    padding: 4px 8px;
-    min-width: 60px;
-    bottom: 10px;
-    @media (min-width: 415px) {
-        @apply scale-100;
-        border-radius: 12px;
-        font-size: 12px;
-        padding: 7px 14px;
-        min-width: 100px;
-        bottom: 30px;
-    }
-}
-.speechCard:hover > .speechCard__category {
-    color: #000;
-    border: 2px solid #000;
+    @apply inline-block px-4 py-[7px] text-[12px] text-primary-900 font-semibold;
+    @apply border border-solid rounded-[8px];
+    border-color: #000000;
+    background-color: #bb75bc;
 }
 </style>
