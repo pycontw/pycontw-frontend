@@ -1320,6 +1320,14 @@
                     "thumbnail_url": "https://static.boredpanda.com/blog/wp-content/uploads/2020/08/jeff-bezos-stonks-man1.jpg",
                     "twitter_profile_url": "",
                     "bio": "I'm a successful business man. Better than Elon."
+                },
+                {
+                    "facebook_profile_url": "",
+                    "github_profile_url": "https://aws.amazon.com/",
+                    "name": "Jeff Bezos2",
+                    "thumbnail_url": "https://static.boredpanda.com/blog/wp-content/uploads/2020/08/jeff-bezos-stonks-man1.jpg",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Elon."
                 }
             ],
             "begin_time": "2021-10-02T06:05:00Z",
@@ -1349,6 +1357,14 @@
                     "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
                     "twitter_profile_url": "",
                     "bio": "I'm a successful business man. Better than Jeff."
+                },
+                {
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
+                    "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Jeff."
                 }
             ],
             "begin_time": "2021-10-02T05:45:00Z",
@@ -1359,7 +1375,7 @@
         },
         {
             "id": 5,
-            "title": "Tutorial of building a bunch of good companies",
+            "title": "Tutorial of building a bunch of good companies long ............ ........... .... ....... ....... ........",
             "category": "NLP",
             "language": "ENEN",
             "python_level": "INTERMEDIATE",
