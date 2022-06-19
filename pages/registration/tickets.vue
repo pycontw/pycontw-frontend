@@ -41,7 +41,7 @@
                     :key="`ticket_info_${index}`"
                     class="ticketContainer"
                 >
-                    <div class="tickerHeader">
+                    <div class="ticketHeader">
                         <img
                             :src="ticketInfo.image"
                             :alt="ticketInfo.tag"
@@ -242,7 +242,7 @@ export default {
     @apply py-10 xl:py-8;
 }
 
-.ticketContainer .tickerHeader {
+.ticketContainer .ticketHeader {
     @apply m-auto;
     padding: 0 0 24px;
     @media (min-width: 1440px) {
