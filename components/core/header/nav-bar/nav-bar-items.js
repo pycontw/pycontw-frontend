@@ -52,6 +52,7 @@ export default Object.freeze({
         // },
         { i18nKey: 'sprints', value: '/events/sprints' },
         { i18nKey: 'jobs', value: '/events/jobs' },
+        { i18nKey: 'young-inspirers', value: '/conference/young-inspirers' },
         // {
         //     i18nKey: 'warmups',
         //     value: '/conference/warmups',
