@@ -4,10 +4,9 @@ export default genI18nMessages({
     'en-us': {
         title: 'Registration Is Now Open!',
         pageAbstract:
-            'Welcome on board the PyCon APAC 2022 Space Shuttle Formosa for discovering' +
-            ' the Python Universe. More with multiple ticket types to choose from.' +
-            ' Engage with experts and learn from peers. ' +
-            'Expose impossible Python secrets across PyCon APAC 2022.',
+            'Welcome on board the PyCon APAC 2022 Challenger for discovering the Python Universe. {br}' +
+            'More with multiple ticket types to choose from. Engage with experts and learn from peers. {br}' +
+            'Expose imposible Python secretes cross PyCon APAC 2022. {br}',
         introConference: 'Conference Information',
         conferenceContent:
             'Date: September 3-4, 2022{br}' +
