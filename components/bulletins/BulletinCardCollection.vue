@@ -37,6 +37,7 @@ export default {
 <style lang="postcss" scoped>
 .bulletinCardCollection__cardContainer {
     @apply flex flex-wrap;
+    padding-left: 70px;
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard {

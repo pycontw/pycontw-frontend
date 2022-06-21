@@ -48,14 +48,14 @@
         </div>
 
         <i18n-page-wrapper>
+            <intro :is-bulleted="isBulleted"></intro>
             <div class="bulletin-section">
-                <core-h2 :title="$t('bulletinList')" bulletin-color></core-h2>
+                <core-h2
+                    :title="$t('bulletinList')"
+                    :is-bulleted="isBulleted"
+                ></core-h2>
                 <bulletin-card-collection></bulletin-card-collection>
             </div>
-        </i18n-page-wrapper>
-
-        <i18n-page-wrapper>
-            <intro :is-bulleted="isBulleted"></intro>
             <div class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
