@@ -37,7 +37,7 @@ export default {
 <style lang="postcss" scoped>
 .core-menu {
     @apply absolute origin-top-right rounded opacity-80;
-    top: 48px;
+    top: 64px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #1b1a2e;
