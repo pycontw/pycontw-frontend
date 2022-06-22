@@ -100,12 +100,10 @@ export default {
     @apply inline-flex w-full h-full justify-center items-center bg-transparent;
     z-index: 100;
 }
-.core-menu-fade-enter-active,
-.core-menu-mask-enter-active {
+.core-menu-fade-enter-active {
     @apply transition transition-all duration-200;
 }
-.core-menu-fade-leave-active,
-.core-menu-mask-leave-active {
+.core-menu-fade-leave-active {
     @apply transition transition-all duration-500 delay-200;
 }
 .core-menu-fade-enter,
@@ -113,7 +111,13 @@ export default {
     @apply opacity-0;
 }
 .menu-mask {
-    @apply absolute w-full h-0 top-full bg-black-900;
+    @apply absolute w-full h-0 top-full bg-black-900 rounded;
+}
+.core-menu-mask-enter-active {
+    @apply transition transition-all duration-200;
+}
+.core-menu-mask-leave-active {
+    @apply transition transition-all duration-700 delay-200;
 }
 .core-menu-mask-enter,
 .core-menu-mask-leave-to {
