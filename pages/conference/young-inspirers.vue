@@ -7,6 +7,7 @@
         <div class="speeches">
             <div class="speechForm">
                 <h2 title="活動形式"></h2>
+                <h2 title="活動形式"></h2>
                 <p class="form">{{ form }}</p>
             </div>
             <div class="speechInfo">
@@ -18,43 +19,34 @@
                 >
                     <div class="speechdate">
                         <p class="speeches__content__date">
-                            {{ speechInfo.speechtime }}
+                            {{ speechInfo.speechdate }}
                         </p>
                     </div>
-                    <div
-                        class="speeches__content__box__content"
-                        @click="popupShow(index)"
-                    >
+                    <div class="speeches__content__box__content">
                         <div
                             class="speeches__content__box__content__description"
                         >
                             <p class="speeches__content__box__content__time">
-                                {{ speech.time }}
+                                {{ speechInfo.speechtime }}
                             </p>
-                            <h3
+                            <li
                                 class="
                                     speeches__content__box__content__description__title
                                 "
                             >
-                                {{ speech.title }}
-                            </h3>
+                                {{ speechInfo.title }}
+                            </li>
                             <p class="speeches__content__box__content__speaker">
-                                {{ speech.speaker }}
+                                {{ speechInfo.speaker }}
                             </p>
                             <p
                                 class="
                                     speeches__content__box__content__description__text
                                 "
                             >
-                                {{ speech.description }}
+                                {{ speechInfo.description }}
                             </p>
                         </div>
-                        <img
-                            v-show="speakerImgUrl[speech.tag]"
-                            class="speeches__content__box__content__img"
-                            :src="speakerImgUrl[speech.tag]"
-                            :alt="speech.tag"
-                        />
                     </div>
                 </div>
             </div>
@@ -80,19 +72,46 @@ export default {
             title: 'Young Inspirers',
             intro: 'Young Inspirers 是在 PyCon Taiwan 2021 首次規劃的新活動，旨在於創建一個屬於青少年的學習、交流空間。讓青少年們透過這個活動去分享自身經歷，並培養多元思考、跨族群合作、系統整合的能力，交流不同世代間的資訊。在 PyCon APAC 2022 中，我們將擴大舉辦並邀請 APAC 地區的學生講者來進行分享，期望透過學習經驗的交流與傳承，促進更多 Young Inspirers 的出現。',
             form: '今年的 Young Inspirers 形式與以往不同：整個活動皆會在 YouTube 進行直播。每位講者的分享是由長度約 30 分鐘的 PyCon APAC 主持人與講者訪談影片，加上 10 分鐘講者與觀眾互動的 Live Q&A 時段。',
-            speechInfo: [
+            speechInfos: [
                 {
                     tag: 'speech1',
                     speechdate: '0723',
                     speechtime: '14:00-14:40',
-                    speaker: [
-                        {
-                            name: 'Cheung Chun Lok Amos',
-                            photo: require('~/static/img/young-inspirers/Adrian.jpg'),
-                        },
-                    ],
+                    title: 'Learning Python - A Journey',
+                    speaker: 'Cheung Chun Lok Amos',
+                    photo: require('~/static/img/young-inspirers/Cheung.jpg'),
                     description:
                         'In this talk, I wish to share my Python learning journey from the beginning, when I did not know how to code, and to inspire other young people who are starting out or wish to start. Free courses, workshops and online...',
+                },
+                {
+                    tag: 'speech2',
+                    speechdate: '0723',
+                    speechtime: '15:00-15:40',
+                    title: '等待此資訊中',
+                    speaker: 'Carl John Viñas',
+                    photo: require('~/static/img/young-inspirers/Carl.jpg'),
+                    description:
+                        'At this event, I hope to share some of the highlights of my adventures as a "stingy" Python Developer. I will be talking about  quirky and cool social impact projects and my thought process behind them, how tech...',
+                },
+                {
+                    tag: 'speech3',
+                    speechdate: '0730',
+                    speechtime: '14:00-14:40',
+                    title: '不是萬中選一，要如何練一身Python',
+                    speaker: '楊軒銘、楊承霓',
+                    photo: require('~/static/img/young-inspirers/blank.jpg'),
+                    description:
+                        '前半段分享我們兩人在高中階段的公益社團、演講、比賽及學習Python的過程。後面將以黃金圈理論做收斂及整理，跟大家分享如何找到自己的人生目標(Why)，朝向目標的方向與方法(How)...',
+                },
+                {
+                    tag: 'speech4',
+                    speechdate: '0730',
+                    speechtime: '15:00-15:40',
+                    title: '等待此資訊中',
+                    speaker: '陳怡升',
+                    photo: require('~/static/img/young-inspirers/blank.jpg'),
+                    description:
+                        '等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待...',
                 },
             ],
         }
@@ -124,8 +143,9 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply text-xs md:text-sm font-serif mb-8;
-    line-height: 33px;
+    @apply text-lg md:text-sm  mb-8;
+    font-family: 'Source Sans Pro';
+    line-height: 30px;
 }
 
 h2 {
@@ -169,7 +189,7 @@ h2 {
     @apply mt-0;
 }
 .speeches__content__box__content__description__title {
-    @apply font-serif font-bold mt-0 mb-4 text-secondary-300 lg:mb-3;
+    @apply font-serif font-bold mt-0 mb-4 text-pink-700 lg:mb-3;
     font-size: 25px;
 }
 .speeches__content__box__content__description__text {
