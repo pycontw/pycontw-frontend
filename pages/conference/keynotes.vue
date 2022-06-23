@@ -31,40 +31,36 @@
                     {{ keynote.speaker[$makeKey(locale, 'name')] }}
                 </div>
                 <div class="keynote__links">
-                    <div class="keynote__extLink">
-                        <ext-link
-                            v-if="!!keynote.social_item.facebook.length"
-                            :href="keynote.social_item.facebook"
-                        >
+                    <div
+                        v-if="
+                            keynote.social_item.facebook &&
+                            !!keynote.social_item.facebook.length
+                        "
+                        class="keynote__extLink"
+                    >
+                        <ext-link :href="keynote.social_item.facebook">
                             <facebook-icon />
                         </ext-link>
                     </div>
-                    <div class="keynote__extLink">
-                        <ext-link
-                            v-if="!!keynote.social_item.github.length"
-                            :href="keynote.social_item.github"
-                        >
+                    <div
+                        v-if="
+                            keynote.social_item.github &&
+                            !!keynote.social_item.github.length
+                        "
+                        class="keynote__extLink"
+                    >
+                        <ext-link :href="keynote.social_item.github">
                             <github-icon />
                         </ext-link>
                     </div>
-                    <!--
-                    <div class="keynote__extLink">
-                        <ext-link
-                            v-if="!!keynote.social_item.linkedin.length"
-                            :href="keynote.social_item.linkedin"
-                        >
-                            <fa
-                                :icon="['fab', 'linkedin']"
-                                aria-hidden="true"
-                            ></fa>
-                        </ext-link>
-                    </div>
-                    -->
-                    <div class="keynote__extLink">
-                        <ext-link
-                            v-if="!!keynote.social_item.twitter.length"
-                            :href="keynote.social_item.twitter"
-                        >
+                    <div
+                        v-if="
+                            keynote.social_item.twitter &&
+                            !!keynote.social_item.twitter.length
+                        "
+                        class="keynote__extLink"
+                    >
+                        <ext-link :href="keynote.social_item.twitter">
                             <twitter-icon />
                         </ext-link>
                     </div>
