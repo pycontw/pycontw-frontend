@@ -1,5 +1,5 @@
 <template>
-    <locale-link v-show="shouldShow" :to="to" class="speechCard">
+    <locale-link v-show="shouldShow" :to="to" class="speechCard flex flex-col">
         <div>
             <figure
                 class="speechCard__levelTriangle"
@@ -17,7 +17,9 @@
                 </div>
             </div>
         </div>
-        <div class="speechCard__title">{{ title }}</div>
+        <div class="speechCard__title speechCard__title-overflow">
+            {{ title }}
+        </div>
         <div class="flex justify-between items-center">
             <div class="speechCard__speakerThumbnails">
                 <div
@@ -33,10 +35,12 @@
                 :style="getMaskImgStyle(icon.lang[lang])"
             ></div>
         </div>
-        <div class="speechCard__speakerNames">
+        <div class="speechCard__speakerNames flex-1">
             {{ speakers.map((speaker) => speaker.name).join('、') }}
         </div>
-        <div class="speechCard__category">{{ $t(`category.${category}`) }}</div>
+        <div class="speechCard__category self-start">
+            {{ $t(`category.${category}`) }}
+        </div>
     </locale-link>
 </template>
 
@@ -133,10 +137,8 @@ export default {
 }
 
 .speechCard__levelTriangle {
-    @apply absolute left-0 top-0;
+    @apply absolute left-0 top-0 h-14 w-14;
     content: '';
-    width: 70px;
-    height: 70px;
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
     border-top-left-radius: 12px;
@@ -144,6 +146,7 @@ export default {
 
 .speechCard__level {
     @apply absolute left-2 text-[16px] text-primary-900 font-black;
+    font-family: 'Noto Serif TC', serif;
 }
 
 .speechCard__date,
@@ -157,10 +160,20 @@ export default {
 
 .speechCard__title {
     @apply mb-4 text-[27px] font-bold;
-    font-family: 'Noto Serif TC';
-    line-height: 46px;
+    --lh: 46px;
+    font-family: 'Noto Serif TC', serif;
+    line-height: var(--lh);
     letter-spacing: 1px;
     color: #cecbff;
+}
+
+.speechCard__title-overflow {
+    @apply overflow-hidden;
+    --max-lines: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--max-lines);
+    -webkit-box-orient: vertical;
+    height: calc(var(--lh) * var(--max-lines)); /*fallback*/
 }
 
 .speechCard__speakerThumbnails {

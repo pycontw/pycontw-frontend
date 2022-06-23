@@ -48,7 +48,23 @@ export default {
     },
     // Global page headers (https://go.nuxtjs.dev/config-head)
     // Move to layout/default.vue due to gtm-module not support head function (https://github.com/nuxt-community/gtm-module/issues/56)
-    head: {},
+    head: {
+        link: [
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.googleapis.com',
+            },
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.gstatic.com',
+                crossorigin: 'anonymous',
+            },
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap',
+            },
+        ],
+    },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
     css: [],
