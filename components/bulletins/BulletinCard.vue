@@ -59,10 +59,8 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply relative flex flex-col justify-center items-center rounded-xl;
-    min-width: 236px;
-    min-height: 310px;
-    border: none;
+    @apply relative flex flex-col justify-center items-center rounded-xl w-60 h-80;
+    border: 1px solid transparent;
     background: #1f1c3b;
     color: #a9a6d9;
 }

@@ -36,15 +36,10 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCardCollection__cardContainer {
-    @apply flex flex-wrap;
-    padding-left: 70px;
+    @apply grid place-items-center gap-4 grid-cols-1 mt-9 md:grid-cols-3 md:pl-14 md:mt-0;
 }
 
 .bulletinCardCollection__cardContainer > .bulletinCard {
-    margin: 3px;
-    @media (min-width: 375px) {
-        margin: 30px 20px;
-        padding: 5px;
-    }
+    @apply md:w-full;
 }
 </style>
