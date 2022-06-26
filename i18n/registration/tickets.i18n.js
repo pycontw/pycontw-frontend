@@ -31,7 +31,7 @@ export default genI18nMessages({
             SpecialSouvenir: 'PyCon APAC Special Souvenir',
         },
         ticketEarlyBird: 'Early Bird Pass',
-        ticketRegular: 'Individual Pass',
+        ticketRegular: 'Regular Pass',
         ticketEnterprise: 'Corporate Pass',
         ticketSponsorship: 'Sponsorship Pass',
         ticketLateBird: 'Late Bird Pass',
