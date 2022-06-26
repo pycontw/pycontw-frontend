@@ -1,3 +1,5 @@
+const { generateBgWithSources } = require('./utils/tailwind.utils')
+
 module.exports = {
     mode: 'jit',
     purge: [],
@@ -59,8 +61,20 @@ module.exports = {
                 'pink-500': `6px 6px 0 theme('colors.pink.500')`,
             }),
             backgroundImage: {
-                wrapper:
-                    'url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg"), url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg")',
+                wrapper: generateBgWithSources([
+                    'l1.svg',
+                    'l2.svg',
+                    'l3.svg',
+                    'r1.svg',
+                    'r2.svg',
+                    'r3.svg',
+                    'l1.svg',
+                    'l2.svg',
+                    'l3.svg',
+                    'r1.svg',
+                    'r2.svg',
+                    'r3.svg',
+                ]),
             },
             backgroundPosition: {
                 'wrapper-top-left':
