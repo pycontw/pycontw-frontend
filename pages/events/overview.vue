@@ -1,18 +1,10 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div class="py-10 md:py-24 lg:py-24">
         <banner>
-            <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="$t('title')"></core-h1>
-                <p class="w-full md:w-3/4 leading-6">
-                    {{ $t('intro') }}
-                </p>
-            </template>
+            <core-h1 :title="$t('title')"></core-h1>
+            <p class="leading-6">
+                {{ $t('intro') }}
+            </p>
         </banner>
         <i18n-page-wrapper class="pt-8 px-4 lg:px-16" custom-x custom-y>
             <event-card-collection>
