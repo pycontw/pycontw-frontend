@@ -1,18 +1,10 @@
 <template>
     <div>
         <banner>
-            <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="$t('title')"></core-h1>
-                <p class="w-full md:w-3/4 leading-6 text-justify">
-                    {{ $t('pageAbstract') }}
-                </p>
-            </template>
+            <core-h1 :title="$t('title')"></core-h1>
+            <i18n path="pageAbstract" tag="p" class="pageAbstract">
+                <template #br><br /></template>
+            </i18n>
         </banner>
 
         <i18n-page-wrapper>
