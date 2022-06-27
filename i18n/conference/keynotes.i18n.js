@@ -12,7 +12,6 @@ export default genI18nMessages({
         terms: {
             bio: 'Bio',
             talk: 'Talk',
-            note: 'Note',
         },
     },
     'zh-hant': {
@@ -22,10 +21,8 @@ export default genI18nMessages({
             '主題演講講者都是在全球而言各領域非常頂尖的人士；' +
             '他們將帶來對自己的領域、專案的經驗分享，或者對於未來數年發展的方向與想像。',
         terms: {
-            bio: '講者',
-            intro: '介紹',
+            bio: '講者介紹',
             talk: '演講',
-            note: '共筆',
         },
     },
 })
