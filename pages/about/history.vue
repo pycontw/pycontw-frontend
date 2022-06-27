@@ -273,7 +273,7 @@ export default {
 <style scoped>
 .history__paragraph-title {
     @apply mt-1 mb-1 font-serif font-bold text-left text-pink-700;
-    font-size: 28px;
+    font-size: 24px;
 }
 .history__paragraph-content {
     @apply mt-1 mb-9 leading-5 md:leading-8 last:mb-0;
@@ -281,7 +281,7 @@ export default {
 }
 @media (min-width: 768px) {
     .history__paragraph-title {
-        font-size: 32px;
+        font-size: 28px;
     }
     .history__paragraph-content {
         font-size: 18px;
