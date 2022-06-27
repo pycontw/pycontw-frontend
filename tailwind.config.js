@@ -58,6 +58,7 @@ module.exports = {
             boxShadow: (theme) => ({
                 'pink-500': `6px 6px 0 theme('colors.pink.500')`,
             }),
+            fill: (theme) => theme('colors'),
             backgroundImage: {
                 wrapper:
                     'url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg"), url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg")',

@@ -259,7 +259,7 @@ export default {
 }
 
 .keynote__extLink svg {
-    fill: #e099e1;
+    @apply fill-primary-300;
 }
 
 @media (min-width: 768px) {
