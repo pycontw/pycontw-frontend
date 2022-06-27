@@ -11,12 +11,13 @@ export default {
     name: 'I18nPageWrapper',
     props: {
         customX: { type: Boolean, default: false },
+        customY: { type: Boolean, default: false },
     },
     computed: {
         classObject() {
             return {
-                'py-8': true,
-                'md:py-20': true,
+                'py-8': !this.customY,
+                'md:py-20': !this.customY,
                 'min-w-[272px]': true,
                 'mx-[24px]': true,
                 'w-auto': true,
