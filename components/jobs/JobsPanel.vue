@@ -64,9 +64,6 @@ export default {
 .jobsPanelJob__requirements {
     @apply whitespace-pre-line;
     color: #ffffff;
-    font-size: 14px;
-    @media (min-width: 1280px) {
-        font-size: 16px;
-    }
+    font-size: 16px;
 }
 </style>
