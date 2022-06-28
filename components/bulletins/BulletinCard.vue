@@ -59,7 +59,7 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply relative flex flex-col justify-center items-center rounded-xl w-60 h-80;
+    @apply relative flex flex-col justify-center items-center rounded-xl w-48 h-64;
     border: 1px solid transparent;
     background: #1f1c3b;
     color: #a9a6d9;
@@ -84,7 +84,7 @@ export default {
 
 .bulletinCard__content {
     @apply absolute;
-    top: 40%;
+    top: 30%;
     padding: inherit;
 }
 
@@ -97,7 +97,7 @@ export default {
 }
 
 .bulletinCard__content > p {
-    @apply mx-2;
+    @apply px-5 pb-6;
     font-size: 0.6rem;
     @media (min-width: 375px) {
         font-size: 0.8rem;
