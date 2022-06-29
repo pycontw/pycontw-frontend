@@ -43,15 +43,26 @@
                             <p class="speeches__content__box__content__time">
                                 {{ speechInfo.speechtime }}
                             </p>
-                            <li
+                            <div
                                 class="
                                     speeches__content__box__content__description__title
                                 "
                             >
-                                {{ speechInfo.title }}
-                            </li>
-                            <p class="speeches__content__box__content__speaker">
-                                {{ speechInfo.speaker }}
+                                <li>{{ speechInfo.title }}</li>
+                                <img
+                                    v-for="(photo, i) in speechInfo.photo"
+                                    :key="`speech_info_${index}_photo_${i}`"
+                                    :src="speechInfo.photo[i]"
+                                    :alt="speechInfo.speaker[i]"
+                                    class="speeches__content__box__content__img"
+                                />
+                            </div>
+                            <p
+                                v-for="(speaker, i) in speechInfo.speaker"
+                                :key="`speech_info_${index}_speaker_${i}`"
+                                class="speeches__content__box__content__speaker"
+                            >
+                                {{ speechInfo.speaker[i] }}
                             </p>
                             <p
                                 class="
@@ -98,6 +109,15 @@
                             >
                                 ✕
                             </button>
+                            <div class="flex flex-row">
+                                <img
+                                    v-for="(photo, i) in speechInfo.photo"
+                                    :key="`speech_info_${index}_photo_${i}`"
+                                    :src="speechInfo.photo[i]"
+                                    :alt="speechInfo.speaker[i]"
+                                    class="speeches__content__box__popup__img"
+                                />
+                            </div>
                             <h4
                                 class="
                                     font-serif
@@ -145,8 +165,10 @@ export default {
                     speechdate: 'July 23',
                     speechtime: '14:00-14:40',
                     title: 'Learning Python - A Journey',
-                    speaker: 'Cheung Chun Lok Amos',
-                    photo: require('~/static/img/young-inspirers/Cheung.jpg'),
+                    speaker: ['Cheung Chun Lok Amos'],
+                    photo: [
+                        require('~/static/img/young-inspirers/speaker1.svg'),
+                    ],
                     brief_description:
                         'In this talk, I wish to share my Python learning journey from the beginning, when I did not know how to code, and to inspire other young people who are starting out or wish to start. Free courses, workshops and online...',
                     full_description:
@@ -159,8 +181,10 @@ export default {
                     speechdate: 'July 23',
                     speechtime: '15:00-15:40',
                     title: 'My Quirky Adventures with Python & Tech Communities',
-                    speaker: 'Carl John Viñas',
-                    photo: require('~/static/img/young-inspirers/Carl.jpg'),
+                    speaker: ['Carl John Viñas'],
+                    photo: [
+                        require('~/static/img/young-inspirers/speaker2.svg'),
+                    ],
                     brief_description:
                         'At this event, I hope to share some of the highlights of my adventures as a "stingy" Python Developer. I will be talking about  quirky and cool social impact projects and my thought process behind them, how tech...',
                     full_description:
@@ -175,7 +199,11 @@ export default {
                     speechdate: 'July 30',
                     speechtime: '14:00-14:40',
                     title: '不是萬中選一，要如何練一身Python',
-                    speaker: '楊軒銘、楊承霓',
+                    speaker: ['楊軒銘, 楊承霓'],
+                    photo: [
+                        require('~/static/img/young-inspirers/speaker3-1.svg'),
+                        require('~/static/img/young-inspirers/speaker3-2.svg'),
+                    ],
                     brief_description:
                         '前半段分享我們兩人在高中階段的公益社團、演講、比賽及學習Python的過程。後面將以黃金圈理論做收斂及整理，跟大家分享如何找到自己的人生目標(Why)，朝向目標的方向與方法(How)...',
                     full_description:
@@ -188,7 +216,10 @@ export default {
                     speechdate: 'July 30',
                     speechtime: '15:00-15:40',
                     title: '等待此資訊中',
-                    speaker: '陳怡升',
+                    speaker: ['陳怡升'],
+                    photo: [
+                        require('~/static/img/young-inspirers/speaker4.svg'),
+                    ],
                     brief_description:
                         '等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待...',
                     full_description:
@@ -309,6 +340,7 @@ h2 {
     font-size: 25px;
 }
 .speeches__content__box__content__description__title {
+    @apply flex flex-row mr-48;
     @apply font-serif font-bold mt-0 mb-4 text-pink-700 lg:mb-3;
     font-size: 25px;
 }
@@ -328,7 +360,10 @@ h2 {
     font-size: 22px;
 }
 .speeches__content__box__content__img {
-    @apply object-cover rounded-lg h-32 w-60 lg:w-32;
+    @apply px-2;
+}
+.speeches__content__box__popup__img {
+    @apply object-cover rounded-lg h-32 w-32 lg:w-32;
 }
 
 .speeches__content__box__popup {
@@ -346,9 +381,10 @@ h2 {
     min-width: 350px;
     height: unset;
     @media (min-width: 1194px) {
-        height: 575px;
+        height: 700px;
     }
 }
+
 .speeches__content__box__popup__content__button {
     @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
 }
