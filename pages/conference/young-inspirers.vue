@@ -3,26 +3,40 @@
         <div class="w-full">
             <core-h1 title="Young Inspirers" center></core-h1>
             <p class="intro">{{ intro }}</p>
-        </div>
-        <div class="speeches">
             <div class="speechForm">
-                <h2 title="活動形式"></h2>
-                <h2 title="活動形式"></h2>
+                <h2 title="活動形式">活動形式</h2>
                 <p class="form">{{ form }}</p>
             </div>
-            <div class="speechInfo">
+        </div>
+        <div class="speeches">
+            <div ref="speeches" class="speechInfo">
                 <h2 title="活動資訊"></h2>
                 <div
                     v-for="(speechInfo, index) in speechInfos"
                     :key="`speech_info_${index}`"
-                    class="speechContainer"
+                    class="speeches__content__box"
                 >
-                    <div class="speechdate">
+                    <div
+                        v-if="speechInfo.speechdate === prevDate"
+                        class="speechdate"
+                    >
                         <p class="speeches__content__date">
                             {{ speechInfo.speechdate }}
                         </p>
                     </div>
-                    <div class="speeches__content__box__content">
+                    <div
+                        v-else
+                        class="speechdate"
+                        this.prevDate="speechInfo.speechdate"
+                    >
+                        <p class="speeches__content__date">
+                            {{ speechInfo.speechdate }}
+                        </p>
+                    </div>
+                    <div
+                        class="speeches__content__box__content"
+                        @click="popupShow(index)"
+                    >
                         <div
                             class="speeches__content__box__content__description"
                         >
@@ -48,6 +62,41 @@
                             </p>
                         </div>
                     </div>
+                    <div
+                        ref="popupCover"
+                        class="speeches__content__box__popup"
+                        :class="{
+                            'speeches__content__box__popup--show':
+                                popupIndex === index,
+                        }"
+                        @click="popupClose(index)"
+                    >
+                        <div class="speeches__content__box__popup__content">
+                            <button
+                                ref="popupBtn"
+                                class="
+                                    speeches__content__box__popup__content__button
+                                "
+                                @click="popupClose(index)"
+                            >
+                                ✕
+                            </button>
+                            <h4
+                                class="
+                                    font-serif
+                                    text:md
+                                    lg:text-2xl
+                                    mb-10
+                                    mt-5
+                                "
+                            >
+                                {{ speechInfo.title }}
+                            </h4>
+                            <p class="text-xs lg:text-sm text-left">
+                                {{ speechInfo.description }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,7 +105,6 @@
 
 <script>
 import i18n from '@/i18n/conference/young-inspirers.i18n'
-
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 
@@ -75,7 +123,7 @@ export default {
             speechInfos: [
                 {
                     tag: 'speech1',
-                    speechdate: '0723',
+                    speechdate: 'July 23',
                     speechtime: '14:00-14:40',
                     title: 'Learning Python - A Journey',
                     speaker: 'Cheung Chun Lok Amos',
@@ -85,7 +133,7 @@ export default {
                 },
                 {
                     tag: 'speech2',
-                    speechdate: '0723',
+                    speechdate: 'July 23',
                     speechtime: '15:00-15:40',
                     title: '等待此資訊中',
                     speaker: 'Carl John Viñas',
@@ -95,26 +143,39 @@ export default {
                 },
                 {
                     tag: 'speech3',
-                    speechdate: '0730',
+                    speechdate: 'July 30',
                     speechtime: '14:00-14:40',
                     title: '不是萬中選一，要如何練一身Python',
                     speaker: '楊軒銘、楊承霓',
-                    photo: require('~/static/img/young-inspirers/blank.jpg'),
                     description:
                         '前半段分享我們兩人在高中階段的公益社團、演講、比賽及學習Python的過程。後面將以黃金圈理論做收斂及整理，跟大家分享如何找到自己的人生目標(Why)，朝向目標的方向與方法(How)...',
                 },
                 {
                     tag: 'speech4',
-                    speechdate: '0730',
+                    speechdate: 'July 30',
                     speechtime: '15:00-15:40',
                     title: '等待此資訊中',
                     speaker: '陳怡升',
-                    photo: require('~/static/img/young-inspirers/blank.jpg'),
                     description:
                         '等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待...',
                 },
             ],
+            popupIndex: null,
+            prevDate: 'July 23',
         }
+    },
+    methods: {
+        popupShow(index) {
+            this.popupIndex = index
+        },
+        popupClose(index) {
+            const target = event.target
+            if (target === this.$refs.popupBtn[index]) {
+                this.popupIndex = null
+            } else if (target === this.$refs.popupCover[index]) {
+                this.popupIndex = null
+            }
+        },
     },
     head() {
         return {
@@ -143,13 +204,15 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply text-lg md:text-sm  mb-8;
+    @apply text-sm md:text-sm  mb-8;
     font-family: 'Source Sans Pro';
     line-height: 30px;
 }
 
 h2 {
-    @apply font-serif font-black text-center mx-auto text-primary-500;
+    @apply pt-2 md:w-64;
+    @apply font-serif font-black mx-auto text-primary-500;
+    @apply text-left md:text-center;
     margin-top: 0.5rem !important;
     margin-bottom: 0 !important;
     font-size: 24px;
@@ -163,12 +226,26 @@ h2 {
     color: #c7c7c7;
 }
 .speeches {
-    @apply w-full;
+    @apply relative mx-auto lg:w-full lg:w-4/5;
+    height: unset;
+    @media (min-width: 1194px) {
+        min-width: 375px;
+        height: 1700px;
+        margin-top: -20px;
+    }
 }
 
 .speechForm {
-    @apply flex-row;
+    @apply mx-0 md:mx-6;
+    @apply text-sm md:text-sm  md:mb-12;
+    font-family: 'Source Sans Pro';
+    line-height: 30px;
+    @apply flex flex-col justify-around md:flex-row;
     @apply text-center;
+}
+
+.speeches__content__box {
+    @apply flex flex-col justify-around mx-auto md:flex-row;
 }
 
 .speeches__content__box__content {
@@ -185,8 +262,14 @@ h2 {
         box-shadow: 0 0 20px #352d66;
     }
 }
-.speeches__content__box:first-of-type .communities__content__box__content {
+.speeches__content__box:first-of-type .speeches__content__box__content {
     @apply mt-0;
+}
+.speeches__content__date {
+    @apply text-left font-serif md:text-center;
+    @apply mr-12;
+    font-family: 'Source Sans Pro';
+    font-size: 25px;
 }
 .speeches__content__box__content__description__title {
     @apply font-serif font-bold mt-0 mb-4 text-pink-700 lg:mb-3;
@@ -207,6 +290,27 @@ h2 {
     @apply object-cover rounded-lg h-32 w-60 lg:w-32;
 }
 
+.speeches__content__box__popup {
+    @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0 lg:p-0;
+    padding: 0 10%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.speeches__content__box__popup--show {
+    @apply flex;
+}
+.speeches__content__box__popup__content {
+    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 border-3 border-pink-700 bg-black-900 lg:p-10;
+    width: 724px;
+    min-width: 350px;
+    height: unset;
+    @media (min-width: 1194px) {
+        height: 575px;
+    }
+}
+.speeches__content__box__popup__content__button {
+    @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
+}
 .speakers {
     @apply flex justify-center mt-16;
 }
