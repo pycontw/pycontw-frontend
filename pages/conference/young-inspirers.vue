@@ -58,8 +58,25 @@
                                     speeches__content__box__content__description__text
                                 "
                             >
-                                {{ speechInfo.description }}
+                                {{ speechInfo.full_description }}
                             </p>
+                            <div class="flex flex-row">
+                                <text-button
+                                    href="speechInfo.live_link"
+                                    small
+                                    class="linkButton"
+                                >
+                                    觀看直播
+                                </text-button>
+                                <text-button
+                                    href="speechInfo.live_link"
+                                    secondary
+                                    large
+                                    class="linkButton"
+                                >
+                                    前往共筆
+                                </text-button>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -93,7 +110,7 @@
                                 {{ speechInfo.title }}
                             </h4>
                             <p class="text-xs lg:text-sm text-left">
-                                {{ speechInfo.description }}
+                                {{ speechInfo.full_description }}
                             </p>
                         </div>
                     </div>
@@ -107,6 +124,7 @@
 import i18n from '@/i18n/conference/young-inspirers.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
+import TextButton from '@/components/core/buttons/TextButton'
 
 export default {
     i18n,
@@ -114,6 +132,7 @@ export default {
     components: {
         I18nPageWrapper,
         CoreH1,
+        TextButton,
     },
     data() {
         return {
@@ -128,18 +147,28 @@ export default {
                     title: 'Learning Python - A Journey',
                     speaker: 'Cheung Chun Lok Amos',
                     photo: require('~/static/img/young-inspirers/Cheung.jpg'),
-                    description:
+                    brief_description:
                         'In this talk, I wish to share my Python learning journey from the beginning, when I did not know how to code, and to inspire other young people who are starting out or wish to start. Free courses, workshops and online...',
+                    full_description:
+                        'In this talk, I wish to share my Python learning journey from the beginning, when I did not know how to code, and to inspire other young people who are starting out or wish to start. Free courses, workshops and online platforms, competitions all helped me out when I began my journey, and I also hope to share about what made me pursue a learning path in Python and in programming as well as my plans for my learning path, such as learning about machine learning and vision AI. Coding is an essential skill in the future as it is an important part of the digital transformation. It can possibly change the world by changing the way we live and complete tasks more efficiently. Thus, through this sharing, I wish to inspire young people like myself in the past who want to start but do not know where as well as offer tips on problem solving, advice on setting learning goals, and helpful information such as useful learning platforms for them so that they too can learn this essential skill.',
+                    note_link: null,
+                    live_link: null,
                 },
                 {
                     tag: 'speech2',
                     speechdate: 'July 23',
                     speechtime: '15:00-15:40',
-                    title: '等待此資訊中',
+                    title: 'My Quirky Adventures with Python & Tech Communities',
                     speaker: 'Carl John Viñas',
                     photo: require('~/static/img/young-inspirers/Carl.jpg'),
-                    description:
+                    brief_description:
                         'At this event, I hope to share some of the highlights of my adventures as a "stingy" Python Developer. I will be talking about  quirky and cool social impact projects and my thought process behind them, how tech...',
+                    full_description:
+                        'At this event, I hope to share some of the highlights of my adventures as a "stingy" Python Developer.' +
+                        'I will be talking about  quirky and cool social impact projects and my thought process behind them, how tech communities could be a huge factor to your growth, and how you can leverage Python to make the world a better place and how it can be used by almost anyone!' +
+                        'If you are someone who wants to hear just funny or quirky stories involving Python, or just want to know how you can also make projects/ideas that are most of the time horrible, but every now then is a good idea, then you are very much welcome to join!',
+                    note_link: null,
+                    live_link: null,
                 },
                 {
                     tag: 'speech3',
@@ -147,8 +176,12 @@ export default {
                     speechtime: '14:00-14:40',
                     title: '不是萬中選一，要如何練一身Python',
                     speaker: '楊軒銘、楊承霓',
-                    description:
+                    brief_description:
                         '前半段分享我們兩人在高中階段的公益社團、演講、比賽及學習Python的過程。後面將以黃金圈理論做收斂及整理，跟大家分享如何找到自己的人生目標(Why)，朝向目標的方向與方法(How)...',
+                    full_description:
+                        '前半段分享我們兩人在高中階段的公益社團、演講、比賽及學習Python的過程。後面將以黃金圈理論做收斂及整理，跟大家分享如何找到自己的人生目標(Why)，朝向目標的方向與方法(How)，在每一個階段可以做的事情(What)。如果大學生活會改變一個人的價值，如何在進大學之前先學會不虛度光陰，學會自我學習的方式，讓每一天都朝向自己的人生目標前進。',
+                    note_link: null,
+                    live_link: null,
                 },
                 {
                     tag: 'speech4',
@@ -156,8 +189,12 @@ export default {
                     speechtime: '15:00-15:40',
                     title: '等待此資訊中',
                     speaker: '陳怡升',
-                    description:
+                    brief_description:
                         '等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待...',
+                    full_description:
+                        '等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待此欄資訊中等待...',
+                    note_link: null,
+                    live_link: null,
                 },
             ],
             popupIndex: null,
@@ -230,7 +267,7 @@ h2 {
     height: unset;
     @media (min-width: 1194px) {
         min-width: 375px;
-        height: 1700px;
+        height: 2100px;
         margin-top: -20px;
     }
 }
@@ -276,7 +313,7 @@ h2 {
     font-size: 25px;
 }
 .speeches__content__box__content__description__text {
-    @apply text-xs text-left w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-6;
+    @apply text-sm text-left w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-6;
     line-height: 146.9%;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -285,6 +322,10 @@ h2 {
     @media (min-width: 1194px) {
         -webkit-line-clamp: 5;
     }
+}
+.speeches__content__box__content__speaker {
+    @apply underline;
+    font-size: 22px;
 }
 .speeches__content__box__content__img {
     @apply object-cover rounded-lg h-32 w-60 lg:w-32;
@@ -344,5 +385,8 @@ h2 {
 
 .sponsors {
     @apply w-3/4 sm:w-1/2 mx-auto mt-4;
+}
+.linkButton {
+    @apply mx-2 my-6;
 }
 </style>
