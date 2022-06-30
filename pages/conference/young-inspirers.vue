@@ -2,15 +2,16 @@
     <i18n-page-wrapper class="px-8 sm:px-10 md:px-52" custom-x>
         <div class="w-full">
             <core-h1 title="Young Inspirers" center></core-h1>
-            <p class="intro">{{ intro }}</p>
+            <i18n path="intro" tag="p" class="intro">
+                <template #br><br /></template>
+            </i18n>
             <div class="speechForm">
-                <h2 title="活動形式">活動形式</h2>
-                <p class="form">{{ form }}</p>
+                <h2>{{ $t('formTitle') }}</h2>
+                <p class="form">{{ $t('form') }}</p>
             </div>
         </div>
         <div class="speeches">
             <div ref="speeches" class="speechInfo">
-                <h2 title="活動資訊"></h2>
                 <div
                     v-for="(speechInfo, index) in speechInfos"
                     :key="`speech_info_${index}`"
@@ -247,7 +248,8 @@ export default {
     },
     head() {
         return {
-            title: this.title,
+            title: this.$i18n.t('og.title'),
+            form: this.$i18n.t('og.form'),
             meta: [
                 {
                     hid: 'og:title',
