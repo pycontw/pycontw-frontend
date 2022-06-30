@@ -17,7 +17,7 @@
                 <div class="font-bold">{{ $t('jobRequirement') }}</div>
                 <p>{{ job[$makeKey(locale, 'job_requirements')] || '-' }}</p>
             </div>
-            <core-text-button :href="job.job_url" class="mt-4 mb-12">
+            <core-text-button secondary :href="job.job_url" class="mt-4 mb-12">
                 {{ ctaLabel }}
             </core-text-button>
         </div>
@@ -57,12 +57,13 @@ export default {
 }
 
 .jobsPanelJob__title {
-    @apply mb-4 font-bold text-2xl text-pink-500;
+    @apply mb-4 font-bold text-2xl text-pink-700;
 }
 
 .jobsPanelJob__description,
 .jobsPanelJob__requirements {
-    @apply whitespace-pre-line text-sm md:text-base;
+    @apply whitespace-pre-line;
     color: #ffffff;
+    font-size: 16px;
 }
 </style>

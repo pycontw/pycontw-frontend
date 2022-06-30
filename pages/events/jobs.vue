@@ -11,7 +11,7 @@
                 @click="setSelectedSponsor(sponsor)"
             ></jobs-card>
         </jobs-card-collection>
-        <i18n-page-wrapper class="pt-8 pb-12" custom-y>
+        <i18n-page-wrapper class="py-6" custom-y>
             <jobs-panel
                 ref="jobsPanel"
                 :jobs="selectedSponsor.jobs"

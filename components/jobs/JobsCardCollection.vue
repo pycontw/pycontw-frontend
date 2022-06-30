@@ -35,7 +35,7 @@ export default {
 }
 
 .core-jobsCardCollection.--site {
-    @apply z-50 py-4 sticky w-full;
+    @apply z-50 pb-3 sticky w-full;
     @apply flex-wrap items-center justify-center;
     top: 48px;
 }
