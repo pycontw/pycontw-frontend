@@ -40,10 +40,7 @@ export default Object.freeze({
         //     i18nKey: 'overview',
         //     value: '/events/overview',
         // },
-        // {
-        //     i18nKey: 'keynotes',
-        //     value: '/conference/keynotes',
-        // },
+        { i18nKey: 'keynotes', value: '/conference/keynotes' },
         // { i18nKey: 'talks', value: '/conference/talks' },
         // {
         //     i18nKey: 'tutorials',
