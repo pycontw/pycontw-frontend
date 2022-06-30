@@ -80,6 +80,8 @@ export default {
         '@nuxt/http',
         // https://github.com/nuxt-community/gtm-module
         '@nuxtjs/gtm',
+        // https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
+        'nuxt-facebook-pixel-module',
         // https://i18n.nuxtjs.org/
         'nuxt-i18n',
         [
@@ -127,6 +129,13 @@ export default {
 
     gtm: {
         id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+
+    facebook: {
+        track: 'PageView',
+        pixelId: '561487855431220',
+        autoPageView: true,
+        disabled: false,
     },
 
     markdownit: {
