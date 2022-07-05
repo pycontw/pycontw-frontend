@@ -1,18 +1,10 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div>
         <banner>
-            <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="$t('title')"></core-h1>
-                <p class="w-full md:w-3/4 lg:w-3/4 leading-6">
-                    {{ $t('intro') }}
-                </p>
-            </template>
+            <core-h1 :title="$t('title')"></core-h1>
+            <i18n path="intro" tag="p" class="intro">
+                <template #br><br /></template>
+            </i18n>
         </banner>
         <i18n-page-wrapper>
             <article
@@ -201,10 +193,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.intro {
-    @apply text-xs md:text-sm;
-    line-height: 33px;
-}
 .keynote {
     @apply mb-20 md:mb-28;
 }
