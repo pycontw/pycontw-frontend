@@ -160,20 +160,18 @@ export default {
 
 .speechCard__title {
     @apply mb-4 text-[27px] font-bold;
-    --lh: 46px;
     font-family: 'Noto Serif TC', serif;
-    line-height: var(--lh);
+    line-height: 46px;
     letter-spacing: 1px;
     color: #cecbff;
 }
 
 .speechCard__title-overflow {
     @apply overflow-hidden;
-    --max-lines: 3;
     display: -webkit-box;
-    -webkit-line-clamp: var(--max-lines);
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    height: calc(var(--lh) * var(--max-lines)); /*fallback*/
+    height: calc(46px * 3); /*fallback: height = line * line-height */
 }
 
 .speechCard__speakerThumbnails {
