@@ -1,29 +1,17 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div class="py-10 md:py-24 lg:py-24">
         <banner>
-            <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="$t('title')"></core-h1>
-                <i18n
-                    class="w-full md:w-3/4 lg:w-3/4 leading-6"
-                    tag="p"
-                    path="pageAbstract"
-                >
-                    <template #setup>
-                        <span
-                            class="appendixHint"
-                            @click="getPathWithAppendixAnchor"
-                        >
-                            {{ $t('setupText') }}
-                        </span>
-                    </template>
-                </i18n>
-            </template>
+            <core-h1 :title="$t('title')"></core-h1>
+            <i18n class="leading-6" tag="p" path="pageAbstract">
+                <template #setup>
+                    <span
+                        class="appendixHint"
+                        @click="getPathWithAppendixAnchor"
+                    >
+                        {{ $t('setupText') }}
+                    </span>
+                </template>
+            </i18n>
         </banner>
         <i18n-page-wrapper class="pt-8 px-8 md:px-57 lg:px-56">
             <div>

@@ -1,22 +1,14 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div class="py-10 md:py-24 lg:py-24">
         <banner>
-            <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="$t('title')"></core-h1>
-                <p
-                    v-for="(content, i) in $t('pageAbstract')"
-                    :key="`abstract_${i}`"
-                    class="w-full font-serif md:w-3/4 lg:w-3/4 leading-6"
-                >
-                    {{ content }}
-                </p>
-            </template>
+            <core-h1 :title="$t('title')"></core-h1>
+            <p
+                v-for="(content, i) in $t('pageAbstract')"
+                :key="`abstract_${i}`"
+                class="font-serif leading-6"
+            >
+                {{ content }}
+            </p>
         </banner>
         <div class="flex flex-wrap justify-center mx-2 my-7">
             <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">

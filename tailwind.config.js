@@ -1,3 +1,5 @@
+const { generateBgWithSources } = require('./utils/tailwind.utils')
+
 module.exports = {
     mode: 'jit',
     purge: [],
@@ -18,6 +20,8 @@ module.exports = {
             cover: 'cover',
             contain: 'contain',
             'wrapper-size': '7%,5%,7%,7%,7%,7%,7%,5%,7%,7%,7%,7%',
+            'banner-size-md': '6%,36%,9%,4%',
+            'banner-size': '11%,72%,22%,7%',
         },
         borderWidth: {
             DEFAULT: '1px',
@@ -60,12 +64,33 @@ module.exports = {
             }),
             fill: (theme) => theme('colors'),
             backgroundImage: {
-                wrapper:
-                    'url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg"), url("~/static/img/background/l1.svg"), url("~/static/img/background/l2.svg"), url("~/static/img/background/l3.svg"), url("~/static/img/background/r1.svg"), url("~/static/img/background/r2.svg"), url("~/static/img/background/r3.svg")',
+                wrapper: generateBgWithSources([
+                    'l1.svg',
+                    'l2.svg',
+                    'l3.svg',
+                    'r1.svg',
+                    'r2.svg',
+                    'r3.svg',
+                    'l1.svg',
+                    'l2.svg',
+                    'l3.svg',
+                    'r1.svg',
+                    'r2.svg',
+                    'r3.svg',
+                ]),
+                banner: generateBgWithSources([
+                    'paper-plane-1.svg',
+                    'firework.png',
+                    'planet.svg',
+                    'paper-plane-2.svg',
+                ]),
             },
             backgroundPosition: {
                 'wrapper-top-left':
-                    '4% 100px, 4% 958px, 4% 1816px, 96% 529px, 96% 1125px, 96% 1721px, 4% 2674px, 4% 3532px, 4% 4390px, 96% 2317px, 96% 2913px, 96% 3509px',
+                    '6% 100px, 4% 958px, 4% 1816px, 96% 529px, 96% 1125px, 96% 1721px, 4% 2674px, 4% 3532px, 4% 4390px, 96% 2317px, 96% 2913px, 96% 3509px',
+                'banner-position-lg': '16% 37%, 50% 100%, 77% 30%, 72% 490px',
+                'banner-position-md': '16% 37%, 50% 50%, 77% 30%, 72% 490px',
+                'banner-position': '5% 135px, 50% 50%, 94% 99px, 85% 70%',
             },
         },
         screens: {

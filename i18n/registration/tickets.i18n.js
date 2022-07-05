@@ -4,10 +4,9 @@ export default genI18nMessages({
     'en-us': {
         title: 'Registration Is Now Open!',
         pageAbstract:
-            'Welcome on board the PyCon APAC 2022 Space Shuttle Formosa for discovering' +
-            ' the Python Universe. More with multiple ticket types to choose from.' +
-            ' Engage with experts and learn from peers. ' +
-            'Expose impossible Python secrets across PyCon APAC 2022.',
+            'Welcome on board the PyCon APAC 2022 Challenger for discovering the Python Universe. {br}' +
+            'More with multiple ticket types to choose from. Engage with experts and learn from peers. {br}' +
+            'Expose impossible Python secretes cross PyCon APAC 2022.',
         introConference: 'Conference Information',
         conferenceContent:
             'Date: September 3-4, 2022{br}' +
@@ -44,10 +43,10 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: '探索無疆界宇宙，福爾摩沙號準備啟程。',
+        title: '探索無疆界宇宙，福爾摩斯號準備啟程。',
         pageAbstract:
-            '多樣票價供您選擇，人人都可以找到適合自己的方案。' +
-            '多元化學習與多視角觀察技術應用，深入淺出引你進入 Python 學習殿堂。' +
+            '多樣票價供您選擇，人人都可以找到適合自己的方案。{br}' +
+            '多元化學習與多視角觀察技術應用，深入淺出引你進入 Python 學習殿堂。{br}' +
             '跨越地球距離阻礙，串連亞太地區，與您一同揭露不可能的可能秘密。',
         introConference: '大會資訊',
         conferenceContent:

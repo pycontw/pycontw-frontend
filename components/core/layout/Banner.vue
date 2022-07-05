@@ -1,19 +1,7 @@
 <template>
-    <div class="flex font-serif font-semibold w-full flex-1">
-        <div class="image hidden md:block w-full md:w-3/6 md:h-64">
+    <div class="banner">
+        <div class="banner-texts">
             <slot></slot>
-        </div>
-        <div
-            class="
-                flex flex-col
-                items-start
-                mx-8
-                w-full
-                text-xs
-                md:w-3/6 md:text-base
-            "
-        >
-            <slot name="text"></slot>
         </div>
     </div>
 </template>
@@ -24,4 +12,19 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="postcss" scoped>
+.banner {
+    @apply w-full flex items-center justify-center;
+    @apply font-serif font-semibold;
+    @apply bg-no-repeat bg-banner;
+    @apply bg-banner-position md:bg-banner-position-md lg:bg-banner-position-lg;
+    @apply bg-banner-size md:bg-banner-size-md;
+    height: calc(100vh - 320px);
+    min-height: 560px;
+}
+
+.banner-texts {
+    @apply mx-1.5 md:mx-14 text-center;
+    max-width: 920px;
+}
+</style>
