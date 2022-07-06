@@ -76,14 +76,14 @@
                                 </p>
                                 <div class="flex flex-row">
                                     <text-button
-                                        href="speech.live_link"
+                                        :href="speech.live_link"
                                         small
                                         class="linkButton"
                                     >
                                         觀看直播
                                     </text-button>
                                     <text-button
-                                        href="speech.note_link"
+                                        :href="speech.note_link"
                                         secondary
                                         large
                                         class="linkButton"
@@ -197,8 +197,8 @@ export default {
                 speech4: this.$i18n.t('speech4Speaker'),
             },
             tagToLangIcon: {
-                speech1: require('~/static/img/icons/lang/ENTalk.svg'),
-                speech2: require('~/static/img/icons/lang/ENTalk.svg'),
+                speech1: require('~/static/img/icons/lang/ENEN.svg'),
+                speech2: require('~/static/img/icons/lang/ENEN.svg'),
                 speech3: require('~/static/img/icons/lang/ZHZH.svg'),
                 speech4: require('~/static/img/icons/lang/ZHZH.svg'),
             },
@@ -314,7 +314,8 @@ h2 {
 
 .speechBox__langIcon {
     @apply inline-block;
-    fill: #fff;
+    filter: invert(92%) sepia(4%) saturate(1032%) hue-rotate(192deg)
+        brightness(90%) contrast(96%);
 }
 .speechBox__title {
     @apply flex flex-row;

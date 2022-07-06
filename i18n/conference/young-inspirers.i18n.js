@@ -182,7 +182,7 @@ export default genI18nMessages({
                         tag: 'speech4',
                         speechdate: 'July 30',
                         speechtime: '15:00-15:40',
-                        title: 'Comeing S',
+                        title: 'Coming Soon',
                         speaker: [
                             {
                                 name: '陳怡升',
