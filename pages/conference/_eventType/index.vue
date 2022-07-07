@@ -1,18 +1,10 @@
 <template>
     <div class="py-10 md:py-24 lg:py24">
         <banner>
-            <template #default>
-                <div
-                    class="hidden md:block md:w-full md:h-full"
-                    :style="bannerStyle"
-                ></div>
-            </template>
-            <template #text>
-                <core-h1 :title="title"></core-h1>
-                <p class="w-full md:w-3/4 lg:w-3/4 leading-6">
-                    {{ intro }}
-                </p>
-            </template>
+            <core-h1 :title="title"></core-h1>
+            <p class="leading-6">
+                {{ intro }}
+            </p>
         </banner>
         <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
             <div v-if="eventType === 'talks'">
