@@ -36,7 +36,7 @@
             ></div>
         </div>
         <div class="speechCard__speakerNames flex-1">
-            {{ speakers.map((speaker) => speaker.name).join('、') }}
+            {{ speakers.map((speaker) => speaker.name).join(', ') }}
         </div>
         <div class="speechCard__category self-start">
             {{ $t(`category.${category}`) }}
