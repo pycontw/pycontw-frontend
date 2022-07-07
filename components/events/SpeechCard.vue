@@ -94,6 +94,9 @@ export default {
     },
     methods: {
         getDateTag(beginTime) {
+            if (!beginTime) {
+                return ''
+            }
             if (beginTime < this.dayOneMidnight) {
                 return 'Day 1'
             } else {
@@ -101,6 +104,9 @@ export default {
             }
         },
         getTime: (datetime) => {
+            if (!datetime) {
+                return ''
+            }
             const hour = ('0' + datetime.getHours()).slice(-2)
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
@@ -151,7 +157,7 @@ export default {
 
 .speechCard__date,
 .speechCard__location {
-    @apply text-[16px] text-black-200 font-semibold;
+    @apply h-5 text-[16px] text-black-200 font-semibold;
 }
 
 .speechCard__location {

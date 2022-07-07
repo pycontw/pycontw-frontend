@@ -1454,7 +1454,7 @@
                     "bio": "I'm a successful business man. Better than Mark."
                 }
             ],
-            "begin_time": "2021-10-02T06:05:00Z",
+            "begin_time": null,
             "end_time": "2021-10-02T06:35:00Z",
             "is_remote": false,
             "location": "6-r2",

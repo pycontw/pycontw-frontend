@@ -138,7 +138,7 @@ export default {
         await this.$store.dispatch('$getSpeechesData', this.eventType)
         this.speechesData = this.$store.state.speechesData.map((speech) => ({
             ...speech,
-            begin_time: new Date(speech.begin_time),
+            begin_time: speech.begin_time ? new Date(speech.begin_time) : null,
         }))
     },
     methods: {
