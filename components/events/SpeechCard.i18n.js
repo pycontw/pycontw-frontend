@@ -3,9 +3,13 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         levels: {
-            EXPERIENCED: 'H',
-            INTERMEDIATE: 'M',
-            NOVICE: 'L',
+            EXPERIENCED: 'Expert',
+            INTERMEDIATE: 'Medium',
+            NOVICE: 'Novice',
+        },
+        levelStyle: {
+            fontSize: '10px',
+            left: '5px',
         },
         category: {
             APPL: 'Application',
@@ -36,6 +40,10 @@ export default genI18nMessages({
             EXPERIENCED: '高',
             INTERMEDIATE: '中',
             NOVICE: '初',
+        },
+        levelStyle: {
+            fontSize: '16px',
+            left: '10px',
         },
         category: {
             APPL: '應用',

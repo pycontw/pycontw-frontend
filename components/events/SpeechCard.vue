@@ -5,7 +5,7 @@
                 class="speechCard__levelTriangle"
                 :style="getLevelTriangleStyle(level)"
             ></figure>
-            <div class="speechCard__level">
+            <div class="speechCard__level" :style="getLevelStyle()">
                 {{ $t(`levels.${level}`) }}
             </div>
             <div class="text-right">
@@ -116,6 +116,12 @@ export default {
                 'background-color': this.levelBgColorMapping[level],
             }
         },
+        getLevelStyle() {
+            return {
+                'font-size': this.$t('levelStyle.fontSize'),
+                left: this.$t('levelStyle.left'),
+            }
+        },
         getMaskImgStyle(img) {
             return {
                 '-webkit-mask-image': `url(${img})`,
@@ -143,7 +149,7 @@ export default {
 }
 
 .speechCard__levelTriangle {
-    @apply absolute left-0 top-0 h-14 w-14;
+    @apply absolute left-0 top-0 h-14 w-16;
     content: '';
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
     clip-path: polygon(0 0, 0% 100%, 100% 0);
@@ -151,8 +157,7 @@ export default {
 }
 
 .speechCard__level {
-    @apply absolute left-2 text-[16px] text-primary-900 font-black;
-    font-family: 'Noto Serif TC', serif;
+    @apply absolute text-primary-900 font-black font-serif;
 }
 
 .speechCard__date,
