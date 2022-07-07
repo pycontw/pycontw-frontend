@@ -1,12 +1,12 @@
 <template>
-    <i18n-page-wrapper>
+    <i18n-page-wrapper :use-bg-decoration="false">
         <div class="w-full">
             <core-h1 :title="$t('title')" center></core-h1>
             <i18n path="intro" tag="p" class="intro">
                 <template #br><br /></template>
             </i18n>
             <div class="speechForm">
-                <h2>{{ $t('formTitle') }}</h2>
+                <span class="speechForm__header">{{ $t('formTitle') }}</span>
                 <p class="speechForm__content">{{ $t('form') }}</p>
             </div>
         </div>
@@ -246,16 +246,17 @@ export default {
 
 .speechForm {
     @apply mx-0;
-    @apply md:mx-6 md:mb-12;
+    @apply md:mb-12;
     @apply flex flex-col justify-around md:flex-row;
     @apply text-center;
 }
 
-h2 {
-    @apply my-0 md:w-64 mx-auto;
+.speechForm__header {
+    @apply my-0;
+    @apply w-full md:w-1/5;
     @apply font-sans font-normal text-primary-500;
     @apply text-base md:text-lg;
-    @apply text-left md:text-center;
+    @apply text-left;
 }
 
 .speechForm__content {
@@ -298,7 +299,7 @@ h2 {
 }
 
 .speechBox {
-    @apply py-1 px-5 md:px-10 mt-5;
+    @apply pt-4 px-5 md:px-10 mt-5;
     @apply flex flex-col md:flex-row;
     @apply bg-primary-900 border border-primary-900;
     @apply relative;

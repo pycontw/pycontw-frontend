@@ -1,5 +1,5 @@
 <template>
-    <div class="page-wrapper">
+    <div :class="pageWrapperClass">
         <div :class="classObject">
             <slot></slot>
         </div>
@@ -12,6 +12,7 @@ export default {
     props: {
         customX: { type: Boolean, default: false },
         customY: { type: Boolean, default: false },
+        useBgDecoration: { type: Boolean, default: true },
     },
     computed: {
         classObject() {
@@ -30,6 +31,12 @@ export default {
                 'xl:mx-auto': !this.customX,
                 'xl:w-[1040px]': !this.customX,
             }
+        },
+        pageWrapperClass() {
+            if (this.useBgDecoration) {
+                return 'bg-none lg:bg-wrapper bg-no-repeat bg-wrapper-top-left bg-wrapper-size'
+            }
+            return 'bg-none'
         },
     },
 }
@@ -70,6 +77,6 @@ li {
 }
 
 .page-wrapper {
-    @apply bg-none lg:bg-wrapper bg-no-repeat bg-wrapper-top-left bg-wrapper-size;
+    @apply bg-none bg-no-repeat bg-wrapper-top-left bg-wrapper-size;
 }
 </style>
