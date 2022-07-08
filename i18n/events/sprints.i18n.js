@@ -4,8 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'Sprints',
         intro:
-            'There will be two sprint events for PyCon APAC 2022, ' +
-            'the first event will be held on 3/13 (Sun.) 10:00 ~ 17:00 (TST).\n\n' +
+            'The Summer Sprint event will be held on 8/14 (Sun.) 09:30 ~ 17:00 (TST).\n\n' +
             'A sprint event gathers open source project owners, contributors, ' +
             'and people who want to contribute but are trying to find a place to start. ' +
             'During a sprint, project hosts bring their unresolved issues or ' +
@@ -34,8 +33,7 @@ export default genI18nMessages({
     'zh-hant': {
         title: '衝刺開發 (Sprints)',
         intro:
-            'PyCon APAC 2022 將會有兩次的衝刺開發 (Sprint)，' +
-            '第一次的活動時間是 3/13 (日) 10:00 ~ 16:30。' +
+            'PyCon APAC 2022 夏季衝刺開發的活動時間是 8/14 (日) 09:30 ~ 17:00。' +
             '衝刺開發是一個聚集開源專案負責人、貢獻者、想貢獻但不知道從何開始的人的活動。' +
             '在活動中，將會有專案領導人帶著他們專案待解決的問題、待開發的功能來現場分享與解說。' +
             '你可以選擇加入自己喜歡的專案，或是帶著自己的專案和大家分享！\n\n' +
