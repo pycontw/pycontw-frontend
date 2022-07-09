@@ -261,7 +261,7 @@ export default {
 
 .speechForm__content {
     @apply font-sans font-normal;
-    @apply text-xs md:text-sm;
+    @apply text-sm;
 }
 
 .speechesList__wrapper {
