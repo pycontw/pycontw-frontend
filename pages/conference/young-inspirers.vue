@@ -77,6 +77,7 @@
                                 <div class="flex flex-row">
                                     <text-button
                                         :href="speech.live_link"
+                                        :primary="true"
                                         small
                                         class="linkButton"
                                     >
@@ -84,8 +85,7 @@
                                     </text-button>
                                     <text-button
                                         :href="speech.note_link"
-                                        secondary
-                                        large
+                                        :secondary="true"
                                         class="linkButton"
                                     >
                                         前往共筆
