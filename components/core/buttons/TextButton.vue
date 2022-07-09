@@ -148,8 +148,10 @@ export default {
     &.--small:not(.--is-link),
     &.--small > a {
         @apply h-12 font-semibold text-base;
-        padding: 12px 36px;
+        padding: 10px 22px;
         min-width: 80px;
+        height: 42px;
+        font-size: 16px;
     }
 }
 .core-button.--primary > a:after {
