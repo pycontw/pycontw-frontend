@@ -34,16 +34,16 @@ Frontend of PyCon TW official website.
 
 4. Serve with hot reload at localhost:3000:
 
-```bash
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
 
-- Also, we have mock server to handle API on local:
+5. Also, we have mock server to handle API on local:
 
-```bash
-# You need to add Environment Variables(Step.2). Otherwise, some of the pages may not work correctly.
-npm run json-server
-```
+    ```bash
+    # You need to add Environment Variables(Step.2). Otherwise, some of the pages may not work correctly.
+    npm run json-server
+    ```
 
 ### Method 2: `Run Development Server with Docker`
 
