@@ -5,60 +5,49 @@
             <div
                 v-for="(speaker, index) in data.speakers"
                 :key="`speech_details_speaker_${index}`"
-                class="speech_speakerContainer"
+                class="speech__speakerContainer"
             >
-                <div class="speech__speakerThumbnail">
-                    <img :src="speaker.thumbnail_url" :alt="speaker.name" />
+                <div class="speech__speaker">
+                    <div class="speech__speakerThumbnail">
+                        <img :src="speaker.thumbnail_url" :alt="speaker.name" />
+                    </div>
+                    <p class="speech__speakerName">{{ speaker.name }}</p>
+                    <div class="speech__profile">
+                        <div
+                            v-if="!!speaker.facebook_profile_url"
+                            class="speech__extLink"
+                        >
+                            <ext-link :href="speaker.facebook_profile_url">
+                                <facebook-icon />
+                            </ext-link>
+                        </div>
+                        <div
+                            v-if="!!speaker.github_profile_url"
+                            class="speech__extLink"
+                        >
+                            <ext-link :href="speaker.github_profile_url">
+                                <github-icon />
+                            </ext-link>
+                        </div>
+                        <div
+                            v-if="!!speaker.twitter_profile_url"
+                            class="speech__extLink"
+                        >
+                            <ext-link :href="speaker.twitter_profile_url">
+                                <twitter-icon />
+                            </ext-link>
+                        </div>
+                    </div>
                 </div>
-                <p class="speech__speakerName">{{ speaker.name }}</p>
-            </div>
-        </div>
-
-        <div class="speech__infoSection">
-            <div class="speech__infos">
-                <div class="speech__info">
-                    <img
-                        :src="icons.location"
-                        class="icon"
-                        alt="icon-location"
-                    />
-                    {{ locationMapping[data.location] }}
-                </div>
-                <div class="speech__info">
-                    <img
-                        :src="icons.language"
-                        class="icon"
-                        alt="icon-language"
-                    />
-                    {{ $t(`languages.${data.language}`) }}
-                </div>
-                <div class="speech__info">
-                    <img
-                        :src="icons.datetime"
-                        class="icon"
-                        alt="icon-datetime"
-                    />
-                    {{ $t(`terms.${data.dateTag}`) }} •
-                    {{ getTime(data.begin_time) }}-{{ getTime(data.end_time) }}
-                </div>
-                <div class="speech__info">
-                    <img :src="icons.level" class="icon" alt="icon-level" />
-                    {{ $t(`levels.${data.python_level}`) }}
-                </div>
-                <div class="speech__info">
-                    <img
-                        :src="icons.category"
-                        class="icon"
-                        alt="icon-category"
-                    />
-                    {{ $t(`categories.${data.category}`) }}
-                </div>
+                <p class="speech__intro">
+                    {{ speaker.bio }}
+                </p>
             </div>
         </div>
 
         <tabs class="speech__tabs">
             <tab :title="$t('terms.intro')">
-                <div class="break-words">
+                <div class="speech__tabBox">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.abstract') }}
                     </p>
@@ -66,7 +55,7 @@
                         {{ data.abstract }}
                     </p>
                 </div>
-                <div class="break-words">
+                <div class="speech__tabBox">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.description') }}
                     </p>
@@ -91,57 +80,49 @@
                     <youtube :video-id="data.youtube_id"></youtube>
                 </div>
             </tab>
-            <tab :title="$t('terms.bio')">
-                <div
-                    v-for="(speaker, index) in data.speakers"
-                    :key="`speech_details_tab_speaker_${index}`"
-                    class="mb-4"
-                >
-                    <div>
-                        <p class="speech__tabParagraphTitle">
-                            {{ speaker.name }}
-                        </p>
-                        <p class="speech__tabParagraph">{{ speaker.bio }}</p>
-                    </div>
-
-                    <div class="flex">
-                        <div class="speech__extLink">
-                            <ext-link
-                                v-if="!!speaker.github_profile_url"
-                                :href="speaker.github_profile_url"
-                            >
-                                <fa
-                                    :icon="['fab', 'github-square']"
-                                    aria-hidden="true"
-                                    class="mr-2"
-                                ></fa>
-                            </ext-link>
-                        </div>
-                        <div class="speech__extLink">
-                            <ext-link
-                                v-if="!!speaker.twitter_profile_url"
-                                :href="speaker.twitter_profile_url"
-                            >
-                                <fa
-                                    :icon="['fab', 'twitter-square']"
-                                    aria-hidden="true"
-                                    class="mr-2"
-                                ></fa>
-                            </ext-link>
-                        </div>
-                        <div class="speech__extLink">
-                            <ext-link
-                                v-if="!!speaker.facebook_profile_url"
-                                :href="speaker.facebook_profile_url"
-                            >
-                                <fa
-                                    :icon="['fab', 'facebook']"
-                                    aria-hidden="true"
-                                    class="mr-2"
-                                ></fa>
-                            </ext-link>
-                        </div>
-                    </div>
+            <tab :title="$t('terms.else')">
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.location') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ locationMapping[data.location] }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.date') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`terms.${data.dateTag}`) }} •
+                        {{ getTime(data.begin_time) }}-{{
+                            getTime(data.end_time)
+                        }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.language') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`languages.${data.language}`) }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.level') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`levels.${data.python_level}`) }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.category') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`categories.${data.category}`) }}
+                    </p>
                 </div>
             </tab>
             <tab v-if="!!data.slido_embed_link" title="Slido">
@@ -172,6 +153,9 @@ import Tab from '@/components/core/tabs/Tab.vue'
 import Tabs from '@/components/core/tabs/Tabs.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import Youtube from '@/components/core/embed/Youtube.vue'
+import FacebookIcon from '@/components/core/icons/FacebookIcon'
+import GithubIcon from '@/components/core/icons/GithubIcon'
+import TwitterIcon from '@/components/core/icons/TwitterIcon'
 
 export default {
     i18n,
@@ -182,6 +166,9 @@ export default {
         Tab,
         Tabs,
         ExtLink,
+        FacebookIcon,
+        GithubIcon,
+        TwitterIcon,
         Youtube,
         MarkdownRenderer,
     },
@@ -235,7 +222,7 @@ export default {
             }
         },
         getDateTag(beginTime) {
-            const dayOneMidnight = new Date('2021-10-02 16:00:00')
+            const dayOneMidnight = new Date('2022-09-03 16:00:00')
             if (beginTime < dayOneMidnight) {
                 return 'day1'
             } else {
@@ -281,53 +268,58 @@ export default {
 .icon {
     @apply ml-2 mr-8;
 }
-
-.speech__speakers {
-    @apply flex justify-center mt-6 mb-8 md:mb-16;
+.speech__title {
+    @apply md:mb-20;
 }
-.speech_speakerContainer {
-    @apply flex flex-col;
+.speech__speakers {
+    @apply flex flex-col mt-6 mb-4 md:mb-8;
+}
+.speech__speakerContainer {
+    @apply flex flex-col w-full md:flex-row mb-12;
+}
+.speech__speaker {
+    @apply flex flex-col mx-10;
 }
 .speech__speakerThumbnail {
-    @apply h-32 w-32 mx-12;
+    @apply h-24 w-24 md:h-28 md:w-28 mx-auto;
 }
 .speech__speakerThumbnail img {
     @apply h-full object-cover rounded-full;
 }
 .speech__speakerName {
-    @apply font-serif font-black text-center mt-7 text-pink-500;
+    @apply font-serif font-black text-center my-3;
 }
-
-.speech__infoSection {
-    @apply inline-block text-xs md:text-sm mb-12 md:mb-24;
-    @apply px-2 py-4 md:p-6;
-    @apply rounded-2xl w-full border-2 bg-opacity-0 border-pink-500 shadow-pink-500;
-    line-height: 29px;
-    color: #c7c7c7;
+.speech__profile {
+    @apply flex justify-center;
 }
-.speech__infos {
-    @apply grid grid-cols-1 sm:grid-cols-2 gap-y-6;
+.speech__extLink {
+    @apply mx-2;
 }
-.speech__info {
-    @apply flex items-center font-serif;
-    @apply ml-1 md:ml-2 lg:ml-4 mr-auto;
-    color: #e6ba17;
+.speech__extLink svg {
+    @apply fill-primary-300;
+}
+.speech__intro {
+    @apply flex justify-center my-10 text-black-200 md:my-2;
 }
 
 .speech__tabs {
     @apply mb-4 md:mb-8 my-10 w-full;
 }
+.speech__tabBox {
+    @apply mb-6 break-words;
+}
 .speech__tabParagraphTitle {
-    @apply font-serif font-bold mb-2;
-    color: #e6ba17;
+    @apply font-serif font-bold mb-2 mr-8 text-pink-700;
 }
 .speech__tabParagraph {
     @apply font-sans mb-2;
 }
+.speech__info {
+    @apply flex mr-2 mb-2;
+}
 
 .speech__extLink {
-    @apply font-bold;
-    color: #e6ba17;
+    @apply font-bold text-pink-700;
 }
 .speech__extLink:hover {
     @apply text-primary-500;
