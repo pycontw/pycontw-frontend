@@ -76,7 +76,8 @@ export default {
                 lang: {
                     ENEN: require('~/static/img/icons/lang/ENEN.svg'),
                     ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
-                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'),
+                    JPEN: require('~/static/img/icons/lang/JPEN.svg'), // added for PyCon APAC 2022
+                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'), // not used in PyCon APAC 2022
                 },
             },
             locationMapping: {
