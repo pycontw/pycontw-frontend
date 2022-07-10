@@ -1,107 +1,165 @@
 <template>
-    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
-        <core-h1 title="2021 Young Inspirers TW" center></core-h1>
-        <div
-            class="h-40 sm:h-52 md:h-64 w-full mb-8"
-            :style="bannerStyle"
-        ></div>
-        <p class="intro">{{ intro }}</p>
-
-        <ul class="list-disc">
-            <li class="listTitle">活動時間：</li>
-            <li class="list-none">2021/08/14 13:30-17:00</li>
-            <li class="listTitle">活動形式：</li>
-            <li class="list-none">
-                Youtube 線上直播：
-                <ext-link
-                    href="https://www.youtube.com/watch?v=FAB5C7V7h-o"
-                    highlight
-                    underline
-                    >點我看直播</ext-link
-                >
-            </li>
-            <li class="list-none">
-                線上共同筆記：
-                <ext-link
-                    href="https://hackmd.io/OXhLGazIRs6v4a_U_Zwq0g"
-                    highlight
-                    underline
-                    >點我看共筆</ext-link
-                >
-            </li>
-        </ul>
-
-        <div class="scheduleSection">
-            <h2>活動流程</h2>
-            <div class="table w-full mt-4">
-                <div class="table-row-group w-full">
-                    <div
-                        v-for="(item, index) in schedules"
-                        :key="`item_${index}`"
-                        class="table-row font-serif"
-                    >
-                        <div class="table-cell w-5/12 text-right pb-4">
-                            {{ item[0] }}
-                        </div>
-                        <div class="table-cell w-1/12"></div>
-                        <div class="table-cell w-6/12">
-                            {{ item[1] }}
-                        </div>
-                    </div>
-                </div>
+    <i18n-page-wrapper :use-bg-decoration="false">
+        <div class="w-full">
+            <core-h1 :title="$t('title')" center></core-h1>
+            <i18n path="intro" tag="p" class="intro">
+                <template #br><br /></template>
+            </i18n>
+            <div class="speechForm">
+                <span class="speechForm__header">{{ $t('formTitle') }}</span>
+                <p class="speechForm__content">{{ $t('form') }}</p>
             </div>
         </div>
-
-        <h2>講者介紹</h2>
-        <div
-            v-for="(speechData, i) in speeches"
-            :key="`young_inspirers_speech_${i}`"
-        >
-            <div class="speakers">
-                <div
-                    v-for="(speaker, index) in speechData.speakers"
-                    :key="`young_inspirers_details_speaker_${index}`"
-                    class="speakerContainer"
-                >
-                    <div class="speakerThumbnail">
-                        <img :src="speaker.photo" :alt="speaker.name" />
-                    </div>
-                    <p class="speakerName">{{ speaker.name }}</p>
-                </div>
-            </div>
-            <p class="speechTitle">{{ speechData.title }}</p>
-            <tabs class="tabs">
-                <tab :title="$t('terms.speech')">
-                    <div class="whitespace-pre-line break-words">
-                        <p class="tabParagraph">
-                            {{ speechData.description }}
-                        </p>
-                    </div>
-                </tab>
-                <tab :title="$t('terms.bio')">
-                    <div
-                        v-for="(speaker, index) in speechData.speakers"
-                        :key="`young_inspirers_tab_speaker_${index}`"
-                        class="mb-4 whitespace-pre-line"
-                    >
-                        <div class="whitespace-pre-line">
-                            <p class="tabParagraphTitle">
-                                {{ speaker.name }}
-                            </p>
-                            <p class="tabParagraph">{{ speaker.bio }}</p>
-                        </div>
-                    </div>
-                </tab>
-            </tabs>
-        </div>
-        <h2>特別感謝</h2>
-        <div>
+        <div class="speechesList__wrapper">
             <div
-                v-for="(logo, index) in sponsorLogos"
-                :key="`young_inspirers_sponsors_${index}`"
-                class="sponsors"
+                v-for="(speechInfo, speechDayIdx) in $t('speechInfos')"
+                :key="`speech_info_${speechDayIdx}`"
+                class="speechList__dayBlock"
             >
-                <img :src="logo.img" :alt="logo.alt" />
+                <div class="day">
+                    <p class="day__date">
+                        {{ speechInfo.date }}
+                    </p>
+                    <p class="day__month">
+                        {{ speechInfo.month }}
+                    </p>
+                </div>
+
+                <div class="speeches__wrapper">
+                    <div
+                        v-for="(speech, speechIdx) in speechInfo.speeches"
+                        :key="`speech_${speechIdx}`"
+                        class="speech__box__wrapper"
+                    >
+                        <div class="speechBox">
+                            <div>
+                                <div class="speechBox__avatar__wrapper">
+                                    <img
+                                        v-for="(speakerAvatar, i) in tagToPhoto[
+                                            speech.tag
+                                        ]"
+                                        :key="`speech_info_${speechIdx}_photo_${i}`"
+                                        :src="speakerAvatar"
+                                        :alt="tagToSpeaker[speech.tag][i]"
+                                        class="speechBox__avatar"
+                                    />
+                                </div>
+                                <p class="speechBox__time">
+                                    {{ speech.speechtime }}
+                                    <img
+                                        class="speechBox__langIcon"
+                                        :src="tagToLangIcon[speech.tag]"
+                                    />
+                                </p>
+                                <p class="speechBox__title">
+                                    {{ speech.title }}
+                                </p>
+                                <div
+                                    class="speechBox__speaker"
+                                    @click="
+                                        popupShow(
+                                            `${speechDayIdx}-${speechIdx}`,
+                                        )
+                                    "
+                                >
+                                    <span
+                                        v-for="(speaker, i) in tagToSpeaker[
+                                            speech.tag
+                                        ]"
+                                        :key="`speech_info_${speechIdx}_speaker_${i}`"
+                                    >
+                                        {{ speaker }}
+                                    </span>
+                                </div>
+                                <p class="speechBox__description">
+                                    {{ speech.full_description }}
+                                </p>
+                                <div class="flex flex-row">
+                                    <text-button
+                                        :href="speech.live_link"
+                                        :primary="true"
+                                        small
+                                        class="linkButton"
+                                    >
+                                        {{ $t('terms.youtube') }}
+                                    </text-button>
+                                    <text-button
+                                        :href="speech.note_link"
+                                        :secondary="true"
+                                        class="linkButton"
+                                    >
+                                        {{ $t('terms.note') }}
+                                    </text-button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            ref="popupCover"
+                            class="speechBox__popup__wrapper"
+                            :class="{
+                                'speechBox__popup__wrapper--show':
+                                    popupIndex ===
+                                    `${speechDayIdx}-${speechIdx}`,
+                            }"
+                        >
+                            <div class="closingArea" @click="popupClose"></div>
+                            <div class="speechBox__popup">
+                                <button
+                                    ref="popupBtn"
+                                    class="speechBox__popup__button"
+                                    @click="popupClose"
+                                >
+                                    ✕
+                                </button>
+                                <div class="flex flex-row">
+                                    <img
+                                        v-for="(speakerAvatar, i) in tagToPhoto[
+                                            speech.tag
+                                        ]"
+                                        :key="`speech_info_${speechIdx}_photo_${i}`"
+                                        :src="speakerAvatar"
+                                        :alt="tagToSpeaker[speech.tag][i]"
+                                        class="speechBox__popup__img"
+                                    />
+                                </div>
+                                <div
+                                    class="speechBox__popup__speaker"
+                                    @click="
+                                        popupShow(
+                                            `${speechDayIdx}-${speechIdx}`,
+                                        )
+                                    "
+                                >
+                                    <div class="flex justify-center">
+                                        <span
+                                            v-for="(
+                                                speaker, i
+                                            ) in speech.speaker"
+                                            :key="`speech_info_${speechDayIdx}_${speechIdx}_speaker_${i}`"
+                                            class="speechBox__popup__speaker"
+                                        >
+                                            {{ speaker.name }}
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="
+                                            speechBox__popup__speaker__description
+                                        "
+                                    >
+                                        <p
+                                            v-for="(
+                                                speaker, i
+                                            ) in speech.speaker"
+                                            :key="`speech_info_${speechDayIdx}_${speechIdx}_speaker_desc${i}`"
+                                        >
+                                            {{ speaker.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </i18n-page-wrapper>
@@ -109,12 +167,9 @@
 
 <script>
 import i18n from '@/i18n/conference/young-inspirers.i18n'
-
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
-import Tab from '@/components/core/tabs/Tab.vue'
-import Tabs from '@/components/core/tabs/Tabs.vue'
-import ExtLink from '@/components/core/links/ExtLink.vue'
+import TextButton from '@/components/core/buttons/TextButton'
 
 export default {
     i18n,
@@ -122,145 +177,60 @@ export default {
     components: {
         I18nPageWrapper,
         CoreH1,
-        Tab,
-        Tabs,
-        ExtLink,
+        TextButton,
     },
     data() {
         return {
-            bannerUrl: require('~/static/img/young-inspirers/banner.png'),
-            title: 'Young Inspirers',
-            intro:
-                'Young Inspirers 是今年第一個由 PyCon Taiwan 所籌備的小型線上會議，' +
-                '我們將邀請具有獨特經歷的學生講者進行分享，期望透過學習經驗的交流與傳承，' +
-                '促進更多 Young Inspirers 的出現。',
-            schedules: [
-                ['13:30 - 13:35', '活動開場'],
-                ['13:35 - 14:15', '講者分享: 廖偉涵'],
-                ['14:15 - 14:20', '休息時間'],
-                ['14:20 - 15:00', '講者分享: 蔡佳恩'],
-                ['15:00 - 15:10', '休息時間 & 贊助商時間'],
-                ['15:10 - 15:50', '講者分享: 李米蕙、蔡仲淇'],
-                ['15:50 - 16:00', '活動結尾'],
-                ['16:00 - 17:00', '自由交流 at Gather.Town'],
-            ],
-            speeches: [
-                {
-                    title: '那些在家自學的日子',
-                    speakers: [
-                        {
-                            name: 'Wey-Han Liaw',
-                            bio:
-                                '廖偉涵，目前在美國西雅圖的小公司 Intentionet 擔任軟體工程師，' +
-                                '打滾了大概一年半左右。目前是大三的年紀，高中時是非學校型態實驗教育學生，' +
-                                '該段期間也在 PyCon Taiwan 當過志工以及講者。',
-                            photo: require('~/static/img/young-inspirers/Adrian.jpg'),
-                        },
-                    ],
-                    description:
-                        '我在高中時並沒有去學校，我當時是一個非學校型態實驗教育學生' +
-                        '（以下簡稱自學），並且花了很多時間在學習寫程式。而我後來完成了高中學業，' +
-                        '現在在小型新創公司上班當軟體工程師。也許你會好奇自學生的生活，' +
-                        '也許你會好奇自學生在高中以後的發展，也許你自己就是自學生，' +
-                        '也許你有興趣申請在家自學⋯⋯。在這場演講中，' +
-                        '我想以一個完成自學（不能講畢業 QQ）以後、大學生的年紀，' +
-                        '剛出社會打滾的身份，和大家聊聊我當時自學的故事，以及我現在的反思。',
-                },
-                {
-                    title: 'HighSchooler in Technological Startup–高中生科技新創實習經驗談',
-                    speakers: [
-                        {
-                            name: 'Chia-En Tsai',
-                            bio:
-                                '蔡佳恩，即將就讀於美國長春藤哥倫比亞大學的大一新生，預期主修資工（CS）。' +
-                                '高中為北一女 AI 研究社社長，在高二高三一年半期間也在' +
-                                '資安新創奧義智慧科技（CyCraft）實習，為第一位高中實習生。' +
-                                '在實習期間致力於建立 NLP 資安威脅情資分析系統（簡稱 CTI ANT），' +
-                                '幫助資安團隊自動化分析大量資安資料以快速應對資安威脅，' +
-                                '於 PyCon TW 2020 以及 IEEE International CyberHunt 2020 發表 ' +
-                                'CTI ANT 研究成果。',
-                            photo: require('~/static/img/young-inspirers/Chia-En.jpg'),
-                        },
-                    ],
-                    description:
-                        '在這次的演講中，希望和大家分享我在高二到高三約一年半的期間，' +
-                        '在奧義智慧資安科技公司實習的故事。' +
-                        '在過程中我也會以現在即將升上大一的身分回顧高中時的實習歷程，' +
-                        '提供我自己的一些心得、反思，以及給現代高中生的一些鼓勵和建議，' +
-                        '希望能鼓勵更多台灣的學生更加有興趣挑戰實習～' +
-                        '或許你會好奇高中生在較少專業領域的訓練下，如何爭取科技公司的實習機會？' +
-                        '或許你也會好奇高中生在實習中可以做些甚麼，以及會有什麼蛻變和優勢呢？' +
-                        '無論是對上述問題感到好奇、充滿疑問的你、或是正打算踏出實習的第一步的你，' +
-                        '希望我的故事能夠帶給你一些啟發，讓你也能成功打造出自己獨特的實習體驗～',
-                },
-                {
-                    title: '透過社團與科技的近距離接觸',
-                    speakers: [
-                        {
-                            name: '李米蕙',
-                            bio:
-                                '台灣師範大學大一新生，高中為北一女 AI 研究社第二屆副社長，' +
-                                '參訪過 Pinkoi、AWS、資安新創奧義智慧科技三家公司，' +
-                                '於 2021 年參加過第一屆 GiCS 尋找資安女婕思，' +
-                                '與隊友奪得高中職組創意發想賽第一名的佳績。',
-                            photo: require('~/static/img/young-inspirers/Li-Mi-Hui.png'),
-                        },
-                        {
-                            name: '蔡仲淇',
-                            bio:
-                                '目前為高三生，曾任北一 AI 研究社第三屆社長，' +
-                                '同為第一屆 GiCS 創意發想賽 高中職組第一名團隊的成員。',
-                            photo: require('~/static/img/young-inspirers/Tsai-Chung-Chi.jpg'),
-                        },
-                    ],
-                    description:
-                        '在這次的演講中，希望和大家分享我們在AI研究社的經驗與收穫，' +
-                        '其中包含選社的動機、學到的課程、公司的參訪體驗、' +
-                        '舉辦的社會服務活動與衍生的競賽過程。' +
-                        '提供我們透過社團與科技的接觸、學習到的知識及獲得的機會與經驗，' +
-                        '讓大家更了解有哪些方法可以藉由社團更進一步的增進自我。' +
-                        '許多學校應該都有資訊類的社團，' +
-                        '但是將焦點放在「人工智慧」的社團似乎還是比較少，' +
-                        '高中生能如何接觸這類資訊？又能從社團中學到什麼？' +
-                        '我們希望藉由今天的 30 分鐘和各位一起探討這些問題。',
-                },
-            ],
-            sponsorLogos: [
-                {
-                    img: require('~/static/img/young-inspirers/WQTW.png'),
-                    alt: 'WORLDQUANT',
-                },
-            ],
+            tagToPhoto: {
+                speech1: [require('~/static/img/young-inspirers/speaker1.svg')],
+                speech2: [require('~/static/img/young-inspirers/speaker2.svg')],
+                speech3: [
+                    require('~/static/img/young-inspirers/speaker3-1.svg'),
+                    require('~/static/img/young-inspirers/speaker3-2.svg'),
+                ],
+                speech4: [require('~/static/img/young-inspirers/speaker4.svg')],
+            },
+            tagToSpeaker: {
+                speech1: this.$i18n.t('speech1Speaker'),
+                speech2: this.$i18n.t('speech2Speaker'),
+                speech3: this.$i18n.t('speech3Speaker'),
+                speech4: this.$i18n.t('speech4Speaker'),
+            },
+            tagToLangIcon: {
+                speech1: require('~/static/img/icons/lang/ENEN.svg'),
+                speech2: require('~/static/img/icons/lang/ENEN.svg'),
+                speech3: require('~/static/img/icons/lang/ZHZH.svg'),
+                speech4: require('~/static/img/icons/lang/ZHZH.svg'),
+            },
+            popupIndex: null,
         }
     },
-    computed: {
-        bannerStyle() {
-            return {
-                'background-image': `url(${this.bannerUrl})`,
-                'background-repeat': 'no-repeat',
-                'background-size': 'contain',
-                'background-position': 'center',
-            }
+    methods: {
+        popupShow(index) {
+            this.popupIndex = index
+        },
+        popupClose() {
+            this.popupIndex = null
         },
     },
     head() {
         return {
-            title: this.title,
+            title: this.$i18n.t('title'),
             meta: [
                 {
                     hid: 'og:title',
                     property: 'og:title',
-                    content: this.title,
+                    content: this.$i18n.t('title'),
                 },
                 {
                     hid: 'og:description',
                     property: 'og:description',
-                    content: this.intro,
+                    content: this.$i18n.t('intro'),
                 },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: this.intro,
+                    content: this.$i18n.t('intro'),
                 },
             ],
         }
@@ -270,65 +240,159 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply text-xs md:text-sm font-serif mb-8;
-    line-height: 33px;
+    @apply font-sans text-sm leading-5 md:leading-8 md:text-sm mb-8;
+    line-height: 30px;
 }
 
-ul.list-disc {
-    @apply text-xs md:text-sm font-serif;
-    padding-left: 20px !important;
-}
-.listTitle {
-    @apply font-bold text-base text-pink-500;
-}
-
-h2 {
-    @apply font-serif font-black text-center mx-auto text-pink-500;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0 !important;
-    font-size: 24px;
+.speechForm {
+    @apply mx-0;
+    @apply md:mb-12;
+    @apply flex flex-col justify-around md:flex-row;
+    @apply text-center;
 }
 
-.scheduleSection {
-    @apply inline-block text-xs md:text-sm mb-12 md:mb-24;
-    @apply px-1 sm:px-2 md:px-4 py-2 sm:py-4;
-    @apply rounded-2xl w-full border-2 bg-opacity-0 border-pink-500 shadow-pink-500;
-    line-height: 29px;
-    color: #c7c7c7;
+.speechForm__header {
+    @apply my-0;
+    @apply w-full md:w-1/5;
+    @apply font-sans font-normal text-primary-500;
+    @apply text-base md:text-lg;
+    @apply text-left;
 }
 
-.speakers {
-    @apply flex justify-center mt-16;
+.speechForm__content {
+    @apply font-sans font-normal;
+    @apply text-sm;
 }
-.speakerContainer {
+
+.speechesList__wrapper {
+    @apply mx-auto;
+    @apply w-full;
+}
+
+.speechList__dayBlock {
+    @apply flex flex-col md:flex-row;
+    @apply mb-0 md:mb-10;
+}
+
+.day {
+    @apply flex flex-col;
+    @apply mt-9 md:mt-0 mb-5 md:mb-0;
+}
+
+.day__date {
+    @apply font-sans font-normal text-4xl md:text-5xl;
+    @apply my-0;
+}
+
+.day__month {
+    @apply font-sans font-normal text-base;
+    @apply my-0;
+    @apply leading-normal;
+}
+
+.speeches__wrapper {
+    @apply flex flex-col;
+    @apply mx-0 md:ml-20;
+}
+.speech__box__wrapper {
     @apply flex flex-col;
 }
-.speakerThumbnail {
-    @apply h-24 w-24 sm:h-32 sm:w-32 mx-3 mb-4;
+
+.speechBox {
+    @apply pt-4 px-5 md:px-10 mt-5;
+    @apply flex flex-col md:flex-row;
+    @apply bg-primary-900 border border-primary-900;
+    @apply relative;
+    border-radius: 24px;
 }
-.speakerThumbnail img {
-    @apply object-cover rounded-full;
-    height: 100%;
-}
-.speakerName {
-    @apply font-serif font-black text-center mb-4 text-pink-500;
-}
-.speechTitle {
-    @apply font-serif font-black text-center mb-7 text-pink-500;
+.speech__box__wrapper:first-of-type .speechBox {
+    @apply mt-0;
 }
 
-.tabs {
-    @apply mb-4 md:mb-16 w-full;
-}
-.tabParagraphTitle {
-    @apply font-serif font-bold mb-2;
-    color: #e6ba17;
-}
-.tabParagraph {
-    @apply font-serif mb-2;
+.speechBox__time {
+    @apply my-0;
 }
 
-.sponsors {
-    @apply w-3/4 sm:w-1/2 mx-auto mt-4;
+.speechBox__langIcon {
+    @apply inline-block;
+    filter: invert(92%) sepia(4%) saturate(1032%) hue-rotate(192deg)
+        brightness(90%) contrast(96%);
+}
+.speechBox__title {
+    @apply flex flex-row;
+    @apply font-sans font-normal;
+    @apply text-lg;
+    @apply mt-1 mb-2 text-pink-700;
+}
+
+.speechBox__speaker {
+    @apply underline;
+    @apply font-sans font-normal text-sm;
+    @apply my-0;
+    @apply inline-block;
+}
+.speechBox__speaker:hover {
+    @apply text-primary-500 cursor-pointer;
+}
+.speechBox__description {
+    @apply font-sans font-normal text-sm text-black-200;
+    @apply mt-2 mb-0 overflow-hidden;
+}
+
+.speechBox__avatar__wrapper {
+    @apply absolute;
+    @apply hidden md:flex;
+    right: 30px;
+    top: 30px;
+}
+.speechBox__avatar {
+    transform: translateX(-10px);
+}
+.speechBox__avatar:first-of-type {
+    transform: translateX(0px);
+}
+
+.speechBox__popup__img {
+    @apply object-cover rounded-lg h-16 w-16 md:h-32 md:w-32;
+    transform: translateX(-20px);
+}
+
+.speechBox__popup__img:first-of-type {
+    transform: translateX(0px);
+}
+
+.speechBox__popup__wrapper {
+    @apply fixed hidden justify-center items-center w-full h-screen left-0 top-0 lg:p-0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.speechBox__popup__wrapper--show {
+    @apply flex;
+}
+.speechBox__popup {
+    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 border-3 border-pink-700 bg-black-900 lg:p-10;
+    @apply w-11/12 md:w-4/5 md:max-w-3xl;
+    z-index: 10000;
+}
+
+.speechBox__popup__button {
+    @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
+}
+
+.speechBox__popup__speaker {
+    @apply font-serif font-semibold md:font-bold text-sm md:text-lg text-black-200;
+    @apply my-2 mr-3;
+}
+.speechBox__popup__speaker__description {
+    @apply font-sans font-normal text-xs md:text-sm text-primary-100 overflow-y-auto;
+    @apply max-h-60;
+    @apply mb-4;
+}
+.linkButton {
+    @apply mx-2 my-6;
+}
+.closingArea {
+    @apply w-full h-full absolute;
+    z-index: 9999;
 }
 </style>
