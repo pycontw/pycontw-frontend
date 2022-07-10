@@ -81,14 +81,14 @@
                                         small
                                         class="linkButton"
                                     >
-                                        觀看直播
+                                        {{ $t('terms.youtube') }}
                                     </text-button>
                                     <text-button
                                         :href="speech.note_link"
                                         :secondary="true"
                                         class="linkButton"
                                     >
-                                        前往共筆
+                                        {{ $t('terms.note') }}
                                     </text-button>
                                 </div>
                             </div>

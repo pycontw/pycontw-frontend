@@ -98,6 +98,10 @@ export default genI18nMessages({
                 ],
             },
         ],
+        terms: {
+            youtube: 'Live Stream',
+            note: 'Speech Note',
+        },
     },
     'zh-hant': {
         title: 'Young Inspirers',
@@ -196,5 +200,9 @@ export default genI18nMessages({
                 ],
             },
         ],
+        terms: {
+            youtube: '觀看直播',
+            note: '前往共筆',
+        },
     },
 })
