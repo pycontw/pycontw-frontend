@@ -26,8 +26,9 @@ export default genI18nMessages({
         languages: {
             ENEN: 'English talk',
             ZHEN: 'Chinese talk w. English slides',
-            ZHZH: 'Chinese talk w. Chinese slides',
-            TAI: 'Taiwanese Hokkien',
+            JPEN: 'Japanese talk w. English slides', // added for PyCon APAC 2022
+            ZHZH: 'Chinese talk w. Chinese slides', // not used in PyCon APAC 2022
+            TAI: 'Taiwanese Hokkien', // not used in PyCon APAC 2022
         },
         levels: {
             EXPERIENCED: 'Experienced',
@@ -96,8 +97,9 @@ export default genI18nMessages({
         languages: {
             ENEN: '英文演講',
             ZHEN: '中文演講/英文投影片',
-            ZHZH: '中文演講/中文投影片',
-            TAI: '臺灣閩南語',
+            JPEN: '日文演講/英文投影片', // added for PyCon APAC 2022
+            ZHZH: '中文演講/中文投影片', // not used in PyCon APAC 2022
+            TAI: '臺灣閩南語', // not used in PyCon APAC 2022
         },
         levels: {
             EXPERIENCED: '進階',
