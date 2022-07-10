@@ -84,14 +84,20 @@ export default genI18nMessages({
                         tag: 'speech4',
                         speechdate: 'July 30',
                         speechtime: '15:00-15:40',
-                        title: 'Coming Soon...',
+                        title: '如何用駭客思維提升自己',
                         speaker: [
                             {
                                 name: '陳怡升',
-                                description: '',
+                                description:
+                                    '怡升 Eason：（名字含義）怡然自得的提升自己，帶著快樂的心成長向上' +
+                                    '現在：1.學習科學大四 2.研究助理 3. 區塊鏈新創 Cohart 研發工程師 4. 認真的基督徒。過去：1. 網路成癮：一天玩八小時 2. 成績墊底：高中校排常駐最後一名 3. 內向害羞、不善溝通交際。未來夢想：1. 出國讀研究所、見識世界 2. 創業。更多關於我，請參考：前年在大直國中分享投影片。內容：1. 我的故事 2. 亞斯伯格的特質 3. 如何學習？' +
+                                    'https://www.facebook.com/media/set/?set=a.3040151202767474&type=3',
                             },
                         ],
-                        full_description: 'Coming Soon...',
+                        full_description:
+                            '本次訪談你會學到多種優化自己生活的駭客思維' +
+                            '講者並不是傳統別人家的小孩一帆風順，而是經歷挫折之後努力試錯，最後在年僅大四就發了七篇論文以及成為加州新創的工程師。' +
+                            '學會刻意練習你能變成高手，學會 reflective thinking 你能不斷優化生活，邀請你一同加入提升自己的行列，我們 7/30 直播相見！',
                         note_link: '',
                         live_link: 'https://youtu.be/SAbYVx_7okE',
                     },
@@ -186,14 +192,20 @@ export default genI18nMessages({
                         tag: 'speech4',
                         speechdate: 'July 30',
                         speechtime: '15:00-15:40',
-                        title: 'Coming Soon',
+                        title: '如何用駭客思維提升自己',
                         speaker: [
                             {
                                 name: '陳怡升',
-                                description: '',
+                                description:
+                                    '怡升 Eason：（名字含義）怡然自得的提升自己，帶著快樂的心成長向上' +
+                                    '現在：1.學習科學大四 2.研究助理 3. 區塊鏈新創 Cohart 研發工程師 4. 認真的基督徒。過去：1. 網路成癮：一天玩八小時 2. 成績墊底：高中校排常駐最後一名 3. 內向害羞、不善溝通交際。未來夢想：1. 出國讀研究所、見識世界 2. 創業。更多關於我，請參考：前年在大直國中分享投影片。內容：1. 我的故事 2. 亞斯伯格的特質 3. 如何學習？' +
+                                    'https://www.facebook.com/media/set/?set=a.3040151202767474&type=3',
                             },
                         ],
-                        full_description: 'Coming Soon...',
+                        full_description:
+                            '本次訪談你會學到多種優化自己生活的駭客思維' +
+                            '講者並不是傳統別人家的小孩一帆風順，而是經歷挫折之後努力試錯，最後在年僅大四就發了七篇論文以及成為加州新創的工程師。' +
+                            '學會刻意練習你能變成高手，學會 reflective thinking 你能不斷優化生活，邀請你一同加入提升自己的行列，我們 7/30 直播相見！',
                         note_link: '',
                         live_link: 'https://youtu.be/SAbYVx_7okE',
                     },
