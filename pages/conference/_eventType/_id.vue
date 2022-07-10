@@ -97,16 +97,8 @@
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.date') }}
                     </p>
-                    <p
-                        v-if="
-                            getTime(data.begin_time) && getTime(data.end_time)
-                        "
-                        class="speech__tabParagraph"
-                    >
-                        {{ $t(`terms.${data.dateTag}`) }} •
-                        {{ getTime(data.begin_time) }}-{{
-                            getTime(data.end_time)
-                        }}
+                    <p v-if="data.eventTimeString" class="speech__tabParagraph">
+                        {{ data.eventTimeString }}
                     </p>
                     <p v-else>{{ $t(`terms.TBA`) }}</p>
                 </div>
@@ -190,8 +182,7 @@ export default {
                 language: 'ENEN',
                 python_level: 'NOVICE',
                 category: 'WEB',
-                begin_time: new Date(),
-                end_time: new Date(),
+                eventTimeString: '',
             },
             icons: {
                 location: require('~/static/img/speech/icons/location.svg'),
@@ -226,9 +217,7 @@ export default {
 
             this.data = {
                 ...this.speechData,
-                begin_time: beginTime,
-                end_time: endTime,
-                dateTag: this.getDateTag(beginTime),
+                eventTimeString: this.getEventTimeString(beginTime, endTime),
             }
         },
         getDateTag(beginTime) {
@@ -246,6 +235,18 @@ export default {
             const hour = ('0' + datetime.getHours()).slice(-2)
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
+        },
+        getEventTimeString(beginTime, endTime) {
+            const dateTag = this.getDateTag(beginTime)
+            const formattedBeginTime = this.getTime(beginTime)
+            const formattedEndTime = this.getTime(endTime)
+            if (!formattedBeginTime || !formattedEndTime) {
+                return null
+            }
+            return (
+                `${this.$i18n.t(`terms.${dateTag}`)} • ` +
+                `${formattedBeginTime}-${formattedEndTime}`
+            )
         },
         isValidLocation(loc) {
             return Object.keys(this.locationMapping).includes(loc)
