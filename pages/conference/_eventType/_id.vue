@@ -184,13 +184,6 @@ export default {
                 category: 'WEB',
                 eventTimeString: '',
             },
-            icons: {
-                location: require('~/static/img/speech/icons/location.svg'),
-                language: require('~/static/img/speech/icons/language.svg'),
-                datetime: require('~/static/img/speech/icons/datetime.svg'),
-                level: require('~/static/img/speech/icons/level.svg'),
-                category: require('~/static/img/speech/icons/category.svg'),
-            },
             locationMapping: {
                 '4-r0': 'R0',
                 '5-r1': 'R1',
