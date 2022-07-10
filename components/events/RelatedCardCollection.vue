@@ -30,6 +30,11 @@
                     class="related__arrow related__arrow__right"
                     @click="rollNext"
                 >
+                    <!-- <div
+                    v-if="true"
+                    class="related__arrow related__arrow__right"
+                    @click="rollNext"
+                > -->
                     <fa :icon="['fa', 'chevron-right']"></fa>
                 </div>
             </div>
@@ -51,7 +56,8 @@ export default {
     },
     watch: {
         '$store.state.relatedData'() {
-            this.setRollLength()
+            // this.setRollLength()
+            this.setCardWidth()
         },
     },
     mounted() {
@@ -59,14 +65,23 @@ export default {
         this.offsetWidth = document.body.offsetWidth
         window.onresize = function () {
             vm.offsetWidth = document.body.offsetWidth
+            // console.log('offsetWidth: ' + vm.offsetWidth)
+            // vm.$nextTick(function () {
+            //     vm.cardContentWidth = vm.$refs.cardContent.clientWidth
+            //     console.log('cardContentWidth: ' + vm.cardContentWidth)
+            //     vm.cardWidth = vm.$refs.cardContent.children[0].clientWidth
+            //     console.log('cardWidth: ' + vm.cardWidth)
+            // })
         }
     },
     methods: {
-        setRollLength() {
-            this.rollLength =
-                (this.$store.state.relatedData.length - 1) * this.cardWidth
-        },
+        // setRollLength() {
+        //     this.rollLength =
+        //         (this.$store.state.relatedData.length - 1) * this.cardWidth
+        // },
         setCardWidth() {
+            // this.cardContentWidth = this.$refs.cardContent.clientWidth
+            // this.cardWidth = this.$refs.cardContent.children[0].clientWidth
             const margin1 = 15 + 24
             let margin2 = 18
             this.cardContentWidth = this.offsetWidth - (margin1 + margin2) * 2
@@ -96,6 +111,8 @@ export default {
                     this.offsetWidth - (margin1 + margin2) * 2
                 this.cardWidth = this.cardContentWidth * 0.25
             }
+            this.rollLength =
+                (this.$store.state.relatedData.length - 1) * this.cardWidth
         },
         rollPrev() {
             this.setCardWidth()
@@ -108,13 +125,14 @@ export default {
         },
         rollNext() {
             this.setCardWidth()
-            this.setRollLength()
+            // this.setRollLength()
             this.translateX -= this.cardContentWidth
             if (this.translateX < -this.rollLength + this.cardContentWidth) {
                 this.translateX = -this.rollLength + this.cardContentWidth
             }
             this.$refs.cardContent.style.transform =
                 'translateX(' + this.translateX + 'px)'
+            // console.log(this.cardWidth)
         },
     },
 }
