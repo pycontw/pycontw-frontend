@@ -327,6 +327,7 @@ export default {
 }
 .speech__tabParagraphTitle {
     @apply font-serif font-bold mb-2 mr-8 text-pink-700;
+    min-width: 85px;
 }
 .speech__tabParagraph {
     @apply font-sans mb-2;
