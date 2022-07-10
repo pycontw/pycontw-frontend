@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+    <i18n-page-wrapper class="py-20 px-4 sm:px-8 md:px-16 lg:px-32" custom-x>
         <core-h1 :title="data.title" center class="font-black"></core-h1>
         <div class="speech__speakers">
             <div
@@ -140,6 +140,21 @@
                 ></iframe>
             </tab>
         </tabs>
+
+        <related-card-collection>
+            <speech-card
+                v-for="speech in $store.state.relatedData"
+                :id="speech.id"
+                :key="`speech_${speech.id}`"
+                :title="speech.title"
+                :category="speech.category"
+                :speakers="speech.speakers"
+                :lang="speech.language"
+                :level="speech.python_level"
+                :to="`/conference/${speech.event_type}/${speech.id}/`"
+            >
+            </speech-card>
+        </related-card-collection>
     </i18n-page-wrapper>
 </template>
 
@@ -158,6 +173,8 @@ import Youtube from '@/components/core/embed/Youtube.vue'
 import FacebookIcon from '@/components/core/icons/FacebookIcon'
 import GithubIcon from '@/components/core/icons/GithubIcon'
 import TwitterIcon from '@/components/core/icons/TwitterIcon'
+import RelatedCardCollection from '@/components/events/RelatedCardCollection'
+import SpeechCard from '@/components/events/SpeechCard'
 
 export default {
     i18n,
@@ -173,9 +190,12 @@ export default {
         TwitterIcon,
         Youtube,
         MarkdownRenderer,
+        RelatedCardCollection,
+        SpeechCard,
     },
     data() {
         return {
+            eventType: '',
             data: {
                 title: '',
                 detailed_description: '',
@@ -208,6 +228,7 @@ export default {
         })
         await this.processData()
         this.$root.$emit('initTabs')
+        await this.$store.dispatch('$getRelatedData', this.data.category)
     },
     methods: {
         processData() {
