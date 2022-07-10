@@ -4,126 +4,88 @@ export default genI18nMessages({
     'en-us': {
         bulletins: [
             {
-                title: 'Hiring',
+                title: 'HackMD',
                 description:
-                    'The companies are here to recruit talents, hurry up! ' +
-                    "Yes, I'm talking to you! Come here, they NEED YOU!",
-                linkTitle: 'Go',
-                linkTo: '/events/jobs',
-            },
-            {
-                title: 'PyCast',
-                description:
-                    'Checkout our brand new podcast channel, PyCast. ' +
-                    'Our passion, your entertainment!',
-                linkTitle: 'Launch',
-                linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
-            },
-            {
-                title: 'HackMD Note',
-                description: 'Checkout our collaborative note on HackMD.',
-                linkTitle: 'Learn More',
-                linkHref: 'https://hackmd.io/@pycontw/2021',
-            },
-            {
-                title: 'Open Space',
-                description:
-                    'Enjoy the Open Space & make some new friends, ' +
-                    'discuss any topic you’d like at the same time.',
-                linkTitle: 'Learn More',
-                linkHref: 'https://hackmd.io/W8rybslFTey1M0zublqHAQ',
+                    'HackMD allows everyone to write knowledge. Write and share your knowledge in Markdown.',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'HackMD',
             },
             {
                 title: 'Blog',
                 description:
-                    'Get the latest news of the conference in our blog!',
-                linkTitle: 'Learn More',
-                linkHref: 'https://pycontw.blogspot.com/',
+                    'Receive the latest news, must not miss the blog, we will push the latest information on blog.',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'Blog',
             },
             {
-                title: 'YouTube',
+                title: 'PyCast',
                 description:
-                    'Checkout all speeches on our channel. ' +
-                    "Don't forget to subscribe!",
-                linkTitle: 'Subscribe',
-                linkHref:
-                    'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
+                    'PyCast often invites Python speakers and volunteers over the years to talk about life and Python.',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'PyCast',
             },
             {
-                title: 'Epidemic Prevention',
+                title: 'Youtube',
                 description:
-                    'Stay home, stay safe. ' +
-                    "Let's spread the knowledge, not the virus.",
-                linkTitle: 'Read',
-                linkTo: '/covid19_guidelines',
+                    'PyCon TW uploads the video on YouTube every year. Welcome to subscribe to our channel.',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'Youtube',
             },
             {
-                title: 'Volunteer',
+                title: 'Discord',
                 description:
-                    'Get involved and make difference! ' +
-                    "Join us and let's make this place better!",
-                linkTitle: 'Join Us',
-                linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
+                    'Join the PyConTW Discord server to get instant access to the latest topics of the conference online.',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'Discord',
             },
         ],
     },
     'zh-hant': {
         bulletins: [
             {
-                title: '徵才資訊',
+                title: '共同筆記',
                 description:
-                    '厲害的公司都在這邊徵才還不趕快來看！對就是在說你！快點點進來這邊，他們 NEED YOU！',
-                linkTitle: '前往看看',
-                linkTo: '/events/jobs',
-            },
-            {
-                title: 'PyCast',
-                description:
-                    '哇！拍抗居然有 Podcast 也太潮了拔！現在年輕人都在聽 Podcast！每集都高潮迭起！',
-                linkTitle: '線上收聽',
-                linkHref: 'https://podcasts.apple.com/podcast/id1559843325',
-            },
-            {
-                title: 'HackMD 共筆',
-                description: '線上共同筆記，歡迎一起來協作！',
-                linkTitle: '前往看看',
-                linkHref: 'https://hackmd.io/@pycontw/2021',
-            },
-            {
-                title: 'Open Space',
-                description:
-                    '開放空間讓你能用任何你喜歡的方式定義、組織、規劃你自己的小聚，想聊技術或是聊八卦都可以！',
-                linkTitle: '前往看看',
-                linkHref: 'https://hackmd.io/W8rybslFTey1M0zublqHAQ',
+                    'HackMD 是能讓大家快速撰寫知識的管理平台，歡迎在 Markdown 中編寫並分享您的知識。',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'HackMD',
             },
             {
                 title: 'Blog',
                 description:
-                    '想馬上接收到最新資訊嗎？那一定不能錯過部落格，我們會把最新的資訊推播到部落格上！',
-                linkTitle: '前往看看',
-                linkHref: 'https://pycontw.blogspot.com/',
+                    '馬上接收到 PyConTW 最新資訊，一定不能錯過部落格，我們會把最新的資訊推播到部落格上。',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'Blog',
             },
             {
-                title: 'YouTube',
+                title: 'PyCast',
                 description:
-                    'PyCon 也有 YouTube 頻道了！歡迎訂閱我們～每年都會固定整理議程的錄影讓大家能一同觀看。',
-                linkTitle: '線上訂閱',
-                linkHref:
-                    'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
+                    'PyCast 節目常邀請 Python 神人講者及歷年志工來聊聊與生活近況以及 Python 相關的二三事。',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'PyCast',
             },
             {
-                title: '防疫守則',
+                title: 'Youtube',
                 description:
-                    '病毒退散！讓我們一同線上參與 PyCon TW 盛會，阻隔病毒傳播！',
-                linkTitle: '前往閱讀',
-                linkTo: '/covid19_guidelines',
+                    'PyCon TW 每年固定上傳議程錄影於 YouTube ，讓大家能一同觀看，歡迎訂閱我們的頻道。',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'Youtube',
             },
             {
-                title: '志工招募',
+                title: 'Discord',
                 description:
-                    '我們歡迎所有對 Python 有興趣的朋友一同加入，用行動支持 PyCon，讓這裡變得更好！',
-                linkTitle: '線上報名',
-                linkHref: 'https://forms.gle/wuG2w42cbhamyGdv9',
+                    '加入 PyConTW Discord 聊天室並加入今年伺服器即可在線上即時參與大會的最新話題。',
+                linkTitle: '',
+                linkHref: '',
+                icon: 'Discord',
             },
         ],
     },

@@ -16,6 +16,7 @@
                 :link-title="bulletin.linkTitle"
                 :link-href="bulletin.linkHref"
                 :link-to="bulletin.linkTo"
+                :icon="bulletin.icon"
             >
             </bulletin-card>
         </div>
@@ -36,14 +37,6 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCardCollection__cardContainer {
-    @apply flex flex-wrap;
-}
-
-.bulletinCardCollection__cardContainer > .bulletinCard {
-    margin: 3px;
-    @media (min-width: 375px) {
-        margin: 30px 20px;
-        padding: 5px;
-    }
+    @apply grid place-items-center gap-10 grid-cols-1 mt-9 md:grid-cols-3 md:pl-14 md:mt-0 md:w-10/12;
 }
 </style>

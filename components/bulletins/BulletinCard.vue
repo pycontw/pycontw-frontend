@@ -1,6 +1,10 @@
 <template>
     <div v-show="!!title" :class="classObject">
         <div class="dummy"></div>
+        <img
+            class="bulletinCard_icon"
+            :src="require(`~/static/img/bulletins/${icon}.svg`)"
+        />
         <div class="bulletinCard__content">
             <h2>{{ title }}</h2>
             <p>{{ description }}</p>
@@ -43,6 +47,7 @@ export default {
         linkTitle: { type: String, default: '' },
         linkHref: { type: String, default: '' },
         linkTo: { type: String, default: '' },
+        icon: { type: String, default: '' },
     },
     computed: {
         classObject() {
@@ -59,17 +64,18 @@ export default {
 
 <style lang="postcss" scoped>
 .bulletinCard {
-    @apply relative flex flex-col justify-center items-center rounded-xl;
-    min-width: 236px;
-    min-height: 310px;
-    color: #a9a6d9;
+    @apply relative flex flex-col justify-center items-center rounded-xl w-48 h-64;
+    border: 1px solid transparent;
     background: #1f1c3b;
+    color: #a9a6d9;
 }
 
 .bulletinCard:hover {
-    border-color: #746bb8;
+    border: 1px solid #746bb8;
     background: #352d66;
     color: #f0ebf5;
+    box-shadow: 0px 0px 10px 10px #352d66;
+    cursor: pointer;
 }
 
 /* A trick to set height to be equal to width. */
@@ -81,9 +87,14 @@ export default {
     }
 }
 
+.bulletinCard_icon {
+    @apply absolute transform scale-90 md:scale-100;
+    top: 12.5%;
+}
+
 .bulletinCard__content {
     @apply absolute;
-    top: 120px;
+    top: 30%;
     padding: inherit;
 }
 
@@ -96,9 +107,8 @@ export default {
 }
 
 .bulletinCard__content > p {
-    @apply mx-2;
+    @apply px-5 pb-6;
     font-size: 0.6rem;
-    font-family: 'Source Sans Pro';
     @media (min-width: 375px) {
         font-size: 0.8rem;
     }
@@ -106,7 +116,7 @@ export default {
 
 .bulletinCard__button {
     @apply absolute bottom-5 cursor-pointer;
-    @media (min-width: 415px) {
+    @media (min-width: 375px) {
         @apply bottom-7;
     }
 }
