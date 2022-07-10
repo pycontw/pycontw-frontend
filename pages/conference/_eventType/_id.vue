@@ -85,20 +85,30 @@
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.location') }}
                     </p>
-                    <p class="speech__tabParagraph">
+                    <p
+                        v-if="isValidLocation(data.location)"
+                        class="speech__tabParagraph"
+                    >
                         {{ locationMapping[data.location] }}
                     </p>
+                    <p v-else>{{ $t(`terms.TBA`) }}</p>
                 </div>
                 <div class="speech__info">
                     <p class="speech__tabParagraphTitle">
                         {{ $t('terms.date') }}
                     </p>
-                    <p class="speech__tabParagraph">
+                    <p
+                        v-if="
+                            getTime(data.begin_time) && getTime(data.end_time)
+                        "
+                        class="speech__tabParagraph"
+                    >
                         {{ $t(`terms.${data.dateTag}`) }} •
                         {{ getTime(data.begin_time) }}-{{
                             getTime(data.end_time)
                         }}
                     </p>
+                    <p v-else>{{ $t(`terms.TBA`) }}</p>
                 </div>
                 <div class="speech__info">
                     <p class="speech__tabParagraphTitle">
@@ -230,9 +240,15 @@ export default {
             }
         },
         getTime: (datetime) => {
+            if (!datetime.getHours() || !datetime.getMinutes()) {
+                return null
+            }
             const hour = ('0' + datetime.getHours()).slice(-2)
             const minute = ('0' + datetime.getMinutes()).slice(-2)
             return `${hour}:${minute}`
+        },
+        isValidLocation(loc) {
+            return Object.keys(this.locationMapping).includes(loc)
         },
         // FIXME: cannot successfully insert the correct value into head()
         metaInfo() {

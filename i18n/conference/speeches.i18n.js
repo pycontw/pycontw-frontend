@@ -73,6 +73,7 @@ export default genI18nMessages({
             date: 'Date',
             level: 'Level',
             category: 'Category',
+            TBA: 'TBA',
         },
     },
     'zh-hant': {
@@ -142,6 +143,7 @@ export default genI18nMessages({
             date: '時間',
             level: '層級',
             category: '分類',
+            TBA: '待公布',
         },
     },
 })
