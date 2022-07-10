@@ -143,7 +143,7 @@
 
         <related-card-collection>
             <speech-card
-                v-for="speech in $store.state.relatedData"
+                v-for="speech in fetchRelatedSpeeches()"
                 :id="speech.id"
                 :key="`speech_${speech.id}`"
                 :title="speech.title"
@@ -231,6 +231,12 @@ export default {
         await this.$store.dispatch('$getRelatedData', this.data.category)
     },
     methods: {
+        fetchRelatedSpeeches() {
+            const speeches = this.$store.state.relatedData.filter(
+                (item) => item.id !== this.speechData.id,
+            )
+            return speeches
+        },
         processData() {
             const beginTimeStr = this.speechData.begin_time
             const endTimeStr = this.speechData.end_time
