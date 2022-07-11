@@ -82,11 +82,12 @@
                     </div>
                 </div>
             </div>
-            <!-- 
-                20220530 TODO:
-                    需要做一個 個人贊助票的回饋項目 列表
-                    回饋項目待提供
-            -->
+            <div class="pb-12">
+                <h2 id="introSponsor">{{ $t('introSponsor') }}</h2>
+                <i18n path="SponsorContent" tag="p" class="SponsorContent">
+                    <template #br><br /></template>
+                </i18n>
+            </div>
         </i18n-page-wrapper>
     </div>
 </template>
@@ -107,7 +108,6 @@ export default {
         CoreH1,
         I18nPageWrapper,
         Banner,
-
         LocaleLink,
         TextButton,
     },
@@ -145,11 +145,9 @@ export default {
                     tag: 'sponsorship',
                     titleI18NPath: 'ticketSponsorship',
                     price: 'NT$ 5,000',
-                    image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
-                    // TODO:
-                    //  個人贊助票需要有一個錨點可以連到個人贊助票回饋說明
+                    image: require('~/static/img/registration/tickets/sponsor.svg'),
                     features: ['SpecialSouvenir', 'pyckage', 'conference'],
-                    link: null,
+                    link: 'https://pycontw.kktix.cc/events/2022-individual',
                 },
                 {
                     tag: 'latebird',
