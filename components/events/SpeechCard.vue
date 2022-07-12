@@ -137,6 +137,8 @@ export default {
 .speechCard {
     @apply relative px-4 pb-4 pt-[12px] rounded-[12px] bg-primary-900 transition;
     @apply border border-solid border-transparent; /*keep position of the card*/
+    @apply overflow-hidden; /*handle too many speakers*/
+    overflow-wrap: anywhere;
 }
 
 .speechCard:hover {
@@ -187,10 +189,13 @@ export default {
 }
 
 .speechCard__speakerThumbnails {
-    /*WARNING: too many speakers may affect the layout*/
+    @apply overflow-hidden;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(auto-fill, 32px);
+    width: 70%;
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
 }
 
 .speechCard__speakerThumbnail {

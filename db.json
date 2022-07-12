@@ -1375,7 +1375,7 @@
         },
         {
             "id": 5,
-            "title": "Tutorial of building a bunch of good companies long ............ ........... .... ....... ....... ........",
+            "title": "Tutorial of building a bunch of good companies",
             "category": "NLP",
             "language": "ENEN",
             "python_level": "INTERMEDIATE",
@@ -1433,7 +1433,7 @@
         },
         {
             "id": 7,
-            "title": "Tutorial of building a bunch of good companies",
+            "title": "Test longtext texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
             "category": "EMBED",
             "language": "ENEN",
             "python_level": "INTERMEDIATE",
@@ -1447,7 +1447,7 @@
             "speakers": [
                 {
                     "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
-                    "name": "Elon Musk",
+                    "name": "Test longtext texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
                     "github_profile_url": "",
                     "twitter_profile_url": "",
                     "facebook_profile_url": "",
@@ -1462,7 +1462,7 @@
         },
         {
             "id": 8,
-            "title": "Tutorial of building a bunch of good companies",
+            "title": "Test large number of speakers",
             "category": "ML",
             "language": "ENEN",
             "python_level": "INTERMEDIATE",
@@ -1475,12 +1475,52 @@
             "youtube_id": "dQw4w9WgXcQ",
             "speakers": [
                 {
-                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
-                    "name": "Elon Musk",
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
                     "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
                     "twitter_profile_url": "",
-                    "facebook_profile_url": "",
-                    "bio": "I'm a successful business man. Better than Mark."
+                    "bio": "I'm a successful business man. Better than Jeff."
+                },
+                {
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
+                    "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Jeff."
+                },
+                {
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
+                    "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Jeff."
+                },
+                {
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
+                    "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Jeff."
+                },
+                {
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
+                    "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Jeff."
+                },
+                {
+                    "facebook_profile_url": "https://www.facebook.com/zuck",
+                    "github_profile_url": "",
+                    "name": "Mark Zuckerberg",
+                    "thumbnail_url": "https://i.insider.com/602e8ce342b84000192f42fd?width=700",
+                    "twitter_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Jeff."
                 }
             ],
             "begin_time": "2021-10-02T06:05:00Z",
