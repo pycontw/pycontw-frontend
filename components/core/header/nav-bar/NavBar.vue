@@ -24,13 +24,13 @@
             :class="getPageClassesByPath('conference')"
         >
         </nav-bar-item-dropdown>
-        <locale-link
+        <!-- <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
             customized
         >
             {{ $t('sponsor') }}
-        </locale-link>
+        </locale-link> -->
         <nav-bar-item-dropdown
             :label="$t('registration')"
             :items="registrationItems"
@@ -52,7 +52,7 @@
 
 <script>
 import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
-import { ExtLink, LocaleLink } from '@/components/core/links'
+import { ExtLink } from '@/components/core/links'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
 
@@ -62,7 +62,6 @@ export default {
     components: {
         NavBarItemDropdown,
         ExtLink,
-        LocaleLink,
     },
     computed: {
         conferenceItems() {
