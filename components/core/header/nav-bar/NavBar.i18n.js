@@ -31,6 +31,7 @@ export default genI18nMessages({
         signIn: 'Sign In',
         codeOfConduct: 'Code of Conduct',
         warmups: 'Warmup Events',
+        staff: 'Staff',
     },
     'zh-hant': {
         about: '關於',
@@ -62,5 +63,6 @@ export default genI18nMessages({
         signIn: '登入',
         codeOfConduct: '行為準則',
         warmups: '暖身活動',
+        staff: '工作人員',
     },
 })
