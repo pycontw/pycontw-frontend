@@ -311,7 +311,6 @@ export default {
 
 .staffPhoto img {
     @apply rounded-full;
-    border: 3px solid white;
 }
 
 .staffName {
