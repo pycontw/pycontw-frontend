@@ -295,8 +295,7 @@ export default {
 }
 
 .teamName {
-    @apply font-serif text-white mb-10;
-    font-size: 24px;
+    @apply font-serif text-primary-500 mb-10 font-bold text-base sm:text-[24px];
 }
 
 .staffGroup {
