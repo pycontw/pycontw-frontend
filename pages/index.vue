@@ -49,6 +49,11 @@
 
         <i18n-page-wrapper>
             <intro :is-bulleted="isBulleted"></intro>
+            <div class="text-button-wrapper">
+                <text-button to="/registration/tickets">{{
+                    $t('getTicket')
+                }}</text-button>
+            </div>
             <div class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
@@ -69,11 +74,6 @@
                     >
                     </sponsor-card>
                 </sponsor-card-collection>
-                <div class="text-button-wrapper">
-                    <text-button to="/sponsor">{{
-                        $t('sponsorUs')
-                    }}</text-button>
-                </div>
             </div>
         </i18n-page-wrapper>
         <transition name="fade">
