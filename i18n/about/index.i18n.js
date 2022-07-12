@@ -51,7 +51,7 @@ export default genI18nMessages({
                 '這個活動旨在聚集台灣各領域應用 Python 的人，交流彼此的經驗心得，' +
                 '分享最新的技術發展，並親身體驗社群獨有的熱情。',
         ],
-        reasonTitle: '{number}不能錯過 PyCon Taiwan 的理由',
+        reasonTitle: '{number}不能錯過 PyCon Taiwan 的理由？',
         reasonNumber: '四個',
         reason:
             '年會除了有從 Python 的語言特性到各方面應用案例實例的精彩演講之外，' +

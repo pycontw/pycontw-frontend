@@ -1,109 +1,78 @@
 <template>
-    <div class="py-10 md:py-24 lg:py-24">
+    <div>
         <banner>
             <core-h1 :title="$t('title')"></core-h1>
             <p
                 v-for="(content, i) in $t('pageAbstract')"
                 :key="`abstract_${i}`"
-                class="font-serif leading-6"
             >
                 {{ content }}
             </p>
         </banner>
-        <div class="flex flex-wrap justify-center mx-2 my-7">
-            <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
-                <div
-                    class="
-                        w-32
-                        md:w-56
-                        h-24
-                        md:h-40
-                        bg-contain bg-no-repeat
-                        mx-2
-                        my-3
-                    "
-                    :style="getImgStyle(img)"
-                ></div>
-            </div>
-        </div>
-        <i18n-page-wrapper class="pt-4 px-8 md:px-57 lg:px-56">
-            <i18n
-                path="reasonTitle"
-                tag="p"
-                class="h3 my-2 text-base md:text-lg lg:text-lg"
-            >
+        <i18n-page-wrapper :use-bg-decoration="false">
+            <i18n path="reasonTitle" tag="p" class="section-header">
                 <template #number>
-                    <span class="highlight">{{ $t('reasonNumber') }}</span>
+                    <span class="section-header section-header--highlight">{{
+                        $t('reasonNumber')
+                    }}</span>
                 </template>
             </i18n>
-            <p class="w-full text-xs md:text-base lg:text-base">
+            <p class="section-description">
                 {{ $t('reason') }}
             </p>
-            <div class="grid grid-cols-2 md:grid-cols-4 mx-2 my-10">
-                <div
-                    v-for="img in reasonImgs"
-                    :key="img.text"
-                    class="flex flex-col items-center"
-                >
-                    <div
-                        class="
-                            w-24
-                            h-24
-                            bg-contain bg-no-repeat
-                            mx-0
-                            md:mx-10
-                            my-5
-                        "
-                        :style="getImgStyle(img.src)"
-                    ></div>
-                    <span class="text-xs md:text-base lg:text-base">{{
-                        img.text
-                    }}</span>
+            <div class="img-group">
+                <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
+                    <div class="img" :style="getImgStyle(img.src)">
+                        <span class="img__text">{{ img.text }}</span>
+                    </div>
                 </div>
             </div>
-            <p class="h3 my-2 text-base md:text-lg lg:text-lg">
+            <p class="section-header">
                 {{ $t('activityTitle') }}
             </p>
-            <div class="flex items-center justify-evenly my-10">
-                <i18n
-                    path="kindsOFTalk"
-                    tag="span"
-                    class="text-xs md:text-base lg:text-base"
-                >
+            <p class="section-description">
+                {{ $t('activityDesc') }}
+            </p>
+            <div class="section-wrapper">
+                <i18n path="kindsOFTalk" tag="span" class="section-description">
                     <template #talkNumber>
-                        <span class="paragraph-highlight text-5xl md:text-6xl"
+                        <span
+                            class="
+                                section-description
+                                section-description--highlight
+                            "
                             >3</span
                         >
                     </template>
                 </i18n>
-                <span
-                    class="paragraph-highlight text-5xl md:text-6xl lg:text-6xl"
+                <span class="section-description section-description--highlight"
                     >+</span
                 >
                 <i18n
                     path="kindsOfActivity"
                     tag="span"
-                    class="text-xs md:text-base lg:text-base"
+                    class="section-description"
                 >
                     <template #activityNumber>
-                        <span class="paragraph-highlight text-5xl md:text-6xl"
+                        <span
+                            class="
+                                section-description
+                                section-description--highlight
+                            "
                             >7</span
                         >
                     </template>
                 </i18n>
             </div>
-            <p class="w-full text-xs md:text-base lg:text-base leading-6">
-                {{ $t('activityDesc') }}
-            </p>
-            <ul class="m-0 md:m-12 lg:m-12 text-xs md:text-base lg:text-base">
+            <ul class="unordered-list">
                 <li
                     v-for="(content, i) in $t('activityDetails')"
                     :key="`activity_detail${i}`"
                 >
-                    <p class="activity-detail">{{ content }}</p>
+                    <p class="unordered-list__item">{{ content }}</p>
                 </li>
             </ul>
-            <p class="w-full text-xs md:text-base lg:text-base">
+            <p class="section-description">
                 {{ $t('moreInfo') }}
             </p>
         </i18n-page-wrapper>
@@ -120,10 +89,6 @@ import IntroImg1 from '@/static/img/about/Intro-1.png'
 import IntroImg2 from '@/static/img/about/Intro-2.png'
 import IntroImg3 from '@/static/img/about/Intro-3.png'
 import IntroImg4 from '@/static/img/about/Intro-4.png'
-import Cooperation from '@/static/img/about/Cooperation.svg'
-import Share from '@/static/img/about/Share.svg'
-import Skill from '@/static/img/about/Skill.svg'
-import Speech from '@/static/img/about/Speech.svg'
 
 export default {
     i18n,
@@ -136,40 +101,32 @@ export default {
     data() {
         return {
             aboutBanner: AboutBanner,
-            introImgs: [IntroImg1, IntroImg2, IntroImg3, IntroImg4],
-            reasonImgs: {
-                cooperationImg: {
-                    src: Cooperation,
-                    text: this.$t('cooperation'),
+            introImgs: [
+                {
+                    src: IntroImg1,
+                    text: this.$i18n.t('skill'),
                 },
-                shareImg: {
-                    src: Share,
-                    text: this.$t('share'),
+                {
+                    src: IntroImg2,
+                    text: this.$i18n.t('speech'),
                 },
-                skillImg: {
-                    src: Skill,
-                    text: this.$t('skill'),
+                {
+                    src: IntroImg3,
+                    text: this.$i18n.t('share'),
                 },
-                speechImg: {
-                    src: Speech,
-                    text: this.$t('speech'),
+                {
+                    src: IntroImg4,
+                    text: this.$i18n.t('cooperation'),
                 },
-            },
+            ],
         }
-    },
-    computed: {
-        bannerStyle() {
-            return {
-                'background-image': `url(${this.aboutBanner})`,
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
-            }
-        },
     },
     methods: {
         getImgStyle(img) {
             return {
                 'background-image': `url(${img})`,
+                'background-repeat': 'no-repeat',
+                'background-position': 'center center',
             }
         },
     },
@@ -199,22 +156,48 @@ export default {
 </script>
 
 <style scoped>
-.h3 {
-    @apply font-serif;
-    color: #d1d1d1;
+.section-header {
+    @apply font-serif text-primary-100 my-3 text-base md:text-lg font-bold;
 }
-.highlight {
-    @apply text-pink-500;
+.section-header--highlight {
+    @apply text-primary-500;
 }
-.paragraph-highlight {
-    @apply font-serif;
+
+.section-description {
+    @apply text-xs md:text-base;
+}
+
+.section-wrapper {
+    @apply flex items-center justify-evenly my-10;
+}
+
+.section-description--highlight {
+    @apply font-serif text-5xl md:text-6xl;
     color: #7568f6;
     text-shadow: 4px 6px 0px #4f4f4f;
     font-weight: bold;
     margin: auto 0.5rem;
 }
 
-.activity-detail {
+.img-group {
+    @apply grid grid-cols-2 md:grid-cols-4 mx-2 my-7 md:my-16;
+}
+
+.img {
+    @apply w-32 md:w-44 h-24 md:h-40 md:mx-2 my-3;
+    @apply bg-contain bg-no-repeat;
+    @apply flex items-center justify-center;
+}
+
+.img__text {
+    @apply font-serif font-bold text-xs md:text-base;
+}
+
+.unordered-list {
+    @apply m-0 md:m-12 text-xs md:text-base md:list-disc;
+}
+
+.unordered-list__item {
     @apply text-primary-500;
 }
 </style>
