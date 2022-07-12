@@ -16,6 +16,10 @@ export default Object.freeze({
             i18nKey: 'codeOfConduct',
             value: '/about/code-of-conduct',
         },
+        {
+            i18nKey: 'staff',
+            value: '/about/staff',
+        },
     ],
     speaking: [
         {
