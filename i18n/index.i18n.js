@@ -16,6 +16,7 @@ export default genI18nMessages({
         bulletinList: 'Latest Announcement',
         joinUs: 'Join Us',
         callForProposals: 'Call for Proposals',
+        getTicket: 'Get a Ticket!',
     },
     'zh-hant': {
         pyconWelcome: '歡迎來到 PyCon TW 2021',
@@ -32,5 +33,6 @@ export default genI18nMessages({
         bulletinList: '最新公告',
         joinUs: '成為志工',
         callForProposals: '投稿募集',
+        getTicket: '立即購票',
     },
 })
