@@ -19,8 +19,14 @@ export default genI18nMessages({
             'with our Super Early Bird prices. ' +
             'The fee you spend will be put straight back into the community to ' +
             'support our diversity initiatives and financial aid programs. ' +
-            'If you need financial aid, please visit {fa}.{br}' +
-            'Limited edition conference swags Pyckage will be revealed soon.',
+            'If you need financial aid, please visit {fa}.',
+        introSponsor: 'About Sponsorship Pass',
+        SponsorContent:
+            'PyCon TW events including PyCon APAC 2022 main conference, Sprints, Job Fair, Open Space, PyNight, ' +
+            'PyCast,{br} unique Python learning experiences which were shared by students - Young Inspirers and local Python community events. {br}' +
+            '{br}' +
+            'You are the motivation for us organizing more PyCon TW events and encouraging ' +
+            'PyCon TW to expand Python possibilities.',
         features: {
             onSales: '35% off Discount',
             limited100: 'Limited edition tickets',
@@ -56,8 +62,17 @@ export default genI18nMessages({
         introTitle: '購票方案簡介',
         introContent:
             '從早鳥票到一般票，企業票至個人贊助票，您可以依照您的需求選擇您需要的票種，' +
-            '若需要財務補助的你，請至{fa}進行申請。{br}' +
-            '限量大會紀念品『 Pyckage 』，即將登場。',
+            '若需要財務補助的你，請至{fa}進行申請。{br}',
+        introSponsor: '個人贊助票簡介',
+        SponsorContent:
+            'PyCon TW 活動包括了 PyCon APAC 2022、衝刺開發、Job Fair, Open Space, PyNight, {br}' +
+            'PyCon TW Podcast - Pycast 與獨特 Python 經歷的學生分享 - Young Inspirers，{br}' +
+            '多樣化活動是為了讓更多人認識 Python 程式語言且了解廣大應用領域。{br}' +
+            '{br}' +
+            '若您認同 PyCon TW 推動理念，願意用行動贊助支持我們，購買個人贊助票對我們是最實質肯定。{br}' +
+            '{br}' +
+            '為感謝您，PyCon TW 將為您客製 PyCon APAC 2022 神秘小禮物，與持續不斷推動 Python 技術與知識分享，' +
+            '為這片土地開墾，種下可能種子。',
         features: {
             onSales: '65 折優惠',
             limited100: '限量票 100 張',
@@ -69,7 +84,7 @@ export default genI18nMessages({
         ticketEarlyBird: '早鳥票',
         ticketRegular: '一般票',
         ticketEnterprise: '企業票',
-        ticketSponsorship: '個人貢獻票',
+        ticketSponsorship: '個人贊助票',
         ticketLateBird: '晚鳥票',
         buttonTextSalesEnded: '結束販售',
         buttonText: '立即搶購',
