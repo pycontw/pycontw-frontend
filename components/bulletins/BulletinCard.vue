@@ -95,12 +95,10 @@ export default {
 .bulletinCard__content {
     @apply absolute;
     top: 30%;
-    padding: inherit;
 }
 
 .bulletinCard__content > h2 {
-    @apply text-base text-center mt-6 mb-5 font-bold;
-    font-family: 'Noto Serif TC';
+    @apply font-serif text-base text-center mt-6 mb-5 font-bold;
     @media (min-width: 375px) {
         @apply text-xl mt-8 mb-5;
     }
