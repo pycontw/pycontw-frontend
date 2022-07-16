@@ -1,51 +1,45 @@
 <template>
-    <div>
-        <i18n-page-wrapper class="pt-24 pb-4" custom-y>
+    <div class="py-10 md:py-24 lg:py24">
+        <banner>
             <core-h1 :title="title"></core-h1>
-            <p class="intro">{{ intro }}</p>
-        </i18n-page-wrapper>
-        <i18n-page-wrapper
-            v-if="eventType === 'talks'"
-            class="px-4 sm:px-8 md:px-16 lg:px-32 pb-6 lg:pb-12"
-            custom-x
-            custom-y
-        >
-            <p class="filterTitle">Filter</p>
-            <core-hr class="filterHr" custom-margin-y custom-color></core-hr>
-            <checkbox-collection>
-                <core-checkbox
-                    id="ALL"
-                    key="category_ALL"
-                    :value="isAllCategoriesSelected"
-                    :is-checked="isAllCategoriesSelected"
-                    :label="$t('categories.ALL')"
-                    @input="selectAllCategories()"
-                ></core-checkbox>
-                <core-checkbox
-                    v-for="category in speechCategories"
-                    :id="category"
-                    :key="`category_${category}`"
-                    v-model="checkedCategories"
-                    :label="$t(`categories.${category}`)"
-                    :is-checked="isCategoriesChecked(category)"
-                ></core-checkbox>
-            </checkbox-collection>
-        </i18n-page-wrapper>
-        <i18n-page-wrapper
-            class="px-2 sm:px-8 md:px-16 lg:px-32 pb-24"
-            custom-x
-            custom-y
-        >
+            <p class="leading-6">
+                {{ intro }}
+            </p>
+        </banner>
+        <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
+            <div v-if="eventType === 'talks'">
+                <core-h2 :title="$t('talks.categoryFilter')"></core-h2>
+                <checkbox-collection>
+                    <core-checkbox
+                        v-for="category in speechCategories"
+                        :id="category"
+                        :key="`category_${category}`"
+                        v-model="checkedCategories"
+                        :label="$t(`categories.${category}`)"
+                        :is-checked="isCategoriesChecked(category)"
+                    ></core-checkbox>
+                    <core-checkbox
+                        id="ALL"
+                        key="category_ALL"
+                        :value="isAllCategoriesSelected"
+                        :is-checked="isAllCategoriesSelected"
+                        :label="$t('categories.ALL')"
+                        @input="selectAllCategories()"
+                    ></core-checkbox>
+                </checkbox-collection>
+            </div>
             <speech-card-collection>
                 <speech-card
                     v-for="speech in selectedSpeechesData"
                     :id="speech.id"
                     :key="`speech_${speech.id}`"
+                    :level="speech.python_level"
+                    :begin-time="speech.begin_time"
+                    :location="speech.location"
                     :title="speech.title"
-                    :category="speech.category"
                     :speakers="speech.speakers"
                     :lang="speech.language"
-                    :level="speech.python_level"
+                    :category="speech.category"
                     :to="`/conference/${speech.event_type}/${speech.id}/`"
                 >
                 </speech-card>
@@ -55,10 +49,12 @@
 </template>
 
 <script>
-import i18n from '@/i18n/conference/speeches.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
+import i18n from '@/i18n/conference/speeches.i18n'
+import AboutBanner from '@/static/img/about/Banner.svg'
+import Banner from '@/components/core/layout/Banner'
 import CoreH1 from '@/components/core/titles/H1'
-import CoreHr from '@/components/core/layout/Hr.vue'
+import CoreH2 from '@/components/core/titles/H2'
 import CoreCheckbox from '@/components/core/checkbox/Checkbox'
 import CheckboxCollection from '@/components/core/checkbox/CheckboxCollection'
 import SpeechCard from '@/components/events/SpeechCard'
@@ -70,11 +66,12 @@ export default {
     components: {
         I18nPageWrapper,
         CoreH1,
-        CoreHr,
+        CoreH2,
         CoreCheckbox,
         CheckboxCollection,
         SpeechCard,
         SpeechCardCollection,
+        Banner,
     },
     asyncData({ redirect, params }) {
         const eventType = params.eventType
@@ -87,9 +84,17 @@ export default {
             eventType: '',
             speechesData: [],
             checkedCategories: [],
+            aboutBanner: AboutBanner,
         }
     },
     computed: {
+        bannerStyle() {
+            return {
+                'background-image': `url(${this.aboutBanner})`,
+                'background-repeat': 'no-repeat',
+                'background-position': 'center',
+            }
+        },
         title() {
             return this.$i18n.t(`${this.$route.params.eventType}.title`)
         },
@@ -131,7 +136,10 @@ export default {
     async mounted() {
         this.eventType = this.$route.params.eventType
         await this.$store.dispatch('$getSpeechesData', this.eventType)
-        this.speechesData = this.$store.state.speechesData
+        this.speechesData = this.$store.state.speechesData.map((speech) => ({
+            ...speech,
+            begin_time: speech.begin_time ? new Date(speech.begin_time) : null,
+        }))
     },
     methods: {
         metaInfo() {
@@ -177,11 +185,5 @@ export default {
 .intro {
     @apply text-xs md:text-sm mb-8;
     line-height: 33px;
-}
-.filterTitle {
-    @apply ml-2 text-sm md:text-base text-pink-500;
-}
-.filterHr {
-    @apply my-2 text-pink-500;
 }
 </style>
