@@ -67,7 +67,7 @@ export default {
         shouldShow: { type: Boolean, default: true },
         dayOneMidnight: {
             type: Date,
-            default: () => new Date('2021-10-02T16:00:00Z'),
+            default: () => new Date('2022-09-03T16:00:00Z'),
         },
     },
     data() {
