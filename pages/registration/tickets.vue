@@ -1,17 +1,25 @@
 <template>
     <div>
         <banner>
-            <core-h1 :title="$t('title')"></core-h1>
-            <i18n path="pageAbstract" tag="p" class="pageAbstract">
-                <template #br><br /></template>
-            </i18n>
+            <div class="flex flex-col mt-8">
+                <core-h1 :title="$t('title')" class="mx-4"></core-h1>
+            </div>
+            <div class="flex flex-col md:grid-cols-2">
+                <i18n path="pageAbstract" tag="p" class="md:text-align-center">
+                    <template #br><br /></template>
+                    <template v-if="shouldBreak" #conditionalBr>
+                        <br />
+                    </template>
+                </i18n>
+            </div>
         </banner>
 
-        <i18n-page-wrapper>
+        <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
             <!-- intro -->
-
-            <div class="pb-8">
-                <h2>{{ $t('introConference') }}</h2>
+            <div class="pb-8 mt-10 md:mt-0">
+                <h2 class="introConferenceStyle">
+                    {{ $t('introConference') }}
+                </h2>
                 <i18n path="conferenceContent" tag="p" class="introContent">
                     <template #br><br /></template>
                 </i18n>
@@ -186,6 +194,15 @@ export default {
                 'font-size': this.$i18n.locale === 'en-us' ? '22px' : '32px',
             }
         },
+        shouldBreak() {
+            if (process.client) {
+                const width = window.innerWidth
+                if (width < 768) {
+                    return true
+                }
+            }
+            return false
+        },
     },
     methods: {
         isStrikethrough(indicator) {
@@ -218,12 +235,22 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.titleStyle {
+    @apply flex flex-row md:flex-col;
+}
+.pageAbstract {
+    @apply md:text-right;
+}
 .conferenceContent {
     @apply leading-5;
     font-size: 16px;
     @media (min-width: 1440px) {
         font-size: 18px;
     }
+}
+
+.introConferenceStyle {
+    margin-top: -50px;
 }
 
 .introContent {
@@ -291,7 +318,7 @@ export default {
     }
 }
 .ticketContainer .priceOnSale {
-    @apply font-bold text-center mx-1.5 my-auto text-pink-500;
+    @apply font-bold text-center mx-1.5 my-auto text-pink-700;
 }
 
 .ticketContainer .button {
@@ -299,8 +326,9 @@ export default {
 }
 
 h2 {
-    @apply font-serif font-bold text-center pb-4 pt-8 xl:pb-10 xl:pt-14;
-    @apply mt-0 mb-2 tracking-widest text-pink-500;
+    @apply font-serif font-bold text-center;
+    @apply pb-4 pt-0 xl:pb-10 xl:pt-4;
+    @apply mt-0 mb-2 tracking-widest text-pink-700;
     font-size: 28px;
 
     @media (min-width: 1440px) {
