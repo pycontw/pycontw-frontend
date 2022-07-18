@@ -291,7 +291,7 @@ export default {
                                     'offer tips on problem- solving, advice on setting learning goals, and helpful information such as useful learning ' +
                                     'platforms for them so that they too can learn this essential skill.',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/SkXlXpKoc',
                             live_link: 'https://youtu.be/Le8OFKAWsW4',
                         },
                         {
@@ -321,7 +321,7 @@ export default {
                                     'you can also make projects/ideas that are most of the time horrible, but every now then is a good idea, then you ' +
                                     'are very much welcome to join!',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/SkXlXpKoc',
                             live_link: 'https://youtu.be/Le8OFKAWsW4',
                         },
                     ],
@@ -359,7 +359,7 @@ export default {
                                     '跟大家分享如何找到自己的人生目標 (Why)，朝向目標的方向與方法 (How)，在每一個階段可以做的事情 (What)。' +
                                     '如果大學生活會改變一個人的價值，如何在進大學之前先學會不虛度光陰，學會自我學習的方式，讓每一天都朝向自己的人生目標前進。',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/SkXlXpKoc',
                             live_link: 'https://youtu.be/SAbYVx_7okE',
                         },
                         {
@@ -388,7 +388,7 @@ export default {
                                     '更非常內向害羞不善交際。',
                                 '在此訪談中我們將聽怡升分享他是如何克服生命的低谷，在大學找到自己的一片天。以及在這過程中領悟的「關鍵駭客思維」，究竟如何幫助他翻轉生命，持續成長向上。',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/SkXlXpKoc',
                             live_link: 'https://youtu.be/SAbYVx_7okE',
                         },
                     ],
