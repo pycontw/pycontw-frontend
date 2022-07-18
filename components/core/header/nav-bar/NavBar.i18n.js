@@ -30,7 +30,6 @@ export default genI18nMessages({
         venue: 'Venue',
         signIn: 'Sign In',
         codeOfConduct: 'Code of Conduct',
-        warmups: 'Warmup Events',
     },
     'zh-hant': {
         about: '關於',
@@ -61,6 +60,5 @@ export default genI18nMessages({
         venue: '會場',
         signIn: '登入',
         codeOfConduct: '行為準則',
-        warmups: '暖身活動',
     },
 })
