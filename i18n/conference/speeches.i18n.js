@@ -27,8 +27,9 @@ export default genI18nMessages({
         languages: {
             ENEN: 'English talk',
             ZHEN: 'Chinese talk w. English slides',
-            ZHZH: 'Chinese talk w. Chinese slides',
-            TAI: 'Taiwanese Hokkien',
+            JPEN: 'Japanese talk w. English slides', // added for PyCon APAC 2022
+            ZHZH: 'Chinese talk w. Chinese slides', // not used in PyCon APAC 2022
+            TAI: 'Taiwanese Hokkien', // not used in PyCon APAC 2022
         },
         levels: {
             EXPERIENCED: 'Experienced',
@@ -68,6 +69,13 @@ export default genI18nMessages({
             abstract: 'Abstract',
             description: 'Description',
             video: 'Video',
+            else: 'More Info',
+            location: 'Location',
+            language: 'Language',
+            date: 'Date',
+            level: 'Level',
+            category: 'Category',
+            TBA: 'TBA',
         },
     },
     'zh-hant': {
@@ -91,8 +99,9 @@ export default genI18nMessages({
         languages: {
             ENEN: '英文演講',
             ZHEN: '中文演講/英文投影片',
-            ZHZH: '中文演講/中文投影片',
-            TAI: '臺灣閩南語',
+            JPEN: '日文演講/英文投影片', // added for PyCon APAC 2022
+            ZHZH: '中文演講/中文投影片', // not used in PyCon APAC 2022
+            TAI: '臺灣閩南語', // not used in PyCon APAC 2022
         },
         levels: {
             EXPERIENCED: '進階',
@@ -132,6 +141,13 @@ export default genI18nMessages({
             abstract: '摘要',
             description: '說明',
             video: '影片',
+            else: '其他資訊',
+            location: '地點',
+            language: '語言',
+            date: '時間',
+            level: '層級',
+            category: '分類',
+            TBA: '待公布',
         },
     },
 })
