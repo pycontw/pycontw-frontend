@@ -26,9 +26,11 @@ export default genI18nMessages({
                 'We also prepare a Google Meet link for a backup plan if we face a poor internet connection.',
             'Please be aware, due to the policy of Gather Town, ' +
                 'you have to be 18 years old or above to join this event.',
-            'Join us now on {kktix}.',
+            "Please visit {kktix} if you'd like to join as an attendee, " +
+                "or fill out {form} if you'd like to be a project owner in this event!",
             'You can find the project list on {hackmd}.',
         ],
+        form: 'this Google Form',
     },
     'zh-hant': {
         title: '衝刺開發 (Sprints)',
@@ -48,8 +50,9 @@ export default genI18nMessages({
                 '對每一個專案，我們會開設在 Gather 的場地內的一個專屬房間，在此專屬房間一起討論，' +
                 '並有 Google Meet 連結作為連線不佳時的備用方案。',
             '請留意，因應 Gather Town 的政策，本次活動僅開放年滿 18 歲以上的會眾參加。',
-            '報名方式請至 {kktix} 報名。',
+            '參加者報名請至 {kktix}、報名專案主持人請至 {form}。',
             '專案列表可參考 {hackmd}。',
         ],
+        form: '此份 Google 表單',
     },
 })
