@@ -506,8 +506,6 @@ export default {
 
 .speechBox__langIcon {
     @apply inline-block;
-    filter: invert(92%) sepia(4%) saturate(1032%) hue-rotate(192deg)
-        brightness(90%) contrast(96%);
 }
 .speechBox__title {
     @apply flex flex-row;
