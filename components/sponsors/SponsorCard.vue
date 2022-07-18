@@ -57,7 +57,7 @@ export default {
 }
 
 .sponsorCard__tag {
-    @apply h-7 w-full absolute flex justify-center items-center text-xs font-semibold;
+    @apply h-5 w-full absolute flex justify-center items-center text-[12px] font-semibold;
     bottom: 20px;
     background-color: hsla(321, 32%, 62%, 1);
     color: #ffffff;
