@@ -1,6 +1,6 @@
 <template>
     <i18n-page-wrapper>
-        <core-h1 :title="`2021 ${$t('title')}`"></core-h1>
+        <core-h1 :title="`2022 ${$t('title')}`"></core-h1>
         <div
             v-for="(contents, i) in $t('contents')"
             :key="`privacy_policy_contents_${i}`"

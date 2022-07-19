@@ -7,13 +7,9 @@ export default genI18nMessages({
             {
                 title: 'Policy of Personal Information Protection',
                 description: [
-                    'In 2021, as the 10th anniversary of PyCon Taiwan ' +
-                        'is approaching, we could be the world’s only offline PyCon. ' +
-                        'Besides passing on experience in communities, ' +
-                        'we also take new steps in activities, ' +
-                        'like Podcast and Young Talent, ' +
-                        'to facilitate and encourage the exchanging ' +
-                        'of views among different groups.',
+                    'First, we would like to thank you for joining us in PyCon Taiwan (hereafter referred to as “PyCon TW”).' +
+                        'We are going to ask for your permission to collect and to use your personal information recorded in the registration form. ' +
+                        'We value your privacy and we would follow the terms and conditions as set out below while collecting and using your personal information.',
                 ],
                 items: [],
                 summary: [],
