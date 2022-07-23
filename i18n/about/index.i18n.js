@@ -33,7 +33,7 @@ export default genI18nMessages({
             'and at the same time to meet many friends from various parties in the exchange activities.',
         activityDetails: [
             'Speeches include: keynote speeches, general speeches, professional courses',
-            'Activities include: warm-up events, sprint, open space, lightning talk, JobFair, PyNight, PyCast',
+            'Activities include: sprint, open space, lightning talk, JobFair, PyNight, PyCast, Young Inspirers',
         ],
         moreInfo:
             'If you want to learn more about each event or want to register for the above events, ' +
@@ -69,7 +69,7 @@ export default genI18nMessages({
             '可以說是非常多元有趣，讓你可以從演講中吸取知識的同時，還能在交流活動中結識許多各方好友。',
         activityDetails: [
             '演講包括：主題演講、一般演講、專業課程',
-            '交流活動包括：暖身活動、衝刺開發、開放空間、閃電秀、JobFair、PyNight、PyCast',
+            '交流活動包括：衝刺開發、開放空間、閃電秀、JobFair、PyNight、PyCast、Young Inspirers',
         ],
         moreInfo:
             '若想要深入了解各活動或是想要報名以上活動，歡迎到議程總覽頁面觀看。',
