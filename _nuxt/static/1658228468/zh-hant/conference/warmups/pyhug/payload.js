@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-hant/conference/warmups/pyhug", {data:[{}],fetch:{},mutations:[]});
