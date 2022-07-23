@@ -82,15 +82,13 @@
                     </div>
                 </div>
             </div>
-            <!-- TODO
-                等文案 Review 後再放
+            <!-- Sponsor pass content-->
             <div class="pb-12">
                 <h2 id="introSponsor">{{ $t('introSponsor') }}</h2>
                 <i18n path="SponsorContent" tag="p" class="SponsorContent">
                     <template #br><br /></template>
                 </i18n>
             </div>
-            -->
         </i18n-page-wrapper>
     </div>
 </template>
