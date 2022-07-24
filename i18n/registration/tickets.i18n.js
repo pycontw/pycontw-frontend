@@ -22,11 +22,29 @@ export default genI18nMessages({
             'If you need financial aid, please visit {fa}.',
         introSponsor: 'About Sponsorship Pass',
         SponsorContent:
-            'PyCon TW events including PyCon APAC 2022 main conference, Sprints, Job Fair, Open Space, PyNight, ' +
-            'PyCast,{br} unique Python learning experiences which were shared by students - Young Inspirers and local Python community events. {br}' +
+            'The idea of PyCon TW first originated in the US. To promote community interactions ' +
+            'between local Python developers, PyCon TW has been hosting a series of conferences ' +
+            'and events over the past decade, namely PyCon APAC 2022 (the main conference), ' +
+            'Sprints, Job Fair, Open Space, PyNight, PyCast (PyCon TW’s podcast), and ' +
+            'Young Inspirers (where young and promising students can share their unique Python ' +
+            'learning experiences.) {br}' +
             '{br}' +
-            'You are the motivation for us organizing more PyCon TW events and encouraging ' +
-            'PyCon TW to expand Python possibilities.',
+            'Python TW supports local communities’ activities as well. Through these events ' +
+            'above, we hope to let more people see the beauty in Python and are enabled to ' +
+            'expand the use of this language. {br}' +
+            '{br}' +
+            'If you agree with our action, you can support us by purchasing the Sponsorship Pass. ' +
+            'Your kind help to PyCon APAC 2022 is highly appreciated. We would like to present ' +
+            'you a thank you gift called “Pyckage”, as our expression of gratitude. {br}' +
+            '{br}' +
+            'We believe with every contribution to PyCon TW, we can create a friendly, ' +
+            'organic coding environment for all Python developers. {br}' +
+            '{br}' +
+            'Again, we are very grateful to have your support for the community. ' +
+            'You are the biggest motivation for PyCon TW, encouraging us to exploit ' +
+            'every possibility for Python. {br}' +
+            '{br}' +
+            'Let’s Go Infinitely and Beyond!',
         features: {
             onSales: '35% off Discount',
             limited100: 'Limited edition tickets',
@@ -65,14 +83,17 @@ export default genI18nMessages({
             '若需要財務補助的你，請至{fa}進行申請。{br}',
         introSponsor: '個人贊助票簡介',
         SponsorContent:
-            'PyCon TW 活動包括了 PyCon APAC 2022、衝刺開發、Job Fair, Open Space, PyNight, {br}' +
-            'PyCon TW Podcast - Pycast 與獨特 Python 經歷的學生分享 - Young Inspirers，{br}' +
+            'PyCon TW 理念源起美國，舉辦一系列推廣和專門探討 Python 程式語言會議，推動 Python ' +
+            '在台灣使用且增加社群交流。{br}' +
+            '{br}' +
+            'PyCon TW 舉辦活動包括了 PyCon APAC 2022、衝刺開發 (Sprints)、 ' +
+            'PyCon TW Podcast - PyCast、獨特 Python 經歷的學生分享 - Young Inspirers ，' +
             '多樣化活動是為了讓更多人認識 Python 程式語言且了解廣大應用領域。{br}' +
             '{br}' +
             '若您認同 PyCon TW 推動理念，願意用行動贊助支持我們，購買個人贊助票對我們是最實質肯定。{br}' +
             '{br}' +
-            '為感謝您，PyCon TW 將為您客製 PyCon APAC 2022 神秘小禮物，與持續不斷推動 Python 技術與知識分享，' +
-            '為這片土地開墾，種下可能種子。',
+            '為感謝您，PyCon TW 將為您客製 PyCon APAC 2022 神秘小禮物，與持續不斷推動 Python 技術' +
+            '與知識分享，為這片土地開墾，種下可能種子。',
         features: {
             onSales: '65 折優惠',
             limited100: '限量票 100 張',
