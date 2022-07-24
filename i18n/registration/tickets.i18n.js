@@ -87,7 +87,7 @@ export default genI18nMessages({
             '在台灣使用且增加社群交流。{br}' +
             '{br}' +
             'PyCon TW 舉辦活動包括了 PyCon APAC 2022、衝刺開發 (Sprints)、 ' +
-            'PyCon TW Podcast - Pycast、獨特 Python 經歷的學生分享 - Young Inspirers ，' +
+            'PyCon TW Podcast - PyCast、獨特 Python 經歷的學生分享 - Young Inspirers ，' +
             '多樣化活動是為了讓更多人認識 Python 程式語言且了解廣大應用領域。{br}' +
             '{br}' +
             '若您認同 PyCon TW 推動理念，願意用行動贊助支持我們，購買個人贊助票對我們是最實質肯定。{br}' +

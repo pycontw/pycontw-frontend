@@ -29,7 +29,7 @@ export default genI18nMessages({
             pycast: {
                 title: 'PyCast',
                 description:
-                    'Pycon set up a Podcast channel called Pycast. ' +
+                    'Pycon set up a Podcast channel called PyCast. ' +
                     'We will invite veterans of the Python community, speakers and ' +
                     'volunteers to talk about Python-related exciting content. ',
             },
@@ -131,7 +131,7 @@ export default genI18nMessages({
             pycast: {
                 title: 'PyCast',
                 description:
-                    'Pycon 今年新設立 Podcast 頻道 Pycast。' +
+                    'Pycon 今年新設立 Podcast 頻道 PyCast。' +
                     '我們將邀請 Python 社群元老級人物、 神人講者及志工來聊聊 Python 相關的精彩內容。' +
                     '內容輕鬆有趣，不管是在通勤或是在家休閒時刻都適合。還有線上筆記可以參考！',
             },
