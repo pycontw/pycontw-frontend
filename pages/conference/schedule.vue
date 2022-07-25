@@ -127,6 +127,18 @@ export default {
         await this.$store.dispatch('$getSchedulesData')
         this.processData()
     },
+    activated() {
+        setTimeout(() => {
+            window.scrollTo(0, this.scrollPosition)
+        }, 0)
+    },
+    deactivated() {
+        this.scrollPosition =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop ||
+            0
+    },
     methods: {
         processData() {
             this.makeDays()

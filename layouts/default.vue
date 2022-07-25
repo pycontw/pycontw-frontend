@@ -4,7 +4,7 @@
             <core-header />
         </div>
         <div class="default-layout__body">
-            <Nuxt />
+            <Nuxt keep-alive :keep-alive-props="{ include: includeArr }" />
             <core-footer />
         </div>
     </div>
@@ -18,6 +18,11 @@ export default {
     components: {
         CoreHeader,
         CoreFooter,
+    },
+    data() {
+        return {
+            includeArr: ['PageConferenceSchedule'],
+        }
     },
     head() {
         return {
