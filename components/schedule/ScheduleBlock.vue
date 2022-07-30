@@ -24,6 +24,7 @@ export default {
         primary: { type: Boolean, default: false },
         secondary: { type: Boolean, default: false },
         tertiary: { type: Boolean, default: false },
+        tabHeader: { type: Boolean, default: false },
         active: { type: Boolean, default: false },
         mini: { type: Boolean, default: false },
         textAlignCenter: { type: Boolean, default: true },
@@ -46,6 +47,7 @@ export default {
                 '-primary': this.primary,
                 '-secondary': this.secondary,
                 '-tertiary': this.tertiary,
+                '-tab-header': this.tabHeader,
                 '-active': this.active,
                 '-mini': this.mini,
                 '-transparent': this.transparent,
@@ -81,6 +83,13 @@ export default {
 .scheduleBlock.-transparent,
 .scheduleBlock.-mini {
     min-width: unset;
+}
+
+.scheduleBlock.-tab-header.-active {
+    @apply text-black-200 bg-primary-900;
+}
+.scheduleBlock.-tab-header:not(.-active):hover {
+    color: #7568f6;
 }
 
 .scheduleBlock.-primary.-active {
