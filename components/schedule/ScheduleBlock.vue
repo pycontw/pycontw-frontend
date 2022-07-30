@@ -93,30 +93,26 @@ export default {
 }
 
 .scheduleBlock.-primary.-active {
-    color: #c7c7c7;
-    background-color: #354970;
-    &.hover {
-        color: #000000;
-        background-color: #d1ac23;
+    @apply text-black-300 bg-primary-800;
+    & >>> .scheduleEvent__title {
+        @apply text-primary-100;
     }
 }
-
-.scheduleBlock.-primary:not(.-active):hover {
-    color: #7568f6;
+.scheduleBlock.-primary.-active:hover {
+    @apply text-primary-800 bg-pink-500;
+    & >>> .scheduleEvent__title {
+        @apply text-primary-900;
+    }
 }
 
 .scheduleBlock.-secondary {
-    @apply text-pink-500;
-    background-color: rgba(6, 35, 85, 0.8);
-    &:active {
-        color: #d1ac23;
-        background-color: rgba(31, 63, 92, 0.8);
-    }
+    @apply bg-primary-900;
+    color: #827bc1;
 }
 
 .scheduleBlock.-tertiary {
-    color: #d1ac23;
-    background-color: #243f73;
+    color: #f8f9fb;
+    background-color: #3c2d66;
 }
 
 .scheduleBlock.-mini {
