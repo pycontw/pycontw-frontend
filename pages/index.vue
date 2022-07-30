@@ -54,7 +54,7 @@
                     $t('getTicket')
                 }}</text-button>
             </div>
-            <div class="sponsor-section">
+            <div id="sponsor" class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"
