@@ -1,9 +1,13 @@
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
+import timezone from 'dayjs/plugin/timezone'
 
 dayjs.extend(utc)
 dayjs.extend(customParseFormat)
+dayjs.extend(advancedFormat)
+dayjs.extend(timezone)
 
 const defaultDatetimeOptions = {
     defaultValue: '',

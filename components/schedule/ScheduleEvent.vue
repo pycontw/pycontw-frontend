@@ -56,10 +56,14 @@ export default {
         inList: { type: Boolean, default: false },
     },
     data() {
-        const format = 'HH:mm'
+        const timeFormat = 'HH:mm'
+        const timezoneFormat = 'z'
+
         return {
-            format,
-            options: { outputFormat: format },
+            timeFormat,
+            timezoneFormat,
+            timeOptions: { outputFormat: timeFormat },
+            timezoneOptions: { outputFormat: timezoneFormat },
             startPoint: this.$parseDate(this.$padTimezone(this.timelineBegin)),
             icon: {
                 lang: {
@@ -91,13 +95,17 @@ export default {
         duration() {
             const startTime = this.$datetimeToString(
                 this.$padTimezone(this.value.begin_time),
-                this.options,
+                this.timeOptions,
             )
             const endTime = this.$datetimeToString(
                 this.$padTimezone(this.value.end_time),
-                this.options,
+                this.timeOptions,
             )
-            return `${startTime} ~ ${endTime}`
+            const timezone = this.$datetimeToString(
+                this.$padTimezone(this.value.begin_time),
+                this.timezoneOptions,
+            )
+            return `${startTime} ~ ${endTime} (${timezone})`
         },
         roomClass() {
             return `room-${this.value.room}`
