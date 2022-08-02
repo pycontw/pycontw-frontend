@@ -165,7 +165,7 @@ export default {
     @apply inline transition;
     filter: brightness(80%);
 }
-.scheduleEvent__context:hover > .scheduleEvent__icon > img {
+.scheduleEvent:hover >>> .scheduleEvent__icon > img {
     filter: brightness(0%);
 }
 </style>
