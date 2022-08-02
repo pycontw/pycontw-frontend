@@ -52,7 +52,7 @@ export default {
                 '-mini': this.mini,
                 '-transparent': this.transparent,
                 'text-center': this.textAlignCenter,
-                'cursor-pointer': this.primary,
+                'cursor-pointer': this.primary || this.tabHeader,
                 hover: this.isHovering,
                 [this.paddingX]: true,
                 [this.paddingY]: true,
