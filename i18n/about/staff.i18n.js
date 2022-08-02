@@ -9,6 +9,10 @@ export default genI18nMessages({
                 teamName: 'Chairperson',
             },
             {
+                key: 'vice_chairperson',
+                teamName: 'Vice Chairperson',
+            },
+            {
                 key: 'everywhere',
                 teamName: 'Everywhere',
             },
@@ -57,6 +61,10 @@ export default genI18nMessages({
                 teamName: 'Design',
             },
             {
+                key: 'uiux',
+                teamName: 'UI/UX',
+            },
+            {
                 key: 'finance',
                 teamName: 'Finance',
             },
@@ -80,6 +88,10 @@ export default genI18nMessages({
             {
                 key: 'chairperson',
                 teamName: '主席',
+            },
+            {
+                key: 'vice_chairperson',
+                teamName: '副主席',
             },
             {
                 key: 'everywhere',
@@ -128,6 +140,10 @@ export default genI18nMessages({
             {
                 key: 'design',
                 teamName: '設計',
+            },
+            {
+                key: 'uiux',
+                teamName: '使用者介面/體驗',
             },
             {
                 key: 'finance',
