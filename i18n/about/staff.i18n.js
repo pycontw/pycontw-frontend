@@ -79,7 +79,7 @@ export default genI18nMessages({
         ],
         og: {
             title: 'Staff',
-            description: 'Staff of PyConTW 2021',
+            description: 'Staff of PyCon APAC 2022',
         },
     },
     'zh-hant': {
@@ -160,7 +160,7 @@ export default genI18nMessages({
         ],
         og: {
             title: '工作人員',
-            description: 'PyConTW 2021 工作人員',
+            description: 'PyCon APAC 2022 工作人員',
         },
     },
 })

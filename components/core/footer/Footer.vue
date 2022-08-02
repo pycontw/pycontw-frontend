@@ -11,10 +11,10 @@
                     >
                         {{ $t('joinUs') }}
                     </ext-link>
-                    <!-- <locale-link to="/about/staff" class="my-2">{{
+                    <locale-link to="/about/staff" class="my-2">{{
                         $t('staff')
                     }}</locale-link>
-                    <locale-link to="/about/privacy-policy" class="my-2">
+                    <!-- <locale-link to="/about/privacy-policy" class="my-2">
                         {{ $t('privacyPolicy') }}
                     </locale-link> -->
                 </div>
@@ -30,7 +30,7 @@
 import i18n from './Footer.i18n'
 import FooterIcon from './FooterIcon'
 import FooterHistory from './FooterHistory'
-import { ExtLink } from '~/components/core/links'
+import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
     i18n,
@@ -38,6 +38,7 @@ export default {
     components: {
         FooterIcon,
         ExtLink,
+        LocaleLink,
         FooterHistory,
     },
 }
