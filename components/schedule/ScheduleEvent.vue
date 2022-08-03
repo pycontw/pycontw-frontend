@@ -12,7 +12,9 @@
             <slot name="prepend"></slot>
         </div>
         <div class="scheduleEvent__context sticky">
-            <div class="font-bold">{{ getValueByLocale(value.title) }}</div>
+            <div class="scheduleEvent__title">
+                {{ getValueByLocale(value.title) }}
+            </div>
             <br v-if="!isCustomEvent" />
             <div v-if="byLine" class="font-medium text-sm">by {{ byLine }}</div>
             <div class="scheduleEvent__icon">
@@ -155,11 +157,15 @@ export default {
     top: 132px;
 }
 
+.scheduleEvent__title {
+    @apply font-bold;
+}
+
 .scheduleEvent__icon > img {
     @apply inline transition;
-    filter: brightness(0) invert(1);
+    filter: brightness(80%);
 }
-.scheduleEvent__context:hover > .scheduleEvent__icon > img {
+.scheduleEvent:hover >>> .scheduleEvent__icon > img {
     filter: brightness(0%);
 }
 </style>

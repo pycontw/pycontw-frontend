@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper>
+    <i18n-page-wrapper class="pageWrapper" :use-bg-decoration="false" custom-x>
         <core-h1 :title="$t('Schedule')"></core-h1>
         <schedule>
             <schedule-day-tabs v-model="selectedDayIndex">
@@ -243,4 +243,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.pageWrapper {
+    @apply md:px-24;
+}
+</style>
