@@ -2,10 +2,9 @@
     <div class="default-layout">
         <div class="default-layout__header">
             <core-header />
-            <announce-bar />
         </div>
         <div class="default-layout__body">
-            <Nuxt />
+            <Nuxt keep-alive :keep-alive-props="{ include: includeArr }" />
             <core-footer />
         </div>
     </div>
@@ -14,13 +13,16 @@
 <script>
 import CoreFooter from '~/components/core/footer/Footer'
 import CoreHeader from '~/components/core/header/Header'
-import AnnounceBar from '~/components/core/announce-bar/AnnounceBar'
 
 export default {
     components: {
         CoreHeader,
         CoreFooter,
-        AnnounceBar,
+    },
+    data() {
+        return {
+            includeArr: ['PageConferenceSchedule'],
+        }
     },
     head() {
         return {

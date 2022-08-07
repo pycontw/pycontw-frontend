@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper>
+    <i18n-page-wrapper class="pageWrapper" :use-bg-decoration="false" custom-x>
         <core-h1 :title="$t('Schedule')"></core-h1>
         <schedule>
             <schedule-day-tabs v-model="selectedDayIndex">
@@ -127,6 +127,18 @@ export default {
         await this.$store.dispatch('$getSchedulesData')
         this.processData()
     },
+    activated() {
+        setTimeout(() => {
+            window.scrollTo(0, this.scrollPosition)
+        }, 0)
+    },
+    deactivated() {
+        this.scrollPosition =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop ||
+            0
+    },
     methods: {
         processData() {
             this.makeDays()
@@ -243,4 +255,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.pageWrapper {
+    @apply md:px-24;
+}
+</style>

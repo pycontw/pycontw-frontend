@@ -61,7 +61,7 @@
                 ></core-h2>
                 <bulletin-card-collection></bulletin-card-collection>
             </div>
-            <div class="sponsor-section">
+            <div id="sponsor" class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"

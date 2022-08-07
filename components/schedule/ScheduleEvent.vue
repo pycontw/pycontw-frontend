@@ -12,7 +12,9 @@
             <slot name="prepend"></slot>
         </div>
         <div class="scheduleEvent__context sticky">
-            <div class="font-bold">{{ getValueByLocale(value.title) }}</div>
+            <div class="scheduleEvent__title">
+                {{ getValueByLocale(value.title) }}
+            </div>
             <br v-if="!isCustomEvent" />
             <div v-if="byLine" class="font-medium text-sm">by {{ byLine }}</div>
             <div class="scheduleEvent__icon">
@@ -56,16 +58,21 @@ export default {
         inList: { type: Boolean, default: false },
     },
     data() {
-        const format = 'HH:mm'
+        const timeFormat = 'HH:mm'
+        const timezoneFormat = 'z'
+
         return {
-            format,
-            options: { outputFormat: format },
+            timeFormat,
+            timezoneFormat,
+            timeOptions: { outputFormat: timeFormat },
+            timezoneOptions: { outputFormat: timezoneFormat },
             startPoint: this.$parseDate(this.$padTimezone(this.timelineBegin)),
             icon: {
                 lang: {
                     ENEN: require('~/static/img/icons/lang/ENEN.svg'),
                     ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
-                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'),
+                    JPEN: require('~/static/img/icons/lang/JPEN.svg'), // added for PyCon APAC 2022
+                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'), // not used in PyCon APAC 2022
                 },
                 level: {
                     NOVICE: require('~/static/img/icons/level/novice.svg'),
@@ -90,13 +97,17 @@ export default {
         duration() {
             const startTime = this.$datetimeToString(
                 this.$padTimezone(this.value.begin_time),
-                this.options,
+                this.timeOptions,
             )
             const endTime = this.$datetimeToString(
                 this.$padTimezone(this.value.end_time),
-                this.options,
+                this.timeOptions,
             )
-            return `${startTime} ~ ${endTime}`
+            const timezone = this.$datetimeToString(
+                this.$padTimezone(this.value.begin_time),
+                this.timezoneOptions,
+            )
+            return `${startTime} ~ ${endTime} (${timezone})`
         },
         roomClass() {
             return `room-${this.value.room}`
@@ -154,11 +165,15 @@ export default {
     top: 132px;
 }
 
+.scheduleEvent__title {
+    @apply font-bold;
+}
+
 .scheduleEvent__icon > img {
     @apply inline transition;
-    filter: brightness(0) invert(1);
+    filter: brightness(80%);
 }
-.scheduleEvent__context:hover > .scheduleEvent__icon > img {
+.scheduleEvent:hover >>> .scheduleEvent__icon > img {
     filter: brightness(0%);
 }
 </style>

@@ -21,6 +21,13 @@
                     >HackMD</ext-link
                 >
             </template>
+            <template #form>
+                <ext-link
+                    href="https://forms.gle/Htt9REPE6M7iVKZL9"
+                    highlight
+                    >{{ $t('form') }}</ext-link
+                >
+            </template>
         </i18n>
     </i18n-page-wrapper>
 </template>

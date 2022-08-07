@@ -12,13 +12,8 @@ export default {
 
 <style lang="postcss" scoped>
 .speechCardCollection {
-    @apply grid grid-cols-2 sm:grid-cols-3 justify-items-center;
-    margin: 0 12px;
-    column-gap: 24px;
-    row-gap: 32px;
-    @media (min-width: 415px) {
-        column-gap: 20px;
-        row-gap: 44px;
-    }
+    @apply grid sm:grid-cols-2 md:grid-cols-3;
+    @apply gap-x-4 gap-y-4 md:gap-y-6;
+    @apply my-6 md:my-16;
 }
 </style>

@@ -49,7 +49,7 @@ export default {
     background-color: rgba(110, 118, 129, 0.4);
 }
 .markdown a {
-    color: #e6ba17;
+    @apply font-bold text-pink-700;
 
     &:hover {
         @apply text-primary-500;

@@ -9,6 +9,10 @@ export default genI18nMessages({
                 teamName: 'Chairperson',
             },
             {
+                key: 'vice_chairperson',
+                teamName: 'Vice Chairperson',
+            },
+            {
                 key: 'everywhere',
                 teamName: 'Everywhere',
             },
@@ -57,6 +61,10 @@ export default genI18nMessages({
                 teamName: 'Design',
             },
             {
+                key: 'uiux',
+                teamName: 'UI/UX',
+            },
+            {
                 key: 'finance',
                 teamName: 'Finance',
             },
@@ -71,7 +79,7 @@ export default genI18nMessages({
         ],
         og: {
             title: 'Staff',
-            description: 'Staff of PyConTW 2021',
+            description: 'Staff of PyCon APAC 2022',
         },
     },
     'zh-hant': {
@@ -80,6 +88,10 @@ export default genI18nMessages({
             {
                 key: 'chairperson',
                 teamName: '主席',
+            },
+            {
+                key: 'vice_chairperson',
+                teamName: '副主席',
             },
             {
                 key: 'everywhere',
@@ -130,6 +142,10 @@ export default genI18nMessages({
                 teamName: '設計',
             },
             {
+                key: 'uiux',
+                teamName: '使用者介面/體驗',
+            },
+            {
                 key: 'finance',
                 teamName: '財務',
             },
@@ -144,7 +160,7 @@ export default genI18nMessages({
         ],
         og: {
             title: '工作人員',
-            description: 'PyConTW 2021 工作人員',
+            description: 'PyCon APAC 2022 工作人員',
         },
     },
 })

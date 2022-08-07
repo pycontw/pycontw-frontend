@@ -82,15 +82,13 @@
                     </div>
                 </div>
             </div>
-            <!-- TODO
-                等文案 Review 後再放
+            <!-- Sponsor pass content-->
             <div class="pb-12">
                 <h2 id="introSponsor">{{ $t('introSponsor') }}</h2>
                 <i18n path="SponsorContent" tag="p" class="SponsorContent">
                     <template #br><br /></template>
                 </i18n>
             </div>
-            -->
         </i18n-page-wrapper>
     </div>
 </template>
@@ -140,33 +138,36 @@ export default {
                     tag: 'regular',
                     titleI18NPath: 'ticketRegular',
                     price: 'NT$ 2,600',
-                    image: require('~/static/img/registration/tickets/regular.svg'),
+                    image: require('~/static/img/registration/tickets/regular_disabled.svg'),
                     features: ['pyckage', 'conference'],
-                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                    link: null,
+                    hasEnded: true,
                 },
                 {
                     tag: 'sponsorship',
                     titleI18NPath: 'ticketSponsorship',
                     price: 'NT$ 5,000',
-                    image: require('~/static/img/registration/tickets/sponsor.svg'),
+                    image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
                     features: ['SpecialSouvenir', 'pyckage', 'conference'],
-                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                    link: null,
+                    hasEnded: true,
                 },
                 {
                     tag: 'latebird',
                     titleI18NPath: 'ticketLateBird',
                     price: 'NT$ 3,600',
-                    image: require('~/static/img/registration/tickets/lateBird_disabled.svg'),
+                    image: require('~/static/img/registration/tickets/lateBird.svg'),
                     features: ['conference'],
-                    link: null,
+                    link: 'https://pycontw.kktix.cc/events/2022-individual',
                 },
                 {
                     tag: 'enterprise',
                     titleI18NPath: 'ticketEnterprise',
                     price: 'NT$ 3,600',
-                    image: require('~/static/img/registration/tickets/corporate.svg'),
+                    image: require('~/static/img/registration/tickets/corporate_disabled.svg'),
                     features: ['vatAvailable', 'pyckage', 'conference'],
-                    link: 'https://pycontw.kktix.cc/events/2022-corporate',
+                    link: null,
+                    hasEnded: true,
                 },
             ],
         }

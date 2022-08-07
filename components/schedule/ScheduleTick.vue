@@ -12,6 +12,6 @@ export default {
 
 <style lang="postcss" scoped>
 .scheduleTick {
-    color: #d1ac23;
+    @apply text-pink-700;
 }
 </style>
