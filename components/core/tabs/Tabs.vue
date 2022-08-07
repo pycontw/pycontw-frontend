@@ -51,7 +51,7 @@ export default {
 }
 
 .tabs__headers > .header {
-    @apply inline-block p-2;
+    @apply inline-block py-[13px] px-[22px];
     @apply text-center font-black border-transparent text-pink-700;
     @apply border rounded-t-md bg-transparent cursor-pointer;
     font-size: 18px;
@@ -67,7 +67,7 @@ export default {
 }
 
 .tab {
-    @apply inline-block text-xs md:text-sm w-full bg-opacity-0 p-4 text-black-200;
+    @apply inline-block text-xs md:text-sm w-full bg-opacity-0 py-4 text-black-200;
     @apply border-solid border-t-2 border-pink-700;
     line-height: 29px;
     font-size: 16px;
