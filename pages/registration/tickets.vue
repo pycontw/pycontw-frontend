@@ -141,6 +141,7 @@ export default {
                     image: require('~/static/img/registration/tickets/regular_disabled.svg'),
                     features: ['pyckage', 'conference'],
                     link: null,
+                    hasEnded: true,
                 },
                 {
                     tag: 'sponsorship',
@@ -149,6 +150,7 @@ export default {
                     image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
                     features: ['SpecialSouvenir', 'pyckage', 'conference'],
                     link: null,
+                    hasEnded: true,
                 },
                 {
                     tag: 'latebird',
@@ -165,6 +167,7 @@ export default {
                     image: require('~/static/img/registration/tickets/corporate_disabled.svg'),
                     features: ['vatAvailable', 'pyckage', 'conference'],
                     link: null,
+                    hasEnded: true,
                 },
             ],
         }
