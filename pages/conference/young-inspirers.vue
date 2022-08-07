@@ -5,15 +5,15 @@
             <i18n path="intro" tag="p" class="intro">
                 <template #br><br /></template>
             </i18n>
-            <div class="speechForm">
-                <span class="speechForm__header">{{ $t('formTitle') }}</span>
-                <p class="speechForm__content">{{ $t('form') }}</p>
+            <div class="tableRow">
+                <span class="tableRow__header">{{ $t('formTitle') }}</span>
+                <p class="tableRow__content">{{ $t('form') }}</p>
             </div>
-            <div class="speechForm">
-                <span class="speechForm__header">{{
+            <div class="tableRow">
+                <span class="tableRow__header">{{
                     $t('hostHeaderTitle')
                 }}</span>
-                <div class="host--group">
+                <div class="hostGroup">
                     <div
                         v-for="(host, j) in hosts"
                         :key="`host-${j}`"
@@ -25,11 +25,11 @@
                 </div>
             </div>
         </div>
-        <div class="speechesList__wrapper">
+        <div class="agenda">
             <div
                 v-for="(speechInfo, speechDayIdx) in speechInfos"
                 :key="`speech_info_${speechDayIdx}`"
-                class="speechList__dayBlock"
+                class="speechDayList"
             >
                 <div class="day">
                     <p class="day__date">
@@ -40,15 +40,15 @@
                     </p>
                 </div>
 
-                <div class="speeches__wrapper">
+                <div class="speechListWrapper">
                     <div
                         v-for="(speech, speechIdx) in speechInfo.speeches"
                         :key="`speech_${speechIdx}`"
-                        class="speech__box__wrapper"
+                        class="speechBoxWrapper"
                     >
                         <div class="speechBox">
                             <div>
-                                <div class="speechBox__avatar__wrapper">
+                                <div class="speechBox__avatarWrapper">
                                     <img
                                         v-for="(speakerAvatar, i) in tagToPhoto[
                                             speech.tag
@@ -96,7 +96,7 @@
                                         {{ desc }}
                                     </p>
                                 </div>
-                                <div class="flex flex-row">
+                                <div class="buttonsWrapper">
                                     <text-button
                                         :href="speech.live_link"
                                         :primary="true"
@@ -117,18 +117,21 @@
                         </div>
                         <div
                             ref="popupCover"
-                            class="speechBox__popup__wrapper"
+                            class="speechModal__wrapper"
                             :class="{
-                                'speechBox__popup__wrapper--show':
+                                'speechModal__wrapper speechModal__wrapper--show':
                                     popupIndex ===
                                     `${speechDayIdx}-${speechIdx}`,
                             }"
                         >
-                            <div class="closingArea" @click="popupClose"></div>
-                            <div class="speechBox__popup">
+                            <div
+                                class="speechModal__closingArea"
+                                @click="popupClose"
+                            ></div>
+                            <div class="speechModal">
                                 <button
                                     ref="popupBtn"
-                                    class="speechBox__popup__button"
+                                    class="speechModal__button"
                                     @click="popupClose"
                                 >
                                     ✕
@@ -141,11 +144,11 @@
                                         :key="`speech_info_${speechIdx}_photo_${i}`"
                                         :src="speakerAvatar"
                                         :alt="tagToSpeaker[speech.tag][i]"
-                                        class="speechBox__popup__img"
+                                        class="speechModal__img"
                                     />
                                 </div>
                                 <div
-                                    class="speechBox__popup__speaker"
+                                    class="speechModal__speaker"
                                     @click="
                                         popupShow(
                                             `${speechDayIdx}-${speechIdx}`,
@@ -158,15 +161,13 @@
                                                 speaker, i
                                             ) in speech.speaker"
                                             :key="`speech_info_${speechDayIdx}_${speechIdx}_speaker_${i}`"
-                                            class="speechBox__popup__speaker"
+                                            class="speechModal__speaker"
                                         >
                                             {{ speaker.name }}
                                         </span>
                                     </div>
                                     <div
-                                        class="
-                                            speechBox__popup__speaker__description
-                                        "
+                                        class="speechModal__speakerDescription"
                                     >
                                         <div
                                             v-for="(
@@ -435,14 +436,14 @@ export default {
     line-height: 30px;
 }
 
-.speechForm {
+.tableRow {
     @apply mx-0;
     @apply md:mb-12;
     @apply flex flex-col justify-around md:flex-row;
     @apply text-center;
 }
 
-.speechForm__header {
+.tableRow__header {
     @apply my-0;
     @apply w-full md:w-1/5;
     @apply font-sans font-normal text-primary-500;
@@ -450,17 +451,17 @@ export default {
     @apply text-left;
 }
 
-.speechForm__content {
+.tableRow__content {
     @apply font-sans font-normal;
     @apply text-sm;
 }
 
-.speechesList__wrapper {
+.agenda {
     @apply mx-auto;
     @apply w-full;
 }
 
-.speechList__dayBlock {
+.speechDayList {
     @apply flex flex-col md:flex-row;
     @apply mb-0 md:mb-10;
 }
@@ -481,11 +482,11 @@ export default {
     @apply leading-normal;
 }
 
-.speeches__wrapper {
+.speechListWrapper {
     @apply flex flex-col;
     @apply mx-0 md:ml-20;
 }
-.speech__box__wrapper {
+.speechBoxWrapper {
     @apply flex flex-col;
 }
 
@@ -496,7 +497,7 @@ export default {
     @apply relative;
     border-radius: 24px;
 }
-.speech__box__wrapper:first-of-type .speechBox {
+.speechBoxWrapper:first-of-type .speechBox {
     @apply mt-0;
 }
 
@@ -528,7 +529,7 @@ export default {
     @apply mt-2 mb-0 overflow-hidden;
 }
 
-.speechBox__avatar__wrapper {
+.speechBox__avatarWrapper {
     @apply absolute;
     @apply hidden md:flex;
     right: 30px;
@@ -541,50 +542,54 @@ export default {
     transform: translateX(0px);
 }
 
-.speechBox__popup__img {
+.speechModal__img {
     @apply object-cover rounded-lg h-16 w-16 md:h-32 md:w-32;
     transform: translateX(-20px);
 }
 
-.speechBox__popup__img:first-of-type {
+.speechModal__img:first-of-type {
     transform: translateX(0px);
 }
 
-.speechBox__popup__wrapper {
+.speechModal__wrapper {
     @apply fixed hidden justify-center items-center w-full h-screen left-0 top-0 lg:p-0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.speechBox__popup__wrapper--show {
+.speechModal__wrapper--show {
     @apply flex;
 }
-.speechBox__popup {
+.speechModal {
     @apply relative flex justify-center items-center flex-col rounded-3xl p-7 border-3 border-pink-700 bg-black-900 lg:p-10;
     @apply w-11/12 md:w-4/5 md:max-w-3xl;
     z-index: 10000;
 }
 
-.speechBox__popup__button {
+.speechModal__button {
     @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
 }
 
-.speechBox__popup__speaker {
+.speechModal__speaker {
     @apply font-serif font-semibold md:font-bold text-sm md:text-lg text-black-200;
     @apply my-2 mr-3;
 }
-.speechBox__popup__speaker__description {
+.speechModal__speakerDescription {
     @apply font-sans font-normal text-xs md:text-sm text-primary-100 overflow-y-auto;
     @apply max-h-60;
     @apply mb-4;
 }
+
+.buttonsWrapper {
+    @apply flex flex-row;
+}
 .linkButton {
     @apply mx-2 my-6;
 }
-.closingArea {
+.speechModal__closingArea {
     @apply w-full h-full absolute;
     z-index: 9999;
 }
-.host--group {
+.hostGroup {
     @apply flex w-full flex-wrap pt-4 md:p-0;
 }
 
