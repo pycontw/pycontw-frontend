@@ -36,10 +36,10 @@ export default Object.freeze({
         },
     ],
     conference: [
-        // {
-        //     i18nKey: 'overview',
-        //     value: '/events/overview',
-        // },
+        {
+            i18nKey: 'overview',
+            value: '/events/overview',
+        },
         { i18nKey: 'keynotes', value: '/conference/keynotes' },
         { i18nKey: 'talks', value: '/conference/talks' },
         { i18nKey: 'tutorials', value: '/conference/tutorials' },
