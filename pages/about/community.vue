@@ -2,7 +2,7 @@
     <div class="px-8 lg:px-20 xl:px-28 py-10 md:py-20">
         <core-h1
             :title="$t('title')"
-            class="justify-center lg:justify-start ml-0 lg:ml-2"
+            class="font-bold justify-center lg:justify-start ml-0 lg:ml-2"
         ></core-h1>
         <div class="flex flex-col justify-between lg:flex-row">
             <div class="map-area">
@@ -91,7 +91,7 @@
                                 />
                                 <h4
                                     class="
-                                        font-serif
+                                        font-bold font-serif
                                         text:md
                                         lg:text-2xl
                                         mb-10
@@ -100,7 +100,15 @@
                                 >
                                     {{ community.title }}
                                 </h4>
-                                <p class="text-xs lg:text-sm text-left">
+                                <p
+                                    class="
+                                        text-xs
+                                        lg:text-sm
+                                        text-left
+                                        leading-normal
+                                        lg:leading-normal
+                                    "
+                                >
                                     {{ community.description }}
                                 </p>
                                 <core-text-button
@@ -237,8 +245,8 @@ export default {
     @apply w-full lg:w-1/2;
 }
 .map-area__text {
-    @apply text-xs text-justify lg:text-sm leading-4 lg:leading-6 tracking-normal lg:tracking-widest;
-    @apply font-serif px-0 lg:px-2;
+    @apply text-xs text-justify lg:text-sm leading-normal lg:leading-normal;
+    @apply font-semibold font-serif px-0 lg:px-2;
 }
 .map-area__img {
     @apply mt-20 mb-8 w-full;
@@ -282,11 +290,10 @@ export default {
     @apply hidden;
 }
 .communities__content__box__content {
-    @apply mx-auto mt-6 min-h-full px-6 py-6 cursor-default lg:cursor-pointer;
+    @apply mx-auto mt-6 min-h-full px-6 py-6 cursor-default lg:cursor-pointer transition;
     @apply flex justify-between items-center flex-col bg-primary-900 border border-primary-900 lg:flex-row;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
-    transition: background-color 0.5s, box-shadow 0.5s, border-color 0.5s;
 }
 .communities__content__box__content:hover {
     @media (min-width: 1194px) {
