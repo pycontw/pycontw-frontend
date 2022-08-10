@@ -116,11 +116,8 @@ export default {
                 ],
                 development_infra: [
                     { name: 'josix', photo: 'web/Josix.png' },
-                    { name: 'Matthew', photo: 'venue/Matthew.jpg' },
                     { name: 'Luke', photo: 'venue/luke.jpeg' },
                     { name: 'Allen', photo: 'sponsorship/Allen.png' },
-                    { name: 'Where', photo: 'infra/where.png' },
-                    { name: 'Jay', photo: 'cat-smile.png' },
                     { name: 'Li-Ying', photo: 'registration/Li-Ying.jpg' },
                     { name: 'Sean', photo: 'infra/Sean.png' },
                     { name: 'Darkborderman', photo: 'cat-smile.png' },
@@ -151,6 +148,7 @@ export default {
                     { name: 'Juihsiang', photo: 'venue/Juihsiang.jpeg' },
                     { name: 'Macs', photo: 'venue/macs.jpg' },
                     { name: 'Mark', photo: 'cat-smile.png' },
+                    { name: 'TN Lee', photo: 'program/TN Lee.png' },
                 ],
                 sponsorship: [
                     { name: 'Allen', photo: 'sponsorship/Allen.png' },
@@ -193,6 +191,7 @@ export default {
                     { name: 'Connie', photo: 'pr/Connie.png' },
                     { name: 'Winnie', photo: 'pr/Winnie.jpeg' },
                     { name: '鈺馨', photo: 'pr/鈺馨.jpg' },
+                    { name: 'Leila', photo: 'finance/Leila.jpg' },
                 ],
                 registration: [
                     { name: 'GTB', photo: 'registration/GTB.png' },
@@ -230,7 +229,6 @@ export default {
                     { name: 'Jasmine', photo: 'cat-smile.png' },
                     { name: 'yun', photo: 'cat-smile.png' },
                     { name: 'Aaliyah', photo: 'cat-smile.png' },
-                    { name: 'AngelaHuang', photo: 'cat-smile.png' },
                 ],
                 finance: [
                     { name: 'Rock', photo: 'finance/rockhung.jpeg' },
