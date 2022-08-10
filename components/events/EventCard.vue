@@ -61,28 +61,27 @@ export default {
 
 <style lang="postcss" scoped>
 .card {
-    @apply relative inline-flex flex-col w-full break-words border-2 border-pink-500 shadow-pink-500;
-    min-height: 180px;
+    @apply relative inline-flex flex-col max-w-xs break-words bg-primary-900;
+    min-height: 18rem;
     border-radius: 24px;
+    border: 1px solid transparent;
     padding: 15px;
 
     @media (min-width: 415px) {
-        min-height: 362px;
+        min-height: 24rem;
         padding: 34px 30px 38px;
     }
 
-    &.--isLink:hover {
-        background-color: #e6ba17;
+    &:hover {
+        @apply bg-primary-800;
+        border: 1px solid #746bb8;
+        box-shadow: 0px 0px 10px 10px #352d66;
 
         & .title {
-            color: #000;
-        }
-        & .tag {
-            color: #000;
-            border: 2px solid #000;
+            @apply text-pink-700;
         }
         & .cardTxt {
-            color: #000;
+            @apply text-primary-100;
         }
     }
 }
@@ -92,9 +91,7 @@ export default {
     padding-bottom: 24px;
 }
 .title {
-    @apply font-bold font-serif text-pink-500;
-    font-size: 24px;
-    line-height: 30px;
+    @apply font-bold font-sans text-pink-500 text-sm md:text-lg;
 }
 
 .tag {
@@ -121,7 +118,7 @@ export default {
     }
 }
 .cardTxt {
-    @apply text-sm font-serif;
+    @apply text-xs md:text-sm font-serif;
     color: #c7c7c7;
 }
 
@@ -138,5 +135,6 @@ export default {
 }
 .cardImg img {
     @apply w-full;
+    border-radius: 12px;
 }
 </style>

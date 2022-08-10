@@ -10,19 +10,18 @@ export default genI18nMessages({
             youngInspirers: {
                 title: 'Young Inspirers',
                 description:
-                    'Young Inspirers is a new activity, ' +
-                    'aiming to create a learning and communication space for young people. ' +
-                    'Let young people share their experiences and cultivate the ability of ' +
-                    'multi-thinking to exchange information between different generations.',
+                    'Young Inspirers aims to create a learning and communication space for young people. ' +
+                    'Through this activity, young people can share their own experiences, ' +
+                    'develop their ability of multi-thinking' +
+                    ', and exchange information between different generations.',
             },
             sprint: {
                 title: 'Sprint',
                 description:
-                    'Sprint development is an activity that gathers ' +
-                    'open source project leaders and people who want to contribute ' +
-                    'but do not know how to start. ' +
-                    'There will be project leaders who will share and ' +
-                    'explain the features of their projects to be developed on the spot. ' +
+                    'Sprint development gathers ' +
+                    'open source project leaders and people who want to contribute. ' +
+                    'There will be project leaders who will share ' +
+                    'the features of their projects to be developed on the spot. ' +
                     'You can join your favorite project, ' +
                     'or share your own project with everyone!',
             },
@@ -36,26 +35,22 @@ export default genI18nMessages({
             keynote: {
                 title: 'Keynotes',
                 description:
-                    'PyCon APAC 2022 invites four speakers to give keynote speeches during ' +
-                    'the two-day conference. Each keynote speaker is considered one of ' +
-                    'the most important figures in their respective fields. ' +
-                    'They will share their professional experience and the image of their domain’s future.',
+                    'The two-day agenda featured four speakers giving keynote speeches at different sessions. ' +
+                    'The speakers are all top-notch people in various fields around the world; ' +
+                    'they will share their experience in their fields, projects, or the direction of future development.',
             },
             talk: {
                 title: 'Talks',
                 description:
-                    'The two conference days are packed with talks about Python ' +
-                    'by speakers from Taiwan and around the world. ' +
+                    'Lectures are the most important activities during the two-day session. ' +
                     'The talks will be either 15-, 30-, or 45-minute long. ' +
-                    'Three tracks of talks will be delivered simultaneously, ' +
-                    'all with different topics and difficulties.',
+                    'Three tracks of talks will be delivered simultaneously. ' +
+                    'You can choose the topics from different difficulties and types of speech you are interested in listening to.',
             },
             tutorial: {
                 title: 'Tutorials',
                 description:
-                    'Professional courses need to be registered in advance to ' +
-                    'obtain the qualifications. ' +
-                    'The course is usually provided for 1.5 hours. ' +
+                    'The tutorial is usually provided for 1.5 hours. ' +
                     'The difference between it and talk is that the speaker will ' +
                     'bring the audience to practice together, ' +
                     'and they can communicate with each other while learning.',
@@ -63,9 +58,8 @@ export default genI18nMessages({
             openSpace: {
                 title: 'Open Space',
                 description:
-                    'Open space is a self-service, party-style activity. ' +
-                    'The conference, which is different from the conference, ' +
-                    'is planned by the attendees on the spot. ' +
+                    'The open space is a self-service, party-style activity. ' +
+                    'It is planned by the attendees on the spot. ' +
                     'Open spaces allow you to define and plan your gatherings ' +
                     'in any way you like. ' +
                     'You can take other partners to participate and make friends!',
@@ -117,16 +111,16 @@ export default genI18nMessages({
             youngInspirers: {
                 title: 'Young Inspirers',
                 description:
-                    'Young Inspirers 是首次籌畫的新活動，旨在於創建一個屬於青少年的學習、交流空間。' +
-                    '讓青少年們透過這個活動去分享自身經歷，並培養多元思考、跨族群合作、系統整合的能力，' +
-                    '交流不同世代間的資訊。',
+                    'Young Inspirers 旨在於創建一個屬於青少年的學習、交流空間。' +
+                    '讓青少年們透過這個活動去分享自身經歷，並培養多元思考、系統整合的能力' +
+                    '，交流不同世代間的資訊。',
             },
             sprint: {
                 title: '衝刺開發',
                 description:
-                    '衝刺開發是一個聚集開源專案負責人、想貢獻但如何開始的人的活動。' +
-                    '將會有專案領導人帶著他們專案待開發的功能來現場分享與解說。' +
-                    '你可以選擇加入自己喜歡的專案，或是帶著自己的專案和大家分享！',
+                    '衝刺開發聚集開源專案負責人、想貢獻者的活動。' +
+                    '將會有領導人帶著他們專案待開發的功能來現場分享。' +
+                    '你可以選擇喜歡的專案，或是帶著自己的專案和大家分享！',
             },
             pycast: {
                 title: 'PyCast',
@@ -138,29 +132,26 @@ export default genI18nMessages({
             keynote: {
                 title: '主題演講',
                 description:
-                    '為期兩天的議程中，將有四位講者於不同場次進行主題演講（Keynote）。' +
-                    '主題演講講者都是在全球而言各領域非常頂尖的人士；' +
-                    '他們將帶來對自己的領域、專案的經驗分享，或者對於未來數年發展的方向與想像。',
+                    '兩天的議程中有四位講者於不同場次進行主題演講。講者都是在全球各領域頂尖的人士；' +
+                    '他們將帶來對自己的領域、專案的經驗分享，或對於未來發展的方向。',
             },
             talk: {
                 title: '一般演講',
                 description:
-                    '演講為會期兩天最主要的活動，來自台灣與全球的講者分享他們在 Python 相關的發現。' +
-                    '演講有 15、30、45 分鐘三種長度，每天都將有三軌議程同步進行，' +
-                    '配合各個演講的難易度與類型，你可以選擇自己有興趣的主題聆聽。',
+                    '演講為會期兩天最主要的活動，Talk 有 30 分鐘與 15 分鐘兩種長度，' +
+                    '每天都將有三軌議程同步進行，配合各個演講的難易度與類型，你可以選擇自己有興趣的主題聆聽。',
             },
             tutorial: {
                 title: '專業課程',
                 description:
-                    '課程通常為 1.5 小時，它與一般演講的差別在於講者會還帶著現場會眾一同實作，' +
-                    '從做中學的過程中還能彼此交流，想要參加的會眾千萬不要錯過。',
+                    '專業課程通常提供 1.5 小時，它與一般演講的差別在於講者會還帶著現場會眾一同實作，' +
+                    '從做中學的過程中還能彼此交流。',
             },
             openSpace: {
                 title: '開放空間',
                 description:
-                    '開放空間是自助式、聚會形式的活動。有別於大會的會議，是由與會者當場計畫的。' +
-                    '開放空間讓你能用任何你喜歡的方式定義、組織、規劃你自己的小聚。' +
-                    '歡迎你揪其他好夥伴一起來參與、分享、聊天、交朋友！',
+                    '開放空間是自助式的聚會活動。是由與會者當場計畫的。你能用任何你喜歡的方式定義、' +
+                    '組織、規劃你自己的小聚。歡迎你揪其他好夥伴一起來分享、交朋友！',
             },
             lightningTalk: {
                 title: '閃電秀',
