@@ -106,7 +106,6 @@
                                         lg:text-sm
                                         text-left
                                         leading-normal
-                                        lg:leading-normal
                                     "
                                 >
                                     {{ community.description }}
