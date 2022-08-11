@@ -132,6 +132,17 @@ export default {
         GithubIcon,
         TwitterIcon,
     },
+    async asyncData({ store, app }) {
+        await store.dispatch('$getKeynotesData')
+
+        const keynotesData = store.state.keynotesData.map((keynote) => ({
+            ...keynote,
+            id: app.$makeId(),
+        }))
+        return {
+            keynotesData,
+        }
+    },
     data() {
         return {
             keynotesData: [],
@@ -149,13 +160,6 @@ export default {
                 'background-position': 'center',
             }
         },
-    },
-    async mounted() {
-        await this.$store.dispatch('$getKeynotesData')
-        this.keynotesData = this.$store.state.keynotesData.map((keynote) => ({
-            ...keynote,
-            id: this.$makeId(),
-        }))
     },
     methods: {
         getKeynoteId(keynote) {

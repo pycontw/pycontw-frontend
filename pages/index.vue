@@ -96,7 +96,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
@@ -120,6 +119,13 @@ export default {
         I18nPageWrapper,
         Intro,
     },
+    async asyncData({ store }) {
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
+        }
+    },
     data() {
         return {
             isOpened: false,
@@ -129,7 +135,6 @@ export default {
     },
     fetchOnServer: false,
     computed: {
-        ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
@@ -139,9 +144,6 @@ export default {
             }
             return true
         },
-    },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {

@@ -39,6 +39,16 @@ export default {
         JobsCardCollection,
         JobsPanel,
     },
+    async asyncData({ store, app }) {
+        await store.dispatch('$getJobsData')
+        const jobsData = store.state.jobsData.map((sponsor) => ({
+            ...sponsor,
+            id: app.$makeId(),
+        }))
+        return {
+            jobsData,
+        }
+    },
     data() {
         return {
             selectedSponsor: {},
@@ -46,12 +56,7 @@ export default {
             pivot: 0,
         }
     },
-    async mounted() {
-        await this.$store.dispatch('$getJobsData')
-        this.jobsData = this.$store.state.jobsData.map((sponsor) => ({
-            ...sponsor,
-            id: this.$makeId(),
-        }))
+    mounted() {
         this.setSelectedSponsor(this.jobsData[0])
         this.setPivot()
     },
