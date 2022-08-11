@@ -144,9 +144,9 @@
             </tab>
         </tabs>
 
-        <related-card-collection2
+        <related-card-collection
             :related="fetchRelatedSpeeches()"
-        ></related-card-collection2>
+        ></related-card-collection>
     </i18n-page-wrapper>
 </template>
 
@@ -165,8 +165,7 @@ import Youtube from '@/components/core/embed/Youtube.vue'
 import FacebookIcon from '@/components/core/icons/FacebookIcon'
 import GithubIcon from '@/components/core/icons/GithubIcon'
 import TwitterIcon from '@/components/core/icons/TwitterIcon'
-// import RelatedCardCollection from '@/components/events/RelatedCardCollection'
-import RelatedCardCollection2 from '@/components/events/RelatedCardCollection2'
+import RelatedCardCollection from '@/components/events/RelatedCardCollection'
 
 export default {
     i18n,
@@ -182,8 +181,7 @@ export default {
         TwitterIcon,
         Youtube,
         MarkdownRenderer,
-        // RelatedCardCollection,
-        RelatedCardCollection2,
+        RelatedCardCollection,
     },
     data() {
         return {
