@@ -54,6 +54,13 @@
                     $t('getTicket')
                 }}</text-button>
             </div>
+            <div class="bulletin-section">
+                <core-h2
+                    :title="$t('bulletinList')"
+                    :is-bulleted="isBulleted"
+                ></core-h2>
+                <bulletin-card-collection></bulletin-card-collection>
+            </div>
             <div id="sponsor" class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
@@ -91,6 +98,7 @@ import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
+import { BulletinCardCollection } from '~/components/bulletins'
 import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
@@ -103,6 +111,7 @@ export default {
     components: {
         CoreH2,
         TextButton,
+        BulletinCardCollection,
         SponsorCard,
         SponsorModal,
         SponsorCardCollection,
@@ -187,6 +196,10 @@ export default {
 
 .text-golden {
     @apply text-pink-500;
+}
+
+.bulletin-section {
+    @apply pt-12 lg:mx-auto lg:w-full;
 }
 
 .sponsor-section {
