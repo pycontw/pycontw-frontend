@@ -1,5 +1,8 @@
 <template>
-    <div class="relatedCardCollection">
+    <div
+        v-if="$store.state.relatedData.length > 1"
+        class="relatedCardCollection"
+    >
         <div class="related__title">
             <img
                 src="@/static/img/background/r3.svg"
