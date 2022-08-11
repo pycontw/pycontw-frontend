@@ -62,12 +62,12 @@
                 </h2>
                 <tabs class="keynote__tabs">
                     <tab :title="$t('terms.bio')">
-                        <div class="pb-4">
+                        <div class="p-1 pb-4">
                             {{ keynote.speaker[$makeKey(locale, 'bio')] }}
                         </div>
                     </tab>
                     <tab :title="$t('terms.talk')">
-                        <div class="pb-4">
+                        <div class="p-1 pb-4">
                             {{
                                 keynote.session[$makeKey(locale, 'description')]
                             }}
