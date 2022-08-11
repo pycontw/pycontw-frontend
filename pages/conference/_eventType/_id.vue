@@ -106,14 +106,18 @@
                         >
                             {{ locationMapping[data.location] }}
                         </p>
-                        <p v-else>{{ $t(`terms.TBA`) }}</p>
+                        <p v-else class="speech__tabParagraph">
+                            {{ $t(`terms.TBA`) }}
+                        </p>
                         <p
                             v-if="data.eventTimeString"
                             class="speech__tabParagraph"
                         >
                             {{ data.eventTimeString }}
                         </p>
-                        <p v-else>{{ $t(`terms.TBA`) }}</p>
+                        <p v-else class="speech__tabParagraph">
+                            {{ $t(`terms.TBA`) }}
+                        </p>
                         <p class="speech__tabParagraph">
                             {{ $t(`languages.${data.language}`) }}
                         </p>
