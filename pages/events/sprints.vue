@@ -29,6 +29,10 @@
                 >
             </template>
         </i18n>
+        <iframe
+            class="hackmd"
+            src="https://hackmd.io/@pycontw/HkXF-Qxc9"
+        ></iframe>
     </i18n-page-wrapper>
 </template>
 
@@ -74,5 +78,9 @@ export default {
 <style lang="postcss" scoped>
 h2 {
     @apply font-serif font-black text-base text-pink-500 mt-12 md:text-lg text-center mx-auto;
+}
+.hackmd {
+    @apply w-full;
+    height: 800px;
 }
 </style>
