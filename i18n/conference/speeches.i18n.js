@@ -23,7 +23,7 @@ export default genI18nMessages({
                 'The tutorials this year will be held virtually because of the pandemic. ' +
                 'The recordings of the tutorials will be released beforehand. ' +
                 'On the days of the conference, there will also be a 1.5-hour ' +
-                'guidance session  where the tutors will go through topics with the participants. ' +
+                'guidance session where the tutors will go through topics with the participants. ' +
                 'We recommend that you watch the tutorial recordings in advance, ' +
                 'so that you can get started more quickly. However, we must remind you that, ' +
                 'due to certain circumstances, the schedule may change slightly before the event. ' +
