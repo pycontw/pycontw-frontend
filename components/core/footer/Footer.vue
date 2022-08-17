@@ -13,10 +13,23 @@
                     </ext-link>
                     <locale-link to="/about/staff" class="my-2">{{
                         $t('staff')
+<<<<<<< Updated upstream
                     }}</locale-link>
+<<<<<<< HEAD
                     <!-- <locale-link to="/about/privacy-policy" class="my-2">
+=======
+<<<<<<< Updated upstream
+                    <locale-link to="/about/privacy-policy" class="my-2">
+=======
+                    <!-- <locale-link to="/about/privacy-policy" class="my-2">
+=======
+                    }}</locale-link> -->
+                    <locale-link to="/about/privacy-policy" class="my-2">
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> ebaf3c737 (fix: nav-bar to footer)
                         {{ $t('privacyPolicy') }}
-                    </locale-link> -->
+                    </locale-link>
                 </div>
             </div>
             <footer-history />
