@@ -6,10 +6,16 @@
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
         >
-            <h2>{{ $t(`openSpaceInfo.${openSpace.tag}.title`) }}</h2>
-            <p class="intro whitespace-pre-line">
-                {{ $t(`openSpaceInfo.${openSpace.tag}.description`) }}
-            </p>
+            <two-col-wrapper>
+                <template #default>
+                    <h2>{{ $t(`openSpaceInfo.${openSpace.tag}.title`) }}</h2>
+                </template>
+                <template #right-col>
+                    <p class="intro whitespace-pre-line">
+                        {{ $t(`openSpaceInfo.${openSpace.tag}.description`) }}
+                    </p>
+                </template>
+            </two-col-wrapper>
         </div>
     </i18n-page-wrapper>
 </template>
@@ -18,6 +24,7 @@
 import i18n from '@/i18n/events/open-spaces.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
+import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
     i18n,
@@ -25,6 +32,7 @@ export default {
     components: {
         I18nPageWrapper,
         CoreH1,
+        TwoColWrapper,
     },
     data() {
         return {
@@ -34,6 +42,9 @@ export default {
                 },
                 {
                     tag: 'location',
+                },
+                {
+                    tag: 'time',
                 },
                 {
                     tag: 'subjects',
@@ -74,6 +85,10 @@ export default {
 
 <style lang="postcss" scoped>
 h2 {
-    @apply font-serif font-black text-base text-pink-500 mt-12 md:text-lg text-center mx-auto;
+    @apply font-sans font-black text-base text-primary-500 mt-12 md:text-lg text-center mx-auto;
+}
+
+.spacing {
+    @apply py-2 lg:py-5;
 }
 </style>

@@ -16,7 +16,7 @@ export default genI18nMessages({
             'but with a name that is more comprehensive to new conference attendees.',
         openSpaceInfo: {
             participate: {
-                title: 'How do I participate in an Open Space?',
+                title: 'How to participate',
                 description:
                     'It’s pretty easy: Just show up :)\n\n' +
                     'Instead of Academia Sinica, this year’s PyCon will be hosted online at Gather Town Service.\n' +
@@ -24,16 +24,19 @@ export default genI18nMessages({
                     'Just find a subject that interests you, greet with the host, and enjoy!',
             },
             location: {
-                title: 'Where and when are the Open Spaces?',
+                title: 'Location',
+                description: 'The open space area at gather town.',
+            },
+            time: {
+                title: 'Time',
                 description:
-                    'Location: The open space area at gather town.\n\n' +
-                    'Time: Between the morning keynote started and afternoon keynote started of day 1 (08:55 ~ 16:15) ' +
+                    'Between the morning keynote started and afternoon keynote started of day 1 (08:55 ~ 16:15) ' +
                     'and from the morning keynote ended till Lightning Talk of day 2 (10:30 ~ 16:40).\n\n' +
                     'There can be up to 10 Open Spaces running in parallel. ' +
                     'There are no other conferences on day 2 (14:30 ~ 15:20) so that you can enjoy the Open Spaces well.',
             },
             subjects: {
-                title: 'What Open Spaces are there?',
+                title: 'Topics',
                 description:
                     'We don’t know either! It’s up to you and fellow attendees 😉\n\n' +
                     'Just like the attendees, Open Spaces are very versatile. ' +
@@ -44,7 +47,7 @@ export default genI18nMessages({
                     'from computer security to your favorite Python project to professional occupation such as SRE.',
             },
             host: {
-                title: 'How do I host an Open Space?',
+                title: 'How to host',
                 description:
                     'Just go to the open space area at gather town, fill in the subject, ' +
                     'time and your name and you’re all set!\n\n' +
@@ -81,23 +84,27 @@ export default genI18nMessages({
             '沒有錯，開放空間基本上很類似 BoF ，不過「開放空間 / Open Spaces」對於第一次參加的會眾來說更容易理解。',
         openSpaceInfo: {
             participate: {
-                title: '如何參與一個開放空間？',
+                title: '如何參與',
                 description:
                     '很簡單：人到場就好了 :)\n\n' +
                     '不同於往年舉辦在中研院，本次 PyCon TW 首次在線上 Gather Town 舉辦。' +
                     '你只需要在 Open Space 區域找到有興趣的主題，友善的與主持人打個招呼，就可以坐下與大家一起參與了。',
             },
             location: {
-                title: '開放空間在哪裡？在什麼時候？',
+                title: '活動地點',
                 description:
-                    '地點：Gather Town 的 Open Space 區域，總共十個開放空間同時舉行\n\n' +
-                    '時間：第一天早上 Keynote 開始後到下午 Keynote 開始前（08:55 ~ 16:15）\n' +
+                    'Gather Town 的 Open Space 區域，總共十個開放空間同時舉行',
+            },
+            time: {
+                title: '活動時間',
+                description:
+                    '第一天早上 Keynote 開始後到下午 Keynote 開始前（08:55 ~ 16:15）\n' +
                     '第二天早上 Keynote 結束後到 Ligntning Talk 開始前（10:30 ~ 16:40）\n\n' +
                     '總計有超過 14 小時的時間可以讓會眾們盡情享受開放空間中盈滿熱情的交流和討論。\n\n' +
                     '此外，Day 2 14:30 ~ 15:20 將有獨立時段 Open Space，該時段不會有其他議程，會眾可以盡情的享受開放空間的激烈討論。',
             },
             subjects: {
-                title: '開放空間有哪些主題？',
+                title: '活動主題',
                 description:
                     '這由你與其他會眾決定，我們也不知道會有什麼 😉\n\n' +
                     '開放空間有各種與會者想討論的主題。' +
@@ -106,13 +113,13 @@ export default genI18nMessages({
                     '也可以是討論各種常見的技術議題，從資訊安全到你最喜歡的 Python 專案，到一些特定職位的討論，比如說 SRE。',
             },
             host: {
-                title: '如何舉辦一個開放空間？',
+                title: '如何舉辦',
                 description:
                     '只要到 Gather Town Open Space 區域，填上您想要討論的主題、時間、以及您的名字。\n\n' +
                     '如果是馬上就要分享，可以直接挑個桌子坐下，修改您的姓名讓大家知道這裡的主題就可以了。',
             },
             ideas: {
-                title: '開放空間的好主意',
+                title: '開放空間\n\n好主意',
                 description:
                     '以下有幾個可以辦成開放空間的點子，提供您參考：\n\n' +
                     '用 Python 的 Maker 專案（例如樹莓派、IoT、居家自動化、機器人、四軸飛行器）\n' +
