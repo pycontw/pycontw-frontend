@@ -3,17 +3,11 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Privacy Policy of PyCon Taiwan',
+        pageAbstract:
+            'First, we would like to thank you for joining US {br} in PyCon Taiwan (hereafter referred to as “PyCon TW”).{br}' +
+            'We are going to ask for your permission to collect {br} and to use your personal information recorded in the registration form.{br}' +
+            'We value your privacy and we would follow the terms and conditions {br} as set out below while collecting and using your personal information.',
         contents: [
-            {
-                title: 'Policy of Personal Information Protection',
-                description: [
-                    'First, we would like to thank you for joining us in PyCon Taiwan (hereafter referred to as “PyCon TW”).' +
-                        'We are going to ask for your permission to collect and to use your personal information recorded in the registration form. ' +
-                        'We value your privacy and we would follow the terms and conditions as set out below while collecting and using your personal information.',
-                ],
-                items: [],
-                summary: [],
-            },
             {
                 title: 'The Purpose of Usage of Your Personal Information',
                 description: [
@@ -100,35 +94,35 @@ export default genI18nMessages({
                 items: [],
                 summary: [],
             },
-            {
-                title: 'Questions for Privacy Protection Policy',
-                description: [
-                    'If you have any questions regarding the gathering and usage of your personal information, ' +
-                        'please feel free to contact us at {contact}',
-                ],
-                items: [],
-                summary: [],
-            },
-            {
-                title: 'Privacy: Collecting Personal Information during COVID-19 Outbreak',
-                description: [
-                    'The purpose of collecting personal information in accordance with the Personal Data Protection ' +
-                        'Law and epidemic prevention and control requirements is to best respond and ensure health ' +
-                        'security for all attendees in COVID-19 outbreak. It is necessary to collect, manage, and use ' +
-                        'relevant personal information. Please read below for details.',
-                    'PyCon TW 2020 collects personal data of attendees for the purpose of contact tracing during ' +
-                        'the outbreak of COVID-19. All collected information will be deleted after 28 days. ' +
-                        'attendees’ access in each venue will be recorded for epidemic control measures. ' +
-                        'We will inform everyone that if any suspected COVID-19 and provide such information ' +
-                        'for CECC for the purpose of preventing spread of COVID-19 and tracing contacts.',
-                ],
-                items: [],
-                summary: [],
-            },
         ],
+        covidStatement: {
+            title: 'Privacy: Collecting Personal Information during COVID-19 Outbreak',
+            description:
+                'The purpose of collecting personal information in accordance with the Personal Data Protection ' +
+                'Law and epidemic prevention and control requirements is to best respond and ensure health ' +
+                'security for all attendees in COVID-19 outbreak. It is necessary to collect, manage, and use ' +
+                'relevant personal information. Please read below for details.{br}{br}' +
+                'PyCon TW 2020 collects personal data of attendees for the purpose of contact tracing during ' +
+                'the outbreak of COVID-19. All collected information will be deleted after 28 days. ' +
+                'attendees’ access in each venue will be recorded for epidemic control measures. ' +
+                'We will inform everyone that if any suspected COVID-19 and provide such information ' +
+                'for CECC for the purpose of preventing spread of COVID-19 and tracing contacts.',
+        },
+        authorization: {
+            title: 'License (CC BY-SA 3.0 TW)',
+            description:
+                'This document is licensed under an {license} license.',
+            label: 'https://i.imgur.com/cVjN760.jpg',
+            content:
+                'The Privacy Policy of PyCon Taiwan will be effective May 1st, 2021. However, due to the rapidly changing social and legal environment and the continual advancement in technology, we reserve the right to modify this privacy policy at any time and will announce any update when available. Thank you.',
+        },
+        question:
+            'If you have any questions regarding the gathering and usage of your personal information, ' +
+            'please feel free to contact us at {contact}',
         terms: {
             contact: 'organizers@python.tw.',
             MeetingManagement: 'Personal Information Protection Act 130',
+            license: 'Attribution-ShareAlike 3.0 Taiwan',
         },
         og: {
             title: 'Privacy Policy of PyCon Taiwan',
@@ -143,18 +137,12 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: 'PyCon Taiwan 個人資料保護聲明',
+        title: 'PyCon Taiwan個人資料保護聲明',
+        pageAbstract:
+            '感謝您參與臺灣 Python 年會 (以下簡稱「PyCon TW」)。{br}「PyCon TW 主辦團隊」(以下簡稱「我們」) ' +
+            '將依個人資料保護法之規定來使用、{br}保管您於報名時所提供的個人資料，並維護您的隱私權。{br}同時，' +
+            '我們在此對於您個人資料之使用蒐集將依下列聲明為利用、管理。',
         contents: [
-            {
-                title: '個人資料保護政策',
-                description: [
-                    '感謝您參與臺灣 Python 年會 (以下簡稱「PyCon TW」)。「PyCon TW 主辦團隊」(以下簡稱「我們」) ' +
-                        '將依個人資料保護法之規定來使用、保管您於報名時所提供的個人資料，並維護您的隱私權。同時，' +
-                        '我們在此對於您個人資料之使用蒐集將依下列聲明為利用、管理。',
-                ],
-                items: [],
-                summary: [],
-            },
             {
                 title: '個人資料之使用目的',
                 description: [
@@ -219,30 +207,28 @@ export default genI18nMessages({
                 items: [],
                 summary: [],
             },
-            {
-                title: '隱私保護諮詢',
-                description: [
-                    '如果您對於我們的隱私權保護政策或是有個人資料蒐集、利用、更新等問題，請來信{contact}。',
-                ],
-                items: [],
-                summary: [],
-            },
-            {
-                title: '針對 2019 年新型冠狀病毒 (COVID-19) 防疫工作之個人資料收集聲明',
-                description: [
-                    '蒐集您的個人資料目的及法令依據，係為確保會眾健康安全及「嚴重特殊傳染性肺炎」防疫安全管理所必須，我們將依個人資料保護法，' +
-                        '以公共衛生或傳染病防治及場所進出安全管理等目的，故有必要蒐集、處理或利用相關個人資料，請您詳閱。',
-                    'PyCon TW 配合防疫期間所蒐集的資料，將在資料蒐集日起 28 天後刪除。參與者進出各館與各廳紀錄將作為疫情管控使用，' +
-                        '若會後有任何疑似感染情況，PyCon TW 將主動通知可能被影響的群眾，且得提供我國衛生主管機關依傳染病防治法等規定進' +
-                        '行疫情調查及聯繫使用。',
-                ],
-                items: [],
-                summary: [],
-            },
         ],
+        covidStatement: {
+            title: '針對 2019 年新型冠狀病毒 (COVID-19) 防疫工作之個人資料收集聲明',
+            description:
+                '蒐集您的個人資料目的及法令依據，係為確保會眾健康安全及「嚴重特殊傳染性肺炎」防疫安全管理所必須，我們將依個人資料保護法，' +
+                '以公共衛生或傳染病防治及場所進出安全管理等目的，故有必要蒐集、處理或利用相關個人資料，請您詳閱。{br}{br}' +
+                'PyCon TW 配合防疫期間所蒐集的資料，將在資料蒐集日起 28 天後刪除。參與者進出各館與各廳紀錄將作為疫情管控使用，' +
+                '若會後有任何疑似感染情況，PyCon TW 將主動通知可能被影響的群眾，且得提供我國衛生主管機關依傳染病防治法等規定進' +
+                '行疫情調查及聯繫使用。',
+        },
+        authorization: {
+            title: '授權 (CC BY-SA 3.0 TW)',
+            description: '此文件採用 {license} 授權條款。',
+            content:
+                '本個人資料保護聲明從 2021 年 05 月 01 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，為保護客戶個人資料安全及隱私，我們將隨時修改這份公告聲明，並將儘速更新與公告予您，感謝。',
+        },
+        question:
+            '如果您對於我們的隱私權保護政策或是有個人資料蒐集、利用、更新等問題，請來信 {contact}。',
         terms: {
             contact: 'organizers@python.tw.',
             MeetingManagement: '其法定特定目的為一三〇會議管理',
+            license: '姓名標示-相同方式分享 3.0 台灣',
         },
         og: {
             title: 'PyCon Taiwan 個人資料保護聲明',
