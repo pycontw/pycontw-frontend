@@ -36,11 +36,11 @@
                     </template>
                 </i18n>
             </template>
-            <iframe
-                class="hackmd"
-                src="https://hackmd.io/@pycontw/HkXF-Qxc9"
-            ></iframe>
         </two-col-wrapper>
+        <iframe
+            class="hackmd"
+            src="https://hackmd.io/@pycontw/HkXF-Qxc9"
+        ></iframe>
     </i18n-page-wrapper>
 </template>
 
