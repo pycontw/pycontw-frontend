@@ -2,33 +2,41 @@
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
         <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
-        <h2>{{ $t('mode') }}</h2>
-        <i18n
-            v-for="(paragraph, i) in $t('modeDescriptions')"
-            :key="`mode_descriptions_${i}`"
-            :path="`modeDescriptions.${i}`"
-            tag="p"
-        >
-            <template #kktix>
-                <ext-link
-                    href="https://pycontw.kktix.cc/events/pyconapac2022-summersprint"
-                    highlight
-                    >KKTIX</ext-link
-                >
+        <two-col-wrapper class="spacing">
+            <template #default>
+                <p>{{ $t('mode') }}</p>
             </template>
-            <template #hackmd>
-                <ext-link href="https://hackmd.io/@pycontw/HkXF-Qxc9" highlight
-                    >HackMD</ext-link
+            <template #right-col>
+                <i18n
+                    v-for="(paragraph, i) in $t('modeDescriptions')"
+                    :key="`mode_descriptions_${i}`"
+                    :path="`modeDescriptions.${i}`"
+                    tag="p"
                 >
+                    <template #kktix>
+                        <ext-link
+                            href="https://pycontw.kktix.cc/events/pyconapac2022-summersprint"
+                            highlight
+                            >KKTIX</ext-link
+                        >
+                    </template>
+                    <template #hackmd>
+                        <ext-link
+                            href="https://hackmd.io/@pycontw/HkXF-Qxc9"
+                            highlight
+                            >HackMD</ext-link
+                        >
+                    </template>
+                    <template #form>
+                        <ext-link
+                            href="https://forms.gle/Htt9REPE6M7iVKZL9"
+                            highlight
+                            >{{ $t('form') }}</ext-link
+                        >
+                    </template>
+                </i18n>
             </template>
-            <template #form>
-                <ext-link
-                    href="https://forms.gle/Htt9REPE6M7iVKZL9"
-                    highlight
-                    >{{ $t('form') }}</ext-link
-                >
-            </template>
-        </i18n>
+        </two-col-wrapper>
         <iframe
             class="hackmd"
             src="https://hackmd.io/@pycontw/HkXF-Qxc9"
@@ -41,6 +49,7 @@ import i18n from '@/i18n/events/sprints.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import ExtLink from '@/components/core/links/ExtLink'
+import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
     i18n,
@@ -49,6 +58,7 @@ export default {
         I18nPageWrapper,
         CoreH1,
         ExtLink,
+        TwoColWrapper,
     },
     head() {
         return {
@@ -76,8 +86,14 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-h2 {
-    @apply font-serif font-black text-base text-pink-500 mt-12 md:text-lg text-center mx-auto;
+.intro {
+    font-size: 16px;
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }
+}
+.spacing {
+    @apply py-2 lg:py-5;
 }
 .hackmd {
     @apply w-full;
