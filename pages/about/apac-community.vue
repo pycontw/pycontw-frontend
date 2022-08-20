@@ -87,7 +87,7 @@
                                     secondary
                                     large
                                 >
-                                    官方網站
+                                    {{ $t('website') }}
                                 </core-text-button>
                             </div>
                         </div>

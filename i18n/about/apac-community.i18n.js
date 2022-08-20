@@ -117,6 +117,7 @@ export default genI18nMessages({
                     'The goal of the conference is to provide a venue where the Python programming language and surrounding technologies can be explored, discussed and exercised.',
             },
         ],
+        website: 'Website',
         og: {
             title: 'PyCon APAC Community',
             description: 'PyCon APAC Community',
@@ -229,6 +230,7 @@ export default genI18nMessages({
                     '研討會的目標是提供一個可以探索、討論和練習 Python 和周邊技術的場所。',
             },
         ],
+        website: '官方網站',
         og: {
             title: 'PyCon APAC 籌備社群',
             description: 'PyCon APAC 籌備社群',
