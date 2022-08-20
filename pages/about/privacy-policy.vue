@@ -1,33 +1,9 @@
 <template>
-<<<<<<< Updated upstream
-    <i18n-page-wrapper>
-        <core-h1 :title="`2022 ${$t('title')}`"></core-h1>
-        <div
-            v-for="(contents, i) in $t('contents')"
-            :key="`privacy_policy_contents_${i}`"
-        >
-            <i18n :path="contents.title" tag="h2"></i18n>
-            <i18n
-                v-for="(content, ii) in contents.description"
-                :key="`privacy_policy_description_${ii}`"
-                :path="`contents.${i}.description.${ii}`"
-                tag="p"
-            >
-                <template #contact>
-                    <ext-link href="mailto:organizers@python.tw" highlight>{{
-                        $t('terms.contact')
-                    }}</ext-link>
-                </template>
-                <template #MeetingManagement>
-                    <b>{{ $t('terms.MeetingManagement') }}</b>
-                </template>
-=======
     <div class="py-10 md:pb-24 lg:pb-24">
         <banner>
             <core-h1 :title="`2022 ${$t('title')}`"></core-h1>
             <i18n path="pageAbstract" tag="p" class="pageAbstract">
                 <template #br><br /></template>
->>>>>>> Stashed changes
             </i18n>
         </banner>
 
