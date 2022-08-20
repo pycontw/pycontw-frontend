@@ -1,8 +1,14 @@
 const DEFAULT_BASE_URL = 'http://staging.pycon.tw/prs'
 const DEFAULT_ROUTER_BASE = '/2022/'
 const DEFAULT_BUILD_TARGET = 'static'
+const DEFAULT_VUE_DEVTOOL = false
 
 export default {
+    vue: {
+        config: {
+            devtools: process.env.VUE_DEVTOOL || DEFAULT_VUE_DEVTOOL,
+        },
+    },
     // Target (https://go.nuxtjs.dev/config-target)
     target: process.env.BUILD_TARGET || DEFAULT_BUILD_TARGET,
 
