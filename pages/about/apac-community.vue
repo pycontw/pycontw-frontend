@@ -42,7 +42,7 @@
                             <div class="popup__content">
                                 <button
                                     ref="popupBtn"
-                                    class="popup__content__button"
+                                    class="popup__contentButton"
                                     @click="popupClose(index)"
                                 >
                                     ✕
@@ -245,7 +245,7 @@ export default {
     width: 724px;
     min-width: 350px;
 }
-.popup__content__button {
+.popup__contentButton {
     @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
 }
 </style>
