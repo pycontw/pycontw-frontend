@@ -9,19 +9,6 @@ export default genI18nMessages({
             'We value your privacy and we would follow the terms and conditions {br} as set out below while collecting and using your personal information.',
         contents: [
             {
-<<<<<<< Updated upstream
-                title: 'Policy of Personal Information Protection',
-                description: [
-                    'First, we would like to thank you for joining us in PyCon Taiwan (hereafter referred to as “PyCon TW”).' +
-                        'We are going to ask for your permission to collect and to use your personal information recorded in the registration form. ' +
-                        'We value your privacy and we would follow the terms and conditions as set out below while collecting and using your personal information.',
-                ],
-                items: [],
-                summary: [],
-            },
-            {
-=======
->>>>>>> Stashed changes
                 title: 'The Purpose of Usage of Your Personal Information',
                 description: [
                     'For the purposes of organizing the event and providing better services, we are going to collect ' +
