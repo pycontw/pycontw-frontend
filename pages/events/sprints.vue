@@ -36,15 +36,11 @@
                     </template>
                 </i18n>
             </template>
-<<<<<<< Updated upstream
-        </i18n>
-        <iframe
-            class="hackmd"
-            src="https://hackmd.io/@pycontw/HkXF-Qxc9"
-        ></iframe>
-=======
+            <iframe
+                class="hackmd"
+                src="https://hackmd.io/@pycontw/HkXF-Qxc9"
+            ></iframe>
         </two-col-wrapper>
->>>>>>> Stashed changes
     </i18n-page-wrapper>
 </template>
 
