@@ -4,7 +4,7 @@
         <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
         <two-col-wrapper class="spacing">
             <template #default>
-                <h2>{{ $t('mode') }}</h2>
+                <p>{{ $t('mode') }}</p>
             </template>
             <template #right-col>
                 <i18n
@@ -86,8 +86,11 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-h2 {
-    @apply font-sans font-black text-base text-primary-500 mt-12 md:text-lg text-center mx-auto;
+.intro {
+    font-size: 16px;
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }
 }
 .spacing {
     @apply py-2 lg:py-5;

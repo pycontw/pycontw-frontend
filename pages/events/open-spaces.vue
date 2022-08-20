@@ -1,19 +1,44 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
+        <i18n path="intro" tag="p" class="intro"></i18n>
         <div
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
         >
             <two-col-wrapper>
                 <template #default>
-                    <h2>{{ $t(`openSpaceInfo.${openSpace.tag}.title`) }}</h2>
+                    <i18n
+                        :key="`openSpaceInfo.${openSpace.tag}.title`"
+                        :path="`openSpaceInfo.${openSpace.tag}.title`"
+                        class="title"
+                        tag="p"
+                    >
+                        <template #br><br /></template>
+                    </i18n>
                 </template>
                 <template #right-col>
-                    <p class="intro whitespace-pre-line">
-                        {{ $t(`openSpaceInfo.${openSpace.tag}.description`) }}
-                    </p>
+                    <i18n
+                        :key="`openspace_descriptions_${openSpace.tag}`"
+                        :path="`openSpaceInfo.${openSpace.tag}.description`"
+                        class="intro"
+                        tag="p"
+                    >
+                        <template #br><br /></template>
+                        <template #examples>
+                            <ul>
+                                <i18n
+                                    v-for="(example, idx) in $t(
+                                        'openSpaceInfo.ideas.examples',
+                                    )"
+                                    :key="`openspace_example_${idx}`"
+                                    :path="`openSpaceInfo.ideas.examples.${idx}`"
+                                    class="list-disc ml-4"
+                                    tag="li"
+                                ></i18n>
+                            </ul>
+                        </template>
+                    </i18n>
                 </template>
             </two-col-wrapper>
         </div>
@@ -84,10 +109,12 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-h2 {
-    @apply font-sans font-black text-base text-primary-500 mt-12 md:text-lg text-center mx-auto;
+.intro {
+    font-size: 16px;
+    @media (min-width: 1024px) {
+        font-size: 18px;
+    }
 }
-
 .spacing {
     @apply py-2 lg:py-5;
 }
