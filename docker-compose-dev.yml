@@ -23,6 +23,7 @@ services:
       - HOST=0.0.0.0
       - BASE_URL=http://mock-server:9876
       - API_URL_BROWSER=http://0.0.0.0:9876
+      - VUE_DEVTOOL=true
     expose:
       - "3000"
     ports:
