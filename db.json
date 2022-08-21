@@ -250,31 +250,43 @@
     "schedules": {
         "data": [
             {
-                "date": "2021-10-02",
+                "date": "2022-09-03",
                 "name": "Day 1",
-                "rooms": ["1-r3", "2-all", "3-r012", "4-r0", "5-r1", "6-r2"],
+                "rooms": [
+                    "1-r3",
+                    "2-all",
+                    "3-r012",
+                    "4-r0-1",
+                    "4-r0-2",
+                    "4-r0",
+                    "5-r1-1",
+                    "5-r1",
+                    "5-r1-2",
+                    "6-r2-1",
+                    "6-r2"
+                ],
                 "slots": {
                     "2-all": [
                         {
-                            "event_id": 146,
+                            "event_id": 174,
                             "event_type": "custom",
                             "title": "Registration & Breakfast",
                             "speakers": [],
-                            "begin_time": "2021-10-02 00:30:00",
-                            "end_time": "2021-10-02 00:45:00",
+                            "begin_time": "2022-09-03 08:30:00",
+                            "end_time": "2022-09-03 08:50:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true
                         },
                         {
-                            "event_id": 147,
+                            "event_id": 175,
                             "event_type": "custom",
                             "title": "Opening",
                             "speakers": [],
-                            "begin_time": "2021-10-02 00:45:00",
-                            "end_time": "2021-10-02 00:55:00",
+                            "begin_time": "2022-09-03 08:50:00",
+                            "end_time": "2022-09-03 09:00:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -282,33 +294,33 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 20,
+                            "event_id": 23,
                             "event_type": "keynote",
                             "title": {
-                                "en_us": "When everyone knows how to code in Python",
-                                "zh_hant": "當大家都會 Python 時"
+                                "zh_hant": "維護集體利益",
+                                "en_us": "Protecting the Collective Good"
                             },
                             "speakers": [
                                 {
-                                    "en_us": "Tze-Jen Wei",
-                                    "zh_hant": "魏澤人"
+                                    "zh_hant": "Dustin Ingram",
+                                    "en_us": "Dustin Ingram"
                                 }
                             ],
-                            "begin_time": "2021-10-02 00:55:00",
-                            "end_time": "2021-10-02 01:55:00",
-                            "is_remote": false,
+                            "begin_time": "2022-09-03 09:00:00",
+                            "end_time": "2022-09-03 10:00:00",
+                            "is_remote": true,
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
                             "break_event": false
                         },
                         {
-                            "event_id": 148,
+                            "event_id": 176,
                             "event_type": "custom",
                             "title": "Break",
                             "speakers": [],
-                            "begin_time": "2021-10-02 01:55:00",
-                            "end_time": "2021-10-02 02:05:00",
+                            "begin_time": "2022-09-03 10:00:00",
+                            "end_time": "2022-09-03 10:10:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -316,12 +328,12 @@
                             "break_event": true
                         },
                         {
-                            "event_id": 151,
+                            "event_id": 179,
                             "event_type": "custom",
                             "title": "Lunch",
                             "speakers": [],
-                            "begin_time": "2021-10-02 04:05:00",
-                            "end_time": "2021-10-02 05:05:00",
+                            "begin_time": "2022-09-03 11:55:00",
+                            "end_time": "2022-09-03 12:55:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -329,12 +341,12 @@
                             "break_event": true
                         },
                         {
-                            "event_id": 154,
+                            "event_id": 182,
                             "event_type": "custom",
                             "title": "Break",
                             "speakers": [],
-                            "begin_time": "2021-10-02 06:35:00",
-                            "end_time": "2021-10-02 06:40:00",
+                            "begin_time": "2022-09-03 14:35:00",
+                            "end_time": "2022-09-03 14:40:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -342,87 +354,33 @@
                             "break_event": true
                         },
                         {
-                            "event_id": 155,
-                            "event_type": "custom",
-                            "title": "Job Fair",
-                            "speakers": [],
-                            "begin_time": "2021-10-02 06:40:00",
-                            "end_time": "2021-10-02 08:10:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 156,
-                            "event_type": "custom",
-                            "title": "Break",
-                            "speakers": [],
-                            "begin_time": "2021-10-02 08:10:00",
-                            "end_time": "2021-10-02 08:15:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 21,
+                            "event_id": 24,
                             "event_type": "keynote",
                             "title": {
-                                "en_us": "Building next-level AI assistants",
-                                "zh_hant": "打造下一個時代的 AI 助理"
+                                "zh_hant": "改變世界，從 PyCon 開始 (Ver. 2022)",
+                                "en_us": "Changing the world, one PyCon at a time (Ver. 2022)"
                             },
                             "speakers": [
                                 {
-                                    "en_us": "Yenny Cheung",
-                                    "zh_hant": "Yenny Cheung"
+                                    "zh_hant": "Iqbal Abdullah",
+                                    "en_us": "Iqbal Abdullah"
                                 }
                             ],
-                            "begin_time": "2021-10-02 08:15:00",
-                            "end_time": "2021-10-02 09:15:00",
-                            "is_remote": false,
+                            "begin_time": "2022-09-03 14:40:00",
+                            "end_time": "2022-09-03 15:40:00",
+                            "is_remote": true,
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
                             "break_event": false
                         },
                         {
-                            "event_id": 157,
-                            "event_type": "custom",
-                            "title": "Lightning Talks",
-                            "speakers": [],
-                            "begin_time": "2021-10-02 09:15:00",
-                            "end_time": "2021-10-02 09:45:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 158,
-                            "event_type": "custom",
-                            "title": "PyNight Online",
-                            "speakers": [],
-                            "begin_time": "2021-10-02 09:45:00",
-                            "end_time": "2021-10-02 12:00:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        }
-                    ],
-                    "3-r012": [
-                        {
-                            "event_id": 149,
+                            "event_id": 183,
                             "event_type": "custom",
                             "title": "Break",
                             "speakers": [],
-                            "begin_time": "2021-10-02 02:35:00",
-                            "end_time": "2021-10-02 02:40:00",
+                            "begin_time": "2022-09-03 15:40:00",
+                            "end_time": "2022-09-03 15:45:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -430,457 +388,25 @@
                             "break_event": true
                         },
                         {
-                            "event_id": 150,
+                            "event_id": 184,
                             "event_type": "custom",
-                            "title": "Break",
+                            "title": "Job Fair",
                             "speakers": [],
-                            "begin_time": "2021-10-02 03:25:00",
-                            "end_time": "2021-10-02 03:35:00",
+                            "begin_time": "2022-09-03 15:45:00",
+                            "end_time": "2022-09-03 17:15:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 152,
-                            "event_type": "custom",
-                            "title": "Break",
-                            "speakers": [],
-                            "begin_time": "2021-10-02 05:35:00",
-                            "end_time": "2021-10-02 05:40:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 153,
-                            "event_type": "custom",
-                            "title": "Break",
-                            "speakers": [],
-                            "begin_time": "2021-10-02 05:55:00",
-                            "end_time": "2021-10-02 06:05:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        }
-                    ],
-                    "4-r0": [
-                        {
-                            "event_id": 210,
-                            "event_type": "talk",
-                            "title": "成功地測試失敗 (Fail tests successfully)",
-                            "speakers": ["Keith Yang"],
-                            "begin_time": "2021-10-02 02:05:00",
-                            "end_time": "2021-10-02 02:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "NOVICE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 217,
-                            "event_type": "talk",
-                            "title": "Django ORM. Be Careful",
-                            "speakers": ["Tim Hsu"],
-                            "begin_time": "2021-10-02 02:40:00",
-                            "end_time": "2021-10-02 03:25:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 197,
-                            "event_type": "talk",
-                            "title": "Beyond Unit Tests: End-to-End Web UI Testing",
-                            "speakers": ["Andrew Knight"],
-                            "begin_time": "2021-10-02 03:35:00",
-                            "end_time": "2021-10-02 04:05:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 203,
-                            "event_type": "talk",
-                            "title": "Narrative-focused video games development with Ren'Py, an open source engine",
-                            "speakers": ["Susan Shu Chang"],
-                            "begin_time": "2021-10-02 05:05:00",
-                            "end_time": "2021-10-02 05:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 190,
-                            "event_type": "talk",
-                            "title": "Python/Raspberry Pi-based Low Energy Electron Diffraction Imaging and Analysis for Surface Science",
-                            "speakers": ["David Mikolas"],
-                            "begin_time": "2021-10-02 05:40:00",
-                            "end_time": "2021-10-02 05:55:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 188,
-                            "event_type": "talk",
-                            "title": "WeatherPi，一個用 Raspberry Pi 和 Python 的微型氣象站專案",
-                            "speakers": ["sosorry"],
-                            "begin_time": "2021-10-02 06:05:00",
-                            "end_time": "2021-10-02 06:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "NOVICE",
-                            "break_event": false
-                        }
-                    ],
-                    "6-r2": [
-                        {
-                            "event_id": 194,
-                            "event_type": "talk",
-                            "title": "Queick: A simple job-queue system for Python",
-                            "speakers": ["Ryota SUENAGA"],
-                            "begin_time": "2021-10-02 02:05:00",
-                            "end_time": "2021-10-02 02:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 195,
-                            "event_type": "talk",
-                            "title": "DAFunctor: Symbolic translator from NumPy/PyTorch ND-Array operations to C",
-                            "speakers": ["Buganini"],
-                            "begin_time": "2021-10-02 02:40:00",
-                            "end_time": "2021-10-02 03:25:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "EXPERIENCED",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 189,
-                            "event_type": "talk",
-                            "title": "The Pitfalls of Integrating Lua with Python",
-                            "speakers": ["郭學聰 (Hsueh-Tsung Kuo)"],
-                            "begin_time": "2021-10-02 03:35:00",
-                            "end_time": "2021-10-02 04:05:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "EXPERIENCED",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 200,
-                            "event_type": "talk",
-                            "title": "Build Your First Cyber Forensic Application using Python",
-                            "speakers": ["Gajendra Deshpande"],
-                            "begin_time": "2021-10-02 05:05:00",
-                            "end_time": "2021-10-02 05:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 201,
-                            "event_type": "talk",
-                            "title": "搭上Streamlit特快車遊沐星光程式",
-                            "speakers": ["蘇羿豪"],
-                            "begin_time": "2021-10-02 05:40:00",
-                            "end_time": "2021-10-02 05:55:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 196,
-                            "event_type": "talk",
-                            "title": "Reborn Quark-Engine with Radare2",
-                            "speakers": ["Sheng-Fone Lu"],
-                            "begin_time": "2021-10-02 06:05:00",
-                            "end_time": "2021-10-02 06:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        }
-                    ],
-                    "1-r3": [
-                        {
-                            "event_id": 7,
-                            "event_type": "tutorial",
-                            "title": "網路爬蟲即學即用 - 透過 Python 快速蒐集人力銀行的職缺資訊",
-                            "speakers": ["游騰林"],
-                            "begin_time": "2021-10-02 02:05:00",
-                            "end_time": "2021-10-02 03:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 214,
-                            "event_type": "talk",
-                            "title": "使用 Pyodide 讓你在瀏覽器中直接運行 Python - 以醫療數位影像 DICOM 視覺化為例",
-                            "speakers": ["康登傑"],
-                            "begin_time": "2021-10-02 03:35:00",
-                            "end_time": "2021-10-02 04:05:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "NOVICE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 8,
-                            "event_type": "tutorial",
-                            "title": "使用 Pytest 進行單元測試",
-                            "speakers": ["Max Lai"],
-                            "begin_time": "2021-10-02 05:05:00",
-                            "end_time": "2021-10-02 06:35:00",
-                            "is_remote": false,
-                            "recording_policy": false,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        }
-                    ],
-                    "5-r1": [
-                        {
-                            "event_id": 191,
-                            "event_type": "talk",
-                            "title": "自問自答:命名實體識別應用於精準醫療服務-以智能理賠為例",
-                            "speakers": ["江侑倫"],
-                            "begin_time": "2021-10-02 02:05:00",
-                            "end_time": "2021-10-02 02:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 215,
-                            "event_type": "talk",
-                            "title": "Python 機器學習與深度學習應用 (GBDT v.s. LSTM) — 透析用低血壓預測模型",
-                            "speakers": ["JiunYi Yang"],
-                            "begin_time": "2021-10-02 02:40:00",
-                            "end_time": "2021-10-02 03:25:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 212,
-                            "event_type": "talk",
-                            "title": "產業、應用與待遇 - Python 在勞動市場中的職缺分析(2021)",
-                            "speakers": ["游騰林"],
-                            "begin_time": "2021-10-02 03:35:00",
-                            "end_time": "2021-10-02 04:05:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "NOVICE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 205,
-                            "event_type": "talk",
-                            "title": "Using Python with Network Analysis to understand corruption in government procurement",
-                            "speakers": ["Albert 'bash' Yumol"],
-                            "begin_time": "2021-10-02 05:05:00",
-                            "end_time": "2021-10-02 05:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "NOVICE",
                             "break_event": false
                         },
                         {
                             "event_id": 185,
-                            "event_type": "talk",
-                            "title": "如何使用blender簡單建造金屬原子/2D材料模型",
-                            "speakers": ["李嘉穎"],
-                            "begin_time": "2021-10-02 05:40:00",
-                            "end_time": "2021-10-02 05:55:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 220,
-                            "event_type": "talk",
-                            "title": "Turning Pandas DataFrames to Semantic Knowledge Graph",
-                            "speakers": ["Cheuk Ting Ho"],
-                            "begin_time": "2021-10-02 06:05:00",
-                            "end_time": "2021-10-02 06:35:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        }
-                    ]
-                },
-                "timeline": {
-                    "begin": "2021-10-02 00:30:00",
-                    "end": "2021-10-02 12:00:00"
-                }
-            },
-            {
-                "date": "2021-10-03",
-                "name": "Day 2",
-                "rooms": ["1-r3", "2-all", "3-r012", "4-r0", "5-r1", "6-r2"],
-                "slots": {
-                    "2-all": [
-                        {
-                            "event_id": 159,
-                            "event_type": "custom",
-                            "title": "Registration & Breakfast",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 01:30:00",
-                            "end_time": "2021-10-03 01:50:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 160,
-                            "event_type": "custom",
-                            "title": "Announcement",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 01:50:00",
-                            "end_time": "2021-10-03 02:00:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 162,
-                            "event_type": "custom",
-                            "title": "Break",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 03:20:00",
-                            "end_time": "2021-10-03 03:30:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 163,
-                            "event_type": "custom",
-                            "title": "Lunch",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 04:00:00",
-                            "end_time": "2021-10-03 05:00:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 167,
-                            "event_type": "custom",
-                            "title": "Open Spaces",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 06:30:00",
-                            "end_time": "2021-10-03 07:20:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 166,
-                            "event_type": "custom",
-                            "title": "Break",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 07:20:00",
-                            "end_time": "2021-10-03 07:30:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 19,
-                            "event_type": "keynote",
-                            "title": {
-                                "en_us": "Ideas, Visions and Reality: Looking back on 20 years of community work",
-                                "zh_hant": "想法、展望與現實：回望過去二十年的社群耕耘成果"
-                            },
-                            "speakers": [
-                                {
-                                    "en_us": "Marc-Andre Lemburg",
-                                    "zh_hant": "Marc-Andre Lemburg"
-                                }
-                            ],
-                            "begin_time": "2021-10-03 07:30:00",
-                            "end_time": "2021-10-03 08:30:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 168,
-                            "event_type": "custom",
-                            "title": "Break",
-                            "speakers": [],
-                            "begin_time": "2021-10-03 08:30:00",
-                            "end_time": "2021-10-03 08:40:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 169,
                             "event_type": "custom",
                             "title": "Lightning Talks",
                             "speakers": [],
-                            "begin_time": "2021-10-03 08:40:00",
-                            "end_time": "2021-10-03 09:10:00",
+                            "begin_time": "2022-09-03 17:15:00",
+                            "end_time": "2022-09-03 17:45:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -888,12 +414,25 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 170,
+                            "event_id": 186,
                             "event_type": "custom",
-                            "title": "Closing",
+                            "title": "Announcement",
                             "speakers": [],
-                            "begin_time": "2021-10-03 09:10:00",
-                            "end_time": "2021-10-03 09:30:00",
+                            "begin_time": "2022-09-03 17:45:00",
+                            "end_time": "2022-09-03 18:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 187,
+                            "event_type": "custom",
+                            "title": "PyNight Online",
+                            "speakers": [],
+                            "begin_time": "2022-09-03 18:00:00",
+                            "end_time": "2022-09-03 20:00:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -901,53 +440,106 @@
                             "break_event": false
                         }
                     ],
-                    "4-r0": [
+                    "5-r1": [
                         {
-                            "event_id": 216,
+                            "event_id": 234,
                             "event_type": "talk",
-                            "title": "用Python做太陽能發電監控",
-                            "speakers": ["Malo"],
-                            "begin_time": "2021-10-03 02:00:00",
-                            "end_time": "2021-10-03 02:30:00",
+                            "title": "Use Raspberry Pi Pico + Python to provide good value on technology education in middle school",
+                            "speakers": [
+                                "Milo Chen"
+                            ],
+                            "begin_time": "2022-09-03 10:10:00",
+                            "end_time": "2022-09-03 10:40:00",
                             "is_remote": false,
                             "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 211,
-                            "event_type": "talk",
-                            "title": "使用 Python 實現可即時互動用的遠端影音傳輸",
-                            "speakers": ["Milo Chen"],
-                            "begin_time": "2021-10-03 02:35:00",
-                            "end_time": "2021-10-03 03:20:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 218,
-                            "event_type": "talk",
-                            "title": "用Python實作環境偵測及預警系統",
-                            "speakers": ["Victor Gau"],
-                            "begin_time": "2021-10-03 03:30:00",
-                            "end_time": "2021-10-03 04:00:00",
-                            "is_remote": false,
-                            "recording_policy": false,
-                            "language": "ZHZH",
+                            "language": "ENEN",
                             "python_level": "NOVICE",
                             "break_event": false
                         },
                         {
-                            "event_id": 199,
+                            "event_id": 266,
                             "event_type": "talk",
-                            "title": "Learn from LL(1) to PEG parser the hard way",
-                            "speakers": ["Kir Chou"],
-                            "begin_time": "2021-10-03 05:00:00",
-                            "end_time": "2021-10-03 05:45:00",
+                            "title": "Hacking and Securing Machine Learning Systems and Environments",
+                            "speakers": [
+                                "Joshua Arvin Lat"
+                            ],
+                            "begin_time": "2022-09-03 10:45:00",
+                            "end_time": "2022-09-03 11:15:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "EXPERIENCED",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 241,
+                            "event_type": "talk",
+                            "title": "Type erasure in Python",
+                            "speakers": [
+                                "Kir Chou"
+                            ],
+                            "begin_time": "2022-09-03 11:25:00",
+                            "end_time": "2022-09-03 11:55:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "EXPERIENCED",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 228,
+                            "event_type": "talk",
+                            "title": "Revisit Python from statements and PEG",
+                            "speakers": [
+                                "nikkie"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 264,
+                            "event_type": "talk",
+                            "title": "TasteGram: An Image Assessment App Built with TensorFlow & Python",
+                            "speakers": [
+                                "John Lu"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 255,
+                            "event_type": "talk",
+                            "title": "Fighting dengue with genetically modified mosquitoes and GeoSpatial AI",
+                            "speakers": [
+                                "Anand S"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 224,
+                            "event_type": "talk",
+                            "title": "Python under a microscope: Scanning Tunneling Microscopy, image processing, feature recognition and extraction of statistics",
+                            "speakers": [
+                                "Hsu-Kai Cheng"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ENEN",
@@ -957,79 +549,215 @@
                     ],
                     "1-r3": [
                         {
-                            "event_id": 9,
+                            "event_id": 10,
                             "event_type": "tutorial",
-                            "title": "Knowledge graph data modelling with TerminusDB",
-                            "speakers": ["Cheuk Ting Ho"],
-                            "begin_time": "2021-10-03 02:00:00",
-                            "end_time": "2021-10-03 03:20:00",
+                            "title": "90 分鐘帶你用 Brownie 上架 NFT",
+                            "speakers": [
+                                "陳怡升 EasonC13"
+                            ],
+                            "begin_time": "2022-09-03 10:10:00",
+                            "end_time": "2022-09-03 11:40:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 12,
+                            "event_type": "tutorial",
+                            "title": "Effective ways to maintain and scale-up your Web Crawling project using Scrapy and it's ecosystem of tools.",
+                            "speakers": [
+                                "Kevin Lloyd Bernal"
+                            ],
+                            "begin_time": "2022-09-03 13:05:00",
+                            "end_time": "2022-09-03 14:35:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
                             "break_event": false
-                        },
+                        }
+                    ],
+                    "4-r0-2": [
                         {
-                            "event_id": 192,
+                            "event_id": 272,
                             "event_type": "talk",
-                            "title": "吹直笛打電話？重現柯南名場景！",
-                            "speakers": ["李昱勳"],
-                            "begin_time": "2021-10-03 03:30:00",
-                            "end_time": "2021-10-03 04:00:00",
+                            "title": "Practices of Building Trustworthy Data Pipeline",
+                            "speakers": [
+                                "Tim Chiu"
+                            ],
+                            "begin_time": "2022-09-03 10:10:00",
+                            "end_time": "2022-09-03 10:40:00",
                             "is_remote": false,
                             "recording_policy": true,
-                            "language": "ZHZH",
+                            "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
                             "break_event": false
                         },
                         {
-                            "event_id": 208,
+                            "event_id": 271,
                             "event_type": "talk",
-                            "title": "PEP 634 Structural Pattern Matching 參上，你終究還是要用語言學來做 NLP 齁！",
-                            "speakers": ["PeterWolf"],
-                            "begin_time": "2021-10-03 05:00:00",
-                            "end_time": "2021-10-03 05:45:00",
+                            "title": "實現超自動化的驗證碼辨識",
+                            "speakers": [
+                                "何信賢"
+                            ],
+                            "begin_time": "2022-09-03 11:25:00",
+                            "end_time": "2022-09-03 11:55:00",
                             "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
+                            "recording_policy": false,
+                            "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
                             "break_event": false
                         },
                         {
-                            "event_id": 206,
-                            "event_type": "talk",
-                            "title": "PyMetheus - A Python-based Monitoring System using Raspberry Pi",
-                            "speakers": ["Ing Wei Tang"],
-                            "begin_time": "2021-10-03 05:45:00",
-                            "end_time": "2021-10-03 06:25:00",
+                            "event_id": 13,
+                            "event_type": "sponsored",
+                            "title": "From Data Pipeline to Airflow - the Obstacles in Our Migration",
+                            "speakers": [
+                                "莊鐵鴻"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ENEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 12,
+                            "event_type": "sponsored",
+                            "title": "數據團隊守護神-DQT",
+                            "speakers": [
+                                "Mark Yang"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 259,
+                            "event_type": "talk",
+                            "title": "Using Python to interpret your genetic testing data",
+                            "speakers": [
+                                "DailyGold999"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "4-r0": [
+                        {
+                            "event_id": 245,
+                            "event_type": "talk",
+                            "title": "Distributing your pandas ETL job using Ray and Modin",
+                            "speakers": [
+                                "李泓旻 (Andrew)"
+                            ],
+                            "begin_time": "2022-09-03 10:10:00",
+                            "end_time": "2022-09-03 10:40:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 262,
+                            "event_type": "talk",
+                            "title": "Python Design Patterns",
+                            "speakers": [
+                                "Max Lai"
+                            ],
+                            "begin_time": "2022-09-03 10:45:00",
+                            "end_time": "2022-09-03 11:15:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 260,
+                            "event_type": "talk",
+                            "title": "AI 認注音：使用huggingface framework建構開源標音系統g2pW",
+                            "speakers": [
+                                "陳宜昌"
+                            ],
+                            "begin_time": "2022-09-03 11:25:00",
+                            "end_time": "2022-09-03 11:55:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 258,
+                            "event_type": "talk",
+                            "title": "Play Digital Signal Processing with Python (using SigmaDSP)",
+                            "speakers": [
+                                "Wei Lin"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 261,
+                            "event_type": "talk",
+                            "title": "Building Customized Async Web Protocol from AsyncIO (Python): Exploring the low-level APIs Protocol and Transport",
+                            "speakers": [
+                                "姜韋辰"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "EXPERIENCED",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 227,
+                            "event_type": "talk",
+                            "title": "Building an Arena for AI Warriors",
+                            "speakers": [
+                                "Pei Hsuan Hsieh"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
                             "break_event": false
                         }
                     ],
                     "6-r2": [
                         {
-                            "event_id": 219,
+                            "event_id": 246,
                             "event_type": "talk",
-                            "title": "爬蟲與反爬蟲乾貨",
-                            "speakers": ["蔡根元"],
-                            "begin_time": "2021-10-03 02:00:00",
-                            "end_time": "2021-10-03 02:30:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ZHZH",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 213,
-                            "event_type": "talk",
-                            "title": "Football (soccer) data analysis: A Pedagogic introduction",
-                            "speakers": ["Indranil Ghosh"],
-                            "begin_time": "2021-10-03 02:35:00",
-                            "end_time": "2021-10-03 03:20:00",
+                            "title": "Enhancing Documentations on Sphinx with the Power of Extensions",
+                            "speakers": [
+                                "Renaldi Gondosubroto"
+                            ],
+                            "begin_time": "2022-09-03 10:10:00",
+                            "end_time": "2022-09-03 10:40:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ENEN",
@@ -1037,12 +765,14 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 207,
+                            "event_id": 243,
                             "event_type": "talk",
-                            "title": "Let's make your data pipeline robust with Great Expectations!",
-                            "speakers": ["Keisuke Nishitani"],
-                            "begin_time": "2021-10-03 03:30:00",
-                            "end_time": "2021-10-03 04:00:00",
+                            "title": "Code coverage through unit tests running in sub-processes/threads: Locally and automated on GitHub",
+                            "speakers": [
+                                "Saransh Chopra"
+                            ],
+                            "begin_time": "2022-09-03 10:45:00",
+                            "end_time": "2022-09-03 11:15:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ENEN",
@@ -1050,53 +780,76 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 186,
+                            "event_id": 223,
                             "event_type": "talk",
-                            "title": "從 Flask 邁向 FastAPI 的心路歷程 - 用房屋估價模型服務體驗急速開發、高效能的快感!",
-                            "speakers": ["陳家丞"],
-                            "begin_time": "2021-10-03 05:00:00",
-                            "end_time": "2021-10-03 05:45:00",
+                            "title": "From snippet to project – building an analysis and visualization tool for an unusual data type",
+                            "speakers": [
+                                "Claire Chung"
+                            ],
+                            "begin_time": "2022-09-03 11:25:00",
+                            "end_time": "2022-09-03 11:55:00",
                             "is_remote": false,
                             "recording_policy": true,
-                            "language": "ZHZH",
+                            "language": "ENEN",
                             "python_level": "INTERMEDIATE",
                             "break_event": false
                         },
                         {
-                            "event_id": 193,
+                            "event_id": 249,
                             "event_type": "talk",
-                            "title": "嫌 Django 的 Validator 不好用 !?  不如自幹一個",
-                            "speakers": ["Kilik Kuo"],
-                            "begin_time": "2021-10-03 05:55:00",
-                            "end_time": "2021-10-03 06:25:00",
+                            "title": "Real-time browser-ready computer vision apps with Streamlit",
+                            "speakers": [
+                                "Yuichiro Tachibana"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
                             "is_remote": false,
                             "recording_policy": true,
-                            "language": "ZHEN",
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 233,
+                            "event_type": "talk",
+                            "title": "Fantastic NLU: Loki, SymPy and the Solver to Math Word Problems",
+                            "speakers": [
+                                "PeterWolf"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 254,
+                            "event_type": "talk",
+                            "title": "Run Bokeh in back-end, draw real-time charts to front-end, and make data scientists happy",
+                            "speakers": [
+                                "Ko Ko"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
                             "python_level": "INTERMEDIATE",
                             "break_event": false
                         }
                     ],
-                    "5-r1": [
+                    "4-r0-1": [
                         {
-                            "event_id": 204,
+                            "event_id": 247,
                             "event_type": "talk",
-                            "title": "Building Features from Audio for Machine Learning",
-                            "speakers": ["Jyotika Singh"],
-                            "begin_time": "2021-10-03 02:00:00",
-                            "end_time": "2021-10-03 02:30:00",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "ENEN",
-                            "python_level": "INTERMEDIATE",
-                            "break_event": false
-                        },
-                        {
-                            "event_id": 187,
-                            "event_type": "talk",
-                            "title": "Supercharging your Jupyter and Machine Learning Workflow with PrimeHub",
-                            "speakers": ["Chia-liang Kao"],
-                            "begin_time": "2021-10-03 02:35:00",
-                            "end_time": "2021-10-03 03:20:00",
+                            "title": "從開放數據閱讀台灣能源 - 數據探索、模型預測和風險評估 In-depth Analysis of Open Energy Data in Taiwan - Data Exploration, Model Prediction and Risk Assessment",
+                            "speakers": [
+                                "傅群 (Patrick Fu)"
+                            ],
+                            "begin_time": "2022-09-03 10:10:00",
+                            "end_time": "2022-09-03 10:40:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ZHEN",
@@ -1104,12 +857,14 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 198,
+                            "event_id": 236,
                             "event_type": "talk",
-                            "title": "TronGisPy: Open Sourced Geo-Image Preprocessing Tool for Machine Learning",
-                            "speakers": ["王選仲"],
-                            "begin_time": "2021-10-03 03:30:00",
-                            "end_time": "2021-10-03 04:00:00",
+                            "title": "Building large scale data pipelines by Apache Airflow",
+                            "speakers": [
+                                "黃泰瑋 (Tai-Wei Huang)"
+                            ],
+                            "begin_time": "2022-09-03 10:45:00",
+                            "end_time": "2022-09-03 11:15:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ZHEN",
@@ -1117,12 +872,14 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 209,
+                            "event_id": 257,
                             "event_type": "talk",
-                            "title": "用Python刻一個深度學習圖片重點裁切系統 (Implementation of a deep learning-based saliency detection system by Python)",
-                            "speakers": ["何明洋"],
-                            "begin_time": "2021-10-03 05:00:00",
-                            "end_time": "2021-10-03 05:45:00",
+                            "title": "鄉民如何用Python協作貢獻天文教育",
+                            "speakers": [
+                                "蘇羿豪"
+                            ],
+                            "begin_time": "2022-09-03 11:25:00",
+                            "end_time": "2022-09-03 11:55:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ZHEN",
@@ -1130,12 +887,44 @@
                             "break_event": false
                         },
                         {
-                            "event_id": 202,
+                            "event_id": 248,
                             "event_type": "talk",
-                            "title": "What you need to know about deploying AI model to edge device",
-                            "speakers": ["吳啟聖"],
-                            "begin_time": "2021-10-03 05:55:00",
-                            "end_time": "2021-10-03 06:25:00",
+                            "title": "在IC產業中寫python 是一種什麼樣的體驗？",
+                            "speakers": [
+                                "吳啟聖"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 244,
+                            "event_type": "talk",
+                            "title": "Integrate Schema Registry & Kafka in Python to Build Streaming Processing",
+                            "speakers": [
+                                "Mars Su"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 231,
+                            "event_type": "talk",
+                            "title": "醫療影像AI產品落地挑戰與持續優化的歷程分享",
+                            "speakers": [
+                                "陳穗碧"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "ZHEN",
@@ -1145,12 +934,12 @@
                     ],
                     "3-r012": [
                         {
-                            "event_id": 161,
+                            "event_id": 177,
                             "event_type": "custom",
                             "title": "Break",
                             "speakers": [],
-                            "begin_time": "2021-10-03 02:30:00",
-                            "end_time": "2021-10-03 02:35:00",
+                            "begin_time": "2022-09-03 10:40:00",
+                            "end_time": "2022-09-03 10:45:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
@@ -1158,23 +947,658 @@
                             "break_event": true
                         },
                         {
-                            "event_id": 165,
+                            "event_id": 178,
                             "event_type": "custom",
                             "title": "Break",
                             "speakers": [],
-                            "begin_time": "2021-10-03 05:45:00",
-                            "end_time": "2021-10-03 05:55:00",
+                            "begin_time": "2022-09-03 11:15:00",
+                            "end_time": "2022-09-03 11:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 180,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-03 13:25:00",
+                            "end_time": "2022-09-03 13:30:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 181,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-03 14:00:00",
+                            "end_time": "2022-09-03 14:05:00",
                             "is_remote": false,
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
                             "break_event": true
                         }
+                    ],
+                    "5-r1-1": [
+                        {
+                            "event_id": 230,
+                            "event_type": "talk",
+                            "title": "Demystifying Python's Internals: Diving into CPython by implementing a pipe operator",
+                            "speakers": [
+                                "Sebastiaan Zeeff"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 229,
+                            "event_type": "talk",
+                            "title": "Implement Shion(詩音) from SingaBitofHarmony(讓我聽見愛的歌聲) with Python",
+                            "speakers": [
+                                "nikkie"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "JPEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 267,
+                            "event_type": "talk",
+                            "title": "From Field to the Cloud: A Geo Person's Python Toolchain",
+                            "speakers": [
+                                "Ian Panganiban"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "5-r1-2": [
+                        {
+                            "event_id": 263,
+                            "event_type": "talk",
+                            "title": "REST API request payload validator as a decorator",
+                            "speakers": [
+                                "Sammy Wen"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "6-r2-1": [
+                        {
+                            "event_id": 235,
+                            "event_type": "talk",
+                            "title": "Finding the Perfect Shift Schedule",
+                            "speakers": [
+                                "Shung-Hsi Yu"
+                            ],
+                            "begin_time": "2022-09-03 12:55:00",
+                            "end_time": "2022-09-03 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 232,
+                            "event_type": "talk",
+                            "title": "Python for the Unsolvable: Machine Learning Applications in Chaos Theory",
+                            "speakers": [
+                                "Srivatsa Kundurthy"
+                            ],
+                            "begin_time": "2022-09-03 13:30:00",
+                            "end_time": "2022-09-03 14:00:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 238,
+                            "event_type": "talk",
+                            "title": "Exploring Network Clusters in Python",
+                            "speakers": [
+                                "Anand S"
+                            ],
+                            "begin_time": "2022-09-03 14:05:00",
+                            "end_time": "2022-09-03 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
                     ]
                 },
                 "timeline": {
-                    "begin": "2021-10-03 01:30:00",
-                    "end": "2021-10-03 09:30:00"
+                    "begin": "2022-09-03 08:30:00",
+                    "end": "2022-09-03 20:00:00"
+                }
+            },
+            {
+                "date": "2022-09-04",
+                "name": "Day 2",
+                "rooms": [
+                    "1-r3",
+                    "2-all",
+                    "3-r012",
+                    "4-r0-1",
+                    "4-r0",
+                    "5-r1-1",
+                    "5-r1",
+                    "6-r2-1",
+                    "6-r2"
+                ],
+                "slots": {
+                    "2-all": [
+                        {
+                            "event_id": 188,
+                            "event_type": "custom",
+                            "title": "Registration & Breakfast",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 09:00:00",
+                            "end_time": "2022-09-04 09:20:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 189,
+                            "event_type": "custom",
+                            "title": "Announcements",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 09:20:00",
+                            "end_time": "2022-09-04 09:30:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 25,
+                            "event_type": "keynote",
+                            "title": {
+                                "zh_hant": "圖機器學習及其應用",
+                                "en_us": "Graph Machine Learning and Its Applications"
+                            },
+                            "speakers": [
+                                {
+                                    "zh_hant": "李政德 博士",
+                                    "en_us": "Dr. Cheng-Te Li"
+                                }
+                            ],
+                            "begin_time": "2022-09-04 09:30:00",
+                            "end_time": "2022-09-04 10:30:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 190,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 10:30:00",
+                            "end_time": "2022-09-04 10:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 192,
+                            "event_type": "custom",
+                            "title": "Lunch",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 11:45:00",
+                            "end_time": "2022-09-04 12:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 195,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 14:35:00",
+                            "end_time": "2022-09-04 14:40:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 196,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 15:40:00",
+                            "end_time": "2022-09-04 15:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 201,
+                            "event_type": "custom",
+                            "title": " Open Spaces",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 15:45:00",
+                            "end_time": "2022-09-04 16:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 197,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 16:35:00",
+                            "end_time": "2022-09-04 16:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 198,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 17:45:00",
+                            "end_time": "2022-09-04 17:55:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 199,
+                            "event_type": "custom",
+                            "title": "Lightning Talks",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 17:55:00",
+                            "end_time": "2022-09-04 18:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 200,
+                            "event_type": "custom",
+                            "title": "Closing",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 18:25:00",
+                            "end_time": "2022-09-04 18:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": false
+                        }
+                    ],
+                    "1-r3": [
+                        {
+                            "event_id": 13,
+                            "event_type": "tutorial",
+                            "title": "Pika Pika！RabbitMQ 簡介 x Python 實作",
+                            "speakers": [
+                                "張仲樸 Enzo Chang"
+                            ],
+                            "begin_time": "2022-09-04 10:35:00",
+                            "end_time": "2022-09-04 12:05:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 11,
+                            "event_type": "tutorial",
+                            "title": "Three Musketeers: Sherlock Holmes, Mathematics and Python",
+                            "speakers": [
+                                "Gajendra Deshpande"
+                            ],
+                            "begin_time": "2022-09-04 13:05:00",
+                            "end_time": "2022-09-04 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "5-r1-1": [
+                        {
+                            "event_id": 270,
+                            "event_type": "talk",
+                            "title": "Make your photos better by image denoising",
+                            "speakers": [
+                                "蘇嘉冠 (Jia-Kuan, Su)"
+                            ],
+                            "begin_time": "2022-09-04 10:35:00",
+                            "end_time": "2022-09-04 11:05:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 253,
+                            "event_type": "talk",
+                            "title": "Function dissection lab -- learn how functions work by examining their innards",
+                            "speakers": [
+                                "Reuven M. Lerner"
+                            ],
+                            "begin_time": "2022-09-04 13:25:00",
+                            "end_time": "2022-09-04 13:55:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "5-r1": [
+                        {
+                            "event_id": 240,
+                            "event_type": "talk",
+                            "title": "Data Oriented Programming with Python",
+                            "speakers": [
+                                "Doni Rubiagatra"
+                            ],
+                            "begin_time": "2022-09-04 10:35:00",
+                            "end_time": "2022-09-04 11:05:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 225,
+                            "event_type": "talk",
+                            "title": "Molecular Dynamics is no longer scary with Python! Learn to do it yourself with FIRE and LAMMPS.",
+                            "speakers": [
+                                "David Mikolas"
+                            ],
+                            "begin_time": "2022-09-04 11:15:00",
+                            "end_time": "2022-09-04 11:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 252,
+                            "event_type": "talk",
+                            "title": "When is an exception not an exception? Using warnings in Python",
+                            "speakers": [
+                                "Reuven M. Lerner"
+                            ],
+                            "begin_time": "2022-09-04 13:25:00",
+                            "end_time": "2022-09-04 13:55:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "6-r2-1": [
+                        {
+                            "event_id": 273,
+                            "event_type": "talk",
+                            "title": "A Cross-Platform Pure Python Declarative UI Framework",
+                            "speakers": [
+                                "Yasushi Itoh"
+                            ],
+                            "begin_time": "2022-09-04 10:35:00",
+                            "end_time": "2022-09-04 11:05:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 269,
+                            "event_type": "talk",
+                            "title": "Python in GNU/Linux Distributions, Debian, and Ubuntu",
+                            "speakers": [
+                                "Taihsiang Ho (tai271828)"
+                            ],
+                            "begin_time": "2022-09-04 14:05:00",
+                            "end_time": "2022-09-04 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "6-r2": [
+                        {
+                            "event_id": 250,
+                            "event_type": "talk",
+                            "title": "Writing secure code in Python",
+                            "speakers": [
+                                "Yan Orestes"
+                            ],
+                            "begin_time": "2022-09-04 10:35:00",
+                            "end_time": "2022-09-04 11:05:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 226,
+                            "event_type": "talk",
+                            "title": "Big Models, Small Pitfalls: My random walk towards building sequence-to-sequence models",
+                            "speakers": [
+                                "Shreya Khurana"
+                            ],
+                            "begin_time": "2022-09-04 11:15:00",
+                            "end_time": "2022-09-04 11:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 256,
+                            "event_type": "talk",
+                            "title": "Predicting urban heat islands in Calgary",
+                            "speakers": [
+                                "Anand S"
+                            ],
+                            "begin_time": "2022-09-04 12:45:00",
+                            "end_time": "2022-09-04 13:15:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 268,
+                            "event_type": "talk",
+                            "title": "The Emergence of Community and How to Initiate It",
+                            "speakers": [
+                                "Taihsiang Ho (tai271828)"
+                            ],
+                            "begin_time": "2022-09-04 14:05:00",
+                            "end_time": "2022-09-04 14:35:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        }
+                    ],
+                    "3-r012": [
+                        {
+                            "event_id": 191,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 11:05:00",
+                            "end_time": "2022-09-04 11:15:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 193,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 13:15:00",
+                            "end_time": "2022-09-04 13:25:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        },
+                        {
+                            "event_id": 194,
+                            "event_type": "custom",
+                            "title": "Break",
+                            "speakers": [],
+                            "begin_time": "2022-09-04 13:55:00",
+                            "end_time": "2022-09-04 14:05:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
+                            "break_event": true
+                        }
+                    ],
+                    "4-r0": [
+                        {
+                            "event_id": 251,
+                            "event_type": "talk",
+                            "title": "PRIMM: An effective model for teaching Python",
+                            "speakers": [
+                                "Gajendra Deshpande"
+                            ],
+                            "begin_time": "2022-09-04 11:15:00",
+                            "end_time": "2022-09-04 11:45:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ENEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 237,
+                            "event_type": "talk",
+                            "title": "AI產品開發維運(MLOps)之迭代歷程分享 The Journey of AI Product Development and Improvement",
+                            "speakers": [
+                                "張仲樸 Enzo Chang",
+                                "黃奕鳴 Polo Huang"
+                            ],
+                            "begin_time": "2022-09-04 12:45:00",
+                            "end_time": "2022-09-04 13:15:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        },
+                        {
+                            "event_id": 242,
+                            "event_type": "talk",
+                            "title": "Python在機器學習AI遊戲平台-PAIA的實作與應用",
+                            "speakers": [
+                                "邱文淇(Ivan Chiou)"
+                            ],
+                            "begin_time": "2022-09-04 13:25:00",
+                            "end_time": "2022-09-04 13:55:00",
+                            "is_remote": false,
+                            "recording_policy": false,
+                            "language": "ZHEN",
+                            "python_level": "INTERMEDIATE",
+                            "break_event": false
+                        }
+                    ],
+                    "4-r0-1": [
+                        {
+                            "event_id": 14,
+                            "event_type": "sponsored",
+                            "title": "Continuous High Volume of Data Exporting From BigQuery",
+                            "speakers": [
+                                "YungChunLu"
+                            ],
+                            "begin_time": "2022-09-04 12:45:00",
+                            "end_time": "2022-09-04 13:15:00",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "ZHEN",
+                            "python_level": "NOVICE",
+                            "break_event": false
+                        }
+                    ]
+                },
+                "timeline": {
+                    "begin": "2022-09-04 09:00:00",
+                    "end": "2022-09-04 18:45:00"
                 }
             }
         ]

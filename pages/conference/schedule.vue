@@ -12,29 +12,42 @@
                     {{ day.label }}
                 </schedule-day-tab>
             </schedule-day-tabs>
-            <schedule-rooms class="lg:grid">
-                <schedule-block></schedule-block>
-                <schedule-room
-                    v-for="(room, i) in rooms"
-                    :key="$makeKey(i, 'schedule_room')"
-                    :value="room"
-                ></schedule-room>
-            </schedule-rooms>
-            <schedule-table class="lg:grid">
-                <schedule-tick
-                    v-for="(tick, i) in table.ticks"
-                    :key="$makeKey(i, 'schedule_tick')"
-                    :style="tick.style"
-                >
-                    {{ tick.label }}
-                </schedule-tick>
-                <schedule-event
-                    v-for="event in table.events"
-                    :key="$makeKey(event.event_id, 'schedule_table_event')"
-                    :value="event"
-                    :timeline-begin="table.timeline.begin"
-                ></schedule-event>
-            </schedule-table>
+            <div
+                class="
+                    px-10
+                    relative
+                    w-screen
+                    h-screen
+                    overflow-scroll
+                    mb-24
+                    hidden
+                    lg:block
+                "
+            >
+                <schedule-rooms :date="selectedDayIndex" class="lg:grid">
+                    <schedule-block></schedule-block>
+                    <schedule-room
+                        v-for="(room, i) in rooms"
+                        :key="$makeKey(i, 'schedule_room')"
+                        :value="room"
+                    ></schedule-room>
+                </schedule-rooms>
+                <schedule-table :date="selectedDayIndex" class="lg:grid">
+                    <schedule-tick
+                        v-for="(tick, i) in table.ticks"
+                        :key="$makeKey(i, 'schedule_tick')"
+                        :style="tick.style"
+                    >
+                        {{ tick.label }}
+                    </schedule-tick>
+                    <schedule-event
+                        v-for="event in table.events"
+                        :key="$makeKey(event.event_id, 'schedule_table_event')"
+                        :value="event"
+                        :timeline-begin="table.timeline.begin"
+                    ></schedule-event>
+                </schedule-table>
+            </div>
             <schedule-list class="lg:hidden">
                 <schedule-list-group
                     v-for="(group, i) in list.groups"
@@ -132,6 +145,11 @@ export default {
             window.scrollTo(0, this.scrollPosition)
         }, 0)
     },
+    watch: {
+        selectedDayIndex() {
+            this.makeRooms()
+        },
+    },
     deactivated() {
         this.scrollPosition =
             window.pageYOffset ||
@@ -159,7 +177,29 @@ export default {
             })
         },
         makeRooms() {
-            this.rooms = ['4-r0', '5-r1', '6-r2', '1-r3']
+            if (this.selectedDayIndex === 0) {
+                this.rooms = [
+                    '4-r0',
+                    '4-r0-1',
+                    '4-r0-2',
+                    '5-r1',
+                    '5-r1-1',
+                    '5-r1-2',
+                    '6-r2',
+                    '6-r2-1',
+                    '1-r3',
+                ]
+            } else {
+                this.rooms = [
+                    '4-r0',
+                    '4-r0-1',
+                    '5-r1',
+                    '5-r1-1',
+                    '6-r2',
+                    '6-r2-1',
+                    '1-r3',
+                ]
+            }
         },
         makeTables() {
             this.tables = this.schedulesData.map((schedule) => ({
@@ -255,8 +295,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.pageWrapper {
-    @apply md:px-24;
-}
-</style>
+<style lang="postcss" scoped></style>
