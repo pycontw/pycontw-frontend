@@ -62,12 +62,12 @@
                 </h2>
                 <tabs class="keynote__tabs">
                     <tab :title="$t('terms.bio')">
-                        <div class="p-1 pb-4">
+                        <div class="keynote_tab">
                             {{ keynote.speaker[$makeKey(locale, 'bio')] }}
                         </div>
                     </tab>
                     <tab :title="$t('terms.talk')">
-                        <div class="p-1 pb-4">
+                        <div class="keynote_tab">
                             {{
                                 keynote.session[$makeKey(locale, 'description')]
                             }}
@@ -230,6 +230,10 @@ export default {
 
 .keynote__tabs {
     @apply mt-6 mb-3;
+}
+
+.keynote_tab {
+    @apply whitespace-pre-line pb-4;
 }
 
 .keynote__slido {
