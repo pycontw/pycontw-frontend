@@ -63,7 +63,6 @@
                                 <h4
                                     class="
                                         font-bold font-serif
-                                        text:md
                                         lg:text-2xl
                                         mb-10
                                         mt-5
