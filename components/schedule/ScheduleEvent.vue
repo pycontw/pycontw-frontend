@@ -66,7 +66,7 @@ export default {
             timezoneFormat,
             timeOptions: { outputFormat: timeFormat },
             timezoneOptions: { outputFormat: timezoneFormat },
-            startPoint: this.$parseDate(this.$padTimezone(this.timelineBegin)),
+            startPoint: this.$parseDate(this.timelineBegin),
             icon: {
                 lang: {
                     ENEN: require('~/static/img/icons/lang/ENEN.svg'),
@@ -96,15 +96,15 @@ export default {
         },
         duration() {
             const startTime = this.$datetimeToString(
-                this.$padTimezone(this.value.begin_time),
+                this.value.begin_time,
                 this.timeOptions,
             )
             const endTime = this.$datetimeToString(
-                this.$padTimezone(this.value.end_time),
+                this.value.end_time,
                 this.timeOptions,
             )
             const timezone = this.$datetimeToString(
-                this.$padTimezone(this.value.begin_time),
+                this.value.begin_time,
                 this.timezoneOptions,
             )
             return `${startTime} ~ ${endTime} (${timezone})`
@@ -140,8 +140,7 @@ export default {
         },
     },
     methods: {
-        getGridRow(t) {
-            const time = this.$padTimezone(t)
+        getGridRow(time) {
             const diff = this.$parseDate(time).diff(this.startPoint, 'minute')
             const unit = 5
             return parseInt(`${diff / unit}`, 10) + 1
