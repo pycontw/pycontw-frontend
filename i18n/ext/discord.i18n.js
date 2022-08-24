@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         invalidAttendee:
             'The token within the link is invalid. Please contact staff for further help.',
-        tutorialsHeader: 'Tutorials',
+        tutorialsHeader: 'PyCon TW Discord Guideline',
         registration: {
             title: '1. Register yourself',
             descriptions: [
