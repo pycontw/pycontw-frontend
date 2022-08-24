@@ -211,8 +211,10 @@ export default {
     },
     methods: {
         processData() {
-            const beginTime = new Date(this.speechData.begin_time)
-            const endTime = new Date(this.speechData.end_time)
+            const beginTimeStr = this.speechData.begin_time
+            const endTimeStr = this.speechData.end_time
+            const beginTime = beginTimeStr && this.$parseDate(beginTimeStr)
+            const endTime = endTimeStr && this.$parseDate(endTimeStr)
 
             this.data = {
                 ...this.speechData,
@@ -220,31 +222,28 @@ export default {
             }
         },
         getDateTag(beginTime) {
-            const dayOneMidnight = new Date('2022-09-03 16:00:00')
+            const dayOneMidnight = this.$parseDate('2022-09-03T16:00:00Z')
             if (beginTime < dayOneMidnight) {
                 return 'day1'
             } else {
                 return 'day2'
             }
         },
-        getTime: (datetime) => {
-            if (!datetime.getHours() || !datetime.getMinutes()) {
-                return null
-            }
-            const hour = ('0' + datetime.getHours()).slice(-2)
-            const minute = ('0' + datetime.getMinutes()).slice(-2)
-            return `${hour}:${minute}`
-        },
         getEventTimeString(beginTime, endTime) {
             const dateTag = this.getDateTag(beginTime)
-            const formattedBeginTime = this.getTime(beginTime)
-            const formattedEndTime = this.getTime(endTime)
+            const formattedBeginTime = this.$datetimeToString(beginTime, {
+                outputFormat: 'HH:mm',
+            })
+            const formattedEndTime = this.$datetimeToString(endTime, {
+                outputFormat: 'HH:mm',
+            })
             if (!formattedBeginTime || !formattedEndTime) {
                 return null
             }
             return (
                 `${this.$i18n.t(`terms.${dateTag}`)} • ` +
-                `${formattedBeginTime}-${formattedEndTime}`
+                `${formattedBeginTime}-${formattedEndTime} ` +
+                `(${this.$datetimeToString(beginTime, { outputFormat: 'z' })})`
             )
         },
         isValidLocation(loc) {
