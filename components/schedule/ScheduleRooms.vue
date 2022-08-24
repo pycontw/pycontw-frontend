@@ -2,8 +2,8 @@
     <div
         class="scheduleRooms hidden sticky top-0"
         :class="{
-            date1: date === 0,
-            date2: date === 1,
+            day1: dateIndex === 0,
+            day2: dateIndex === 1,
         }"
     >
         <slot></slot>
@@ -13,7 +13,9 @@
 <script>
 export default {
     name: 'ScheduleRooms',
-    props: ['date'],
+    props: {
+        dateIndex: { type: Number, default: null },
+    },
 }
 </script>
 
@@ -23,11 +25,11 @@ export default {
     grid-gap: 12px;
     background-color: rgba(18, 16, 35, 0.6);
 }
-.scheduleRooms.date1 {
+.scheduleRooms.day1 {
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
     width: 140%;
 }
-.scheduleRooms.date2 {
+.scheduleRooms.day2 {
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
     width: 110.5%;
 }

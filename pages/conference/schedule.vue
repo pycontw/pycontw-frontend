@@ -6,7 +6,7 @@
                 <schedule-day-tab
                     v-for="(day, i) in days"
                     :key="$makeKey(i, 'schedule_day_tab')"
-                    :date="day.date"
+                    :date-index="day.date"
                     :index="i"
                 >
                     {{ day.label }}
@@ -24,7 +24,7 @@
                     lg:block
                 "
             >
-                <schedule-rooms :date="selectedDayIndex" class="lg:grid">
+                <schedule-rooms :date-index="selectedDayIndex" class="lg:grid">
                     <schedule-block></schedule-block>
                     <schedule-room
                         v-for="(room, i) in rooms"
@@ -32,7 +32,7 @@
                         :value="room"
                     ></schedule-room>
                 </schedule-rooms>
-                <schedule-table :date="selectedDayIndex" class="lg:grid">
+                <schedule-table :date-index="selectedDayIndex" class="lg:grid">
                     <schedule-tick
                         v-for="(tick, i) in table.ticks"
                         :key="$makeKey(i, 'schedule_tick')"
@@ -136,6 +136,11 @@ export default {
             return this.lists[this.selectedDayIndex] || this.defaultList
         },
     },
+    watch: {
+        selectedDayIndex() {
+            this.makeRooms()
+        },
+    },
     async created() {
         await this.$store.dispatch('$getSchedulesData')
         this.processData()
@@ -144,11 +149,6 @@ export default {
         setTimeout(() => {
             window.scrollTo(0, this.scrollPosition)
         }, 0)
-    },
-    watch: {
-        selectedDayIndex() {
-            this.makeRooms()
-        },
     },
     deactivated() {
         this.scrollPosition =

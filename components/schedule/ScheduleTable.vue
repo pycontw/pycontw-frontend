@@ -2,8 +2,8 @@
     <div
         class="scheduleTable hidden w-full"
         :class="{
-            date1: date === 0,
-            date2: date === 1,
+            day1: dateIndex === 0,
+            day2: dateIndex === 1,
         }"
     >
         <slot></slot>
@@ -13,7 +13,9 @@
 <script>
 export default {
     name: 'ScheduleTable',
-    props: ['date'],
+    props: {
+        dateIndex: { type: Number, default: null },
+    },
 }
 </script>
 
@@ -21,7 +23,7 @@ export default {
 .scheduleTable {
     grid-gap: 12px;
 }
-.scheduleTable.date1 {
+.scheduleTable.day1 {
     grid-template-columns:
         [timeline] 1fr
         [room-4-r0-start] 2fr
@@ -36,7 +38,7 @@ export default {
         [room-1-r3-end];
     width: 140%;
 }
-.scheduleTable.date2 {
+.scheduleTable.day2 {
     grid-template-columns:
         [timeline] 1fr
         [room-4-r0-start] 2fr
