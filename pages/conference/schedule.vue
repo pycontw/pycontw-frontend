@@ -42,7 +42,13 @@
                     </schedule-tick>
                     <schedule-event
                         v-for="event in table.events"
-                        :key="$makeKey(event.event_id, 'schedule_table_event')"
+                        :key="
+                            $makeKey(
+                                event.event_id,
+                                'schedule_table_event',
+                                event.event_type,
+                            )
+                        "
                         :value="event"
                         :timeline-begin="table.timeline.begin"
                     ></schedule-event>
@@ -168,7 +174,7 @@ export default {
             this.days = this.schedulesData.map(({ date, name }) => {
                 const formattedDate = this.$datetimeToString(date, {
                     inputFormat: 'YYYY-MM-DD',
-                    outputFormat: 'MM/D',
+                    outputFormat: 'M/D',
                 })
                 return {
                     label: `${name} (${formattedDate})`,
@@ -224,8 +230,8 @@ export default {
         },
         getTicks(schedule) {
             const { timeline } = schedule
-            const start = this.$parseDate(this.$padTimezone(timeline.begin))
-            const end = this.$parseDate(this.$padTimezone(timeline.end))
+            const start = this.$parseDate(timeline.begin)
+            const end = this.$parseDate(timeline.end)
             const diff = end.diff(start, 'minute')
             const unitInMinutes = 30
             const unitPerGridColumn = 6
@@ -263,7 +269,7 @@ export default {
                     }
                 })
                 .map((beginTime) => ({
-                    tick: this.$datetimeToString(this.$padTimezone(beginTime), {
+                    tick: this.$datetimeToString(beginTime, {
                         outputFormat: 'HH:mm',
                     }),
                     events: slotsByBeginTime[beginTime],
