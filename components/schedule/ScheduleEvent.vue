@@ -162,7 +162,7 @@ export default {
 
 <style lang="postcss" scoped>
 .scheduleEvent__context {
-    top: 132px;
+    top: 75px;
 }
 
 .scheduleEvent__title {
