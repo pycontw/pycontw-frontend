@@ -34,17 +34,29 @@
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
             ></nav-bar-item-accordion> -->
-            <!-- <locale-link
+            <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/conference/schedule"
                 customized
                 >{{ $t('schedule') }}</locale-link
-            > -->
+            >
+            <locale-link
+                class="core-navBarHamburgerSlideInMenu__item"
+                to="/events/overview"
+                customized
+                >{{ $t('overview') }}</locale-link
+            >
             <nav-bar-item-accordion
                 :label="$t('conference')"
                 :items="conferenceItems"
                 :expanding="expandingItem === 'conference'"
                 @click.native="toggleAccordion('conference')"
+            ></nav-bar-item-accordion>
+            <nav-bar-item-accordion
+                :label="$t('events')"
+                :items="conferenceItems"
+                :expanding="expandingItem === 'events'"
+                @click.native="toggleAccordion('events')"
             ></nav-bar-item-accordion>
             <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
@@ -70,7 +82,7 @@
 <script>
 import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon'
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
-import { ExtLink } from '@/components/core/links'
+import { ExtLink, LocaleLink } from '@/components/core/links'
 import i18n from './NavBar.i18n'
 import navBarItems from './nav-bar-items'
 
@@ -81,6 +93,7 @@ export default {
         IconHamburgerMenuIcon,
         NavBarItemAccordion,
         ExtLink,
+        LocaleLink,
     },
     data() {
         return {
@@ -91,6 +104,9 @@ export default {
     computed: {
         conferenceItems() {
             return this.generateI18nItems(navBarItems.conference)
+        },
+        eventsItems() {
+            return this.generateI18nItems(navBarItems.events)
         },
         speakingItems() {
             return this.generateI18nItems(navBarItems.speaking)

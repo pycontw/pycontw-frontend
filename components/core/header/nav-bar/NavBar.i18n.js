@@ -52,7 +52,7 @@ export default genI18nMessages({
         tutorials: '專業課程',
         youngInspirers: 'Young Inspirers',
         events: '活動',
-        overview: '活動總覽',
+        overview: '議程總覽',
         openSpaces: '開放空間',
         sprints: '衝刺開發',
         jobListings: '徵才資訊',
