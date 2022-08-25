@@ -5,6 +5,7 @@
                 <core-h2
                     :title="$t('whatIsPyConAPAC')"
                     :is-bulleted="isBulleted"
+                    class="intro-h2"
                 ></core-h2>
                 <p class="info-section-description">
                     {{ $t('whatIsPyConAPACContent') }}
@@ -14,6 +15,7 @@
                 <core-h2
                     :title="$t('pyConWillBeHeldOnline')"
                     :is-bulleted="isBulleted"
+                    class="intro-h2"
                 ></core-h2>
                 <p class="info-section-description">
                     {{ $t('pyConWillBeHeldOnlineContent') }}
@@ -21,7 +23,12 @@
             </div>
         </div>
 
-        <core-h2 :title="$t('pyconIntro')" :is-bulleted="isBulleted"> </core-h2>
+        <core-h2
+            :title="$t('pyconIntro')"
+            :is-bulleted="isBulleted"
+            class="intro-h2 intro-milestones-title"
+        >
+        </core-h2>
         <div class="intro-milestones">
             <intro-milestone
                 v-for="(item, index) in $t('milestone')"
@@ -81,5 +88,13 @@ export default {
 .info-section-description {
     @apply pl-0 md:pl-14 my-0 mx-auto;
     @apply text-justify;
+}
+
+.intro-h2 {
+    @apply mx-auto justify-center md:justify-start;
+}
+
+.intro-milestones-title {
+    @apply mb-14 md:mb-7;
 }
 </style>

@@ -35,8 +35,6 @@ export default {
 .milestone__unit {
     @apply text-2xl;
     @media (max-width: 833px) {
-        position: relative;
-        bottom: -30px;
         font-size: 1.2rem;
     }
 }
@@ -60,7 +58,7 @@ export default {
 .milestone__unit {
     @apply mb-2;
     @media (max-width: 833px) {
-        top: -8px;
+        @apply mb-12;
     }
 }
 </style>
