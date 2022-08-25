@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="pt-8 px-8 md:px-57 lg:px-56">
+    <i18n-page-wrapper class="pt-8 px-8 md:px-56">
         <div>
             <div class="section">
                 <core-h1 :title="$t('tutorialsHeader')"></core-h1>

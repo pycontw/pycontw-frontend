@@ -46,15 +46,18 @@ export default genI18nMessages({
         roleList: [
             {
                 name: '2022-attendee',
-                description: 'Target: PyCon APAC 2022 attendees',
+                description:
+                    'Target: Attendee that who is neither staff nor speaker.',
             },
             {
                 name: '2022-staff',
-                description: 'Target: PyCon APAC 2022 staff',
+                description: 'Target: PyCon APAC 2022 Staff',
             },
             {
                 name: '2022-speaker',
-                description: 'Target: PyCon APAC 2022 speakers',
+                description:
+                    'Target: PyCon APAC 2022 Keynote, Talk, Tutorial speaker. ' +
+                    'Lightning Talk speaker will not have this role.',
             },
         ],
         channelListHeader: 'PyCon APAC 2022 Channels list',
@@ -66,8 +69,8 @@ export default genI18nMessages({
                     {
                         tag: 'registration-desk',
                         description:
-                            'The channel for registration. Registration bot will be here to guide attendees ' +
-                            'through their registrations.{br}' +
+                            'The channel for registration. Registration bot will be here to ' +
+                            'guide attendees through their registrations. {br}' +
                             'All new attendees can see this channel, and will be gone once the attendee ' +
                             'has successfully registered him/herself.',
                     },
@@ -90,12 +93,14 @@ export default genI18nMessages({
                     {
                         tag: 'open-space',
                         description:
-                            'The information about Open Space will be announced here.',
+                            'Open Space related information. You could share any links, ' +
+                            'photos, videos, they will be kept here even after the conference days.',
                     },
                     {
                         tag: 'booth-game',
                         description:
-                            'The information about Booth Game will be announced here.',
+                            'Booth game related information. Any information and task notification can be done here. ' +
+                            'Go on a pilgrimage with Cat general and take your tasks on the online venue!',
                     },
                 ],
             },
@@ -104,16 +109,21 @@ export default genI18nMessages({
                 channels: [
                     {
                         tag: 'program-keynote',
-                        description: 'A discussion channel for Keynotes.',
+                        description:
+                            'Keynote related information, including collabwriting, slido for Q&A, ' +
+                            'the links of YouTube live broadcasting. Any discussion about Keynote speech can be done here.',
                     },
                     {
                         tag: 'program-talk',
-                        description: 'A discussion channel for all sessions.',
+                        description:
+                            'Talk related information, including collabwriting, slido for Q&A, ' +
+                            'the link to gather.town. Any discussion about Talk can be done here.',
                     },
                     {
                         tag: 'program-tutorial',
                         description:
-                            'A discussion channel for tutorial sessions.',
+                            'Tutorial related information, including collabwriting, slido for Q&A, ' +
+                            'the link to gather.town. Any discussion about Tutorial can be done here.',
                     },
                 ],
             },
@@ -194,7 +204,8 @@ export default genI18nMessages({
             },
             {
                 name: '2022-speaker',
-                description: '對象：PyCon APAC 2022 的講者',
+                description:
+                    '對象：PyCon APAC 2022 Keynote, Talk, Tutorial 講者。Lightning Talk 講者不會獲得此身份組',
             },
             {
                 name: '2022-staff',
