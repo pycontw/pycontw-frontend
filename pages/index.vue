@@ -182,8 +182,10 @@ export default {
 
 @media (max-width: 567px) {
     .page-home .page-homeLandingFocus::after {
-        background-position: -35vw center;
-        background-size: 150vw;
+        content: '';
+        background-image: url('~@/static/page-home-background-rwd.svg');
+        background-position: center top 10%;
+        background-size: contain;
         background-repeat: no-repeat;
     }
     .page-home__title {
