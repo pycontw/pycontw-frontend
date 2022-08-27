@@ -2,7 +2,7 @@
     <i18n-page-wrapper class="pt-8 px-8 md:px-56">
         <div>
             <div class="section">
-                <core-h1 :title="$t('tutorialsHeader')"></core-h1>
+                <core-h1 :title="$t('title')"></core-h1>
                 <p class="paragraphTitle">
                     {{ $t('registration.title') }}
                 </p>

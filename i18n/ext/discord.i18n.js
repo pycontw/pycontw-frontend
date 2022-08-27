@@ -5,7 +5,6 @@ export default genI18nMessages({
         title: 'PyCon APAC Discord Guideline',
         invalidAttendee:
             'The token within the link is invalid. Please contact staff for further help.',
-        tutorialsHeader: 'PyCon APAC Discord Guideline',
         registration: {
             title: '1. Register yourself',
             descriptions: [
@@ -177,7 +176,7 @@ export default genI18nMessages({
             },
         ],
         og: {
-            title: 'PyCon APAC Discord 指南',
+            title: 'PyCon APAC 2022 Discord 指南',
             description:
                 '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
         },
@@ -186,8 +185,6 @@ export default genI18nMessages({
         title: 'PyCon APAC Discord 指南',
         invalidAttendee:
             '連結中附帶的驗證碼錯誤。請聯繫工作人員取得更進一步的協助。',
-        tutorialsHeader: 'PyCon APAC Discord 指南',
-
         registration: {
             title: '1. 註冊',
             descriptions: [
@@ -342,7 +339,7 @@ export default genI18nMessages({
             },
         ],
         og: {
-            title: 'PyCon TW Discord 指南',
+            title: 'PyCon APAC 2022 Discord 指南',
             description:
                 '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
         },
