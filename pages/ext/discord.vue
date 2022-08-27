@@ -2,7 +2,7 @@
     <i18n-page-wrapper class="pt-8 px-8 md:px-56">
         <div>
             <div class="section">
-                <core-h1 :title="$t('tutorialsHeader')"></core-h1>
+                <core-h1 :title="$t('title')"></core-h1>
                 <p class="paragraphTitle">
                     {{ $t('registration.title') }}
                 </p>
@@ -158,10 +158,10 @@
                     </template>
                     <template #invitationLink>
                         <ext-link
-                            href="https://discord.gg/94hgCQv"
+                            href="https://discord.gg/dr5JmVFNtj"
                             highlight
                             underline
-                            >https://discord.gg/94hgCQv</ext-link
+                            >https://discord.gg/dr5JmVFNtj</ext-link
                         >
                     </template>
                     <template #img0>
@@ -213,7 +213,12 @@ export default {
                 require('@/static/img/ext/discord-2.png'),
             ],
             channelInfo: {
-                'registration-desk': { name: '⚠｜registration-desk' },
+                rules: {
+                    name: 'rules',
+                },
+                'registration-desk': {
+                    name: '⚠｜registration-desk',
+                },
                 announcements: {
                     name: '📢｜announcements',
                 },
