@@ -97,6 +97,15 @@
                             :src="keynote.slido"
                         ></iframe>
                     </tab>
+                    <tab
+                        v-if="!!keynote.hackmd_embed_link.length"
+                        :title="$t('terms.note')"
+                    >
+                        <iframe
+                            class="keynote__hackmd"
+                            :src="keynote.hackmd_embed_link"
+                        ></iframe>
+                    </tab>
                 </tabs>
             </article>
         </i18n-page-wrapper>
@@ -236,7 +245,8 @@ export default {
     @apply whitespace-pre-line pb-4;
 }
 
-.keynote__slido {
+.keynote__slido,
+.keynote__hackmd {
     @apply w-full;
     height: 800px;
 }
