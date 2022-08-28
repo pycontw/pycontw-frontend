@@ -23,11 +23,6 @@
                     :path="`contents.${i}.description.${ii}`"
                     tag="p"
                 >
-                    <template #contact>
-                        <ext-link href="mailto:organizers@python.tw" highlight
-                            >{{ $t('terms.contact') }}
-                        </ext-link>
-                    </template>
                     <template #MeetingManagement>
                         <b>{{ $t('terms.MeetingManagement') }}</b>
                     </template>
@@ -52,34 +47,52 @@
                 <i18n
                     path="covidStatement.title"
                     tag="h2"
-                    class="paragraphTitle"
+                    class="covidTitle"
                 ></i18n>
                 <i18n path="covidStatement.description" tag="p">
                     <template #br><br /></template>
                 </i18n>
             </div>
             <div class="authorization">
-                <i18n
-                    path="authorization.title"
-                    tag="h2"
-                    class="paragraphTitle"
-                ></i18n>
-                <i18n
-                    path="authorization.description"
-                    tag="p"
-                    class="authorizationDescription"
-                >
-                    <template #br><br /></template>
-                </i18n>
-                <ext-link>
-                    <img path="authorization.label" />
-                </ext-link>
+                <div>
+                    <i18n
+                        path="authorization.title"
+                        tag="h2"
+                        class="paragraphTitle"
+                    >
+                    </i18n>
+                </div>
+                <div>
+                    <i18n
+                        path="authorization.description"
+                        tag="p"
+                        class="authorizationDescription"
+                    >
+                        <template #br><br /></template>
+                        <template #license>
+                            <ext-link
+                                href="https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW"
+                                highlight
+                                >{{ $t(`terms.license`) }}
+                            </ext-link>
+                        </template>
+                    </i18n>
+                </div>
+                <div>
+                    <img :src="authorizationIcon" class="authorizationLabel" />
+                </div>
                 <i18n path="authorization.content" tag="p">
                     <template #br><br /></template>
                 </i18n>
             </div>
-            <div class="question">
-                <i18n path="question" tag="p"></i18n>
+            <div>
+                <i18n path="question" tag="p" class="question">
+                    <template #contact>
+                        <ext-link href="mailto:organizers@python.tw" highlight
+                            >{{ $t(`terms.contact`) }}
+                        </ext-link>
+                    </template>
+                </i18n>
             </div>
         </i18n-page-wrapper>
     </div>
@@ -100,6 +113,11 @@ export default {
         CoreH1,
         ExtLink,
         Banner,
+    },
+    data() {
+        return {
+            authorizationIcon: require('~/static/img/footer/ccby-sa3_0.svg'),
+        }
     },
     head() {
         return {
@@ -130,13 +148,30 @@ export default {
 .paragraphTitle {
     @apply font-serif font-bold text-pink-700;
 }
+.covidTitle {
+    @apply font-serif font-bold text-pink-700;
+    margin-top: 5%;
+}
 .covidStatement {
-    @apply border border-solid px-6;
+    @apply border-2 border-solid rounded-xl px-6;
+    @apply border-primary-300;
 }
 .authorization {
     @apply text-center;
 }
+.authorizationTitle {
+    @apply text-center;
+}
+.authorizationDescription {
+    @apply text-center;
+}
+.authorizationLabel {
+    margin: auto;
+}
+.authorizationContent {
+    @apply text-center;
+}
 .question {
-    @apply text-center text-sm;
+    @apply text-center text-xs;
 }
 </style>
