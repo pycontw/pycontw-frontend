@@ -156,9 +156,10 @@ export default {
                     tag: 'latebird',
                     titleI18NPath: 'ticketLateBird',
                     price: 'NT$ 3,600',
-                    image: require('~/static/img/registration/tickets/lateBird.svg'),
+                    image: require('~/static/img/registration/tickets/lateBird_disabled.svg'),
                     features: ['conference'],
-                    link: 'https://pycontw.kktix.cc/events/2022-individual',
+                    link: null,
+                    hasEnded: true,
                 },
                 {
                     tag: 'enterprise',
