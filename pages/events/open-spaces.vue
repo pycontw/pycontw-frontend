@@ -42,6 +42,10 @@
                 </template>
             </two-col-wrapper>
         </div>
+        <iframe
+            class="hackmd"
+            src="https://hackmd.io/@pycontw/rysEyBh5q"
+        ></iframe>
     </i18n-page-wrapper>
 </template>
 
@@ -117,5 +121,10 @@ export default {
 }
 .spacing {
     @apply py-2 lg:py-5;
+}
+
+.hackmd {
+    @apply w-full;
+    height: 800px;
 }
 </style>
