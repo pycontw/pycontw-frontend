@@ -140,7 +140,7 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarItem {
-    @apply font-bold;
+    @apply font-bold whitespace-nowrap;
 }
 
 .core-navBarItem:hover {
