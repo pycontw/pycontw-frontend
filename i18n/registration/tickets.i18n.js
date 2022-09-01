@@ -3,6 +3,8 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Registration Is Now Open!',
+        titlePart1: 'Registration Is Now Open!',
+        titlePart2: ' ',
         pageAbstract:
             'Welcome on board the PyCon APAC 2022 Challenger for discovering the Python Universe. {br}' +
             'More with multiple ticket types to choose from. Engage with experts and learn from peers. {br}' +
@@ -68,6 +70,8 @@ export default genI18nMessages({
     },
     'zh-hant': {
         title: '探索無疆界宇宙，福爾摩沙號準備啟程。',
+        titlePart1: '探索無疆界宇宙，',
+        titlePart2: '福爾摩沙號準備啟程。',
         pageAbstract:
             '多樣票價供您選擇，{conditionalBr}人人都可以找到適合自己的方案。{br}' +
             '多元化學習與多視角觀察技術應用，{conditionalBr}深入淺出引你進入 Python 學習殿堂。{br}' +

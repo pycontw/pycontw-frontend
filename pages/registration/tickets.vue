@@ -2,7 +2,21 @@
     <div>
         <banner>
             <div class="flex flex-col mt-8">
-                <core-h1 :title="$t('title')" class="mx-4"></core-h1>
+                <core-h1
+                    v-if="!shouldBreak"
+                    :title="$t('title')"
+                    class="mx-4"
+                ></core-h1>
+                <core-h1
+                    v-if="shouldBreak"
+                    :title="$t('titlePart1')"
+                    class="mx-4"
+                ></core-h1>
+                <core-h1
+                    v-if="$t('titlePart2') && shouldBreak"
+                    :title="$t('titlePart2')"
+                    class="mx-4"
+                ></core-h1>
             </div>
             <div class="flex flex-col md:grid-cols-2">
                 <i18n path="pageAbstract" tag="p" class="md:text-align-center">
