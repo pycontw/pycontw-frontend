@@ -53,21 +53,6 @@ export default {
     },
     data() {
         return {
-            eventType: '',
-            data: {
-                title: '',
-                detailed_description: '',
-                language: 'ENEN',
-                python_level: 'NOVICE',
-                category: 'WEB',
-                eventTimeString: '',
-            },
-            locationMapping: {
-                '4-r0': 'R0',
-                '5-r1': 'R1',
-                '6-r2': 'R2',
-                '1-r3': 'R3',
-            },
             swiperOption: {
                 slidesPerView: 1,
                 spaceBetween: 10,
