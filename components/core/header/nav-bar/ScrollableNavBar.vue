@@ -129,9 +129,9 @@ export default {
         opacity: 0.5;
     }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1480px) {
     .core-scrollableNavBar__slot {
-        width: 1440px;
+        width: 1480px;
     }
     .core-scrollableNavBar {
         @apply relative;

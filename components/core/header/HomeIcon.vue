@@ -1,7 +1,7 @@
 <template>
     <locale-link
         to="/"
-        class="core-homeIcon md:px-12 py-2 flex justify-center items-center"
+        class="core-homeIcon md:px-8 py-2 flex justify-center items-center"
         customized
     >
         <img
