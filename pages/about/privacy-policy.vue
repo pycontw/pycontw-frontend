@@ -1,5 +1,5 @@
 <template>
-    <div class="py-10 md:pb-24 lg:pb-24">
+    <div>
         <banner>
             <core-h1 :title="`2022 ${$t('title')}`"></core-h1>
             <i18n path="pageAbstract" tag="p" class="pageAbstract">
@@ -7,7 +7,7 @@
             </i18n>
         </banner>
 
-        <i18n-page-wrapper>
+        <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
             <div
                 v-for="(contents, i) in $t('contents')"
                 :key="`privacy_policy_contents_${i}`"
@@ -18,9 +18,9 @@
                     class="paragraphTitle"
                 ></i18n>
                 <i18n
-                    v-for="(content, ii) in contents.description"
-                    :key="`privacy_policy_description_${ii}`"
-                    :path="`contents.${i}.description.${ii}`"
+                    v-for="(content, j) in contents.description"
+                    :key="`privacy_policy_description_${j}`"
+                    :path="`contents.${i}.description.${j}`"
                     tag="p"
                 >
                     <template #MeetingManagement>
@@ -28,18 +28,18 @@
                     </template>
                 </i18n>
 
-                <ol class="m-2 list-decimal">
+                <ol class="pl-8 list-decimal">
                     <i18n
-                        v-for="(content, ii) in contents.items"
-                        :key="`privacy_policy_items_${ii}`"
-                        :path="`contents.${i}.items.${ii}`"
+                        v-for="(content, j) in contents.items"
+                        :key="`privacy_policy_items_${j}`"
+                        :path="`contents.${i}.items.${j}`"
                         tag="li"
                     ></i18n>
                 </ol>
                 <i18n
-                    v-for="(content, ii) in contents.summary"
-                    :key="`privacy_policy_summary_${ii}`"
-                    :path="`contents.${i}.summary.${ii}`"
+                    v-for="(content, j) in contents.summary"
+                    :key="`privacy_policy_summary_${j}`"
+                    :path="`contents.${i}.summary.${j}`"
                     tag="p"
                 />
             </div>
@@ -85,7 +85,7 @@
                     <template #br><br /></template>
                 </i18n>
             </div>
-            <div>
+            <div class="pt-8">
                 <i18n path="question" tag="p" class="question">
                     <template #contact>
                         <ext-link href="mailto:organizers@python.tw" highlight
@@ -144,7 +144,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .paragraphTitle {
     @apply font-serif font-bold text-pink-700;
 }
@@ -153,7 +153,7 @@ export default {
     margin-top: 5%;
 }
 .covidStatement {
-    @apply border-2 border-solid rounded-xl px-6;
+    @apply border-2 border-solid rounded-xl px-6  mt-24;
     @apply border-primary-300;
 }
 .authorization {
