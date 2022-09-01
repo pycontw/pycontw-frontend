@@ -13,9 +13,6 @@
         "test": "jest",
         "json-server": "./node_modules/.bin/json-server --watch db.json --routes routes.json --port 9876 --middlewares json-server-middlewares.js"
     },
-    "optionalDependencies": {
-        "fsevents": "2.1.2"
-    },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
         "@fortawesome/free-regular-svg-icons": "^5.15.4",
