@@ -44,6 +44,7 @@
 
 <script>
 export default {
+    i18n,
     name: 'RelatedCardCollection',
     data() {
         return {

@@ -144,20 +144,9 @@
             </tab>
         </tabs>
 
-        <related-card-collection>
-            <speech-card
-                v-for="speech in fetchRelatedSpeeches()"
-                :id="speech.id"
-                :key="`speech_${speech.id}`"
-                :title="speech.title"
-                :category="speech.category"
-                :speakers="speech.speakers"
-                :lang="speech.language"
-                :level="speech.python_level"
-                :to="`/conference/${speech.event_type}/${speech.id}/`"
-            >
-            </speech-card>
-        </related-card-collection>
+        <related-card-collection2
+            :related="fetchRelatedSpeeches()"
+        ></related-card-collection2>
     </i18n-page-wrapper>
 </template>
 
@@ -176,8 +165,8 @@ import Youtube from '@/components/core/embed/Youtube.vue'
 import FacebookIcon from '@/components/core/icons/FacebookIcon'
 import GithubIcon from '@/components/core/icons/GithubIcon'
 import TwitterIcon from '@/components/core/icons/TwitterIcon'
-import RelatedCardCollection from '@/components/events/RelatedCardCollection'
-import SpeechCard from '@/components/events/SpeechCard'
+// import RelatedCardCollection from '@/components/events/RelatedCardCollection'
+import RelatedCardCollection2 from '@/components/events/RelatedCardCollection2'
 
 export default {
     i18n,
@@ -193,8 +182,8 @@ export default {
         TwitterIcon,
         Youtube,
         MarkdownRenderer,
-        RelatedCardCollection,
-        SpeechCard,
+        // RelatedCardCollection,
+        RelatedCardCollection2,
     },
     data() {
         return {
