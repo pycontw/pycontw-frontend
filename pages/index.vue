@@ -45,8 +45,8 @@
                     </text-button>
                 </div>
                 <div class="text-button-wrapper">
-                    <text-button to="/registration/tickets">{{
-                        $t('getTicket')
+                    <text-button to="/conference/schedule">{{
+                        $t('checkEvents')
                     }}</text-button>
                 </div>
             </div>
