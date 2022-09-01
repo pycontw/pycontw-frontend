@@ -99,8 +99,9 @@ export default {
     @apply -rotate-45 w-14 relative -top-4;
 }
 .related__text {
-    @apply font-serif font-black text-xl h-8 text-transparent bg-clip-text;
+    @apply font-serif font-black text-xl h-8 text-transparent;
     background: linear-gradient(120deg, #9e67c3, #6a67d6, #93cac6);
+    background-clip: text;
 }
 .related__card {
     @apply relative top-16 pr-5 pl-4 pb-4;
