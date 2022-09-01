@@ -97,7 +97,7 @@ export default {
 
 <style lang="postcss" scoped>
 .options-menu {
-    @apply inline-flex w-full h-full justify-center items-center bg-transparent;
+    @apply inline-flex w-full h-full justify-center items-center bg-transparent whitespace-nowrap;
     z-index: 100;
 }
 .core-menu-fade-enter-active {
