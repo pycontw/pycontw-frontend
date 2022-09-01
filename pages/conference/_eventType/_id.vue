@@ -82,52 +82,53 @@
             </tab>
             <tab :title="$t('terms.else')">
                 <div class="speech__info">
-                    <div class="speech__info__title">
-                        <p class="speech__tabParagraphTitle">
-                            {{ $t('terms.location') }}
-                        </p>
-                        <p class="speech__tabParagraphTitle">
-                            {{ $t('terms.date') }}
-                        </p>
-                        <p class="speech__tabParagraphTitle">
-                            {{ $t('terms.language') }}
-                        </p>
-                        <p class="speech__tabParagraphTitle">
-                            {{ $t('terms.level') }}
-                        </p>
-                        <p class="speech__tabParagraphTitle">
-                            {{ $t('terms.category') }}
-                        </p>
-                    </div>
-                    <div class="speech__info__text">
-                        <p
-                            v-if="isValidLocation(data.location)"
-                            class="speech__tabParagraph"
-                        >
-                            {{ locationMapping[data.location] }}
-                        </p>
-                        <p v-else class="speech__tabParagraph">
-                            {{ $t(`terms.TBA`) }}
-                        </p>
-                        <p
-                            v-if="data.eventTimeString"
-                            class="speech__tabParagraph"
-                        >
-                            {{ data.eventTimeString }}
-                        </p>
-                        <p v-else class="speech__tabParagraph">
-                            {{ $t(`terms.TBA`) }}
-                        </p>
-                        <p class="speech__tabParagraph">
-                            {{ $t(`languages.${data.language}`) }}
-                        </p>
-                        <p class="speech__tabParagraph">
-                            {{ $t(`levels.${data.python_level}`) }}
-                        </p>
-                        <p class="speech__tabParagraph">
-                            {{ $t(`categories.${data.category}`) }}
-                        </p>
-                    </div>
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.location') }}
+                    </p>
+                    <p
+                        v-if="isValidLocation(data.location)"
+                        class="speech__tabParagraph"
+                    >
+                        {{ locationMapping[data.location] }}
+                    </p>
+                    <p v-else class="speech__tabParagraph">
+                        {{ $t(`terms.TBA`) }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.date') }}
+                    </p>
+                    <p v-if="data.eventTimeString" class="speech__tabParagraph">
+                        {{ data.eventTimeString }}
+                    </p>
+                    <p v-else class="speech__tabParagraph">
+                        {{ $t(`terms.TBA`) }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.language') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`languages.${data.language}`) }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.level') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`levels.${data.python_level}`) }}
+                    </p>
+                </div>
+                <div class="speech__info">
+                    <p class="speech__tabParagraphTitle">
+                        {{ $t('terms.category') }}
+                    </p>
+                    <p class="speech__tabParagraph">
+                        {{ $t(`categories.${data.category}`) }}
+                    </p>
                 </div>
             </tab>
             <tab v-if="!!data.slido_embed_link" title="Slido">
@@ -341,10 +342,10 @@ export default {
     @apply mb-6 break-words;
 }
 .speech__tabParagraphTitle {
-    @apply font-serif font-bold mb-2 mr-8 text-pink-700;
+    @apply font-serif font-bold my-auto mr-8 text-pink-700 whitespace-nowrap;
 }
 .speech__tabParagraph {
-    @apply font-sans mb-2;
+    @apply font-sans my-auto;
 }
 .speech__info {
     @apply flex mr-2 mb-2;
