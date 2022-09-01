@@ -4,5 +4,6 @@
     "/api/events/keynotes/": "/keynotes",
     "/api/events/speeches/\\?event_types=:event_type": "/speeches/?event_type=:event_type",
     "/api/events/speeches/:event_type/:id": "/speeches/?event_type=:event_type&id=:id&singular=1",
-    "/api/events/schedule": "/schedules"
+    "/api/events/schedule": "/schedules",
+    "/api/events/speeches/category/:category": "/speeches/?category=:category"
 }

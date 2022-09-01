@@ -8,6 +8,7 @@ export const state = () => ({
     youtubeInfo: [],
     speechesData: [],
     speechData: {},
+    relatedData: [],
 })
 
 export const mutations = {
@@ -18,6 +19,7 @@ export const mutations = {
     setYoutubeInfo: set('youtubeInfo'),
     setSpeechesData: set('speechesData'),
     setSpeechData: set('speechData'),
+    setRelatedData: set('relatedData'),
 }
 
 export const actions = {
@@ -61,5 +63,10 @@ export const actions = {
         const endpoint = `/api/events/speeches/${eventType}/${eventId}/`
         const speechData = await this.$http.$get(endpoint)
         commit('setSpeechData', speechData)
+    },
+    async $getRelatedData({ commit }, category) {
+        const endpoint = `/api/events/speeches/category/${category}`
+        const relatedList = await this.$http.$get(endpoint)
+        commit('setRelatedData', relatedList)
     },
 }

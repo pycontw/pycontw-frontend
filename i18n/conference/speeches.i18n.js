@@ -29,6 +29,9 @@ export default genI18nMessages({
                 'due to certain circumstances, the schedule may change slightly before the event. ' +
                 'Please check this page regularly for the updates.',
         },
+        related: {
+            title: 'Related Speeches',
+        },
         languages: {
             ENEN: 'English talk',
             ZHEN: 'Chinese talk w. English slides',
@@ -103,6 +106,9 @@ export default genI18nMessages({
                 '時長 90 分鐘的專業課程時間，由講者帶著現場會眾一同實作。' +
                 '我們建議您在大會前先行觀看影片，如此一來您將能在大會當天的' +
                 '專業課程中更快上手。議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
+        },
+        related: {
+            title: '相關的演講',
         },
         languages: {
             ENEN: '英文演講',

@@ -26,7 +26,9 @@
         "nuxt-facebook-pixel-module": "^1.5.0",
         "nuxt-fontawesome": "^0.4.0",
         "nuxt-i18n": "^6.18.0",
+        "swiper": "^6.7.5",
         "uuid": "^8.3.2",
+        "vue-awesome-swiper": "^4.1.1",
         "vue-dompurify-html": "^2.3.0"
     },
     "devDependencies": {
