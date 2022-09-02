@@ -343,6 +343,7 @@ export default {
 }
 .speech__tabParagraphTitle {
     @apply font-serif font-bold my-auto mr-8 text-pink-700 whitespace-nowrap;
+    min-width: 85px;
 }
 .speech__tabParagraph {
     @apply font-sans my-auto;
