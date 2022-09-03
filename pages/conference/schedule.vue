@@ -1,59 +1,46 @@
 <template>
-    <i18n-page-wrapper class="pageWrapper" :use-bg-decoration="false" custom-x>
+    <div class="pt-20">
         <core-h1 :title="$t('Schedule')"></core-h1>
-        <schedule>
-            <schedule-day-tabs v-model="selectedDayIndex">
-                <schedule-day-tab
-                    v-for="(day, i) in days"
-                    :key="$makeKey(i, 'schedule_day_tab')"
-                    :date-index="day.date"
-                    :index="i"
-                >
-                    {{ day.label }}
-                </schedule-day-tab>
-            </schedule-day-tabs>
-            <div
-                class="
-                    px-10
-                    relative
-                    w-screen
-                    h-screen
-                    overflow-scroll
-                    mb-24
-                    hidden
-                    lg:block
-                "
+        <schedule-day-tabs v-model="selectedDayIndex">
+            <schedule-day-tab
+                v-for="(day, i) in days"
+                :key="$makeKey(i, 'schedule_day_tab')"
+                :date-index="day.date"
+                :index="i"
             >
-                <schedule-rooms :date-index="selectedDayIndex" class="lg:grid">
-                    <schedule-block></schedule-block>
-                    <schedule-room
-                        v-for="(room, i) in rooms"
-                        :key="$makeKey(i, 'schedule_room')"
-                        :value="room"
-                    ></schedule-room>
-                </schedule-rooms>
-                <schedule-table :date-index="selectedDayIndex" class="lg:grid">
-                    <schedule-tick
-                        v-for="(tick, i) in table.ticks"
-                        :key="$makeKey(i, 'schedule_tick')"
-                        :style="tick.style"
-                    >
-                        {{ tick.label }}
-                    </schedule-tick>
-                    <schedule-event
-                        v-for="event in table.events"
-                        :key="
-                            $makeKey(
-                                event.event_id,
-                                'schedule_table_event',
-                                event.event_type,
-                            )
-                        "
-                        :value="event"
-                        :timeline-begin="table.timeline.begin"
-                    ></schedule-event>
-                </schedule-table>
-            </div>
+                {{ day.label }}
+            </schedule-day-tab>
+        </schedule-day-tabs>
+        <schedule>
+            <schedule-rooms :date-index="selectedDayIndex">
+                <schedule-block></schedule-block>
+                <schedule-room
+                    v-for="(room, i) in rooms"
+                    :key="$makeKey(i, 'schedule_room')"
+                    :value="room"
+                ></schedule-room>
+            </schedule-rooms>
+            <schedule-table :date-index="selectedDayIndex" class="lg:grid">
+                <schedule-tick
+                    v-for="(tick, i) in table.ticks"
+                    :key="$makeKey(i, 'schedule_tick')"
+                    :style="tick.style"
+                >
+                    {{ tick.label }}
+                </schedule-tick>
+                <schedule-event
+                    v-for="event in table.events"
+                    :key="
+                        $makeKey(
+                            event.event_id,
+                            'schedule_table_event',
+                            event.event_type,
+                        )
+                    "
+                    :value="event"
+                    :timeline-begin="table.timeline.begin"
+                ></schedule-event>
+            </schedule-table>
             <schedule-list class="lg:hidden">
                 <schedule-list-group
                     v-for="(group, i) in list.groups"
@@ -76,7 +63,7 @@
                 </schedule-list-group>
             </schedule-list>
         </schedule>
-    </i18n-page-wrapper>
+    </div>
 </template>
 
 <script>
@@ -84,7 +71,6 @@ import { mapState } from 'vuex'
 
 import i18n from '@/i18n/conference/schedule.i18n'
 
-import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Schedule from '@/components/schedule/Schedule'
 import ScheduleBlock from '@/components/schedule/ScheduleBlock'
@@ -103,7 +89,6 @@ export default {
     name: 'PageConferenceSchedule',
     components: {
         CoreH1,
-        I18nPageWrapper,
         Schedule,
         ScheduleBlock,
         ScheduleDayTab,

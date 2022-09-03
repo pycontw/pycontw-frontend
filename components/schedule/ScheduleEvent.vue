@@ -11,7 +11,7 @@
         <div v-if="$slots.prepend" class="scheduleEvent__prepend flex">
             <slot name="prepend"></slot>
         </div>
-        <div class="scheduleEvent__context sticky">
+        <div class="scheduleEvent__context">
             <div class="scheduleEvent__title">
                 {{ getValueByLocale(value.title) }}
             </div>
@@ -163,7 +163,8 @@ export default {
 
 <style lang="postcss" scoped>
 .scheduleEvent__context {
-    top: 75px;
+    @apply sticky top-28;
+    /* top: 75px; */
 }
 
 .scheduleEvent__title {
