@@ -54,7 +54,7 @@
             ></nav-bar-item-accordion>
             <nav-bar-item-accordion
                 :label="$t('events')"
-                :items="conferenceItems"
+                :items="eventsItems"
                 :expanding="expandingItem === 'events'"
                 @click.native="toggleAccordion('events')"
             ></nav-bar-item-accordion>
