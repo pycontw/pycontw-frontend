@@ -11,6 +11,15 @@
             <div v-if="communityLogoUrl">
                 <img :src="communityLogoUrl" class="community__logo" />
             </div>
+            <div class="array__photo__box">
+                <div
+                    v-for="photo in photoArr"
+                    :key="photo"
+                    class="array__photo"
+                >
+                    <img :src="photo" />
+                </div>
+            </div>
             <div class="lightBox__header">
                 <h1 class="lightBox__title">
                     {{ name }}
@@ -18,6 +27,11 @@
             </div>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ intro }}</p>
+                <div v-for="item in description" :key="item.id">
+                    <p v-for="line in item" :key="line.id" class="text-sm">
+                        {{ line }}
+                    </p>
+                </div>
             </div>
             <div v-if="websiteUrl" class="lightBox__buttons">
                 <text-button
@@ -48,6 +62,8 @@ export default {
         sponsorLogoUrl: { type: String, default: '' },
         communityLogoUrl: { type: String, default: '' },
         websiteUrl: { type: String, default: '' },
+        photoArr: { type: Array, default: () => [] },
+        description: { type: Array, default: () => [] },
     },
     data() {
         return {
@@ -95,9 +111,20 @@ export default {
     @apply w-5 h-5;
 }
 
-.community__logo {
+.community__logo,
+.array__photo > img {
     @apply object-cover rounded-lg w-20 lg:w-32 h-20 lg:h-32 my-0 mx-auto;
 }
+.array__photo__box {
+    @apply relative flex my-0 mx-auto;
+}
+.array__photo {
+    transform: translateX(-20px);
+}
+.array__photo:first-of-type {
+    transform: translateX(0px);
+}
+
 .lightBox__img {
     @apply w-16 h-16 md:w-24 md:h-24;
     @apply relative flex flex-col justify-center items-center rounded-2xl my-0 mx-auto;

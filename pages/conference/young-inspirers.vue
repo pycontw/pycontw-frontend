@@ -71,11 +71,7 @@
                                 </p>
                                 <div
                                     class="speechBox__speaker"
-                                    @click="
-                                        popupShow(
-                                            `${speechDayIdx}-${speechIdx}`,
-                                        )
-                                    "
+                                    @click="showModal(speech)"
                                 >
                                     <span
                                         v-for="(speaker, i) in tagToSpeaker[
@@ -115,80 +111,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            ref="popupCover"
-                            class="speechModal__wrapper"
-                            :class="{
-                                'speechModal__wrapper speechModal__wrapper--show':
-                                    popupIndex ===
-                                    `${speechDayIdx}-${speechIdx}`,
-                            }"
-                        >
-                            <div
-                                class="speechModal__closingArea"
-                                @click="popupClose"
-                            ></div>
-                            <div class="speechModal">
-                                <button
-                                    ref="popupBtn"
-                                    class="speechModal__button"
-                                    @click="popupClose"
-                                >
-                                    ✕
-                                </button>
-                                <div class="flex flex-row">
-                                    <img
-                                        v-for="(speakerAvatar, i) in tagToPhoto[
-                                            speech.tag
-                                        ]"
-                                        :key="`speech_info_${speechIdx}_photo_${i}`"
-                                        :src="speakerAvatar"
-                                        :alt="tagToSpeaker[speech.tag][i]"
-                                        class="speechModal__img"
-                                    />
-                                </div>
-                                <div
-                                    class="speechModal__speaker"
-                                    @click="
-                                        popupShow(
-                                            `${speechDayIdx}-${speechIdx}`,
-                                        )
-                                    "
-                                >
-                                    <div class="flex justify-center">
-                                        <span
-                                            v-for="(
-                                                speaker, i
-                                            ) in speech.speaker"
-                                            :key="`speech_info_${speechDayIdx}_${speechIdx}_speaker_${i}`"
-                                            class="speechModal__speaker"
-                                        >
-                                            {{ speaker.name }}
-                                        </span>
-                                    </div>
-                                    <div
-                                        class="speechModal__speakerDescription"
-                                    >
-                                        <div
-                                            v-for="(
-                                                speaker, i
-                                            ) in speech.speaker"
-                                            :key="`speech_info_${speechDayIdx}_${speechIdx}_speaker_desc${i}`"
-                                        >
-                                            <p
-                                                v-for="(
-                                                    desc, desc_idx
-                                                ) in speaker.description"
-                                                :key="`speech_info_${speechDayIdx}_${speechIdx}_speaker_desc${desc_idx}`"
-                                            >
-                                                {{ desc }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <transition name="fade">
+                        <modal
+                            v-if="isOpened"
+                            v-model="isOpened"
+                            :photo-arr="getSpeakerPhoto(selectedItem)"
+                            :name="getSpeakerName(selectedItem)"
+                            :description="getSpeakerDescription(selectedItem)"
+                        />
+                    </transition>
                 </div>
             </div>
         </div>
@@ -200,6 +132,7 @@ import i18n from '@/i18n/conference/young-inspirers.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
+import Modal from '~/components/core/modal/Modal'
 
 export default {
     i18n,
@@ -208,9 +141,12 @@ export default {
         I18nPageWrapper,
         CoreH1,
         TextButton,
+        Modal,
     },
     data() {
         return {
+            isOpened: false,
+            selectedItem: {},
             tagToPhoto: {
                 speech1: [require('~/static/img/young-inspirers/speaker1.svg')],
                 speech2: [require('~/static/img/young-inspirers/speaker2.svg')],
@@ -263,6 +199,7 @@ export default {
                             title: 'Learning Python - A Journey',
                             speaker: [
                                 {
+                                    photo: require('~/static/img/young-inspirers/speaker1.svg'),
                                     name: 'Cheung Chun Lok Amos',
                                     description: [
                                         'I started my Python journey in Primary 4 when I joined Hour of Code Hong Kong.' +
@@ -302,6 +239,7 @@ export default {
                             title: 'My Quirky Adventures with Python & Tech Communities',
                             speaker: [
                                 {
+                                    photo: require('~/static/img/young-inspirers/speaker2.svg'),
                                     name: 'Carl John Viñas',
                                     description: [
                                         'Hi, I am Carl, the usual “stingy developer” (a developer who likes doing optimal solutions using only' +
@@ -338,6 +276,7 @@ export default {
                             title: '不是萬中選一，要如何練一身 Python',
                             speaker: [
                                 {
+                                    photo: require('~/static/img/young-inspirers/speaker3-1.svg'),
                                     name: '楊軒銘',
                                     description: [
                                         '楊軒銘，高中生做點事社團創辦人，致力於 Python 推廣，曾輔導超過 300 位孩童利用遊戲的方式學習 Python，' +
@@ -346,6 +285,7 @@ export default {
                                     ],
                                 },
                                 {
+                                    photo: require('~/static/img/young-inspirers/speaker3-2.svg'),
                                     name: '楊承霓',
                                     description: [
                                         '楊承霓，高一高二的暑假在五所國小舉辦過十一梯次的「玩遊戲學程式」夏令營，曾因此獲選第一屆桃園市青年行動家殊榮。' +
@@ -370,6 +310,7 @@ export default {
                             title: '如何用駭客思維提升自己',
                             speaker: [
                                 {
+                                    photo: require('~/static/img/young-inspirers/speaker4.svg'),
                                     name: '陳怡升',
                                     description: [
                                         '嗨，我是怡升！我的名字含義是「怡」然自得的提「升」自己，期許自己能帶著快樂的心持續成長向上。',
@@ -398,11 +339,30 @@ export default {
         }
     },
     methods: {
-        popupShow(index) {
-            this.popupIndex = index
+        showModal(item) {
+            this.isOpened = true
+            this.selectedItem = item
         },
-        popupClose() {
-            this.popupIndex = null
+        getSpeakerPhoto(speech) {
+            const photo = []
+            speech.speaker.forEach((element) => {
+                photo.push(element.photo)
+            })
+            return photo
+        },
+        getSpeakerName(speech) {
+            let name = ''
+            speech.speaker.forEach((element) => {
+                name += element.name + ' '
+            })
+            return name
+        },
+        getSpeakerDescription(speech) {
+            const description = []
+            speech.speaker.forEach((element) => {
+                description.push(element.description)
+            })
+            return description
         },
     },
     head() {
@@ -604,5 +564,14 @@ export default {
 .host__name {
     @apply font-serif text-white text-xs md:text-sm;
     @apply text-center p-1;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
