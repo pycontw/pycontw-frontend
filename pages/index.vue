@@ -86,10 +86,13 @@
             </div>
         </i18n-page-wrapper>
         <transition name="fade">
-            <sponsor-modal
+            <modal
                 v-if="isOpened"
                 v-model="isOpened"
-                :context="selectedSponsor"
+                :sponsor-logo-url="selectedSponsor.logo_url"
+                :name="getAttributeByLocale(selectedSponsor, 'name')"
+                :intro="getAttributeByLocale(selectedSponsor, 'intro')"
+                :website-url="selectedSponsor.website_url"
             />
         </transition>
     </div>
@@ -103,7 +106,7 @@ import TextButton from '~/components/core/buttons/TextButton'
 import { BulletinCardCollection } from '~/components/bulletins'
 import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
-import SponsorModal from '~/components/sponsors/SponsorModal'
+import Modal from '~/components/core/modal/Modal'
 import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
 import Intro from '~/components/intro/Intro'
 
@@ -115,7 +118,7 @@ export default {
         TextButton,
         BulletinCardCollection,
         SponsorCard,
-        SponsorModal,
+        Modal,
         SponsorCardCollection,
         I18nPageWrapper,
         Intro,
@@ -147,7 +150,6 @@ export default {
         showModal(sponsor) {
             this.isOpened = true
             this.selectedSponsor = sponsor
-            document.body.classList.add('modal-open')
         },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
