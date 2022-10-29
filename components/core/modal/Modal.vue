@@ -8,6 +8,9 @@
             <div v-if="sponsorLogoUrl" class="lightBox__img">
                 <img :src="sponsorLogoUrl" />
             </div>
+            <div v-if="communityLogoUrl">
+                <img :src="communityLogoUrl" class="community__logo" />
+            </div>
             <div class="lightBox__header">
                 <h1 class="lightBox__title">
                     {{ name }}
@@ -43,6 +46,7 @@ export default {
         name: { type: String, default: '' },
         intro: { type: String, default: '' },
         sponsorLogoUrl: { type: String, default: '' },
+        communityLogoUrl: { type: String, default: '' },
         websiteUrl: { type: String, default: '' },
     },
     data() {
@@ -91,6 +95,9 @@ export default {
     @apply w-5 h-5;
 }
 
+.community__logo {
+    @apply object-cover rounded-lg w-20 lg:w-32 h-20 lg:h-32 my-0 mx-auto;
+}
 .lightBox__img {
     @apply w-16 h-16 md:w-24 md:h-24;
     @apply relative flex flex-col justify-center items-center rounded-2xl my-0 mx-auto;
