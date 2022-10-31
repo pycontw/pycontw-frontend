@@ -36,9 +36,7 @@
                         <modal
                             v-if="isOpened"
                             v-model="isOpened"
-                            :community-logo-url="
-                                communityImgUrl[selectedItem.tag]
-                            "
+                            :img-urls="communityImgUrl[selectedItem.tag]"
                             :name="selectedItem.title"
                             :intro="selectedItem.description"
                             :website-url="communityLink[selectedItem.tag]"

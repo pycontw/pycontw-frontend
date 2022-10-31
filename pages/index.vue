@@ -89,7 +89,8 @@
             <modal
                 v-if="isOpened"
                 v-model="isOpened"
-                :sponsor-logo-url="selectedSponsor.logo_url"
+                :img-urls="selectedSponsor.logo_url"
+                :img-bg="true"
                 :name="getAttributeByLocale(selectedSponsor, 'name')"
                 :intro="getAttributeByLocale(selectedSponsor, 'intro')"
                 :website-url="selectedSponsor.website_url"

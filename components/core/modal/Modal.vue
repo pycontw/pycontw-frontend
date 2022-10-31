@@ -5,23 +5,14 @@
             <div class="lightBox__closeButtonContainer" @click="close">
                 <fa icon="times" class="lightBox__closeButton" />
             </div>
-            <div v-if="sponsorLogoUrl" class="lightBox__img">
-                <img :src="sponsorLogoUrl" alt="sponsorLogo" />
-            </div>
-            <div v-if="communityLogoUrl">
-                <img
-                    :src="communityLogoUrl"
-                    alt="communityLogo"
-                    class="community__logo"
-                />
-            </div>
-            <div class="array__photo__box">
+            <div class="lightBox__photo__box">
                 <div
-                    v-for="photo in photoArr"
-                    :key="photo"
-                    class="array__photo"
+                    v-for="ImgUrl in getImgUrlArr()"
+                    :key="ImgUrl"
+                    class="lightBox__photo"
+                    :class="{ img__bg: imgBg }"
                 >
-                    <img :src="photo" alt="young-inspirer photo" />
+                    <img :src="ImgUrl" alt="photo" />
                 </div>
             </div>
             <div class="lightBox__header">
@@ -61,12 +52,11 @@ export default {
     },
     props: {
         value: { type: Boolean, default: false },
+        imgUrls: { type: [Array, String], default: '' },
+        imgBg: { type: Boolean, default: false },
         name: { type: String, default: '' },
         intro: { type: String, default: '' },
-        sponsorLogoUrl: { type: String, default: '' },
-        communityLogoUrl: { type: String, default: '' },
         websiteUrl: { type: String, default: '' },
-        photoArr: { type: Array, default: () => [] },
         description: { type: Array, default: () => [] },
     },
     data() {
@@ -83,6 +73,15 @@ export default {
         close() {
             this.shouldShowModal = false
             this.$emit('input', false)
+        },
+        getImgUrlArr() {
+            let arr = []
+            if (Array.isArray(this.imgUrls) === true) {
+                arr = this.imgUrls
+            } else {
+                arr.push(this.imgUrls)
+            }
+            return arr
         },
     },
 }
@@ -115,28 +114,23 @@ export default {
     @apply w-5 h-5;
 }
 
-.community__logo,
-.array__photo > img {
-    @apply object-cover rounded-lg w-20 lg:w-32 h-20 lg:h-32 my-0 mx-auto;
-}
-.array__photo__box {
+.lightBox__photo__box {
     @apply relative flex my-0 mx-auto;
 }
-.array__photo {
-    transform: translateX(-20px);
-}
-.array__photo:first-of-type {
-    transform: translateX(0px);
-}
-
-.lightBox__img {
+.lightBox__photo {
     @apply w-16 h-16 md:w-24 md:h-24;
     @apply relative flex flex-col justify-center items-center rounded-2xl my-0 mx-auto;
-    background-color: #f7f6fe;
+    transform: translateX(-20px);
 }
-.lightBox__img > img {
+.lightBox__photo:first-of-type {
+    transform: translateX(0px);
+}
+.lightBox__photo > img {
     @apply absolute object-contain rounded-[inherit];
     width: calc(100% - 10px);
+}
+.img__bg {
+    background-color: #f7f6fe;
 }
 
 .lightBox__header {

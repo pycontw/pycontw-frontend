@@ -116,7 +116,7 @@
                         <modal
                             v-if="isOpened"
                             v-model="isOpened"
-                            :photo-arr="getSpeakerPhoto(selectedItem)"
+                            :img-urls="getSpeakerPhoto(selectedItem)"
                             :name="getSpeakerName(selectedItem)"
                             :description="getSpeakerDescription(selectedItem)"
                         />
