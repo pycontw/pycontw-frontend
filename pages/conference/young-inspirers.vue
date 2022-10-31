@@ -344,24 +344,20 @@ export default {
             this.selectedItem = item
         },
         getSpeakerPhoto(speech) {
-            const photo = []
-            speech.speakers.forEach((element) => {
-                photo.push(element.photo)
-            })
+            let photo = []
+            photo = speech.speakers.map((element) => element.photo)
             return photo
         },
         getSpeakerName(speech) {
             let name = ''
-            speech.speakers.forEach((element) => {
-                name += element.name + ' '
+            name = speech.speakers.reduce((accumulator, currentValue) => {
+                return accumulator.name + ' ' + currentValue.name
             })
             return name
         },
         getSpeakerDescription(speech) {
-            const description = []
-            speech.speakers.forEach((element) => {
-                description.push(element.description)
-            })
+            let description = []
+            description = speech.speakers.map((element) => element.description)
             return description
         },
     },
