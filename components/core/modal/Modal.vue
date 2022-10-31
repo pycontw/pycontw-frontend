@@ -6,10 +6,14 @@
                 <fa icon="times" class="lightBox__closeButton" />
             </div>
             <div v-if="sponsorLogoUrl" class="lightBox__img">
-                <img :src="sponsorLogoUrl" />
+                <img :src="sponsorLogoUrl" alt="sponsorLogo" />
             </div>
             <div v-if="communityLogoUrl">
-                <img :src="communityLogoUrl" class="community__logo" />
+                <img
+                    :src="communityLogoUrl"
+                    alt="communityLogo"
+                    class="community__logo"
+                />
             </div>
             <div class="array__photo__box">
                 <div
@@ -17,7 +21,7 @@
                     :key="photo"
                     class="array__photo"
                 >
-                    <img :src="photo" />
+                    <img :src="photo" alt="young-inspirer photo" />
                 </div>
             </div>
             <div class="lightBox__header">
