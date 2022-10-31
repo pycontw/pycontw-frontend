@@ -197,7 +197,7 @@ export default {
                             speechdate: 'July 23',
                             speechtime: '14:00-14:40 (GMT+8)',
                             title: 'Learning Python - A Journey',
-                            speaker: [
+                            speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker1.svg'),
                                     name: 'Cheung Chun Lok Amos',
@@ -237,7 +237,7 @@ export default {
                             speechdate: 'July 23',
                             speechtime: '15:00-15:40 (GMT+8)',
                             title: 'My Quirky Adventures with Python & Tech Communities',
-                            speaker: [
+                            speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker2.svg'),
                                     name: 'Carl John Viñas',
@@ -274,7 +274,7 @@ export default {
                             speechdate: 'July 30',
                             speechtime: '14:00-14:40 (GMT+8)',
                             title: '不是萬中選一，要如何練一身 Python',
-                            speaker: [
+                            speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker3-1.svg'),
                                     name: '楊軒銘',
@@ -308,7 +308,7 @@ export default {
                             speechdate: 'July 30',
                             speechtime: '15:00-15:40 (GMT+8)',
                             title: '如何用駭客思維提升自己',
-                            speaker: [
+                            speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker4.svg'),
                                     name: '陳怡升',
@@ -345,21 +345,21 @@ export default {
         },
         getSpeakerPhoto(speech) {
             const photo = []
-            speech.speaker.forEach((element) => {
+            speech.speakers.forEach((element) => {
                 photo.push(element.photo)
             })
             return photo
         },
         getSpeakerName(speech) {
             let name = ''
-            speech.speaker.forEach((element) => {
+            speech.speakers.forEach((element) => {
                 name += element.name + ' '
             })
             return name
         },
         getSpeakerDescription(speech) {
             const description = []
-            speech.speaker.forEach((element) => {
+            speech.speakers.forEach((element) => {
                 description.push(element.description)
             })
             return description
