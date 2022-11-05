@@ -127,22 +127,22 @@ export default {
         ExtLink,
         Youtube,
     },
-    data() {
+    async asyncData({ store, app, payload }) {
+        if (payload) return { keynotesData: payload }
+        await store.dispatch('$getKeynotesData')
+        const keynotesData = store.state.keynotesData.map((keynote) => ({
+            ...keynote,
+            id: app.$makeId(),
+        }))
+
         return {
-            keynotesData: [],
+            keynotesData,
         }
     },
     computed: {
         locale() {
             return { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }[this.$i18n.locale]
         },
-    },
-    async mounted() {
-        await this.$store.dispatch('$getKeynotesData')
-        this.keynotesData = this.$store.state.keynotesData.map((keynote) => ({
-            ...keynote,
-            id: this.$makeId(),
-        }))
     },
     methods: {
         getKeynoteId(keynote) {

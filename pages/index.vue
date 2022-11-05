@@ -125,6 +125,14 @@ export default {
         BulletinCardCollection,
         CoreH2,
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { sponsorsData: payload }
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
+        }
+    },
     data() {
         return {
             isOpened: false,
@@ -134,9 +142,6 @@ export default {
     fetchOnServer: false,
     computed: {
         ...mapState(['sponsorsData']),
-    },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {
