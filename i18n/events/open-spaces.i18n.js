@@ -30,10 +30,9 @@ export default genI18nMessages({
             time: {
                 title: 'Time',
                 description:
-                    'Between the morning keynote started and afternoon keynote started of day 1 (08:55 ~ 16:15) ' +
-                    'and from the morning keynote ended till Lightning Talk of day 2 (10:30 ~ 16:40).{br}' +
-                    'There can be up to 10 Open Spaces running in parallel. ' +
-                    'There are no other conferences on day 2 (14:30 ~ 15:20) so that you can enjoy the Open Spaces well.',
+                    'Main session will be held at day 2 15:45 ~ 16:35, and its okay to be held at anytime during the conference{br}' +
+                    'There can be up to 9 Open Spaces running in parallel. ' +
+                    'There are no other conferences on day 2 (15:45 ~ 16:35) so that you can enjoy the Open Spaces well.',
             },
             subjects: {
                 title: 'Topics',
@@ -93,15 +92,12 @@ export default genI18nMessages({
             location: {
                 title: '活動地點',
                 description:
-                    'Gather Town 的 Open Space 區域，總共十個開放空間同時舉行',
+                    'Gather Town 的 Open Space 區域，總共九個開放空間同時舉行',
             },
             time: {
                 title: '活動時間',
                 description:
-                    '第一天早上 Keynote 開始後到下午 Keynote 開始前（08:55 ~ 16:15）{br}' +
-                    '第二天早上 Keynote 結束後到 Ligntning Talk 開始前（10:30 ~ 16:40）{br}' +
-                    '總計有超過 14 小時的時間可以讓會眾們盡情享受開放空間中盈滿熱情的交流和討論。{br}' +
-                    '此外，Day 2 14:30 ~ 15:20 將有獨立時段 Open Space，該時段不會有其他議程，會眾可以盡情的享受開放空間的激烈討論。',
+                    '第二天 15:45 ~ 16:35 有獨立時段，鼓勵可優先 Host 於此時段，其他時段亦可發起，將與議程同時進行！{br}',
             },
             subjects: {
                 title: '活動主題',
