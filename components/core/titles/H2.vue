@@ -62,7 +62,7 @@ h2 {
     -webkit-text-fill-color: transparent;
 }
 .bulletin-color {
-    @apply text-pink-500;
+    @apply text-pink-700;
 }
 .bullet {
     @apply w-10 md:w-16;

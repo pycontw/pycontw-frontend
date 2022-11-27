@@ -208,7 +208,7 @@ export default {
 }
 
 .text-golden {
-    @apply text-pink-500;
+    @apply text-pink-700;
 }
 
 .bulletin-section {

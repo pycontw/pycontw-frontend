@@ -35,7 +35,7 @@ export default {
 
 .error h2,
 .error p {
-    @apply text-pink-500;
+    @apply text-pink-700;
     font-weight: 700;
     padding-top: 40px;
 }
