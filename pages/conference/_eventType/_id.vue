@@ -185,6 +185,19 @@ export default {
         Youtube,
         MarkdownRenderer,
     },
+    async asyncData({ store, params, payload }) {
+        if (payload && Object.keys(payload).length !== 0) {
+            return {
+                speechData: payload,
+            }
+        }
+        await store.dispatch('$getSpeechData', {
+            eventType: params.eventType,
+            eventId: params.id,
+        })
+        const speechData = store.state.speechData
+        return { speechData }
+    },
     data() {
         return {
             data: {
@@ -215,10 +228,6 @@ export default {
         ...mapState(['speechData']),
     },
     async created() {
-        await this.$store.dispatch('$getSpeechData', {
-            eventType: this.$route.params.eventType,
-            eventId: this.$route.params.id,
-        })
         await this.processData()
         this.$root.$emit('initTabs')
     },

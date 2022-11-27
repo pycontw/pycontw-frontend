@@ -97,6 +97,13 @@ export default {
         ScheduleEvent,
         ScheduleTick,
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { schedulesData: payload }
+
+        await store.dispatch('$getSchedulesData')
+        const schedulesData = store.state.schedulesData
+        return { schedulesData }
+    },
     data() {
         return {
             selectedDayIndex: 0,
@@ -123,8 +130,7 @@ export default {
             return this.lists[this.selectedDayIndex] || this.defaultList
         },
     },
-    async created() {
-        await this.$store.dispatch('$getSchedulesData')
+    created() {
         this.processData()
     },
     methods: {
