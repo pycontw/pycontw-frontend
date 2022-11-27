@@ -49,6 +49,6 @@ export default {
     @apply font-bold;
 }
 .core-localeSwitch:hover {
-    color: #c386ae;
+    @apply text-pink-700;
 }
 </style>
