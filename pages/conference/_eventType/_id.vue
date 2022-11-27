@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+    <i18n-page-wrapper class="py-20 px-4 sm:px-8 md:px-16 lg:px-32" custom-x>
         <core-h1 :title="data.title" center class="font-black"></core-h1>
         <div class="speech__speakers">
             <div
@@ -91,7 +91,9 @@
                     >
                         {{ locationMapping[data.location] }}
                     </p>
-                    <p v-else>{{ $t(`terms.TBA`) }}</p>
+                    <p v-else class="speech__tabParagraph">
+                        {{ $t(`terms.TBA`) }}
+                    </p>
                 </div>
                 <div class="speech__info">
                     <p class="speech__tabParagraphTitle">
@@ -100,7 +102,9 @@
                     <p v-if="data.eventTimeString" class="speech__tabParagraph">
                         {{ data.eventTimeString }}
                     </p>
-                    <p v-else>{{ $t(`terms.TBA`) }}</p>
+                    <p v-else class="speech__tabParagraph">
+                        {{ $t(`terms.TBA`) }}
+                    </p>
                 </div>
                 <div class="speech__info">
                     <p class="speech__tabParagraphTitle">
@@ -140,6 +144,10 @@
                 ></iframe>
             </tab>
         </tabs>
+
+        <related-card-collection
+            :related="fetchRelatedSpeeches()"
+        ></related-card-collection>
     </i18n-page-wrapper>
 </template>
 
@@ -156,6 +164,7 @@ import Youtube from '@/components/core/embed/Youtube.vue'
 import FacebookIcon from '@/components/core/icons/FacebookIcon'
 import GithubIcon from '@/components/core/icons/GithubIcon'
 import TwitterIcon from '@/components/core/icons/TwitterIcon'
+import RelatedCardCollection from '@/components/events/RelatedCardCollection'
 
 export default {
     i18n,
@@ -171,6 +180,7 @@ export default {
         TwitterIcon,
         Youtube,
         MarkdownRenderer,
+        RelatedCardCollection,
     },
     async asyncData({ store, params, payload }) {
         if (payload && Object.keys(payload).length !== 0) {
@@ -187,6 +197,7 @@ export default {
     },
     data() {
         return {
+            eventType: '',
             data: {
                 title: '',
                 detailed_description: '',
@@ -212,8 +223,15 @@ export default {
     async created() {
         await this.processData()
         this.$root.$emit('initTabs')
+        await this.$store.dispatch('$getRelatedData', this.data.category)
     },
     methods: {
+        fetchRelatedSpeeches() {
+            const speeches = this.$store.state.relatedData.filter(
+                (item) => item.id !== this.speechData.id,
+            )
+            return speeches
+        },
         processData() {
             const beginTimeStr = this.speechData.begin_time
             const endTimeStr = this.speechData.end_time
@@ -328,11 +346,11 @@ export default {
     @apply mb-6 break-words;
 }
 .speech__tabParagraphTitle {
-    @apply font-serif font-bold mb-2 mr-8 text-pink-700;
+    @apply font-serif font-bold my-auto mr-8 text-pink-700 whitespace-nowrap;
     min-width: 85px;
 }
 .speech__tabParagraph {
-    @apply font-sans mb-2;
+    @apply font-sans my-auto;
 }
 .speech__info {
     @apply flex mr-2 mb-2;

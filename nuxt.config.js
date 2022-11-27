@@ -124,6 +124,7 @@ export default {
         '~/plugins/http.js',
         '~/plugins/strings.js',
         '~/plugins/vue-dompurify.js',
+        '~/plugins/vue-awesome-swiper.js',
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)

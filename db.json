@@ -1900,6 +1900,267 @@
             "is_remote": false,
             "location": "6-r2",
             "event_type": "talk"
+        },
+        {
+            "id": 11,
+            "title": "2-Tutorial of building a bunch of good companies",
+            "category": "WEB",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge of markdown",
+            "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 12,
+            "title": "3-Tutorial of building a bunch of good companies",
+            "category": "WEB",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge of markdown",
+            "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 13,
+            "title": "4-Tutorial of building a bunch of good companies",
+            "category": "WEB",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge of markdown",
+            "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 14,
+            "title": "5-Tutorial of building a bunch of good companies",
+            "category": "WEB",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge of markdown",
+            "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 15,
+            "title": "6-Tutorial of building a bunch of good companies",
+            "category": "WEB",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge of markdown",
+            "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 17,
+            "title": "7-Tutorial of building a bunch of good companies",
+            "category": "WEB",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge of markdown",
+            "detailed_description": "All headings have same style\r\n\r\n# h1 Heading\r\n## h2 Heading\r\n### h3 Heading\r\n#### h4 Heading\r\n##### h5 Heading\r\n###### h6 Heading\r\n\r\n\r\nHorizontal Rules\r\n\r\n___\r\n\r\n\r\n**This is bold text**\r\n\r\n__This is bold text__\r\n\r\n*This is italic text*\r\n\r\n_This is italic text_\r\n\r\n~~Strikethrough~~\r\n\r\n\r\n> Blockquotes can also be nested...\r\n>> ...by using additional greater-than signs right next to each other...\r\n> > > ...or with spaces between arrows.\r\n\r\n\r\nUnordered\r\n\r\n+ Sub-lists are made by indenting 2 spaces:\r\n  - Marker character change forces new list start:\r\n    * Ac tristique libero volutpat at\r\n    + Facilisis in pretium nisl aliquet\r\n    - Nulla volutpat aliquam velit\r\n + Facilisis in pretium nisl aliquet\r\n\r\nOrdered\r\n\r\n1. Lorem ipsum dolor sit amet\r\n2. Consectetur adipiscing elit\r\n3. Integer molestie lorem at massa\r\n\r\n\r\n## Code\r\n\r\nInline `code`\r\n\r\nIndented code\r\n\r\n    // Some comments\r\n    line 1 of code\r\n    line 2 of code\r\n    line 3 of code\r\n\r\n\r\nBlock code \"fences\"\r\n\r\n```\r\nSample text here...\r\n```\r\n\r\n## Links\r\n\r\n[link text](https://google.com)\r\n\r\n[link with title](https://google.com \"title text!\")\r\n\r\nAutoconverted link https://google.com\r\n\r\n[referenced link][ref]\r\n\r\n[ref]: https://google.com",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 18,
+            "title": "2-Tutorial of building a bunch of good companies",
+            "category": "EMBED",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge",
+            "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 19,
+            "title": "2-Tutorial of building a bunch of good companies",
+            "category": "ML",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge",
+            "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
+        },
+        {
+            "id": 20,
+            "title": "3-Tutorial of building a bunch of good companies",
+            "category": "ML",
+            "language": "ENEN",
+            "python_level": "INTERMEDIATE",
+            "recording_policy": true,
+            "abstract": "Share my knowledge",
+            "detailed_description": "**Introduction of Tesla**\r\nIn this talk, I will briefly introduce Tesla",
+            "slide_link": "https://www.facebook.com/",
+            "slido_embed_link": "https://app.sli.do/event/vppisnh8",
+            "hackmd_embed_link": "https://hackmd.io/c/tutorials-tw/%2Fs%2Fquick-start-tw",
+            "youtube_id": "dQw4w9WgXcQ",
+            "speakers": [
+                {
+                    "thumbnail_url": "https://i.imgur.com/ARxWY48.gif",
+                    "name": "Elon Musk",
+                    "github_profile_url": "",
+                    "twitter_profile_url": "",
+                    "facebook_profile_url": "",
+                    "bio": "I'm a successful business man. Better than Mark."
+                }
+            ],
+            "begin_time": "2021-10-02T06:05:00Z",
+            "end_time": "2021-10-02T06:35:00Z",
+            "is_remote": false,
+            "location": "6-r2",
+            "event_type": "talk"
         }
     ]
 }

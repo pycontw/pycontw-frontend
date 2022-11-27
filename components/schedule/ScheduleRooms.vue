@@ -1,6 +1,6 @@
 <template>
     <div
-        class="scheduleRooms hidden sticky top-0"
+        class="scheduleRooms hidden sticky top-12 lg:grid"
         :class="{
             day1: dateIndex === 0,
             day2: dateIndex === 1,

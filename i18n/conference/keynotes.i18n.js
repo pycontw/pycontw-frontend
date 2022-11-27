@@ -12,6 +12,7 @@ export default genI18nMessages({
         terms: {
             bio: 'Bio',
             talk: 'Talk',
+            note: 'Note',
         },
     },
     'zh-hant': {
@@ -23,6 +24,7 @@ export default genI18nMessages({
         terms: {
             bio: '講者介紹',
             talk: '演講',
+            note: '共筆',
         },
     },
 })

@@ -260,7 +260,7 @@ export default {
                     { name: 'candy02058912', photo: 'cat-smile.png' },
                     { name: 'Shuhsi Lin', photo: 'reviewer/shuhsi.jpg' },
                     { name: '黃坤賢', photo: 'program/坤賢.jpeg' },
-                    { name: '郭學聰', photo: 'cat-smile.png' },
+                    { name: '郭學聰', photo: 'reviewer/郭學聰.png' },
                     { name: 'Maurice Ling', photo: 'cat-smile.png' },
                     { name: 'Stanley Huang', photo: 'cat-smile.png' },
                     { name: 'sosorry', photo: 'cat-smile.png' },

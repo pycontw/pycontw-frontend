@@ -8,7 +8,7 @@ export default genI18nMessages({
                 description:
                     'HackMD allows everyone to write knowledge. Write and share your knowledge in Markdown.',
                 linkTitle: 'Go',
-                linkHref: 'https://hackmd.io/@pycontw/2021',
+                linkHref: 'https://hackmd.io/@pycontw/2022',
                 icon: 'HackMD',
             },
             {
@@ -53,7 +53,7 @@ export default genI18nMessages({
                 description:
                     'HackMD 是能讓大家快速撰寫知識的管理平台，歡迎在 Markdown 中編寫並分享您的知識。',
                 linkTitle: '',
-                linkHref: 'https://hackmd.io/@pycontw/2021',
+                linkHref: 'https://hackmd.io/@pycontw/2022',
                 icon: 'HackMD',
             },
             {

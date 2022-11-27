@@ -65,12 +65,36 @@ export default {
     grid-column: room-4-r0-start / room-4-r0-end;
 }
 
+.scheduleTable .scheduleEvent.room-4-r0-1 {
+    grid-column: room-4-r0-1-start / room-4-r0-1-end;
+}
+
+.scheduleTable .scheduleEvent.room-4-r0-2 {
+    grid-column: room-4-r0-2-start / room-4-r0-2-end;
+}
+
 .scheduleTable .scheduleEvent.room-5-r1 {
     grid-column: room-5-r1-start / room-5-r1-end;
 }
 
+.scheduleTable .scheduleEvent.room-5-r1-1 {
+    grid-column: room-5-r1-1-start / room-5-r1-1-end;
+}
+
+.scheduleTable .scheduleEvent.room-5-r1-2 {
+    grid-column: room-5-r1-2-start / room-5-r1-2-end;
+}
+
 .scheduleTable .scheduleEvent.room-6-r2 {
     grid-column: room-6-r2-start / room-6-r2-end;
+}
+
+.scheduleTable .scheduleEvent.room-6-r2-1 {
+    grid-column: room-6-r2-1-start / room-6-r2-1-end;
+}
+
+.scheduleTable .scheduleEvent.room-6-r2-2 {
+    grid-column: room-6-r2-2-start / room-6-r2-2-end;
 }
 
 .scheduleTable .scheduleEvent.room-1-r3 {

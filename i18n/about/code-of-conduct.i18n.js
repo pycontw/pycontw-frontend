@@ -37,7 +37,7 @@ export default genI18nMessages({
             {
                 title: 'Appreciate each other',
                 descriptions: [
-                    'Each attendee is expected to act professionally when attending Pycon Taiwan. Users of Python ' +
+                    'Each attendee is expected to act professionally when attending PyCon Taiwan. Users of Python ' +
                         'are diverse in their professional roles, technical backgrounds, and application areas. They ' +
                         'contribute to the technology in many different ways, some amazingly unimaginable. Opinions or ' +
                         'actions that undervalue other members of the community are inappropriate and will not be tolerated.',
