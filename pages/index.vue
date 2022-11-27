@@ -44,20 +44,29 @@
                         {{ $t('callForProposals') }}
                     </text-button>
                 </div>
+                <div class="text-button-wrapper">
+                    <text-button to="/conference/schedule">{{
+                        $t('checkEvents')
+                    }}</text-button>
+                </div>
             </div>
         </div>
 
         <i18n-page-wrapper>
             <intro :is-bulleted="isBulleted"></intro>
-            <div class="text-button-wrapper">
-                <text-button to="/registration/tickets">{{
-                    $t('getTicket')
-                }}</text-button>
+            <div class="bulletin-section">
+                <core-h2
+                    :title="$t('bulletinList')"
+                    :is-bulleted="isBulleted"
+                    class="index-h2"
+                ></core-h2>
+                <bulletin-card-collection></bulletin-card-collection>
             </div>
             <div id="sponsor" class="sponsor-section">
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"
+                    class="index-h2"
                 ></core-h2>
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
@@ -91,6 +100,7 @@ import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
+import { BulletinCardCollection } from '~/components/bulletins'
 import CoreH2 from '~/components/core/titles/H2'
 import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
@@ -103,6 +113,7 @@ export default {
     components: {
         CoreH2,
         TextButton,
+        BulletinCardCollection,
         SponsorCard,
         SponsorModal,
         SponsorCardCollection,
@@ -171,9 +182,20 @@ export default {
 
 @media (max-width: 567px) {
     .page-home .page-homeLandingFocus::after {
-        background-position: -40vw center;
-        background-size: 200vw;
+        content: '';
+        background-image: url('~@/static/page-home-background-rwd.svg');
+        background-position: center top 10%;
+        background-size: contain;
         background-repeat: no-repeat;
+    }
+    .page-home__title {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
     }
 }
 
@@ -189,12 +211,21 @@ export default {
     @apply text-pink-500;
 }
 
+.bulletin-section {
+    @apply pt-12 lg:mx-auto lg:w-full;
+}
+
 .sponsor-section {
     @apply pt-12 lg:mx-auto lg:w-full;
 }
 
+.index-h2 {
+    @apply mx-auto justify-center md:justify-start;
+}
+
 .text-button-wrapper {
-    @apply flex justify-center mt-16 mb-28;
+    @apply mt-48 mb-12 md:mt-32 md:mb-28;
+    @apply w-full flex justify-center md:justify-start;
 }
 
 .fade-enter-active,

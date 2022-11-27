@@ -1,18 +1,18 @@
 <template>
-    <i18n-page-wrapper class="pageWrapper" :use-bg-decoration="false" custom-x>
+    <div class="pt-20 px-4">
         <core-h1 :title="$t('Schedule')"></core-h1>
+        <schedule-day-tabs v-model="selectedDayIndex">
+            <schedule-day-tab
+                v-for="(day, i) in days"
+                :key="$makeKey(i, 'schedule_day_tab')"
+                :date-index="day.date"
+                :index="i"
+            >
+                {{ day.label }}
+            </schedule-day-tab>
+        </schedule-day-tabs>
         <schedule>
-            <schedule-day-tabs v-model="selectedDayIndex">
-                <schedule-day-tab
-                    v-for="(day, i) in days"
-                    :key="$makeKey(i, 'schedule_day_tab')"
-                    :date="day.date"
-                    :index="i"
-                >
-                    {{ day.label }}
-                </schedule-day-tab>
-            </schedule-day-tabs>
-            <schedule-rooms class="lg:grid">
+            <schedule-rooms :date-index="selectedDayIndex">
                 <schedule-block></schedule-block>
                 <schedule-room
                     v-for="(room, i) in rooms"
@@ -20,7 +20,7 @@
                     :value="room"
                 ></schedule-room>
             </schedule-rooms>
-            <schedule-table class="lg:grid">
+            <schedule-table :date-index="selectedDayIndex" class="lg:grid">
                 <schedule-tick
                     v-for="(tick, i) in table.ticks"
                     :key="$makeKey(i, 'schedule_tick')"
@@ -30,7 +30,13 @@
                 </schedule-tick>
                 <schedule-event
                     v-for="event in table.events"
-                    :key="$makeKey(event.event_id, 'schedule_table_event')"
+                    :key="
+                        $makeKey(
+                            event.event_id,
+                            'schedule_table_event',
+                            event.event_type,
+                        )
+                    "
                     :value="event"
                     :timeline-begin="table.timeline.begin"
                 ></schedule-event>
@@ -57,7 +63,7 @@
                 </schedule-list-group>
             </schedule-list>
         </schedule>
-    </i18n-page-wrapper>
+    </div>
 </template>
 
 <script>
@@ -65,7 +71,6 @@ import { mapState } from 'vuex'
 
 import i18n from '@/i18n/conference/schedule.i18n'
 
-import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Schedule from '@/components/schedule/Schedule'
 import ScheduleBlock from '@/components/schedule/ScheduleBlock'
@@ -84,7 +89,6 @@ export default {
     name: 'PageConferenceSchedule',
     components: {
         CoreH1,
-        I18nPageWrapper,
         Schedule,
         ScheduleBlock,
         ScheduleDayTab,
@@ -123,6 +127,11 @@ export default {
             return this.lists[this.selectedDayIndex] || this.defaultList
         },
     },
+    watch: {
+        selectedDayIndex() {
+            this.makeRooms()
+        },
+    },
     async created() {
         await this.$store.dispatch('$getSchedulesData')
         this.processData()
@@ -150,7 +159,7 @@ export default {
             this.days = this.schedulesData.map(({ date, name }) => {
                 const formattedDate = this.$datetimeToString(date, {
                     inputFormat: 'YYYY-MM-DD',
-                    outputFormat: 'MM/D',
+                    outputFormat: 'M/D',
                 })
                 return {
                     label: `${name} (${formattedDate})`,
@@ -159,7 +168,29 @@ export default {
             })
         },
         makeRooms() {
-            this.rooms = ['4-r0', '5-r1', '6-r2', '1-r3']
+            if (this.selectedDayIndex === 0) {
+                this.rooms = [
+                    '4-r0',
+                    '4-r0-1',
+                    '4-r0-2',
+                    '5-r1',
+                    '5-r1-1',
+                    '5-r1-2',
+                    '6-r2',
+                    '6-r2-1',
+                    '1-r3',
+                ]
+            } else {
+                this.rooms = [
+                    '4-r0',
+                    '4-r0-1',
+                    '5-r1',
+                    '5-r1-1',
+                    '6-r2',
+                    '6-r2-1',
+                    '1-r3',
+                ]
+            }
         },
         makeTables() {
             this.tables = this.schedulesData.map((schedule) => ({
@@ -184,8 +215,8 @@ export default {
         },
         getTicks(schedule) {
             const { timeline } = schedule
-            const start = this.$parseDate(this.$padTimezone(timeline.begin))
-            const end = this.$parseDate(this.$padTimezone(timeline.end))
+            const start = this.$parseDate(timeline.begin)
+            const end = this.$parseDate(timeline.end)
             const diff = end.diff(start, 'minute')
             const unitInMinutes = 30
             const unitPerGridColumn = 6
@@ -223,7 +254,7 @@ export default {
                     }
                 })
                 .map((beginTime) => ({
-                    tick: this.$datetimeToString(this.$padTimezone(beginTime), {
+                    tick: this.$datetimeToString(beginTime, {
                         outputFormat: 'HH:mm',
                     }),
                     events: slotsByBeginTime[beginTime],
@@ -255,8 +286,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.pageWrapper {
-    @apply md:px-24;
-}
-</style>
+<style lang="postcss" scoped></style>

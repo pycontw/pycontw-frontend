@@ -62,12 +62,12 @@
                 </h2>
                 <tabs class="keynote__tabs">
                     <tab :title="$t('terms.bio')">
-                        <div class="pb-4 whitespace-pre-line">
+                        <div class="keynote_tab">
                             {{ keynote.speaker[$makeKey(locale, 'bio')] }}
                         </div>
                     </tab>
                     <tab :title="$t('terms.talk')">
-                        <div class="pb-4 whitespace-pre-line">
+                        <div class="keynote_tab">
                             {{
                                 keynote.session[$makeKey(locale, 'description')]
                             }}
@@ -95,6 +95,15 @@
                         <iframe
                             class="keynote__slido"
                             :src="keynote.slido"
+                        ></iframe>
+                    </tab>
+                    <tab
+                        v-if="!!keynote.hackmd_embed_link.length"
+                        :title="$t('terms.note')"
+                    >
+                        <iframe
+                            class="keynote__hackmd"
+                            :src="keynote.hackmd_embed_link"
                         ></iframe>
                     </tab>
                 </tabs>
@@ -159,7 +168,9 @@ export default {
     },
     methods: {
         getKeynoteId(keynote) {
-            return keynote.speaker.name_en_us.split(' ').join('_')
+            return keynote.speaker.name_en_us
+                .replaceAll(' ', '_')
+                .replaceAll('.', '')
         },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
@@ -197,7 +208,7 @@ export default {
     @apply mb-20 md:mb-28;
 }
 .keynote__photo {
-    @apply h-24 w-24 md:h-28 md:w-28 mx-auto my-3;
+    @apply h-24 w-24 md:h-28 md:w-28 mx-auto my-2;
 }
 
 .keynote__photo img {
@@ -208,17 +219,16 @@ export default {
 .keynote__name,
 .keynote__title {
     @apply font-serif font-black text-center;
+    font-size: 22px;
 }
 
 .keynote__name {
     @apply py-2 text-primary-100;
-    font-size: 18px;
 }
 
 .keynote__title {
-    @apply py-5 my-0;
+    @apply py-2 my-0;
     line-height: inherit;
-    font-size: 20px;
     background: linear-gradient(
         302.44deg,
         #8be1c2 0.18%,
@@ -230,10 +240,15 @@ export default {
 }
 
 .keynote__tabs {
-    @apply my-3;
+    @apply mt-6 mb-3;
 }
 
-.keynote__slido {
+.keynote_tab {
+    @apply whitespace-pre-line pb-4;
+}
+
+.keynote__slido,
+.keynote__hackmd {
     @apply w-full;
     height: 800px;
 }
@@ -251,8 +266,17 @@ export default {
 }
 
 @media (min-width: 768px) {
+    .keynote__name,
     .keynote__title {
-        font-size: 22px;
+        font-size: 20px;
+    }
+    .keynote__photo {
+        @apply my-3;
+    }
+    .keynote__links,
+    .keynote__name,
+    .keynote__title {
+        @apply py-3;
     }
 }
 </style>

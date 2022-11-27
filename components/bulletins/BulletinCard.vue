@@ -1,39 +1,21 @@
 <template>
-    <div v-show="!!title" :class="classObject">
-        <div class="dummy"></div>
-        <div class="bulletinCard__content">
-            <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
-        </div>
-        <div class="bulletinCard__button">
-            <text-button
-                :href="linkHref"
-                :to="linkTo"
-                secondary
-                bulletin
-                class="hidden md:block"
-                >{{ linkTitle }}</text-button
-            >
-            <text-button
-                :href="linkHref"
-                :to="linkTo"
-                secondary
-                small
-                class="md:hidden"
-                >{{ linkTitle }}</text-button
-            >
+    <div v-show="!!title" :class="classObject" @click="onClick">
+        <div class="bulletin--card__dummy"></div>
+        <img
+            class="bulletin--card__icon"
+            :src="require(`~/static/img/bulletins/${icon}.svg`)"
+        />
+        <div class="bulletin--card__content">
+            <h2 class="bulletin--card__header">{{ title }}</h2>
+            <p class="bulletin--card__description">{{ description }}</p>
         </div>
     </div>
 </template>
 
 <script>
-import TextButton from '@/components/core/buttons/TextButton'
-
 export default {
     name: 'BulletinCard',
-    components: {
-        TextButton,
-    },
+    components: {},
     props: {
         title: { type: String, default: '' },
         description: {
@@ -43,11 +25,22 @@ export default {
         linkTitle: { type: String, default: '' },
         linkHref: { type: String, default: '' },
         linkTo: { type: String, default: '' },
+        icon: { type: String, default: '' },
     },
     computed: {
         classObject() {
             return {
-                bulletinCard: true,
+                'bulletin--card': true,
+            }
+        },
+    },
+    methods: {
+        onClick() {
+            const { linkTo, linkHref } = this.$props
+            if (linkTo) {
+                this.$router.push(linkTo)
+            } else if (linkHref) {
+                window.open(linkHref, '_blank')
             }
         },
     },
@@ -55,58 +48,52 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.bulletinCard {
-    @apply relative flex flex-col items-center font-serif rounded-3xl border-4;
-    width: 47%;
-    @media (min-width: 415px) {
-        width: 214px;
-    }
-    border-color: #4b4b4b;
-    color: #4b4b4b;
+.bulletin--card {
+    @apply relative flex flex-col justify-center items-center rounded-xl w-48 h-64;
+    border: 1px solid transparent;
+    background: #1f1c3b;
+    color: #a9a6d9;
 }
 
-.bulletinCard:hover {
-    border-color: #413f5a;
+.bulletin--card:hover {
+    border: 1px solid #746bb8;
+    background: #352d66;
+    color: #f0ebf5;
+    box-shadow: 0px 0px 10px 10px #352d66;
+    cursor: pointer;
 }
 
 /* A trick to set height to be equal to width. */
 /* Checkout: https://stackoverflow.com/a/6615994/7969188 */
-.bulletinCard > .dummy {
+.bulletin--card__dummy {
     margin-top: 230%;
-    @media (min-width: 370px) {
+    @media (min-width: 375px) {
         margin-top: 170%;
     }
 }
 
-.bulletinCard__content {
-    @apply absolute;
+.bulletin--card__icon {
+    @apply absolute transform scale-90 md:scale-100;
+    top: 12.5%;
 }
 
-.bulletinCard__content > h2 {
-    @apply text-base text-center mt-6 mb-5 font-bold;
-    @media (min-width: 415px) {
+.bulletin--card__content {
+    @apply absolute;
+    top: 30%;
+}
+
+.bulletin--card__header {
+    @apply font-serif text-base text-center mt-6 mb-5 font-bold;
+    @media (min-width: 375px) {
         @apply text-xl mt-8 mb-5;
     }
-    color: #808080;
 }
 
-.bulletinCard__content:hover > h2 {
-    color: #7568f6;
-}
-
-.bulletinCard__content > p {
-    @apply mx-2;
+.bulletin--card__description {
+    @apply px-5 pb-6;
     font-size: 0.6rem;
-    color: #c7c7c7;
-    @media (min-width: 415px) {
+    @media (min-width: 375px) {
         font-size: 0.8rem;
-    }
-}
-
-.bulletinCard__button {
-    @apply absolute bottom-5 cursor-pointer;
-    @media (min-width: 415px) {
-        @apply bottom-7;
     }
 }
 </style>

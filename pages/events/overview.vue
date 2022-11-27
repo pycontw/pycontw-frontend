@@ -6,7 +6,11 @@
                 {{ $t('intro') }}
             </p>
         </banner>
-        <i18n-page-wrapper class="pt-8 px-4 lg:px-16" custom-x custom-y>
+        <i18n-page-wrapper
+            class="pageWrapper"
+            :use-bg-decoration="false"
+            custom-x
+        >
             <event-card-collection>
                 <event-card
                     v-for="(event, index) in eventInfos"
@@ -163,4 +167,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.pageWrapper {
+    @apply px-4 md:px-32;
+}
+</style>

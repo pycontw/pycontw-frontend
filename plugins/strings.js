@@ -12,23 +12,18 @@ dayjs.extend(timezone)
 const defaultDatetimeOptions = {
     defaultValue: '',
     outputFormat: 'YYYY-MM-DD',
-    inputFormat: 'YYYY-MM-DD HH:mm:ssZ',
     isLocal: false,
 }
-
-export const padTimezone = (time) => `${time}Z`
 
 export const datetimeToString = (source, options = defaultDatetimeOptions) => {
     if (!source) {
         return options.defaultValue || defaultDatetimeOptions.defaultValue
     }
-    const inputFormat =
-        options.inputFormat || defaultDatetimeOptions.inputFormat
+    const inputFormat = options.inputFormat
     const outputFormat =
         options.outputFormat || defaultDatetimeOptions.outputFormat
 
-    const offset = new Date().getTimezoneOffset()
-    return dayjs(source, inputFormat).subtract(offset, 'm').format(outputFormat)
+    return dayjs(source, inputFormat).format(outputFormat)
 }
 
 export const parseDate = (
@@ -37,7 +32,6 @@ export const parseDate = (
 ) => dayjs(source, format)
 
 const stringsHelpers = {
-    padTimezone,
     datetimeToString,
     parseDate,
 }

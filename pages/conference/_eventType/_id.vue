@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+    <i18n-page-wrapper class="py-20 px-4 sm:px-8 md:px-16 lg:px-32" custom-x>
         <core-h1 :title="data.title" center class="font-black"></core-h1>
         <div class="speech__speakers">
             <div
@@ -91,7 +91,9 @@
                     >
                         {{ locationMapping[data.location] }}
                     </p>
-                    <p v-else>{{ $t(`terms.TBA`) }}</p>
+                    <p v-else class="speech__tabParagraph">
+                        {{ $t(`terms.TBA`) }}
+                    </p>
                 </div>
                 <div class="speech__info">
                     <p class="speech__tabParagraphTitle">
@@ -100,7 +102,9 @@
                     <p v-if="data.eventTimeString" class="speech__tabParagraph">
                         {{ data.eventTimeString }}
                     </p>
-                    <p v-else>{{ $t(`terms.TBA`) }}</p>
+                    <p v-else class="speech__tabParagraph">
+                        {{ $t(`terms.TBA`) }}
+                    </p>
                 </div>
                 <div class="speech__info">
                     <p class="speech__tabParagraphTitle">
@@ -140,6 +144,10 @@
                 ></iframe>
             </tab>
         </tabs>
+
+        <related-card-collection
+            :related="fetchRelatedSpeeches()"
+        ></related-card-collection>
     </i18n-page-wrapper>
 </template>
 
@@ -158,6 +166,7 @@ import Youtube from '@/components/core/embed/Youtube.vue'
 import FacebookIcon from '@/components/core/icons/FacebookIcon'
 import GithubIcon from '@/components/core/icons/GithubIcon'
 import TwitterIcon from '@/components/core/icons/TwitterIcon'
+import RelatedCardCollection from '@/components/events/RelatedCardCollection'
 
 export default {
     i18n,
@@ -173,9 +182,11 @@ export default {
         TwitterIcon,
         Youtube,
         MarkdownRenderer,
+        RelatedCardCollection,
     },
     data() {
         return {
+            eventType: '',
             data: {
                 title: '',
                 detailed_description: '',
@@ -186,8 +197,14 @@ export default {
             },
             locationMapping: {
                 '4-r0': 'R0',
+                '4-r0-1': 'R0',
+                '4-r0-2': 'R0',
                 '5-r1': 'R1',
+                '5-r1-1': 'R1',
+                '5-r1-2': 'R1',
                 '6-r2': 'R2',
+                '6-r2-1': 'R2',
+                '6-r2-2': 'R2',
                 '1-r3': 'R3',
             },
         }
@@ -202,11 +219,20 @@ export default {
         })
         await this.processData()
         this.$root.$emit('initTabs')
+        await this.$store.dispatch('$getRelatedData', this.data.category)
     },
     methods: {
+        fetchRelatedSpeeches() {
+            const speeches = this.$store.state.relatedData.filter(
+                (item) => item.id !== this.speechData.id,
+            )
+            return speeches
+        },
         processData() {
-            const beginTime = new Date(this.speechData.begin_time)
-            const endTime = new Date(this.speechData.end_time)
+            const beginTimeStr = this.speechData.begin_time
+            const endTimeStr = this.speechData.end_time
+            const beginTime = beginTimeStr && this.$parseDate(beginTimeStr)
+            const endTime = endTimeStr && this.$parseDate(endTimeStr)
 
             this.data = {
                 ...this.speechData,
@@ -214,31 +240,28 @@ export default {
             }
         },
         getDateTag(beginTime) {
-            const dayOneMidnight = new Date('2022-09-03 16:00:00')
+            const dayOneMidnight = this.$parseDate('2022-09-03T16:00:00Z')
             if (beginTime < dayOneMidnight) {
                 return 'day1'
             } else {
                 return 'day2'
             }
         },
-        getTime: (datetime) => {
-            if (!datetime.getHours() || !datetime.getMinutes()) {
-                return null
-            }
-            const hour = ('0' + datetime.getHours()).slice(-2)
-            const minute = ('0' + datetime.getMinutes()).slice(-2)
-            return `${hour}:${minute}`
-        },
         getEventTimeString(beginTime, endTime) {
             const dateTag = this.getDateTag(beginTime)
-            const formattedBeginTime = this.getTime(beginTime)
-            const formattedEndTime = this.getTime(endTime)
+            const formattedBeginTime = this.$datetimeToString(beginTime, {
+                outputFormat: 'HH:mm',
+            })
+            const formattedEndTime = this.$datetimeToString(endTime, {
+                outputFormat: 'HH:mm',
+            })
             if (!formattedBeginTime || !formattedEndTime) {
                 return null
             }
             return (
                 `${this.$i18n.t(`terms.${dateTag}`)} • ` +
-                `${formattedBeginTime}-${formattedEndTime}`
+                `${formattedBeginTime}-${formattedEndTime} ` +
+                `(${this.$datetimeToString(beginTime, { outputFormat: 'z' })})`
             )
         },
         isValidLocation(loc) {
@@ -319,11 +342,11 @@ export default {
     @apply mb-6 break-words;
 }
 .speech__tabParagraphTitle {
-    @apply font-serif font-bold mb-2 mr-8 text-pink-700;
+    @apply font-serif font-bold my-auto mr-8 text-pink-700 whitespace-nowrap;
     min-width: 85px;
 }
 .speech__tabParagraph {
-    @apply font-sans mb-2;
+    @apply font-sans my-auto;
 }
 .speech__info {
     @apply flex mr-2 mb-2;

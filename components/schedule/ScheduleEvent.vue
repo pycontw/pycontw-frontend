@@ -11,7 +11,7 @@
         <div v-if="$slots.prepend" class="scheduleEvent__prepend flex">
             <slot name="prepend"></slot>
         </div>
-        <div class="scheduleEvent__context sticky">
+        <div class="scheduleEvent__context">
             <div class="scheduleEvent__title">
                 {{ getValueByLocale(value.title) }}
             </div>
@@ -66,7 +66,7 @@ export default {
             timezoneFormat,
             timeOptions: { outputFormat: timeFormat },
             timezoneOptions: { outputFormat: timezoneFormat },
-            startPoint: this.$parseDate(this.$padTimezone(this.timelineBegin)),
+            startPoint: this.$parseDate(this.timelineBegin),
             icon: {
                 lang: {
                     ENEN: require('~/static/img/icons/lang/ENEN.svg'),
@@ -96,15 +96,15 @@ export default {
         },
         duration() {
             const startTime = this.$datetimeToString(
-                this.$padTimezone(this.value.begin_time),
+                this.value.begin_time,
                 this.timeOptions,
             )
             const endTime = this.$datetimeToString(
-                this.$padTimezone(this.value.end_time),
+                this.value.end_time,
                 this.timeOptions,
             )
             const timezone = this.$datetimeToString(
-                this.$padTimezone(this.value.begin_time),
+                this.value.begin_time,
                 this.timezoneOptions,
             )
             return `${startTime} ~ ${endTime} (${timezone})`
@@ -131,7 +131,9 @@ export default {
                 speakers,
             } = this.value
             if (eventType === 'keynote') {
-                const keynoteSpeakerId = speakers[0].en_us.split(' ').join('_')
+                const keynoteSpeakerId = speakers[0].en_us
+                    .replaceAll(' ', '_')
+                    .replaceAll('.', '')
                 return `/conference/keynotes#${keynoteSpeakerId}`
             } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
                 return `/conference/${eventType}/${eventId}/`
@@ -140,8 +142,7 @@ export default {
         },
     },
     methods: {
-        getGridRow(t) {
-            const time = this.$padTimezone(t)
+        getGridRow(time) {
             const diff = this.$parseDate(time).diff(this.startPoint, 'minute')
             const unit = 5
             return parseInt(`${diff / unit}`, 10) + 1
@@ -162,7 +163,8 @@ export default {
 
 <style lang="postcss" scoped>
 .scheduleEvent__context {
-    top: 132px;
+    @apply sticky top-28;
+    /* top: 75px; */
 }
 
 .scheduleEvent__title {

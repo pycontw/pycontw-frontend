@@ -24,6 +24,7 @@ Frontend of PyCon TW official website.
     export HOST=127.0.0.1
     export BASE_URL=http://127.0.0.1:9876
     export API_URL_BROWSER=http://127.0.0.1:9876
+    export VUE_DEVTOOL=true
     ```
 
 3. Install dependencies:
