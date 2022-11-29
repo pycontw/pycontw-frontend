@@ -113,10 +113,10 @@ export default {
         @apply z-10 border-0 text-primary-100;
         background-image: linear-gradient(
             276.15deg,
-            #61c8a4 0.25%,
-            #548fcb 34.38%,
-            #3849de 57.05%,
-            #be3692 100%
+            #61c8a4 0.74%,
+            #548fcb 32.18%,
+            #3849de 53.25%,
+            #be3692 93.14%
         );
 
         & span {
@@ -162,9 +162,9 @@ export default {
     content: '';
     background-image: linear-gradient(
         96.26deg,
-        #5fbeab 0%,
-        #66b4e2 34.38%,
-        #4454df 62.5%,
+        #5fbeab 5.5%,
+        #66b4e2 31.92%,
+        #4454df 53.53%,
         #be3692 82.35%
     );
     transition: opacity 0.5s ease-out;
