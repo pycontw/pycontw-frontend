@@ -28,48 +28,48 @@
                 :expanding="expandingItem === 'about'"
                 @click.native="toggleAccordion('about')"
             ></nav-bar-item-accordion>
-            <!-- <nav-bar-item-accordion
+            <nav-bar-item-accordion
                 :label="$t('speaking')"
                 :items="speakingItems"
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
-            ></nav-bar-item-accordion> -->
-            <locale-link
+            ></nav-bar-item-accordion>
+            <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/conference/schedule"
                 customized
                 >{{ $t('schedule') }}</locale-link
-            >
+            > -->
             <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/events/overview"
                 customized
                 >{{ $t('overview') }}</locale-link
             >
-            <nav-bar-item-accordion
+            <!-- <nav-bar-item-accordion
                 :label="$t('conference')"
                 :items="conferenceItems"
                 :expanding="expandingItem === 'conference'"
                 @click.native="toggleAccordion('conference')"
-            ></nav-bar-item-accordion>
-            <nav-bar-item-accordion
+            ></nav-bar-item-accordion> -->
+            <!-- <nav-bar-item-accordion
                 :label="$t('events')"
                 :items="eventsItems"
                 :expanding="expandingItem === 'events'"
                 @click.native="toggleAccordion('events')"
-            ></nav-bar-item-accordion>
+            ></nav-bar-item-accordion> -->
             <!-- <locale-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/sponsor"
                 customized
                 >{{ $t('sponsor') }}</locale-link
             > -->
-            <nav-bar-item-accordion
+            <!-- <nav-bar-item-accordion
                 :label="$t('registration')"
                 :items="registrationItems"
                 :expanding="expandingItem === 'registration'"
                 @click.native="toggleAccordion('registration')"
-            ></nav-bar-item-accordion>
+            ></nav-bar-item-accordion> -->
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="signInUrl"

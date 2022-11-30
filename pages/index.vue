@@ -17,7 +17,7 @@
                     <img
                         class="title-img"
                         src="~/static/index-title.svg"
-                        alt="Title of PyCon APAC 2022"
+                        alt="Title of PyCon TW 2023"
                     />
                 </div>
                 <div

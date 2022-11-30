@@ -6,14 +6,14 @@
             <div class="flex justify-center">
                 <div class="flex flex-col items-center">
                     <ext-link
-                        href="https://forms.gle/DTGfR5znmQCk1PW96"
+                        href="https://forms.gle/vLz3Xev8tUpnRqacA"
                         class="my-2 highlight"
                     >
                         {{ $t('joinUs') }}
                     </ext-link>
-                    <locale-link to="/about/staff" class="my-2">{{
+                    <!-- <locale-link to="/about/staff" class="my-2">{{
                         $t('staff')
-                    }}</locale-link>
+                    }}</locale-link> -->
                     <locale-link to="/about/privacy-policy" class="my-2">
                         {{ $t('privacyPolicy') }}
                     </locale-link>
@@ -22,7 +22,7 @@
             <footer-history />
             <footer-icon />
         </div>
-        <div class="core-footer__copyright">© 2022 PyCon APAC</div>
+        <div class="core-footer__copyright">© 2023 PyCon TW</div>
     </footer>
 </template>
 

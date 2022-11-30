@@ -6,36 +6,36 @@
             :class="getPageClassesByPath('about')"
         >
         </nav-bar-item-dropdown>
-        <!-- <nav-bar-item-dropdown
+        <nav-bar-item-dropdown
             :label="$t('speaking')"
             :items="speakingItems"
             :class="getPageClassesByPath('speaking')"
         >
-        </nav-bar-item-dropdown> -->
-        <locale-link
+        </nav-bar-item-dropdown>
+        <!-- <locale-link
             to="/conference/schedule"
             :class="getPageClassesByPath(null, true, '/conference/schedule')"
             customized
             >{{ $t('schedule') }}</locale-link
-        >
+        > -->
         <locale-link
             to="/events/overview"
             :class="getPageClassesByPath(null, true, '/events/overview')"
             customized
             >{{ $t('overview') }}</locale-link
         >
-        <nav-bar-item-dropdown
+        <!-- <nav-bar-item-dropdown
             :label="$t('conference')"
             :items="conferenceItems"
             :class="getPageClassesByPath('conference')"
         >
-        </nav-bar-item-dropdown>
-        <nav-bar-item-dropdown
+        </nav-bar-item-dropdown> -->
+        <!-- <nav-bar-item-dropdown
             :label="$t('events')"
             :items="eventsItems"
             :class="getPageClassesByPath('events')"
         >
-        </nav-bar-item-dropdown>
+        </nav-bar-item-dropdown> -->
         <!-- <locale-link
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
@@ -43,12 +43,12 @@
         >
             {{ $t('sponsor') }}
         </locale-link> -->
-        <nav-bar-item-dropdown
+        <!-- <nav-bar-item-dropdown
             :label="$t('registration')"
             :items="registrationItems"
             :class="getPageClassesByPath('registration')"
         >
-        </nav-bar-item-dropdown>
+        </nav-bar-item-dropdown> -->
         <!--
         <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
             {{ $t('venue') }}

@@ -6,10 +6,10 @@
     >
         <img
             src="~/static/icon.svg"
-            alt="Home icon of PyConTW 2021"
+            alt="Home icon of PyConTW 2023"
             class="w-6"
         />
-        <span class="font-bold ml-2"> PyCon APAC </span>
+        <span class="font-bold ml-2"> PyCon TW </span>
     </locale-link>
 </template>
 
