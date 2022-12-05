@@ -144,11 +144,11 @@ export default {
 }
 
 .core-navBarItem:hover {
-    @apply text-pink-500;
+    @apply text-pink-700;
 }
 
 .core-navBarItem.--active,
 .core-navBarItem.--active .options-menu {
-    @apply text-pink-500;
+    @apply text-pink-700;
 }
 </style>

@@ -50,7 +50,6 @@ module.exports = {
                     900: '#121023',
                 },
                 pink: {
-                    500: '#c386ae',
                     700: '#e099e1',
                 },
                 secondary: {
@@ -60,7 +59,7 @@ module.exports = {
             },
             stroke: (theme) => theme('colors'),
             boxShadow: (theme) => ({
-                'pink-500': `6px 6px 0 theme('colors.pink.500')`,
+                'pink-700': `6px 6px 0 theme('colors.pink.700')`,
             }),
             fill: (theme) => theme('colors'),
             backgroundImage: {

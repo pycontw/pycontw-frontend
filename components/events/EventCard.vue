@@ -91,7 +91,7 @@ export default {
     padding-bottom: 24px;
 }
 .title {
-    @apply font-bold font-sans text-pink-500 text-sm md:text-lg;
+    @apply font-bold font-sans text-pink-700 text-sm md:text-lg;
 }
 
 .tag {
