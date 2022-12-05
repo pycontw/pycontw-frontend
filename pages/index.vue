@@ -4,22 +4,16 @@
             <div
                 class="
                     w-full
+                    h-full
                     flex flex-col
                     items-start
                     text-golden
-                    mx-6
                     sm:mx-8
                     md:mx-12
                     lg:mx-32
                 "
             >
-                <div class="page-home__title">
-                    <img
-                        class="title-img"
-                        src="~/static/index-title.svg"
-                        alt="Title of PyCon APAC 2022"
-                    />
-                </div>
+                <div class="page-home__title" />
                 <div
                     v-if="isCallingForProposals"
                     class="
@@ -46,7 +40,7 @@
                 </div>
                 <div class="text-button-wrapper">
                     <text-button to="/conference/schedule">{{
-                        $t('checkEvents')
+                        $t('joinUs')
                     }}</text-button>
                 </div>
             </div>
@@ -171,39 +165,46 @@ export default {
 
 .page-home .page-homeLandingFocus::after {
     position: absolute;
-    top: -48px;
+    top: -80px;
     z-index: -10;
     content: '';
-    background-image: url('~@/static/page-home-background.svg');
+    background-image: url('~@/static/landing-background.svg');
     background-position: center center;
-    background-size: cover;
+    background-size: 100;
     background-repeat: no-repeat;
+}
+
+.page-home__title {
+    min-height: 40%;
+    min-width: 100%;
+    background-image: url('~@/static/landing-title.svg');
+    background-repeat: no-repeat;
+
+    @apply font-serif text-3xl font-semibold;
+    @media (min-width: 1024px) {
+        @apply leading-snug;
+        font-size: 2.8rem;
+    }
 }
 
 @media (max-width: 567px) {
     .page-home .page-homeLandingFocus::after {
         content: '';
-        background-image: url('~@/static/page-home-background-rwd.svg');
-        background-position: center top 10%;
-        background-size: contain;
+        background-image: url('~@/static/landing-background-rwd.svg');
         background-repeat: no-repeat;
+        background-position: 80% 20%;
+        background-size: 100%;
     }
     .page-home__title {
-        left: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        max-width: 100vw;
         position: relative;
-        right: 50%;
-        width: 100vw;
-    }
-}
-
-.page-home__title {
-    @apply font-serif text-3xl font-semibold;
-    @media (min-width: 1024px) {
-        @apply leading-snug;
-        font-size: 2.8rem;
+        top: 10%;
+        content: '';
+        background-image: url('~@/static/landing-title-rwd.svg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: 100%;
+        min-height: 50%;
+        min-width: 100%;
     }
 }
 
@@ -224,7 +225,7 @@ export default {
 }
 
 .text-button-wrapper {
-    @apply mt-48 mb-12 md:mt-32 md:mb-28;
+    @apply mt-48 md:mt-32;
     @apply w-full flex justify-center md:justify-start;
 }
 
