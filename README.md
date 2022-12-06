@@ -81,6 +81,29 @@ npm run serve
 npm run generate
 ```
 
+### Archiving the Historical PyCon TW Website
+1. Check out the uptodate branch like `pycontw-2021` or `pycontw-2022`.
+
+```bash
+git checkout pycontw-2021
+```
+
+2. (Optional) Install dependencies
+
+```bash
+npm i
+```
+
+3. Edit `nuxt.config.js` and set `DEFAULT_BASE_URL` to the corresponding API endpoint like `https://tw.pycon.org/prs`.
+
+4. Generate static project
+
+```bash
+ROUTER_BASE="/pycon_archive_past_website/" npm run generate
+```
+
+5. Open your editor and replace all `/pycon_archive_past_website/2021` into `https://tw.pycon.org/2021/` and `\u002Fpycon_archive_past_website` into `""`(empty string).
+
 ## Check your code:
 
 ```bash
