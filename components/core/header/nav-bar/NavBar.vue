@@ -12,47 +12,55 @@
             :class="getPageClassesByPath('speaking')"
         >
         </nav-bar-item-dropdown>
-        <!-- <locale-link
+        <locale-link
+            v-if="showSchedulePage"
             to="/conference/schedule"
             :class="getPageClassesByPath(null, true, '/conference/schedule')"
             customized
             >{{ $t('schedule') }}</locale-link
-        > -->
+        >
         <locale-link
             to="/events/overview"
             :class="getPageClassesByPath(null, true, '/events/overview')"
             customized
             >{{ $t('overview') }}</locale-link
         >
-        <!-- <nav-bar-item-dropdown
+        <nav-bar-item-dropdown
+            v-if="showConferencePage"
             :label="$t('conference')"
             :items="conferenceItems"
             :class="getPageClassesByPath('conference')"
         >
-        </nav-bar-item-dropdown> -->
-        <!-- <nav-bar-item-dropdown
+        </nav-bar-item-dropdown>
+        <nav-bar-item-dropdown
+            v-if="showEventsPage"
             :label="$t('events')"
             :items="eventsItems"
             :class="getPageClassesByPath('events')"
         >
-        </nav-bar-item-dropdown> -->
-        <!-- <locale-link
+        </nav-bar-item-dropdown>
+        <locale-link
+            v-if="showSponsorPage"
             to="/sponsor"
             :class="getPageClassesByPath('sponsor', true)"
             customized
         >
             {{ $t('sponsor') }}
-        </locale-link> -->
-        <!-- <nav-bar-item-dropdown
+        </locale-link>
+        <nav-bar-item-dropdown
+            v-if="showRegistrationPage"
             :label="$t('registration')"
             :items="registrationItems"
             :class="getPageClassesByPath('registration')"
         >
-        </nav-bar-item-dropdown> -->
-        <!--
-        <locale-link to="/venue" :class="getPageClassesByPath('venue', true)">
+        </nav-bar-item-dropdown>
+        <locale-link
+            v-if="showVenuePage"
+            to="/venue"
+            :class="getPageClassesByPath('venue', true)"
+        >
             {{ $t('venue') }}
-        </locale-link> -->
+        </locale-link>
         <ext-link
             :href="signInUrl"
             :class="getPageClassesByPath('signIn', true)"
@@ -78,30 +86,65 @@ export default {
     },
     computed: {
         conferenceItems() {
-            return this.generateI18nItems(navBarItems.conference)
+            return this.generateI18nItems(
+                navBarItems.conference,
+                this.$store.state.configs.conferenceHideItems,
+            )
         },
         eventsItems() {
-            return this.generateI18nItems(navBarItems.events)
+            return this.generateI18nItems(
+                navBarItems.events,
+                this.$store.state.configs.eventsHideItems,
+            )
         },
         speakingItems() {
             return this.generateI18nItems(navBarItems.speaking)
         },
         aboutItems() {
-            return this.generateI18nItems(navBarItems.about)
+            return this.generateI18nItems(
+                navBarItems.about,
+                this.$store.state.configs.aboutHideItems,
+            )
         },
         registrationItems() {
-            return this.generateI18nItems(navBarItems.registration)
+            return this.generateI18nItems(
+                navBarItems.registration,
+                this.$store.state.configs.registrationHideItems,
+            )
         },
         signInUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
         },
+        showSponsorPage() {
+            return this.$store.state.configs.showSponsorPage
+        },
+        showRegistrationPage() {
+            return this.$store.state.configs.showRegistrationPage
+        },
+        showEventsPage() {
+            return this.$store.state.configs.showEventsPage
+        },
+        showConferencePage() {
+            return this.$store.state.configs.showConferencePage
+        },
+        showSpeakingPage() {
+            return this.$store.state.configs.showSpeakingPage
+        },
+        showSchedulePage() {
+            return this.$store.state.configs.showSchedulePage
+        },
+        showVenuePage() {
+            return this.$store.state.configs.showVenuePage
+        },
     },
     methods: {
-        generateI18nItems(items) {
-            return items.map(({ i18nKey, value }) => ({
-                label: this.$i18n.t(i18nKey),
-                value,
-            }))
+        generateI18nItems(items, hideItems = []) {
+            return items
+                .filter((item) => !hideItems.includes(item.i18nKey))
+                .map(({ i18nKey, value }) => ({
+                    label: this.$i18n.t(i18nKey),
+                    value,
+                }))
         },
         getPageClassesByPath(
             category = null,
