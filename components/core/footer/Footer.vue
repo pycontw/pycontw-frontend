@@ -11,9 +11,12 @@
                     >
                         {{ $t('joinUs') }}
                     </ext-link>
-                    <locale-link to="/about/staff" class="my-2">{{
-                        $t('staff')
-                    }}</locale-link>
+                    <locale-link
+                        v-if="showStaff"
+                        to="/about/staff"
+                        class="my-2"
+                        >{{ $t('staff') }}</locale-link
+                    >
                     <locale-link to="/about/privacy-policy" class="my-2">
                         {{ $t('privacyPolicy') }}
                     </locale-link>
@@ -22,7 +25,9 @@
             <footer-history />
             <footer-icon />
         </div>
-        <div class="core-footer__copyright">© 2022 PyCon APAC</div>
+        <div class="core-footer__copyright">
+            © {{ conferenceYear }} {{ conferenceName }}
+        </div>
     </footer>
 </template>
 
@@ -40,6 +45,17 @@ export default {
         ExtLink,
         LocaleLink,
         FooterHistory,
+    },
+    computed: {
+        showStaff() {
+            return this.$store.state.configs.showAboutStaffPage
+        },
+        conferenceName() {
+            return this.$store.state.configs.conferenceName
+        },
+        conferenceYear() {
+            return this.$store.state.configs.conferenceYear
+        },
     },
 }
 </script>

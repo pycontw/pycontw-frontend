@@ -1,6 +1,6 @@
 <template>
     <div class="intro">
-        <div class="description-wrapper">
+        <div v-if="isShowingApacIntro" class="description-wrapper">
             <div>
                 <core-h2
                     :title="$t('whatIsPyConAPAC')"
@@ -56,6 +56,10 @@ export default {
     },
     props: {
         isBulleted: {
+            type: Boolean,
+            default: true,
+        },
+        isShowingApacIntro: {
             type: Boolean,
             default: true,
         },

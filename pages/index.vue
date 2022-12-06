@@ -13,8 +13,24 @@
                     lg:mx-32
                 "
             >
-                <div class="landing__title" />
-                <div class="text-button-wrapper">
+                <div class="page-home__title">
+                    <img
+                        class="title-img"
+                        src="~/static/index-title.svg"
+                        :alt="`Title of ${conferenceName} ${conferenceYear}`"
+                    />
+                </div>
+                <div
+                    v-if="isCallingForProposals"
+                    class="
+                        w-full
+                        flex flex-col
+                        justify-between
+                        items-center
+                        md:flex-row
+                        mt-32
+                    "
+                >
                     <text-button
                         :href="
                             landingButton.isExternalLink
@@ -30,11 +46,19 @@
                         {{ $t(landingButton.textKey) }}
                     </text-button>
                 </div>
+                <div v-if="isShowingScheduleButton" class="text-button-wrapper">
+                    <text-button to="/conference/schedule">{{
+                        $t('checkEvents')
+                    }}</text-button>
+                </div>
             </div>
         </div>
 
         <i18n-page-wrapper>
-            <intro :is-bulleted="isBulleted"></intro>
+            <intro
+                :is-showing-apac-intro="showIndexAPACSection"
+                :is-bulleted="isBulleted"
+            ></intro>
             <div class="bulletin-section">
                 <core-h2
                     :title="$t('bulletinList')"
@@ -43,7 +67,11 @@
                 ></core-h2>
                 <bulletin-card-collection></bulletin-card-collection>
             </div>
-            <div id="sponsor" class="sponsor-section">
+            <div
+                v-if="showIndexSponsorSection"
+                id="sponsor"
+                class="sponsor-section"
+            >
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"
@@ -104,7 +132,6 @@ export default {
     data() {
         return {
             isOpened: false,
-            landingButton: landingButtonConfig.JOIN_US,
             selectedSponsor: {},
         }
     },
@@ -119,6 +146,24 @@ export default {
                 }
             }
             return true
+        },
+        conferenceName() {
+            return this.$store.state.configs.conferenceName
+        },
+        conferenceYear() {
+            return this.$store.state.configs.conferenceYear
+        },
+        isCallingForProposals() {
+            return this.$store.state.configs.showSpeakingPage
+        },
+        isShowingScheduleButton() {
+            return this.$store.state.configs.showSchedulePage
+        },
+        showIndexSponsorSection() {
+            return this.$store.state.configs.showIndexSponsorSection
+        },
+        showIndexAPACSection() {
+            return this.$store.state.configs.showIndexAPACSection
         },
     },
     created() {
