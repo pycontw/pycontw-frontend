@@ -1,6 +1,6 @@
 <template>
-    <div class="page-home">
-        <div class="page-homeLandingFocus flex pt-16 md:pt-24">
+    <div class="landing">
+        <div class="landing__background flex pt-16 md:pt-24">
             <div
                 class="
                     w-full
@@ -9,39 +9,15 @@
                     items-start
                     text-golden
                     sm:mx-8
-                    md:mx-12
+                    md:mx-24
                     lg:mx-32
                 "
             >
-                <div class="page-home__title" />
-                <div
-                    v-if="isCallingForProposals"
-                    class="
-                        w-full
-                        flex flex-col
-                        justify-between
-                        items-center
-                        md:flex-row
-                        mt-32
-                    "
-                >
-                    <text-button
-                        to="/speaking/cfp"
-                        class="
-                            proposalButton
-                            hidden
-                            md:block md:mb-0 md:self-center
-                        "
-                        :uppercase="false"
-                        large
-                    >
-                        {{ $t('callForProposals') }}
-                    </text-button>
-                </div>
+                <div class="landing__title" />
                 <div class="text-button-wrapper">
-                    <text-button to="/conference/schedule">{{
-                        $t('joinUs')
-                    }}</text-button>
+                    <text-button :to="landingButtonConfig.JOIN_US.path">
+                        {{ $t(landingButtonConfig.JOIN_US.textKey) }}
+                    </text-button>
                 </div>
             </div>
         </div>
@@ -92,6 +68,7 @@
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
+import { landingButtonConfig } from '@/config/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '~/components/core/buttons/TextButton'
 import { BulletinCardCollection } from '~/components/bulletins'
@@ -100,7 +77,6 @@ import SponsorCard from '~/components/sponsors/SponsorCard'
 import SponsorModal from '~/components/sponsors/SponsorModal'
 import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
 import Intro from '~/components/intro/Intro'
-
 export default {
     i18n,
     name: 'PageIndex',
@@ -117,7 +93,7 @@ export default {
     data() {
         return {
             isOpened: false,
-            isCallingForProposals: false,
+            landingButtonConfig,
             selectedSponsor: {},
         }
     },
@@ -153,82 +129,68 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.page-home .page-homeLandingFocus,
-.page-home .page-homeLandingFocus::after {
+.landing__background,
+.landing__background::after {
     position: relative;
     top: 48px;
     left: 0;
     right: 0;
     height: calc(100vh - 48px);
-    min-height: 720px;
+    min-height: 600px;
 }
-
-.page-home .page-homeLandingFocus::after {
+.landing__background::after {
     position: absolute;
-    top: -80px;
+    top: -72px;
     z-index: -10;
     content: '';
     background-image: url('~@/static/landing-background.svg');
-    background-position: center center;
-    background-size: 100;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
-
-.page-home__title {
-    min-height: 40%;
-    min-width: 100%;
+.landing__title {
     background-image: url('~@/static/landing-title.svg');
     background-repeat: no-repeat;
+    background-position-y: 5.2rem;
+    min-height: 50%;
+    min-width: 100%;
 
     @apply font-serif text-3xl font-semibold;
-    @media (min-width: 1024px) {
-        @apply leading-snug;
-        font-size: 2.8rem;
-    }
 }
-
 @media (max-width: 567px) {
-    .page-home .page-homeLandingFocus::after {
+    .landing__background::after {
         content: '';
         background-image: url('~@/static/landing-background-rwd.svg');
         background-repeat: no-repeat;
-        background-position: 80% 20%;
+        background-position: center top 10%;
         background-size: 100%;
     }
-    .page-home__title {
-        position: relative;
-        top: 10%;
-        content: '';
+    .landing__title {
         background-image: url('~@/static/landing-title-rwd.svg');
         background-repeat: no-repeat;
         background-position-x: center;
+        background-position-y: 2rem;
         background-size: 100%;
-        min-height: 50%;
+        min-height: 38%;
         min-width: 100%;
     }
 }
-
 .text-golden {
     @apply text-pink-700;
 }
-
 .bulletin-section {
     @apply pt-12 lg:mx-auto lg:w-full;
 }
-
 .sponsor-section {
     @apply pt-12 lg:mx-auto lg:w-full;
 }
-
 .index-h2 {
     @apply mx-auto justify-center md:justify-start;
 }
-
 .text-button-wrapper {
-    @apply mt-48 md:mt-32;
+    @apply mt-32 md:mt-16;
     @apply w-full flex justify-center md:justify-start;
 }
-
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.3s;
