@@ -9,17 +9,17 @@ services:
       context: .
       dockerfile: mock-server.Dockerfile
 
-  pycontw-2022:
-    container_name: pycontw-2022-frontend-dev
+  pycontw-2023:
+    container_name: pycontw-2023-frontend-dev
     build:
       context: .
       dockerfile: dev.Dockerfile
     volumes:
       - .:/app:cached
       - ./node_modules:/app/node_modules:delegated
-    environment: 
+    environment:
       - BUILD_TARGET=server
-      - ROUTER_BASE=/2022/
+      - ROUTER_BASE=/2023/
       - HOST=0.0.0.0
       - BASE_URL=http://mock-server:9876
       - API_URL_BROWSER=http://0.0.0.0:9876

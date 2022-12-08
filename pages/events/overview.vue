@@ -21,8 +21,8 @@
                     :tag-color="event.tagColor"
                     :img-url="event.imgUrl"
                     :img-alt="event.imgAlt"
-                    :to="event.to"
-                    :href="event.href"
+                    :to="event.openToView && event.to"
+                    :href="event.openToView && event.href"
                 ></event-card>
             </event-card-collection>
         </i18n-page-wrapper>
@@ -59,6 +59,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/young-inspirers.png'),
                     imgAlt: 'Young Inspirers',
                     to: '/conference/young-inspirers',
+                    openToView: false,
                 },
                 {
                     tag: 'sprint',
@@ -67,6 +68,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/sprint.png'),
                     imgAlt: 'Sprint',
                     to: '/events/sprints',
+                    openToView: false,
                 },
                 {
                     tag: 'pycast',
@@ -75,6 +77,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/pycast.png'),
                     imgAlt: 'PyCast',
                     href: 'https://podcasts.apple.com/podcast/id1559843325',
+                    openToView: true,
                 },
                 {
                     tag: 'keynote',
@@ -83,6 +86,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/keynote.png'),
                     imgAlt: 'Keynote',
                     to: '/conference/keynotes',
+                    openToView: false,
                 },
                 {
                     tag: 'talk',
@@ -91,6 +95,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/talk.png'),
                     imgAlt: 'Talk',
                     to: '/conference/talks',
+                    openToView: false,
                 },
                 {
                     tag: 'tutorial',
@@ -99,6 +104,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/tutorial.png'),
                     imgAlt: 'Tutorial',
                     to: '/conference/tutorials',
+                    openToView: false,
                 },
                 {
                     tag: 'openSpace',
@@ -107,6 +113,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/open-space.png'),
                     imgAlt: 'Open Space',
                     to: '/events/open-spaces',
+                    openToView: false,
                 },
                 {
                     tag: 'lightningTalk',
@@ -114,6 +121,7 @@ export default {
                     tagColor: 'green',
                     imgUrl: require('~/static/img/events/overview/lightning-talk.png'),
                     imgAlt: 'Lightning Talk',
+                    openToView: false,
                 },
                 {
                     tag: 'pynight',
@@ -121,6 +129,7 @@ export default {
                     tagColor: 'green',
                     imgUrl: require('~/static/img/events/overview/pynight.png'),
                     imgAlt: 'PyNight',
+                    openToView: false,
                 },
                 {
                     tag: 'jobFair',
@@ -129,6 +138,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/job-fair.png'),
                     imgAlt: 'Job Fair',
                     to: '/events/jobs',
+                    openToView: false,
                 },
             ],
         }

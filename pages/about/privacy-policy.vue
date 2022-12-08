@@ -1,7 +1,7 @@
 <template>
     <div>
         <banner>
-            <core-h1 :title="`2022 ${$t('title')}`"></core-h1>
+            <core-h1 :title="`${conferenceYear} ${$t('title')}`"></core-h1>
             <i18n path="pageAbstract" tag="p" class="pageAbstract">
                 <template #br><br /></template>
             </i18n>
@@ -118,6 +118,11 @@ export default {
         return {
             authorizationIcon: require('~/static/img/footer/ccby-sa3_0.svg'),
         }
+    },
+    computed: {
+        conferenceYear() {
+            return this.$store.state.configs.conferenceYear
+        },
     },
     head() {
         return {

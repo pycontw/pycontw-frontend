@@ -74,6 +74,10 @@ export default {
                     label: '2021',
                     link: 'https://tw.pycon.org/2021/',
                 },
+                {
+                    label: '2022',
+                    link: 'https://tw.pycon.org/2022/',
+                },
             ],
         }
     },
