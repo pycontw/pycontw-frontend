@@ -15,8 +15,19 @@
             >
                 <div class="landing__title" />
                 <div class="text-button-wrapper">
-                    <text-button :to="landingButtonConfig.JOIN_US.path">
-                        {{ $t(landingButtonConfig.JOIN_US.textKey) }}
+                    <text-button
+                        :href="
+                            landingButton.isExternalLink
+                                ? landingButton.path
+                                : ''
+                        "
+                        :to="
+                            !landingButton.isExternalLink
+                                ? landingButton.path
+                                : ''
+                        "
+                    >
+                        {{ $t(landingButton.textKey) }}
                     </text-button>
                 </div>
             </div>
@@ -93,7 +104,7 @@ export default {
     data() {
         return {
             isOpened: false,
-            landingButtonConfig,
+            landingButton: landingButtonConfig.JOIN_US,
             selectedSponsor: {},
         }
     },
@@ -132,47 +143,45 @@ export default {
 .landing__background,
 .landing__background::after {
     position: relative;
-    top: 48px;
     left: 0;
     right: 0;
-    height: calc(100vh - 48px);
+    height: calc(100vh - 3rem);
     min-height: 600px;
 }
 .landing__background::after {
+    height: 100vh;
     position: absolute;
     top: -72px;
     z-index: -10;
     content: '';
-    background-image: url('~@/static/landing-background.svg');
+    background-image: url('~@/static/landing-background-rwd.svg');
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-position: center top 4rem;
+    background-size: 100%;
 }
 .landing__title {
-    background-image: url('~@/static/landing-title.svg');
+    position: relative;
+    top: 2.5rem;
+    background-image: url('~@/static/landing-title-rwd.svg');
     background-repeat: no-repeat;
-    background-position-y: 5.2rem;
-    min-height: 50%;
+    background-position-x: center;
+    background-position-y: 2rem;
+    background-size: 100%;
+    min-height: 32vh;
     min-width: 100%;
-
-    @apply font-serif text-3xl font-semibold;
 }
-@media (max-width: 567px) {
+@media (min-width: 768px) {
     .landing__background::after {
-        content: '';
-        background-image: url('~@/static/landing-background-rwd.svg');
-        background-repeat: no-repeat;
-        background-position: center top 10%;
-        background-size: 100%;
+        background-image: url('~@/static/landing-background.svg');
+        background-size: cover;
+        background-position-y: 0;
     }
     .landing__title {
-        background-image: url('~@/static/landing-title-rwd.svg');
+        background-image: url('~@/static/landing-title.svg');
         background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 2rem;
-        background-size: 100%;
-        min-height: 38%;
-        min-width: 100%;
+        background-position-x: 0;
+        background-position-y: 2.5rem;
+        background-size: 60%;
     }
 }
 .text-golden {
@@ -188,15 +197,7 @@ export default {
     @apply mx-auto justify-center md:justify-start;
 }
 .text-button-wrapper {
-    @apply mt-32 md:mt-16;
+    @apply mt-32 md:mt-32;
     @apply w-full flex justify-center md:justify-start;
-}
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.3s;
-}
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
 }
 </style>
