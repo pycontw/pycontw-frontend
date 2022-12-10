@@ -43,16 +43,6 @@
                     tag="p"
                 />
             </div>
-            <div class="covidStatement">
-                <i18n
-                    path="covidStatement.title"
-                    tag="h2"
-                    class="covidTitle"
-                ></i18n>
-                <i18n path="covidStatement.description" tag="p">
-                    <template #br><br /></template>
-                </i18n>
-            </div>
             <div class="authorization">
                 <div>
                     <i18n
@@ -153,14 +143,7 @@ export default {
 .paragraphTitle {
     @apply font-serif font-bold text-pink-700;
 }
-.covidTitle {
-    @apply font-serif font-bold text-pink-700;
-    margin-top: 5%;
-}
-.covidStatement {
-    @apply border-2 border-solid rounded-xl px-6  mt-24;
-    @apply border-primary-300;
-}
+
 .authorization {
     @apply text-center;
 }

@@ -99,26 +99,13 @@ export default genI18nMessages({
                 summary: [],
             },
         ],
-        covidStatement: {
-            title: 'Privacy: Collecting Personal Information during COVID-19 Outbreak',
-            description:
-                'The purpose of collecting personal information in accordance with the Personal Data Protection ' +
-                'Law and epidemic prevention and control requirements is to best respond and ensure health ' +
-                'security for all attendees in COVID-19 outbreak. It is necessary to collect, manage, and use ' +
-                'relevant personal information. Please read below for details.{br}{br}' +
-                'PyCon TW 2020 collects personal data of attendees for the purpose of contact tracing during ' +
-                'the outbreak of COVID-19. All collected information will be deleted after 28 days. ' +
-                'attendees’ access in each venue will be recorded for epidemic control measures. ' +
-                'We will inform everyone that if any suspected COVID-19 and provide such information ' +
-                'for CECC for the purpose of preventing spread of COVID-19 and tracing contacts.',
-        },
         authorization: {
             title: 'License (CC BY-SA 3.0 TW)',
             description:
                 'This document is licensed under an {license} license.',
             label: 'https://i.imgur.com/cVjN760.jpg',
             content:
-                'The Privacy Policy of PyCon Taiwan will be effective May 1st, 2021. ' +
+                'The Privacy Policy of PyCon Taiwan will be effective January 1st, 2023. ' +
                 'However, due to the rapidly changing social and legal environment and ' +
                 'the continual advancement in technology, we reserve the right to modify this ' +
                 'privacy policy at any time and will announce any update when available. Thank you.',
@@ -146,7 +133,7 @@ export default genI18nMessages({
     'zh-hant': {
         title: 'PyCon Taiwan 個人資料保護聲明',
         pageAbstract:
-            '感謝您參與臺灣 Python 年會 (以下簡稱「PyCon TW」)。{br}「PyCon TW 主辦團隊」(以下簡稱「我們」) ' +
+            '感謝您參與臺灣 Python 年會（以下簡稱「PyCon TW」）。{br}「PyCon TW 主辦團隊（以下簡稱「我們」）' +
             '將依個人資料保護法之規定來使用、{br}保管您於報名時所提供的個人資料，並維護您的隱私權。{br}同時，' +
             '我們在此對於您個人資料之使用蒐集將依下列聲明為利用、管理。',
         contents: [
@@ -215,20 +202,11 @@ export default genI18nMessages({
                 summary: [],
             },
         ],
-        covidStatement: {
-            title: '針對 2019 年新型冠狀病毒 (COVID-19) 防疫工作之個人資料收集聲明',
-            description:
-                '蒐集您的個人資料目的及法令依據，係為確保會眾健康安全及「嚴重特殊傳染性肺炎」防疫安全管理所必須，我們將依個人資料保護法，' +
-                '以公共衛生或傳染病防治及場所進出安全管理等目的，故有必要蒐集、處理或利用相關個人資料，請您詳閱。{br}{br}' +
-                'PyCon TW 配合防疫期間所蒐集的資料，將在資料蒐集日起 28 天後刪除。參與者進出各館與各廳紀錄將作為疫情管控使用，' +
-                '若會後有任何疑似感染情況，PyCon TW 將主動通知可能被影響的群眾，且得提供我國衛生主管機關依傳染病防治法等規定進' +
-                '行疫情調查及聯繫使用。',
-        },
         authorization: {
             title: '授權 (CC BY-SA 3.0 TW)',
             description: '此文件採用 {license} 授權條款。',
             content:
-                '本個人資料保護聲明從 2021 年 05 月 01 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，' +
+                '本個人資料保護聲明從 2023 年 01 月 01 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，' +
                 '為保護客戶個人資料安全及隱私，我們將隨時修改這份公告聲明，並將儘速更新與公告予您，感謝。',
         },
         question:
