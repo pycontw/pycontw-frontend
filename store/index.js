@@ -9,6 +9,24 @@ export const state = () => ({
     speechesData: [],
     speechData: {},
     relatedData: [],
+    configs: {
+        conferenceName: 'PyCon TW',
+        conferenceYear: '2023',
+        showSpeakingPage: true,
+        showAboutStaffPage: false,
+        showSchedulePage: false,
+        showSponsorPage: false,
+        showRegistrationPage: false,
+        showEventsPage: false,
+        showConferencePage: false,
+        showVenuePage: false,
+        showIndexSponsorSection: false,
+        showIndexAPACSection: false,
+        aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
+        eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
+        conferenceHideItems: [], // ['keynotes', 'talks', 'tutorials', 'youngInspirers']
+        registrationHideItems: [], // ['tickets', 'financialAid']
+    },
 })
 
 export const mutations = {

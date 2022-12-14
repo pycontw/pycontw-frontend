@@ -25,9 +25,11 @@ export default {
         }
     },
     head() {
+        const conferenceName = this.$store.state.configs.conferenceName
+        const conferenceYear = this.$store.state.configs.conferenceYear
         return {
             titleTemplate: (titleChunk) => {
-                const title = 'PyCon APAC 2022'
+                const title = `${conferenceName} ${conferenceYear}`
                 return titleChunk && titleChunk !== title
                     ? `${titleChunk} | ${title}`
                     : title
@@ -41,17 +43,17 @@ export default {
                 {
                     hid: 'description',
                     name: 'description',
-                    content: 'PyCon APAC 2022',
+                    content: `${conferenceName} ${conferenceYear}`,
                 },
                 {
                     hid: 'og:title',
                     property: 'og:title',
-                    content: 'PyCon APAC 2022',
+                    content: `${conferenceName} ${conferenceYear}`,
                 },
                 {
                     hid: 'og:description',
                     property: 'og:description',
-                    content: 'PyCon APAC 2022',
+                    content: `${conferenceName} ${conferenceYear}`,
                 },
                 {
                     hid: 'og:image',
@@ -69,7 +71,7 @@ export default {
                 {
                     rel: 'icon',
                     type: 'image/x-icon',
-                    href: '/2022/favicon.ico',
+                    href: `/${conferenceYear}/favicon.ico`,
                 },
                 {
                     rel: 'preconnect',
@@ -91,17 +93,17 @@ export default {
                 {
                     rel: 'alternate',
                     hreflang: 'x-default',
-                    href: 'https://tw.pycon.org/2021/en-us',
+                    href: `https://tw.pycon.org/${conferenceYear}/en-us`,
                 },
                 {
                     rel: 'alternate',
                     hreflang: 'en-us',
-                    href: 'https://tw.pycon.org/2021/en-us',
+                    href: `https://tw.pycon.org/${conferenceYear}/en-us`,
                 },
                 {
                     rel: 'alternate',
                     hreflang: 'zh-hant-tw',
-                    href: 'https://tw.pycon.org/2021/zh-hant',
+                    href: `https://tw.pycon.org/${conferenceYear}/zh-hant`,
                 },
             ],
             script: [
@@ -112,7 +114,7 @@ export default {
                         '@type': 'Organization',
                         name: 'PyCon Taiwan',
                         url: 'https://tw.pycon.org',
-                        logo: 'https://tw.pycon.org/2022/og-img.jpg',
+                        logo: `https://tw.pycon.org/${conferenceYear}/og-img.jpg`,
                         sameAs: [
                             'https://www.facebook.com/pycontw/',
                             'https://twitter.com/PyConTW/',

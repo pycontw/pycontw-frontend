@@ -34,7 +34,10 @@
         </div>
 
         <i18n-page-wrapper>
-            <intro :is-bulleted="isBulleted"></intro>
+            <intro
+                :is-showing-apac-intro="showIndexAPACSection"
+                :is-bulleted="isBulleted"
+            ></intro>
             <div class="bulletin-section">
                 <core-h2
                     :title="$t('bulletinList')"
@@ -43,7 +46,11 @@
                 ></core-h2>
                 <bulletin-card-collection></bulletin-card-collection>
             </div>
-            <div id="sponsor" class="sponsor-section">
+            <div
+                v-if="showIndexSponsorSection"
+                id="sponsor"
+                class="sponsor-section"
+            >
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"
@@ -119,6 +126,24 @@ export default {
                 }
             }
             return true
+        },
+        conferenceName() {
+            return this.$store.state.configs.conferenceName
+        },
+        conferenceYear() {
+            return this.$store.state.configs.conferenceYear
+        },
+        isCallingForProposals() {
+            return this.$store.state.configs.showSpeakingPage
+        },
+        isShowingScheduleButton() {
+            return this.$store.state.configs.showSchedulePage
+        },
+        showIndexSponsorSection() {
+            return this.$store.state.configs.showIndexSponsorSection
+        },
+        showIndexAPACSection() {
+            return this.$store.state.configs.showIndexAPACSection
         },
     },
     created() {
