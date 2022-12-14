@@ -162,13 +162,13 @@ export default {
 .landing__title {
     position: relative;
     top: 2.5rem;
-    background-image: url('~@/static/landing-title-rwd.svg');
+    background-image: url('~@/static/landing-title-rwd.png');
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 2rem;
     background-size: 100%;
-    min-height: 32vh;
-    min-width: 100%;
+    min-height: 50vh;
+    min-width: 100vw;
 }
 @media (min-width: 768px) {
     .landing__background::after {
@@ -177,11 +177,13 @@ export default {
         background-position-y: 0;
     }
     .landing__title {
-        background-image: url('~@/static/landing-title.svg');
+        background-image: url('~@/static/landing-title.png');
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: 2.5rem;
-        background-size: 60%;
+        background-size: 100%;
+        min-height: 35vh;
+        min-width: 45vw;
     }
 }
 .text-golden {
