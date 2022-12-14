@@ -8,7 +8,6 @@
                     flex flex-col
                     items-start
                     text-golden
-                    sm:mx-8
                     md:mx-24
                     lg:mx-32
                 "
