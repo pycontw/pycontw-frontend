@@ -6,10 +6,10 @@
     >
         <img
             src="~/static/icon.svg"
-            alt="Home icon of PyConTW 2021"
+            :alt="`Home icon of ${conferenceName} ${conferenceYear}`"
             class="w-6"
         />
-        <span class="font-bold ml-2"> PyCon APAC </span>
+        <span class="font-bold ml-2"> {{ conferenceName }} </span>
     </locale-link>
 </template>
 
@@ -20,6 +20,14 @@ export default {
     name: 'HomeIcon',
     components: {
         LocaleLink,
+    },
+    computed: {
+        conferenceName() {
+            return this.$store.state.configs.conferenceName
+        },
+        conferenceYear() {
+            return this.$store.state.configs.conferenceYear
+        },
     },
 }
 </script>

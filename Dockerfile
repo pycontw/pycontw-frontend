@@ -19,8 +19,8 @@ COPY store ./store
 COPY utils ./utils
 COPY nuxt.config.js tailwind.config.js .babelrc .env ./
 
-ENV ROUTER_BASE /2022/
-ENV BASE_URL http://pycontw-2022:8000
+ENV ROUTER_BASE /2023/
+ENV BASE_URL http://pycontw-2023:8000
 ENV BUILD_TARGET server
 ENV HOST 0.0.0.0
 ENV API_URL_BROWSER https://tw.pycon.org/prs
