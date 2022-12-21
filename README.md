@@ -20,7 +20,7 @@ Frontend of PyCon TW official website.
 2. Add Environment Variables to configure this project:
 
     ```bash
-    export BUILD_TARGET=server                   
+    export BUILD_TARGET=server
     export HOST=127.0.0.1
     export BASE_URL=http://127.0.0.1:9876
     export API_URL_BROWSER=http://127.0.0.1:9876
