@@ -95,6 +95,7 @@ export default {
         getImgStyle(img) {
             return {
                 'background-image': `url(${img})`,
+                'border-radius': '5%',
             }
         },
     },
@@ -126,5 +127,6 @@ export default {
 <style scoped>
 .paragraph-title {
     @apply font-serif font-bold text-pink-700;
+    text-align: center;
 }
 </style>
