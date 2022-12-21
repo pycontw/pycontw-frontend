@@ -2,7 +2,7 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        pyconWelcome: 'Welcome to PyCon TW 2021',
+        pyconWelcome: 'Welcome to PyCon TW 2023',
         pyconIntro: 'PyCon Taiwan',
         achieveFirstStatLine: 'Hold',
         achieveFirstEndLine: 'years',
@@ -19,7 +19,7 @@ export default genI18nMessages({
         checkEvents: 'Event Schedule',
     },
     'zh-hant': {
-        pyconWelcome: '歡迎來到 PyCon TW 2021',
+        pyconWelcome: '歡迎來到 PyCon TW 2023',
         pyconIntro: 'PyCon Taiwan',
         achieveFirstStatLine: '持續舉辦',
         achieveFirstEndLine: '年',

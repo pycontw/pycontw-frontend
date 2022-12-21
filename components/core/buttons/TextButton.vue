@@ -131,7 +131,7 @@ export default {
     &.--large:not(.--is-link),
     &.--large > a {
         @apply font-bold;
-        height: 87px;
+        height: 86px;
         font-size: 28px;
         padding: 24px 48px;
         min-width: 128px;
@@ -151,7 +151,7 @@ export default {
         @apply h-12 font-semibold text-base;
         padding: 10px 22px;
         min-width: 80px;
-        height: 42px;
+        height: 60px;
         font-size: 16px;
     }
 }
