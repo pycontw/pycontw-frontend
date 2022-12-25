@@ -48,41 +48,53 @@
         <i18n path="requiredFields-summaries.1" tag="p"></i18n>
 
         <!-- Advices -->
-        <h2>{{ $t('advice-title') }}</h2>
-        <i18n path="advice-previousConf" tag="p"> </i18n>
-        <ul class="list-disc">
-            <li
-                v-for="(conf, i) in previousConfLinks"
-                :key="`talk_previous_conf_${i}`"
-            >
-                <ext-link :href="conf[1]" highlight>
-                    {{ conf[0] }}
-                </ext-link>
-            </li>
-        </ul>
+        <two-col-wrapper>
+            <template #default>
+                <h2>{{ $t('advice-title') }}</h2>
+            </template>
+            <template #right-col>
+                <i18n path="advice-previousConf" tag="p"> </i18n>
+                <ul class="list-disc list-inside">
+                    <li
+                        v-for="(conf, i) in previousConfLinks"
+                        :key="`talk_previous_conf_${i}`"
+                    >
+                        <ext-link :href="conf[1]" highlight>
+                            {{ conf[0] }}
+                        </ext-link>
+                    </li>
+                </ul>
+            </template>
+        </two-col-wrapper>
 
         <!-- Good & Bad Ideas -->
         <div
             v-for="(tag, i) in ['goodIdea', 'badIdea']"
             :key="`talk_idea_type_${i}`"
         >
-            <h3>{{ $t(`advice-${tag}-title`) }}</h3>
-            <ul class="list-disc">
-                <li
-                    v-for="(idea, j) in $t(`advice-${tag}-ideas`)"
-                    :key="`talk_idea_type_${i}_idea_${j}`"
-                >
-                    {{ idea[0] }}
-                    <ul v-if="idea[1]" class="list-disc">
+            <two-col-wrapper>
+                <template #default>
+                    <h3>{{ $t(`advice-${tag}-title`) }}</h3>
+                </template>
+                <template #right-col>
+                    <ul class="list-disc">
                         <li
-                            v-for="(detail, k) in idea[1]"
-                            :key="`talk_idea_type_${i}_idea_${j}_detail_${k}`"
+                            v-for="(idea, j) in $t(`advice-${tag}-ideas`)"
+                            :key="`talk_idea_type_${i}_idea_${j}`"
                         >
-                            {{ detail }}
+                            {{ idea[0] }}
+                            <ul v-if="idea[1]" class="list-disc list-inside">
+                                <li
+                                    v-for="(detail, k) in idea[1]"
+                                    :key="`talk_idea_type_${i}_idea_${j}_detail_${k}`"
+                                >
+                                    {{ detail }}
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
+                </template>
+            </two-col-wrapper>
         </div>
 
         <!-- Choose Level -->
@@ -101,13 +113,19 @@
             v-for="(levelInfo, i) in $t('chooseLevel-levels')"
             :key="`talk_choose_level_level_${i}`"
         >
-            <h3>{{ levelInfo[0] }}</h3>
-            <p
-                v-for="(description, j) in levelInfo[1]"
-                :key="`talk_choose_level_level_${i}_content_${j}`"
-            >
-                {{ description }}
-            </p>
+            <two-col-wrapper>
+                <template #default>
+                    <h3>{{ levelInfo[0] }}</h3>
+                </template>
+                <template #right-col>
+                    <p
+                        v-for="(description, j) in levelInfo[1]"
+                        :key="`talk_choose_level_level_${i}_content_${j}`"
+                    >
+                        {{ description }}
+                    </p>
+                </template>
+            </two-col-wrapper>
         </div>
     </i18n-page-wrapper>
 </template>
@@ -118,6 +136,7 @@ import CoreH1 from '@/components/core/titles/H1'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import i18n from '@/i18n/speaking/talk.i18n'
+import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
     i18n,
@@ -127,6 +146,7 @@ export default {
         CoreH1,
         ExtLink,
         LocaleLink,
+        TwoColWrapper,
     },
     computed: {
         myPyConLink() {

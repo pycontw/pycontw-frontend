@@ -23,7 +23,7 @@ export default {
     }
 }
 .two-col-layout {
-    @apply grid my-4;
+    @apply grid my-4 pt-4;
 }
 .left-col {
     @apply justify-self-start mb-2 text-primary-500;

@@ -5,7 +5,7 @@ export default genI18nMessages({
         title: 'How to Propose a Talk?',
         intro: [
             'For general proposal calling information, see {cfp}. ',
-            'First of all, thank you for your interest in speaking at PyCon APAC 2022! ' +
+            'First of all, thank you for your interest in speaking at PyCon Taiwan 2023! ' +
                 'The following will help you submit a successful proposal. ' +
                 'In the following, we will provide tips to make your proposal strong ' +
                 'and informative to increase the chance of your proposal to be accepted. ',
@@ -57,8 +57,8 @@ export default genI18nMessages({
 
         'advice-title': 'Topics and General Advice',
         'advice-previousConf':
-            'To help you pick a topic that will be suitable for PyCon APAC 2022, ' +
-            'you can first find out the accepted talks from the previous PyCon APAC and PyCon Taiwan:',
+            'To help you pick a topic that will be suitable for PyCon Taiwan 2023, ' +
+            'you can first find out the accepted talks from the previous PyCon Taiwan and PyCon Taiwan:',
 
         'advice-goodIdea-title': 'Good Ideas',
         'advice-goodIdea-ideas': [
@@ -165,7 +165,7 @@ export default genI18nMessages({
         og: {
             title: 'How to Propose a Talk?',
             description:
-                'First of all, thank you for your interest in speaking at PyCon APAC 2022! ' +
+                'First of all, thank you for your interest in speaking at PyCon Taiwan 2023! ' +
                 'The following will help you submit a successful proposal. ' +
                 'In the following, we will provide tips to make your proposal strong ' +
                 'and informative to increase the chance of your proposal to be accepted. ',
@@ -175,7 +175,7 @@ export default genI18nMessages({
         title: '如何投稿演講（Talk）？',
         intro: [
             '有關投稿的整體流程說明，請參考{cfp}頁面。',
-            '首先，感謝您投稿 PyCon APAC 2022！下面的內容將會幫助您成功地送出一份投稿。' +
+            '首先，感謝您投稿 PyCon Taiwan 2023！下面的內容將會幫助您成功地送出一份投稿。' +
                 '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
                 '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路：',
         ],
@@ -220,7 +220,7 @@ export default genI18nMessages({
 
         'advice-title': '主題與一般建議',
         'advice-previousConf':
-            '在判斷題目適不適合 PyCon APAC 2022 時，可以先看看過去的 PyCon APAC 及 PyCon Taiwan 有哪些被接受的講題：',
+            '在判斷題目適不適合 PyCon Taiwan 2023 時，可以先看看過去的 PyCon Taiwan 及 PyCon Taiwan 有哪些被接受的講題：',
         'advice-goodIdea-title': '投稿好主意',
         'advice-goodIdea-ideas': [
             [
@@ -306,7 +306,7 @@ export default genI18nMessages({
         og: {
             title: '如何投稿演講（Talk）？',
             description:
-                '首先，感謝您投稿 PyCon APAC 2022！下面的內容將會幫助您成功地送出一份投稿。' +
+                '首先，感謝您投稿 PyCon Taiwan 2023！下面的內容將會幫助您成功地送出一份投稿。' +
                 '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
                 '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路',
         },
