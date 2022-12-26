@@ -38,6 +38,30 @@
                     >
                         {{ description }}
                     </p>
+                    <div class="flex flex-wrap justify-center mx-2 my-3">
+                        <div v-for="(img, j) in sub1" :key="`sub1_img_${j}`">
+                            <div
+                                class="
+                                    w-10
+                                    md:w-20
+                                    h-10
+                                    md:h-40
+                                    bg-contain bg-no-repeat
+                                    mx-2
+                                    md:mx-5
+                                    my-3
+                                "
+                                :style="getImgStyle(img)"
+                            ></div>
+                        </div>
+                    </div>
+                    <div
+                        v-for="(subtitle, subtitleIndex) in rule.subtitle"
+                        :key="`coc-description-${subtitleIndex}`"
+                        class="text-xs md:text-base leading-5 md:leading-8"
+                    >
+                        {{ subtitle.title }} {{ subtitle.descriptions[0] }}
+                    </div>
                     <ol v-if="rule.list" class="list-decimal ml-5">
                         <li
                             v-for="(li, liIndex) in rule.list"
@@ -46,12 +70,6 @@
                             {{ li }}
                         </li>
                     </ol>
-                    <p
-                        v-if="rule.addition"
-                        class="text-xs md:text-base leading-5 md:leading-8"
-                    >
-                        {{ rule.addition }}
-                    </p>
                 </div>
             </div>
         </I18nPageWrapper>
@@ -67,6 +85,9 @@ import CoreH1 from '@/components/core/titles/H1'
 import IntroImg1 from '@/static/img/about/code-of-conduct/Intro-1.png'
 import IntroImg2 from '@/static/img/about/code-of-conduct/Intro-2.png'
 import IntroImg3 from '@/static/img/about/code-of-conduct/Intro-3.png'
+import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.png'
+import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.png'
+import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.png'
 
 export default {
     i18n,
@@ -80,6 +101,7 @@ export default {
         return {
             aboutBanner: AboutBanner,
             introImgs: [IntroImg1, IntroImg2, IntroImg3],
+            sub1: [Icon1, Icon2, Icon3],
         }
     },
     computed: {
