@@ -12,24 +12,8 @@
                     lg:mx-32
                 "
             >
-                <div class="page-home__title">
-                    <img
-                        class="title-img"
-                        src="~/static/index-title.svg"
-                        :alt="`Title of ${conferenceName} ${conferenceYear}`"
-                    />
-                </div>
-                <div
-                    v-if="isCallingForProposals"
-                    class="
-                        w-full
-                        flex flex-col
-                        justify-between
-                        items-center
-                        md:flex-row
-                        mt-32
-                    "
-                >
+                <div class="landing__title" />
+                <div class="text-button-wrapper">
                     <text-button
                         :href="
                             landingButton.isExternalLink
@@ -44,11 +28,6 @@
                     >
                         {{ $t(landingButton.textKey) }}
                     </text-button>
-                </div>
-                <div v-if="isShowingScheduleButton" class="text-button-wrapper">
-                    <text-button to="/conference/schedule">{{
-                        $t('checkEvents')
-                    }}</text-button>
                 </div>
             </div>
         </div>
@@ -131,6 +110,7 @@ export default {
     data() {
         return {
             isOpened: false,
+            landingButton: landingButtonConfig.JOIN_US,
             selectedSponsor: {},
         }
     },

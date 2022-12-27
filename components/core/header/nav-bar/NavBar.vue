@@ -6,7 +6,7 @@
             :class="getPageClassesByPath('about')"
         >
         </nav-bar-item-dropdown>
-        <!-- <nav-bar-item-dropdown
+        <nav-bar-item-dropdown
             :label="$t('speaking')"
             :items="speakingItems"
             :class="getPageClassesByPath('speaking')"
@@ -33,6 +33,7 @@
         >
         </nav-bar-item-dropdown>
         <nav-bar-item-dropdown
+            v-if="showEventsPage"
             :label="$t('events')"
             :items="eventsItems"
             :class="getPageClassesByPath('events')"
