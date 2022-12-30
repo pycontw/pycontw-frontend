@@ -4,133 +4,140 @@ export default genI18nMessages({
     'en-us': {
         title: 'Code of Conduct',
         pageAbstract:
-            'PyCon Taiwan aims to provide a joyous, pleasant and vibrant environment. ' +
-            'This convention applies to all the words and deeds of participants in the' +
-            'relevant entities and digital fields of PyCon Taiwan. It is hoped that everyone will' +
-            'work together to make PyCon Taiwan full of mutual respect and trust.',
+            'PyCon Taiwan aims to provide a joyous, pleasant and vibrant environment.' +
+            'This convention applies to all the words and deeds of participants in ' +
+            'therelevant entities and digital fields of PyCon Taiwan. It is hoped ' +
+            'that everyone willwork together to make PyCon Taiwan full of mutual respect and trust.',
         contents: [
             {
-                title: 'Principles',
+                title: '三大原則',
                 descriptions: [
-                    'PyCon Taiwan is dedicated to providing a harassment-free conference experience ' +
-                        'for everyone. We do not tolerate harassment toward conference participants in any form.',
+                    'PyCon Taiwan is dedicated to providing a harassment-free conference' +
+                        'experience for everyone. We do not tolerate harassment toward conference' +
+                        'participants in any form.Remember that harassment and jokes that are sexist, ' +
+                        'racist, or exclusionary are not tolerated at PyCon Taiwan. PyCon Taiwan take' +
+                        'appropriate actions to redirect behavior violating the Code of Conduct.',
                 ],
                 list: [
-                    'Do not harass others.',
-                    'Appreciate each other.',
-                    'Show consideration to others.',
+                    'Do not harass others',
+                    'Appreciate each other',
+                    'Show consideration',
                 ],
-                addition:
-                    'Remember that harassment and jokes that are sexist, racist, or exclusionary are not ' +
-                    'tolerated at PyCon Taiwan. PyCon Taiwan take appropriate actions to redirect behavior ' +
-                    'violating the Code of Conduct.',
-            },
-            {
-                title: 'Do not harass others',
-                descriptions: [
-                    'PyCon Taiwan will not tolerate any form of harassment and discrimination. Each attendee ' +
-                        'should be equally respected regardless of nationality, race, language, gender, sexual ' +
-                        'orientation, age, disability, physical appearance, faith, profession, seniority, political ' +
-                        'view, or intellect.',
-                ],
-            },
-            {
-                title: 'Appreciate each other',
-                descriptions: [
-                    'Each attendee is expected to act professionally when attending PyCon Taiwan. Users of Python ' +
-                        'are diverse in their professional roles, technical backgrounds, and application areas. They ' +
-                        'contribute to the technology in many different ways, some amazingly unimaginable. Opinions or ' +
-                        'actions that undervalue other members of the community are inappropriate and will not be tolerated.',
-                ],
-            },
-            {
-                title: 'Show consideration to others',
-                descriptions: [
-                    'Sexual contents in any form are inappropriate in any conference venue, including but not limited ' +
-                        'to talks, open spaces, or social media. Words and actions originated from stereotypes are ' +
-                        'discouraged. Cell phones should be set to silent or a mode that does not annoy others in the ' +
-                        'conference rooms.',
+                subtitle: [
+                    {
+                        title: '禁止騷擾',
+                        descriptions: [
+                            'PyCon Taiwan will not tolerate any form of harassment and discrimination.' +
+                                'Each attendee should be equally respected regardless of nationality, race, ' +
+                                'language, gender, sexual orientation, age, disability, physical appearance, ' +
+                                'faith, profession, seniority, political view, or intellect.',
+                        ],
+                    },
+                    {
+                        title: '彼此欣賞 ',
+                        descriptions: [
+                            'Each attendee is expected to act professionally when attending Pycon Taiwan. ' +
+                                'Users of Python are diverse in their professional roles, technical backgrounds, ' +
+                                'and application areas. They contribute to the technology in many different ways, ' +
+                                'some amazingly unimaginable. Opinions or actions that undervalue other members of ' +
+                                'the community are inappropriate and will not be tolerated. ',
+                        ],
+                    },
+                    {
+                        title: '體貼他人',
+                        descriptions: [
+                            'Sexual contents in any form are inappropriate in any conference venue, ' +
+                                'including but not limited to talks, open spaces, or social media. Words ' +
+                                'and actions originated from stereotypes are discouraged. Cell phones should ' +
+                                'be set to silent or a mode that does not annoy others in the conference rooms.',
+                        ],
+                    },
                 ],
             },
             {
                 title: 'Violation and Reporting',
                 descriptions: [
-                    'Conference organizers will take appropriate actions on behaviors violating the Code of Conduct. ' +
+                    'Conference organizers will take appropriate actions on behaviors violating the Code of Conduct.' +
                         'Violators may be required to leave the conference without a refund at the sole discretion of ' +
                         'the organizers. This Code of Conduct is applicable to both physical and online events approved ' +
                         'by the organizers of PyCon Taiwan.',
                 ],
-            },
-            {
-                title: 'Attendee Procedure For Reporting Code of Conduct Incidents',
-                descriptions: [
-                    'If you believe someone is in danger, including from themselves, the most important thing is to ' +
-                        'find help.',
-                    'If you feel your safety is in jeopardy, please immediately contact law enforcement in Taiwan ' +
-                        '(dialing 110 in Taiwan). Ask an organizing staff if you do not have a cell phone.',
-                    'If you believe the Code of Conduct has been violated, please report the incident to a staff member ' +
-                        'right away. If you are unsure whether it is a violation, or whether the space where it has ' +
-                        'happened is covered by this Code of Conduct, we encourage you to still report it.',
-                    'In the event where there is conflict of interest, you may directly contact any of the lead ' +
-                        'incident responders:',
-                ],
-                list: [
-                    'Committee of Incident Response, PyCon Taiwan(report@python.tw)',
-                    'David Yung-Sheng Lu(Chairperson of PyCon APAC 2022, davidlu@python.tw)',
-                ],
-            },
-            {
-                title: 'Report Data',
-                descriptions: [
-                    'If you make a report via email or phone, please include:',
-                ],
-                list: [
-                    'Your contact information (so we can get in touch with you if we need to follow up).',
-                    'Date and time of the incident.',
-                    'Location of the incident.',
-                    'Whether the incident is ongoing.',
-                    'Description of the incident.',
-                    'Identifying information of the reported person: name, physical appearance, height, clothing, ' +
-                        'voice accent, identifying badge information such as company name, ribbons, or badge number.',
-                    'Additional circumstances surrounding the incident.',
-                    'Other people involved in, or witnesses to the incident, and their contact information or description.',
-                ],
-            },
-            {
-                title: 'Confidentiality',
-                descriptions: [
-                    'All reports are confidential. When we discuss incidents with people who are reported, we will ' +
-                        'anonymize details as much as we can to protect the reporter’s privacy.',
-                    'However, the reported person may be able to guess who made the report in certain situations, ' +
-                        'even with details anonymized. If you have concerns about retaliation or your personal ' +
-                        'safety, please note those in your report. We still encourage you to report, so that we ' +
-                        'can support you while keeping our conference attendees safe. In some cases, we can compile ' +
-                        'several anonymized reports into a pattern of behavior, and take action based on these reports.',
-                    'In cetain cases, we may determine that a public statement needs to be made. In such cases,' +
-                        'the identities of all victims and reporters will remain confidential unless the individuals ' +
-                        'involved instruct us otherwise.',
-                ],
-            },
-            {
-                title: 'Report Handling Procedure',
-                descriptions: [
-                    'When you make a report to an incident responder, they will gather information about the incident ' +
-                        'according to the Procedure For Incident Response.',
-                    'After an incident responder takes the report, they will immediately consult with the PyCon ' +
-                        'Taiwan staff, unless there is a conflict of interest (involved directly with one of the ' +
-                        'PyCon Taiwan / APAC staff), in which case any non-interested parties will be contacted.',
-                    'If the incident is ongoing and needs to be immediately addressed, any lead incident responder ' +
-                        'may take appropriate action to ensure the safety of everyone involved. If the situation ' +
-                        'requires it, this may take the form of a referral to an appropriate non-PyCon agency, ' +
-                        'including the law enforcement in Taiwan.',
-                    'If the incident is less urgent, the report will be discussed by the event staff, who will ' +
-                        'meet to determine an appropriate response.',
-                ],
-            },
-            {
-                title: 'Notes',
-                descriptions: [
-                    'This procedure has been adapted from the PyCon Procedure for Incident Handling.',
+                subtitle: [
+                    {
+                        title: 'Requirements',
+                        descriptions: [
+                            'If you believe someone is in danger, including from themselves, the most important thing ' +
+                                'is to find help. If you feel your safety is in jeopardy, please immediately contact law ' +
+                                'enforcement in Taiwan (dialing 110 in Taiwan). Ask an organizing staff if you do not have' +
+                                'a cell phone. If you believe the Code of Conduct has been violated, please report the incident' +
+                                'to a staff member right away. If you are unsure whether it is a violation, or whether the space' +
+                                'where it has happened is covered by this Code of Conduct, we encourage you to still report it.',
+                        ],
+                    },
+                    {
+                        title: 'How to Report',
+                        descriptions: [
+                            'In the event where there is conflict of interest, you may directly contact any of the lead incident responders:',
+                        ],
+                        list: [
+                            'Committee of Incident Response, PyCon Taiwan(report@python.tw)',
+                            'David Yung-Sheng Lu(Chairperson of PyCon APAC 2022, davidlu@python.tw)',
+                        ],
+                    },
+                    {
+                        title: 'Report Data',
+                        descriptions: [
+                            'If you make a report via email or phone, please include:',
+                        ],
+                        list: [
+                            'Your contact information (so we can get in touch with you if we need to follow up).',
+                            'Date and time of the incident.',
+                            'Location of the incident.',
+                            'Whether the incident is ongoing.',
+                            'Description of the incident.',
+                            'Identifying information of the reported person: name, physical appearance, height, ' +
+                                'clothing, voice accent, identifying badge information such as company name, ribbons, ' +
+                                'or badge number.',
+                            'Additional circumstances surrounding the incident.',
+                            'Other people involved in, or witnesses to the incident, and their contact information or description.。',
+                        ],
+                    },
+                    {
+                        title: 'Procedure',
+                        descriptions: [
+                            'When you make a report to an incident responder, they will gather information ' +
+                                'about the incident according to the Procedure For Incident Response. ' +
+                                'After an incident responder takes the report, they will immediately consult ' +
+                                'with the PyCon Taiwan staff, unless there is a conflict of interest (involved ' +
+                                'directly with one of the PyCon Taiwan / APAC staff), in which case any non-interested ' +
+                                'parties will be contacted.' +
+                                'If the incident is ongoing and needs to be immediately addressed, any lead incident ' +
+                                'responder may take appropriate action to ensure the safety of everyone involved. ' +
+                                'If the situation requires it, this may take the form of a referral to an appropriate ' +
+                                'non-PyCon agency, including the law enforcement in Taiwan.' +
+                                'If the incident is less urgent, the report will be discussed by the event staff, who ' +
+                                'will meet to determine an appropriate response.',
+                        ],
+                    },
+                    {
+                        title: 'Confidentiality',
+                        descriptions: [
+                            'All reports are confidential. When we discuss incidents with people who are reported, ' +
+                                'we will anonymize details as much as we can to protect the reporter’s privacy.' +
+                                'However, the reported person may be able to guess who made the report in certain ' +
+                                'situations, even with details anonymized. If you have concerns about retaliation or ' +
+                                'your personal safety, please note those in your report. We still encourage you to ' +
+                                'report, so that we can support you while keeping our conference attendees safe. ' +
+                                'In some cases, we can compile several anonymized reports into a pattern of behavior, ' +
+                                'and take action based on these reports.',
+                        ],
+                    },
+                    {
+                        title: 'Notes',
+                        descriptions: [
+                            'This procedure has been adapted from the PyCon Procedure for Incident Handling.',
+                        ],
+                    },
                 ],
             },
         ],
@@ -150,7 +157,7 @@ export default genI18nMessages({
                 list: ['禁止騷擾言行', '彼此欣賞', '體貼他人'],
                 subtitle: [
                     {
-                        title: '禁止騷擾言行',
+                        title: '禁止騷擾',
                         descriptions: [
                             '大會不容忍任何的騷擾或歧視。無分國籍、種族、語言、性別、性取向、年齡、身心狀況、信仰、職業、資歷' +
                                 '、政治傾向、智力等，每一位參與者都應該獲得同樣的尊重。',
@@ -178,15 +185,6 @@ export default genI18nMessages({
                     'PyCon Taiwan 致力於為所有人提供無騷擾的會議體驗（包含數位場域），我們不容許以任何形式騷擾任何' +
                         '參與者。請各位務必遵守以下三大原則：',
                 ],
-                list: [
-                    '收到通報',
-                    '與工作人員協商討論',
-                    '需立即處理',
-                    '不具急迫性',
-                    '採取適當行動',
-                    '視情況轉交執法單位',
-                    '開會討論應變方式',
-                ],
                 subtitle: [
                     {
                         title: '通報要件',
@@ -205,9 +203,9 @@ export default genI18nMessages({
                             '如果發生衝突，可以直接聯繫任一通報應變者：',
                         ],
                         list: [
-                            '1. PyCon Taiwan 事件通報應變委員會',
+                            'PyCon Taiwan 事件通報應變委員會',
                             '   report@python.tw',
-                            '2. David Yung-Sheng Lu(PyCon APAC 2022 大會主席',
+                            'David Yung-Sheng Lu(PyCon APAC 2022 大會主席',
                             '   davidlu@python.tw',
                         ],
                     },
@@ -217,14 +215,14 @@ export default genI18nMessages({
                             '如果您透過電子郵件進行通報，請盡量包含以下內容：',
                         ],
                         list: [
-                            '1. 您的聯繫方式（以便與您取得聯繫）。',
-                            '2. 事件發生的日期和時間。',
-                            '3. 事件發生地點。',
-                            '4. 事件是否正在發生。',
-                            '5. 事件描述。',
-                            '6. 被舉報人的識別資訊：姓名、外貌、身高、服裝、口音、識別徽章資訊，如公司名稱、名牌或識別證。',
-                            '7. 圍繞事件的其他情況。',
-                            '8. 其他參與及其聯繫方式或描述。',
+                            '您的聯繫方式（以便與您取得聯繫）。',
+                            '事件發生的日期和時間。',
+                            '事件發生地點。',
+                            '事件是否正在發生。',
+                            '事件描述。',
+                            '被舉報人的識別資訊：姓名、外貌、身高、服裝、口音、識別徽章資訊，如公司名稱、名牌或識別證。',
+                            '圍繞事件的其他情況。',
+                            '其他參與及其聯繫方式或描述。',
                         ],
                     },
                     {
