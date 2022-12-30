@@ -38,8 +38,12 @@
                     >
                         {{ description }}
                     </p>
-                    <div class="flex flex-wrap justify-center mx-2 my-3">
-                        <div v-for="(img, j) in sub1" :key="`sub1_img_${j}`">
+                    <!-- 第一張圖片 -->
+                    <div
+                        v-if="i == 0"
+                        class="flex flex-wrap justify-center mx-2 my-1"
+                    >
+                        <div v-for="(img, j) in sub1" :key="`sub_img_${j}`">
                             <div
                                 class="
                                     w-10
@@ -49,27 +53,62 @@
                                     bg-contain bg-no-repeat
                                     mx-2
                                     md:mx-5
-                                    my-3
+                                    my-10
                                 "
                                 :style="getImgStyle(img)"
-                            ></div>
+                            >
+                                <div
+                                    class="
+                                        flex
+                                        justify-center
+                                        text-xs
+                                        pt-20
+                                        h-30
+                                    "
+                                >
+                                    {{ rule.list[j] }}
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <!-- 第一張圖片 -->
+                    <div v-else class="flex flex-wrap justify-center mx-2 my-1">
+                        <div
+                            class="
+                                w-40
+                                md:w-40
+                                h-60
+                                md:h-40
+                                bg-contain bg-no-repeat
+                                mx-2
+                                md:mx-5
+                                my-10
+                            "
+                            :style="getImgStyle(sub2)"
+                        ></div>
                     </div>
                     <div
                         v-for="(subtitle, subtitleIndex) in rule.subtitle"
                         :key="`coc-description-${subtitleIndex}`"
                         class="text-xs md:text-base leading-5 md:leading-8"
                     >
-                        {{ subtitle.title }} {{ subtitle.descriptions[0] }}
+                        <div class="flex align-middle">
+                            <div class="w-1/4 h-1/2 text-top pr-4 md:text-base">
+                                <h2>{{ subtitle.title }}</h2>
+                            </div>
+                            <div class="w-3/4 h-1/2 pl-4">
+                                <p>{{ subtitle.descriptions[0] }}</p>
+                            </div>
+                            <ol class="h-1/2 list-decimal ml-5">
+                                <li
+                                    v-for="(li, liIndex) in subtitle.list"
+                                    :key="`coc-list-${liIndex}`"
+                                >
+                                    {{ li }}
+                                </li>
+                            </ol>
+                        </div>
                     </div>
-                    <ol v-if="rule.list" class="list-decimal ml-5">
-                        <li
-                            v-for="(li, liIndex) in rule.list"
-                            :key="`coc-list-${liIndex}`"
-                        >
-                            {{ li }}
-                        </li>
-                    </ol>
                 </div>
             </div>
         </I18nPageWrapper>
@@ -88,6 +127,7 @@ import IntroImg3 from '@/static/img/about/code-of-conduct/Intro-3.png'
 import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.png'
 import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.png'
 import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.png'
+import Icon4 from '@/static/img/about/code-of-conduct/Icon-4.png'
 
 export default {
     i18n,
@@ -102,6 +142,7 @@ export default {
             aboutBanner: AboutBanner,
             introImgs: [IntroImg1, IntroImg2, IntroImg3],
             sub1: [Icon1, Icon2, Icon3],
+            sub2: Icon4,
         }
     },
     computed: {
