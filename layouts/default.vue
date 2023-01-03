@@ -165,4 +165,13 @@ html {
 body.modal-open {
     overflow: hidden;
 }
+
+.page-enter-active,
+.page-leave-active {
+    transition: 0.3s;
+}
+.page-enter,
+.page-leave-to {
+    opacity: 0;
+}
 </style>
