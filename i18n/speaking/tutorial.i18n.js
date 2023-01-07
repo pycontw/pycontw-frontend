@@ -27,7 +27,7 @@ export default genI18nMessages({
 
         policies: [
             [
-                'Tutorial Duration',
+                'Duration',
                 [
                     'The length of the tutorial is 1 hour and 30 minutes.',
                     'In our previous experiences, tutorials that run for 6 hours were exhausting for both instructors and students, ' +
@@ -39,7 +39,7 @@ export default genI18nMessages({
                 ],
             ],
             [
-                'Tutorial Dates and Location',
+                'Dates/Location',
                 [
                     'Tutorials are held in parallel with the main conference, and tutorials will be held at the same online venue ' +
                         'as the main conference, albeit in different rooms.',
@@ -50,7 +50,7 @@ export default genI18nMessages({
                 ['All tutorials will be free for conference participants.'],
             ],
             [
-                'How can I become a better instructor?',
+                'How to Become an Instructor',
                 [
                     'The easiest way is to get involved in your local Python communities by speaking at these events.',
                     'If you have any questions or suggestions, please don’t hesitate to {contact}.',
@@ -97,7 +97,7 @@ export default genI18nMessages({
 
         policies: [
             [
-                '專業課程的長度',
+                '課程長度',
                 [
                     '專業課程的長度為 1.5 小時',
                     '在過往的經驗中，6 小時的課程對於講師以及學員而言都非常的累，學員容易因為疲勞而無法持續跟上進度，且難以吸收所學。' +
@@ -106,14 +106,14 @@ export default genI18nMessages({
                 ],
             ],
             [
-                '專業課程的時間與場地',
+                '時間與場地',
                 [
                     '專業課程與會期同時，將和 PyCon Taiwan 大會平行舉行，教室待定。',
                 ],
             ],
-            ['專業課程售票政策', ['本次會議專業課程不額外收費。']],
+            ['售票政策', ['本次會議專業課程不額外收費。']],
             [
-                '如何成為專業課程的講師？',
+                '如何成為講師',
                 [
                     '最簡單也是最好的答案：多多參與各地 Python 的社群並多給演講吧！',
                     '如果有任何疑問或需要協助的地方，歡迎{contact}。',

@@ -117,5 +117,6 @@ export default {
     @media (min-width: 1024px) {
         @apply px-6;
     }
+    @apply xl:px-12;
 }
 </style>
