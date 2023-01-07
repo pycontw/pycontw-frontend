@@ -15,25 +15,27 @@
             </template>
         </i18n>
 
-        <!-- Policies -->
-        <div
-            v-for="(policy, i) in $t('policies')"
-            :key="`recording_policy_${i}`"
-        >
-            <two-col-wrapper class="recording__two-col-wrapper">
-                <template #default>
-                    <h2>{{ policy[0] }}</h2>
-                </template>
-                <template #right-col>
-                    <i18n
-                        v-for="(description, j) in policy[1]"
-                        :key="`recording_policy_${i}_description_${j}`"
-                        :path="`policies.${i}[1].${j}`"
-                        tag="p"
-                    >
-                    </i18n>
-                </template>
-            </two-col-wrapper>
+        <div class="recording__policies">
+            <div
+                v-for="(policy, i) in $t('policies')"
+                :key="`recording_policy_${i}`"
+                class="recording__policy"
+            >
+                <two-col-wrapper>
+                    <template #default>
+                        <h2>{{ policy[0] }}</h2>
+                    </template>
+                    <template #right-col>
+                        <i18n
+                            v-for="(description, j) in policy[1]"
+                            :key="`recording_policy_${i}_description_${j}`"
+                            :path="`policies.${i}[1].${j}`"
+                            tag="p"
+                        >
+                        </i18n>
+                    </template>
+                </two-col-wrapper>
+            </div>
         </div>
     </i18n-page-wrapper>
 </template>
@@ -44,6 +46,7 @@ import CoreH1 from '@/components/core/titles/H1'
 import ExtLink from '@/components/core/links/ExtLink'
 import i18n from '@/i18n/speaking/recording.i18n'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
+
 export default {
     i18n,
     name: 'PageSpeakingRecording',
@@ -85,8 +88,13 @@ export default {
         @apply text-base;
     }
 }
-.recording__two-col-wrapper {
-    @apply md:py-8;
+
+.recording__policies {
+    @apply md:pt-2;
+}
+
+.recording__policy {
+    @apply md:py-2;
     @media (min-width: 1024px) {
         @apply px-6;
     }
