@@ -7,6 +7,7 @@
         >
         </nav-bar-item-dropdown>
         <nav-bar-item-dropdown
+            v-if="showSpeakingPage"
             :label="$t('speaking')"
             :items="speakingItems"
             :class="getPageClassesByPath('speaking')"
