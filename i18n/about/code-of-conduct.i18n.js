@@ -75,8 +75,9 @@ export default genI18nMessages({
                         'incident responders:',
                 ],
                 list: [
-                    'Committee of Incident Response, PyCon Taiwan(report@python.tw)',
-                    'David Yung-Sheng Lu(Chairperson of PyCon APAC 2022, davidlu@python.tw)',
+                    'Committee of Incident Response, PyCon Taiwan (report@python.tw)',
+                    'Winnie (Chairperson of PyCon TW 2023, winniepopu@python.tw)',
+                    'Pochun (Chairperson PyCon TW 2023, pochunlu@python.tw)',
                 ],
             },
             {
@@ -118,7 +119,7 @@ export default genI18nMessages({
                         'according to the Procedure For Incident Response.',
                     'After an incident responder takes the report, they will immediately consult with the PyCon ' +
                         'Taiwan staff, unless there is a conflict of interest (involved directly with one of the ' +
-                        'PyCon Taiwan / APAC staff), in which case any non-interested parties will be contacted.',
+                        'PyCon Taiwan staff), in which case any non-interested parties will be contacted.',
                     'If the incident is ongoing and needs to be immediately addressed, any lead incident responder ' +
                         'may take appropriate action to ensure the safety of everyone involved. If the situation ' +
                         'requires it, this may take the form of a referral to an appropriate non-PyCon agency, ' +
@@ -191,8 +192,9 @@ export default genI18nMessages({
                     '如果發生利益衝突，您可以直接聯繫任一通報應變者：',
                 ],
                 list: [
-                    'PyCon Taiwan 事件通報應變委員會(report@python.tw)',
-                    'David Yung-Sheng Lu(PyCon APAC 2022 大會主席, davidlu@python.tw)',
+                    'PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
+                    'Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
+                    'Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
                 ],
             },
             {
