@@ -9,10 +9,11 @@ export default genI18nMessages({
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'Talks & Tutorial CFP Begins: February 19th',
-                    'Talks & Tutorial CFP Ends: March 31st, 23:59:59 ({aoe})',
-                    'Announcement of Acceptance: June 13th',
+                    'Talks & Tutorial CFP Begins: February 19th, 2023',
+                    'Talks & Tutorial CFP Ends: March 31st, 2023, 23:59:59 ({aoe})',
+                    'Announcement of Acceptance: June 13th, 2023',
                 ],
+                steps: [],
             },
 
             howToSubmit: {
@@ -21,6 +22,7 @@ export default genI18nMessages({
                     'You need to {signUp} for a new account on our system. With an activated account, you can fill up the speaker profile and create new proposals through the {myPyCon} page.',
                     'We encourage you to submit the proposal as early as possible. You are welcomed to submit multiple proposals.',
                 ],
+                steps: [],
             },
 
             reviewProcess: {
@@ -36,26 +38,27 @@ export default genI18nMessages({
                         ],
                     },
                     {
-                        title: 'Modification',
+                        title: 'Revise',
                         description: [
-                            'According to reviewers’ comments, you can modify your proposal through the dashboard. This step lasts for about 1 to 2 weeks.',
+                            'According to reviewers’ comments, you can revise your proposal through the dashboard. This step lasts for about 1 to 2 weeks.',
                         ],
                     },
                     {
                         title: 'Stage 2 Review',
                         description: [
-                            'Reviewers are going to re-score and re-give feedback to the modified proposals.',
+                            'Reviewers are going to re-score and re-give feedback to the revised proposals.',
                         ],
                     },
                 ],
             },
 
-            modification: {
-                title: 'Proposals Review Process',
+            revise: {
+                title: 'Revise',
                 description: [
-                    'Between the stage 1 and stage 2 review, you can see the feedback from the reviewer. You may modify your proposal according to reviewers’ comments or feedback. If you want to make your change obvious to the reviewers, you can point out the ID of the comment, and mention about what you’ve modified according to the comment in the “Supplementary” section, e.g. “#4: Updated the time management for xxx phase”',
+                    'Between the stage 1 and stage 2 review, you can see the feedback from the reviewer. You may revise your proposal according to reviewers’ comments or feedback. If you want to make your change obvious to the reviewers, you can point out the ID of the comment, and mention about what you’ve revised according to the comment in the “Supplementary” section, e.g. “#4: Updated the time management for xxx phase”',
                     'If you have any questions, please contact us at {programEmail}',
                 ],
+                steps: [],
             },
 
             recording: {
@@ -64,6 +67,7 @@ export default genI18nMessages({
                     'All talks will be recorded and edited by default. After the conference, the PyCon Taiwan committee will edit videos and upload them to {pyvideo}, unless the speaker requests otherwise. See more info about the {recording}.',
                     'All speakers are required to buy their own conference tickets ({everyoneContributesPolicy}).',
                 ],
+                steps: [],
             },
 
             talksDuration: {
@@ -71,6 +75,7 @@ export default genI18nMessages({
                 description: [
                     'Talks will be lasting either 45 minutes, 30 minutes, or 15 minutes, depending on you, you’ll measure and decide how much time you need. Note that the length of a talk includes setup and Q&A session.',
                 ],
+                steps: [],
             },
 
             tutorialsDuration: {
@@ -78,6 +83,7 @@ export default genI18nMessages({
                 description: [
                     'Similar to talks, we don’t pose limitations on tutorial topics. This year, tutorials are free and the length is 1.5 hours. It will be at the same time as the conference. The guideline for tutorial submission is based on the guideline for talks, so make sure you have read “{talk}”. On top of that, We have some special requirements for tutorial submission, please refer to “{tutorial}” for more information.',
                 ],
+                steps: [],
             },
 
             topics: {
@@ -88,11 +94,13 @@ export default genI18nMessages({
                     'If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
                     'This year, we will invite part of the unselected talks to share at the local communities. PyCon Taiwan will partially compensate for your transportation cost.',
                 ],
+                steps: [],
             },
 
             pastTopics: {
                 title: 'Past Topics',
                 description: ['{previousConfs}'],
+                steps: [],
             },
 
             inappropriate: {
@@ -100,12 +108,13 @@ export default genI18nMessages({
                 description: [
                     'Please note that PyCon Taiwan is a conference where the audience comes from different cultural backgrounds. Some jokes may be rude to others. If you want to add some humorous images or words to your speech, please double check if there is any possibility of offense, and refer to our {coc}.',
                 ],
+                steps: [],
             },
         },
 
         terms: {
             aoe: 'AoE',
-            signUp: '註冊',
+            signUp: 'sign up',
             myPyCon: 'My PyCon',
             pyVideo: 'pyvideo.org',
             recording: 'recording release',
@@ -129,9 +138,9 @@ export default genI18nMessages({
             importantDates: {
                 title: '重要日期',
                 description: [
-                    '議程、課程 開放徵稿：02 月 29 日',
-                    '議程、課程 投稿截止：03 月 31 日 23:59:59 ({aoe})',
-                    '稿件錄取通知：06 月 13 日',
+                    '議程、課程 開放徵稿：2023 年 02 月 19 日',
+                    '議程、課程 投稿截止：2023 年 03 月 31 日 23:59:59 ({aoe})',
+                    '稿件錄取通知：2023 年 06 月 13 日',
                 ],
                 steps: [],
             },
@@ -171,7 +180,7 @@ export default genI18nMessages({
                 ],
             },
 
-            modification: {
+            revise: {
                 title: '修稿方式',
                 description: [
                     '在第一與第二階段審稿之間的修稿階段，您可以依據審稿者給予的評論，修改您的稿件。若您想強調您根據某個評論進行了某個更改，您可以在「補充說明」欄位中指明評論的編號以及說明您所做的修改，例如：「#4: 修改了 xxx 段落的時間分配」。或是如果您對於某個評論持反對意見，也可以依照同樣的方式向審稿者回覆。',

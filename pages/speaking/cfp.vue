@@ -63,7 +63,7 @@
                             </li>
                         </template>
                     </i18n>
-                    <template v-if="$t(`info.${section.tag}.steps`)">
+                    <template v-if="$t(`info.${section.tag}.steps`).length">
                         <steps
                             v-for="(step, stepIndex) in $t(
                                 `info.${section.tag}.steps`,
@@ -156,7 +156,7 @@ export default {
                     isDescriptionList: false,
                 },
                 {
-                    tag: 'modification',
+                    tag: 'revise',
                     isDescriptionList: false,
                     links: [
                         {
