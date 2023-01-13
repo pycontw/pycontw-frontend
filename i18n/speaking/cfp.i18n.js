@@ -104,7 +104,7 @@ export default genI18nMessages({
             },
 
             inappropriate: {
-                title: 'Inappropriate words or images',
+                title: 'Inappropriate Words or Images',
                 description: [
                     'Please note that PyCon Taiwan is a conference where the audience comes from different cultural backgrounds. Some jokes may be rude to others. If you want to add some humorous images or words to your speech, please double check if there is any possibility of offense, and refer to our {coc}.',
                 ],
