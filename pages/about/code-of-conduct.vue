@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 第一張圖片 -->
+                    <!-- 第二張圖片 -->
                     <div v-else class="flex flex-wrap justify-center mx-2 my-1">
                         <div
                             class="
@@ -93,20 +93,24 @@
                         class="text-xs md:text-base leading-5 md:leading-8"
                     >
                         <div class="flex align-middle">
-                            <div class="w-1/4 h-1/2 text-top pr-4 md:text-base">
-                                <h2>{{ subtitle.title }}</h2>
-                            </div>
-                            <div class="w-3/4 h-1/2 pl-4">
-                                <p>{{ subtitle.descriptions[0] }}</p>
-                            </div>
-                            <ol class="h-1/2 list-decimal ml-5">
-                                <li
-                                    v-for="(li, liIndex) in subtitle.list"
-                                    :key="`coc-list-${liIndex}`"
-                                >
-                                    {{ li }}
-                                </li>
-                            </ol>
+                            <two-col-wrapper>
+                                <template #default>
+                                    <h2>{{ subtitle.title }}</h2>
+                                </template>
+                                <template #right-col>
+                                    <p>{{ subtitle.descriptions[0] }}</p>
+                                    <ol>
+                                        <li
+                                            v-for="(
+                                                li, liIndex
+                                            ) in subtitle.list"
+                                            :key="`coc-list-${liIndex}`"
+                                        >
+                                            {{ li }}
+                                        </li>
+                                    </ol>
+                                </template>
+                            </two-col-wrapper>
                         </div>
                     </div>
                 </div>
@@ -128,6 +132,7 @@ import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.png'
 import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.png'
 import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.png'
 import Icon4 from '@/static/img/about/code-of-conduct/Icon-4.png'
+import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
     i18n,
@@ -136,6 +141,7 @@ export default {
         I18nPageWrapper,
         CoreH1,
         Banner,
+        TwoColWrapper,
     },
     data() {
         return {
