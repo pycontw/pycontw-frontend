@@ -5,7 +5,7 @@ export default genI18nMessages({
         milestone: [
             {
                 achievement: 'Hold',
-                achievementNumber: '10',
+                achievementNumber: '11',
                 achievementUnit: 'years',
             },
             {
@@ -39,7 +39,7 @@ export default genI18nMessages({
         milestone: [
             {
                 achievement: '持續舉辦',
-                achievementNumber: '10',
+                achievementNumber: '11',
                 achievementUnit: '年',
             },
             {
