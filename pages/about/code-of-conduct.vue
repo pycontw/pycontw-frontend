@@ -90,9 +90,8 @@
                     <div
                         v-for="(subtitle, subtitleIndex) in rule.subtitle"
                         :key="`coc-description-${subtitleIndex}`"
-                        class="text-xs md:text-base leading-5 md:leading-8"
                     >
-                        <div class="flex align-middle">
+                        <div>
                             <two-col-wrapper>
                                 <template #default>
                                     <h2>{{ subtitle.title }}</h2>
@@ -195,7 +194,13 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply font-serif font-bold text-pink-700;
+    @apply mt-1 mb-1 font-serif font-bold text-left text-pink-700;
     text-align: center;
+    font-size: 24px;
+}
+@media (min-width: 768px) {
+    .paragraph-title {
+        font-size: 28px;
+    }
 }
 </style>
