@@ -57,17 +57,9 @@
                                 "
                                 :style="getImgStyle(img)"
                             >
-                                <div
-                                    class="
-                                        flex
-                                        justify-center
-                                        text-xs
-                                        pt-20
-                                        h-30
-                                    "
-                                >
+                                <span class="img__text">
                                     {{ rule.list[j] }}
-                                </div>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -75,14 +67,13 @@
                     <div v-else class="flex flex-wrap justify-center mx-2 my-1">
                         <div
                             class="
-                                w-40
-                                md:w-40
-                                h-60
-                                md:h-40
+                                w-96
+                                md:w-96
+                                h-96
+                                md:h-96
                                 bg-contain bg-no-repeat
                                 mx-2
                                 md:mx-5
-                                my-10
                             "
                             :style="getImgStyle(sub2)"
                         ></div>
@@ -202,5 +193,10 @@ export default {
     .paragraph-title {
         font-size: 28px;
     }
+}
+.img__text {
+    @apply absolute mt-24 whitespace-nowrap font-bold text-xs md:text-base;
+    text-align: center;
+    font-size: 12px;
 }
 </style>
