@@ -1,171 +1,110 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p"></i18n>
-
-        <!-- Important Dates -->
-        <i18n path="importantDates.0" tag="h2"></i18n>
-        <ul>
-            <i18n
-                v-for="(date, i) in $t('importantDates.1')"
-                :key="`cfp_dates_${i}`"
-                :path="`importantDates.1.${i}`"
-                tag="li"
-            >
-                <template #AoE>
-                    <ext-link
-                        href="https://www.timeanddate.com/worldclock/converter.html?iso=20220416T115900&p1=tz_aoe&p2=241&p3=1440"
-                        highlight
-                        >AoE</ext-link
-                    >
+        <div class="mb-[50px]">
+            <i18n path="intro" tag="div">
+                <template #talk>
+                    <locale-link to="/speaking/recording" highlight>{{
+                        $t('terms.recording')
+                    }}</locale-link>
                 </template>
             </i18n>
-        </ul>
-        <i18n
-            v-for="(description, i) in $t('importantDates.2')"
-            :key="`cfp_dates_description_${i}`"
-            :path="`importantDates.2.${i}`"
-            tag="p"
-        >
-            <template #pyvideo>
-                <ext-link href="https://pyvideo.org" highlight
-                    >pyvideo.org</ext-link
-                >
-            </template>
-            <template #recording>
-                <locale-link to="/speaking/recording" highlight>{{
-                    $t('terms.recording')
-                }}</locale-link>
-            </template>
-            <template #everyoneContributesPolicy>
-                <ext-link
-                    href="https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html"
-                    highlight
-                    >Everyone Contributes Policy</ext-link
-                >
-            </template>
-        </i18n>
+        </div>
 
-        <!-- How to Submit -->
-        <i18n path="howToSubmit.0" tag="h2"></i18n>
-        <i18n
-            v-for="(date, i) in $t('howToSubmit.1')"
-            :key="`cfp_how_to_submit_${i}`"
-            :path="`howToSubmit.1.${i}`"
-            tag="p"
-        >
-            <template #signUp>
-                <ext-link :href="signUpLink" highlight>{{
-                    $t('terms.signUp')
-                }}</ext-link>
-            </template>
-            <template #myPyCon>
-                <ext-link :href="myPyConLink" highlight>My PyCon</ext-link>
-            </template>
-        </i18n>
-
-        <!-- Recording Policy -->
-        <i18n path="recordingPolicy.0" tag="h2"></i18n>
-        <i18n path="recordingPolicy.1" tag="p"></i18n>
-
-        <!-- Sponsors logo -->
-        <i18n path="sponsorsLogos.0" tag="h2"></i18n>
-        <i18n path="sponsorsLogos.1" tag="p"></i18n>
-
-        <!-- Guidelines -->
-        <i18n path="guidelines-title" tag="h2"></i18n>
-        <i18n path="guidelines-talks.0" tag="h3"></i18n>
-        <i18n
-            v-for="(description, i) in $t('guidelines-talks.1')"
-            :key="`cfp_guidelines_talks_${i}`"
-            :path="`guidelines-talks.1.${i}`"
-            tag="p"
-        >
-            <template #previousConfs>
-                <ul class="list-disc">
-                    <li
-                        v-for="(conf, j) in previousConfLinks"
-                        :key="`cfp_previous_conf_${j}`"
+        <div v-for="(section, i) in info" :key="`cfp.${i}`">
+            <two-col-wrapper>
+                <div slot="default">
+                    <i18n
+                        :key="`info.${section.tag}.title`"
+                        :path="`info.${section.tag}.title`"
+                        class="title"
+                        tag="p"
                     >
-                        <ext-link :href="conf[1]" highlight>
-                            {{ conf[0] }}
-                        </ext-link>
-                    </li>
-                </ul>
-            </template>
-            <template #talk>
-                <locale-link to="/speaking/talk" highlight>{{
-                    $t('terms.talk')
-                }}</locale-link>
-            </template>
-        </i18n>
-        <i18n path="guidelines-tutorials.0" tag="h3"></i18n>
-        <i18n
-            v-for="(description, i) in $t('guidelines-tutorials.1')"
-            :key="`cfp_guidelines_tutorials_${i}`"
-            :path="`guidelines-tutorials.1.${i}`"
-            tag="p"
-        >
-            <template #talk>
-                <locale-link to="/speaking/talk" highlight>{{
-                    $t('terms.talk')
-                }}</locale-link>
-            </template>
-            <template #tutorial>
-                <locale-link to="/speaking/tutorial" highlight>{{
-                    $t('terms.tutorial')
-                }}</locale-link>
-            </template>
-        </i18n>
-
-        <!-- Review Process -->
-        <i18n path="reviewProcess.0" tag="h2"></i18n>
-        <i18n path="reviewProcess.1" tag="p"> </i18n>
-        <ul class="list-disc">
-            <li
-                v-for="(stage, i) in $t('reviewProcess.2')"
-                :key="`cfp_review_process_stage_${i}`"
-            >
-                <b>{{ stage[0] }}</b>
-                {{ stage[1] }}
-            </li>
-        </ul>
-
-        <i18n path="modificationStep.0" tag="h3"></i18n>
-        <i18n
-            v-for="(description, i) in $t('modificationStep.1')"
-            :key="`cfp_modification_step_${i}`"
-            :path="`modificationStep.1.${i}`"
-            tag="p"
-        >
-            <template #programMail>
-                <ext-link href="mailto:program@python.tw" highlight>
-                    program@python.tw
-                </ext-link>
-            </template>
-        </i18n>
-
-        <i18n path="inappropriate.0" tag="h3"></i18n>
-        <i18n
-            v-for="(description, i) in $t('inappropriate.1')"
-            :key="`cfp_inappropriate_${i}`"
-            :path="`inappropriate.1.${i}`"
-            tag="p"
-        >
-            <template #coc>
-                <locale-link to="/about/code-of-conduct" highlight>{{
-                    $t('terms.coc')
-                }}</locale-link>
-            </template>
-        </i18n>
+                    </i18n>
+                </div>
+                <div slot="right-col">
+                    <i18n
+                        v-for="(description, index) in $t(
+                            `info.${section.tag}.description`,
+                        )"
+                        :key="`info.${section.tag}.description.${index}`"
+                        :path="`info.${section.tag}.description.${index}`"
+                        :tag="`${section.isDescriptionList ? 'li' : 'div'}`"
+                    >
+                        <template
+                            v-for="link in section.links"
+                            :slot="link.slot"
+                        >
+                            <ext-link
+                                v-if="link.isExternalLink"
+                                :key="`${link.textKey}.external`"
+                                :href="link.url"
+                                highlight
+                            >
+                                {{ $t(link.textKey) }}
+                            </ext-link>
+                            <locale-link
+                                v-else
+                                :key="`${link.textKey}.local`"
+                                :to="link.url"
+                                highlight
+                            >
+                                {{ $t(link.textKey) }}
+                            </locale-link>
+                        </template>
+                        <template slot="previousConfs">
+                            <li
+                                v-for="(conf, confIndex) in previousConfLinks"
+                                :key="`previousConfs.${confIndex}`"
+                            >
+                                <ext-link :href="conf[1]" highlight>
+                                    {{ conf[0] }}
+                                </ext-link>
+                            </li>
+                        </template>
+                    </i18n>
+                    <template v-if="$t(`info.${section.tag}.steps`).length">
+                        <steps
+                            v-for="(step, stepIndex) in $t(
+                                `info.${section.tag}.steps`,
+                            )"
+                            :key="stepIndex"
+                            :show-step-line="stepIndex > 0"
+                        >
+                            <template #title>
+                                <i18n
+                                    :key="`info.${section.tag}.steps[${stepIndex}].title`"
+                                    :path="`info.${section.tag}.steps[${stepIndex}].title`"
+                                    tag="div"
+                                >
+                                </i18n>
+                            </template>
+                            <template #description>
+                                <i18n
+                                    v-for="(description, index) in $t(
+                                        `info.${section.tag}.steps[${stepIndex}].description`,
+                                    )"
+                                    :key="`info.${section.tag}.steps[${stepIndex}].description.${index}`"
+                                    :path="`info.${section.tag}.steps[${stepIndex}].description.${index}`"
+                                    :tag="div"
+                                >
+                                </i18n>
+                            </template>
+                        </steps>
+                    </template>
+                </div>
+            </two-col-wrapper>
+        </div>
     </i18n-page-wrapper>
 </template>
 
 <script>
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
+import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
+import Steps from '@/components/core/steps/Steps.vue'
 import i18n from '@/i18n/speaking/cfp.i18n'
 
 export default {
@@ -174,18 +113,144 @@ export default {
     components: {
         I18nPageWrapper,
         CoreH1,
+        TwoColWrapper,
         ExtLink,
         LocaleLink,
+        Steps,
+    },
+    data() {
+        return {
+            info: [
+                {
+                    tag: 'importantDates',
+                    isDescriptionList: true,
+                    links: [
+                        {
+                            slot: 'aoe',
+                            textKey: 'terms.aoe',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20220416T115900&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                    ],
+                },
+                {
+                    tag: 'howToSubmit',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'signUp',
+                            textKey: 'terms.signUp',
+                            url: `https://tw.pycon.org/prs/${this.$i18n.locale}/accounts/login`,
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'myPyCon',
+                            textKey: 'terms.myPyCon',
+                            url: `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`,
+                            isExternalLink: true,
+                        },
+                    ],
+                },
+                {
+                    tag: 'reviewProcess',
+                    isDescriptionList: false,
+                },
+                {
+                    tag: 'revise',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'programEmail',
+                            textKey: 'terms.programEmail',
+                            url: 'mailto:program@python.tw',
+                            isExternalLink: true,
+                        },
+                    ],
+                },
+                {
+                    tag: 'recording',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'pyVideo',
+                            textKey: 'terms.pyVideo',
+                            url: 'https://pyvideo.org',
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'recording',
+                            textKey: 'terms.recording',
+                            url: '/speaking/recording',
+                            isExternalLink: false,
+                        },
+                        {
+                            slot: 'everyoneContributesPolicy',
+                            textKey: 'terms.everyoneContributesPolicy',
+                            url: 'https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html',
+                            isExternalLink: true,
+                        },
+                    ],
+                },
+                {
+                    tag: 'talksDuration',
+                    isDescriptionList: false,
+                },
+                {
+                    tag: 'tutorialsDuration',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'talk',
+                            textKey: 'terms.talk',
+                            url: '/speaking/talk',
+                            isExternalLink: false,
+                        },
+                        {
+                            slot: 'tutorial',
+                            textKey: 'terms.tutorial',
+                            url: '/speaking/tutorial',
+                            isExternalLink: false,
+                        },
+                    ],
+                },
+                {
+                    tag: 'topics',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'talk',
+                            textKey: 'terms.talk',
+                            url: '/speaking/talk',
+                            isExternalLink: false,
+                        },
+                    ],
+                },
+                {
+                    tag: 'pastTopics',
+                    isDescriptionList: false,
+                },
+                {
+                    tag: 'inappropriate',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'coc',
+                            textKey: 'terms.coc',
+                            url: '/about/code-of-conduct',
+                            isExternalLink: false,
+                        },
+                    ],
+                },
+            ],
+        }
     },
     computed: {
-        myPyConLink() {
-            return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`
-        },
-        signUpLink() {
-            return `https://tw.pycon.org/prs/${this.$i18n.locale}/accounts/login`
-        },
         previousConfLinks() {
             return [
+                [
+                    'PyCon APAC 2022',
+                    `https://tw.pycon.org/2022/zh-hant/conference/schedule`,
+                ],
                 ['PyCon APAC 2021', `https://th.pycon.org/pages/schedule`],
                 [
                     'PyCon APAC 2020',
