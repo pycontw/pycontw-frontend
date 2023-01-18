@@ -28,7 +28,7 @@ export default genI18nMessages({
             reviewProcess: {
                 title: 'Proposals Review Process',
                 description: [
-                    'After the Call for Proposals ends, and before the announcement of acceptance, the PyCon Taiwan 2022 Proposals Review Committee is going to review the proposals and give scores and provide feedback. The process consists of three phases:',
+                    'After the Call for Proposals ends, and before the announcement of acceptance, the PyCon Taiwan 2023 Proposals Review Committee is going to review the proposals and give scores and provide feedback. The process consists of three phases:',
                 ],
                 steps: [
                     {
@@ -156,7 +156,7 @@ export default genI18nMessages({
             reviewProcess: {
                 title: '審稿流程',
                 description: [
-                    '在投稿截止與稿件錄取通知之間是審稿的時段，每篇演講和專業課程的稿件將會由 PyCon Taiwan 2022 的審稿委員會進行評分與評論。審稿分成三個階段：',
+                    '在投稿截止與稿件錄取通知之間是審稿的時段，每篇演講和專業課程的稿件將會由 PyCon Taiwan 2023 的審稿委員會進行評分與評論。審稿分成三個階段：',
                 ],
                 steps: [
                     {
