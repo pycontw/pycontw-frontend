@@ -43,6 +43,7 @@
                 >{{ $t('schedule') }}</locale-link
             >
             <locale-link
+                v-if="showEventOverviewPage"
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/events/overview"
                 customized
@@ -146,6 +147,9 @@ export default {
         },
         showEventsPage() {
             return this.$store.state.configs.showEventsPage
+        },
+        showEventOverviewPage() {
+            return this.$store.state.configs.showEventOverviewPage
         },
         showConferencePage() {
             return this.$store.state.configs.showConferencePage
