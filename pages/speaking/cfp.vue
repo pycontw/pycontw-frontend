@@ -144,8 +144,8 @@ export default {
                             isExternalLink: true,
                         },
                         {
-                            slot: 'myPyCon',
-                            textKey: 'terms.myPyCon',
+                            slot: 'proposalSystem',
+                            textKey: 'terms.proposalSystem',
                             url: `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`,
                             isExternalLink: true,
                         },

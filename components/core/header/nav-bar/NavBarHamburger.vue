@@ -79,8 +79,8 @@
             ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
-                :href="signInUrl"
-                >{{ $t('signIn') }}</ext-link
+                :href="proposalSystemUrl"
+                >{{ $t('proposalSystemUrl') }}</ext-link
             >
         </div>
     </div>
@@ -136,7 +136,7 @@ export default {
                 this.$store.state.configs.registrationHideItems,
             )
         },
-        signInUrl() {
+        proposalSystemUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
         },
         showSponsorPage() {
