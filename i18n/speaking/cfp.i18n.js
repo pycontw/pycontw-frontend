@@ -19,7 +19,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: 'How to Submit Your Proposal',
                 description: [
-                    'You need to {signUp} for a new account on our system. With an activated account, you can fill up the speaker profile and create new proposals through the {myPyCon} page.',
+                    'You need to {signUp} for a new account on our system. With an activated account, you can fill up the speaker profile and create new proposals through the {proposalSystem} page.',
                     'We encourage you to submit the proposal as early as possible. You are welcomed to submit multiple proposals.',
                 ],
                 steps: [],
@@ -115,7 +115,7 @@ export default genI18nMessages({
         terms: {
             aoe: 'AoE',
             signUp: 'sign up',
-            myPyCon: 'My PyCon',
+            proposalSystem: 'Proposal System',
             pyVideo: 'pyvideo.org',
             recording: 'recording release',
             everyoneContributesPolicy: 'Everyone Contributes Policy',
@@ -148,7 +148,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: '提交稿件',
                 description: [
-                    '您需要先在系統上 {signUp} 一個新的帳號。在啟用您的帳號之後，就可以填寫講者資訊，並從 {myPyCon} 頁面中建立新的投搞。我們強烈建議您儘早送出您的投稿。',
+                    '您需要先在系統上 {signUp} 一個新的帳號。在啟用您的帳號之後，就可以填寫講者資訊，並從 {proposalSystem} 頁面中建立新的投搞。我們強烈建議您儘早送出您的投稿。',
                 ],
                 steps: [],
             },
@@ -242,7 +242,7 @@ export default genI18nMessages({
         terms: {
             aoe: 'AoE',
             signUp: '註冊',
-            myPyCon: 'My PyCon',
+            proposalSystem: '投稿系統',
             pyVideo: 'pyvideo.org',
             recording: '錄影釋出',
             everyoneContributesPolicy: 'Everyone Contributes Policy',

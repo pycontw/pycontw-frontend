@@ -64,10 +64,10 @@
             {{ $t('venue') }}
         </locale-link>
         <ext-link
-            :href="signInUrl"
-            :class="getPageClassesByPath('signIn', true)"
+            :href="proposalSystemUrl"
+            :class="getPageClassesByPath('proposalSystemUrl', true)"
         >
-            {{ $t('signIn') }}
+            {{ $t('proposalSystemUrl') }}
         </ext-link>
     </nav>
 </template>
@@ -114,7 +114,7 @@ export default {
                 this.$store.state.configs.registrationHideItems,
             )
         },
-        signInUrl() {
+        proposalSystemUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
         },
         showSponsorPage() {
