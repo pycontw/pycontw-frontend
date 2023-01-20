@@ -21,6 +21,7 @@
             >{{ $t('schedule') }}</locale-link
         >
         <locale-link
+            v-if="showEventOverviewPage"
             to="/events/overview"
             :class="getPageClassesByPath(null, true, '/events/overview')"
             customized
@@ -121,6 +122,9 @@ export default {
         },
         showRegistrationPage() {
             return this.$store.state.configs.showRegistrationPage
+        },
+        showEventOverviewPage() {
+            return this.$store.state.configs.showEventOverviewPage
         },
         showEventsPage() {
             return this.$store.state.configs.showEventsPage
