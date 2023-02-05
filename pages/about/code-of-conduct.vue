@@ -38,7 +38,7 @@
                     >
                         {{ description }}
                     </p>
-                    <!-- 第一張圖片 -->
+                    <!-- 三大準則圖片 -->
                     <div
                         v-if="i == 0"
                         class="flex flex-wrap justify-center mx-2 my-1 relative"
@@ -65,21 +65,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 第二張圖片 -->
-                    <div v-else class="flex flex-wrap justify-center mx-2 my-1">
-                        <div
-                            class="
-                                w-96
-                                md:w-96
-                                h-96
-                                md:h-96
-                                bg-contain bg-no-repeat
-                                mx-2
-                                md:mx-5
-                            "
-                            :style="getImgStyle(sub2)"
-                        ></div>
-                    </div>
                     <div
                         v-for="(subtitle, subtitleIndex) in rule.subtitle"
                         :key="`coc-description-${subtitleIndex}`"
@@ -103,6 +88,22 @@
                                     </ol>
                                 </template>
                             </two-col-wrapper>
+                            <!-- 通報內容圖片 -->
+                            <div
+                                v-if="subtitle.title == `通報內容`"
+                                class="flex flex-wrap justify-center mx-2 my-1"
+                            >
+                                <div
+                                    class="
+                                        h-64
+                                        w-48
+                                        bg-contain bg-no-repeat
+                                        mx-2
+                                        md:mx-5
+                                    "
+                                    :style="getImgStyle(sub2)"
+                                ></div>
+                            </div>
                         </div>
                     </div>
                 </div>
