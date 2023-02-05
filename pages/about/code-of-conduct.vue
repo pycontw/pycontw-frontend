@@ -41,7 +41,7 @@
                     <!-- 第一張圖片 -->
                     <div
                         v-if="i == 0"
-                        class="flex flex-wrap justify-center mx-2 my-1"
+                        class="flex flex-wrap justify-center mx-2 my-1 relative"
                     >
                         <div v-for="(img, j) in sub1" :key="`sub_img_${j}`">
                             <div
@@ -54,10 +54,12 @@
                                     mx-2
                                     md:mx-5
                                     my-10
+                                    flex
+                                    justify-center
                                 "
                                 :style="getImgStyle(img)"
                             >
-                                <span class="img__text">
+                                <span class="img_text">
                                     {{ rule.list[j] }}
                                 </span>
                             </div>
@@ -188,15 +190,19 @@ export default {
     @apply mt-1 mb-1 font-serif font-bold text-left text-pink-700;
     text-align: center;
     font-size: 24px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
     .paragraph-title {
         font-size: 28px;
     }
 }
-.img__text {
-    @apply absolute mt-24 whitespace-nowrap font-bold text-xs md:text-base;
+.img_text {
+    @apply absolute whitespace-nowrap;
     text-align: center;
-    font-size: 12px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 30%;
 }
 </style>
