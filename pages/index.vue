@@ -16,17 +16,35 @@
                 <div class="text-button-wrapper">
                     <text-button
                         :href="
-                            landingButton.isExternalLink
-                                ? landingButton.path
+                            primaryButton.isExternalLink
+                                ? primaryButton.path
                                 : ''
                         "
                         :to="
-                            !landingButton.isExternalLink
-                                ? landingButton.path
+                            !primaryButton.isExternalLink
+                                ? primaryButton.path
                                 : ''
                         "
+                        :class="isCallingForProposals ? 'pr-[34px]' : ''"
                     >
-                        {{ $t(landingButton.textKey) }}
+                        {{ $t(primaryButton.textKey) }}
+                    </text-button>
+                    <text-button
+                        v-if="isCallingForProposals"
+                        :href="
+                            secondaryButton.isExternalLink
+                                ? secondaryButton.path
+                                : ''
+                        "
+                        :to="
+                            !secondaryButton.isExternalLink
+                                ? secondaryButton.path
+                                : ''
+                        "
+                        :primary="false"
+                        :bordered="true"
+                    >
+                        {{ $t(secondaryButton.textKey) }}
                     </text-button>
                 </div>
             </div>
@@ -110,7 +128,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            landingButton: landingButtonConfig.JOIN_US,
+            primaryButton: landingButtonConfig.JOIN_US,
+            secondaryButton: landingButtonConfig.CFP,
             selectedSponsor: {},
         }
     },
@@ -134,9 +153,6 @@ export default {
         },
         isCallingForProposals() {
             return this.$store.state.configs.showSpeakingPage
-        },
-        isShowingScheduleButton() {
-            return this.$store.state.configs.showSchedulePage
         },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
