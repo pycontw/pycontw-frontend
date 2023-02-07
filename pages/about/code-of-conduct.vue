@@ -41,23 +41,31 @@
                     <!-- 三大準則圖片 -->
                     <div
                         v-if="i == 0"
-                        class="flex flex-wrap justify-center mx-2 my-1 relative"
+                        class="
+                            flex
+                            sm:justify-center
+                            justify-between
+                            mx-2
+                            my-1
+                            relative
+                        "
                     >
                         <div v-for="(img, j) in sub1" :key="`sub_img_${j}`">
                             <div
                                 class="
-                                    w-10
-                                    md:w-20
-                                    h-10
-                                    md:h-40
+                                    w-16
+                                    sm:w-20
+                                    h-36
+                                    sm:h-40
                                     bg-contain bg-no-repeat
                                     mx-2
                                     md:mx-5
                                     my-10
+                                    sm:my-5
                                     flex
                                     justify-center
                                 "
-                                :style="getImgStyle(img)"
+                                :style="getIconStyle(img)"
                             >
                                 <span class="img_text">
                                     {{ rule.list[j] }}
@@ -95,13 +103,14 @@
                             >
                                 <div
                                     class="
-                                        h-64
-                                        w-48
+                                        w-full
+                                        h-96
+                                        md:h-96
                                         bg-contain bg-no-repeat
                                         mx-2
                                         md:mx-5
                                     "
-                                    :style="getImgStyle(sub2)"
+                                    :style="getIconStyle(sub2)"
                                 ></div>
                             </div>
                         </div>
@@ -158,6 +167,12 @@ export default {
             return {
                 'background-image': `url(${img})`,
                 'border-radius': '5%',
+                'background-size': 'cover',
+            }
+        },
+        getIconStyle(img) {
+            return {
+                'background-image': `url(${img})`,
             }
         },
     },
@@ -200,10 +215,13 @@ export default {
     }
 }
 .img_text {
-    @apply absolute whitespace-nowrap;
+    @apply absolute mt-24 whitespace-nowrap;
     text-align: center;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 30%;
+    font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+    .img_text {
+        @apply mt-20;
+    }
 }
 </style>
