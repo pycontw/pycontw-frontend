@@ -65,7 +65,7 @@
                                     flex
                                     justify-center
                                 "
-                                :style="getIconStyle(img)"
+                                :style="getSub1Style(img)"
                             >
                                 <span class="img_text">
                                     {{ rule.list[j] }}
@@ -96,21 +96,18 @@
                                     </ol>
                                 </template>
                             </two-col-wrapper>
-                            <!-- 通報內容圖片 -->
+                            <!-- 處理流程圖片 -->
                             <div
-                                v-if="subtitle.title == `通報內容`"
+                                v-if="subtitle.title == `處理流程`"
                                 class="flex flex-wrap justify-center mx-2 my-1"
                             >
                                 <div
-                                    class="
-                                        w-full
-                                        h-96
-                                        md:h-96
-                                        bg-contain bg-no-repeat
-                                        mx-2
-                                        md:mx-5
-                                    "
-                                    :style="getIconStyle(sub2)"
+                                    class="sub1_img"
+                                    :style="getSub2Style(sub2[0])"
+                                ></div>
+                                <div
+                                    class="sub2_img"
+                                    :style="getSub2Style(sub2[1])"
                                 ></div>
                             </div>
                         </div>
@@ -134,6 +131,7 @@ import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.png'
 import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.png'
 import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.png'
 import Icon4 from '@/static/img/about/code-of-conduct/Icon-4.png'
+import Icon5 from '@/static/img/about/code-of-conduct/Icon-5.png'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
@@ -150,7 +148,7 @@ export default {
             aboutBanner: AboutBanner,
             introImgs: [IntroImg1, IntroImg2, IntroImg3],
             sub1: [Icon1, Icon2, Icon3],
-            sub2: Icon4,
+            sub2: [Icon4, Icon5],
         }
     },
     computed: {
@@ -170,9 +168,15 @@ export default {
                 'background-size': 'cover',
             }
         },
-        getIconStyle(img) {
+        getSub1Style(img) {
             return {
                 'background-image': `url(${img})`,
+            }
+        },
+        getSub2Style(img) {
+            return {
+                'background-image': `url(${img})`,
+                'background-position': 'center',
             }
         },
     },
@@ -222,6 +226,23 @@ export default {
 @media (max-width: 640px) {
     .img_text {
         @apply mt-20;
+    }
+}
+.sub1_img {
+    @apply w-full h-96 md:h-96 bg-contain bg-no-repeat mx-2 md:mx-5;
+}
+.sub2_img {
+    @apply bg-no-repeat mx-2 md:mx-5;
+    display: none;
+    width: 30rem;
+    height: 40rem;
+}
+@media (max-width: 640px) {
+    .sub1_img {
+        display: none;
+    }
+    .sub2_img {
+        display: flex;
     }
 }
 </style>
