@@ -103,13 +103,13 @@
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import TextButton from '~/components/core/buttons/TextButton'
-import { BulletinCardCollection } from '~/components/bulletins'
-import CoreH2 from '~/components/core/titles/H2'
-import SponsorCard from '~/components/sponsors/SponsorCard'
-import Modal from '~/components/core/modal/Modal'
-import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
-import Intro from '~/components/intro/Intro'
+import TextButton from '@/components/core/buttons/TextButton'
+import { BulletinCardCollection } from '@/components/bulletins'
+import CoreH2 from '@/components/core/titles/H2'
+import SponsorCard from '@/components/sponsors/SponsorCard'
+import Modal from '@/components/core/modal/Modal'
+import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
+import Intro from '@/components/intro/Intro'
 
 export default {
     i18n,

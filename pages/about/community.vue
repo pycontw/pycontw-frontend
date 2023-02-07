@@ -82,7 +82,7 @@
 import i18n from '@/i18n/about/community.i18n'
 import CoreH1 from '@/components/core/titles/H1'
 import CommunityMap from '@/static/img/about/CommunityInTW.png'
-import Modal from '~/components/core/modal/Modal'
+import Modal from '@/components/core/modal/Modal'
 
 export default {
     i18n,
