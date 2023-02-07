@@ -348,8 +348,8 @@ export default {
         },
         getSpeakerName(speech) {
             let name = ''
-            name = speech.speakers.reduce((accumulator, currentValue) => {
-                return accumulator.name + ' ' + currentValue.name
+            speech.speakers.forEach((element) => {
+                name += element.name + ' '
             })
             return name
         },
