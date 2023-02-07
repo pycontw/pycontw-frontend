@@ -46,16 +46,19 @@
                         <div v-for="(img, j) in sub1" :key="`sub_img_${j}`">
                             <div
                                 class="
-                                    w-10
-                                    md:w-20
-                                    h-10
-                                    md:h-40
+                                    w-16
+                                    sm:w-20
+                                    h-36
+                                    sm:h-40
                                     bg-contain bg-no-repeat
                                     mx-2
                                     md:mx-5
                                     my-10
+                                    sm:my-5
+                                    flex
+                                    justify-center
                                 "
-                                :style="getImgStyle(img)"
+                                :style="getIconStyle(img)"
                             >
                                 <span class="img__text">
                                     {{ rule.list[j] }}
@@ -67,15 +70,14 @@
                     <div v-else class="flex flex-wrap justify-center mx-2 my-1">
                         <div
                             class="
-                                w-96
-                                md:w-96
+                                w-full
                                 h-96
                                 md:h-96
                                 bg-contain bg-no-repeat
                                 mx-2
                                 md:mx-5
                             "
-                            :style="getImgStyle(sub2)"
+                            :style="getIconStyle(sub2)"
                         ></div>
                     </div>
                     <div
@@ -155,6 +157,12 @@ export default {
             return {
                 'background-image': `url(${img})`,
                 'border-radius': '5%',
+                'background-size': 'cover',
+            }
+        },
+        getIconStyle(img) {
+            return {
+                'background-image': `url(${img})`,
             }
         },
     },
@@ -195,8 +203,13 @@ export default {
     }
 }
 .img__text {
-    @apply absolute mt-24 whitespace-nowrap font-bold text-xs md:text-base;
+    @apply absolute mt-24 whitespace-nowrap;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.8rem;
+}
+@media (max-width: 640px) {
+    .img__text {
+        @apply mt-16;
+    }
 }
 </style>
