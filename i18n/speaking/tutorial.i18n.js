@@ -5,7 +5,7 @@ export default genI18nMessages({
         title: 'How to Propose a Tutorial?',
         intro: [
             'For information on the overall CfP process, see {cfp}.',
-            'First of all, thank you for your interest in conducting a tutorial at PyCon APAC 2022.',
+            'First of all, thank you for your interest in conducting a tutorial at PyCon Taiwan 2023.',
             'Generally speaking, good tutorials possess most of the traits that good talks have. ' +
                 'The biggest differences between a tutorial and a talk are the hands-on nature of a tutorial, ' +
                 'and the duration of the tutorial. As tutorials last longer than talks, well-prepared content is required ' +
@@ -27,7 +27,7 @@ export default genI18nMessages({
 
         policies: [
             [
-                'Tutorial Duration',
+                'Duration',
                 [
                     'The length of the tutorial is 1 hour and 30 minutes.',
                     'In our previous experiences, tutorials that run for 6 hours were exhausting for both instructors and students, ' +
@@ -39,7 +39,7 @@ export default genI18nMessages({
                 ],
             ],
             [
-                'Tutorial Dates and Location',
+                'Dates/Location',
                 [
                     'Tutorials are held in parallel with the main conference, and tutorials will be held at the same online venue ' +
                         'as the main conference, albeit in different rooms.',
@@ -50,7 +50,7 @@ export default genI18nMessages({
                 ['All tutorials will be free for conference participants.'],
             ],
             [
-                'How can I become a better instructor?',
+                'How to Become an Instructor',
                 [
                     'The easiest way is to get involved in your local Python communities by speaking at these events.',
                     'If you have any questions or suggestions, please don’t hesitate to {contact}.',
@@ -65,7 +65,7 @@ export default genI18nMessages({
         og: {
             title: 'How to Propose a Tutorial?',
             description:
-                'First of all, thank you for your interest in conducting a tutorial at PyCon APAC 2022. ' +
+                'First of all, thank you for your interest in conducting a tutorial at PyCon Taiwan 2023. ' +
                 'Generally speaking, good tutorials possess most of the traits that good talks have. ' +
                 'The biggest differences between a tutorial and a talk are the hands-on nature of a tutorial, ' +
                 'and the duration of the tutorial. As tutorials last longer than talks, well-prepared content is required ' +
@@ -81,7 +81,7 @@ export default genI18nMessages({
         title: '如何投稿專業課程（Tutorial）？',
         intro: [
             '有關投稿的整體流程說明，請參考{cfp}一頁。',
-            '首先，謝謝您考慮投稿專業課程至 PyCon APAC 2022。',
+            '首先，謝謝您考慮投稿專業課程至 PyCon Taiwan 2023。',
             '一般來說，好的課程滿足一場好演講的諸多特性。不過專業課程較演講最大的差異在課程有手把手的指導，以及較長的時間。' +
                 '因為有更長的時間，專業課程需要準備更多的內容，並且讓聽眾即便在數個小時的講課與操作之後還能覺得有趣且清醒；' +
                 '由於有手把手的指導，一個 20 名學員的課程通常要有兩位（以上）的助教來協助，過程中必須能與助教保持良好的溝通。',
@@ -97,7 +97,7 @@ export default genI18nMessages({
 
         policies: [
             [
-                '專業課程的長度',
+                '課程長度',
                 [
                     '專業課程的長度為 1.5 小時',
                     '在過往的經驗中，6 小時的課程對於講師以及學員而言都非常的累，學員容易因為疲勞而無法持續跟上進度，且難以吸收所學。' +
@@ -106,14 +106,14 @@ export default genI18nMessages({
                 ],
             ],
             [
-                '專業課程的時間與場地',
+                '時間與場地',
                 [
-                    '專業課程與會期同時，將和 PyCon APAC 大會平行舉行，場地為與大會相同之線上會場。',
+                    '專業課程與會期同時，將和 PyCon Taiwan 大會平行舉行，教室待定。',
                 ],
             ],
-            ['專業課程售票政策', ['本次會議專業課程不額外收費。']],
+            ['售票政策', ['本次會議專業課程不額外收費。']],
             [
-                '如何成為專業課程的講師？',
+                '如何成為講師',
                 [
                     '最簡單也是最好的答案：多多參與各地 Python 的社群並多給演講吧！',
                     '如果有任何疑問或需要協助的地方，歡迎{contact}。',
@@ -128,7 +128,7 @@ export default genI18nMessages({
         og: {
             title: '如何投稿專業課程（Tutorial）？',
             description:
-                '首先，謝謝您考慮投稿專業課程至 PyCon APAC 2022。' +
+                '首先，謝謝您考慮投稿專業課程至 PyCon Taiwan 2023。' +
                 '一般來說，好的課程滿足一場好演講的諸多特性。不過專業課程較演講最大的差異在課程有手把手的指導，以及較長的時間。' +
                 '因為有更長的時間，專業課程需要準備更多的內容，並且讓聽眾即便在數個小時的講課與操作之後還能覺得有趣且清醒；' +
                 '由於有手把手的指導，一個 20 名學員的課程通常要有兩位（以上）的助教來協助，過程中必須能與助教保持良好的溝通。' +

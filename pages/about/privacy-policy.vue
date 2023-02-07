@@ -1,13 +1,13 @@
 <template>
     <div>
         <banner>
-            <core-h1 :title="`2022 ${$t('title')}`"></core-h1>
+            <core-h1 :title="`${conferenceYear} ${$t('title')}`"></core-h1>
             <i18n path="pageAbstract" tag="p" class="pageAbstract">
                 <template #br><br /></template>
             </i18n>
         </banner>
 
-        <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+        <i18n-page-wrapper class="sm:px-10 md:px-32 lg:px-60" custom-x custom-y>
             <div
                 v-for="(contents, i) in $t('contents')"
                 :key="`privacy_policy_contents_${i}`"
@@ -21,6 +21,7 @@
                     v-for="(content, j) in contents.description"
                     :key="`privacy_policy_description_${j}`"
                     :path="`contents.${i}.description.${j}`"
+                    class="paragraphDescription"
                     tag="p"
                 >
                     <template #MeetingManagement>
@@ -33,6 +34,7 @@
                         v-for="(content, j) in contents.items"
                         :key="`privacy_policy_items_${j}`"
                         :path="`contents.${i}.items.${j}`"
+                        class="paragraphDescription"
                         tag="li"
                     ></i18n>
                 </ol>
@@ -40,25 +42,16 @@
                     v-for="(content, j) in contents.summary"
                     :key="`privacy_policy_summary_${j}`"
                     :path="`contents.${i}.summary.${j}`"
+                    class="paragraphDescription"
                     tag="p"
                 />
-            </div>
-            <div class="covidStatement">
-                <i18n
-                    path="covidStatement.title"
-                    tag="h2"
-                    class="covidTitle"
-                ></i18n>
-                <i18n path="covidStatement.description" tag="p">
-                    <template #br><br /></template>
-                </i18n>
             </div>
             <div class="authorization">
                 <div>
                     <i18n
                         path="authorization.title"
                         tag="h2"
-                        class="paragraphTitle"
+                        class="authorizationTitle"
                     >
                     </i18n>
                 </div>
@@ -81,7 +74,11 @@
                 <div>
                     <img :src="authorizationIcon" class="authorizationLabel" />
                 </div>
-                <i18n path="authorization.content" tag="p">
+                <i18n
+                    path="authorization.content"
+                    tag="p"
+                    class="authorizationContent"
+                >
                     <template #br><br /></template>
                 </i18n>
             </div>
@@ -119,6 +116,11 @@ export default {
             authorizationIcon: require('~/static/img/footer/ccby-sa3_0.svg'),
         }
     },
+    computed: {
+        conferenceYear() {
+            return this.$store.state.configs.conferenceYear
+        },
+    },
     head() {
         return {
             title: this.$i18n.t('title'),
@@ -146,30 +148,31 @@ export default {
 
 <style lang="postcss" scoped>
 .paragraphTitle {
-    @apply font-serif font-bold text-pink-700;
+    @apply font-serif font-bold text-pink-700 text-base md:text-xl mt-9 md:mt-20 text-center md:text-left;
 }
-.covidTitle {
-    @apply font-serif font-bold text-pink-700;
-    margin-top: 5%;
+
+.paragraphDescription {
+    @apply text-xs md:text-sm;
 }
-.covidStatement {
-    @apply border-2 border-solid rounded-xl px-6  mt-24;
-    @apply border-primary-300;
+
+.pageAbstract {
+    @apply text-xs md:text-base;
 }
 .authorization {
     @apply text-center;
 }
 .authorizationTitle {
+    @apply font-serif font-bold text-pink-700 text-base md:text-xl mt-9 md:mt-20 text-center md:text-left;
     @apply text-center;
 }
 .authorizationDescription {
-    @apply text-center;
+    @apply text-center text-xs md:text-sm;
 }
 .authorizationLabel {
-    margin: auto;
+    @apply m-auto w-64 md:w-80;
 }
 .authorizationContent {
-    @apply text-center;
+    @apply text-center text-xs md:text-sm;
 }
 .question {
     @apply text-center text-xs;

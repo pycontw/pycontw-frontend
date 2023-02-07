@@ -74,6 +74,10 @@ export default {
                     label: '2021',
                     link: 'https://tw.pycon.org/2021/',
                 },
+                {
+                    label: '2022',
+                    link: 'https://tw.pycon.org/2022/',
+                },
             ],
         }
     },
@@ -95,6 +99,6 @@ export default {
 
 <style scoped>
 .highlight {
-    @apply text-pink-500;
+    @apply text-pink-700;
 }
 </style>

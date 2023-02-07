@@ -113,9 +113,10 @@ export default {
         @apply z-10 border-0 text-primary-100;
         background-image: linear-gradient(
             276.15deg,
-            #72dcb6 0.25%,
-            #3849de 52.99%,
-            #9b4dc3 93.14%
+            #61c8a4 0.74%,
+            #548fcb 32.18%,
+            #3849de 53.25%,
+            #be3692 93.14%
         );
 
         & span {
@@ -130,7 +131,7 @@ export default {
     &.--large:not(.--is-link),
     &.--large > a {
         @apply font-bold;
-        height: 87px;
+        height: 86px;
         font-size: 28px;
         padding: 24px 48px;
         min-width: 128px;
@@ -150,7 +151,7 @@ export default {
         @apply h-12 font-semibold text-base;
         padding: 10px 22px;
         min-width: 80px;
-        height: 42px;
+        height: 60px;
         font-size: 16px;
     }
 }
@@ -161,9 +162,10 @@ export default {
     content: '';
     background-image: linear-gradient(
         96.26deg,
-        #74dcb6 5.5%,
-        #4454df 50.05%,
-        #9d51c3 82.35%
+        #5fbeab 5.5%,
+        #66b4e2 31.92%,
+        #4454df 53.53%,
+        #be3692 82.35%
     );
     transition: opacity 0.5s ease-out;
 }

@@ -51,7 +51,7 @@ module.exports = {
                 },
                 pink: {
                     500: '#c386ae',
-                    700: '#e099e1',
+                    700: '#da8bdc',
                 },
                 secondary: {
                     300: '#a9a6d6',
@@ -95,8 +95,8 @@ module.exports = {
         },
         screens: {
             xs: '360px',
-            sm: '600px',
-            md: '834px',
+            sm: '640px',
+            md: '768px',
             lg: '1194px',
             xl: '1440px',
             '2xl': '1600px',

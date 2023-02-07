@@ -1,8 +1,8 @@
 version: '3.5'
 
 services:
-  pycontw-2022-frontend:
-    container_name: pycontw-2022-frontend
+  pycontw-2023-frontend:
+    container_name: pycontw-2023-frontend
     restart: always
     build:
       context: .
@@ -12,4 +12,4 @@ services:
 networks:
     network:
         external: true
-        name: network-2022
+        name: network-2023

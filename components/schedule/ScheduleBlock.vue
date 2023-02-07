@@ -99,7 +99,7 @@ export default {
     }
 }
 .scheduleBlock.-primary.-active:hover {
-    @apply text-primary-800 bg-pink-500;
+    @apply text-primary-800 bg-pink-700;
     & >>> .scheduleEvent__title {
         @apply text-primary-900;
     }

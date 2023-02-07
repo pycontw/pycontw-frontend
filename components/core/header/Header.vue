@@ -36,11 +36,6 @@ export default {
         NavBarHamburger,
         ScrollableNavBar,
     },
-    computed: {
-        myPyConUrl() {
-            return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
-        },
-    },
 }
 </script>
 

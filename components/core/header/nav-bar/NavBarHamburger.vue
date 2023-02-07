@@ -28,43 +28,50 @@
                 :expanding="expandingItem === 'about'"
                 @click.native="toggleAccordion('about')"
             ></nav-bar-item-accordion>
-            <!-- <nav-bar-item-accordion
+            <nav-bar-item-accordion
+                v-if="showSpeakingPage"
                 :label="$t('speaking')"
                 :items="speakingItems"
                 :expanding="expandingItem === 'speaking'"
                 @click.native="toggleAccordion('speaking')"
-            ></nav-bar-item-accordion> -->
+            ></nav-bar-item-accordion>
             <locale-link
+                v-if="showSchedulePage"
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/conference/schedule"
                 customized
                 >{{ $t('schedule') }}</locale-link
             >
             <locale-link
+                v-if="showEventOverviewPage"
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/events/overview"
                 customized
                 >{{ $t('overview') }}</locale-link
             >
             <nav-bar-item-accordion
+                v-if="showConferencePage"
                 :label="$t('conference')"
                 :items="conferenceItems"
                 :expanding="expandingItem === 'conference'"
                 @click.native="toggleAccordion('conference')"
             ></nav-bar-item-accordion>
             <nav-bar-item-accordion
+                v-if="showEventsPage"
                 :label="$t('events')"
                 :items="eventsItems"
                 :expanding="expandingItem === 'events'"
                 @click.native="toggleAccordion('events')"
             ></nav-bar-item-accordion>
-            <!-- <locale-link
+            <locale-link
+                v-if="showSponsorPage"
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/sponsor"
                 customized
                 >{{ $t('sponsor') }}</locale-link
-            > -->
+            >
             <nav-bar-item-accordion
+                v-if="showRegistrationPage"
                 :label="$t('registration')"
                 :items="registrationItems"
                 :expanding="expandingItem === 'registration'"
@@ -72,8 +79,8 @@
             ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
-                :href="signInUrl"
-                >{{ $t('signIn') }}</ext-link
+                :href="proposalSystemUrl"
+                >{{ $t('proposalSystemUrl') }}</ext-link
             >
         </div>
     </div>
@@ -103,22 +110,58 @@ export default {
     },
     computed: {
         conferenceItems() {
-            return this.generateI18nItems(navBarItems.conference)
+            return this.generateI18nItems(
+                navBarItems.conference,
+                this.$store.state.configs.conferenceHideItems,
+            )
         },
         eventsItems() {
-            return this.generateI18nItems(navBarItems.events)
+            return this.generateI18nItems(
+                navBarItems.events,
+                this.$store.state.configs.eventsHideItems,
+            )
         },
         speakingItems() {
             return this.generateI18nItems(navBarItems.speaking)
         },
         aboutItems() {
-            return this.generateI18nItems(navBarItems.about)
+            return this.generateI18nItems(
+                navBarItems.about,
+                this.$store.state.configs.aboutHideItems,
+            )
         },
         registrationItems() {
-            return this.generateI18nItems(navBarItems.registration)
+            return this.generateI18nItems(
+                navBarItems.registration,
+                this.$store.state.configs.registrationHideItems,
+            )
         },
-        signInUrl() {
+        proposalSystemUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
+        },
+        showSponsorPage() {
+            return this.$store.state.configs.showSponsorPage
+        },
+        showRegistrationPage() {
+            return this.$store.state.configs.showRegistrationPage
+        },
+        showEventsPage() {
+            return this.$store.state.configs.showEventsPage
+        },
+        showEventOverviewPage() {
+            return this.$store.state.configs.showEventOverviewPage
+        },
+        showConferencePage() {
+            return this.$store.state.configs.showConferencePage
+        },
+        showSpeakingPage() {
+            return this.$store.state.configs.showSpeakingPage
+        },
+        showSchedulePage() {
+            return this.$store.state.configs.showSchedulePage
+        },
+        showVenuePage() {
+            return this.$store.state.configs.showVenuePage
         },
     },
     watch: {
@@ -130,11 +173,13 @@ export default {
         },
     },
     methods: {
-        generateI18nItems(items) {
-            return items.map(({ i18nKey, value }) => ({
-                label: this.$i18n.t(i18nKey),
-                value,
-            }))
+        generateI18nItems(items, hideItems = []) {
+            return items
+                .filter((item) => !hideItems.includes(item.i18nKey))
+                .map(({ i18nKey, value }) => ({
+                    label: this.$i18n.t(i18nKey),
+                    value,
+                }))
         },
         toggleMenu() {
             this.isMenuSlidedIn = !this.isMenuSlidedIn

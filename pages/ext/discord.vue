@@ -288,14 +288,14 @@ export default {
 
 <style lang="postcss" scoped>
 .appendixHint {
-    @apply cursor-pointer text-pink-500;
+    @apply cursor-pointer text-pink-700;
     &:hover {
         color: #7568f6;
     }
 }
 .paragraphTitle {
     @apply font-bold text-base md:text-lg;
-    @apply font-serif font-bold mt-10 text-pink-500;
+    @apply font-serif font-bold mt-10 text-pink-700;
 }
 .paragraphContent {
     @apply text-xs md:text-base;
@@ -316,7 +316,7 @@ export default {
     @apply text-base md:text-lg mb-0 font-black;
 }
 .highlight {
-    @apply text-pink-500;
+    @apply text-pink-700;
 }
 .section {
     @apply mb-11;
