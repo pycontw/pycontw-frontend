@@ -43,7 +43,7 @@
                         v-if="i == 0"
                         class="
                             flex
-                            sm:justify-center
+                            sm:justify-around
                             justify-between
                             mx-2
                             my-1
@@ -98,7 +98,11 @@
                             </two-col-wrapper>
                             <!-- 處理流程圖片 -->
                             <div
-                                v-if="subtitle.title == `處理流程`"
+                                v-if="
+                                    [`處理流程`, `Procedure`].includes(
+                                        subtitle.title,
+                                    )
+                                "
                                 class="flex flex-wrap justify-center mx-2 my-1"
                             >
                                 <div
