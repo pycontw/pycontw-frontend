@@ -130,7 +130,7 @@ export default {
     width: calc(100% - 10px);
 }
 .img__bg {
-    background-color: #f7f6fe;
+    @apply bg-[#f7f6fe];
 }
 
 .lightBox__header {
