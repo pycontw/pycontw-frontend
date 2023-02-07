@@ -344,9 +344,7 @@ export default {
             this.selectedItem = item
         },
         getSpeakerPhoto(speech) {
-            let photo = []
-            photo = speech.speakers.map((element) => element.photo)
-            return photo
+            return speech.speakers.map((element) => element?.photo)
         },
         getSpeakerName(speech) {
             let name = ''
@@ -356,9 +354,7 @@ export default {
             return name
         },
         getSpeakerDescription(speech) {
-            let description = []
-            description = speech.speakers.map((element) => element.description)
-            return description
+            return speech.speakers.map((element) => element?.description)
         },
     },
     head() {
