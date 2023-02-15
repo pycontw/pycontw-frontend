@@ -80,7 +80,7 @@ export default {
                 '--is-link': this.isLink,
                 '--uppercase': this.uppercase,
                 '--bulletin': this.bulletin,
-                '--largeEn': this.getLocale,
+                '--largeEn': this.getLocale === 'en-us',
             }
         },
         medium() {
@@ -147,7 +147,7 @@ export default {
     }
 
     &.--largeEn > a {
-        min-width: 270px;
+        min-width: 323px;
     }
 
     &.--medium:not(.--is-link),
@@ -217,7 +217,7 @@ export default {
     }
 
     &.--largeEn > a {
-        min-width: 270px;
+        min-width: 323px;
     }
 
     &.--medium:not(.--is-link),
