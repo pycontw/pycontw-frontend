@@ -25,7 +25,8 @@
                                 ? primaryButton.path
                                 : ''
                         "
-                        :class="isCallingForProposals ? 'pr-[34px]' : ''"
+                        :primary="primaryButton.isPrimary"
+                        :large="primaryButton.isLarge"
                     >
                         {{ $t(primaryButton.textKey) }}
                     </text-button>
@@ -41,8 +42,9 @@
                                 ? secondaryButton.path
                                 : ''
                         "
-                        :primary="false"
-                        :bordered="true"
+                        :primary="secondaryButton.isPrimary"
+                        :bordered="secondaryButton.isBordered"
+                        :large="secondaryButton.isLarge"
                     >
                         {{ $t(secondaryButton.textKey) }}
                     </text-button>
@@ -239,7 +241,7 @@ export default {
     @apply mx-auto justify-center md:justify-start;
 }
 .text-button-wrapper {
-    @apply mt-32 md:mt-32;
-    @apply w-full flex justify-center md:justify-start;
+    @apply mt-20 md:mt-32;
+    @apply w-full flex justify-center gap-[32px] md:justify-start flex-wrap;
 }
 </style>

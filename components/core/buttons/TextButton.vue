@@ -1,21 +1,21 @@
 <template>
-    <div>
-        <button :class="coreButtonClasses">
-            <ext-link v-if="href" :href="href">
-                <span><slot></slot></span>
-            </ext-link>
-            <locale-link v-else-if="to" :to="to" customized>
-                <span><slot></slot></span>
-            </locale-link>
-            <slot v-else></slot>
-        </button>
-    </div>
+    <button :class="coreButtonClasses">
+        <ext-link v-if="href" :href="href">
+            <span><slot></slot></span>
+        </ext-link>
+        <locale-link v-else-if="to" :to="to" customized>
+            <span><slot></slot></span>
+        </locale-link>
+        <slot v-else></slot>
+    </button>
 </template>
 
 <script>
+import i18n from '@/i18n/index.i18n'
 import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
+    i18n,
     name: 'CoreTextButton',
     components: {
         ExtLink,
@@ -64,6 +64,9 @@ export default {
         },
     },
     computed: {
+        getLocale() {
+            return this.$i18n.locale
+        },
         coreButtonClasses() {
             return {
                 'core-button': true,
@@ -77,6 +80,7 @@ export default {
                 '--is-link': this.isLink,
                 '--uppercase': this.uppercase,
                 '--bulletin': this.bulletin,
+                '--largeEn': this.getLocale,
             }
         },
         medium() {
@@ -140,6 +144,10 @@ export default {
         font-size: 28px;
         padding: 24px 48px;
         min-width: 128px;
+    }
+
+    &.--largeEn > a {
+        min-width: 270px;
     }
 
     &.--medium:not(.--is-link),
@@ -206,6 +214,10 @@ export default {
         font-size: 28px;
         padding: 24px 48px;
         min-width: 128px;
+    }
+
+    &.--largeEn > a {
+        min-width: 270px;
     }
 
     &.--medium:not(.--is-link),
