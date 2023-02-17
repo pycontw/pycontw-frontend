@@ -16,17 +16,37 @@
                 <div class="text-button-wrapper">
                     <text-button
                         :href="
-                            landingButton.isExternalLink
-                                ? landingButton.path
+                            primaryButton.isExternalLink
+                                ? primaryButton.path
                                 : ''
                         "
                         :to="
-                            !landingButton.isExternalLink
-                                ? landingButton.path
+                            !primaryButton.isExternalLink
+                                ? primaryButton.path
                                 : ''
                         "
+                        :primary="primaryButton.isPrimary"
+                        :large="primaryButton.isLarge"
                     >
-                        {{ $t(landingButton.textKey) }}
+                        {{ $t(primaryButton.textKey) }}
+                    </text-button>
+                    <text-button
+                        v-if="isCallingForProposals"
+                        :href="
+                            secondaryButton.isExternalLink
+                                ? secondaryButton.path
+                                : ''
+                        "
+                        :to="
+                            !secondaryButton.isExternalLink
+                                ? secondaryButton.path
+                                : ''
+                        "
+                        :primary="secondaryButton.isPrimary"
+                        :bordered="secondaryButton.isBordered"
+                        :large="secondaryButton.isLarge"
+                    >
+                        {{ $t(secondaryButton.textKey) }}
                     </text-button>
                 </div>
             </div>
@@ -110,7 +130,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            landingButton: landingButtonConfig.JOIN_US,
+            primaryButton: landingButtonConfig.JOIN_US,
+            secondaryButton: landingButtonConfig.CFP,
             selectedSponsor: {},
         }
     },
@@ -134,9 +155,6 @@ export default {
         },
         isCallingForProposals() {
             return this.$store.state.configs.showSpeakingPage
-        },
-        isShowingScheduleButton() {
-            return this.$store.state.configs.showSchedulePage
         },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
@@ -223,7 +241,7 @@ export default {
     @apply mx-auto justify-center md:justify-start;
 }
 .text-button-wrapper {
-    @apply mt-32 md:mt-32;
-    @apply w-full flex justify-center md:justify-start;
+    @apply mt-20 md:mt-32;
+    @apply w-full flex justify-center gap-[32px] md:justify-start flex-wrap;
 }
 </style>
