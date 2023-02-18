@@ -86,6 +86,8 @@
                                     <p>{{ subtitle.descriptions[0] }}</p>
                                     <br />
                                     <p>{{ subtitle.descriptions[1] }}</p>
+                                    <br />
+                                    <p>{{ subtitle.descriptions[2] }}</p>
                                     <ol>
                                         <li
                                             v-for="(

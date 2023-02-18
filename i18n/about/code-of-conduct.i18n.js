@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'Code of Conduct',
         pageAbstract:
-            'PyCon Taiwan aims to provide a joyous, pleasant and vibrant environment.' +
+            'PyCon Taiwan aims to provide a joyous, pleasant and vibrant environment. ' +
             'This convention applies to all the words and deeds of participants in ' +
             'therelevant entities and digital fields of PyCon Taiwan. It is hoped ' +
             'that everyone willwork together to make PyCon Taiwan full of mutual respect and trust.',
@@ -12,10 +12,10 @@ export default genI18nMessages({
             {
                 title: 'Three Principles',
                 descriptions: [
-                    'PyCon Taiwan is dedicated to providing a harassment-free conference' +
+                    'PyCon Taiwan is dedicated to providing a harassment-free conference ' +
                         'experience for everyone. We do not tolerate harassment toward conference' +
                         'participants in any form.Remember that harassment and jokes that are sexist, ' +
-                        'racist, or exclusionary are not tolerated at PyCon Taiwan. PyCon Taiwan take' +
+                        'racist, or exclusionary are not tolerated at PyCon Taiwan. PyCon Taiwan take ' +
                         'appropriate actions to redirect behavior violating the Code of Conduct.',
                 ],
                 list: [
@@ -27,7 +27,7 @@ export default genI18nMessages({
                     {
                         title: 'Do not harass others',
                         descriptions: [
-                            'PyCon Taiwan will not tolerate any form of harassment and discrimination.' +
+                            'PyCon Taiwan will not tolerate any form of harassment and discrimination. ' +
                                 'Each attendee should be equally respected regardless of nationality, race, ' +
                                 'language, gender, sexual orientation, age, disability, physical appearance, ' +
                                 'faith, profession, seniority, political view, or intellect.',
@@ -36,7 +36,7 @@ export default genI18nMessages({
                     {
                         title: 'Appreciate each other',
                         descriptions: [
-                            'Each attendee is expected to act professionally when attending Pycon Taiwan. ' +
+                            'Each attendee is expected to act professionally when attending PyCon Taiwan. ' +
                                 'Users of Python are diverse in their professional roles, technical backgrounds, ' +
                                 'and application areas. They contribute to the technology in many different ways, ' +
                                 'some amazingly unimaginable. Opinions or actions that undervalue other members of ' +
@@ -57,7 +57,7 @@ export default genI18nMessages({
             {
                 title: 'Violation and Reporting',
                 descriptions: [
-                    'Conference organizers will take appropriate actions on behaviors violating the Code of Conduct.' +
+                    'Conference organizers will take appropriate actions on behaviors violating the Code of Conduct. ' +
                         'Violators may be required to leave the conference without a refund at the sole discretion of ' +
                         'the organizers. This Code of Conduct is applicable to both physical and online events approved ' +
                         'by the organizers of PyCon Taiwan.',
@@ -68,9 +68,9 @@ export default genI18nMessages({
                         descriptions: [
                             'If you believe someone is in danger, including from themselves, the most important thing ' +
                                 'is to find help. If you feel your safety is in jeopardy, please immediately contact law ' +
-                                'enforcement in Taiwan (dialing 110 in Taiwan). Ask an organizing staff if you do not have' +
-                                'a cell phone. If you believe the Code of Conduct has been violated, please report the incident' +
-                                'to a staff member right away. If you are unsure whether it is a violation, or whether the space' +
+                                'enforcement in Taiwan (dialing 110 in Taiwan). Ask an organizing staff if you do not have ' +
+                                'a cell phone. If you believe the Code of Conduct has been violated, please report the incident ' +
+                                'to a staff member right away. If you are unsure whether it is a violation, or whether the space ' +
                                 'where it has happened is covered by this Code of Conduct, we encourage you to still report it.',
                         ],
                     },
@@ -91,16 +91,16 @@ export default genI18nMessages({
                             'If you make a report via email or phone, please include:',
                         ],
                         list: [
-                            '1.Your contact information (so we can get in touch with you if we need to follow up).',
-                            '2.Date and time of the incident.',
-                            '3.Location of the incident.',
-                            '4.Whether the incident is ongoing.',
-                            '5.Description of the incident.',
-                            '6.Identifying information of the reported person: name, physical appearance, height, ' +
+                            '1. Your contact information (so we can get in touch with you if we need to follow up).',
+                            '2. Date and time of the incident.',
+                            '3. Location of the incident.',
+                            '4. Whether the incident is ongoing.',
+                            '5. Description of the incident.',
+                            '6. Identifying information of the reported person: name, physical appearance, height, ' +
                                 'clothing, voice accent, identifying badge information such as company name, ribbons, ' +
                                 'or badge number.',
-                            '7.Additional circumstances surrounding the incident.',
-                            '8.Other people involved in, or witnesses to the incident, and their contact information or description.。',
+                            '7. Additional circumstances surrounding the incident.',
+                            '8. Other people involved in, or witnesses to the incident, and their contact information or description. ',
                         ],
                     },
                     {
@@ -111,12 +111,12 @@ export default genI18nMessages({
                                 'After an incident responder takes the report, they will immediately consult ' +
                                 'with the PyCon Taiwan staff, unless there is a conflict of interest (involved ' +
                                 'directly with one of the PyCon Taiwan staff), in which case any non-interested ' +
-                                'parties will be contacted.' +
-                                'If the incident is ongoing and needs to be immediately addressed, any lead incident ' +
+                                'parties will be contacted. ',
+                            'If the incident is ongoing and needs to be immediately addressed, any lead incident ' +
                                 'responder may take appropriate action to ensure the safety of everyone involved. ' +
                                 'If the situation requires it, this may take the form of a referral to an appropriate ' +
-                                'non-PyCon agency, including the law enforcement in Taiwan.' +
-                                'If the incident is less urgent, the report will be discussed by the event staff, who ' +
+                                'non-PyCon agency, including the law enforcement in Taiwan.',
+                            'If the incident is less urgent, the report will be discussed by the event staff, who ' +
                                 'will meet to determine an appropriate response.',
                         ],
                     },
@@ -124,13 +124,16 @@ export default genI18nMessages({
                         title: 'Confidentiality',
                         descriptions: [
                             'All reports are confidential. When we discuss incidents with people who are reported, ' +
-                                'we will anonymize details as much as we can to protect the reporter’s privacy.' +
+                                'we will anonymize details as much as we can to protect the reporter’s privacy. ' +
                                 'However, the reported person may be able to guess who made the report in certain ' +
                                 'situations, even with details anonymized. If you have concerns about retaliation or ' +
                                 'your personal safety, please note those in your report. We still encourage you to ' +
                                 'report, so that we can support you while keeping our conference attendees safe. ' +
                                 'In some cases, we can compile several anonymized reports into a pattern of behavior, ' +
                                 'and take action based on these reports.',
+                            'In cetain cases, we may determine that a public statement needs to be made. In such cases, ' +
+                                'the identities of all victims and reporters will remain confidential unless the individuals ' +
+                                'involved instruct us otherwise. ',
                         ],
                     },
                     {
