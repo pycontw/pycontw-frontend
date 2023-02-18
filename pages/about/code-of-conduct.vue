@@ -84,6 +84,8 @@
                                 </template>
                                 <template #right-col>
                                     <p>{{ subtitle.descriptions[0] }}</p>
+                                    <br />
+                                    <p>{{ subtitle.descriptions[1] }}</p>
                                     <ol>
                                         <li
                                             v-for="(
@@ -103,7 +105,7 @@
                                         subtitle.title,
                                     )
                                 "
-                                class="flex flex-wrap justify-center mx-2 my-1"
+                                class="flex flex-wrap justify-center mx-2 my-2"
                             >
                                 <div
                                     class="sub1_img"
@@ -233,10 +235,10 @@ export default {
     }
 }
 .sub1_img {
-    @apply w-full h-96 md:h-96 bg-contain bg-no-repeat mx-2 md:mx-5;
+    @apply w-full h-96 md:h-96 bg-contain bg-no-repeat mx-2 my-3 md:mx-5;
 }
 .sub2_img {
-    @apply bg-no-repeat mx-2 md:mx-5;
+    @apply bg-no-repeat mx-2 my-2 md:mx-5;
     display: none;
     width: 30rem;
     height: 40rem;

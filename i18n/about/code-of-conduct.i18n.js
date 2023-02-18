@@ -190,13 +190,13 @@ export default genI18nMessages({
                     {
                         title: '通報要件',
                         descriptions: [
-                            '如果您認為某人處於危險之中（包含他們自己造成的危險），確實感到自己的安全受到威脅，請立即撥打 110 以聯繫臺灣執法單位，',
-                            '或詢問 PyCon Taiwan 工作人員。如果不確定該事件是否違規，或所發生場域是否在行為準則範疇內，我們仍然鼓勵您通報。',
+                            '如果您認為某人處於危險之中（包含他們自己造成的危險），確實感到自己的安全受到威脅，請立即撥打 110 以聯繫臺灣執法單位，' +
+                                '或詢問 PyCon Taiwan 工作人員。如果不確定該事件是否違規，或所發生場域是否在行為準則範疇內，我們仍然鼓勵您通報。',
                         ],
                         list: [
-                            'PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
-                            'Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
-                            'Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
+                            '1. PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
+                            '2. Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
+                            '3. Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
                         ],
                     },
                     {
@@ -207,7 +207,7 @@ export default genI18nMessages({
                         list: [
                             '1.PyCon Taiwan 事件通報應變委員會',
                             '   report@python.tw',
-                            '2.David Yung-Sheng Lu(PyCon APAC 2022 大會主席',
+                            '2.David Yung-Sheng Lu PyCon APAC 2022 大會主席',
                             '   davidlu@python.tw',
                         ],
                     },
@@ -230,8 +230,8 @@ export default genI18nMessages({
                     {
                         title: '處理流程',
                         descriptions: [
-                            '當您向通報應變者通報時，他們將蒐集相關的事件資訊。通報應變者收到通報後，他們將',
-                            '立即與大會工作人員協商討論如何處理，除非存在利益衝突（直接與大會工作人員有' +
+                            '當您向通報應變者通報時，他們將蒐集相關的事件資訊。通報應變者收到通報後，他們將' +
+                                '立即與大會工作人員協商討論如何處理，除非存在利益衝突（直接與大會工作人員有' +
                                 '關），他們將聯繫任何非利益相關方協商討論。',
                             '如果事件正在發生且需要立即處理，任何通報應變者都可以採取適當的行動，以確保所有' +
                                 '相關人員的安全。如果事件不具急迫性，大會工作人員將開會討論通報之事件以確定應變方式。',
