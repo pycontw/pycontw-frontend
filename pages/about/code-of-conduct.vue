@@ -224,11 +224,8 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply mt-1 mb-1 font-serif font-bold text-left text-pink-700;
-    text-align: center;
+    @apply mt-8 mb-8 font-serif font-bold text-center text-left text-pink-700;
     font-size: 24px;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
     .paragraph-title {
@@ -236,8 +233,7 @@ export default {
     }
 }
 .img_text {
-    @apply absolute mt-24 whitespace-nowrap;
-    text-align: center;
+    @apply absolute mt-24 whitespace-nowrap text-center;
     font-size: 0.8rem;
 }
 @media (max-width: 640px) {
@@ -249,17 +245,16 @@ export default {
     @apply w-full h-96 md:h-96 bg-contain bg-no-repeat mx-2 my-3 md:mx-5;
 }
 .sub2_img {
-    @apply bg-no-repeat mx-2 my-2 md:mx-5;
-    display: none;
+    @apply hidden bg-no-repeat mx-2 my-2 md:mx-5;
     width: 30rem;
     height: 40rem;
 }
 @media (max-width: 640px) {
     .sub1_img {
-        display: none;
+        @apply hidden;
     }
     .sub2_img {
-        display: flex;
+        @apply flex;
     }
 }
 </style>
