@@ -80,9 +80,9 @@ export default genI18nMessages({
                             'In the event where there is conflict of interest, you may directly contact any of the lead incident responders:',
                         ],
                         list: [
-                            'Committee of Incident Response, PyCon Taiwan (report@python.tw)',
-                            'Winnie (Chairperson of PyCon TW 2023, winniepopu@python.tw)',
-                            'Pochun (Chairperson PyCon TW 2023, pochunlu@python.tw)',
+                            '1. Committee of Incident Response, PyCon Taiwan (report@python.tw)',
+                            '2. Winnie (Chairperson of PyCon TW 2023, winniepopu@python.tw)',
+                            '3. Pochun (Chairperson PyCon TW 2023, pochunlu@python.tw)',
                         ],
                     },
                     {
@@ -196,11 +196,6 @@ export default genI18nMessages({
                             '如果您認為某人處於危險之中（包含他們自己造成的危險），確實感到自己的安全受到威脅，請立即撥打 110 以聯繫臺灣執法單位，' +
                                 '或詢問 PyCon Taiwan 工作人員。如果不確定該事件是否違規，或所發生場域是否在行為準則範疇內，我們仍然鼓勵您通報。',
                         ],
-                        list: [
-                            '1. PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
-                            '2. Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
-                            '3. Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
-                        ],
                     },
                     {
                         title: '如何通報',
@@ -208,10 +203,9 @@ export default genI18nMessages({
                             '如果發生衝突，可以直接聯繫任一通報應變者：',
                         ],
                         list: [
-                            '1.PyCon Taiwan 事件通報應變委員會',
-                            '   report@python.tw',
-                            '2.David Yung-Sheng Lu PyCon APAC 2022 大會主席',
-                            '   davidlu@python.tw',
+                            '1. PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
+                            '2. Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
+                            '3. Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
                         ],
                     },
                     {
