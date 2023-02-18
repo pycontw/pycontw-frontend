@@ -10,7 +10,7 @@ export default genI18nMessages({
             'that everyone willwork together to make PyCon Taiwan full of mutual respect and trust.',
         contents: [
             {
-                title: '三大原則',
+                title: 'Three Principles',
                 descriptions: [
                     'PyCon Taiwan is dedicated to providing a harassment-free conference' +
                         'experience for everyone. We do not tolerate harassment toward conference' +
@@ -25,7 +25,7 @@ export default genI18nMessages({
                 ],
                 subtitle: [
                     {
-                        title: '禁止騷擾',
+                        title: 'Do not harass others',
                         descriptions: [
                             'PyCon Taiwan will not tolerate any form of harassment and discrimination.' +
                                 'Each attendee should be equally respected regardless of nationality, race, ' +
@@ -34,7 +34,7 @@ export default genI18nMessages({
                         ],
                     },
                     {
-                        title: '彼此欣賞 ',
+                        title: 'Appreciate each other',
                         descriptions: [
                             'Each attendee is expected to act professionally when attending Pycon Taiwan. ' +
                                 'Users of Python are diverse in their professional roles, technical backgrounds, ' +
@@ -44,7 +44,7 @@ export default genI18nMessages({
                         ],
                     },
                     {
-                        title: '體貼他人',
+                        title: 'Show consideration',
                         descriptions: [
                             'Sexual contents in any form are inappropriate in any conference venue, ' +
                                 'including but not limited to talks, open spaces, or social media. Words ' +
