@@ -80,9 +80,9 @@ export default genI18nMessages({
                             'In the event where there is conflict of interest, you may directly contact any of the lead incident responders:',
                         ],
                         list: [
-                            '1. Committee of Incident Response, PyCon Taiwan (report@python.tw)',
-                            '2. Winnie (Chairperson of PyCon TW 2023, winniepopu@python.tw)',
-                            '3. Pochun (Chairperson PyCon TW 2023, pochunlu@python.tw)',
+                            'Committee of Incident Response, PyCon Taiwan (report@python.tw)',
+                            'Winnie (Chairperson of PyCon TW 2023, winniepopu@python.tw)',
+                            'Pochun (Chairperson PyCon TW 2023, pochunlu@python.tw)',
                         ],
                     },
                     {
@@ -91,16 +91,16 @@ export default genI18nMessages({
                             'If you make a report via email or phone, please include:',
                         ],
                         list: [
-                            '1. Your contact information (so we can get in touch with you if we need to follow up).',
-                            '2. Date and time of the incident.',
-                            '3. Location of the incident.',
-                            '4. Whether the incident is ongoing.',
-                            '5. Description of the incident.',
-                            '6. Identifying information of the reported person: name, physical appearance, height, ' +
+                            'Your contact information (so we can get in touch with you if we need to follow up).',
+                            'Date and time of the incident.',
+                            'Location of the incident.',
+                            'Whether the incident is ongoing.',
+                            'Description of the incident.',
+                            'Identifying information of the reported person: name, physical appearance, height, ' +
                                 'clothing, voice accent, identifying badge information such as company name, ribbons, ' +
                                 'or badge number.',
-                            '7. Additional circumstances surrounding the incident.',
-                            '8. Other people involved in, or witnesses to the incident, and their contact information or description. ',
+                            'Additional circumstances surrounding the incident.',
+                            'Other people involved in, or witnesses to the incident, and their contact information or description. ',
                         ],
                     },
                     {
@@ -203,9 +203,9 @@ export default genI18nMessages({
                             '如果發生衝突，可以直接聯繫任一通報應變者：',
                         ],
                         list: [
-                            '1. PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
-                            '2. Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
-                            '3. Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
+                            'PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
+                            'Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
+                            'Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
                         ],
                     },
                     {
@@ -214,14 +214,14 @@ export default genI18nMessages({
                             '如果您透過電子郵件進行通報，請盡量包含以下內容：',
                         ],
                         list: [
-                            '1.您的聯繫方式（以便與您取得聯繫）。',
-                            '2.事件發生的日期和時間。',
-                            '3.事件發生地點。',
-                            '4.事件是否正在發生。',
-                            '5.事件描述。',
-                            '6.被舉報人的識別資訊：姓名、外貌、身高、服裝、口音、識別徽章資訊，如公司名稱、名牌或識別證。',
-                            '7.圍繞事件的其他情況。',
-                            '8.其他參與及其聯繫方式或描述。',
+                            '您的聯繫方式（以便與您取得聯繫）。',
+                            '事件發生的日期和時間。',
+                            '事件發生地點。',
+                            '事件是否正在發生。',
+                            '事件描述。',
+                            '被舉報人的識別資訊：姓名、外貌、身高、服裝、口音、識別徽章資訊，如公司名稱、名牌或識別證。',
+                            '圍繞事件的其他情況。',
+                            '其他參與及其聯繫方式或描述。',
                         ],
                     },
                     {

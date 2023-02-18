@@ -97,7 +97,7 @@
                                             "
                                         />
                                     </div>
-                                    <ol>
+                                    <ol class="list-decimal ml-4">
                                         <li
                                             v-for="(
                                                 li, liIndex
