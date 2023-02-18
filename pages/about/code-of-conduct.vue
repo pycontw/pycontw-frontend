@@ -83,11 +83,20 @@
                                     <h2>{{ subtitle.title }}</h2>
                                 </template>
                                 <template #right-col>
-                                    <p>{{ subtitle.descriptions[0] }}</p>
-                                    <br />
-                                    <p>{{ subtitle.descriptions[1] }}</p>
-                                    <br />
-                                    <p>{{ subtitle.descriptions[2] }}</p>
+                                    <div
+                                        v-for="(
+                                            description, index
+                                        ) in subtitle.descriptions"
+                                        :key="'description-' + index"
+                                    >
+                                        <p>{{ description }}</p>
+                                        <br
+                                            v-if="
+                                                index !==
+                                                subtitle.descriptions.length - 1
+                                            "
+                                        />
+                                    </div>
                                     <ol>
                                         <li
                                             v-for="(
