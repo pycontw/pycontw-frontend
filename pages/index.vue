@@ -52,11 +52,11 @@
             </div>
         </div>
 
-        <i18n-page-wrapper>
-            <intro
+        <I18nPageWrapper>
+            <Intro
                 :is-showing-apac-intro="showIndexAPACSection"
                 :is-bulleted="isBulleted"
-            ></intro>
+            ></Intro>
             <div class="bulletin-section">
                 <core-h2
                     :title="$t('bulletinList')"
@@ -91,7 +91,7 @@
                     </sponsor-card>
                 </sponsor-card-collection>
             </div>
-        </i18n-page-wrapper>
+        </I18nPageWrapper>
         <transition name="fade">
             <sponsor-modal
                 v-if="isOpened"
@@ -188,7 +188,7 @@ export default {
     left: 0;
     right: 0;
     height: calc(100vh - 3rem);
-    min-height: 600px;
+    min-height: 750px;
 }
 .landing__background::after {
     height: 100vh;
