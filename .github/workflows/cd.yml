@@ -35,7 +35,7 @@ jobs:
             -   name: Build 👷🏽
                 run: npm run generate
                 env:
-                    ROUTER_BASE: /pycontw-2021/  # repo name
+                    ROUTER_BASE: /pycontw-frontend/  # repo name
                     BUILD_TARGET: static
                     API_URL_BROWSER: https://tw.pycon.org/temp
                     AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
