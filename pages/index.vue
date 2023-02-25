@@ -120,6 +120,14 @@ export default {
         I18nPageWrapper,
         Intro,
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { sponsorsData: payload }
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
+        }
+    },
     data() {
         return {
             isOpened: false,
@@ -139,9 +147,6 @@ export default {
             }
             return true
         },
-    },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {
