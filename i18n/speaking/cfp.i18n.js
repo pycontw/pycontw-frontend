@@ -9,7 +9,7 @@ export default genI18nMessages({
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'Conference dates: Tentatively 9/2 - 9/3 (to be confirmed by end of March at the latest)',
+                    'Conference dates: 9/2 - 9/3',
                     'Talks & Tutorial CFP Begins: February 19th, 2023',
                     'Talks & Tutorial CFP Ends: March 31st, 2023, 23:59:59 ({aoe})',
                     'Announcement of Acceptance: June 13th, 2023',
@@ -140,7 +140,7 @@ export default genI18nMessages({
             importantDates: {
                 title: '重要日期',
                 description: [
-                    '大會日期：暫訂 9/2 - 9/3 （最晚於三月底前確定會期）',
+                    '大會日期： 9/2 - 9/3',
                     '議程、課程 開放徵稿：2023 年 02 月 19 日',
                     '議程、課程 投稿截止：2023 年 03 月 31 日 23:59:59 ({aoe})',
                     '稿件錄取通知：2023 年 06 月 13 日',
