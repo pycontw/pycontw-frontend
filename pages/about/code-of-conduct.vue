@@ -115,6 +115,7 @@
                                 </template>
                             </two-col-wrapper>
                             <!-- 處理流程圖片 -->
+                            <!-- 如果是`處理流程`或是`Procedure`，才會引入圖片，避免重複引入圖片 -->
                             <div
                                 v-if="
                                     [`處理流程`, `Procedure`].includes(
