@@ -125,11 +125,11 @@
                             >
                                 <div
                                     class="sub1_img"
-                                    :style="getSub2Style(sub2[0])"
+                                    :style="getSub2Style(sub2Imgs[0])"
                                 ></div>
                                 <div
                                     class="sub2_img"
-                                    :style="getSub2Style(sub2[1])"
+                                    :style="getSub2Style(sub2Imgs[1])"
                                 ></div>
                             </div>
                         </div>
@@ -152,8 +152,10 @@ import IntroImg3 from '@/static/img/about/code-of-conduct/Intro-3.png'
 import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.png'
 import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.png'
 import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.png'
-import Icon4 from '@/static/img/about/code-of-conduct/Icon-4.png'
-import Icon5 from '@/static/img/about/code-of-conduct/Icon-5.png'
+import ProcedureZh from '@/static/img/about/code-of-conduct/procedure-zh.png'
+import ProcedureZhRwd from '@/static/img/about/code-of-conduct/procedure-zh-rwd.png'
+import ProcedureEn from '@/static/img/about/code-of-conduct/procedure-en.png'
+import ProcedureEnRwd from '@/static/img/about/code-of-conduct/procedure-en-rwd.png'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
@@ -170,7 +172,8 @@ export default {
             aboutBanner: AboutBanner,
             introImgs: [IntroImg1, IntroImg2, IntroImg3],
             sub1: [Icon1, Icon2, Icon3],
-            sub2: [Icon4, Icon5],
+            sub2_zh: [ProcedureZh, ProcedureZhRwd],
+            sub2_en: [ProcedureEn, ProcedureEnRwd],
         }
     },
     computed: {
@@ -179,6 +182,13 @@ export default {
                 'background-image': `url(${this.aboutBanner})`,
                 'background-repeat': 'no-repeat',
                 'background-position': 'center',
+            }
+        },
+        sub2Imgs() {
+            if (this.$i18n.locale === 'zh-hant') {
+                return this.sub2_zh
+            } else {
+                return this.sub2_en
             }
         },
     },
