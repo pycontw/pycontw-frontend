@@ -6,14 +6,14 @@ export default genI18nMessages({
         pageAbstract:
             'PyCon Taiwan aims to provide a joyous, pleasant and vibrant environment. ' +
             'This convention applies to all the words and deeds of participants in ' +
-            'therelevant entities and digital fields of PyCon Taiwan. It is hoped ' +
-            'that everyone willwork together to make PyCon Taiwan full of mutual respect and trust.',
+            'the relevant entities and digital fields of PyCon Taiwan. It is hoped ' +
+            'that everyone will work together to make PyCon Taiwan full of mutual respect and trust.',
         contents: [
             {
                 title: 'Three Principles',
                 descriptions: [
                     'PyCon Taiwan is dedicated to providing a harassment-free conference ' +
-                        'experience for everyone. We do not tolerate harassment toward conference' +
+                        'experience for everyone. We do not tolerate harassment toward conference ' +
                         'participants in any form.Remember that harassment and jokes that are sexist, ' +
                         'racist, or exclusionary are not tolerated at PyCon Taiwan. PyCon Taiwan take ' +
                         'appropriate actions to redirect behavior violating the Code of Conduct.',
@@ -131,7 +131,7 @@ export default genI18nMessages({
                                 'report, so that we can support you while keeping our conference attendees safe. ' +
                                 'In some cases, we can compile several anonymized reports into a pattern of behavior, ' +
                                 'and take action based on these reports.',
-                            'In cetain cases, we may determine that a public statement needs to be made. In such cases, ' +
+                            'In certain cases, we may determine that a public statement needs to be made. In such cases, ' +
                                 'the identities of all victims and reporters will remain confidential unless the individuals ' +
                                 'involved instruct us otherwise. ',
                         ],
