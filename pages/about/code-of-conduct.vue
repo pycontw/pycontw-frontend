@@ -33,7 +33,12 @@
                         v-for="(
                             description, descriptionsIndex
                         ) in rule.descriptions"
-                        :key="`coc-description-${descriptionsIndex}`"
+                        :key="
+                            'coc-description-' +
+                            descriptionsIndex +
+                            '-' +
+                            description
+                        "
                         class="text-xs md:text-base leading-5 md:leading-8"
                     >
                         {{ description }}
