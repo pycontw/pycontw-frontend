@@ -11,11 +11,11 @@
             <div class="communities">
                 <div class="communities__content">
                     <div
-                        v-for="(community, index) in $t('communities')"
+                        v-for="community in $t('communities')"
                         :key="`community_${community.tag}`"
                         class="box"
                     >
-                        <div class="box__content" @click="popupShow(index)">
+                        <div class="box__content" @click="showModal(community)">
                             <div class="description">
                                 <h3 class="description__title">
                                     {{ community.title }}
@@ -31,66 +31,17 @@
                                 :alt="community.tag"
                             />
                         </div>
-                        <div
-                            ref="popupCover"
-                            class="popup"
-                            :class="{
-                                'popup--show': popupIndex === index,
-                            }"
-                            @click="popupClose(index)"
-                        >
-                            <div class="popup__content">
-                                <button
-                                    ref="popupBtn"
-                                    class="popup__contentButton"
-                                    @click="popupClose(index)"
-                                >
-                                    ✕
-                                </button>
-                                <img
-                                    v-show="communityImgUrl[community.tag]"
-                                    :src="communityImgUrl[community.tag]"
-                                    :alt="community.tag"
-                                    class="
-                                        object-cover
-                                        rounded-lg
-                                        w-20
-                                        lg:w-32
-                                        h-20
-                                        lg:h-32
-                                    "
-                                />
-                                <h4
-                                    class="
-                                        font-bold font-serif
-                                        lg:text-2xl
-                                        mb-10
-                                        mt-5
-                                    "
-                                >
-                                    {{ community.title }}
-                                </h4>
-                                <p
-                                    class="
-                                        text-xs
-                                        lg:text-sm
-                                        text-left
-                                        leading-normal
-                                    "
-                                >
-                                    {{ community.description }}
-                                </p>
-                                <core-text-button
-                                    :href="communityLink[community.tag]"
-                                    class="mt-7 lg:mt-10"
-                                    secondary
-                                    large
-                                >
-                                    {{ $t('website') }}
-                                </core-text-button>
-                            </div>
-                        </div>
                     </div>
+                    <transition name="fade">
+                        <modal
+                            v-if="isOpened"
+                            v-model="isOpened"
+                            :img-urls="communityImgUrl[selectedItem.tag]"
+                            :name="selectedItem.title"
+                            :intro="selectedItem.description"
+                            :website-url="communityLink[selectedItem.tag]"
+                        />
+                    </transition>
                 </div>
             </div>
         </div>
@@ -100,14 +51,14 @@
 <script>
 import i18n from '@/i18n/about/apac-community.i18n'
 import CoreH1 from '@/components/core/titles/H1'
-import CoreTextButton from '@/components/core/buttons/TextButton'
+import Modal from '~/components/core/modal/Modal'
 
 export default {
     i18n,
     name: 'PageCommunity',
     components: {
         CoreH1,
-        CoreTextButton,
+        Modal,
     },
     data() {
         return {
@@ -139,21 +90,14 @@ export default {
                 India: require('~/static/img/about/apac-community/in.png'),
                 Russia: require('~/static/img/about/apac-community/ru.png'),
             },
-            popupIndex: null,
-            boxScroll: true,
+            isOpened: false,
+            selectedItem: {},
         }
     },
     methods: {
-        popupShow(index) {
-            this.popupIndex = index
-        },
-        popupClose(index) {
-            const target = event.target
-            if (target === this.$refs.popupBtn[index]) {
-                this.popupIndex = null
-            } else if (target === this.$refs.popupCover[index]) {
-                this.popupIndex = null
-            }
+        showModal(item) {
+            this.isOpened = true
+            this.selectedItem = item
         },
     },
     head() {
@@ -230,21 +174,13 @@ export default {
 .content__img {
     @apply object-cover rounded-lg h-32 w-60 lg:w-32;
 }
-.popup {
-    @apply fixed hidden justify-center items-center w-screen h-screen left-0 top-0 lg:p-0;
-    padding: 0 10%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
 }
-.popup--show {
-    @apply flex;
-}
-.popup__content {
-    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 border-3 border-pink-700 bg-black-900 lg:p-10;
-    width: 724px;
-    min-width: 350px;
-}
-.popup__contentButton {
-    @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
+.fade-enter,
+.fade-leave-to {
+    @apply opacity-0;
 }
 </style>
