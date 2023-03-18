@@ -81,6 +81,7 @@ npm run serve
 npm run generate
 ```
 ### Archiving the Historical PyCon TW Website
+
 <details>
 1. Check out the uptodate branch like `pycontw-2021` or `pycontw-2022`.
 
@@ -98,10 +99,8 @@ npm i
 4. Generate static project
 
 ```bash
-ROUTER_BASE="/pycon_archive_past_website/2021/" npm run generate
+ROUTER_BASE="/2021/" npm run generate
 ```
-
-5. Open your editor and replace all `/pycon_archive_past_website/2021/` into `https://tw.pycon.org/2021/` and `\u002Fpycon_archive_past_website` into `""`(empty string).
 </details>
 
 ## Check your code:
