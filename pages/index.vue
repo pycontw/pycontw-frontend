@@ -207,13 +207,13 @@ export default {
 }
 .landing__title {
     position: relative;
-    top: 2.5rem;
+    top: 4.5rem;
     background-image: url('~@/static/landing-title-rwd.png');
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 2rem;
     background-size: 100%;
-    min-height: 50vh;
+    min-height: 55vh;
     min-width: 100vw;
 }
 @media (min-width: 768px) {
@@ -223,6 +223,7 @@ export default {
         background-position-y: 0;
     }
     .landing__title {
+        top: 2.5rem;
         background-image: url('~@/static/landing-title.png');
         background-repeat: no-repeat;
         background-position-x: 0;
