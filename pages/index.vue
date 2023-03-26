@@ -1,6 +1,25 @@
 <template>
     <div class="landing">
         <div class="landing__background flex pt-16 md:pt-24">
+            <div class="landing__background__items">
+                <img
+                    class="landing__background__items__meter"
+                    src="~@/static/img/landing/meteor-1.png"
+                />
+                <img
+                    class="landing__background__items__meter"
+                    src="~@/static/img/landing/meteor-2.png"
+                />
+                <div class="landing__background__items__curly">
+                    <img src="~@/static/img/landing/curly-1.png" />
+                </div>
+                <div class="landing__background__items__curly">
+                    <img src="~@/static/img/landing/curly-2.png" />
+                </div>
+                <div class="landing__background__items__circle"></div>
+                <div class="landing__background__items__square"></div>
+                <div class="landing__background__items__cone"></div>
+            </div>
             <div
                 class="
                     w-full
@@ -163,7 +182,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .landing__background,
 .landing__background::after {
     position: relative;
@@ -175,17 +194,137 @@ export default {
 .landing__background::after {
     height: 100vh;
     position: absolute;
-    top: -72px;
+    top: 0;
     z-index: -10;
     content: '';
-    background-image: url('~@/static/landing-background-rwd.svg');
+    background-image: url('~@/static/landing-background-rwd.png');
     background-repeat: no-repeat;
-    background-position: center top 4rem;
+    background-position: center;
     background-size: 100%;
+    opacity: 0.3;
+}
+.landing__background__items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.landing__background__items__meter {
+    position: absolute;
+    opacity: 0;
+}
+.landing__background__items__meter:nth-of-type(1) {
+    top: 2%;
+    left: -29%;
+    width: 60vw;
+    animation: meteor-fade-in 0.75s ease-out forwards;
+}
+.landing__background__items__meter:nth-of-type(2) {
+    top: 29%;
+    left: -25%;
+    width: 51vw;
+    animation: meteor-fade-in 0.75s 0.5s ease-out forwards;
+}
+@keyframes meteor-fade-in {
+    0% {
+        transform: translateX(-20%) translateY(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) translateY(0%);
+        opacity: 1;
+    }
+}
+.landing__background__items__curly {
+    position: absolute;
+    width: 39vw;
+    z-index: -2;
+}
+.landing__background__items__curly:nth-of-type(1) {
+    top: 16%;
+    left: 61%;
+}
+.landing__background__items__curly:nth-of-type(2) {
+    top: 88%;
+    left: 8%;
+}
+.landing__background__items__curly::after {
+    @apply bg-black-900;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+}
+.landing__background__items__curly:nth-of-type(1)::after {
+    animation: curly-fade-in 1s linear forwards;
+}
+.landing__background__items__curly:nth-of-type(2)::after {
+    animation: curly-fade-in 1s 0.5s linear forwards;
+}
+@keyframes curly-fade-in {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+.landing__background__items__circle {
+    position: absolute;
+    top: 64%;
+    left: 40%;
+    width: 20vw;
+    height: 0;
+    aspect-ratio: 1;
+    background-image: url('~@/static/img/landing/geometry-1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: geometry-fade-in 1s linear forwards;
+}
+.landing__background__items__square {
+    position: absolute;
+    top: 63%;
+    left: -5%;
+    width: 19vw;
+    height: 0;
+    aspect-ratio: 1;
+    background-image: url('~@/static/img/landing/geometry-2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: geometry-fade-in 1s 0.5s linear forwards;
+}
+@keyframes geometry-fade-in {
+    0% {
+        height: 0vw;
+    }
+    100% {
+        height: 20vw;
+    }
+}
+.landing__background__items__cone {
+    display: none;
+    position: absolute;
+    top: 66%;
+    left: 79%;
+    width: 7.7vw;
+    aspect-ratio: 1;
+    background-image: url('~@/static/img/landing/cone.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: cone-fade-in 1.5s forwards;
+}
+@keyframes cone-fade-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .landing__title {
     position: relative;
-    top: 2.5rem;
+    top: 3.5rem;
     background-image: url('~@/static/landing-title-rwd.png');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -193,10 +332,20 @@ export default {
     background-size: 100%;
     min-height: 50vh;
     min-width: 100vw;
+    opacity: 0;
+    animation: title-fade-in 0.5s 1s linear forwards;
+}
+@keyframes title-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @media (min-width: 768px) {
     .landing__background::after {
-        background-image: url('~@/static/landing-background.svg');
+        background-image: url('~@/static/landing-background.png');
         background-size: cover;
         background-position-y: 0;
     }
@@ -206,8 +355,43 @@ export default {
         background-position-x: 0;
         background-position-y: 2.5rem;
         background-size: 100%;
+        top: 2.5rem;
         min-height: 35vh;
         min-width: 45vw;
+    }
+    .landing__background__items__meter:nth-of-type(1) {
+        top: -28%;
+        left: -8%;
+        width: 35vw;
+    }
+    .landing__background__items__meter:nth-of-type(2) {
+        top: 8%;
+        left: -8%;
+        width: 30vw;
+    }
+    .landing__background__items__curly {
+        width: 13vw;
+    }
+    .landing__background__items__curly:nth-of-type(1) {
+        top: -2%;
+        left: 41%;
+    }
+    .landing__background__items__curly:nth-of-type(2) {
+        top: 41%;
+        left: 64%;
+    }
+    .landing__background__items__circle {
+        top: 44%;
+        left: 90%;
+        width: 8.4vw;
+    }
+    .landing__background__items__square {
+        top: 58%;
+        left: 63%;
+        width: 7vw;
+    }
+    .landing__background__items__cone {
+        display: block;
     }
 }
 .text-golden {
@@ -223,7 +407,7 @@ export default {
     @apply mx-auto justify-center md:justify-start;
 }
 .text-button-wrapper {
-    @apply mt-32 md:mt-32;
+    @apply mt-8 md:mt-32;
     @apply w-full flex justify-center md:justify-start;
 }
 </style>
