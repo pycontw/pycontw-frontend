@@ -1,6 +1,6 @@
 <template>
     <div class="landing">
-        <div class="landing__background flex pt-16 md:pt-24">
+        <div class="landing__background flex pt-4 md:pt-24">
             <div class="landing__background__items">
                 <img
                     class="landing__background__items__meter"
@@ -35,27 +35,47 @@
                 <div class="text-button-wrapper">
                     <text-button
                         :href="
-                            landingButton.isExternalLink
-                                ? landingButton.path
+                            primaryButton.isExternalLink
+                                ? primaryButton.path
                                 : ''
                         "
                         :to="
-                            !landingButton.isExternalLink
-                                ? landingButton.path
+                            !primaryButton.isExternalLink
+                                ? primaryButton.path
                                 : ''
                         "
+                        :primary="primaryButton.isPrimary"
+                        :large="primaryButton.isLarge"
                     >
-                        {{ $t(landingButton.textKey) }}
+                        {{ $t(primaryButton.textKey) }}
+                    </text-button>
+                    <text-button
+                        v-if="isCallingForProposals"
+                        :href="
+                            secondaryButton.isExternalLink
+                                ? secondaryButton.path
+                                : ''
+                        "
+                        :to="
+                            !secondaryButton.isExternalLink
+                                ? secondaryButton.path
+                                : ''
+                        "
+                        :primary="secondaryButton.isPrimary"
+                        :bordered="secondaryButton.isBordered"
+                        :large="secondaryButton.isLarge"
+                    >
+                        {{ $t(secondaryButton.textKey) }}
                     </text-button>
                 </div>
             </div>
         </div>
 
-        <i18n-page-wrapper>
-            <intro
+        <I18nPageWrapper>
+            <Intro
                 :is-showing-apac-intro="showIndexAPACSection"
                 :is-bulleted="isBulleted"
-            ></intro>
+            ></Intro>
             <div class="bulletin-section">
                 <core-h2
                     :title="$t('bulletinList')"
@@ -90,12 +110,16 @@
                     </sponsor-card>
                 </sponsor-card-collection>
             </div>
-        </i18n-page-wrapper>
+        </I18nPageWrapper>
         <transition name="fade">
-            <sponsor-modal
+            <modal
                 v-if="isOpened"
                 v-model="isOpened"
-                :context="selectedSponsor"
+                :img-urls="selectedSponsor.logo_url"
+                :img-bg="true"
+                :name="getAttributeByLocale(selectedSponsor, 'name')"
+                :intro="getAttributeByLocale(selectedSponsor, 'intro')"
+                :website-url="selectedSponsor.website_url"
             />
         </transition>
     </div>
@@ -106,13 +130,14 @@ import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import { landingButtonConfig } from '@/config/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import TextButton from '~/components/core/buttons/TextButton'
-import { BulletinCardCollection } from '~/components/bulletins'
-import CoreH2 from '~/components/core/titles/H2'
-import SponsorCard from '~/components/sponsors/SponsorCard'
-import SponsorModal from '~/components/sponsors/SponsorModal'
-import SponsorCardCollection from '~/components/sponsors/SponsorCardCollection'
-import Intro from '~/components/intro/Intro'
+import TextButton from '@/components/core/buttons/TextButton'
+import { BulletinCardCollection } from '@/components/bulletins'
+import CoreH2 from '@/components/core/titles/H2'
+import SponsorCard from '@/components/sponsors/SponsorCard'
+import Modal from '@/components/core/modal/Modal'
+import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
+import Intro from '@/components/intro/Intro'
+
 export default {
     i18n,
     name: 'PageIndex',
@@ -121,7 +146,7 @@ export default {
         TextButton,
         BulletinCardCollection,
         SponsorCard,
-        SponsorModal,
+        Modal,
         SponsorCardCollection,
         I18nPageWrapper,
         Intro,
@@ -129,7 +154,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            landingButton: landingButtonConfig.JOIN_US,
+            primaryButton: landingButtonConfig.JOIN_US,
+            secondaryButton: landingButtonConfig.CFP,
             selectedSponsor: {},
         }
     },
@@ -154,9 +180,6 @@ export default {
         isCallingForProposals() {
             return this.$store.state.configs.showSpeakingPage
         },
-        isShowingScheduleButton() {
-            return this.$store.state.configs.showSchedulePage
-        },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
         },
@@ -171,7 +194,6 @@ export default {
         showModal(sponsor) {
             this.isOpened = true
             this.selectedSponsor = sponsor
-            document.body.classList.add('modal-open')
         },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
@@ -189,7 +211,7 @@ export default {
     left: 0;
     right: 0;
     height: calc(100vh - 3rem);
-    min-height: 600px;
+    min-height: 750px;
 }
 .landing__background::after {
     height: 100vh;
@@ -324,7 +346,7 @@ export default {
 }
 .landing__title {
     position: relative;
-    top: 3.5rem;
+    top: 2.5rem;
     background-image: url('~@/static/landing-title-rwd.png');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -355,7 +377,6 @@ export default {
         background-position-x: 0;
         background-position-y: 2.5rem;
         background-size: 100%;
-        top: 2.5rem;
         min-height: 35vh;
         min-width: 45vw;
     }
@@ -408,6 +429,6 @@ export default {
 }
 .text-button-wrapper {
     @apply mt-8 md:mt-32;
-    @apply w-full flex justify-center md:justify-start;
+    @apply w-full flex justify-center gap-[32px] md:justify-start flex-wrap;
 }
 </style>

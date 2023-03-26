@@ -13,6 +13,7 @@ COPY i18n ./i18n
 COPY layouts ./layouts
 COPY middleware ./middleware
 COPY pages ./pages
+COPY config ./config
 COPY plugins ./plugins
 COPY static ./static
 COPY store ./store

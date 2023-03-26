@@ -1,21 +1,21 @@
 <template>
-    <div>
-        <button :class="coreButtonClasses">
-            <ext-link v-if="href" :href="href">
-                <span><slot></slot></span>
-            </ext-link>
-            <locale-link v-else-if="to" :to="to" customized>
-                <span><slot></slot></span>
-            </locale-link>
-            <slot v-else></slot>
-        </button>
-    </div>
+    <button :class="coreButtonClasses">
+        <ext-link v-if="href" :href="href">
+            <span><slot></slot></span>
+        </ext-link>
+        <locale-link v-else-if="to" :to="to" customized>
+            <span><slot></slot></span>
+        </locale-link>
+        <slot v-else></slot>
+    </button>
 </template>
 
 <script>
+import i18n from '@/i18n/index.i18n'
 import { ExtLink, LocaleLink } from '~/components/core/links'
 
 export default {
+    i18n,
     name: 'CoreTextButton',
     components: {
         ExtLink,
@@ -27,6 +27,10 @@ export default {
             default: true,
         },
         secondary: {
+            type: Boolean,
+            default: false,
+        },
+        bordered: {
             type: Boolean,
             default: false,
         },
@@ -60,11 +64,15 @@ export default {
         },
     },
     computed: {
+        getLocale() {
+            return this.$i18n.locale
+        },
         coreButtonClasses() {
             return {
                 'core-button': true,
                 '--primary': this.primary,
                 '--secondary': this.secondary,
+                '--bordered': this.bordered,
                 '--large': this.large,
                 '--medium': this.medium,
                 '--small': this.small,
@@ -72,6 +80,7 @@ export default {
                 '--is-link': this.isLink,
                 '--uppercase': this.uppercase,
                 '--bulletin': this.bulletin,
+                '--largeEn': this.getLocale === 'en-us',
             }
         },
         medium() {
@@ -137,6 +146,10 @@ export default {
         min-width: 128px;
     }
 
+    &.--largeEn > a {
+        min-width: 323px;
+    }
+
     &.--medium:not(.--is-link),
     &.--medium > a {
         @apply font-semibold;
@@ -170,6 +183,78 @@ export default {
     transition: opacity 0.5s ease-out;
 }
 
+.core-button.--bordered {
+    & > a {
+        @apply z-10 text-primary-100;
+        background: linear-gradient(#121023, #121023) padding-box,
+            linear-gradient(
+                    276.15deg,
+                    #61c8a4 0.74%,
+                    #548fcb 32.18%,
+                    #3849de 53.25%,
+                    #be3692 93.14%
+                )
+                border-box;
+        border: 5px solid transparent;
+        border-radius: 40px;
+
+        & span {
+            @apply relative z-30;
+        }
+
+        &:hover:after {
+            @apply opacity-100;
+        }
+    }
+
+    &.--large:not(.--is-link),
+    &.--large > a {
+        @apply font-bold;
+        height: 86px;
+        font-size: 28px;
+        padding: 24px 48px;
+        min-width: 128px;
+    }
+
+    &.--largeEn > a {
+        min-width: 323px;
+    }
+
+    &.--medium:not(.--is-link),
+    &.--medium > a {
+        @apply font-semibold;
+        height: 68px;
+        font-size: 24px;
+        padding: 16px 48px;
+        min-width: 108px;
+    }
+
+    &.--small:not(.--is-link),
+    &.--small > a {
+        @apply h-12 font-semibold text-base;
+        padding: 10px 22px;
+        min-width: 80px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+.core-button.--bordered > a:after {
+    @apply absolute top-0 left-0 h-full w-full;
+    @apply opacity-0 z-20;
+    border-radius: inherit;
+    content: '';
+    background: linear-gradient(#121023, #121023) padding-box,
+        linear-gradient(
+                96.26deg,
+                #5fbeab 5.5%,
+                #66b4e2 31.92%,
+                #4454df 53.53%,
+                #be3692 82.35%
+            )
+            border-box;
+    border: 5px solid transparent;
+    transition: opacity 0.5s ease-out;
+}
 .core-button.--secondary {
     & > a {
         @apply z-10 bg-pink-700;

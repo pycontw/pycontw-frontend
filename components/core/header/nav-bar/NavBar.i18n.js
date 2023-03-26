@@ -29,7 +29,7 @@ export default genI18nMessages({
         tickets: 'Ticket Info',
         financialAid: 'Financial Aid',
         venue: 'Venue',
-        signIn: 'Sign In',
+        proposalSystemUrl: 'Proposal System',
         codeOfConduct: 'Code of Conduct',
     },
     'zh-hant': {
@@ -60,7 +60,7 @@ export default genI18nMessages({
         tickets: '購票資訊',
         financialAid: '財務補助',
         venue: '會場',
-        signIn: '登入',
+        proposalSystemUrl: '投稿系統',
         codeOfConduct: '行為準則',
     },
 })

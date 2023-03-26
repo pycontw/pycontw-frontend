@@ -7,6 +7,7 @@
         >
         </nav-bar-item-dropdown>
         <nav-bar-item-dropdown
+            v-if="showSpeakingPage"
             :label="$t('speaking')"
             :items="speakingItems"
             :class="getPageClassesByPath('speaking')"
@@ -20,6 +21,7 @@
             >{{ $t('schedule') }}</locale-link
         >
         <locale-link
+            v-if="showEventOverviewPage"
             to="/events/overview"
             :class="getPageClassesByPath(null, true, '/events/overview')"
             customized
@@ -62,10 +64,10 @@
             {{ $t('venue') }}
         </locale-link>
         <ext-link
-            :href="signInUrl"
-            :class="getPageClassesByPath('signIn', true)"
+            :href="proposalSystemUrl"
+            :class="getPageClassesByPath('proposalSystemUrl', true)"
         >
-            {{ $t('signIn') }}
+            {{ $t('proposalSystemUrl') }}
         </ext-link>
     </nav>
 </template>
@@ -112,7 +114,7 @@ export default {
                 this.$store.state.configs.registrationHideItems,
             )
         },
-        signInUrl() {
+        proposalSystemUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
         },
         showSponsorPage() {
@@ -120,6 +122,9 @@ export default {
         },
         showRegistrationPage() {
             return this.$store.state.configs.showRegistrationPage
+        },
+        showEventOverviewPage() {
+            return this.$store.state.configs.showEventOverviewPage
         },
         showEventsPage() {
             return this.$store.state.configs.showEventsPage

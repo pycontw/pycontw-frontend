@@ -43,6 +43,7 @@
                 >{{ $t('schedule') }}</locale-link
             >
             <locale-link
+                v-if="showEventOverviewPage"
                 class="core-navBarHamburgerSlideInMenu__item"
                 to="/events/overview"
                 customized
@@ -78,8 +79,8 @@
             ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
-                :href="signInUrl"
-                >{{ $t('signIn') }}</ext-link
+                :href="proposalSystemUrl"
+                >{{ $t('proposalSystemUrl') }}</ext-link
             >
         </div>
     </div>
@@ -135,7 +136,7 @@ export default {
                 this.$store.state.configs.registrationHideItems,
             )
         },
-        signInUrl() {
+        proposalSystemUrl() {
             return `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard/`
         },
         showSponsorPage() {
@@ -146,6 +147,9 @@ export default {
         },
         showEventsPage() {
             return this.$store.state.configs.showEventsPage
+        },
+        showEventOverviewPage() {
+            return this.$store.state.configs.showEventOverviewPage
         },
         showConferencePage() {
             return this.$store.state.configs.showConferencePage
