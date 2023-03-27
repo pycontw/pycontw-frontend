@@ -165,7 +165,7 @@ export default {
         padding: 10px 22px;
         min-width: 80px;
         height: 60px;
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 .core-button.--primary > a:after {
@@ -235,7 +235,7 @@ export default {
         padding: 10px 22px;
         min-width: 80px;
         height: 60px;
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 .core-button.--bordered > a:after {
@@ -287,7 +287,7 @@ export default {
     &.--small > a {
         @apply font-bold;
         height: 42px;
-        font-size: 16px;
+        font-size: 20px;
         padding: 10px 22px;
     }
 }

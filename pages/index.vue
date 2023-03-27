@@ -109,7 +109,7 @@
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
-import { landingButtonConfig } from '@/config/pageLanding'
+import { landingButtonConfig } from '@/configs/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '@/components/core/buttons/TextButton'
 import { BulletinCardCollection } from '@/components/bulletins'
