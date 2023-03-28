@@ -283,7 +283,7 @@ import {
     ticketSellingStatus,
     ticketInfoConfig,
     pageLinks,
-} from '@/Configs/pageTickets'
+} from '@/configs/pageTickets'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Banner from '@/components/core/layout/Banner'
