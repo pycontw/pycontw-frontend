@@ -46,8 +46,11 @@ export const pageLinks = {
     everybodyContributesPrinciple:
         'http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays',
     financialAid: '/registration/financial-aid',
+    kktixCorporate2023: 'https://pycontw.kktix.cc/events/2023-corporate',
+    kktixIndividual2023: 'https://pycontw.kktix.cc/events/2023-individual',
     kktixOnBehalf:
         'https://support.kktix.com/knowledgebase/articles/356418-kktix-%E4%BB%A3%E7%90%86%E9%80%80%E6%8F%9B%E7%A5%A8%E8%BE%A6%E6%B3%95',
+    kktixReserved2023: 'https://pycontw.kktix.cc/events/2023-reserved',
     nonCorporateTicketsInvoicing: '',
     privacyPolicy: '/about/privacy-policy',
     organizerEmail: 'mailto:organizers@python.tw',
