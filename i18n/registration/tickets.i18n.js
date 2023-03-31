@@ -20,7 +20,7 @@ export default genI18nMessages({
             title: 'Before Buying Tickets',
             content: [
                 {
-                    title: 'Need Financial Aid? (Coming Soon.)',
+                    title: 'Need Financial Aid?',
                     description: [
                         'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. If you received the financial aid, you can buy the ticket “Sponsorship from PyCon TW” with the certification.',
                     ],
