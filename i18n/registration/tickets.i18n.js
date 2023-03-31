@@ -141,6 +141,8 @@ export default genI18nMessages({
         },
         og: {
             title: 'Ticket Info',
+            description:
+                'Welcome on board the PyCon TW 2023 Challenger for discovering the Python Universe.{br} More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         },
     },
     'zh-hant': {
@@ -284,6 +286,8 @@ export default genI18nMessages({
         },
         og: {
             title: '購票資訊',
+            description:
+                '多樣票價供您選擇，人人都可以找到適合自己的方案。多元化學習與多視角觀察技術應用，深入淺出引你進入 Python 學習殿堂。',
         },
     },
 })
