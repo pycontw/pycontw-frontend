@@ -55,9 +55,12 @@
                     class="leading-[30px] text-[18px]"
                 >
                     <template #financialAid>
-                        <locale-link underline highlight>{{
-                            $t('terms.financialAid')
-                        }}</locale-link>
+                        <locale-link
+                            :to="pageLinks.financialAid"
+                            underline
+                            highlight
+                            >{{ $t('terms.financialAid') }}</locale-link
+                        >
                     </template>
                 </i18n>
             </div>
@@ -165,9 +168,12 @@
                             tag="div"
                         >
                             <template #financialAid>
-                                <locale-link underline highlight>{{
-                                    $t('terms.financialAid')
-                                }}</locale-link>
+                                <locale-link
+                                    :to="pageLinks.financialAid"
+                                    underline
+                                    highlight
+                                    >{{ $t('terms.financialAid') }}</locale-link
+                                >
                             </template>
                         </i18n>
                     </li>
