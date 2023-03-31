@@ -175,6 +175,16 @@
                                     >{{ $t('terms.financialAid') }}</locale-link
                                 >
                             </template>
+                            <template #sponsorshipFromPyConTW>
+                                <ext-link
+                                    :href="pageLinks.kktixReserved2023"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('tickets.sponsorshipFromPyConTW')
+                                    }}</ext-link
+                                >
+                            </template>
                         </i18n>
                     </li>
                 </ul>
@@ -202,8 +212,8 @@
                                 >
                             </template>
                             <template #everybodyContributesPrinciple>
-                                <locale-link
-                                    :to="
+                                <ext-link
+                                    :href="
                                         pageLinks.everybodyContributesPrinciple
                                     "
                                     underline
@@ -212,7 +222,15 @@
                                         $t(
                                             'terms.everybodyContributesPrinciple',
                                         )
-                                    }}</locale-link
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #concession>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{ $t('tickets.concession') }}</ext-link
                                 >
                             </template>
                             <template #financialAid>
@@ -234,13 +252,11 @@
                                 >
                             </template>
                             <template #organizerEmail>
-                                <locale-link
-                                    :to="pageLinks.organizerEmail"
+                                <ext-link
+                                    :href="pageLinks.organizerEmail"
                                     underline
                                     highlight
-                                    >{{
-                                        $t('terms.organizerEmail')
-                                    }}</locale-link
+                                    >{{ $t('terms.organizerEmail') }}</ext-link
                                 >
                             </template>
                         </i18n>
@@ -253,24 +269,52 @@
                             class="leading-[30px]"
                             tag="div"
                         >
+                            <template #concession>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{ $t('tickets.concession') }}</ext-link
+                                >
+                            </template>
+                            <template #disabilityCertification>
+                                <ext-link
+                                    :href="pageLinks.disabilityCertification"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('terms.disabilityCertification')
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #individualRegular>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('tickets.individualRegular')
+                                    }}</ext-link
+                                >
+                            </template>
                             <template #nonCorporateTicketsInvoicing>
-                                <locale-link
-                                    :to="pageLinks.nonCorporateTicketsInvoicing"
+                                <ext-link
+                                    :href="
+                                        pageLinks.nonCorporateTicketsInvoicing
+                                    "
                                     highlight
                                     underline
                                     >{{
                                         $t('terms.nonCorporateTicketsInvoicing')
-                                    }}</locale-link
+                                    }}</ext-link
                                 >
                             </template>
                             <template #organizerEmail>
-                                <locale-link
-                                    :to="pageLinks.organizerEmail"
+                                <ext-link
+                                    :href="pageLinks.organizerEmail"
                                     highlight
                                     underline
-                                    >{{
-                                        $t('terms.organizerEmail')
-                                    }}</locale-link
+                                    >{{ $t('terms.organizerEmail') }}</ext-link
                                 >
                             </template>
                         </i18n>
@@ -291,7 +335,7 @@ import {
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Banner from '@/components/core/layout/Banner'
-import { LocaleLink } from '@/components/core/links'
+import { ExtLink, LocaleLink } from '@/components/core/links'
 import TextButton from '@/components/core/buttons/TextButton'
 
 export default {
@@ -300,6 +344,7 @@ export default {
     components: {
         Banner,
         CoreH1,
+        ExtLink,
         I18nPageWrapper,
         LocaleLink,
         TextButton,

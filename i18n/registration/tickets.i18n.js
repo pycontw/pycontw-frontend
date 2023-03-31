@@ -14,7 +14,7 @@ export default genI18nMessages({
         ticketsIntro: {
             title: 'Tickets',
             description:
-                'Register now and take the chance to get a 35% off discount with our Super Early Bird prices. The fee you spend will be put straight back into the community to support our diversity initiatives and financial aid programs. If you need financial aid, please visit {financialAid}.',
+                'If you need financial aid, please visit {financialAid}. The following time is GMT+8.',
         },
         beforeBuyingTickets: {
             title: 'Before Buying Tickets',
@@ -22,7 +22,7 @@ export default genI18nMessages({
                 {
                     title: 'Need Financial Aid?',
                     description: [
-                        'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. If you received the financial aid, you can buy the ticket “Sponsorship from PyCon TW” with the certification.',
+                        'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. If you received the financial aid, you can buy the ticket “{sponsorshipFromPyConTW}” with the certification.',
                     ],
                 },
             ],
@@ -43,14 +43,14 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: 'If you need reimbursement from your company, please get your “Corporate Tickets”.',
+                    title: 'If you need reimbursement from your company, please get your “Corporate Tickets (Coming soon.)”.',
                     description: [
-                        'You will see two EXTRA required fields, Invoiced Company Name and Unified Business No., needed specially for the reimbursement purpose, to meet our local tax regulation in corporate tickets.',
+                        'You will see two EXTRA required fields, Invoiced Company Name and VAT Number, needed specially for the reimbursement purpose, to meet our local tax regulation in corporate tickets.',
                         'If you need reimbursement after purchasing "Individual Tickets", please apply Non-Corporate Tickets Invoicing.',
                     ],
                 },
                 {
-                    title: 'About “Corporate Tickets”',
+                    title: 'About “Corporate Tickets (Coming soon.)”',
                     description: [
                         'We will send electronic invoices directly to your email address AFTER the event if you bought corporate tickets',
                         'We will base on the remittance time to determine whether the corporate tickets include a t-shirt.',
@@ -58,11 +58,11 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: 'About “Concession Tickets”',
+                    title: 'About “{concession}”',
                     description: [
-                        'If you are a disability (holding {disabilityCertification}), both the disability and ONE accompanying person should buy "Concession Tickets".',
-                        'If you want to buy "Concession Tickets", please complete the "Identity Verification of People with Disability" on the KKTIX one day before buying the ticket.',
-                        'The disability must register with an accompanying person. When registering, please show the Certificate of Disability and carry it with you during the event for inspection. If the Certificate of Disability cannot be presented, the disability and accompanying person need to make up the balance with the "Individual Ticket (Regular Stage)" before entering the venue.',
+                        'If you are a disability (holding {disabilityCertification} ), both the disability and ONE accompanying person should buy "{concession}".',
+                        'If you want to buy "{concession}", please complete the "Identity Verification of People with Disability" on the KKTIX one day before buying the ticket.',
+                        'The disability must register with an accompanying person. When registering, please show the {disabilityCertification} and carry it with you during the event for inspection. If the {disabilityCertification} cannot be presented, the disability and accompanying person need to make up the balance with the "{individualRegular}" before entering the venue.',
                     ],
                 },
                 {
@@ -73,7 +73,7 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: 'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket.',
+                    title: 'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. The Financial Aid Program will be closed on 23:30, July 01, 2023 (GMT+8).',
                     description: [],
                 },
                 {
@@ -104,8 +104,11 @@ export default genI18nMessages({
             ],
         },
         tickets: {
+            concession: 'Concession Tickets',
+            individualRegular: 'Individual Ticket (Regular Stage)',
             premium: 'Premium Pass',
             reserved: 'Reserved Tickets',
+            sponsorshipFromPyConTW: 'Sponsorship From PyCon TW',
         },
         features: {
             communityDiscount: 'Community Discount',
@@ -141,6 +144,8 @@ export default genI18nMessages({
         },
         og: {
             title: 'Ticket Info',
+            description:
+                'Welcome on board the PyCon TW 2023 Challenger for discovering the Python Universe.{br} More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         },
     },
     'zh-hant': {
@@ -162,9 +167,9 @@ export default genI18nMessages({
             title: '購票前請留意',
             content: [
                 {
-                    title: '您有需要財務補助嗎？ (尚未開放，敬請期待)',
+                    title: '您有需要財務補助嗎？',
                     description: [
-                        '歡迎申請 PyCon TW 2023 財務補助計劃。請於申請期限內並在購票之前提出申請，如果您獲得我們的財務補助，再請依照憑證購買「大會贊助票」。如果您有意願申請，請詳見 {financialAid}。',
+                        '歡迎申請 PyCon TW 2023 財務補助計劃。請於申請期限內並在購票之前提出申請，如果您獲得我們的財務補助，再請依照憑證購買「{sponsorshipFromPyConTW}」。如果您有意願申請，請詳見 {financialAid}。以下售票時間皆為 GMT+8。',
                     ],
                 },
             ],
@@ -185,14 +190,14 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: '如果您有報帳需求，請前往「企業票種購票頁」。',
+                    title: '如果您有報帳需求，請前往「企業票種購票頁 (尚未開放，敬請期待)」。',
                     description: [
                         '企業票種購買頁將提供額外兩個必填欄位用於報帳：「發票抬頭」和「統一編號」，以滿足稅收法規。',
                         '如果您購買「非企業票種」後有報帳需求，請填寫 PyCon TW 2023 非企業票種開立發票申請。',
                     ],
                 },
                 {
-                    title: '關於「企業票種 (企業票或企業團體票)」',
+                    title: '關於「企業票種 (企業票或企業團體票) 」(尚未開放，敬請期待)',
                     description: [
                         '如果您是購買企業票種 (企業票或企業團體票)，我們將於「活動結束後」開立電子發票，並寄送至您提供的電子信箱。',
                         '企業票種一律以匯款時間為準決定是否有包含紀念衣服。',
@@ -200,11 +205,11 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: '關於「愛心優待票」',
+                    title: '關於「{concession}」',
                     description: [
-                        '如果您是身心障礙人士 (持有 {disabilityCertification})，身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
-                        '如果您欲購買「愛心優待票」，請在購票前一日於 KKTIX 完成「身心障礙者身份認證」。',
-                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示身心障礙證明並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票 (一般階段)」之票價差方可入場。',
+                        '如果您是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「{concession}」。',
+                        '如果您欲購買「{concession}」，請在購票前一日於 KKTIX 完成「身心障礙者身份認證」。',
+                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示 {disabilityCertification}，身心障礙人士與陪同人員皆需補足與「{individualRegular}」之票價差方可入場。',
                     ],
                 },
                 {
@@ -215,16 +220,16 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: '如果您有意願申請 PyCon TW 2023 財務補助計畫，請於申請期限內並在購票之前提出申請，詳見 {financialAid}。',
+                    title: '如果您有意願申請 PyCon TW 2023 財務補助計畫，請於申請期限內並在購票之前提出申請，詳見 {financialAid}。受理期限：即日起至 2023 年 07 月 01 日 23:30 (GMT+8) 截止。',
                     description: [],
                 },
                 {
                     title: '本活動委託 {kktixOnBehalf}。如果您透過 KKTIX 辦理退換票，請來信至 {organizerEmail}。如果自行透過 KKTIX 退票，將按照以下時限收取手續費：',
                     description: [
-                        '活動日 (2022 年 09 月 02 日) 前第 31 日前 (不含活動日) 辦理退換票者，KKTIX 將收取門票 10% 之退票手續費。',
-                        '活動日 (2022 年 09 月 02 日) 前第 11 日至第 30 日內 (不含活動日) 辦理退換票者，KKTIX 將收取門票 30% 之退票手續費。',
-                        '活動日 (2022 年 09 月 02 日) 前第 3 日至第 10 日內 (不含活動日) 辦理退換票者，KKTIX 將收取門票 50% 之退票手續費。',
-                        '活動日 (2022 年 09 月 02 日) 當日至第 2 日內 (不含活動日) 將不受理退換票。',
+                        '活動日 (2023 年 09 月 02 日) 前第 31 日前 (不含活動日) 辦理退換票者，KKTIX 將收取門票 10% 之退票手續費。',
+                        '活動日 (2023 年 09 月 02 日) 前第 11 日至第 30 日內 (不含活動日) 辦理退換票者，KKTIX 將收取門票 30% 之退票手續費。',
+                        '活動日 (2023 年 09 月 02 日) 前第 3 日至第 10 日內 (不含活動日) 辦理退換票者，KKTIX 將收取門票 50% 之退票手續費。',
+                        '活動日 (2023 年 09 月 02 日) 當日至第 2 日內 (不含活動日) 將不受理退換票。',
                     ],
                 },
                 {
@@ -246,8 +251,11 @@ export default genI18nMessages({
             ],
         },
         tickets: {
+            concession: '愛心優待票',
+            individualRegular: '個人票 (一般階段)',
             premium: '個人尊榮票',
             reserved: '保留票種',
+            sponsorshipFromPyConTW: '大會贊助票',
         },
         features: {
             communityDiscount: '社群優惠',
@@ -284,6 +292,8 @@ export default genI18nMessages({
         },
         og: {
             title: '購票資訊',
+            description:
+                '多樣票價供您選擇，人人都可以找到適合自己的方案。多元化學習與多視角觀察技術應用，深入淺出引你進入 Python 學習殿堂。',
         },
     },
 })
