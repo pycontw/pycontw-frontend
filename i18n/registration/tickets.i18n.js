@@ -164,7 +164,7 @@ export default genI18nMessages({
             title: '購票前請留意',
             content: [
                 {
-                    title: '您有需要財務補助嗎？ (尚未開放，敬請期待)',
+                    title: '您有需要財務補助嗎？',
                     description: [
                         '歡迎申請 PyCon TW 2023 財務補助計劃。請於申請期限內並在購票之前提出申請，如果您獲得我們的財務補助，再請依照憑證購買「大會贊助票」。如果您有意願申請，請詳見 {financialAid}。以下售票時間皆為 GMT+8。',
                     ],
