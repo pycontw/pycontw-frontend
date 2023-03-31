@@ -14,7 +14,7 @@ export default genI18nMessages({
         ticketsIntro: {
             title: 'Tickets',
             description:
-                'Register now and take the chance to get a 35% off discount with our Super Early Bird prices. The fee you spend will be put straight back into the community to support our diversity initiatives and financial aid programs. If you need financial aid, please visit {financialAid}.',
+                'If you need financial aid, please visit {financialAid}. The following time is GMT+8.',
         },
         beforeBuyingTickets: {
             title: 'Before Buying Tickets',
@@ -45,7 +45,7 @@ export default genI18nMessages({
                 {
                     title: 'If you need reimbursement from your company, please get your “Corporate Tickets”.',
                     description: [
-                        'You will see two EXTRA required fields, Invoiced Company Name and Unified Business No., needed specially for the reimbursement purpose, to meet our local tax regulation in corporate tickets.',
+                        'You will see two EXTRA required fields, Invoiced Company Name and VAT Number, needed specially for the reimbursement purpose, to meet our local tax regulation in corporate tickets.',
                         'If you need reimbursement after purchasing "Individual Tickets", please apply Non-Corporate Tickets Invoicing.',
                     ],
                 },
@@ -166,7 +166,7 @@ export default genI18nMessages({
                 {
                     title: '您有需要財務補助嗎？ (尚未開放，敬請期待)',
                     description: [
-                        '歡迎申請 PyCon TW 2023 財務補助計劃。請於申請期限內並在購票之前提出申請，如果您獲得我們的財務補助，再請依照憑證購買「大會贊助票」。如果您有意願申請，請詳見 {financialAid}。',
+                        '歡迎申請 PyCon TW 2023 財務補助計劃。請於申請期限內並在購票之前提出申請，如果您獲得我們的財務補助，再請依照憑證購買「大會贊助票」。如果您有意願申請，請詳見 {financialAid}。以下售票時間皆為 GMT+8。',
                     ],
                 },
             ],
