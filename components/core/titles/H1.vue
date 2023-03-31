@@ -1,12 +1,6 @@
 <template>
-    <div
-        :class="`flex justify-center font-serif mb-0 ${
-            showMarginBottom ? 'md:mb-9' : 'md:mb-0'
-        }`"
-    >
-        <h1 :class="classObject">
-            {{ title }}
-        </h1>
+    <div class="flex justify-center font-serif">
+        <h1 :class="classObject">{{ title }}</h1>
     </div>
 </template>
 
@@ -21,10 +15,6 @@ export default {
         center: {
             type: Boolean,
             default: false,
-        },
-        showMarginBottom: {
-            type: Boolean,
-            default: true,
         },
     },
     computed: {
@@ -42,7 +32,7 @@ export default {
 <style lang="postcss" scoped>
 h1 {
     @apply py-2 font-semibold leading-loose text-xl text-pink-700;
-    @apply md:text-2xl;
+    @apply mb-0 md:text-2xl md:mb-9;
     text-shadow: #3643b5 2px 1px 0;
 }
 </style>

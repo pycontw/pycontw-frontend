@@ -4,8 +4,7 @@
             <div class="flex flex-col mt-8">
                 <core-h1
                     :title="$t('titlePart1')"
-                    :show-margin-bottom="false"
-                    class="mx-4 text-[40px]"
+                    class="mx-4 text-[40px] md:mb-0"
                 ></core-h1>
                 <core-h1
                     v-if="$t('titlePart2')"
@@ -28,8 +27,9 @@
         </banner>
 
         <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
+            <!-- 大會資訊 -->
             <div class="pb-8 mt-10 md:mt-0">
-                <h2 class="mt-[-50px] text-[32px]">
+                <h2 class="mt-[-40px] text-[32px]">
                     {{ $t('about.title') }}
                 </h2>
                 <ul class="list-disc text-[18px] ul-p-0">
@@ -47,7 +47,7 @@
             </div>
 
             <!-- 購票方案 -->
-            <div class="pb-12">
+            <div class="mb-12">
                 <h2 class="text-[32px]">{{ $t('ticketsIntro.title') }}</h2>
                 <i18n
                     path="ticketsIntro.description"
@@ -55,13 +55,16 @@
                     class="leading-[30px] text-[18px]"
                 >
                     <template #financialAid>
-                        <locale-link underline highlight>{{
-                            $t('terms.financialAid')
-                        }}</locale-link>
+                        <locale-link
+                            :to="pageLinks.financialAid"
+                            underline
+                            highlight
+                            >{{ $t('terms.financialAid') }}</locale-link
+                        >
                     </template>
                 </i18n>
             </div>
-            <div class="w-full">
+            <div class="w-full flex flex-col gap-[80px] mb-[50px]">
                 <div
                     v-for="(ticket, index) in ticketInfoConfig"
                     :key="`ticket_info_${index}`"
@@ -70,8 +73,6 @@
                         flex flex-col
                         xl:flex-row
                         justify-around
-                        py-10
-                        xl:py-8
                     "
                 >
                     <div class="m-auto pt-0 px-0 pb-[24px] min-[1440px]:p-0">
@@ -141,7 +142,7 @@
             </div>
 
             <!-- 購票前請留意 -->
-            <div>
+            <div class="mb-[60px]">
                 <h2 class="text-[32px]">
                     {{ $t('beforeBuyingTickets.title') }}
                 </h2>
@@ -167,9 +168,12 @@
                             tag="div"
                         >
                             <template #financialAid>
-                                <locale-link underline highlight>{{
-                                    $t('terms.financialAid')
-                                }}</locale-link>
+                                <locale-link
+                                    :to="pageLinks.financialAid"
+                                    underline
+                                    highlight
+                                    >{{ $t('terms.financialAid') }}</locale-link
+                                >
                             </template>
                         </i18n>
                     </li>
@@ -177,7 +181,7 @@
             </div>
 
             <!-- 注意事項 -->
-            <div class="mt-[40px]">
+            <div>
                 <h2>{{ $t('notice.title') }}</h2>
                 <ul class="list-decimal text-[18px] ul-p-0">
                     <li
