@@ -60,9 +60,9 @@ export default genI18nMessages({
                 {
                     title: 'About “{concession}”',
                     description: [
-                        'If you are a disability (holding {disabilityCertification} ), both the disability and ONE accompanying person should buy "Concession Tickets".',
-                        'If you want to buy "Concession Tickets", please complete the "Identity Verification of People with Disability" on the KKTIX one day before buying the ticket.',
-                        'The disability must register with an accompanying person. When registering, please show the Certificate of Disability and carry it with you during the event for inspection. If the Certificate of Disability cannot be presented, the disability and accompanying person need to make up the balance with the "Individual Ticket (Regular Stage)" before entering the venue.',
+                        'If you are a disability (holding {disabilityCertification} ), both the disability and ONE accompanying person should buy "{concession}".',
+                        'If you want to buy "{concession}", please complete the "Identity Verification of People with Disability" on the KKTIX one day before buying the ticket.',
+                        'The disability must register with an accompanying person. When registering, please show the {disabilityCertification} and carry it with you during the event for inspection. If the {disabilityCertification} cannot be presented, the disability and accompanying person need to make up the balance with the "{individualRegular}" before entering the venue.',
                     ],
                 },
                 {
@@ -73,7 +73,7 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: 'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket.',
+                    title: 'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. The Financial Aid Program will be closed on 23:30, July 01, 2023 (GMT+8).',
                     description: [],
                 },
                 {
@@ -105,6 +105,7 @@ export default genI18nMessages({
         },
         tickets: {
             concession: 'Concession Tickets',
+            individualRegular: 'Individual Ticket (Regular Stage)',
             premium: 'Premium Pass',
             reserved: 'Reserved Tickets',
             sponsorshipFromPyConTW: 'Sponsorship From PyCon TW',
@@ -206,9 +207,9 @@ export default genI18nMessages({
                 {
                     title: '關於「{concession}」',
                     description: [
-                        '如果您是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
-                        '如果您欲購買「愛心優待票」，請在購票前一日於 KKTIX 完成「身心障礙者身份認證」。',
-                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示身心障礙證明並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票 (一般階段)」之票價差方可入場。',
+                        '如果您是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「{concession}」。',
+                        '如果您欲購買「{concession}」，請在購票前一日於 KKTIX 完成「身心障礙者身份認證」。',
+                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示 {disabilityCertification}，身心障礙人士與陪同人員皆需補足與「{individualRegular}」之票價差方可入場。',
                     ],
                 },
                 {
@@ -219,7 +220,7 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: '如果您有意願申請 PyCon TW 2023 財務補助計畫，請於申請期限內並在購票之前提出申請，詳見 {financialAid}。',
+                    title: '如果您有意願申請 PyCon TW 2023 財務補助計畫，請於申請期限內並在購票之前提出申請，詳見 {financialAid}。受理期限：即日起至 2023 年 07 月 01 日 23:30 (GMT+8) 截止。',
                     description: [],
                 },
                 {
@@ -251,6 +252,7 @@ export default genI18nMessages({
         },
         tickets: {
             concession: '愛心優待票',
+            individualRegular: '個人票 (一般階段)',
             premium: '個人尊榮票',
             reserved: '保留票種',
             sponsorshipFromPyConTW: '大會贊助票',

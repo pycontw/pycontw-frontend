@@ -269,6 +269,14 @@
                             class="leading-[30px]"
                             tag="div"
                         >
+                            <template #concession>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{ $t('tickets.concession') }}</ext-link
+                                >
+                            </template>
                             <template #disabilityCertification>
                                 <ext-link
                                     :href="pageLinks.disabilityCertification"
@@ -276,6 +284,16 @@
                                     highlight
                                     >{{
                                         $t('terms.disabilityCertification')
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #individualRegular>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('tickets.individualRegular')
                                     }}</ext-link
                                 >
                             </template>
