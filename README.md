@@ -33,7 +33,7 @@ Frontend of PyCon TW official website.
     npm install
     ```
 
-4. Serve with hot reload at localhost:3000:
+4. Serve with hot reload at `localhost:3000`:
 
     ```bash
     npm run dev

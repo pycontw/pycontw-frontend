@@ -7,13 +7,24 @@
                     h-full
                     flex flex-col
                     items-start
-                    text-golden
+                    text-pink-700
                     md:mx-24
                     lg:mx-32
                 "
             >
                 <div class="landing__title" />
-                <div class="text-button-wrapper">
+                <div
+                    class="
+                        mt-20
+                        md:mt-32
+                        w-full
+                        flex
+                        justify-center
+                        gap-[32px]
+                        md:justify-start
+                        flex-wrap
+                    "
+                >
                     <text-button
                         :href="
                             primaryButton.isExternalLink
@@ -57,23 +68,23 @@
                 :is-showing-apac-intro="showIndexAPACSection"
                 :is-bulleted="isBulleted"
             ></Intro>
-            <div class="bulletin-section">
+            <div class="pt-12 lg:mx-auto lg:w-full">
                 <core-h2
                     :title="$t('bulletinList')"
                     :is-bulleted="isBulleted"
-                    class="index-h2"
+                    class="mx-auto justify-center md:justify-start"
                 ></core-h2>
                 <bulletin-card-collection></bulletin-card-collection>
             </div>
             <div
                 v-if="showIndexSponsorSection"
                 id="sponsor"
-                class="sponsor-section"
+                class="pt-12 lg:mx-auto lg:w-full;"
             >
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"
-                    class="index-h2"
+                    class="mx-auto justify-center md:justify-start"
                 ></core-h2>
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
@@ -194,6 +205,7 @@ export default {
     height: calc(100vh - 3rem);
     min-height: 750px;
 }
+
 .landing__background::after {
     height: 100vh;
     position: absolute;
@@ -205,6 +217,7 @@ export default {
     background-position: center top 4rem;
     background-size: 100%;
 }
+
 .landing__title {
     position: relative;
     top: 2.5rem;
@@ -216,6 +229,7 @@ export default {
     min-height: 50vh;
     min-width: 100vw;
 }
+
 @media (min-width: 768px) {
     .landing__background::after {
         background-image: url('~@/static/landing-background.svg');
@@ -231,21 +245,5 @@ export default {
         min-height: 35vh;
         min-width: 45vw;
     }
-}
-.text-golden {
-    @apply text-pink-700;
-}
-.bulletin-section {
-    @apply pt-12 lg:mx-auto lg:w-full;
-}
-.sponsor-section {
-    @apply pt-12 lg:mx-auto lg:w-full;
-}
-.index-h2 {
-    @apply mx-auto justify-center md:justify-start;
-}
-.text-button-wrapper {
-    @apply mt-20 md:mt-32;
-    @apply w-full flex justify-center gap-[32px] md:justify-start flex-wrap;
 }
 </style>

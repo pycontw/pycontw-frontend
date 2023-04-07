@@ -1,11 +1,11 @@
 <template>
-    <div v-show="!!title" :class="classObject" @click="onClick">
+    <div v-show="showBulletin" :class="classObject" @click="onClick">
         <div class="bulletin--card__dummy"></div>
         <img
-            class="bulletin--card__icon"
-            :src="require(`~/static/img/bulletins/${icon}.svg`)"
+            class="absolute transform scale-90 md:scale-100 top-[12.5%]"
+            :src="require(`~/static/img/bulletins/${icon}`)"
         />
-        <div class="bulletin--card__content">
+        <div class="absolute top-[30%]">
             <h2 class="bulletin--card__header">{{ title }}</h2>
             <p class="bulletin--card__description">{{ description }}</p>
         </div>
@@ -17,15 +17,30 @@ export default {
     name: 'BulletinCard',
     components: {},
     props: {
-        title: { type: String, default: '' },
+        title: {
+            type: String,
+            default: '',
+        },
         description: {
             type: String,
             default: '',
         },
-        linkTitle: { type: String, default: '' },
-        linkHref: { type: String, default: '' },
-        linkTo: { type: String, default: '' },
-        icon: { type: String, default: '' },
+        link: {
+            type: String,
+            default: '',
+        },
+        isExternalLink: {
+            type: Boolean,
+            default: false,
+        },
+        icon: {
+            type: String,
+            default: '',
+        },
+        showBulletin: {
+            type: Boolean,
+            default: false,
+        },
     },
     computed: {
         classObject() {
@@ -36,11 +51,11 @@ export default {
     },
     methods: {
         onClick() {
-            const { linkTo, linkHref } = this.$props
-            if (linkTo) {
-                this.$router.push(linkTo)
-            } else if (linkHref) {
-                window.open(linkHref, '_blank')
+            const { isExternalLink, link } = this.$props
+            if (isExternalLink) {
+                window.open(link, '_blank')
+            } else {
+                this.$router.push(link)
             }
         },
     },
@@ -70,16 +85,6 @@ export default {
     @media (min-width: 375px) {
         margin-top: 170%;
     }
-}
-
-.bulletin--card__icon {
-    @apply absolute transform scale-90 md:scale-100;
-    top: 12.5%;
-}
-
-.bulletin--card__content {
-    @apply absolute;
-    top: 30%;
 }
 
 .bulletin--card__header {
