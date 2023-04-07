@@ -33,7 +33,7 @@
                         <i18n path="fillFormProcess" tag="li">
                             <template #form>
                                 <ext-link
-                                    href="https://forms.gle/8pBsZX9j3Hy3fpwM8"
+                                    href="https://lihi1.com/433eL"
                                     highlight
                                     underline
                                     >{{ $t('form') }}</ext-link
