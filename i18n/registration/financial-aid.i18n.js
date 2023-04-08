@@ -24,12 +24,12 @@ export default genI18nMessages({
             {
                 title: 'Auxiliary Items',
                 content:
-                    'The Financial Aid accepts conference fee only since PyCon APAC is held virtually.',
+                    'The Financial Aid accepts conference fee only since PyCon TW is held virtually.',
             },
             {
                 title: 'Reimbursement',
                 content:
-                    'PyCon APAC will e-mail you the discount code for registration ' +
+                    'PyCon TW will e-mail you the discount code for registration ' +
                     'if your application is accepted.',
             },
             {
