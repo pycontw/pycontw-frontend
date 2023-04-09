@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="text-xs md:text-lg">
+    <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
         <div>
             <i18n
@@ -7,7 +7,26 @@
                 :key="`sponsor_intro_${i}`"
                 :path="`intro.${i}`"
                 tag="p"
-                class="sponsor_context"
+            >
+                <template #br><br /></template>
+            </i18n>
+        </div>
+        <div class="flex flex-col md:grid md:grid-cols-3">
+            <intro-milestone
+                v-for="(item, index) in $t('milestone')"
+                :key="`sponsor_milestone_${index}`"
+                :achievement="item.achievement"
+                :achievement-number="item.achievementNumber"
+                :achievement-unit="item.achievementUnit"
+            >
+            </intro-milestone>
+        </div>
+        <div>
+            <i18n
+                v-for="(intro, i) in $t('serviceIntro')"
+                :key="`sponsor_service_intro_${i}`"
+                :path="`serviceIntro.${i}`"
+                tag="p"
             >
                 <template #br><br /></template>
             </i18n>
@@ -19,7 +38,12 @@
                 class="flex flex-col items-center mt-5 sm:mt-12"
             >
                 <div
-                    class="icon"
+                    class="
+                        bg-contain bg-no-repeat
+                        md:w-[138px] md:h-[138px]
+                        w-[112px]
+                        h-[112px]
+                    "
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
                 <div class="text-xs md:text-base mt-3 sm:mt-8 mb-0 text-center">
@@ -27,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <i18n path="summary" tag="p" class="sponsor_context">
+        <i18n path="summary" tag="p">
             <template #contact>
                 <ext-link
                     href="mailto:sponsorship@python.tw"
@@ -38,7 +62,7 @@
             </template>
         </i18n>
         <div class="text-center mt-10">
-            <text-button :href="$t('cta.link')">
+            <text-button :href="sponsorFormLink">
                 {{ $t('cta.text') }}
             </text-button>
         </div>
@@ -49,7 +73,9 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
+import IntroMilestone from '@/components/intro/IntroMilestone'
 import { ExtLink } from '@/components/core/links'
+import { sponsorFormLink } from '@/configs/pageSponsors'
 import i18n from '@/i18n/sponsor/index.i18n'
 import ServiceImg1 from '@/static/img/sponsor/CommunityVisibility.svg'
 import ServiceImg2 from '@/static/img/sponsor/Recruitment.svg'
@@ -64,9 +90,11 @@ export default {
         CoreH1,
         ExtLink,
         TextButton,
+        IntroMilestone,
     },
     data() {
         return {
+            sponsorFormLink,
             sponsorServices: [
                 ServiceImg1,
                 ServiceImg2,
@@ -108,20 +136,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.icon {
-    @apply bg-contain bg-no-repeat;
-    width: 112px;
-    height: 112px;
-    @media (min-width: 768px) {
-        width: 138px;
-        height: 138px;
-    }
-}
-.sponsor_context {
-    font-size: 16px;
-    line-height: 176%;
-    @media (min-width: 768px) {
-        font-size: 20px;
-    }
+p {
+    @apply leading-[176%] md:text-[20px] text-[16px];
 }
 </style>
