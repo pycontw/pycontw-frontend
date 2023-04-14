@@ -7,24 +7,26 @@
             class="mx-4 my-4"
         >
             <img
+                class="
+                    md:w-[33px] md:h-[33px]
+                    hover:brightness-0 hover:inset-1
+                    landing-footer-icon
+                "
                 :src="require(`~/static/img/footer/${item.icon}`)"
                 :alt="item.altName"
-                class="core-footerIcon"
             />
         </ext-link>
         <svg class="hidden">
-            <defs>
-                <filter id="hover-color">
-                    <feColorMatrix
-                        color-interpolation-filters="sRGB"
-                        type="matrix"
-                        values="0.46 0   0   0   0
-                                0   0.41  0   0   0
-                                0   0   0.96  0   0
-                                0   0   0   1   0 "
-                    />
-                </filter>
-            </defs>
+            <filter id="hover-color">
+                <feColorMatrix
+                    color-interpolation-filters="sRGB"
+                    type="matrix"
+                    values="0.46 0   0   0   0
+                            0   0.41  0   0   0
+                            0   0   0.96  0   0
+                            0   0   0   1   0 "
+                />
+            </filter>
         </svg>
     </div>
 </template>
@@ -47,14 +49,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.core-footerIcon:hover {
-    filter: brightness(0) invert(1) url(#hover-color);
-}
-
-@media (min-width: 768px) {
-    .core-footerIcon {
-        width: 33px;
-        height: 33px;
-    }
+/* Not support in Tailwind currently */
+.landing-footer-icon:hover {
+    filter: url(#hover-color);
 }
 </style>
