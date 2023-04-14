@@ -122,7 +122,7 @@ export default {
                             'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw',
                             'https://instagram.com/pycontw/',
                             'https://github.com/pycontw/',
-                            'https://pycontw.blogspot.com/',
+                            'https://conf.python.tw',
                         ],
                     },
                 },

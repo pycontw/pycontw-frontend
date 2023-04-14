@@ -31,7 +31,7 @@ export default genI18nMessages({
         title: '錄影釋出',
         intro: [
             'PyCon 致力於協助 Python 教育及提倡 Python 的使用，錄製的演講預設會由 PyCon Taiwan 團隊剪輯並在會後上傳至線上影音網站' +
-                '（如：Youtube）以及 {pyvideo}。',
+                '（如：YouTube）以及 {pyvideo}。',
         ],
         policies: [
             [
@@ -46,7 +46,7 @@ export default genI18nMessages({
             title: '錄影釋出',
             description:
                 'PyCon 致力於協助 Python 教育及提倡 Python 的使用，錄製的演講預設會由 PyCon Taiwan 團隊剪輯並在會後上傳至線上影音網站' +
-                '（如：Youtube）以及 {pyvideo}。',
+                '（如：YouTube）以及 {pyvideo}。',
         },
     },
 })
