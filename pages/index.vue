@@ -204,43 +204,31 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .landing__background,
 .landing__background::after {
-    position: relative;
-    left: 0;
-    right: 0;
+    @apply relative inset-0;
     height: calc(100vh - 3rem);
     min-height: 750px;
 }
 .landing__background::after {
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: -10;
+    @apply absolute h-screen top-0 bg-center bg-no-repeat bg-contain;
     content: '';
     background-image: url('~@/static/landing-background-rwd.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    opacity: 0.3;
+    z-index: -10;
 }
 .landing__background__items {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.landing__background__items__meter {
-    position: absolute;
-    opacity: 0;
+    @apply absolute w-full h-full;
 }
 .landing__background__items__meter:nth-of-type(1) {
+    @apply absolute opacity-0;
     top: 2%;
     left: -29%;
     width: 60vw;
     animation: meteor-fade-in 0.75s ease-out forwards;
 }
 .landing__background__items__meter:nth-of-type(2) {
+    @apply absolute opacity-0;
     top: 29%;
     left: -25%;
     width: 51vw;
@@ -256,27 +244,19 @@ export default {
         opacity: 1;
     }
 }
-.landing__background__items__curly {
-    position: absolute;
-    width: 39vw;
-    z-index: -2;
-}
 .landing__background__items__curly:nth-of-type(1) {
+    @apply absolute w-5/12;
     top: 16%;
     left: 61%;
 }
 .landing__background__items__curly:nth-of-type(2) {
+    @apply absolute w-5/12;
     top: 88%;
     left: 8%;
 }
 .landing__background__items__curly::after {
-    @apply bg-black-900;
+    @apply bg-black-900 absolute inset-0 w-full h-full;
     content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
 }
 .landing__background__items__curly:nth-of-type(1)::after {
     animation: curly-fade-in 1s linear forwards;
@@ -293,27 +273,20 @@ export default {
     }
 }
 .landing__background__items__circle {
-    position: absolute;
+    @apply absolute h-0 bg-no-repeat w-1/5;
     top: 64%;
     left: 40%;
-    width: 20vw;
-    height: 0;
-    aspect-ratio: 1;
     background-image: url('~@/static/img/landing/geometry-1.png');
     background-size: 100%;
-    background-repeat: no-repeat;
     animation: geometry-fade-in 1s linear forwards;
 }
 .landing__background__items__square {
-    position: absolute;
+    @apply absolute h-0 bg-no-repeat;
     top: 63%;
     left: -5%;
     width: 19vw;
-    height: 0;
-    aspect-ratio: 1;
     background-image: url('~@/static/img/landing/geometry-2.png');
     background-size: 100%;
-    background-repeat: no-repeat;
     animation: geometry-fade-in 1s 0.5s linear forwards;
 }
 @keyframes geometry-fade-in {
@@ -325,15 +298,12 @@ export default {
     }
 }
 .landing__background__items__cone {
-    display: none;
-    position: absolute;
+    @apply hidden absolute bg-no-repeat bg-contain md:block;
     top: 66%;
     left: 79%;
     width: 7.7vw;
     aspect-ratio: 1;
     background-image: url('~@/static/img/landing/cone.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
     animation: cone-fade-in 1.5s forwards;
 }
 @keyframes cone-fade-in {
@@ -345,16 +315,9 @@ export default {
     }
 }
 .landing__title {
-    position: relative;
-    top: 2.5rem;
+    @apply relative top-20 bg-no-repeat bg-contain min-w-full opacity-0;
     background-image: url('~@/static/landing-title-rwd.png');
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 2rem;
-    background-size: 100%;
     min-height: 50vh;
-    min-width: 100vw;
-    opacity: 0;
     animation: title-fade-in 0.5s 1s linear forwards;
 }
 @keyframes title-fade-in {
@@ -368,15 +331,9 @@ export default {
 @media (min-width: 768px) {
     .landing__background::after {
         background-image: url('~@/static/landing-background.png');
-        background-size: cover;
-        background-position-y: 0;
     }
     .landing__title {
         background-image: url('~@/static/landing-title.png');
-        background-repeat: no-repeat;
-        background-position-x: 0;
-        background-position-y: 2.5rem;
-        background-size: 100%;
         min-height: 35vh;
         min-width: 45vw;
     }
@@ -390,14 +347,13 @@ export default {
         left: -8%;
         width: 30vw;
     }
-    .landing__background__items__curly {
-        width: 13vw;
-    }
     .landing__background__items__curly:nth-of-type(1) {
+        width: 13vw;
         top: -2%;
         left: 41%;
     }
     .landing__background__items__curly:nth-of-type(2) {
+        width: 13vw;
         top: 41%;
         left: 64%;
     }
@@ -410,9 +366,6 @@ export default {
         top: 58%;
         left: 63%;
         width: 7vw;
-    }
-    .landing__background__items__cone {
-        display: block;
     }
 }
 .text-golden {
