@@ -26,13 +26,24 @@
                     h-full
                     flex flex-col
                     items-start
-                    text-golden
+                    text-pink-700
                     md:mx-24
                     lg:mx-32
                 "
             >
                 <div class="landing__title" />
-                <div class="text-button-wrapper">
+                <div
+                    class="
+                        mt-20
+                        md:mt-32
+                        w-full
+                        flex
+                        justify-center
+                        gap-[32px]
+                        md:justify-start
+                        flex-wrap
+                    "
+                >
                     <text-button
                         :href="
                             primaryButton.isExternalLink
@@ -76,23 +87,23 @@
                 :is-showing-apac-intro="showIndexAPACSection"
                 :is-bulleted="isBulleted"
             ></Intro>
-            <div class="bulletin-section">
+            <div class="pt-12 lg:mx-auto lg:w-full">
                 <core-h2
                     :title="$t('bulletinList')"
                     :is-bulleted="isBulleted"
-                    class="index-h2"
+                    class="mx-auto justify-center md:justify-start"
                 ></core-h2>
                 <bulletin-card-collection></bulletin-card-collection>
             </div>
             <div
                 v-if="showIndexSponsorSection"
                 id="sponsor"
-                class="sponsor-section"
+                class="pt-12 lg:mx-auto lg:w-full;"
             >
                 <core-h2
                     :title="$t('sponsorList')"
                     :is-bulleted="isBulleted"
-                    class="index-h2"
+                    class="mx-auto justify-center md:justify-start"
                 ></core-h2>
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
@@ -128,7 +139,7 @@
 <script>
 import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
-import { landingButtonConfig } from '@/config/pageLanding'
+import { landingButtonConfig } from '@/configs/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TextButton from '@/components/core/buttons/TextButton'
 import { BulletinCardCollection } from '@/components/bulletins'
@@ -211,6 +222,7 @@ export default {
     height: calc(100vh - 3rem);
     min-height: 750px;
 }
+
 .landing__background::after {
     @apply absolute h-screen top-0 bg-center bg-no-repeat bg-contain;
     content: '';
@@ -314,6 +326,7 @@ export default {
         transform: scale(1);
     }
 }
+
 .landing__title {
     @apply relative top-20 bg-no-repeat bg-contain min-w-full opacity-0;
     background-image: url('~@/static/landing-title-rwd.png');
@@ -328,6 +341,7 @@ export default {
         opacity: 1;
     }
 }
+
 @media (min-width: 768px) {
     .landing__background::after {
         background-image: url('~@/static/landing-background.png');
@@ -367,21 +381,5 @@ export default {
         left: 63%;
         width: 7vw;
     }
-}
-.text-golden {
-    @apply text-pink-700;
-}
-.bulletin-section {
-    @apply pt-12 lg:mx-auto lg:w-full;
-}
-.sponsor-section {
-    @apply pt-12 lg:mx-auto lg:w-full;
-}
-.index-h2 {
-    @apply mx-auto justify-center md:justify-start;
-}
-.text-button-wrapper {
-    @apply mt-8 md:mt-32;
-    @apply w-full flex justify-center gap-[32px] md:justify-start flex-wrap;
 }
 </style>

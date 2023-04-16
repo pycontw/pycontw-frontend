@@ -24,12 +24,12 @@ export default genI18nMessages({
             {
                 title: 'Auxiliary Items',
                 content:
-                    'The Financial Aid accepts conference fee only since PyCon APAC is held virtually.',
+                    'The Financial Aid accepts conference fee only since PyCon TW is held virtually.',
             },
             {
                 title: 'Reimbursement',
                 content:
-                    'PyCon APAC will e-mail you the discount code for registration ' +
+                    'PyCon TW will e-mail you the discount code for registration ' +
                     'if your application is accepted.',
             },
             {
@@ -86,7 +86,7 @@ export default genI18nMessages({
             },
             {
                 title: '受理期限',
-                content: '即日起至 2022 年 7 月  1 日 23:30 （台北時間）截止。',
+                content: '即日起至 2023 年 7 月  1 日 23:30 （台北時間）截止。',
             },
         ],
         applicationHowTo: '申請流程',

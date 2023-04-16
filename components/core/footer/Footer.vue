@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="core-footer w-full flex flex-col justify-between text-golden"
+        class="bg-black-800 w-full flex flex-col justify-between text-golden"
     >
         <div class="w-full p-10">
             <div class="flex justify-center">
@@ -23,9 +23,11 @@
                 </div>
             </div>
             <footer-history />
-            <footer-icon />
+            <footer-social />
         </div>
-        <div class="core-footer__copyright">
+        <div
+            class="bg-[#0e0d1c] w-full flex py-4 justify-center cursor-default"
+        >
             © {{ conferenceYear }} {{ conferenceName }}
         </div>
     </footer>
@@ -33,7 +35,7 @@
 
 <script>
 import i18n from './Footer.i18n'
-import FooterIcon from './FooterIcon'
+import FooterSocial from './FooterSocial'
 import FooterHistory from './FooterHistory'
 import { ExtLink, LocaleLink } from '~/components/core/links'
 
@@ -41,7 +43,7 @@ export default {
     i18n,
     name: 'CoreFooter',
     components: {
-        FooterIcon,
+        FooterSocial,
         ExtLink,
         LocaleLink,
         FooterHistory,
@@ -59,14 +61,3 @@ export default {
     },
 }
 </script>
-
-<style lang="postcss" scoped>
-.core-footer {
-    @apply bg-black-800;
-}
-
-.core-footer__copyright {
-    @apply w-full flex py-4 justify-center cursor-default;
-    background-color: #0e0d1c;
-}
-</style>

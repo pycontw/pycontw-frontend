@@ -4,9 +4,34 @@ export default genI18nMessages({
     'en-us': {
         title: 'Why Sponsorship',
         intro: [
+            'PyCon Taiwan has held over 10 annual conferences to date. Last year, we invited 5 keynote speakers, 50 general talks, {br}' +
+                'and 3 tutorials, totaling over 36 hours of technical presentations. {br}' +
+                "At the same time, our community's social media activity has also increased, with a growth of 10,600 followers, {br}" +
+                'a 45.8% increase. In addition, the podcast has been downloaded 8,560 times. ' +
+                'These statistics demonstrate the success of PyCon Taiwan.With over 150 volunteers, ' +
+                'we have brought countless technical skills and inspiration to the Python community.',
+        ],
+        milestone: [
+            {
+                achievement: 'Technical Presentations',
+                achievementNumber: '36',
+                achievementUnit: 'hours',
+            },
+            {
+                achievement: 'Participants',
+                achievementNumber: '800',
+                achievementUnit: 'People',
+            },
+            {
+                achievement: 'Social Media',
+                achievementNumber: '10K',
+                achievementUnit: 'Followers',
+            },
+        ],
+        serviceIntro: [
             'PyCon Taiwan is driven by our members and you, our awesome sponsor partners!{br}' +
                 'Your generous support is the motivation to help us move forward.{br}' +
-                'PyCon APAC 2022 calls for your sponsorship to enlarge our community.',
+                'PyConTW 2023 calls for your sponsorship to enlarge our community.',
             'Meanwhile, we also provide the benefit for our sponsors below:',
         ],
         services: [
@@ -24,21 +49,43 @@ export default genI18nMessages({
         },
         cta: {
             text: 'Application Form',
-            link: 'https://docs.google.com/forms/d/1b-SHv1JO_8gyPe3385l-3y78qg4njmV7MLFIL4VxIPg/',
         },
         og: {
             title: 'Sponsorship',
             description:
                 'Your generous support is the motivation to help us move forward. ' +
-                'PyCon APAC 2022 calls for your sponsorship to enlarge our community.',
+                'PyConTW 2023 calls for your sponsorship to enlarge our community.',
         },
     },
     'zh-hant': {
         title: '贊助召集令',
         intro: [
+            'PyCon Taiwan 迄今已舉辦超過 10 場年度會議。去年我們邀請 5 場主題演講、50 場一般演講以及 3 場專業課程，{br}' +
+                '總計超過 36 小時的技術演講。同時，我們的社群媒體活躍度也隨之提高，追蹤人數增加了 10,600 位，{br}' +
+                '增長了 45.8%。此外，Podcast 下載量高達 8,560 次。這些數據充分展現了 PyCon Taiwan 的成功。 {br}' +
+                '我們擁有超過 150 位志工，為 Python 社群帶來了無數的技術與靈感。',
+        ],
+        milestone: [
+            {
+                achievement: '技術演講',
+                achievementNumber: '36',
+                achievementUnit: '小時',
+            },
+            {
+                achievement: '參與會眾',
+                achievementNumber: '800',
+                achievementUnit: '人以上',
+            },
+            {
+                achievement: '社群媒體',
+                achievementNumber: '10K',
+                achievementUnit: '追蹤人數',
+            },
+        ],
+        serviceIntro: [
             '您的支持是推進 PyCon Taiwan 的強大動力。{br}' +
                 'PyCon Taiwan 在此召集您的加入，透過贊助以具體行動支持 Python 社群的成長！{br}' +
-                '透過參與 PyCon APAC 2022，我們也提供贊助廠商以下的服務：',
+                '透過參與 PyConTW 2023，我們也提供贊助廠商以下的服務：',
         ],
         services: [
             '接觸專業人士',
@@ -47,20 +94,19 @@ export default genI18nMessages({
             '建立人才網絡',
         ],
         summary:
-            '若想了解 PyCon APAC 2022 完整的贊助方案，歡迎點擊下方按鈕填寫表單留下您的聯絡資料' +
+            '若想了解 PyConTW 2023 完整的贊助方案，歡迎點擊下方按鈕填寫表單留下您的聯絡資料' +
             '索取贊助書或是直接透過贊助組信箱 {contact} 聯絡我們，讓我們了解貴單位的需求！',
         terms: {
             contact: 'sponsorship@python.tw',
         },
         cta: {
             text: '索取贊助書',
-            link: 'https://docs.google.com/forms/d/1o_Wizu0BCUvh2DcS9jhI0lUamrn7AEz4tPzQ3I98XFw/',
         },
         og: {
             title: '贊助召集令',
             description:
-                '您的支持是推進 PyCon APAC 的強大動力。' +
-                'PyCon APAC 在此召集您的加入，透過贊助以具體行動支持 Python 社群的成長！',
+                '您的支持是推進 PyConTW 的強大動力。' +
+                'PyConTW 在此召集您的加入，透過贊助以具體行動支持 Python 社群的成長！',
         },
     },
 })

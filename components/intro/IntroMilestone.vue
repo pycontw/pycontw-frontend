@@ -1,8 +1,14 @@
 <template>
-    <div class="milestone">
-        <p class="milestone__achievement">{{ achievement }}</p>
-        <p class="milestone__number">{{ achievementNumber }}</p>
-        <p class="milestone__unit">{{ achievementUnit }}</p>
+    <div class="text-center font-bold font-serif">
+        <p class="text-2xl md:text-[1.2rem]">
+            {{ achievement }}
+        </p>
+        <p class="milestone__number">
+            {{ achievementNumber }}
+        </p>
+        <p class="text-2xl md:text-[1.2rem] mb-2 md:mb-12">
+            {{ achievementUnit }}
+        </p>
     </div>
 </template>
 
@@ -27,18 +33,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.milestone {
-    @apply text-center font-bold font-serif;
-}
-
-.milestone__achievement,
-.milestone__unit {
-    @apply text-2xl;
-    @media (max-width: 833px) {
-        font-size: 1.2rem;
-    }
-}
-
 .milestone__number {
     background: linear-gradient(
         302.44deg,
@@ -46,19 +40,13 @@ export default {
         #5b69e2 43.9%,
         #a764c9 53.21%
     );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 5.4rem;
     filter: drop-shadow(4px 6px 0px #4f4f4f);
     @media (max-width: 833px) {
         font-size: 4.8rem;
-    }
-}
-
-.milestone__unit {
-    @apply mb-2;
-    @media (max-width: 833px) {
-        @apply mb-12;
     }
 }
 </style>

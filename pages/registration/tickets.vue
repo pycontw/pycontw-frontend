@@ -3,23 +3,21 @@
         <banner>
             <div class="flex flex-col mt-8">
                 <core-h1
-                    v-if="!shouldBreak"
-                    :title="$t('title')"
-                    class="mx-4"
-                ></core-h1>
-                <core-h1
-                    v-if="shouldBreak"
                     :title="$t('titlePart1')"
-                    class="mx-4"
+                    class="mx-4 text-[40px] md:mb-0"
                 ></core-h1>
                 <core-h1
-                    v-if="$t('titlePart2') && shouldBreak"
+                    v-if="$t('titlePart2')"
                     :title="$t('titlePart2')"
                     class="mx-4"
                 ></core-h1>
             </div>
             <div class="flex flex-col md:grid-cols-2">
-                <i18n path="pageAbstract" tag="p" class="md:text-align-center">
+                <i18n
+                    class="md:text-align-center"
+                    path="pageAbstract"
+                    tag="div"
+                >
                     <template #br><br /></template>
                     <template v-if="shouldBreak" #conditionalBr>
                         <br />
@@ -29,87 +27,299 @@
         </banner>
 
         <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
-            <!-- intro -->
+            <!-- 大會資訊 -->
             <div class="pb-8 mt-10 md:mt-0">
-                <h2 class="introConferenceStyle">
-                    {{ $t('introConference') }}
+                <h2 class="mt-[-40px] text-[32px]">
+                    {{ $t('about.title') }}
                 </h2>
-                <i18n path="conferenceContent" tag="p" class="introContent">
-                    <template #br><br /></template>
-                </i18n>
+                <ul class="list-disc text-[18px] ul-p-0">
+                    <i18n class="leading-[30px] p-0" path="about.date" tag="li">
+                        <template #br><br /></template>
+                    </i18n>
+                    <i18n
+                        class="leading-[30px] p-0"
+                        path="about.place"
+                        tag="li"
+                    >
+                        <template #br><br /></template>
+                    </i18n>
+                </ul>
             </div>
 
-            <div class="pb-12">
-                <h2>{{ $t('introTitle') }}</h2>
-                <i18n path="introContent" tag="p" class="introContent">
-                    <template #fa>
+            <!-- 購票方案 -->
+            <div class="mb-12">
+                <h2 class="text-[32px]">{{ $t('ticketsIntro.title') }}</h2>
+                <i18n
+                    path="ticketsIntro.description"
+                    tag="p"
+                    class="leading-[30px] text-[18px]"
+                >
+                    <template #financialAid>
                         <locale-link
-                            to="/registration/financial-aid"
+                            :to="pageLinks.financialAid"
                             underline
                             highlight
-                            >{{ $t('fa') }}</locale-link
+                            >{{ $t('terms.financialAid') }}</locale-link
                         >
                     </template>
-                    <template #br><br /></template>
                 </i18n>
             </div>
-
-            <!-- ticket plans -->
-            <div class="tickets">
+            <div class="w-full flex flex-col gap-[80px] mb-[50px]">
                 <div
-                    v-for="(ticketInfo, index) in ticketInfos"
+                    v-for="(ticket, index) in ticketInfoConfig"
                     :key="`ticket_info_${index}`"
-                    class="ticketContainer"
+                    class="
+                        ticketContainer
+                        flex flex-col
+                        xl:flex-row
+                        justify-around
+                    "
                 >
-                    <div class="ticketHeader">
+                    <div class="m-auto pt-0 px-0 pb-[24px] min-[1440px]:p-0">
                         <img
-                            :src="ticketInfo.image"
-                            :alt="ticketInfo.tag"
-                            class="icon"
+                            :src="ticket.image"
+                            :alt="ticket.title"
+                            class="w-20 mx-auto pt-0 px-0 pb-[12px]"
                         />
-                        <div class="title" :style="ticketTitleStyle">
-                            {{ $t(ticketInfo.titleI18NPath) }}
+                        <div
+                            class="
+                                font-serif font-semibold
+                                text-center
+                                min-w-[190px]
+                            "
+                            :style="ticketTitleStyle"
+                        >
+                            {{ $t(ticket.titleI18nKey) }}
                         </div>
                     </div>
                     <ul class="features">
                         <li
-                            v-for="(feature, i) in ticketInfo.features"
-                            :key="`ticket_info_${ticketInfo.tag}_features_${i}`"
-                            class="feature"
+                            v-for="(feature, i) in ticket.features"
+                            :key="`ticket_info_${ticket.tag}_features_${i}`"
+                            class="font-sans text-[18px] li-mt-0 li-mb-6"
                         >
                             ✓ {{ $t(`features.${feature}`) }}
                         </li>
                     </ul>
                     <div class="price">
-                        <div v-if="ticketInfo.priceOnSale" class="priceOnSale">
-                            {{ ticketInfo.priceOnSale }}
+                        <div
+                            v-if="ticket.priceOnSale"
+                            class="
+                                font-bold
+                                text-center
+                                mx-1.5
+                                my-auto
+                                text-pink-700
+                            "
+                        >
+                            {{ ticket.priceOnSale }}
                         </div>
-                        <div :class="isStrikethrough(!!ticketInfo.priceOnSale)">
-                            {{ ticketInfo.price }}
+                        <div
+                            v-if="ticket.price"
+                            :class="isStrikethrough(!!ticket.priceOnSale)"
+                        >
+                            {{ ticket.price }}
+                        </div>
+                        <div v-if="ticket.priceI18nKey">
+                            {{ $t(ticket.priceI18nKey) }}
                         </div>
                     </div>
-                    <div class="button">
+                    <div class="flex items-center mx-auto">
                         <text-button
-                            v-if="ticketInfo.link"
+                            :href="
+                                ticket.statusI18nKey ===
+                                ticketSellingStatus.SELLING
+                                    ? ticket.link
+                                    : null
+                            "
                             small
-                            :href="ticketInfo.link"
-                            >{{ $t('buttonText') }}</text-button
+                            >{{
+                                $t(`sellingStatus.${ticket.statusI18nKey}`)
+                            }}</text-button
                         >
-                        <text-button v-else-if="ticketInfo.hasEnded" small>{{
-                            $t('buttonTextSalesEnded')
-                        }}</text-button>
-                        <text-button v-else small>{{
-                            $t('buttonTextNotStarted')
-                        }}</text-button>
                     </div>
                 </div>
             </div>
-            <!-- Sponsor pass content-->
-            <div class="pb-12">
-                <h2 id="introSponsor">{{ $t('introSponsor') }}</h2>
-                <i18n path="SponsorContent" tag="p" class="SponsorContent">
-                    <template #br><br /></template>
-                </i18n>
+
+            <!-- 購票前請留意 -->
+            <div class="mb-[60px]">
+                <h2 class="text-[32px]">
+                    {{ $t('beforeBuyingTickets.title') }}
+                </h2>
+                <ul class="list-disc text-[18px] ul-p-0">
+                    <li
+                        v-for="(_, i) in $t('beforeBuyingTickets.content')"
+                        :key="`beforeBuyingTickets.${i}`"
+                        class="leading-[30px] li-mb-44"
+                    >
+                        <i18n
+                            :path="`beforeBuyingTickets.content.${i}.title`"
+                            tag="div"
+                        >
+                            <template #br><br /></template>
+                        </i18n>
+                        <i18n
+                            v-for="(string, index) in $t(
+                                `beforeBuyingTickets.content.${i}.description`,
+                            )"
+                            :key="`${string}.${index}`"
+                            class="leading-[30px]"
+                            :path="`beforeBuyingTickets.content.${i}.description.${index}`"
+                            tag="div"
+                        >
+                            <template #financialAid>
+                                <locale-link
+                                    :to="pageLinks.financialAid"
+                                    underline
+                                    highlight
+                                    >{{ $t('terms.financialAid') }}</locale-link
+                                >
+                            </template>
+                            <template #sponsorshipFromPyConTW>
+                                <ext-link
+                                    :href="pageLinks.kktixReserved2023"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('tickets.sponsorshipFromPyConTW')
+                                    }}</ext-link
+                                >
+                            </template>
+                        </i18n>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 注意事項 -->
+            <div>
+                <h2>{{ $t('notice.title') }}</h2>
+                <ul class="list-decimal text-[18px] ul-p-0">
+                    <li
+                        v-for="(_, i) in $t('notice.content')"
+                        :key="`notice.${i}`"
+                        class="leading-[30px] li-mt-0 li-mb-44"
+                    >
+                        <i18n :path="`notice.content.${i}.title`" tag="div">
+                            <template #br><br /></template>
+                            <template #codeOfConduct>
+                                <locale-link
+                                    :to="pageLinks.codeOfConduct"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('terms.codeOfConduct')
+                                    }}</locale-link
+                                >
+                            </template>
+                            <template #everybodyContributesPrinciple>
+                                <ext-link
+                                    :href="
+                                        pageLinks.everybodyContributesPrinciple
+                                    "
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t(
+                                            'terms.everybodyContributesPrinciple',
+                                        )
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #concession>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{ $t('tickets.concession') }}</ext-link
+                                >
+                            </template>
+                            <template #financialAid>
+                                <locale-link
+                                    :to="pageLinks.financialAid"
+                                    underline
+                                    highlight
+                                    >{{ $t('terms.financialAid') }}</locale-link
+                                >
+                            </template>
+                            <template #privacyPolicy>
+                                <locale-link
+                                    :to="pageLinks.privacyPolicy"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('terms.privacyPolicy')
+                                    }}</locale-link
+                                >
+                            </template>
+                            <template #organizerEmail>
+                                <ext-link
+                                    :href="pageLinks.organizerEmail"
+                                    underline
+                                    highlight
+                                    >{{ $t('terms.organizerEmail') }}</ext-link
+                                >
+                            </template>
+                        </i18n>
+                        <i18n
+                            v-for="(string, index) in $t(
+                                `notice.content.${i}.description`,
+                            )"
+                            :key="`${string}.${index}`"
+                            :path="`notice.content.${i}.description.${index}`"
+                            class="leading-[30px]"
+                            tag="div"
+                        >
+                            <template #concession>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{ $t('tickets.concession') }}</ext-link
+                                >
+                            </template>
+                            <template #disabilityCertification>
+                                <ext-link
+                                    :href="pageLinks.disabilityCertification"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('terms.disabilityCertification')
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #individualRegular>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2023"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('tickets.individualRegular')
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #nonCorporateTicketsInvoicing>
+                                <ext-link
+                                    :href="
+                                        pageLinks.nonCorporateTicketsInvoicing
+                                    "
+                                    highlight
+                                    underline
+                                    >{{
+                                        $t('terms.nonCorporateTicketsInvoicing')
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #organizerEmail>
+                                <ext-link
+                                    :href="pageLinks.organizerEmail"
+                                    highlight
+                                    underline
+                                    >{{ $t('terms.organizerEmail') }}</ext-link
+                                >
+                            </template>
+                        </i18n>
+                    </li>
+                </ul>
             </div>
         </i18n-page-wrapper>
     </div>
@@ -117,82 +327,34 @@
 
 <script>
 import i18n from '@/i18n/registration/tickets.i18n'
-
+import {
+    ticketSellingStatus,
+    ticketInfoConfig,
+    pageLinks,
+} from '@/configs/pageTickets'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import Banner from '@/components/core/layout/Banner'
-import { LocaleLink } from '@/components/core/links'
+import { ExtLink, LocaleLink } from '@/components/core/links'
 import TextButton from '@/components/core/buttons/TextButton'
 
 export default {
     i18n,
-    name: 'PageRegistrationConferenceTickets',
+    name: 'PageTickets',
     components: {
-        CoreH1,
-        I18nPageWrapper,
         Banner,
+        CoreH1,
+        ExtLink,
+        I18nPageWrapper,
         LocaleLink,
         TextButton,
     },
     data() {
         return {
+            pageLinks,
             ticketsBanner: require('~/static/img/about/Banner.svg'),
-            ticketInfos: [
-                {
-                    tag: 'earlyBird',
-                    titleI18NPath: 'ticketEarlyBird',
-                    priceOnSale: 'NT$ 1,690',
-                    price: 'NT$ 2,600',
-                    image: require('~/static/img/registration/tickets/earlyBird_disabled.svg'),
-
-                    // The strings in this array are the tags listed in `features` object
-                    // of i18n file (~i18n/registration/tickets.i18n.js).
-                    features: [
-                        'onSales',
-                        'limited100',
-                        'pyckage',
-                        'conference',
-                    ],
-                    hasEnded: true,
-                    link: null,
-                },
-                {
-                    tag: 'regular',
-                    titleI18NPath: 'ticketRegular',
-                    price: 'NT$ 2,600',
-                    image: require('~/static/img/registration/tickets/regular_disabled.svg'),
-                    features: ['pyckage', 'conference'],
-                    link: null,
-                    hasEnded: true,
-                },
-                {
-                    tag: 'sponsorship',
-                    titleI18NPath: 'ticketSponsorship',
-                    price: 'NT$ 5,000',
-                    image: require('~/static/img/registration/tickets/sponsor_disabled.svg'),
-                    features: ['SpecialSouvenir', 'pyckage', 'conference'],
-                    link: null,
-                    hasEnded: true,
-                },
-                {
-                    tag: 'latebird',
-                    titleI18NPath: 'ticketLateBird',
-                    price: 'NT$ 3,600',
-                    image: require('~/static/img/registration/tickets/lateBird_disabled.svg'),
-                    features: ['conference'],
-                    link: null,
-                    hasEnded: true,
-                },
-                {
-                    tag: 'enterprise',
-                    titleI18NPath: 'ticketEnterprise',
-                    price: 'NT$ 3,600',
-                    image: require('~/static/img/registration/tickets/corporate_disabled.svg'),
-                    features: ['vatAvailable', 'pyckage', 'conference'],
-                    link: null,
-                    hasEnded: true,
-                },
-            ],
+            ticketInfoConfig,
+            ticketSellingStatus,
         }
     },
     computed: {
@@ -249,104 +411,51 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.titleStyle {
-    @apply flex flex-row md:flex-col;
-}
-.pageAbstract {
-    @apply md:text-right;
-}
-.conferenceContent {
-    @apply leading-5;
-    font-size: 16px;
-    @media (min-width: 1440px) {
-        font-size: 18px;
-    }
+ul.ul-p-0 {
+    padding: 0;
 }
 
-.introConferenceStyle {
-    margin-top: -50px;
+li.li-mt-0 {
+    margin-top: 0;
 }
 
-.introContent {
-    @apply leading-5;
-    font-size: 16px;
-    @media (min-width: 1440px) {
-        font-size: 18px;
-    }
+li.li-mb-44 {
+    margin-bottom: 44px;
 }
 
-.tickets {
-    @apply w-full;
-}
-
-.ticketContainer {
-    @apply flex flex-col xl:flex-row justify-around;
-    @apply py-10 xl:py-8;
+li.li-mb-6 {
+    margin-bottom: 6px;
 }
 
 .ticketContainer .ticketHeader {
-    @apply m-auto;
-    padding: 0 0 24px;
+    @apply m-auto pt-0 px-0 pb-[24px];
     @media (min-width: 1440px) {
-        padding: 0;
-    }
-}
-.ticketContainer .icon {
-    @apply w-20 mx-auto;
-    padding: 0 0 12px;
-}
-.ticketContainer .title {
-    @apply font-serif font-semibold text-center;
-    min-width: 190px;
-    @media (max-width: 1440px) {
-        font-size: 24px;
+        @apply p-0;
     }
 }
 
 .ticketContainer .features {
-    @apply flex flex-col justify-center mx-auto;
+    @apply flex flex-col justify-center mx-auto min-w-0 pt-0 px-0 pb-[24px];
     margin-bottom: 0 !important;
-    padding: 0 0 24px;
-    min-width: 0;
     @media (min-width: 1440px) {
-        min-width: 240px;
-        padding: 0;
-    }
-}
-.ticketContainer .feature {
-    @apply font-sans;
-    font-size: 16px;
-    @media (min-width: 1440px) {
-        font-size: 18px;
+        @apply p-0 min-w-[240px];
     }
 }
 
 .ticketContainer .price {
-    @apply flex flex-row-reverse xl:flex-col;
-    @apply text-center m-auto;
-    padding: 0 0 24px;
-    font-size: 22px;
+    @apply flex flex-row-reverse xl:flex-col text-center m-auto text-[22px] pt-0 px-0 pb-[24px];
     @media (min-width: 1440px) {
-        padding: 0;
-        font-size: 28px;
+        @apply text-[28px] p-0;
     }
-}
-.ticketContainer .priceOnSale {
-    @apply font-bold text-center mx-1.5 my-auto text-pink-700;
-}
-
-.ticketContainer .button {
-    @apply flex items-center mx-auto;
 }
 
 h2 {
-    @apply font-serif font-bold text-center;
+    @apply font-serif font-bold;
+    @apply text-center text-[28px] text-pink-700;
     @apply pb-4 pt-0 xl:pb-10 xl:pt-4;
-    @apply mt-0 mb-2 tracking-widest text-pink-700;
-    font-size: 28px;
-
+    @apply mt-0 mb-2 tracking-widest;
     @media (min-width: 1440px) {
-        font-size: 32px;
+        @apply text-[32px];
     }
 }
 </style>
