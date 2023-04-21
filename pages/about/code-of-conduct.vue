@@ -258,6 +258,12 @@ export default {
         @apply mt-20;
     }
 }
+@media (max-width: 500px) {
+    .img_text {
+        font-size: 0.4rem;
+        white-space: normal;
+    }
+}
 .sub1_img {
     @apply w-full h-96 md:h-96 bg-contain bg-no-repeat mx-2 my-3 md:mx-5;
 }
@@ -272,6 +278,8 @@ export default {
     }
     .sub2_img {
         @apply flex;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
     }
 }
 </style>
