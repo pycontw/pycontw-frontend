@@ -242,7 +242,7 @@ export default {
         background-position-x: 0;
         background-position-y: 2.5rem;
         background-size: 100%;
-        min-height: 300px;
+        min-height: 280px;
         min-width: 45vw;
     }
 }
