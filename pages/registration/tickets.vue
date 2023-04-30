@@ -75,18 +75,24 @@
                         justify-around
                     "
                 >
-                    <div class="m-auto pt-0 px-0 pb-[24px] min-[1440px]:p-0">
+                    <div
+                        class="
+                            w-[160px]
+                            m-auto
+                            xs:pb-[24px]
+                            flex flex-col
+                            justify-center
+                            items-center
+                            lg:p-0
+                        "
+                    >
                         <img
                             :src="ticket.image"
                             :alt="ticket.title"
                             class="w-20 mx-auto pt-0 px-0 pb-[12px]"
                         />
                         <div
-                            class="
-                                font-serif font-semibold
-                                text-center
-                                min-w-[190px]
-                            "
+                            class="font-serif font-semibold text-center"
                             :style="ticketTitleStyle"
                         >
                             {{ $t(ticket.titleI18nKey) }}
@@ -94,7 +100,7 @@
                     </div>
                     <ul class="features">
                         <li
-                            v-for="(feature, i) in ticket.features"
+                            v-for="(feature, i) in ticket.featuresI18nKey"
                             :key="`tickets.features.${i}`"
                             class="
                                 font-sans
@@ -140,15 +146,29 @@
                         >
                             {{ ticket.price }}
                         </div>
-                        <div v-if="ticket.priceI18nKey">
+                        <div v-else-if="ticket.priceI18nKey">
                             {{ $t(ticket.priceI18nKey) }}
                         </div>
+                        <div v-else-if="ticket.prices">
+                            <div
+                                v-for="(priceItem, priceIndex) in ticket.prices"
+                                :key="`price-${priceIndex}`"
+                                class="mb-[24px]"
+                            >
+                                <div class="font-bold text-[20px]">
+                                    {{ $t(priceItem.titleI18nKey) }}
+                                </div>
+                                <div>{{ priceItem.price }}</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center mx-auto">
+                    <div class="flex justify-center items-center mx-[20px]">
                         <text-button
                             :href="
                                 ticket.statusI18nKey ===
-                                ticketSellingStatus.SELLING
+                                    ticketSellingStatus.SELLING ||
+                                ticket.statusI18nKey ===
+                                    ticketSellingStatus.APPLY
                                     ? ticket.link
                                     : null
                             "
@@ -343,12 +363,14 @@
                                     }}</ext-link
                                 >
                             </template>
-                            <template #concession>
+                            <template #concessionTicket>
                                 <ext-link
                                     :href="pageLinks.kktixIndividual2023"
                                     underline
                                     highlight
-                                    >{{ $t('tickets.concession') }}</ext-link
+                                    >{{
+                                        $t('tickets.concessionTicket')
+                                    }}</ext-link
                                 >
                             </template>
                             <template #financialAid>
