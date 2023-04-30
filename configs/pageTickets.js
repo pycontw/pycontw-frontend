@@ -76,7 +76,7 @@ export const ticketInfoConfig = [
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
-        statusI18nKey: ticketSellingStatus.SELLING,
+        statusI18nKey: ticketSellingStatus.COMING_SOON,
         link: pageLinks.kktixIndividual2023,
     },
     {
