@@ -138,6 +138,13 @@ export default {
         '@nuxtjs/tailwindcss',
         // https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
+        [
+            '@nuxtjs/router',
+            {
+                path: 'configs',
+                keepDefaultRouter: true,
+            },
+        ],
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
