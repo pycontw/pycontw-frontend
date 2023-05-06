@@ -115,19 +115,14 @@ export const landingFooterHistoryConfig = [
 
 export const landingFooterSocialConfig = [
     {
-        icon: 'Blog.svg',
-        link: 'https://conf.python.tw/',
-        altName: 'Blog Footer Icon',
-    },
-    {
         icon: 'Facebook.svg',
         link: 'https://www.facebook.com/pycontw',
         altName: 'Facebook Footer Icon',
     },
     {
-        icon: 'Telegram.svg',
-        link: 'https://t.me/pycontw_chat',
-        altName: 'Telegram Footer Icon',
+        icon: 'Instagram.svg',
+        link: 'https://www.instagram.com/pycon.tw/',
+        altName: 'Instagram Footer Icon',
     },
     {
         icon: 'Twitter.svg',
@@ -135,9 +130,14 @@ export const landingFooterSocialConfig = [
         altName: 'Twitter Footer Icon',
     },
     {
-        icon: 'Email.svg',
-        link: 'mailto:organizers@python.tw',
-        altName: 'Email Footer Icon',
+        icon: 'Blog.svg',
+        link: 'https://conf.python.tw/',
+        altName: 'Blog Footer Icon',
+    },
+    {
+        icon: 'Discord.svg',
+        link: 'https://discord.com/invite/94hgCQv',
+        altName: 'Discord Footer Icon',
     },
     {
         icon: 'YouTube.svg',
@@ -145,8 +145,8 @@ export const landingFooterSocialConfig = [
         altName: 'YouTube Footer Icon',
     },
     {
-        icon: 'Discord.svg',
-        link: 'https://discord.com/invite/94hgCQv',
-        altName: 'Discord Footer Icon',
+        icon: 'Email.svg',
+        link: 'mailto:organizers@python.tw',
+        altName: 'Email Footer Icon',
     },
 ]
