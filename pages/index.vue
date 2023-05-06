@@ -72,11 +72,13 @@
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
                     :key="`index_sponsor_level_${i}`"
+                    v-slot="slotProps"
                     :level-name="leveledSponsors.level_name"
                 >
                     <sponsor-card
                         v-for="(sponsor, j) in leveledSponsors.sponsors"
                         :key="`index_sponsor_level_${i}_sponsor_${j}`"
+                        :class="slotProps.className"
                         :sponsor-name="sponsor.name_en_us"
                         :logo-url="sponsor.logo_url"
                         :tag="getAttributeByLocale(sponsor, 'subtitle')"
