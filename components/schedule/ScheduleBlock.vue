@@ -86,20 +86,20 @@ export default {
 }
 
 .scheduleBlock.-tab-header.-active {
-    @apply text-black-200 bg-primary-900;
+    @apply bg-primary-900 text-black-200;
 }
 .scheduleBlock.-tab-header:not(.-active):hover {
     color: #7568f6;
 }
 
 .scheduleBlock.-primary.-active {
-    @apply text-black-300 bg-primary-800;
+    @apply bg-primary-800 text-black-300;
     & >>> .scheduleEvent__title {
         @apply text-primary-100;
     }
 }
 .scheduleBlock.-primary.-active:hover {
-    @apply text-primary-800 bg-pink-700;
+    @apply bg-pink-700 text-primary-800;
     & >>> .scheduleEvent__title {
         @apply text-primary-900;
     }

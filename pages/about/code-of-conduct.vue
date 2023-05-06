@@ -6,25 +6,16 @@
                 {{ $t('pageAbstract') }}
             </p>
         </banner>
-        <div class="flex flex-wrap justify-center mx-2 my-3">
+        <div class="mx-2 my-3 flex flex-wrap justify-center">
             <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
                 <div
-                    class="
-                        w-32
-                        md:w-56
-                        h-24
-                        md:h-40
-                        bg-contain bg-no-repeat
-                        mx-2
-                        md:mx-5
-                        my-3
-                    "
+                    class="mx-2 my-3 h-24 w-32 bg-contain bg-no-repeat md:mx-5 md:h-40 md:w-56"
                     :style="getImgStyle(img)"
                 ></div>
             </div>
         </div>
         <I18nPageWrapper class="pt-0 md:pt-20">
-            <div class="flex flex-col w-full m-auto">
+            <div class="m-auto flex w-full flex-col">
                 <div v-for="(rule, i) in $t('contents')" :key="`coc-rule-${i}`">
                     <p class="paragraph-title text-base md:text-lg lg:text-lg">
                         {{ rule.title }}
@@ -39,7 +30,7 @@
                             '-' +
                             description
                         "
-                        class="text-xs md:text-base leading-5 md:leading-8"
+                        class="text-xs leading-5 md:text-base md:leading-8"
                     >
                         {{ description }}
                     </p>
@@ -47,30 +38,11 @@
                     <!-- i == 0 是抓取三大準則的圖片 -->
                     <div
                         v-if="i == 0"
-                        class="
-                            flex
-                            sm:justify-around
-                            justify-between
-                            mx-2
-                            my-1
-                            relative
-                        "
+                        class="relative mx-2 my-1 flex justify-between sm:justify-around"
                     >
                         <div v-for="(img, j) in sub1" :key="`sub_img_${j}`">
                             <div
-                                class="
-                                    w-16
-                                    sm:w-20
-                                    h-36
-                                    sm:h-40
-                                    bg-contain bg-no-repeat
-                                    mx-2
-                                    md:mx-5
-                                    my-10
-                                    sm:my-5
-                                    flex
-                                    justify-center
-                                "
+                                class="mx-2 my-10 flex h-36 w-16 justify-center bg-contain bg-no-repeat sm:my-5 sm:h-40 sm:w-20 md:mx-5"
                                 :style="getSub1Style(img)"
                             >
                                 <span class="img_text">
@@ -103,7 +75,7 @@
                                             "
                                         />
                                     </div>
-                                    <ol class="list-decimal ml-4">
+                                    <ol class="ml-4 list-decimal">
                                         <li
                                             v-for="(
                                                 li, liIndex
@@ -123,7 +95,7 @@
                                         subtitle.title,
                                     )
                                 "
-                                class="flex flex-wrap justify-center mx-2 my-2"
+                                class="mx-2 my-2 flex flex-wrap justify-center"
                             >
                                 <div
                                     class="sub1_img"
@@ -241,7 +213,7 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply mt-8 mb-8 font-serif font-bold text-center text-left text-pink-700;
+    @apply mb-8 mt-8 text-left text-center font-serif font-bold text-pink-700;
     font-size: 24px;
 }
 @media (min-width: 768px) {
@@ -259,10 +231,10 @@ export default {
     }
 }
 .sub1_img {
-    @apply w-full h-96 md:h-96 bg-contain bg-no-repeat mx-2 my-3 md:mx-5;
+    @apply mx-2 my-3 h-96 w-full bg-contain bg-no-repeat md:mx-5 md:h-96;
 }
 .sub2_img {
-    @apply hidden bg-no-repeat mx-2 my-2 md:mx-5;
+    @apply mx-2 my-2 hidden bg-no-repeat md:mx-5;
     width: 30rem;
     height: 40rem;
 }

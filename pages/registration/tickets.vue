@@ -1,7 +1,7 @@
 <template>
     <div>
         <banner>
-            <div class="flex flex-col mt-8">
+            <div class="mt-8 flex flex-col">
                 <core-h1
                     :title="$t('titlePart1')"
                     class="mx-4 text-[40px] md:mb-0"
@@ -28,16 +28,16 @@
 
         <i18n-page-wrapper class="px-8 sm:px-10 md:px-32 lg:px-60" custom-x>
             <!-- 大會資訊 -->
-            <div class="pb-8 mt-10 md:mt-0">
+            <div class="mt-10 pb-8 md:mt-0">
                 <h2 class="mt-[-40px] text-[32px]">
                     {{ $t('about.title') }}
                 </h2>
-                <ul class="list-disc text-[18px] ul-p-0">
-                    <i18n class="leading-[30px] p-0" path="about.date" tag="li">
+                <ul class="ul-p-0 list-disc text-[18px]">
+                    <i18n class="p-0 leading-[30px]" path="about.date" tag="li">
                         <template #br><br /></template>
                     </i18n>
                     <i18n
-                        class="leading-[30px] p-0"
+                        class="p-0 leading-[30px]"
                         path="about.place"
                         tag="li"
                     >
@@ -52,7 +52,7 @@
                 <i18n
                     path="ticketsIntro.description"
                     tag="p"
-                    class="leading-[30px] text-[18px]"
+                    class="text-[18px] leading-[30px]"
                 >
                     <template #financialAid>
                         <locale-link
@@ -64,35 +64,22 @@
                     </template>
                 </i18n>
             </div>
-            <div class="w-full flex flex-col gap-[80px] mb-[50px]">
+            <div class="mb-[50px] flex w-full flex-col gap-[80px]">
                 <div
                     v-for="(ticket, index) in ticketInfoConfig"
                     :key="`tickets.${index}`"
-                    class="
-                        ticketContainer
-                        flex flex-col
-                        xl:flex-row
-                        justify-around
-                    "
+                    class="ticketContainer flex flex-col justify-around xl:flex-row"
                 >
                     <div
-                        class="
-                            w-[160px]
-                            m-auto
-                            xs:pb-[24px]
-                            flex flex-col
-                            justify-center
-                            items-center
-                            lg:p-0
-                        "
+                        class="m-auto flex w-[160px] flex-col items-center justify-center xs:pb-[24px] lg:p-0"
                     >
                         <img
                             :src="ticket.image"
                             :alt="ticket.title"
-                            class="w-20 mx-auto pt-0 px-0 pb-[12px]"
+                            class="mx-auto w-20 px-0 pb-[12px] pt-0"
                         />
                         <div
-                            class="font-serif font-semibold text-center"
+                            class="text-center font-serif font-semibold"
                             :style="ticketTitleStyle"
                         >
                             {{ $t(ticket.titleI18nKey) }}
@@ -102,12 +89,7 @@
                         <li
                             v-for="(feature, i) in ticket.featuresI18nKey"
                             :key="`tickets.features.${i}`"
-                            class="
-                                font-sans
-                                text-[18px]
-                                li-mt-0 li-mb-6
-                                inline-block
-                            "
+                            class="li-mt-0 li-mb-6 inline-block font-sans text-[18px]"
                         >
                             ✓
                             <i18n
@@ -130,13 +112,7 @@
                     <div class="price">
                         <div
                             v-if="ticket.priceOnSale"
-                            class="
-                                font-bold
-                                text-center
-                                mx-1.5
-                                my-auto
-                                text-pink-700
-                            "
+                            class="mx-1.5 my-auto text-center font-bold text-pink-700"
                         >
                             {{ ticket.priceOnSale }}
                         </div>
@@ -155,14 +131,14 @@
                                 :key="`price-${priceIndex}`"
                                 class="mb-[24px]"
                             >
-                                <div class="font-bold text-[20px]">
+                                <div class="text-[20px] font-bold">
                                     {{ $t(priceItem.titleI18nKey) }}
                                 </div>
                                 <div>{{ priceItem.price }}</div>
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center items-center mx-[20px]">
+                    <div class="mx-[20px] flex items-center justify-center">
                         <text-button
                             :href="
                                 ticket.statusI18nKey ===
@@ -186,11 +162,11 @@
                 <h2 class="text-[32px]">
                     {{ $t('beforeBuyingTickets.title') }}
                 </h2>
-                <ul class="list-disc text-[18px] ul-p-0">
+                <ul class="ul-p-0 list-disc text-[18px]">
                     <li
                         v-for="(_, i) in $t('beforeBuyingTickets.content')"
                         :key="`beforeBuyingTickets.${i}`"
-                        class="leading-[30px] li-mb-44"
+                        class="li-mb-44 leading-[30px]"
                     >
                         <i18n
                             :path="`beforeBuyingTickets.content.${i}.title`"
@@ -287,11 +263,11 @@
             <!-- 注意事項 -->
             <div>
                 <h2>{{ $t('notice.title') }}</h2>
-                <ul class="list-decimal text-[18px] ul-p-0">
+                <ul class="ul-p-0 list-decimal text-[18px]">
                     <li
                         v-for="(_, i) in $t('notice.content')"
                         :key="`notice.${i}`"
-                        class="leading-[30px] li-mt-0 li-mb-44"
+                        class="li-mt-0 li-mb-44 leading-[30px]"
                     >
                         <i18n :path="`notice.content.${i}.title`" tag="div">
                             <template #br><br /></template>
@@ -628,24 +604,24 @@ li.li-mb-6 {
 }
 
 .ticketContainer .ticketHeader {
-    @apply m-auto pt-0 px-0 pb-[24px];
+    @apply m-auto px-0 pb-[24px] pt-0;
     @media (min-width: 1440px) {
         @apply p-0;
     }
 }
 
 .ticketContainer .features {
-    @apply flex flex-col justify-center mx-auto min-w-0 pt-0 px-0 pb-[24px];
+    @apply mx-auto flex min-w-0 flex-col justify-center px-0 pb-[24px] pt-0;
     margin-bottom: 0 !important;
     @media (min-width: 1440px) {
-        @apply p-0 min-w-[240px];
+        @apply min-w-[240px] p-0;
     }
 }
 
 .ticketContainer .price {
-    @apply flex flex-row-reverse xl:flex-col text-center m-auto text-[22px] pt-0 px-0 pb-[24px];
+    @apply m-auto flex flex-row-reverse px-0 pb-[24px] pt-0 text-center text-[22px] xl:flex-col;
     @media (min-width: 1440px) {
-        @apply text-[28px] p-0;
+        @apply p-0 text-[28px];
     }
 }
 
@@ -653,7 +629,7 @@ h2 {
     @apply font-serif font-bold;
     @apply text-center text-[28px] text-pink-700;
     @apply pb-4 pt-0 xl:pb-10 xl:pt-4;
-    @apply mt-0 mb-2 tracking-widest;
+    @apply mb-2 mt-0 tracking-widest;
     @media (min-width: 1440px) {
         @apply text-[32px];
     }

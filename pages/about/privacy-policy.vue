@@ -29,7 +29,7 @@
                     </template>
                 </i18n>
 
-                <ol class="pl-8 list-decimal">
+                <ol class="list-decimal pl-8">
                     <i18n
                         v-for="(content, j) in contents.items"
                         :key="`privacy_policy_items_${j}`"
@@ -148,7 +148,7 @@ export default {
 
 <style lang="postcss" scoped>
 .paragraphTitle {
-    @apply font-serif font-bold text-pink-700 text-base md:text-xl mt-9 md:mt-20 text-center md:text-left;
+    @apply mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-left md:text-xl;
 }
 
 .paragraphDescription {
@@ -162,7 +162,7 @@ export default {
     @apply text-center;
 }
 .authorizationTitle {
-    @apply font-serif font-bold text-pink-700 text-base md:text-xl mt-9 md:mt-20 text-center md:text-left;
+    @apply mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-left md:text-xl;
     @apply text-center;
 }
 .authorizationDescription {

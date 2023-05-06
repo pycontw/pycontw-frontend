@@ -2,28 +2,11 @@
     <div class="landing">
         <div class="landing__background flex pt-16 md:pt-24">
             <div
-                class="
-                    w-full
-                    h-full
-                    flex flex-col
-                    items-start
-                    text-pink-700
-                    md:mx-24
-                    lg:mx-32
-                "
+                class="flex h-full w-full flex-col items-start text-pink-700 md:mx-24 lg:mx-32"
             >
                 <div class="landing__title" />
                 <div
-                    class="
-                        mt-20
-                        md:mt-32
-                        w-full
-                        flex
-                        justify-center
-                        gap-[32px]
-                        md:justify-start
-                        flex-wrap
-                    "
+                    class="mt-20 flex w-full flex-wrap justify-center gap-[32px] md:mt-32 md:justify-start"
                 >
                     <text-button
                         :href="
@@ -79,7 +62,7 @@
             <div
                 v-if="showIndexSponsorSection"
                 id="sponsor"
-                class="pt-12 lg:mx-auto lg:w-full;"
+                class="lg:w-full; pt-12 lg:mx-auto"
             >
                 <core-h2
                     :title="$t('sponsorList')"

@@ -1,16 +1,7 @@
 <template>
-    <div class="flex flex-col w-full">
+    <div class="flex w-full flex-col">
         <div
-            class="
-                grid
-                place-items-center
-                gap-10
-                grid-cols-1
-                mt-9
-                md:grid-cols-3 md:mx-auto md:mt-0 md:w-10/12
-                justify-center
-                lg:justify-start
-            "
+            class="mt-9 grid grid-cols-1 place-items-center justify-center gap-10 md:mx-auto md:mt-0 md:w-10/12 md:grid-cols-3 lg:justify-start"
         >
             <bulletin-card
                 v-for="(item, index) in landingBulletinsConfig"

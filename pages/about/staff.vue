@@ -317,7 +317,7 @@ export default {
 }
 
 .teamName {
-    @apply font-serif text-primary-500 mb-10 font-bold text-base sm:text-[24px];
+    @apply mb-10 font-serif text-base font-bold text-primary-500 sm:text-[24px];
 }
 
 .staffGroup {
@@ -328,7 +328,7 @@ export default {
 }
 
 .staffPhoto {
-    @apply w-full aspect-w-1 aspect-h-1 mb-3;
+    @apply aspect-w-1 aspect-h-1 mb-3 w-full;
 }
 
 .staffPhoto img {
@@ -336,7 +336,7 @@ export default {
 }
 
 .staffName {
-    @apply font-serif text-white text-xs md:text-sm;
-    @apply text-center p-0.5;
+    @apply font-serif text-xs text-white md:text-sm;
+    @apply p-0.5 text-center;
 }
 </style>

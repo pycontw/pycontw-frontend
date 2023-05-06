@@ -29,13 +29,13 @@ export default {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-    @apply font-bold mt-4;
+    @apply mt-4 font-bold;
 }
 .markdown p {
     @apply mt-2;
 }
 .markdown blockquote {
-    @apply p-2 mb-4 border-l-4 italic;
+    @apply mb-4 border-l-4 p-2 italic;
     background-color: rgba(110, 118, 129, 0.4);
     border-color: rgba(156, 163, 175);
     & > p {

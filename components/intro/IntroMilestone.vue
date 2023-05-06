@@ -1,12 +1,12 @@
 <template>
-    <div class="text-center font-bold font-serif">
+    <div class="text-center font-serif font-bold">
         <p class="text-2xl md:text-[1.2rem]">
             {{ achievement }}
         </p>
         <p class="milestone__number">
             {{ achievementNumber }}
         </p>
-        <p class="text-2xl md:text-[1.2rem] mb-2 md:mb-12">
+        <p class="mb-2 text-2xl md:mb-12 md:text-[1.2rem]">
             {{ achievementUnit }}
         </p>
     </div>

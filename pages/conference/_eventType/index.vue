@@ -1,5 +1,5 @@
 <template>
-    <div class="py-10 md:py-24 lg:py24">
+    <div class="lg:py24 py-10 md:py-24">
         <banner>
             <core-h1 :title="title"></core-h1>
             <p class="leading-6">
@@ -183,7 +183,7 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply text-xs md:text-sm mb-8;
+    @apply mb-8 text-xs md:text-sm;
     line-height: 33px;
 }
 </style>

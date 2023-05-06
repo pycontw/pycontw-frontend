@@ -1,6 +1,8 @@
 <template>
-    <div class="container">
-        <h3 class="sponsorCardCollection__title">{{ $t(levelName) }}</h3>
+    <div class="lg:px-16">
+        <h3 class="sponsorCardCollection__title">
+            {{ $t(levelName) }}
+        </h3>
         <div class="sponsorCardCollection__cardContainer">
             <slot></slot>
         </div>
@@ -19,17 +21,13 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.container {
-    @apply lg:px-16;
-}
-
 .sponsorCardCollection__title {
-    @apply mt-8 mb-7 font-semibold text-xl font-serif md:font-bold md:text-2xl md:mt-12 md:mb-8 md:mx-1;
+    @apply mb-7 mt-8 font-serif text-xl font-semibold md:mx-1 md:mb-8 md:mt-12 md:text-2xl md:font-bold;
     color: hsla(226, 27%, 85%, 1);
 }
 
 .sponsorCardCollection__cardContainer {
-    @apply grid gap-4 grid-cols-2 md:grid-cols-5 md:gap-8 md:mb-6;
+    @apply grid grid-cols-2 gap-4 md:mb-6 md:grid-cols-5 md:gap-8;
 }
 
 .sponsorCardCollection__cardContainer > .sponsorCard {

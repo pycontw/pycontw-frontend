@@ -1,5 +1,5 @@
 <template>
-    <div class="scheduleDayTabs flex w-full mb-8 justify-center">
+    <div class="scheduleDayTabs mb-8 flex w-full justify-center">
         <slot></slot>
     </div>
 </template>

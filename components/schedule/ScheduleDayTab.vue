@@ -2,7 +2,7 @@
     <schedule-block
         :active="active"
         padding-x="px-4 sm:px-8"
-        class="m-0 font-bold whitespace-nowrap lg:m-2"
+        class="m-0 whitespace-nowrap font-bold lg:m-2"
         tab-header
         @click="onClick"
     >

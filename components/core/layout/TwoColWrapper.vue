@@ -1,10 +1,10 @@
 <template>
-    <div class="two-col-layout grid my-4 lg:gap-6">
-        <div class="justify-self-start mb-2 text-primary-500 text-[24px]">
+    <div class="two-col-layout my-4 grid lg:gap-6">
+        <div class="mb-2 justify-self-start text-[24px] text-primary-500">
             <slot></slot>
         </div>
         <div
-            class="h-full leading-[28px] lg:leading-6 mt-auto mb-5 text-[18px]"
+            class="mb-5 mt-auto h-full text-[18px] leading-[28px] lg:leading-6"
         >
             <slot name="right-col"></slot>
         </div>

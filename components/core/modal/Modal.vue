@@ -89,44 +89,44 @@ export default {
 
 <style lang="postcss" scoped>
 .modal {
-    @apply flex justify-center items-center fixed top-0 left-0 w-full h-screen z-[9998];
+    @apply fixed left-0 top-0 z-[9998] flex h-screen w-full items-center justify-center;
     background-color: rgba(18, 16, 35, 0.6);
     backdrop-filter: blur(5px);
 }
 
 .closingArea {
-    @apply w-full h-full absolute z-[9999];
+    @apply absolute z-[9999] h-full w-full;
 }
 
 .lightBox {
-    @apply flex flex-col px-4 py-5 rounded-3xl border-3 w-11/12 relative bg-black-900 border-pink-500;
-    @apply md:w-4/5 md:max-w-2xl md:pt-14 md:pb-6 md:px-12 md:border-2 z-[10000];
+    @apply relative flex w-11/12 flex-col rounded-3xl border-3 border-pink-500 bg-black-900 px-4 py-5;
+    @apply z-[10000] md:w-4/5 md:max-w-2xl md:border-2 md:px-12 md:pb-6 md:pt-14;
 }
 
 .lightBox__closeButtonContainer {
-    @apply absolute flex ml-auto cursor-pointer text-pink-500 top-[17px] right-[17px];
+    @apply absolute right-[17px] top-[17px] ml-auto flex cursor-pointer text-pink-500;
     @media (min-width: 768px) {
-        @apply top-[39.25px] right-[38.5px];
+        @apply right-[38.5px] top-[39.25px];
     }
 }
 
 .lightBox__closeButton {
-    @apply w-5 h-5;
+    @apply h-5 w-5;
 }
 
 .lightBox__photo__box {
-    @apply relative flex my-0 mx-auto;
+    @apply relative mx-auto my-0 flex;
 }
 .lightBox__photo {
-    @apply w-16 h-16 md:w-24 md:h-24;
-    @apply relative flex flex-col justify-center items-center rounded-2xl my-0 mx-auto;
+    @apply h-16 w-16 md:h-24 md:w-24;
+    @apply relative mx-auto my-0 flex flex-col items-center justify-center rounded-2xl;
     transform: translateX(-20px);
 }
 .lightBox__photo:first-of-type {
     transform: translateX(0px);
 }
 .lightBox__photo > img {
-    @apply absolute object-contain rounded-[inherit];
+    @apply absolute rounded-[inherit] object-contain;
     width: calc(100% - 10px);
 }
 .img__bg {
@@ -138,13 +138,13 @@ export default {
 }
 
 .lightBox__title {
-    @apply text-lg mt-3 font-semibold font-serif;
-    @apply md:text-xl md:mt-6;
+    @apply mt-3 font-serif text-lg font-semibold;
+    @apply md:mt-6 md:text-xl;
 }
 
 .lightBox__intro {
-    @apply flex flex-col font-sans text-base font-normal overflow-y-auto mt-3.5;
-    @apply md:text-lg md:mt-4 max-h-40 whitespace-pre-line;
+    @apply mt-3.5 flex flex-col overflow-y-auto font-sans text-base font-normal;
+    @apply max-h-40 whitespace-pre-line md:mt-4 md:text-lg;
 }
 
 .lightBox__buttons {

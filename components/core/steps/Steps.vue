@@ -2,38 +2,18 @@
     <div :class="{ ['mt-6']: !showStepLine }">
         <div
             v-if="showStepLine"
-            class="
-                h-[26px]
-                ml-[50px]
-                border-l-[1.5px] border-dashed border-[#5FAAE0]
-            "
+            class="ml-[50px] h-[26px] border-l-[1.5px] border-dashed border-[#5FAAE0]"
         ></div>
         <div class="step-layout grid gap-[30px]">
             <div
-                class="
-                    rounded-full
-                    w-[100px]
-                    h-[100px]
-                    text-[16px]
-                    flex
-                    justify-center
-                    items-center
-                    border-[1.5px] border-solid border-[#5FAAE0]
-                "
+                class="flex h-[100px] w-[100px] items-center justify-center rounded-full border-[1.5px] border-solid border-[#5FAAE0] text-[16px]"
             >
-                <div class="font-semibold text-center leading-[20px] w-[65px]">
+                <div class="w-[65px] text-center font-semibold leading-[20px]">
                     <slot name="title"></slot>
                 </div>
             </div>
             <div
-                class="
-                    h-full
-                    flex
-                    items-center
-                    leading-[28px]
-                    lg:leading-6
-                    my-auto;
-                "
+                class="my-auto; flex h-full items-center leading-[28px] lg:leading-6"
             >
                 <slot name="description"></slot>
             </div>

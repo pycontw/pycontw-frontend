@@ -35,7 +35,7 @@ export default {
 
 <style lang="postcss" scoped>
 .sponsorCard {
-    @apply relative flex flex-col justify-center items-center rounded-2xl;
+    @apply relative flex flex-col items-center justify-center rounded-2xl;
     background-color: #f7f6fe;
 }
 
@@ -52,12 +52,12 @@ export default {
 }
 
 .sponsorCard.-small {
-    @apply w-16 h-16;
-    @apply md:w-24 md:h-24;
+    @apply h-16 w-16;
+    @apply md:h-24 md:w-24;
 }
 
 .sponsorCard__tag {
-    @apply h-5 w-full absolute flex justify-center items-center text-[12px] font-semibold;
+    @apply absolute flex h-5 w-full items-center justify-center text-[12px] font-semibold;
     bottom: 20px;
     background-color: hsla(321, 32%, 62%, 1);
     color: #ffffff;
