@@ -384,7 +384,7 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply font-sans text-sm leading-5 md:leading-8 md:text-sm mb-8;
+    @apply mb-8 font-sans text-sm leading-5 md:text-sm md:leading-8;
     line-height: 30px;
 }
 
@@ -420,16 +420,16 @@ export default {
 
 .day {
     @apply flex flex-col;
-    @apply mt-9 md:mt-0 mb-5 md:mb-0;
+    @apply mb-5 mt-9 md:mb-0 md:mt-0;
 }
 
 .day__date {
-    @apply font-sans font-normal text-4xl md:text-5xl;
+    @apply font-sans text-4xl font-normal md:text-5xl;
     @apply my-0;
 }
 
 .day__month {
-    @apply font-sans font-normal text-base;
+    @apply font-sans text-base font-normal;
     @apply my-0;
     @apply leading-normal;
 }
@@ -443,9 +443,9 @@ export default {
 }
 
 .speechBox {
-    @apply pt-4 px-5 md:px-10 mt-5;
+    @apply mt-5 px-5 pt-4 md:px-10;
     @apply flex flex-col md:flex-row;
-    @apply bg-primary-900 border border-primary-900;
+    @apply border border-primary-900 bg-primary-900;
     @apply relative;
     border-radius: 24px;
 }
@@ -464,21 +464,21 @@ export default {
     @apply flex flex-row;
     @apply font-sans font-normal;
     @apply text-lg;
-    @apply mt-1 mb-2 text-pink-700;
+    @apply mb-2 mt-1 text-pink-700;
 }
 
 .speechBox__speaker {
     @apply underline;
-    @apply font-sans font-normal text-sm;
+    @apply font-sans text-sm font-normal;
     @apply my-0;
     @apply inline-block;
 }
 .speechBox__speaker:hover {
-    @apply text-primary-500 cursor-pointer;
+    @apply cursor-pointer text-primary-500;
 }
 .speechBox__description {
-    @apply font-sans font-normal text-sm text-black-200;
-    @apply mt-2 mb-0 overflow-hidden;
+    @apply font-sans text-sm font-normal text-black-200;
+    @apply mb-0 mt-2 overflow-hidden;
 }
 
 .speechBox__avatarWrapper {
@@ -495,7 +495,7 @@ export default {
 }
 
 .speechModal__img {
-    @apply object-cover rounded-lg h-16 w-16 md:h-32 md:w-32;
+    @apply h-16 w-16 rounded-lg object-cover md:h-32 md:w-32;
     transform: translateX(-20px);
 }
 
@@ -504,7 +504,7 @@ export default {
 }
 
 .speechModal__wrapper {
-    @apply fixed hidden justify-center items-center w-full h-screen left-0 top-0 lg:p-0;
+    @apply fixed left-0 top-0 hidden h-screen w-full items-center justify-center lg:p-0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -512,21 +512,21 @@ export default {
     @apply flex;
 }
 .speechModal {
-    @apply relative flex justify-center items-center flex-col rounded-3xl p-7 border-3 border-pink-700 bg-black-900 lg:p-10;
+    @apply relative flex flex-col items-center justify-center rounded-3xl border-3 border-pink-700 bg-black-900 p-7 lg:p-10;
     @apply w-11/12 md:w-4/5 md:max-w-3xl;
     z-index: 10000;
 }
 
 .speechModal__button {
-    @apply absolute font-bold top-2 text-pink-700 lg:top-5 right-4 lg:right-7 text-lg lg:text-2xl;
+    @apply absolute right-4 top-2 text-lg font-bold text-pink-700 lg:right-7 lg:top-5 lg:text-2xl;
 }
 
 .speechModal__speaker {
-    @apply font-serif font-semibold md:font-bold text-sm md:text-lg text-black-200;
+    @apply font-serif text-sm font-semibold text-black-200 md:text-lg md:font-bold;
     @apply my-2 mr-3;
 }
 .speechModal__speakerDescription {
-    @apply font-sans font-normal text-xs md:text-sm text-primary-100 overflow-y-auto;
+    @apply overflow-y-auto font-sans text-xs font-normal text-primary-100 md:text-sm;
     @apply max-h-60;
     @apply mb-4;
 }
@@ -538,7 +538,7 @@ export default {
     @apply mx-2 my-6;
 }
 .speechModal__closingArea {
-    @apply w-full h-full absolute;
+    @apply absolute h-full w-full;
     z-index: 9999;
 }
 .hostGroup {
@@ -546,16 +546,16 @@ export default {
 }
 
 .host {
-    @apply flex flex-col mr-5 md:mr-14;
+    @apply mr-5 flex flex-col md:mr-14;
 }
 
 .host__avatar {
-    @apply w-16 h-16 md:w-20 md:h-20;
+    @apply h-16 w-16 md:h-20 md:w-20;
 }
 
 .host__name {
-    @apply font-serif text-white text-xs md:text-sm;
-    @apply text-center p-1;
+    @apply font-serif text-xs text-white md:text-sm;
+    @apply p-1 text-center;
 }
 
 .fade-enter-active,

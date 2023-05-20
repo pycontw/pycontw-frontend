@@ -16,12 +16,12 @@
                 {{ getValueByLocale(value.title) }}
             </div>
             <br v-if="!isCustomEvent" />
-            <div v-if="byLine" class="font-medium text-sm">by {{ byLine }}</div>
+            <div v-if="byLine" class="text-sm font-medium">by {{ byLine }}</div>
             <div class="scheduleEvent__icon">
                 <img :src="icon.level[value.python_level]" />
                 <img :src="icon.lang[value.language]" />
             </div>
-            <div v-if="duration" class="font-medium text-sm">
+            <div v-if="duration" class="text-sm font-medium">
                 {{ duration }}
             </div>
         </div>

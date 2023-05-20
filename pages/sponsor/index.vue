@@ -31,22 +31,17 @@
                 <template #br><br /></template>
             </i18n>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-0 mb-10">
+        <div class="mb-10 mt-3 grid grid-cols-2 sm:mt-0 lg:grid-cols-4">
             <div
                 v-for="(service, i) in $t('services')"
                 :key="`sponsor_services_${i}`"
-                class="flex flex-col items-center mt-5 sm:mt-12"
+                class="mt-5 flex flex-col items-center sm:mt-12"
             >
                 <div
-                    class="
-                        bg-contain bg-no-repeat
-                        md:w-[138px] md:h-[138px]
-                        w-[112px]
-                        h-[112px]
-                    "
+                    class="h-[112px] w-[112px] bg-contain bg-no-repeat md:h-[138px] md:w-[138px]"
                     :style="getImgStyle(sponsorServices[i])"
                 ></div>
-                <div class="text-xs md:text-base mt-3 sm:mt-8 mb-0 text-center">
+                <div class="mb-0 mt-3 text-center text-xs sm:mt-8 md:text-base">
                     {{ service }}
                 </div>
             </div>
@@ -61,7 +56,7 @@
                 >
             </template>
         </i18n>
-        <div class="text-center mt-10">
+        <div class="mt-10 text-center">
             <text-button :href="sponsorFormLink">
                 {{ $t('cta.text') }}
             </text-button>
@@ -137,6 +132,6 @@ export default {
 
 <style lang="postcss" scoped>
 p {
-    @apply leading-[176%] md:text-[20px] text-[16px];
+    @apply text-[16px] leading-[176%] md:text-[20px];
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <locale-link
         to="/"
-        class="core-homeIcon md:px-8 py-2 flex justify-center items-center"
+        class="core-homeIcon flex items-center justify-center py-2 md:px-8"
         customized
     >
         <img
@@ -9,7 +9,7 @@
             :alt="`Home icon of ${conferenceName} ${conferenceYear}`"
             class="w-6"
         />
-        <span class="font-bold ml-2"> {{ conferenceName }} </span>
+        <span class="ml-2 font-bold"> {{ conferenceName }} </span>
     </locale-link>
 </template>
 

@@ -20,7 +20,7 @@
         <div class="speechCard__title speechCard__title-overflow">
             {{ title }}
         </div>
-        <div class="flex justify-between items-center">
+        <div class="flex items-center justify-between">
             <div class="speechCard__speakerThumbnails">
                 <div
                     v-for="(speaker, i) in speakers"
@@ -141,7 +141,7 @@ export default {
 
 <style lang="postcss" scoped>
 .speechCard {
-    @apply relative px-4 pb-4 pt-[12px] rounded-[12px] bg-primary-900 transition;
+    @apply relative rounded-[12px] bg-primary-900 px-4 pb-4 pt-[12px] transition;
     @apply border border-solid border-transparent; /*keep position of the card*/
     @apply overflow-hidden; /*handle too many speakers*/
     overflow-wrap: anywhere;
@@ -166,12 +166,12 @@ export default {
 }
 
 .speechCard__level {
-    @apply absolute text-primary-900 font-black font-serif;
+    @apply absolute font-serif font-black text-primary-900;
 }
 
 .speechCard__date,
 .speechCard__location {
-    @apply h-5 text-[16px] text-black-200 font-semibold;
+    @apply h-5 text-[16px] font-semibold text-black-200;
 }
 
 .speechCard__location {
@@ -205,15 +205,15 @@ export default {
 }
 
 .speechCard__speakerThumbnail {
-    @apply w-8 h-8 rounded-full overflow-hidden;
+    @apply h-8 w-8 overflow-hidden rounded-full;
 }
 
 .speechCard__speakerThumbnail img {
-    @apply object-cover min-h-full;
+    @apply min-h-full object-cover;
 }
 
 .speechCard__lang {
-    @apply w-12 h-5 bg-black-200;
+    @apply h-5 w-12 bg-black-200;
     -webkit-mask-position: right;
     mask-position: right;
     -webkit-mask-size: contain;
@@ -223,15 +223,15 @@ export default {
 }
 
 .speechCard__speakerNames {
-    @apply mt-[7px] mb-[36px] text-[18px];
+    @apply mb-[36px] mt-[7px] text-[18px];
     color: #bb75bc;
     line-height: 24px;
     letter-spacing: 0.1px;
 }
 
 .speechCard__category {
-    @apply inline-block px-4 py-[7px] text-[12px] text-primary-900 font-semibold;
-    @apply border border-solid rounded-[8px];
+    @apply inline-block px-4 py-[7px] text-[12px] font-semibold text-primary-900;
+    @apply rounded-[8px] border border-solid;
     border-color: #000000;
     background-color: #bb75bc;
 }

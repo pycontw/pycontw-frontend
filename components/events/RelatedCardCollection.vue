@@ -93,22 +93,22 @@ export default {
 
 <style lang="postcss" scoped>
 .related__title {
-    @apply flex relative top-12;
+    @apply relative top-12 flex;
 }
 .related__logo {
-    @apply -rotate-45 w-14 relative -top-4;
+    @apply relative -top-4 w-14 -rotate-45;
 }
 .related__text {
-    @apply font-serif font-black text-xl h-8 text-transparent;
+    @apply h-8 font-serif text-xl font-black text-transparent;
     background: linear-gradient(120deg, #9e67c3, #6a67d6, #93cac6);
     background-clip: text;
 }
 .related__card {
-    @apply relative top-16 pr-5 pl-4 pb-4;
+    @apply relative top-16 pb-4 pl-4 pr-5;
 }
 .related__arrow {
-    @apply w-6 h-6 bg-pink-700 hover:bg-primary-500 text-black-900 hover:text-white;
+    @apply h-6 w-6 bg-pink-700 text-black-900 hover:bg-primary-500 hover:text-white;
     @apply text-center text-[12px] leading-[30px];
-    @apply rounded-full cursor-pointer select-none after:hidden;
+    @apply cursor-pointer select-none rounded-full after:hidden;
 }
 </style>

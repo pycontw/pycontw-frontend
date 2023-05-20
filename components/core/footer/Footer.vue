@@ -1,13 +1,13 @@
 <template>
     <footer
-        class="bg-black-800 w-full flex flex-col justify-between text-golden"
+        class="text-golden flex w-full flex-col justify-between bg-black-800"
     >
         <div class="w-full p-10">
             <div class="flex justify-center">
                 <div class="flex flex-col items-center">
                     <ext-link
                         href="https://forms.gle/vLz3Xev8tUpnRqacA"
-                        class="my-2 highlight"
+                        class="highlight my-2"
                     >
                         {{ $t('joinUs') }}
                     </ext-link>
@@ -26,7 +26,7 @@
             <footer-social />
         </div>
         <div
-            class="bg-[#0e0d1c] w-full flex py-4 justify-center cursor-default"
+            class="flex w-full cursor-default justify-center bg-[#0e0d1c] py-4"
         >
             © {{ conferenceYear }} {{ conferenceName }}
         </div>
