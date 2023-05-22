@@ -246,4 +246,10 @@ export default {
         min-width: 45vw;
     }
 }
+@media (min-width: 1600px) {
+    .landing__title {
+        min-height: 330px;
+        min-width: 864px;
+    }
+}
 </style>
