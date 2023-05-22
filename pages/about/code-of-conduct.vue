@@ -274,9 +274,7 @@ export default {
         @apply hidden;
     }
     .sub2_img {
-        @apply flex;
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
+        @apply flex -ml-6 -mr-6;
     }
 }
 </style>
