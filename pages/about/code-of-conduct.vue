@@ -241,17 +241,15 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply mt-8 mb-8 font-serif font-bold text-center text-left text-pink-700;
-    font-size: 24px;
+    @apply mt-8 mb-8 font-serif font-bold text-center text-left text-pink-700 text-2xl;
 }
 @media (min-width: 768px) {
     .paragraph-title {
-        font-size: 28px;
+        @apply text-3xl;
     }
 }
 .img_text {
-    @apply absolute mt-24 whitespace-nowrap text-center;
-    font-size: 0.8rem;
+    @apply absolute mt-24 whitespace-nowrap text-center text-sm;
 }
 @media (max-width: 640px) {
     .img_text {
@@ -260,8 +258,7 @@ export default {
 }
 @media (max-width: 500px) {
     .img_text {
-        font-size: 0.4rem;
-        white-space: normal;
+        @apply text-xs whitespace-normal;
     }
 }
 .sub1_img {
