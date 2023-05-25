@@ -73,16 +73,25 @@ export default {
         SpeechCardCollection,
         Banner,
     },
-    asyncData({ redirect, params }) {
+    async asyncData({ redirect, params, payload, store }) {
         const eventType = params.eventType
         if (!['talks', 'tutorials'].includes(eventType)) {
             redirect('/')
         }
+        if (payload && Object.keys(payload).length !== 0)
+            return { eventType, speechesData: payload }
+        await store.dispatch('$getSpeechesData', eventType)
+        const speechesData = store.state.speechesData.map((speech) => ({
+            ...speech,
+            begin_time: speech.begin_time ? new Date(speech.begin_time) : null,
+        }))
+        return {
+            eventType,
+            speechesData,
+        }
     },
     data() {
         return {
-            eventType: '',
-            speechesData: [],
             checkedCategories: [],
             aboutBanner: AboutBanner,
         }
@@ -132,14 +141,6 @@ export default {
             // Before receiving speech data, set isAllCategoriesSelected to false
             return false
         },
-    },
-    async mounted() {
-        this.eventType = this.$route.params.eventType
-        await this.$store.dispatch('$getSpeechesData', this.eventType)
-        this.speechesData = this.$store.state.speechesData.map((speech) => ({
-            ...speech,
-            begin_time: speech.begin_time ? new Date(speech.begin_time) : null,
-        }))
     },
     methods: {
         metaInfo() {

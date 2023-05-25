@@ -101,6 +101,12 @@ export default {
         ScheduleEvent,
         ScheduleTick,
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { schedulesData: payload }
+        await store.dispatch('$getSchedulesData')
+        const schedulesData = store.state.schedulesData
+        return { schedulesData }
+    },
     data() {
         return {
             selectedDayIndex: 0,
@@ -132,8 +138,7 @@ export default {
             this.makeRooms()
         },
     },
-    async created() {
-        await this.$store.dispatch('$getSchedulesData')
+    created() {
         this.processData()
     },
     activated() {

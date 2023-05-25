@@ -147,15 +147,23 @@ export default {
         I18nPageWrapper,
         Intro,
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { sponsorsData: payload }
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
+        }
+    },
     data() {
         return {
             isOpened: false,
             primaryButton: landingButtonConfig.JOIN_US,
             secondaryButton: landingButtonConfig.CFP,
+            initialSponsorsData: {}, // Change name to initialSponsorsData
             selectedSponsor: {},
         }
     },
-    fetchOnServer: false,
     computed: {
         ...mapState(['sponsorsData']),
         isBulleted() {
@@ -183,9 +191,7 @@ export default {
             return this.$store.state.configs.showIndexAPACSection
         },
     },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
-    },
+    fetchOnServer: false,
     methods: {
         showModal(sponsor) {
             this.isOpened = true
@@ -209,13 +215,13 @@ export default {
 }
 
 .landing__background::after {
-    @apply absolute h-screen top-0 bg-center bg-no-repeat bg-contain;
+    @apply absolute top-0 h-screen bg-contain bg-center bg-no-repeat;
     content: '';
     background-image: url('~@/static/landing-background-rwd.png');
     z-index: -10;
 }
 .landing__background__items {
-    @apply absolute w-full h-full;
+    @apply absolute h-full w-full;
 }
 .landing__background__items__meter:nth-of-type(1) {
     @apply absolute opacity-0;
@@ -252,7 +258,7 @@ export default {
     left: 8%;
 }
 .landing__background__items__curly::after {
-    @apply bg-black-900 absolute inset-0 w-full h-full;
+    @apply absolute inset-0 h-full w-full bg-black-900;
     content: '';
 }
 .landing__background__items__curly:nth-of-type(1)::after {
@@ -270,7 +276,7 @@ export default {
     }
 }
 .landing__background__items__circle {
-    @apply absolute h-0 bg-no-repeat w-1/5;
+    @apply absolute h-0 w-1/5 bg-no-repeat;
     top: 64%;
     left: 40%;
     background-image: url('~@/static/img/landing/geometry-1.png');
@@ -295,7 +301,7 @@ export default {
     }
 }
 .landing__background__items__cone {
-    @apply hidden absolute bg-no-repeat bg-contain md:block;
+    @apply absolute hidden bg-contain bg-no-repeat md:block;
     top: 66%;
     left: 79%;
     width: 7.7vw;
@@ -313,7 +319,7 @@ export default {
 }
 
 .landing__title {
-    @apply relative top-20 bg-no-repeat bg-contain min-w-full opacity-0;
+    @apply relative top-20 min-w-full bg-contain bg-no-repeat opacity-0;
     background-image: url('~@/static/landing-title-rwd.png');
     min-height: 50vh;
     animation: title-fade-in 0.5s 1s linear forwards;
