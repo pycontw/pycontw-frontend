@@ -33,7 +33,7 @@
                                     )"
                                     :key="`openspace_example_${idx}`"
                                     :path="`openSpaceInfo.ideas.examples.${idx}`"
-                                    class="list-disc ml-4"
+                                    class="ml-4 list-disc"
                                     tag="li"
                                 ></i18n>
                             </ul>

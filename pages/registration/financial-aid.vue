@@ -139,11 +139,11 @@ export default {
 }
 
 .bg-img {
-    @apply bg-left bg-no-repeat bg-contain mt-4 pt-20 lg:pt-52;
+    @apply mt-4 bg-contain bg-left bg-no-repeat pt-20 lg:pt-52;
 }
 
 .container {
-    @apply w-full lg:w-9/12 mx-auto;
+    @apply mx-auto w-full lg:w-9/12;
 }
 
 .spacing {

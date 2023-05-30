@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .core-navBarItemAccordion {
-    @apply flex w-full flex-col justify-center cursor-pointer;
+    @apply flex w-full cursor-pointer flex-col justify-center;
 }
 
 .core-navBarItemAccordion__label {

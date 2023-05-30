@@ -1,5 +1,5 @@
 <template>
-    <nav class="h-full flex justify-evenly items-center">
+    <nav class="flex h-full items-center justify-evenly">
         <nav-bar-item-dropdown
             :label="$t('about')"
             :items="aboutItems"
@@ -188,7 +188,7 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarItem {
-    @apply font-bold whitespace-nowrap;
+    @apply whitespace-nowrap font-bold;
 }
 
 .core-navBarItem:hover {

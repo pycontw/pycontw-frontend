@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-10 mb-3">
-        <div class="flex justify-center cursor-default">
+    <div class="mb-3 mt-10">
+        <div class="flex cursor-default justify-center">
             <p class="py-3 font-bold text-pink-700">{{ $t('history') }}</p>
         </div>
         <div
@@ -12,7 +12,7 @@
                 v-for="(item, itemIndex) in itemCountInRow(row)"
                 :key="`landing-footer-history-${itemIndex}`"
                 :href="item.link"
-                class="my-2 mx-3 font-semibold text-sm"
+                class="mx-3 my-2 text-sm font-semibold"
                 highlight
                 >{{ item.text }}</ext-link
             >

@@ -17,10 +17,7 @@
         </div>
         <div
             v-if="isMenuSlidedIn"
-            class="
-                core-navBarHamburgerSlideInMenu
-                core-navBarHamburgerSlideInMenu__overflow
-            "
+            class="core-navBarHamburgerSlideInMenu core-navBarHamburgerSlideInMenu__overflow"
         >
             <nav-bar-item-accordion
                 :label="$t('about')"
@@ -197,7 +194,7 @@ export default {
 
 <style lang="postcss" scoped>
 .core-navBarHamburgerSlideInMenu {
-    @apply fixed right-0 flex w-full h-full flex-col font-bold pt-4 bg-black-900;
+    @apply fixed right-0 flex h-full w-full flex-col bg-black-900 pt-4 font-bold;
     top: 64px;
     z-index: 1000;
 }
@@ -225,7 +222,7 @@ export default {
 }
 
 .core-navBarHamburger__close {
-    @apply absolute text-4xl whitespace-nowrap top-1/2 left-1/2;
+    @apply absolute left-1/2 top-1/2 whitespace-nowrap text-4xl;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 </style>
