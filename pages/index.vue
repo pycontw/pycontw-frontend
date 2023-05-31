@@ -333,7 +333,11 @@ export default {
     }
     .landing__title {
         background-image: url('~@/static/landing-title.png');
-        min-height: 35vh;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 2.5rem;
+        background-size: 100%;
+        min-height: 280px;
         min-width: 45vw;
     }
     .landing__background__items__meter:nth-of-type(1) {
@@ -365,6 +369,12 @@ export default {
         top: 58%;
         left: 63%;
         width: 7vw;
+    }
+}
+@media (min-width: 1600px) {
+    .landing__title {
+        min-height: 330px;
+        min-width: 864px;
     }
 }
 </style>
