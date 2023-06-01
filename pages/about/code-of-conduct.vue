@@ -253,10 +253,10 @@ export default {
 }
 @media (max-width: 640px) {
     .img_text {
-        @apply mt-20;
+        @apply sm:mt-20;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .img_text {
         @apply text-xs whitespace-normal;
     }
