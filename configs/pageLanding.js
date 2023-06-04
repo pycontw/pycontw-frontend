@@ -1,10 +1,18 @@
 export const landingButtonConfig = {
-    JOIN_US: {
+    PRIMARY_JOIN_US: {
         isExternalLink: true,
         path: 'https://forms.gle/vLz3Xev8tUpnRqacA',
         textKey: 'joinUs',
         isPrimary: true,
         isLarge: true,
+    },
+    SECONDARY_JOIN_US: {
+        isExternalLink: true,
+        path: 'https://forms.gle/vLz3Xev8tUpnRqacA',
+        textKey: 'joinUs',
+        isPrimary: false,
+        isBordered: true,
+        isLarge: false,
     },
     CFP: {
         isExternalLink: false,
@@ -20,6 +28,13 @@ export const landingButtonConfig = {
         textKey: 'checkEvents',
         isPrimary: true,
         isLarge: true,
+    },
+    BUY_TICKETS: {
+        isExternalLink: false,
+        path: '/registration/tickets',
+        textKey: 'buyTickets',
+        isPrimary: true,
+        isLarge: false,
     },
 }
 

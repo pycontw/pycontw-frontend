@@ -44,7 +44,7 @@
                         {{ $t(primaryButton.textKey) }}
                     </text-button>
                     <text-button
-                        v-if="isCallingForProposals"
+                        v-if="isDisplayingSecondaryBtn"
                         :href="
                             secondaryButton.isExternalLink
                                 ? secondaryButton.path
@@ -150,8 +150,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.JOIN_US,
-            secondaryButton: landingButtonConfig.CFP,
+            primaryButton: landingButtonConfig.BUY_TICKETS,
+            secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
             selectedSponsor: {},
         }
     },
@@ -173,8 +173,8 @@ export default {
         conferenceYear() {
             return this.$store.state.configs.conferenceYear
         },
-        isCallingForProposals() {
-            return this.$store.state.configs.showSpeakingPage
+        isDisplayingSecondaryBtn() {
+            return this.$store.state.configs.showIndexSecondaryBtn
         },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
