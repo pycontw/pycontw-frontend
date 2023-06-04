@@ -20,20 +20,17 @@ export default genI18nMessages({
             },
         ],
         pyconIntro: 'PyCon Taiwan',
-        whatIsPyConAPAC: 'What is PyCon APAC',
-        whatIsPyConAPACContent:
-            'PyCon APAC is a worldwide gathering of the Python community. ' +
-            'In addition to diverse speech topics, the annual meeting also serves as ' +
-            'a platform for Python professionals along with enthusiasts to exchange ideas, ' +
-            'experiences, and the latest developments.',
-        pyConWillBeHeldOnline: 'PyCon will be held online',
-        pyConWillBeHeldOnlineContent:
-            'The conference is held on multiple virtual platforms. ' +
-            'All speeches are live streamed on YouTube while ' +
-            'attendees are encouraged to join our Gather Town and Discord space.  ' +
-            'The Gather Town platform allows attendees to participate in our ' +
-            'special events (Swag giveaway!) and meet with sponsors, ' +
-            'speakers, and other Pythonistas!',
+        whatIsPyConTW: 'What is PyCon Taiwan',
+        whatIsPyConTWContent:
+            'PyCon Taiwan is an annual convention in Taiwan for the discussion and promotion' +
+            ' of the Python programming language. It is held by enthusiasts and focuses on' +
+            ' Python technology and its versatile applications. We welcome people who are' +
+            ' interested in Python to join PyCon Taiwan to share knowledge, exchange ideas,' +
+            ' make connections and to help us grow our network.',
+        whatIsPyCon: 'What is PyCon',
+        whatIsPyConContent:
+            'The original PyCon was formed in North America in 2003, and now there' +
+            ' are many other conferences being run in the PyCon spirit around the world.',
     },
     'zh-hant': {
         milestone: [
@@ -54,13 +51,13 @@ export default genI18nMessages({
             },
         ],
         pyconIntro: 'PyCon Taiwan',
-        whatIsPyConAPAC: '何謂 PyCon APAC',
-        whatIsPyConAPACContent:
-            'PyCon APAC 是全球 Python 社群的年度盛會。年會除了有 Python 各方面實例的精彩演講外，' +
-            '還聚集各領域應用 Python 的人交流彼此經驗，分享最新的技術發展。',
-        pyConWillBeHeldOnline: 'PyCon APAC 將會線上舉辦',
-        pyConWillBeHeldOnlineContent:
-            '大會進行方式皆為線上進行，我們將在 YouTube 直播大會演講、' +
-            'Gather Town 進行大地遊戲及攤位交流、Discord 線上即時討論互相交流議程內容。',
+        whatIsPyConTW: '何謂 PyCon Taiwan',
+        whatIsPyConTWContent:
+            'PyCon Taiwan 為一年一度由愛好者舉辦、討論並提倡使用 Python 程式語言的會議，' +
+            '聚焦在 Python 技術與其多樣的可能應用的交流。我們歡迎所有對 Python ' +
+            '有興趣的朋友一同加入 PyCon Taiwan 來分享所學、交換想法、並且認識更多同好。',
+        whatIsPyCon: '何謂 PyCon',
+        whatIsPyConContent:
+            'PyCon 最初於 2003 成立於北美，現在世界各地皆有以 PyCon 精神而成立的會議。',
     },
 })

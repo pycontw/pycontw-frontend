@@ -1,24 +1,24 @@
 <template>
     <div class="intro">
-        <div v-if="isShowingApacIntro" class="description-wrapper">
+        <div class="description-wrapper">
             <div>
                 <core-h2
-                    :title="$t('whatIsPyConAPAC')"
+                    :title="$t('whatIsPyCon')"
                     :is-bulleted="isBulleted"
                     class="intro-h2"
                 ></core-h2>
                 <p class="info-section-description">
-                    {{ $t('whatIsPyConAPACContent') }}
+                    {{ $t('whatIsPyConContent') }}
                 </p>
             </div>
             <div>
                 <core-h2
-                    :title="$t('pyConWillBeHeldOnline')"
+                    :title="$t('whatIsPyConTW')"
                     :is-bulleted="isBulleted"
                     class="intro-h2"
                 ></core-h2>
                 <p class="info-section-description">
-                    {{ $t('pyConWillBeHeldOnlineContent') }}
+                    {{ $t('whatIsPyConTWContent') }}
                 </p>
             </div>
         </div>
@@ -56,10 +56,6 @@ export default {
     },
     props: {
         isBulleted: {
-            type: Boolean,
-            default: true,
-        },
-        isShowingApacIntro: {
             type: Boolean,
             default: true,
         },
