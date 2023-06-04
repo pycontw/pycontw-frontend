@@ -213,7 +213,7 @@ export default {
 
 <style scoped>
 .paragraph-title {
-    @apply mt-8 mb-8 font-serif font-bold text-center text-left text-pink-700 text-2xl;
+    @apply mb-8 mt-8 text-left text-center font-serif text-2xl font-bold text-pink-700;
 }
 @media (min-width: 768px) {
     .paragraph-title {
@@ -230,7 +230,7 @@ export default {
 }
 @media (max-width: 768px) {
     .img_text {
-        @apply text-xs whitespace-normal;
+        @apply whitespace-normal text-xs;
     }
 }
 .sub1_img {
@@ -246,7 +246,7 @@ export default {
         @apply hidden;
     }
     .sub2_img {
-        @apply flex -ml-6 -mr-6;
+        @apply -ml-6 -mr-6 flex;
     }
 }
 </style>
