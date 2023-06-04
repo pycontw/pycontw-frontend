@@ -1,30 +1,15 @@
 <template>
     <div
-        class="relative flex h-full px-8 justify-center items-center text-left"
+        class="relative flex h-full items-center justify-center px-8 text-left"
         @mouseenter="showMenu"
         @mouseleave="hideMenu"
     >
         <div
-            class="
-                relative
-                flex
-                h-full
-                flex-col
-                rounded-md
-                items-start
-                cursor-pointer
-            "
+            class="relative flex h-full cursor-pointer flex-col items-start rounded-md"
         >
             <div
                 id="options-menu"
-                class="
-                    options-menu
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-offset-2
-                    focus:ring-offset-gray-100
-                    focus:ring-indigo-500
-                "
+                class="options-menu focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
                 aria-haspopup="true"
                 aria-expanded="true"
             >
@@ -97,30 +82,30 @@ export default {
 
 <style lang="postcss" scoped>
 .options-menu {
-    @apply inline-flex w-full h-full justify-center items-center bg-transparent whitespace-nowrap;
+    @apply inline-flex h-full w-full items-center justify-center whitespace-nowrap bg-transparent;
     z-index: 100;
 }
 .core-menu-fade-enter-active {
     @apply transition transition-all duration-200;
 }
 .core-menu-fade-leave-active {
-    @apply transition transition-all duration-500 delay-200;
+    @apply transition transition-all delay-200 duration-500;
 }
 .core-menu-fade-enter,
 .core-menu-fade-leave-to {
     @apply opacity-0;
 }
 .menu-mask {
-    @apply absolute w-full h-0 top-full bg-black-900 rounded;
+    @apply absolute top-full h-0 w-full rounded bg-black-900;
 }
 .core-menu-mask-enter-active {
     @apply transition transition-all duration-200;
 }
 .core-menu-mask-leave-active {
-    @apply transition transition-all duration-700 delay-200;
+    @apply transition transition-all delay-200 duration-700;
 }
 .core-menu-mask-enter,
 .core-menu-mask-leave-to {
-    @apply h-full top-0;
+    @apply top-0 h-full;
 }
 </style>

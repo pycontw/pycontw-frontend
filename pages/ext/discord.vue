@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="pt-8 px-8 md:px-56">
+    <i18n-page-wrapper class="px-8 pt-8 md:px-56">
         <div>
             <div class="section">
                 <core-h1 :title="$t('title')"></core-h1>
@@ -81,7 +81,7 @@
                                     '📝｜program-tutorial',
                                 ]"
                                 :key="`discord_joinChannels_channels_${j}`"
-                                class="list-disc ml-6"
+                                class="ml-6 list-disc"
                             >
                                 <span class="channel">{{ channel }}</span>
                             </li>
@@ -294,8 +294,8 @@ export default {
     }
 }
 .paragraphTitle {
-    @apply font-bold text-base md:text-lg;
-    @apply font-serif font-bold mt-10 text-pink-700;
+    @apply text-base font-bold md:text-lg;
+    @apply mt-10 font-serif font-bold text-pink-700;
 }
 .paragraphContent {
     @apply text-xs md:text-base;
@@ -313,7 +313,7 @@ export default {
     background-color: rgba(110, 118, 129, 0.4);
 }
 .boldTitle {
-    @apply text-base md:text-lg mb-0 font-black;
+    @apply mb-0 text-base font-black md:text-lg;
 }
 .highlight {
     @apply text-pink-700;
@@ -322,6 +322,6 @@ export default {
     @apply mb-11;
 }
 .img {
-    @apply mt-4 mb-4 mx-auto w-3/4;
+    @apply mx-auto mb-4 mt-4 w-3/4;
 }
 </style>

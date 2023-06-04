@@ -12,7 +12,7 @@
         <div class="header-container --mobile md:hidden">
             <div class="header__nav-bar">
                 <home-icon />
-                <div class="h-full flex items-center">
+                <div class="flex h-full items-center">
                     <locale-switch />
                     <nav-bar-hamburger />
                 </div>
@@ -47,7 +47,7 @@ export default {
 }
 
 .header__nav-bar {
-    @apply w-full flex justify-between items-center px-4;
+    @apply flex w-full items-center justify-between px-4;
     pointer-events: auto; /*enable click-through ScrollableNavBar*/
 }
 .header-container,

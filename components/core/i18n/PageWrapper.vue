@@ -44,20 +44,20 @@ export default {
 
 <style lang="postcss" scoped>
 h1 {
-    @apply w-full text-3xl my-8 text-center;
+    @apply my-8 w-full text-center text-3xl;
 }
 
 h2 {
-    @apply w-full text-2xl mt-20 mb-6;
+    @apply mb-6 mt-20 w-full text-2xl;
 }
 
 h3 {
-    @apply w-full text-xl mt-10 mb-4;
+    @apply mb-4 mt-10 w-full text-xl;
 }
 
 p,
 .paragraph {
-    @apply w-full mt-1 mb-4 text-justify;
+    @apply mb-4 mt-1 w-full text-justify;
 }
 
 span.text-2s {
@@ -77,6 +77,6 @@ li {
 }
 
 .page-wrapper {
-    @apply bg-none bg-no-repeat bg-wrapper-top-left bg-wrapper-size;
+    @apply bg-none bg-wrapper-size bg-wrapper-top-left bg-no-repeat;
 }
 </style>

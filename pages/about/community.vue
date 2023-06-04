@@ -1,8 +1,8 @@
 <template>
-    <div class="px-8 lg:px-20 xl:px-28 py-10 md:py-20">
+    <div class="px-8 py-10 md:py-20 lg:px-20 xl:px-28">
         <core-h1
             :title="$t('title')"
-            class="font-bold justify-center lg:justify-start ml-0 lg:ml-2"
+            class="ml-0 justify-center font-bold lg:ml-2 lg:justify-start"
         ></core-h1>
         <div class="flex flex-col justify-between lg:flex-row">
             <div class="map-area">
@@ -27,21 +27,15 @@
                             @click="showModal(community)"
                         >
                             <div
-                                class="
-                                    communities__content__box__content__description
-                                "
+                                class="communities__content__box__content__description"
                             >
                                 <h3
-                                    class="
-                                        communities__content__box__content__description__title
-                                    "
+                                    class="communities__content__box__content__description__title"
                                 >
                                     {{ community.title }}
                                 </h3>
                                 <p
-                                    class="
-                                        communities__content__box__content__description__text
-                                    "
+                                    class="communities__content__box__content__description__text"
                                 >
                                     {{ community.description }}
                                 </p>
@@ -181,15 +175,15 @@ export default {
     @apply w-full lg:w-1/2;
 }
 .map-area__text {
-    @apply text-xs text-justify lg:text-sm leading-normal lg:leading-normal;
-    @apply font-semibold font-serif px-0 lg:px-2;
+    @apply text-justify text-xs leading-normal lg:text-sm lg:leading-normal;
+    @apply px-0 font-serif font-semibold lg:px-2;
 }
 .map-area__img {
-    @apply mt-20 mb-8 w-full;
+    @apply mb-8 mt-20 w-full;
     aspect-ratio: 622/653;
 }
 .communities {
-    @apply relative mx-auto lg:mx-0 w-full lg:w-2/5;
+    @apply relative mx-auto w-full lg:mx-0 lg:w-2/5;
     height: unset;
     @media (min-width: 1194px) {
         min-width: 500px;
@@ -199,7 +193,7 @@ export default {
 }
 .communities__arrow-top,
 .communities__arrow-down {
-    @apply absolute text-xl left-1/2 z-10 hidden lg:block;
+    @apply absolute left-1/2 z-10 hidden text-xl lg:block;
     content: '⌃';
     transform: translateX(-50%) translateY(0%);
     transition: opacity 0.3s;
@@ -215,7 +209,7 @@ export default {
     @apply opacity-0;
 }
 .communities__content {
-    @apply relative w-full h-full items-center overflow-y-auto;
+    @apply relative h-full w-full items-center overflow-y-auto;
     @media (min-width: 1194px) {
         width: calc(100% + 40px);
         margin-left: -20px;
@@ -226,8 +220,8 @@ export default {
     @apply hidden;
 }
 .communities__content__box__content {
-    @apply mx-auto mt-6 min-h-full px-6 py-6 cursor-default lg:cursor-pointer transition;
-    @apply flex justify-between items-center flex-col bg-primary-900 border border-primary-900 lg:flex-row;
+    @apply mx-auto mt-6 min-h-full cursor-default px-6 py-6 transition lg:cursor-pointer;
+    @apply flex flex-col items-center justify-between border border-primary-900 bg-primary-900 lg:flex-row;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
 }
@@ -242,11 +236,11 @@ export default {
     @apply mt-0;
 }
 .communities__content__box__content__description__title {
-    @apply font-serif font-bold mt-0 mb-4 text-secondary-300 lg:mb-3;
+    @apply mb-4 mt-0 font-serif font-bold text-secondary-300 lg:mb-3;
     font-size: 25px;
 }
 .communities__content__box__content__description__text {
-    @apply text-xs text-left w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-6;
+    @apply mb-5 w-full overflow-hidden pr-0 text-left text-xs leading-7 lg:mb-0 lg:pr-6;
     line-height: 146.9%;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -257,7 +251,7 @@ export default {
     }
 }
 .communities__content__box__content__img {
-    @apply object-cover rounded-lg h-32 w-60 lg:w-32;
+    @apply h-32 w-60 rounded-lg object-cover lg:w-32;
 }
 
 @keyframes arrow-top-float {

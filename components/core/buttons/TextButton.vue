@@ -98,19 +98,19 @@ export default {
     @apply relative;
 
     & > a {
-        @apply font-sans outline-none;
+        @apply outline-none font-sans;
     }
 }
 
 .core-button:not(.--is-link),
 .core-button.--is-link > a {
-    @apply inline-flex items-center justify-center outline-none;
+    @apply outline-none inline-flex items-center justify-center;
     line-height: 1.25rem;
     border-radius: 40px;
 }
 
 .core-button:not(.--is-link) {
-    @apply cursor-default text-black-200 bg-black-300 border-black-300;
+    @apply cursor-default border-black-300 bg-black-300 text-black-200;
 }
 
 .core-button.--uppercase > a {
@@ -161,7 +161,7 @@ export default {
 
     &.--small:not(.--is-link),
     &.--small > a {
-        @apply h-12 font-semibold text-base;
+        @apply h-12 text-base font-semibold;
         padding: 10px 22px;
         min-width: 80px;
         height: 60px;
@@ -169,8 +169,8 @@ export default {
     }
 }
 .core-button.--primary > a:after {
-    @apply absolute top-0 left-0 h-full w-full;
-    @apply opacity-0 z-20;
+    @apply absolute left-0 top-0 h-full w-full;
+    @apply z-20 opacity-0;
     border-radius: inherit;
     content: '';
     background-image: linear-gradient(
@@ -231,7 +231,7 @@ export default {
 
     &.--small:not(.--is-link),
     &.--small > a {
-        @apply h-12 font-semibold text-base;
+        @apply h-12 text-base font-semibold;
         padding: 10px 22px;
         min-width: 80px;
         height: 60px;
@@ -239,8 +239,8 @@ export default {
     }
 }
 .core-button.--bordered > a:after {
-    @apply absolute top-0 left-0 h-full w-full;
-    @apply opacity-0 z-20;
+    @apply absolute left-0 top-0 h-full w-full;
+    @apply z-20 opacity-0;
     border-radius: inherit;
     content: '';
     background: linear-gradient(#121023, #121023) padding-box,
@@ -293,8 +293,8 @@ export default {
 }
 .core-button.--secondary {
     & > a:after {
-        @apply absolute top-0 left-0 w-full h-full bg-black-800 border-pink-700;
-        @apply opacity-0 z-20;
+        @apply absolute left-0 top-0 h-full w-full border-pink-700 bg-black-800;
+        @apply z-20 opacity-0;
         content: '';
         background-image: none;
         border-radius: inherit;

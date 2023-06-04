@@ -37,7 +37,7 @@ export default {
 
 <style lang="postcss" scoped>
 .jobsCard {
-    @apply flex bg-white rounded-2xl;
+    @apply flex rounded-2xl bg-white;
     opacity: 0.2;
 }
 

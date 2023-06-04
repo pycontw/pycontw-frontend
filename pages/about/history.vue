@@ -16,7 +16,7 @@
                     if the sum of the texts' length is too small,
                     A can be smaller than B
                 -->
-                <div class="flex flex-col w-full">
+                <div class="flex w-full flex-col">
                     <p class="history__paragraph-title">
                         {{ $t('beforePyCon.title') }}
                     </p>
@@ -167,20 +167,14 @@
                     ></i18n>
                 </div>
                 <div
-                    class="
-                        hidden
-                        flex-col flex-1
-                        justify-between
-                        items-center
-                        md:flex
-                    "
+                    class="hidden flex-1 flex-col items-center justify-between md:flex"
                 >
                     <div
                         v-for="(img, i) in imgs"
                         :key="`img_${i}`"
                         class="md:ml-12 lg:ml-20 xl:ml-28"
                     >
-                        <div class="w-36 h-36" :style="getImgStyle(img)"></div>
+                        <div class="h-36 w-36" :style="getImgStyle(img)"></div>
                     </div>
                 </div>
             </div>
@@ -264,11 +258,11 @@ export default {
 
 <style scoped>
 .history__paragraph-title {
-    @apply mt-1 mb-1 font-serif font-bold text-left text-pink-700;
+    @apply mb-1 mt-1 text-left font-serif font-bold text-pink-700;
     font-size: 24px;
 }
 .history__paragraph-content {
-    @apply mt-1 mb-9 leading-5 md:leading-8 last:mb-0;
+    @apply mb-9 mt-1 leading-5 last:mb-0 md:leading-8;
     font-size: 16px;
 }
 @media (min-width: 768px) {

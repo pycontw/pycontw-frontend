@@ -69,7 +69,7 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    @apply relative font-serif px-0 py-4 md:py-0 my-0 mx-auto;
+    @apply relative mx-auto my-0 px-0 py-4 font-serif md:py-0;
 }
 
 .intro-milestones {
@@ -78,11 +78,11 @@ export default {
 }
 
 .description-wrapper {
-    @apply flex flex-col md:flex-row mb-0 md:mb-28;
+    @apply mb-0 flex flex-col md:mb-28 md:flex-row;
 }
 
 .description-wrapper > div {
-    @apply flex-1 mb-24 md:mb-0;
+    @apply mb-24 flex-1 md:mb-0;
 }
 
 .description-wrapper > div > * {
@@ -90,7 +90,7 @@ export default {
 }
 
 .info-section-description {
-    @apply pl-0 md:pl-14 my-0 mx-auto;
+    @apply mx-auto my-0 pl-0 md:pl-14;
     @apply text-justify;
 }
 

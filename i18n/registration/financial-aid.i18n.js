@@ -24,7 +24,7 @@ export default genI18nMessages({
             {
                 title: 'Auxiliary Items',
                 content:
-                    'The Financial Aid accepts conference fee only since PyCon TW is held virtually.',
+                    'The Financial Aid accepts conference fees and travel compensation but may be reduced based on the number of applicants.',
             },
             {
                 title: 'Reimbursement',
@@ -77,7 +77,7 @@ export default genI18nMessages({
             },
             {
                 title: '補助項目',
-                content: '大會門票（補助金額依審核結果決定）',
+                content: '大會門票及交通補助（補助金額依審核結果決定）',
             },
             {
                 title: '領取方式',

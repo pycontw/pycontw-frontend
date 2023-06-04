@@ -63,15 +63,15 @@ export default {
 
 <style lang="postcss" scoped>
 .checkbox {
-    @apply mt-3 ml-2 transition cursor-pointer;
-    @apply py-[8px] px-4 md:py-[12px] md:px-[36px];
-    @apply border-solid border-2 rounded-[40px] border-pink-700;
-    @apply text-[16px] md:text-[18px] text-pink-700 font-semibold;
+    @apply ml-2 mt-3 cursor-pointer transition;
+    @apply px-4 py-[8px] md:px-[36px] md:py-[12px];
+    @apply rounded-[40px] border-2 border-solid border-pink-700;
+    @apply text-[16px] font-semibold text-pink-700 md:text-[18px];
     &.checked {
-        @apply text-black-800 bg-pink-700;
+        @apply bg-pink-700 text-black-800;
     }
 }
 .checkbox:hover {
-    @apply text-black-800 bg-pink-700 opacity-90;
+    @apply bg-pink-700 text-black-800 opacity-90;
 }
 </style>

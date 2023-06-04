@@ -61,7 +61,7 @@ export default {
 
 <style lang="postcss" scoped>
 .card {
-    @apply relative inline-flex flex-col max-w-xs break-words bg-primary-900;
+    @apply relative inline-flex max-w-xs flex-col break-words bg-primary-900;
     min-height: 18rem;
     border-radius: 24px;
     border: 1px solid transparent;
@@ -91,7 +91,7 @@ export default {
     padding-bottom: 24px;
 }
 .title {
-    @apply font-bold font-sans text-pink-700 text-sm md:text-lg;
+    @apply font-sans text-sm font-bold text-pink-700 md:text-lg;
 }
 
 .tag {
@@ -118,7 +118,7 @@ export default {
     }
 }
 .cardTxt {
-    @apply text-xs md:text-sm font-serif;
+    @apply font-serif text-xs md:text-sm;
     color: #c7c7c7;
 }
 

@@ -1,8 +1,8 @@
 <template>
-    <div class="px-8 lg:px-20 xl:px-28 py-10 md:py-20">
+    <div class="px-8 py-10 md:py-20 lg:px-20 xl:px-28">
         <core-h1
             :title="$t('title')"
-            class="font-bold justify-center ml-0 lg:ml-2"
+            class="ml-0 justify-center font-bold lg:ml-2"
         ></core-h1>
         <div class="flex flex-col justify-between">
             <div class="intro">
@@ -130,22 +130,22 @@ export default {
     @apply w-full;
 }
 .intro__text {
-    @apply text-xs text-justify lg:text-sm leading-normal lg:leading-normal;
-    @apply font-semibold font-serif px-0 mb-10 lg:px-2;
+    @apply text-justify text-xs leading-normal lg:text-sm lg:leading-normal;
+    @apply mb-10 px-0 font-serif font-semibold lg:px-2;
 }
 .communities {
     @apply relative mx-auto w-[95%];
     height: unset;
 }
 .communities__content {
-    @apply relative w-full h-full items-center flex flex-wrap justify-center;
+    @apply relative flex h-full w-full flex-wrap items-center justify-center;
 }
 .box {
     @apply lg:mx-4 lg:w-[45%];
 }
 .box__content {
-    @apply mx-auto mt-6 min-h-full px-6 py-6 cursor-default lg:cursor-pointer transition;
-    @apply flex justify-between items-center flex-col bg-primary-900 border border-primary-900 lg:flex-row;
+    @apply mx-auto mt-6 min-h-full cursor-default px-6 py-6 transition lg:cursor-pointer;
+    @apply flex flex-col items-center justify-between border border-primary-900 bg-primary-900 lg:flex-row;
     border-radius: 24px;
     -webkit-tap-highlight-color: transparent;
 }
@@ -157,11 +157,11 @@ export default {
     }
 }
 .description__title {
-    @apply font-serif font-bold mt-0 mb-4 text-secondary-300 lg:mb-3;
+    @apply mb-4 mt-0 font-serif font-bold text-secondary-300 lg:mb-3;
     font-size: 25px;
 }
 .description__text {
-    @apply text-xs text-left w-full leading-7 overflow-hidden mb-5 lg:mb-0 pr-0 lg:pr-6;
+    @apply mb-5 w-full overflow-hidden pr-0 text-left text-xs leading-7 lg:mb-0 lg:pr-6;
     line-height: 146.9%;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -172,7 +172,7 @@ export default {
     }
 }
 .content__img {
-    @apply object-cover rounded-lg h-32 w-60 lg:w-32;
+    @apply h-32 w-60 rounded-lg object-cover lg:w-32;
 }
 
 .fade-enter-active,

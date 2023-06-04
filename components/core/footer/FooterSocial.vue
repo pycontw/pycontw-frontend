@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex justify-center items-center flex-wrap">
+    <div class="flex w-full flex-wrap items-center justify-center">
         <ext-link
             v-for="(item, index) in dataConfig"
             :key="`landing-footer-icon-${index}`"
@@ -7,11 +7,7 @@
             class="mx-4 my-4"
         >
             <img
-                class="
-                    md:w-[33px] md:h-[33px]
-                    hover:brightness-0 hover:inset-1
-                    landing-footer-icon
-                "
+                class="landing-footer-icon hover:inset-1 hover:brightness-0 md:h-[33px] md:w-[33px]"
                 :src="require(`~/static/img/footer/${item.icon}`)"
                 :alt="item.altName"
             />

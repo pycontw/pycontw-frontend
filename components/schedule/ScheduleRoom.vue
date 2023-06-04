@@ -1,6 +1,6 @@
 <template>
     <schedule-block
-        class="scheduleRoom font-semibold whitespace-nowrap"
+        class="scheduleRoom whitespace-nowrap font-semibold"
         :mini="inline"
         :padding-x="paddingX"
         :padding-y="paddingY"

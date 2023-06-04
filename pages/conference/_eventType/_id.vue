@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="py-20 px-4 sm:px-8 md:px-16 lg:px-32" custom-x>
+    <i18n-page-wrapper class="px-4 py-20 sm:px-8 md:px-16 lg:px-32" custom-x>
         <core-h1 :title="data.title" center class="font-black"></core-h1>
         <div class="speech__speakers">
             <div
@@ -305,22 +305,22 @@ export default {
     @apply md:mb-20;
 }
 .speech__speakers {
-    @apply flex flex-col mt-6 mb-4 md:mb-8;
+    @apply mb-4 mt-6 flex flex-col md:mb-8;
 }
 .speech__speakerContainer {
-    @apply flex flex-col w-full md:flex-row mb-12;
+    @apply mb-12 flex w-full flex-col md:flex-row;
 }
 .speech__speaker {
-    @apply flex flex-col mx-10;
+    @apply mx-10 flex flex-col;
 }
 .speech__speakerThumbnail {
-    @apply h-24 w-24 md:h-28 md:w-28 mx-auto;
+    @apply mx-auto h-24 w-24 md:h-28 md:w-28;
 }
 .speech__speakerThumbnail img {
-    @apply h-full object-cover rounded-full;
+    @apply h-full rounded-full object-cover;
 }
 .speech__speakerName {
-    @apply font-serif font-black text-center my-3;
+    @apply my-3 text-center font-serif font-black;
 }
 .speech__profile {
     @apply flex justify-center;
@@ -332,24 +332,24 @@ export default {
     @apply fill-primary-300;
 }
 .speech__intro {
-    @apply flex justify-center my-10 text-black-200 md:my-2;
+    @apply my-10 flex justify-center text-black-200 md:my-2;
 }
 
 .speech__tabs {
-    @apply mb-4 md:mb-8 my-10 w-full;
+    @apply my-10 mb-4 w-full md:mb-8;
 }
 .speech__tabBox {
     @apply mb-6 break-words;
 }
 .speech__tabParagraphTitle {
-    @apply font-serif font-bold my-auto mr-8 text-pink-700 whitespace-nowrap;
+    @apply my-auto mr-8 whitespace-nowrap font-serif font-bold text-pink-700;
     min-width: 85px;
 }
 .speech__tabParagraph {
-    @apply font-sans my-auto;
+    @apply my-auto font-sans;
 }
 .speech__info {
-    @apply flex mr-2 mb-2;
+    @apply mb-2 mr-2 flex;
 }
 
 .speech__extLink {

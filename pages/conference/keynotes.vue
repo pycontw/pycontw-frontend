@@ -208,17 +208,17 @@ export default {
     @apply mb-20 md:mb-28;
 }
 .keynote__photo {
-    @apply h-24 w-24 md:h-28 md:w-28 mx-auto my-2;
+    @apply mx-auto my-2 h-24 w-24 md:h-28 md:w-28;
 }
 
 .keynote__photo img {
-    @apply object-cover rounded-full;
+    @apply rounded-full object-cover;
     height: 100%;
 }
 
 .keynote__name,
 .keynote__title {
-    @apply font-serif font-black text-center;
+    @apply text-center font-serif font-black;
     font-size: 22px;
 }
 
@@ -227,7 +227,7 @@ export default {
 }
 
 .keynote__title {
-    @apply py-2 my-0;
+    @apply my-0 py-2;
     line-height: inherit;
     background: linear-gradient(
         302.44deg,
@@ -240,7 +240,7 @@ export default {
 }
 
 .keynote__tabs {
-    @apply mt-6 mb-3;
+    @apply mb-3 mt-6;
 }
 
 .keynote_tab {

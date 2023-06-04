@@ -31,17 +31,17 @@ export default {
 
 <style scoped>
 .core-jobsCardCollection {
-    @apply flex px-0 bg-black-900;
+    @apply flex bg-black-900 px-0;
 }
 
 .core-jobsCardCollection.--site {
-    @apply z-50 pb-3 sticky w-full;
+    @apply sticky z-50 w-full pb-3;
     @apply flex-wrap items-center justify-center;
     top: 48px;
 }
 
 .core-jobsCardCollection.--gather {
-    @apply sm:px-4 md:pr-4 md:pl-16;
+    @apply sm:px-4 md:pl-16 md:pr-4;
     @apply flex-col justify-start pt-8 md:pt-7;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="scheduleList flex flex-col w-full">
+    <div class="scheduleList flex w-full flex-col">
         <slot></slot>
     </div>
 </template>

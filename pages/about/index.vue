@@ -37,10 +37,7 @@
                 <i18n path="kindsOFTalk" tag="span" class="section-description">
                     <template #talkNumber>
                         <span
-                            class="
-                                section-description
-                                section-description--highlight
-                            "
+                            class="section-description section-description--highlight"
                             >3</span
                         >
                     </template>
@@ -55,10 +52,7 @@
                 >
                     <template #activityNumber>
                         <span
-                            class="
-                                section-description
-                                section-description--highlight
-                            "
+                            class="section-description section-description--highlight"
                             >7</span
                         >
                     </template>
@@ -157,7 +151,7 @@ export default {
 
 <style scoped>
 .section-header {
-    @apply font-serif text-primary-100 my-3 text-base md:text-lg font-bold;
+    @apply my-3 font-serif text-base font-bold text-primary-100 md:text-lg;
 }
 .section-header--highlight {
     @apply text-primary-500;
@@ -168,7 +162,7 @@ export default {
 }
 
 .section-wrapper {
-    @apply flex items-center justify-evenly my-10;
+    @apply my-10 flex items-center justify-evenly;
 }
 
 .section-description--highlight {
@@ -180,21 +174,21 @@ export default {
 }
 
 .img-group {
-    @apply grid grid-cols-2 md:grid-cols-4 mx-2 my-7 md:my-16;
+    @apply mx-2 my-7 grid grid-cols-2 md:my-16 md:grid-cols-4;
 }
 
 .img {
-    @apply w-32 md:w-44 h-24 md:h-40 md:mx-2 my-3;
+    @apply my-3 h-24 w-32 md:mx-2 md:h-40 md:w-44;
     @apply bg-contain bg-no-repeat;
     @apply flex items-center justify-center;
 }
 
 .img__text {
-    @apply font-serif font-bold text-xs md:text-base;
+    @apply font-serif text-xs font-bold md:text-base;
 }
 
 .unordered-list {
-    @apply m-0 md:m-12 text-xs md:text-base md:list-disc;
+    @apply m-0 text-xs md:m-12 md:list-disc md:text-base;
 }
 
 .unordered-list__item {
