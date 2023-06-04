@@ -18,13 +18,13 @@ export const state = () => ({
         showSponsorPage: true,
         showRegistrationPage: true,
         showEventOverviewPage: false,
-        showEventsPage: false,
+        showEventsPage: true,
         showConferencePage: false,
         showVenuePage: false,
-        showIndexSponsorSection: false,
+        showIndexSponsorSection: true,
         showIndexAPACSection: false,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
-        eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
+        eventsHideItems: ['sprints', 'openSpaces'], // ['sprints', 'openSpaces', 'jobs']
         conferenceHideItems: [], // ['keynotes', 'talks', 'tutorials', 'youngInspirers']
         registrationHideItems: [], // ['tickets', 'financialAid']
     },
