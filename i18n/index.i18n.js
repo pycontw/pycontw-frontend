@@ -17,6 +17,7 @@ export default genI18nMessages({
         joinUs: 'Join Us',
         callForProposals: 'Call for Proposals',
         checkEvents: 'Event Schedule',
+        buyTickets: 'Buy Tickets Now',
     },
     'zh-hant': {
         pyconWelcome: '歡迎來到 PyCon TW 2023',
@@ -34,5 +35,6 @@ export default genI18nMessages({
         joinUs: '成為志工',
         callForProposals: '投稿募集',
         checkEvents: '查看議程',
+        buyTickets: '立即購票',
     },
 })

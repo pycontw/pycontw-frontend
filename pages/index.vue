@@ -44,7 +44,7 @@
                         {{ $t(primaryButton.textKey) }}
                     </text-button>
                     <text-button
-                        v-if="isCallingForProposals"
+                        v-if="isDisplayingSecondaryBtn"
                         :href="
                             secondaryButton.isExternalLink
                                 ? secondaryButton.path
@@ -66,10 +66,7 @@
         </div>
 
         <I18nPageWrapper>
-            <Intro
-                :is-showing-apac-intro="showIndexAPACSection"
-                :is-bulleted="isBulleted"
-            ></Intro>
+            <Intro :is-bulleted="isBulleted"></Intro>
             <div class="pt-12 lg:mx-auto lg:w-full">
                 <core-h2
                     :title="$t('bulletinList')"
@@ -150,8 +147,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.JOIN_US,
-            secondaryButton: landingButtonConfig.CFP,
+            primaryButton: landingButtonConfig.BUY_TICKETS,
+            secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
             selectedSponsor: {},
         }
     },
@@ -173,14 +170,11 @@ export default {
         conferenceYear() {
             return this.$store.state.configs.conferenceYear
         },
-        isCallingForProposals() {
-            return this.$store.state.configs.showSpeakingPage
+        isDisplayingSecondaryBtn() {
+            return this.$store.state.configs.showIndexSecondaryBtn
         },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
-        },
-        showIndexAPACSection() {
-            return this.$store.state.configs.showIndexAPACSection
         },
     },
     created() {
