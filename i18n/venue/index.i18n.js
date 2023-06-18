@@ -94,8 +94,7 @@ export default genI18nMessages({
         publicTransportInfo: {
             title: '乘車方式',
             info: '可乘坐 國光客運 1843 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
-            '1843infoTitle':
-                '可乘坐 國光客運 1843 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
+            '1843infoTitle': '國光客運 1843 路線資訊：',
             description1:
                 '路線：南港轉運站西站(高鐵台鐵) → 捷運南港展覽館站 → 內湖行政中心 → 瑞光路 → 捷運港墘站 → 桃園機場第一航廈 → 桃園機場第二航廈',
             description2:
