@@ -60,6 +60,7 @@
             v-if="showVenuePage"
             to="/venue"
             :class="getPageClassesByPath('venue', true)"
+            customized
         >
             {{ $t('venue') }}
         </locale-link>

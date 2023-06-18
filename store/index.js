@@ -20,7 +20,7 @@ export const state = () => ({
         showEventOverviewPage: false,
         showEventsPage: true,
         showConferencePage: false,
-        showVenuePage: false,
+        showVenuePage: true,
         showIndexSponsorSection: true,
         showIndexSecondaryBtn: true,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
