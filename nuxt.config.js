@@ -179,6 +179,9 @@ export default {
         ],
         // https://github.com/nuxt-community/markdownit-module
         '@nuxtjs/markdownit',
+        // https://sitemap.nuxtjs.org/
+        // This module must be at the end of the modules array
+        '@nuxtjs/sitemap',
     ],
 
     i18n: {
@@ -217,6 +220,12 @@ export default {
         preset: 'default',
         linkify: true,
         breaks: true,
+    },
+
+    sitemap: {
+        hostname: 'https://tw.pycon.org/',
+        gzip: true,
+        exclude: [],
     },
 
     publicRuntimeConfig: {
