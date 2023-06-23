@@ -74,6 +74,13 @@
                 :expanding="expandingItem === 'registration'"
                 @click.native="toggleAccordion('registration')"
             ></nav-bar-item-accordion>
+            <locale-link
+                v-if="showVenuePage"
+                class="core-navBarHamburgerSlideInMenu__item"
+                to="/venue"
+                customized
+                >{{ $t('venue') }}</locale-link
+            >
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="proposalSystemUrl"

@@ -52,7 +52,9 @@ export default {
             ...sponsor,
             id: this.$makeId(),
         }))
-        this.setSelectedSponsor(this.jobsData[0])
+        if (this.jobsData.length > 0) {
+            this.setSelectedSponsor(this.jobsData[0])
+        }
         this.setPivot()
     },
     methods: {
