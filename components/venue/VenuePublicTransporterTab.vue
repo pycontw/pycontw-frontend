@@ -1,8 +1,7 @@
 <template>
     <div
-        class="publicTransporter flex flex-col rounded-xl bg-primary-900 px-6 py-10"
+        class="publicTransporter flex flex-col rounded-xl bg-primary-900 px-6 py-10 md:px-16 md:py-20"
     >
-        <!-- TODO: need add en -->
         <img class="md:hidden" :src="icon.publicTransporterGuide" />
         <img class="hidden md:block" :src="icon.publicTransporterGuideMd" />
 
@@ -40,7 +39,7 @@
             </div>
         </div>
 
-        <div class="publicTransporter-trafficInfo pt-6">
+        <div class="publicTransporter-trafficInfo pt-6 md:pb-10 md:pt-16">
             <div class="publicTransporter-trafficInfo-container flex-1">
                 <h3>
                     <img class="mr-1" :src="icon.airplane" />
@@ -49,35 +48,6 @@
             </div>
         </div>
         <div class="md:flex md:gap-10">
-            <div>
-                <div class="flex items-center pb-3 pt-6 md:pb-4">
-                    <img :src="icon.carWhite" />
-                    <h5 class="pl-2">
-                        {{ $t('driveInfo.title') }}
-                    </h5>
-                </div>
-                <div>
-                    <ul class="ml-[19px] list-outside list-disc">
-                        <li>
-                            {{ $t('driveInfo.description1') }}
-                        </li>
-                        <i18n path="driveInfo.description2" tag="li">
-                            <a
-                                href="/"
-                                class="text-pink-500 underline"
-                                target="_blank"
-                                >{{ $t('driveInfo.link.description1') }}</a
-                            >
-                            <a
-                                href="/"
-                                class="text-pink-500 underline"
-                                target="_blank"
-                                >{{ $t('driveInfo.link.description2') }}</a
-                            >
-                        </i18n>
-                    </ul>
-                </div>
-            </div>
             <div>
                 <div class="flex items-center pb-3 pt-6 md:pb-4">
                     <img :src="icon.transporterWhite" />
@@ -172,14 +142,14 @@ export default {
         margin: 0;
     }
     &::before {
-        max-width: 336px;
+        max-width: 280px;
         content: '';
         width: 100%;
         border-top: 1px solid #9387ff;
         display: inline-block;
     }
     &::after {
-        max-width: 336px;
+        max-width: 280px;
         width: 100%;
         content: '';
         border-top: 1px solid #9387ff;

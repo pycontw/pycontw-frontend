@@ -20,6 +20,78 @@ export default genI18nMessages({
             car: 'By Car',
             publicTransport: 'By Public Transport',
         },
+        carInstructions: {
+            title: 'Driving',
+            footerTitle: 'Parking',
+            description1:
+                'Exiting the Donghu Interchange on the Sun Yat-sen Freeway, pass the Nanhu Lake Bridge, and then proceed along Academia Rd.',
+            description2:
+                'Exiting the Nangang Interchange on National Highway No.3, proceed along Nansen Road, turn left onto Jiuzhuang Road, and proceed along Academia Rd.',
+            description3:
+                'From the Nangang exit of HuanDong Boulevard, proceed along Academia Rd.',
+        },
+        parkingInfo: {
+            title: 'Parking Info',
+            car: {
+                title: 'Car',
+                description:
+                    'The underground parking lot (B2) in the Humanities and Social Science Building is available for cars. ' +
+                    'Upon entering the campus, drivers should present their identification to the main gate security guard' +
+                    ' and obtain a parking permit. The parking fee is NT$20 per hour.',
+            },
+            motor: {
+                title: 'Motorcycle',
+                description:
+                    'Motorcycles are not allowed to enter Academia Sinica. There are free motorcycle parking lots (not' +
+                    ' responsible for safekeeping) for staff and visitors provided next to {0}, {1}, and {2}.',
+                descriptionLinkTitle1: 'the right side of the main gate',
+                descriptionLinkTitle2: 'the vacant lot opposite the gate',
+                descriptionLinkTitle3: 'Hu Shih Graveyard Park',
+            },
+            moreInfo:
+                '※ For detailed information regarding parking, please refer to {0}',
+            moreInfoLinkTitle: 'Academia Sinica Announcement',
+        },
+        publicTransport: {
+            title: 'From Taoyuan Intl. Airport',
+            taxi: {
+                title: 'Taxi',
+                description:
+                    'Taxis can also be taken instead of buses, costing around NT$100.' +
+                    ' Based on past experience, many people choose this option,' +
+                    ' so sharing a taxi from the MRT station is a good idea.',
+            },
+            uBike: {
+                link: {
+                    description1: 'official YouBike website',
+                    description2: 'OpenCycleMap',
+                },
+                description1:
+                    'There are several YouBike (Taipei’s bike-sharing program) rental stations near Academia Sinica.' +
+                    'For more information about the YouBike routes in the vicinity, you can visit the  {0} and {1}，' +
+                    'It is recommended to check the available docking stations on the app to return the bike. {2}' +
+                    'Cycling time from Nangang Station or Nangang Exhibition Center Station to Academia Sinica is approximately 10-15 minutes',
+            },
+        },
+        publicTransportInfo: {
+            title: 'Way of Transportation',
+            info:
+                'You can take the Kuo-Kuang Bus 1843 to travel between Nangang Exhibition' +
+                ' Center and Terminal 1 and Terminal 2 of Taoyuan International Airport.',
+            '1843infoTitle': 'Kuo-Kuang Bus 1843 Route Information:',
+            description1:
+                'Route: Taiwan Taoyuan Airport Terminal 1 ->' +
+                ' Taiwan Taoyuan Airport Terminal 2 -> MRT Gangqian Station' +
+                ' -> Ruiguang Road -> Neihu Administrative Center ->' +
+                ' MRT Nangang Exhibition Center Station (Nangang Rd.) -> Nangang Bus Station (West)',
+            description2:
+                'Bus platform location: Terminal I: B1 bus area of' +
+                ' Arrivals Hall Terminal II: Outdoor gallery at East side of 1F Arrivals Hall',
+            description3:
+                'Fare (for reference only)：Full Fare: NT$140，Half Fare: NT$75',
+            description4: 'Schedule: 09:10, 13:10, and 17:20',
+            description5: 'Estimated time: 1 hour with moderate traffic',
+        },
     },
     'zh-hant': {
         title: '會場資訊',
@@ -59,7 +131,7 @@ export default genI18nMessages({
                 description:
                     '機車禁止進入中研院院區。於其{0}及{1}、{2}旁均設有機車停車場，供員工和來賓停放不予收費（不負保管責任）。',
                 descriptionLinkTitle1: '大門右側',
-                descriptionLinkTitle2: '對面研究院路2段61巷1弄',
+                descriptionLinkTitle2: '對面空地',
                 descriptionLinkTitle3: '胡適公園',
             },
             moreInfo: '※停車相關資訊詳細說明請見{0}',
@@ -81,27 +153,17 @@ export default genI18nMessages({
                     '中研院週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0} 以及 {1}，建議還車前留意APP上站點可停駐數量。{2}由南港車站或南港展覽館站出發騎乘時間約 10-15 分鐘。',
             },
         },
-        driveInfo: {
-            title: '開車路線',
-            description1:
-                '桃園國際機場→國道2號(機場支線)→鶯歌系統交流道→國道3號（北二高）→南港系統交流道出口→南深路→舊庄路一段→研究院路二段→中研院大門',
-            description2: '參考路線 {0} {1}',
-            link: {
-                description1: '第一航廈-中央研究院',
-                description2: '第二航廈-中央研究院',
-            },
-        },
         publicTransportInfo: {
             title: '乘車方式',
             info: '可乘坐 國光客運 1843 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
             '1843infoTitle': '國光客運 1843 路線資訊：',
             description1:
-                '路線：南港轉運站西站(高鐵台鐵) → 捷運南港展覽館站 → 內湖行政中心 → 瑞光路 → 捷運港墘站 → 桃園機場第一航廈 → 桃園機場第二航廈',
-            description2:
                 '路線：南港轉運站西站(高鐵台鐵) →' +
                 '捷運南港展覽館站 → 內湖行政中心 → 瑞光路 → ' +
                 '捷運港墘站 → 桃園機場第一航廈 → ' +
                 '桃園機場第二航廈',
+            description2:
+                '站台位置： 第一航廈：B1 層巴士乘車區。第二航廈：1F 層巴士乘車區。',
             description3: '票價：全票 NT$140，半票 NT$75',
             description4: '時間：07:10、11:10、15:10',
             description5: '路程時間：約一小時二十分鐘',

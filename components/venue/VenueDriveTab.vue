@@ -1,5 +1,7 @@
 <template>
-    <div class="flex flex-col rounded-xl bg-primary-900 px-6 py-10">
+    <div
+        class="flex flex-col rounded-xl bg-primary-900 px-6 py-10 md:px-16 md:py-20"
+    >
         <div class="flex flex-col md:flex-row md:items-center">
             <div
                 class="flex flex-col items-center justify-center gap-2 md:flex-row md:pr-2"
@@ -31,7 +33,7 @@
             </div>
         </div>
 
-        <div class="parkingInfo pt-6">
+        <div class="parkingInfo pt-6 md:pb-10 md:pt-16">
             <div class="parkingInfo-container flex-1">
                 <h3>
                     <img class="mr-1" :src="icon.parkingPink" />

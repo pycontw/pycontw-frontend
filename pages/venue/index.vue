@@ -33,10 +33,10 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/venue/index.i18n'
-import VenueTabs from '../../components/venue/VenueTabs.vue'
-import VenueTab from '../../components/venue/VenueTab.vue'
-import VenuePublicTransporterTab from '../../components/venue/VenuePublicTransporterTab.vue'
-import VenueDriveTab from '../../components/venue/VenueDriveTab.vue'
+import VenueTabs from '@/components/venue/VenueTabs.vue'
+import VenueTab from '@/components/venue/VenueTab.vue'
+import VenuePublicTransporterTab from '@/components/venue/VenuePublicTransporterTab.vue'
+import VenueDriveTab from '@/components/venue/VenueDriveTab.vue'
 
 export default {
     i18n,
