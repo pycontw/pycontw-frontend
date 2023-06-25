@@ -12,14 +12,28 @@
                 </span>
             </div>
             <div class="md:flex md:flex-1 md:justify-center">
-                <ol class="ml-[20px] list-decimal pt-6 md:pt-0">
-                    <li
-                        v-for="carInstruction in carInstructions"
-                        :key="carInstruction"
+                <div class="md:flex md:flex-col">
+                    <i18n
+                        path="carInstructions.description"
+                        tag="span"
+                        class="md:my-2"
                     >
-                        {{ carInstruction }}
-                    </li>
-                </ol>
+                        <a
+                            href="https://goo.gl/maps/HfVQkZULCWNs4tfz6"
+                            class="text-pink-500 underline"
+                            target="_blank"
+                            >{{ $t('carInstructions.destination') }}</a
+                        >
+                    </i18n>
+                    <ol class="ml-[20px] list-decimal pt-6 md:pt-0">
+                        <li
+                            v-for="carInstruction in carInstructions"
+                            :key="carInstruction"
+                        >
+                            {{ carInstruction }}
+                        </li>
+                    </ol>
+                </div>
             </div>
 
             <img class="max-h-60 py-5 md:hidden" :src="icon.venueDestination" />
@@ -60,19 +74,19 @@
                 </div>
                 <i18n path="parkingInfo.motor.description" tag="p">
                     <a
-                        href="/"
+                        href="https://goo.gl/maps/DnFQvhu8QiCvRgYE7"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('parkingInfo.motor.descriptionLinkTitle1') }}</a
                     >
                     <a
-                        href="/"
+                        href="https://goo.gl/maps/BaJw3ufc4rfqz5wh8"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('parkingInfo.motor.descriptionLinkTitle2') }}</a
                     >
                     <a
-                        href="/"
+                        href="https://goo.gl/maps/EZ4RDMZTPYwFxAvh9"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('parkingInfo.motor.descriptionLinkTitle3') }}</a
@@ -81,7 +95,7 @@
 
                 <i18n path="parkingInfo.moreInfo" tag="p">
                     <a
-                        href="/"
+                        href="https://dga.sinica.edu.tw/posts/78705"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('parkingInfo.moreInfoLinkTitle') }}</a

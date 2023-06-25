@@ -23,13 +23,13 @@
                 </div>
                 <i18n path="publicTransport.uBike.description1" tag="p">
                     <a
-                        href="/"
+                        href="https://www.youbike.com.tw/region/taipei/stations/"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description1') }}</a
                     >
                     <a
-                        href="/"
+                        href="https://www.opencyclemap.org/?zoom=16&lat=25.04974&lon=121.61213&layers=B000"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description2') }}</a

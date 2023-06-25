@@ -23,6 +23,8 @@ export default genI18nMessages({
         carInstructions: {
             title: 'Driving',
             footerTitle: 'Parking',
+            description: 'Navigate to {0},',
+            destination: 'Academia Sinica',
             description1:
                 'Exiting the Donghu Interchange on the Sun Yat-sen Freeway, pass the Nanhu Lake Bridge, and then proceed along Academia Rd.',
             description2:
@@ -113,6 +115,8 @@ export default genI18nMessages({
         carInstructions: {
             title: '開車',
             footerTitle: '停車',
+            description: '導航至{0}：',
+            destination: '中央研究院',
             description1:
                 '中山高速公路東湖交流道下，過南湖大橋後，接研究院路。',
             description2:
@@ -134,7 +138,7 @@ export default genI18nMessages({
                 descriptionLinkTitle2: '對面空地',
                 descriptionLinkTitle3: '胡適公園',
             },
-            moreInfo: '※停車相關資訊詳細說明請見{0}',
+            moreInfo: '※ 停車相關資訊詳細說明請見{0}',
             moreInfoLinkTitle: '中研院公告',
         },
         publicTransport: {
@@ -158,10 +162,11 @@ export default genI18nMessages({
             info: '可乘坐 國光客運 1843 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
             '1843infoTitle': '國光客運 1843 路線資訊：',
             description1:
-                '路線：南港轉運站西站(高鐵台鐵) →' +
-                '捷運南港展覽館站 → 內湖行政中心 → 瑞光路 → ' +
-                '捷運港墘站 → 桃園機場第一航廈 → ' +
-                '桃園機場第二航廈',
+                '路線：桃園機場第一航廈 → ' +
+                '桃園機場第二航廈 → ' +
+                '捷運港墘站→瑞光路 → ' +
+                '內湖行政中心→捷運南港展覽館站 → ' +
+                '南港轉運站西站（高鐵台鐵）',
             description2:
                 '站台位置： 第一航廈：B1 層巴士乘車區。第二航廈：1F 層巴士乘車區。',
             description3: '票價：全票 NT$140，半票 NT$75',
