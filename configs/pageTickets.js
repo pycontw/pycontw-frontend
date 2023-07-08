@@ -61,6 +61,8 @@ export const ticketInfoConfig = [
         featuresI18nKey: [
             'earlyStageDiscount',
             'earlyStageTShirt',
+            'pyductsEarlyStage',
+            'pyductsRegularStage',
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
@@ -73,10 +75,11 @@ export const ticketInfoConfig = [
         image: require('~/static/img/registration/tickets/regular.svg'),
         featuresI18nKey: [
             'disabilitiesOnly',
+            'pyductsRegularStage',
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
-        statusI18nKey: ticketSellingStatus.COMING_SOON,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixIndividual2023,
     },
     {
@@ -99,6 +102,8 @@ export const ticketInfoConfig = [
         featuresI18nKey: [
             'reimbursementReceipt',
             'earlyStageTShirt',
+            'pyductsEarlyStage',
+            'pyductsRegularStage',
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
@@ -113,6 +118,8 @@ export const ticketInfoConfig = [
             'reimbursementReceipt',
             'groupBuyDiscount',
             'earlyStageTShirt',
+            'pyductsEarlyStage',
+            'pyductsRegularStage',
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
