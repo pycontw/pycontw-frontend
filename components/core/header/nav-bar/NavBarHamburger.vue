@@ -74,13 +74,13 @@
                 :expanding="expandingItem === 'registration'"
                 @click.native="toggleAccordion('registration')"
             ></nav-bar-item-accordion>
-            <locale-link
+            <nav-bar-item-accordion
                 v-if="showVenuePage"
-                class="core-navBarHamburgerSlideInMenu__item"
-                to="/venue"
-                customized
-                >{{ $t('venue') }}</locale-link
-            >
+                :label="$t('venue')"
+                :items="venueItems"
+                :expanding="expandingItem === 'venue'"
+                @click.native="toggleAccordion('venue')"
+            ></nav-bar-item-accordion>
             <ext-link
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="proposalSystemUrl"
@@ -138,6 +138,12 @@ export default {
             return this.generateI18nItems(
                 navBarItems.registration,
                 this.$store.state.configs.registrationHideItems,
+            )
+        },
+        venueItems() {
+            return this.generateI18nItems(
+                navBarItems.venue,
+                this.$store.state.configs.venueHideItems,
             )
         },
         proposalSystemUrl() {

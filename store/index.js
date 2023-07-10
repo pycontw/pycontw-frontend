@@ -27,6 +27,7 @@ export const state = () => ({
         eventsHideItems: ['sprints', 'openSpaces'], // ['sprints', 'openSpaces', 'jobs']
         conferenceHideItems: [], // ['keynotes', 'talks', 'tutorials', 'youngInspirers']
         registrationHideItems: [], // ['tickets', 'financialAid']
+        venueHideItems: [], // ['venueInfo', 'accommodation']
     },
 })
 

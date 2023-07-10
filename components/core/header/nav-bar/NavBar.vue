@@ -56,14 +56,13 @@
             :class="getPageClassesByPath('registration')"
         >
         </nav-bar-item-dropdown>
-        <locale-link
+        <nav-bar-item-dropdown
             v-if="showVenuePage"
-            to="/venue"
-            :class="getPageClassesByPath('venue', true)"
-            customized
+            :label="$t('venue')"
+            :items="venueItems"
+            :class="getPageClassesByPath('venue')"
         >
-            {{ $t('venue') }}
-        </locale-link>
+        </nav-bar-item-dropdown>
         <ext-link
             :href="proposalSystemUrl"
             :class="getPageClassesByPath('proposalSystemUrl', true)"
@@ -113,6 +112,12 @@ export default {
             return this.generateI18nItems(
                 navBarItems.registration,
                 this.$store.state.configs.registrationHideItems,
+            )
+        },
+        venueItems() {
+            return this.generateI18nItems(
+                navBarItems.venue,
+                this.$store.state.configs.venueHideItems,
             )
         },
         proposalSystemUrl() {
