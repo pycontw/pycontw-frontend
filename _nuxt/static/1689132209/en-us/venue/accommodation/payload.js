@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en-us/venue/accommodation", {data:[{}],fetch:{},mutations:[]});
