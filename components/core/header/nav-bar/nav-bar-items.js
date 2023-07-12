@@ -27,4 +27,8 @@ export default Object.freeze({
         { i18nKey: 'tickets', value: '/registration/tickets' },
         { i18nKey: 'financialAid', value: '/registration/financial-aid' },
     ],
+    venue: [
+        { i18nKey: 'venueInfo', value: '/venue' },
+        { i18nKey: 'accommodation', value: '/venue/accommodation' },
+    ],
 })
