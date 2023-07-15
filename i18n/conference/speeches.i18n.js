@@ -5,29 +5,21 @@ export default genI18nMessages({
         talks: {
             title: 'Talks',
             intro:
-                'PyCon APAC 2022 has held more than 50 talks, speakers from Taiwan and around the world ' +
-                'will share their insights on Python in these talks. This year, the recordings of the ' +
-                'conference talks will be available online before the event. The talks will be ranging from ' +
-                '15-minutes, 30-minutes, or up to 45-minutes long, with different topics and different levels. ' +
-                'We recommend you set up a plan and watch the recordings you are interested in beforehand. ' +
-                'In this case, you can have a deeper conversation with the speakers in the Q & A section ' +
-                'during the conference days. Though we have to remind you that, due to certain circumstances, ' +
-                'the agenda might have some adjustments before the event. Please check this page regularly ' +
-                'for the updates. Hope to see you soon!',
+                'The two conference days are packed with talks about Python by speakers' +
+                ' from Taiwan and around the world. The talks will be either 15-, 30-,' +
+                ' or 45-minute long. Three tracks of talks will be delivered simultaneously,' +
+                ' all with different topics and difficulties. We suggest you to make a schedule' +
+                ' beforehand, and choose what you want ot listen based on your interests.' +
+                ' Many people take notes on the program schedule before the meeting so they don’t ' +
+                'run to wrong places.',
             categoryFilter: 'Category',
         },
         tutorials: {
             title: 'Tutorials',
             intro:
-                'Tutorials are concurrent sessions with the main conference. ' +
-                'The tutorials this year will be held virtually because of the pandemic. ' +
-                'The recordings of the tutorials will be released beforehand. ' +
-                'On the days of the conference, there will also be a 1.5-hour ' +
-                'guidance session where the tutors will go through topics with the participants. ' +
-                'We recommend that you watch the tutorial recordings in advance, ' +
-                'so that you can get started more quickly. However, we must remind you that, ' +
-                'due to certain circumstances, the schedule may change slightly before the event. ' +
-                'Please check this page regularly for the updates.',
+                'Tutorials are events held as part of the main conference.' +
+                ' They are 1.5 hours events held to help participants better understand talks during the conference,' +
+                ' or get their hands on more Python applications.',
         },
         related: {
             title: 'Related Speeches',
@@ -90,22 +82,18 @@ export default genI18nMessages({
         talks: {
             title: '一般演講',
             intro:
-                'PyCon APAC 2022 有多達 50 篇的演講。來自台灣各地與全球的講者' +
-                '將分享他們在 Python 相關的發現。今年的演講將在大會前預先釋出演講影片，' +
-                '並有 15、30、45 分鐘三種長度。您可以配合各個演講的難易度與類型，' +
-                '選擇自己有興趣的主題觀看演講。我們建議您在大會前先行觀看影片，' +
-                '如此一來在大會期間您將能夠專注與講者們進行問答或是盡情交流。' +
+                '演講為會期兩天最主要的活動，屆時將會有來自台灣各地與全球的講者分享他們在 Python 相關的發現。' +
+                '演講有 15、30、45 分鐘三種長度，每天都將有三軌議程同步進行，配合各個演講的難易度與類型，' +
+                '選擇自己有興趣的主題聆聽。許多人都會事先筆記想聽的議程，才不會跑錯地點。' +
                 '議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
             categoryFilter: '演講類別',
         },
         tutorials: {
             title: '專業課程',
             intro:
-                '專業課程（Tutorial）是大會期間的活動，只要有購票都有資格參與；' +
-                '今年的專業課程將在大會前預先釋出課程影片，大會期間仍會有' +
-                '時長 90 分鐘的專業課程時間，由講者帶著現場會眾一同實作。' +
-                '我們建議您在大會前先行觀看影片，如此一來您將能在大會當天的' +
-                '專業課程中更快上手。議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
+                '專業課程（Tutotiral）是 PyCon Taiwan 的一部分，' +
+                '只要有購票都有資格參與；專業課程的時間為 90 分鐘' +
+                '。議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
         },
         related: {
             title: '相關的演講',

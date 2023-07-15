@@ -74,10 +74,10 @@ export const actions = {
             endpoint = `${endpoint}?event_types=tutorial`
         }
         const speechList = await this.$http.$get(endpoint)
-        speechList.sort((a, b) =>
-            a.category > b.category ? 1 : b.category > a.category ? -1 : 0,
-        )
-        commit('setSpeechesData', speechList)
+        if (Array.isArray(speechList)) {
+            speechList.sort((a, b) => (a.category > b.category ? 1 : -1))
+            commit('setSpeechesData', speechList)
+        }
     },
     async $getSpeechData({ commit }, { eventType, eventId }) {
         const endpoint = `/api/events/speeches/${eventType}/${eventId}/`
