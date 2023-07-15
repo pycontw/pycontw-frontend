@@ -37,9 +37,9 @@
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import i18n from '@/i18n/conference/speeches.i18n'
 import SpeechCard from '@/components/events/SpeechCard'
-import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
     i18n,
     name: 'RelatedCardCollection',

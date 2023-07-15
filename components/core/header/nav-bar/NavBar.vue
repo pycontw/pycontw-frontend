@@ -73,10 +73,10 @@
 </template>
 
 <script>
-import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
-import { ExtLink, LocaleLink } from '@/components/core/links'
 import NavBarItemDropdown from './NavBarItemDropdown'
 import i18n from './NavBar.i18n'
+import navBarItems from '@/components/core/header/nav-bar/nav-bar-items'
+import { ExtLink, LocaleLink } from '@/components/core/links'
 
 export default {
     i18n,

@@ -35,7 +35,7 @@ export default {
             return {
                 'core-localeLink': true,
                 highlight: this.highlight,
-                'underline': this.underline,
+                underline: this.underline,
                 '--customized': this.customized,
             }
         },

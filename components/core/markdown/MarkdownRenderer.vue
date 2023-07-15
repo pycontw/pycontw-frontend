@@ -44,7 +44,11 @@ export default {
 }
 .markdown code {
     @apply rounded-md px-1 py-0.5;
-    font-family: Source Sans Pro, -apple-system, Roboto, Helvetica Neue,
+    font-family:
+        Source Sans Pro,
+        -apple-system,
+        Roboto,
+        Helvetica Neue,
         sans-serif !important;
     background-color: rgba(110, 118, 129, 0.4);
 }

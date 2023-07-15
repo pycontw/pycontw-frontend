@@ -21,9 +21,9 @@
 </template>
 
 <script>
+import i18n from './Footer.i18n'
 import { landingFooterHistoryConfig } from '@/configs/pageLanding'
 import ExtLink from '@/components/core/links/ExtLink'
-import i18n from './Footer.i18n'
 
 export default {
     i18n,

@@ -3,18 +3,21 @@ module.exports = {
     env: {
         browser: true,
         node: true,
+        'jest/globals': true,
     },
     parserOptions: {
-        parser: 'babel-eslint',
+        requireConfigFile: false,
+        parser: '@babel/eslint-parser',
     },
     extends: [
-        '@nuxtjs',
+        '@nuxtjs/eslint-config',
         'prettier',
-        'prettier/vue',
         'plugin:prettier/recommended',
         'plugin:nuxt/recommended',
     ],
-    plugins: ['prettier'],
+    plugins: ['prettier', 'jest'],
     // add your custom rules here
-    rules: {},
+    rules: {
+        'vue/multi-word-component-names': 'off',
+    },
 }
