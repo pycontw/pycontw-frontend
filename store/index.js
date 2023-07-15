@@ -74,9 +74,7 @@ export const actions = {
         }
         const speechList = await this.$http.$get(endpoint)
         if (Array.isArray(speechList)) {
-            speechList.sort((a, b) =>
-                a.category > b.category ? 1 : b.category > a.category ? -1 : 0,
-            )
+            speechList.sort((a, b) => (a.category > b.category ? 1 : -1))
             commit('setSpeechesData', speechList)
         }
     },
