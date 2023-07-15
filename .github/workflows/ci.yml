@@ -11,14 +11,13 @@ on:
             - master
 
 jobs:
-    ci:
-        runs-on: ${{ matrix.os }}
-
-        strategy:
-            matrix:
-                os: [ ubuntu-latest ]
-
+    build:
+        name: ⚙️ Build
+        runs-on: ubuntu-latest
         steps:
+            -   name: 🛑 Cancel Previous Runs
+                uses: styfle/cancel-workflow-action@0.11.0
+
             -   name: Checkout 🛎
                 uses: actions/checkout@master
 
