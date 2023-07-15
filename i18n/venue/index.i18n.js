@@ -115,7 +115,7 @@ export default genI18nMessages({
         carInstructions: {
             title: '開車',
             footerTitle: '停車',
-            description: '導航至{0}：',
+            description: '導航至{0}',
             destination: '中央研究院',
             description1:
                 '中山高速公路東湖交流道下，過南湖大橋後，接研究院路。',
@@ -127,8 +127,9 @@ export default genI18nMessages({
             title: '停車資訊',
             car: {
                 title: '汽車',
+                parkingPlace: '人文社會科學館',
                 description:
-                    '人社館地下室設有汽車停車場，車輛進入院區持證件向大門警衛換證後可駛入院區，停車費用每小時20元。',
+                    '{0} B2 設有汽車停車場，車輛進入院區持證件向大門警衛換證後可駛入院區，停車費用每小時 20 元。',
             },
             motor: {
                 title: '機車',
@@ -138,8 +139,9 @@ export default genI18nMessages({
                 descriptionLinkTitle2: '對面空地',
                 descriptionLinkTitle3: '胡適公園',
             },
-            moreInfo: '※ 停車相關資訊詳細說明請見{0}',
-            moreInfoLinkTitle: '中研院公告',
+            moreInfo: '※停車相關資訊詳細說明請見 {0}、{1} 。',
+            moreInfoLinkTitle: '中央研究院院區車輛通行停放管理施行要點',
+            moreInfoLinkTitle2: '中央研究院院區停車 Q&A ',
         },
         publicTransport: {
             title: '桃園國際機場交通資訊',
@@ -147,6 +149,11 @@ export default genI18nMessages({
                 title: '計程車',
                 description:
                     '可以搭計程車代替公車，約 NT$ 100 元。 根據過去的經驗，屆時將會有不少人採取此方式，不妨採取計程車共乘由捷運站前往。',
+            },
+            bus: {
+                title: '公車',
+                description:
+                    '搭乘 205、212、212 直、270、270 區、276、306、306 區、620、645、645 副、小 1、 小 12、小 12 區、 小 5、藍 25，並在中研院站下車，步行約 8 分鐘。',
             },
             uBike: {
                 link: {
@@ -156,22 +163,48 @@ export default genI18nMessages({
                 description1:
                     '中研院週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0} 以及 {1}，建議還車前留意APP上站點可停駐數量。{2}由南港車站或南港展覽館站出發騎乘時間約 10-15 分鐘。',
             },
+            uBikePark: {
+                parkPlace: {
+                    park1: 'YouBike 2.0：中研院人文社會科學館',
+                    park2: 'YouBike 2.0：中研院綜合體育館東側',
+                    park3: 'YouBike 2.0：研究院舊莊街口',
+                    park4: 'YouBike 2.0：中研公園',
+                    park5: 'YouBike 2.0： 胡適公園',
+                },
+                parkingInfo: {
+                    park1: '{0}',
+                    park2: '{0}',
+                    park3: '{0} — 步行約 10 分鐘',
+                    park4: '{0} — 步行約 12 分鐘',
+                    park5: '{0} — 步行約 13 分鐘',
+                },
+                title: 'Youbike 附近租賃站點',
+            },
         },
         publicTransportInfo: {
             title: '乘車方式',
-            info: '可乘坐 國光客運 1843 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
-            '1843infoTitle': '國光客運 1843 路線資訊：',
+            info: '可乘坐 {0} 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
+            '1843infoTitle': '{0} 路線資訊：',
+            publicTransport: '國光客運 1843',
             description1:
                 '路線：桃園機場第一航廈 → ' +
                 '桃園機場第二航廈 → ' +
                 '捷運港墘站→瑞光路 → ' +
                 '內湖行政中心→捷運南港展覽館站 → ' +
                 '南港轉運站西站（高鐵台鐵）',
-            description2:
-                '站台位置： 第一航廈：B1 層巴士乘車區。第二航廈：1F 層巴士乘車區。',
-            description3: '票價：全票 NT$140，半票 NT$75',
-            description4: '時間：07:10、11:10、15:10',
-            description5: '路程時間：約一小時二十分鐘',
+            description2: {
+                title: '站台位置：',
+                info1: '第一航廈：B1 層巴士乘車區。',
+                info2: '第二航廈：1F 層巴士乘車區。',
+            },
+            description3: '票價（票價僅供參考）：全票 NT$140，半票 NT$75',
+            description4: '時間：09:10、13:10、17:20，從第二航廈發車',
+            description5: '路程時間：一般交通狀況下一小時',
+            moreInfo: {
+                title: '更多詳細資訊請參考 {0} 以及 {1} 。',
+                info1: '中央研究院交通資訊',
+                info2: '桃園國際機場公共運輸交通資訊',
+            },
         },
     },
 })

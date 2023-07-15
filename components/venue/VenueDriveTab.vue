@@ -12,7 +12,7 @@
                 </span>
             </div>
             <div class="md:flex md:flex-1 md:justify-center">
-                <div class="md:flex md:flex-col">
+                <div class="pt-6 text-center md:flex md:flex-col md:pt-0">
                     <i18n
                         path="carInstructions.description"
                         tag="span"
@@ -25,14 +25,6 @@
                             >{{ $t('carInstructions.destination') }}</a
                         >
                     </i18n>
-                    <ol class="ml-[20px] list-decimal pt-6 md:pt-0">
-                        <li
-                            v-for="carInstruction in carInstructions"
-                            :key="carInstruction"
-                        >
-                            {{ carInstruction }}
-                        </li>
-                    </ol>
                 </div>
             </div>
 
@@ -46,15 +38,12 @@
                 <span> {{ $t('carInstructions.footerTitle') }} </span>
             </div>
         </div>
-
-        <div class="parkingInfo pt-6 md:pb-10 md:pt-16">
-            <div class="parkingInfo-container flex-1">
-                <h3>
-                    <img class="mr-1" :src="icon.parkingPink" />
-                    {{ $t('parkingInfo.title') }}
-                </h3>
-            </div>
-        </div>
+        <VenueDivision>
+            <h3>
+                <img class="mr-1" :src="icon.parkingPink" />
+                {{ $t('parkingInfo.title') }}
+            </h3>
+        </VenueDivision>
         <div class="md:flex md:gap-10">
             <div class="md:flex-1">
                 <div class="flex items-center pt-6 md:pb-4">
@@ -63,7 +52,15 @@
                         {{ $t('parkingInfo.car.title') }}
                     </h5>
                 </div>
-                <p>{{ $t('parkingInfo.car.description') }}</p>
+                <i18n path="parkingInfo.car.description" tag="p">
+                    <a
+                        href="https://www.google.com/maps/place/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2%E4%BA%BA%E6%96%87%E7%A4%BE%E6%9C%83%E7%A7%91%E5%AD%B8%E9%A4%A8/@25.0409679,121.6068671,17z/data=!4m7!3m6!1s0x3442ab46b3aaaaab:0x6ad0b8243ddc70ef!8m2!3d25.0409679!4d121.6113732!15sCiTkuK3lpK7noJTnqbbpmaLkurrmlofnpL7mnIPnp5HlrbjppKhaLCIq5Lit5aSuIOeglOeptiDpmaIg5Lq65paHIOekvuacgyDnp5Hlrbgg6aSokgEGc2Nob29s4AEA!16s%2Fg%2F11f50wylmj?entry=tts&shorturl=1"
+                        class="text-pink-500"
+                        target="_blank"
+                    >
+                        {{ $t('parkingInfo.car.parkingPlace') }}
+                    </a>
+                </i18n>
             </div>
             <div class="md:flex-1">
                 <div class="flex items-center pt-6 md:pb-4">
@@ -93,12 +90,18 @@
                     >
                 </i18n>
 
-                <i18n path="parkingInfo.moreInfo" tag="p">
+                <i18n class="pt-10 md:pt-0" path="parkingInfo.moreInfo" tag="p">
                     <a
                         href="https://dga.sinica.edu.tw/posts/78705"
-                        class="text-pink-500 underline"
+                        class="text-pink-500"
                         target="_blank"
                         >{{ $t('parkingInfo.moreInfoLinkTitle') }}</a
+                    >
+                    <a
+                        href="https://dga.sinica.edu.tw/pages/1442"
+                        class="text-pink-500"
+                        target="_blank"
+                        >{{ $t('parkingInfo.moreInfoLinkTitle2') }}</a
                     >
                 </i18n>
             </div>
@@ -108,10 +111,11 @@
 
 <script>
 import i18n from '@/i18n/venue/index.i18n'
-
+import VenueDivision from './VenueDivision.vue'
 export default {
     i18n,
     name: 'VenueDriveTab',
+    components: { VenueDivision },
     data() {
         return {
             icon: {
@@ -123,11 +127,6 @@ export default {
                 venueDestination: require('~/static/img/venue/venue-destination.svg'),
                 venueDestinationMd: require('~/static/img/venue/venue-destination-md.svg'),
             },
-            carInstructions: [
-                this.$t('carInstructions.description1'),
-                this.$t('carInstructions.description2'),
-                this.$t('carInstructions.description3'),
-            ],
             parkingInfo: {
                 car: '人社館地下室設有汽車停車場，車輛進入院區持證件向大門警衛換證後可駛入院區，停車費用每小時20元。',
             },
@@ -136,50 +135,4 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.parkingInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    color: #9387ff;
-    & >>> h3 {
-        padding: 0 14px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &::before {
-            position: absolute;
-            content: '';
-            left: 0;
-            border: 4px solid #9387ff;
-            display: inline-block;
-            border-radius: 50%;
-        }
-        &::after {
-            position: absolute;
-            content: '';
-            right: 0;
-            border: 4px solid #9387ff;
-            display: inline-block;
-            border-radius: 50%;
-        }
-        margin: 0;
-    }
-    &::before {
-        max-width: 336px;
-        content: '';
-        width: 100%;
-        border-top: 1px solid #9387ff;
-        display: inline-block;
-    }
-    &::after {
-        max-width: 336px;
-        width: 100%;
-        content: '';
-        border-top: 1px solid #9387ff;
-        display: inline-block;
-    }
-}
-</style>
+<style lang="postcss" scoped></style>
