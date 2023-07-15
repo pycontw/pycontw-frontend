@@ -35,7 +35,7 @@ export default {
             return {
                 'core-localeLink': true,
                 highlight: this.highlight,
-                underline: this.underline,
+                'underline': this.underline,
                 '--customized': this.customized,
             }
         },
@@ -58,10 +58,6 @@ export default {
 }
 .highlight:hover {
     @apply text-primary-500;
-}
-
-.underline {
-    @apply underline;
 }
 
 .core-localeLink:not(.highlight):not(.--customized) {
