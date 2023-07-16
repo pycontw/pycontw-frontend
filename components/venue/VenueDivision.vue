@@ -9,9 +9,6 @@
 <script>
 export default {
     name: 'VenueDivision',
-    props: {
-        index: { type: Number, default: -1 },
-    },
 }
 </script>
 
@@ -22,12 +19,14 @@ export default {
     align-items: center;
     white-space: nowrap;
     color: #9387ff;
-    & >>> h3 {
+
+    &>>>h3 {
         padding: 0 14px;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+
         &::before {
             position: absolute;
             content: '';
@@ -37,6 +36,7 @@ export default {
             display: inline-block;
             border-radius: 50%;
         }
+
         &::after {
             position: absolute;
             content: '';
@@ -46,8 +46,10 @@ export default {
             display: inline-block;
             border-radius: 50%;
         }
+
         margin: 0;
     }
+
     &::before {
         max-width: 336px;
         content: '';
@@ -55,6 +57,7 @@ export default {
         border-top: 1px solid #9387ff;
         display: inline-block;
     }
+
     &::after {
         max-width: 336px;
         width: 100%;
@@ -62,5 +65,4 @@ export default {
         border-top: 1px solid #9387ff;
         display: inline-block;
     }
-}
-</style>
+}</style>
