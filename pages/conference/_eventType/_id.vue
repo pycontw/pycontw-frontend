@@ -240,7 +240,9 @@ export default {
             }
         },
         getDateTag(beginTime) {
-            const dayOneMidnight = this.$parseDate('2022-09-03T16:00:00Z')
+            const dayOneMidnight = this.$parseDate(
+                `${this.$store.state.configs.conferenceDate}T16:00:00Z`,
+            )
             if (beginTime < dayOneMidnight) {
                 return 'day1'
             } else {

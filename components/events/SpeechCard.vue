@@ -65,10 +65,6 @@ export default {
         category: { type: String, default: '' },
         to: { type: String, default: '/' },
         shouldShow: { type: Boolean, default: true },
-        dayOneMidnight: {
-            type: Date,
-            default: () => new Date('2022-09-03T16:00:00Z'),
-        },
     },
     data() {
         return {
@@ -98,6 +94,13 @@ export default {
                 NOVICE: '#65b1b7',
             },
         }
+    },
+    computed: {
+        dayOneMidnight() {
+            return new Date(
+                `${this.$store.state.configs.conferenceDate}T16:00:00Z`,
+            )
+        },
     },
     methods: {
         getDateTag(beginTime) {
