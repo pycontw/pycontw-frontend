@@ -39,12 +39,26 @@ import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/about/staff.i18n'
 
 export default {
+    layout(context) {
+        return 'app'
+    },
+    /*
+    layout(context) {
+        return this.isAppMode ? 'app' : 'default'
+    }, */
     i18n,
     name: 'PageStaff',
     components: {
         I18nPageWrapper,
         CoreH1,
     },
+    /*
+    async fetch() {
+        const token = this.$nuxt.context.query.token
+        const store = this.$nuxt.context.store
+        await store.dispatch('$CCIPwhat?', { token })
+        this.isAppMode = ?
+    }, */
     data() {
         return {
             memberList: {
@@ -284,6 +298,7 @@ export default {
                     { name: 'JunWei Song', photo: 'program/JunWei Song.jpeg' },
                 ],
             },
+            isAppMode: false,
         }
     },
     head() {
