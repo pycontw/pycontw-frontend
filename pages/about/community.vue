@@ -128,6 +128,9 @@ export default {
     mounted() {
         this.$refs.communities.addEventListener('scroll', this.handleScroll)
     },
+    beforeDestroy() {
+        this.$refs.communities.removeEventListener('scroll', this.handleScroll)
+    },
     methods: {
         handleScroll() {
             const scrollTop = this.$refs.communities.scrollTop
