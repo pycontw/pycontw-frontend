@@ -36,8 +36,9 @@ export default genI18nMessages({
             title: 'Parking Info',
             car: {
                 title: 'Car',
+                parkingPlace: 'Humanities and Social Science Building (HSSB)',
                 description:
-                    'The underground parking lot (B2) in the Humanities and Social Science Building is available for cars. ' +
+                    'The underground parking lot (B2) in the {0} is available for cars. ' +
                     'Upon entering the campus, drivers should present their identification to the main gate security guard' +
                     ' and obtain a parking permit. The parking fee is NT$20 per hour.',
             },
@@ -63,6 +64,11 @@ export default genI18nMessages({
                     ' Based on past experience, many people choose this option,' +
                     ' so sharing a taxi from the MRT station is a good idea.',
             },
+            bus: {
+                title: 'Passenger bus',
+                description:
+                    "To reach Academia Sinica, you can take buses 205, 212, 212 直 (212 Express), 270, 270 區 (270 Shuttle), 276, 306, 306 區 (306 Shuttle), 620, 645, 645 副 (645 Sub), S1, S12, 小 12 區 (S12 Shuttle), S5, or 藍 25 (Blue 25), and get off at Academia Sinica Station. From there, it's approximately an 8-minute walk to your destination.",
+            },
             uBike: {
                 link: {
                     description1: 'official YouBike website',
@@ -74,25 +80,54 @@ export default genI18nMessages({
                     'It is recommended to check the available docking stations on the app to return the bike. {2}' +
                     'Cycling time from Nangang Station or Nangang Exhibition Center Station to Academia Sinica is approximately 10-15 minutes',
             },
+            uBikePark: {
+                parkPlace: {
+                    park1: 'YouBike 2.0： Humanities and Social Science Building',
+                    park2: 'YouBike 2.0： Academia Sinica Gymnasium (East)',
+                    park3: 'YouBike 2.0： Academia Sinica (Jiuzhuang St. Intersection)',
+                    park4: 'YouBike 2.0： Academia Park',
+                    park5: 'YouBike 2.0： Dr. Hu Shih Par',
+                },
+                parkingInfo: {
+                    park1: '{0}',
+                    park2: '{0}',
+                    park3: '{0} — Approximately a 10-minute walk',
+                    park4: '{0} — Approximately a 12-minute walk',
+                    park5: '{0} — Approximately a 13-minute walk',
+                },
+                title: 'Youbike 附近租賃站點',
+            },
         },
         publicTransportInfo: {
-            title: 'Way of Transportation',
+            title: 'Public transportation',
             info:
-                'You can take the Kuo-Kuang Bus 1843 to travel between Nangang Exhibition' +
+                'You can take the {0} to travel between Nangang Exhibition' +
                 ' Center and Terminal 1 and Terminal 2 of Taoyuan International Airport.',
-            '1843infoTitle': 'Kuo-Kuang Bus 1843 Route Information:',
+            '1843infoTitle': '{0} Route Information:',
+            publicTransport: 'Kuo-Kuang Bus 1843',
+
             description1:
                 'Route: Taiwan Taoyuan Airport Terminal 1 ->' +
                 ' Taiwan Taoyuan Airport Terminal 2 -> MRT Gangqian Station' +
                 ' -> Ruiguang Road -> Neihu Administrative Center ->' +
                 ' MRT Nangang Exhibition Center Station (Nangang Rd.) -> Nangang Bus Station (West)',
-            description2:
-                'Bus platform location: Terminal I: B1 bus area of' +
-                ' Arrivals Hall Terminal II: Outdoor gallery at East side of 1F Arrivals Hall',
-            description3:
-                'Fare (for reference only)：Full Fare: NT$140，Half Fare: NT$75',
-            description4: 'Schedule: 09:10, 13:10, and 17:20',
+            description2: {
+                title: 'Bus platform location:',
+                info1: 'Terminal I: B1 bus area of Arrivals Hall',
+                info2: 'Terminal II: Outdoor gallery at East side of 1F Arrivals Hall',
+            },
+            description3: {
+                title: 'Fare (for reference only)：',
+                info1: 'Fare: NT$140',
+                info2: 'Fare: NT$75',
+            },
+            description4: 'Schedule: 09:10, 13:10, and 17:20, From Terminal II',
             description5: 'Estimated time: 1 hour with moderate traffic',
+            moreInfo: {
+                title: 'For more information, please refer to {0} and {1} 。',
+                info1: 'the traffic information of Academia Sinica',
+                info2: 'the public transportation information of Taoyuan international Airport',
+            },
         },
     },
     'zh-hant': {
@@ -197,7 +232,11 @@ export default genI18nMessages({
                 info1: '第一航廈：B1 層巴士乘車區。',
                 info2: '第二航廈：1F 層巴士乘車區。',
             },
-            description3: '票價（票價僅供參考）：全票 NT$140，半票 NT$75',
+            description3: {
+                title: '票價（票價僅供參考）：',
+                info1: '全票 NT$140',
+                info2: '半票 NT$75',
+            },
             description4: '時間：09:10、13:10、17:20，從第二航廈發車',
             description5: '路程時間：一般交通狀況下一小時',
             moreInfo: {

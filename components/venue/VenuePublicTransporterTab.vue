@@ -136,7 +136,23 @@
                             </ul>
                         </li>
                         <li>
-                            {{ $t('publicTransportInfo.description3') }}
+                            {{ $t('publicTransportInfo.description3.title') }}
+                            <ul class="ml-[19px] list-outside list-disc">
+                                <li>
+                                    {{
+                                        $t(
+                                            'publicTransportInfo.description3.info1',
+                                        )
+                                    }}
+                                </li>
+                                <li>
+                                    {{
+                                        $t(
+                                            'publicTransportInfo.description3.info2',
+                                        )
+                                    }}
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             {{ $t('publicTransportInfo.description4') }}
@@ -202,7 +218,25 @@ export default {
                     i18nLinkPath: 'publicTransport.uBikePark.parkPlace.park5',
                 },
             ],
-            icon: {
+        }
+    },
+
+    computed: {
+        icon() {
+            if (this.$i18n.locale === 'en-us') {
+                return {
+                    carWhite: require('~/static/img/venue/car-white.svg'),
+                    busWhite: require('~/static/img/venue/bus-white.svg'),
+                    publicTransporterGuide: require('~/static/img/venue/en-us/publicTransporterGuide.svg'),
+                    publicTransporterGuideMd: require('~/static/img/venue/en-us/publicTransporterGuide-md.svg'),
+                    taxiWhite: require('~/static/img/venue/taxi-white.svg'),
+                    transporterWhite: require('~/static/img/venue/transporter-white.svg'),
+                    uBike: require('~/static/img/venue/uBike.svg'),
+                    parking: require('~/static/img/venue/parking.svg'),
+                    airplane: require('~/static/img/venue/airplane.svg'),
+                }
+            }
+            return {
                 carWhite: require('~/static/img/venue/car-white.svg'),
                 busWhite: require('~/static/img/venue/bus-white.svg'),
                 publicTransporterGuide: require('~/static/img/venue/publicTransporterGuide.svg'),
@@ -212,8 +246,8 @@ export default {
                 uBike: require('~/static/img/venue/uBike.svg'),
                 parking: require('~/static/img/venue/parking.svg'),
                 airplane: require('~/static/img/venue/airplane.svg'),
-            },
-        }
+            }
+        },
     },
 }
 </script>

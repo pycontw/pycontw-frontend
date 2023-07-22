@@ -20,7 +20,7 @@ export default {
     white-space: nowrap;
     color: #9387ff;
 
-    &>>>h3 {
+    & >>> h3 {
         padding: 0 14px;
         position: relative;
         display: flex;
@@ -65,4 +65,5 @@ export default {
         border-top: 1px solid #9387ff;
         display: inline-block;
     }
-}</style>
+}
+</style>

@@ -118,7 +118,25 @@ export default {
     components: { VenueDivision },
     data() {
         return {
-            icon: {
+            parkingInfo: {
+                car: '人社館地下室設有汽車停車場，車輛進入院區持證件向大門警衛換證後可駛入院區，停車費用每小時20元。',
+            },
+        }
+    },
+    computed: {
+        icon() {
+            if (this.$i18n.locale === 'en-us') {
+                return {
+                    car: require('~/static/img/venue/car.svg'),
+                    carWhite: require('~/static/img/venue/car-white.svg'),
+                    motorWhite: require('~/static/img/venue/motor-white.svg'),
+                    parking: require('~/static/img/venue/parking.svg'),
+                    parkingPink: require('~/static/img/venue/parking-pink.svg'),
+                    venueDestination: require('~/static/img/venue/en-us/venue-destination.svg'),
+                    venueDestinationMd: require('~/static/img/venue/en-us/venue-destination-md.svg'),
+                }
+            }
+            return {
                 car: require('~/static/img/venue/car.svg'),
                 carWhite: require('~/static/img/venue/car-white.svg'),
                 motorWhite: require('~/static/img/venue/motor-white.svg'),
@@ -126,11 +144,11 @@ export default {
                 parkingPink: require('~/static/img/venue/parking-pink.svg'),
                 venueDestination: require('~/static/img/venue/venue-destination.svg'),
                 venueDestinationMd: require('~/static/img/venue/venue-destination-md.svg'),
-            },
-            parkingInfo: {
-                car: '人社館地下室設有汽車停車場，車輛進入院區持證件向大門警衛換證後可駛入院區，停車費用每小時20元。',
-            },
-        }
+            }
+        },
+    },
+    mounted() {
+        console.log(this.$i18n.locale)
     },
 }
 </script>
