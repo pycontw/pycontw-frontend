@@ -29,7 +29,7 @@
                     </template>
                     <template #form>
                         <ext-link
-                            href="https://forms.gle/Htt9REPE6M7iVKZL9"
+                            href="https://forms.gle/UjpBvHmqSaULoX2s7"
                             highlight
                             >{{ $t('form') }}</ext-link
                         >
