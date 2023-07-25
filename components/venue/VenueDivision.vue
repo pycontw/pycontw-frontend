@@ -1,5 +1,7 @@
 <template>
-    <div class="venue-division overflow-hidden pt-6 md:pb-10 md:pt-16">
+    <div
+        class="venue-division flex items-center justify-center overflow-hidden whitespace-nowrap pt-6 text-primary-500 md:pb-10 md:pt-16"
+    >
         <div class="venue-division-container mx-[10px] flex-1">
             <slot />
         </div>
@@ -14,12 +16,6 @@ export default {
 
 <style lang="postcss" scoped>
 .venue-division {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    color: #9387ff;
-
     & >>> h3 {
         padding: 0 14px;
         position: relative;

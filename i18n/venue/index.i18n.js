@@ -82,11 +82,11 @@ export default genI18nMessages({
             },
             uBikePark: {
                 parkPlace: {
-                    park1: 'YouBike 2.0： Humanities and Social Science Building',
-                    park2: 'YouBike 2.0： Academia Sinica Gymnasium (East)',
-                    park3: 'YouBike 2.0： Academia Sinica (Jiuzhuang St. Intersection)',
-                    park4: 'YouBike 2.0： Academia Park',
-                    park5: 'YouBike 2.0： Dr. Hu Shih Par',
+                    park1: 'YouBike 2.0: Humanities and Social Science Building',
+                    park2: 'YouBike 2.0: Academia Sinica Gymnasium (East)',
+                    park3: 'YouBike 2.0: Academia Sinica (Jiuzhuang St. Intersection)',
+                    park4: 'YouBike 2.0: Academia Park',
+                    park5: 'YouBike 2.0: Dr. Hu Shih Par',
                 },
                 parkingInfo: {
                     park1: '{0}',

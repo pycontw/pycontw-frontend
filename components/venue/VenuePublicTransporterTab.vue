@@ -36,13 +36,13 @@
                 </div>
                 <i18n path="publicTransport.uBike.description1" tag="p">
                     <a
-                        href="https://www.youbike.com.tw/region/taipei/stations/"
+                        :href="publicTransportUBikeLink[0]"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description1') }}</a
                     >
                     <a
-                        href="https://www.opencyclemap.org/?zoom=16&lat=25.04974&lon=121.61213&layers=B000"
+                        :href="publicTransportUBikeLink[1]"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description2') }}</a
@@ -65,7 +65,7 @@
                             :href="info.link"
                             class="text-pink-500"
                             target="_blank"
-                            >{{ $t(`${info.i18nLinkPath}`) }}</a
+                            >{{ info.i18nLinkPath }}</a
                         >
                     </i18n>
                 </ul>
@@ -94,7 +94,7 @@
                         class="pb-3 md:pb-0"
                     >
                         <a
-                            href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=18430"
+                            :href="publicTransportBusLink"
                             class="text-pink-500"
                             target="_blank"
                             >{{ $t('publicTransportInfo.publicTransport') }}</a
@@ -104,7 +104,7 @@
                 <div>
                     <i18n path="publicTransportInfo.1843infoTitle">
                         <a
-                            href="https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=18430"
+                            :href="publicTransportBusLink"
                             class="text-pink-500"
                             target="_blank"
                             >{{ $t('publicTransportInfo.publicTransport') }}</a
@@ -163,13 +163,13 @@
                     </ul>
                     <i18n path="publicTransportInfo.moreInfo.title">
                         <a
-                            href="https://dga.sinica.edu.tw/pages/1349"
+                            :href="publicTransportMoreInfoLink[0]"
                             class="text-pink-500"
                             target="_blank"
                             >{{ $t('publicTransportInfo.moreInfo.info1') }}</a
                         >
                         <a
-                            href="https://www.taoyuan-airport.com/transportation?lang=ch"
+                            :href="publicTransportMoreInfoLink[1]"
                             class="text-pink-500"
                             target="_blank"
                             >{{ $t('publicTransportInfo.moreInfo.info2') }}</a
@@ -191,31 +191,51 @@ export default {
     components: { VenueDivision },
     data() {
         return {
+            publicTransportBusLink:
+                'https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=18430',
+            publicTransportUBikeLink: [
+                'https://www.youbike.com.tw/region/taipei/stations/',
+                'https://www.opencyclemap.org/?zoom=16&lat=25.04974&lon=121.61213&layers=B000',
+            ],
+            publicTransportMoreInfoLink: [
+                'https://dga.sinica.edu.tw/pages/1349',
+                'https://www.taoyuan-airport.com/transportation?lang=ch',
+            ],
             uBikeParkInfo: [
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park1',
                     link: '',
-                    i18nLinkPath: 'publicTransport.uBikePark.parkPlace.park1',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park1',
+                    ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park2',
                     link: '',
-                    i18nLinkPath: 'publicTransport.uBikePark.parkPlace.park2',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park2',
+                    ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park3',
                     link: '',
-                    i18nLinkPath: 'publicTransport.uBikePark.parkPlace.park3',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park3',
+                    ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park4',
                     link: '',
-                    i18nLinkPath: 'publicTransport.uBikePark.parkPlace.park4',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park4',
+                    ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park5',
                     link: '',
-                    i18nLinkPath: 'publicTransport.uBikePark.parkPlace.park5',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park5',
+                    ),
                 },
             ],
         }
