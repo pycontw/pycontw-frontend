@@ -15,21 +15,21 @@
                 >
                     <template #kktix>
                         <ext-link
-                            href="https://pycontw.kktix.cc/events/pyconapac2022-summersprint"
+                            href="https://pycontw.kktix.cc/events/2023-sprints"
                             highlight
                             >KKTIX</ext-link
                         >
                     </template>
                     <template #hackmd>
                         <ext-link
-                            href="https://hackmd.io/@pycontw/HkXF-Qxc9"
+                            href="https://hackmd.io/R98LEB4MSxm4AeExmxuZnA"
                             highlight
                             >HackMD</ext-link
                         >
                     </template>
                     <template #form>
                         <ext-link
-                            href="https://forms.gle/Htt9REPE6M7iVKZL9"
+                            href="https://forms.gle/UjpBvHmqSaULoX2s7"
                             highlight
                             >{{ $t('form') }}</ext-link
                         >
@@ -39,7 +39,7 @@
         </two-col-wrapper>
         <iframe
             class="hackmd"
-            src="https://hackmd.io/@pycontw/HkXF-Qxc9"
+            src="https://hackmd.io/R98LEB4MSxm4AeExmxuZnA"
         ></iframe>
     </i18n-page-wrapper>
 </template>
