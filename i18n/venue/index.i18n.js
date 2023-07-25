@@ -67,7 +67,7 @@ export default genI18nMessages({
             bus: {
                 title: 'Passenger bus',
                 description:
-                    "To reach Academia Sinica, you can take buses 205, 212, 212 直 (212 Express), 270, 270 區 (270 Shuttle), 276, 306, 306 區 (306 Shuttle), 620, 645, 645 副 (645 Sub), S1, S12, 小 12 區 (S12 Shuttle), S5, or 藍 25 (Blue 25), and get off at Academia Sinica Station. From there, it's approximately an 8-minute walk to your destination.",
+                    "To reach Academia Sinica, you can take buses 205, 212, 212 (212 Express), 270, 270 (270 Shuttle), 276, 306, 306 (306 Shuttle), 620, 645, 645 (645 Sub), S1, S12, 小 12 (S12 Shuttle), S5, or 藍 25 (Blue 25), and get off at Academia Sinica Station. From there, it's approximately an 8-minute walk to your destination.",
             },
             uBike: {
                 link: {
@@ -95,7 +95,7 @@ export default genI18nMessages({
                     park4: '{0} — Approximately a 12-minute walk',
                     park5: '{0} — Approximately a 13-minute walk',
                 },
-                title: 'Youbike 附近租賃站點',
+                title: 'Youbike Nearby rental stations',
             },
         },
         publicTransportInfo: {
