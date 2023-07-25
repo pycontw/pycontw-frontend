@@ -184,6 +184,7 @@
 <script>
 import i18n from '@/i18n/venue/index.i18n'
 import VenueDivision from './VenueDivision.vue'
+import { venuePublicTransportIconConfig } from './config/venueIconConfig'
 
 export default {
     i18n,
@@ -243,30 +244,7 @@ export default {
 
     computed: {
         icon() {
-            if (this.$i18n.locale === 'en-us') {
-                return {
-                    carWhite: require('~/static/img/venue/car-white.svg'),
-                    busWhite: require('~/static/img/venue/bus-white.svg'),
-                    publicTransporterGuide: require('~/static/img/venue/en-us/publicTransporterGuide.svg'),
-                    publicTransporterGuideMd: require('~/static/img/venue/en-us/publicTransporterGuide-md.svg'),
-                    taxiWhite: require('~/static/img/venue/taxi-white.svg'),
-                    transporterWhite: require('~/static/img/venue/transporter-white.svg'),
-                    uBike: require('~/static/img/venue/uBike.svg'),
-                    parking: require('~/static/img/venue/parking.svg'),
-                    airplane: require('~/static/img/venue/airplane.svg'),
-                }
-            }
-            return {
-                carWhite: require('~/static/img/venue/car-white.svg'),
-                busWhite: require('~/static/img/venue/bus-white.svg'),
-                publicTransporterGuide: require('~/static/img/venue/publicTransporterGuide.svg'),
-                publicTransporterGuideMd: require('~/static/img/venue/publicTransporterGuide-md.svg'),
-                taxiWhite: require('~/static/img/venue/taxi-white.svg'),
-                transporterWhite: require('~/static/img/venue/transporter-white.svg'),
-                uBike: require('~/static/img/venue/uBike.svg'),
-                parking: require('~/static/img/venue/parking.svg'),
-                airplane: require('~/static/img/venue/airplane.svg'),
-            }
+            return venuePublicTransportIconConfig[this.$i18n.locale]
         },
     },
 }

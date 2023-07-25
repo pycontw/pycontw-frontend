@@ -112,6 +112,7 @@
 <script>
 import i18n from '@/i18n/venue/index.i18n'
 import VenueDivision from './VenueDivision.vue'
+import { venueDriveIconConfig } from './config/venueIconConfig'
 export default {
     i18n,
     name: 'VenueDriveTab',
@@ -135,26 +136,7 @@ export default {
     },
     computed: {
         icon() {
-            if (this.$i18n.locale === 'en-us') {
-                return {
-                    car: require('~/static/img/venue/car.svg'),
-                    carWhite: require('~/static/img/venue/car-white.svg'),
-                    motorWhite: require('~/static/img/venue/motor-white.svg'),
-                    parking: require('~/static/img/venue/parking.svg'),
-                    parkingPink: require('~/static/img/venue/parking-pink.svg'),
-                    venueDestination: require('~/static/img/venue/en-us/venue-destination.svg'),
-                    venueDestinationMd: require('~/static/img/venue/en-us/venue-destination-md.svg'),
-                }
-            }
-            return {
-                car: require('~/static/img/venue/car.svg'),
-                carWhite: require('~/static/img/venue/car-white.svg'),
-                motorWhite: require('~/static/img/venue/motor-white.svg'),
-                parking: require('~/static/img/venue/parking.svg'),
-                parkingPink: require('~/static/img/venue/parking-pink.svg'),
-                venueDestination: require('~/static/img/venue/venue-destination.svg'),
-                venueDestinationMd: require('~/static/img/venue/venue-destination-md.svg'),
-            }
+            return venueDriveIconConfig[this.$i18n.locale]
         },
     },
 }
