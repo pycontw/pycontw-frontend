@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import { landingBulletinsConfig } from '@/configs/pageLanding'
 import BulletinCard from './BulletinCard.vue'
 import i18n from './BulletinCard.i18n'
+import { landingBulletinsConfig } from '@/configs/pageLanding'
 
 export default {
     i18n,

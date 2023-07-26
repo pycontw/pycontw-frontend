@@ -1,9 +1,6 @@
 const { generateBgWithSources } = require('./utils/tailwind.utils')
 
 module.exports = {
-    mode: 'jit',
-    purge: [],
-    darkMode: false, // or 'media' or 'class'
     theme: {
         fontFamily: {
             sans: [
@@ -59,7 +56,7 @@ module.exports = {
                 },
             },
             stroke: (theme) => theme('colors'),
-            boxShadow: (theme) => ({
+            boxShadow: () => ({
                 'pink-500': `6px 6px 0 theme('colors.pink.500')`,
             }),
             fill: (theme) => theme('colors'),

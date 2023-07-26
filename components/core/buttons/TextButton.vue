@@ -186,7 +186,8 @@ export default {
 .core-button.--bordered {
     & > a {
         @apply z-10 text-primary-100;
-        background: linear-gradient(#121023, #121023) padding-box,
+        background:
+            linear-gradient(#121023, #121023) padding-box,
             linear-gradient(
                     276.15deg,
                     #61c8a4 0.74%,
@@ -243,7 +244,8 @@ export default {
     @apply z-20 opacity-0;
     border-radius: inherit;
     content: '';
-    background: linear-gradient(#121023, #121023) padding-box,
+    background:
+        linear-gradient(#121023, #121023) padding-box,
         linear-gradient(
                 96.26deg,
                 #5fbeab 5.5%,

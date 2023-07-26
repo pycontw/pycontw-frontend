@@ -86,20 +86,8 @@ export default {
                 keepDefaultRouter: true,
             },
         ],
-    ],
-
-    // Modules (https://go.nuxtjs.dev/config-modules)
-    modules: [
-        // https://go.nuxtjs.dev/axios
-        '@nuxt/http',
-        // https://github.com/nuxt-community/gtm-module
-        '@nuxtjs/gtm',
-        // https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
-        'nuxt-facebook-pixel-module',
-        // https://i18n.nuxtjs.org/
-        'nuxt-i18n',
         [
-            'nuxt-fontawesome',
+            '@nuxtjs/fontawesome',
             {
                 component: 'fa',
                 imports: [
@@ -118,6 +106,18 @@ export default {
                 ],
             },
         ],
+    ],
+
+    // Modules (https://go.nuxtjs.dev/config-modules)
+    modules: [
+        // https://go.nuxtjs.dev/axios
+        '@nuxt/http',
+        // https://github.com/nuxt-community/gtm-module
+        '@nuxtjs/gtm',
+        // https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
+        'nuxt-facebook-pixel-module',
+        // https://i18n.nuxtjs.org/
+        '@nuxtjs/i18n',
         // https://github.com/nuxt-community/markdownit-module
         '@nuxtjs/markdownit',
         // https://sitemap.nuxtjs.org/

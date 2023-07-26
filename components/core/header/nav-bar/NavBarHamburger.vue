@@ -91,11 +91,11 @@
 </template>
 
 <script>
+import i18n from './NavBar.i18n'
+import navBarItems from './nav-bar-items'
 import IconHamburgerMenuIcon from '@/components/core/icons/IconHamburgerMenuIcon'
 import NavBarItemAccordion from '@/components/core/header/nav-bar/NavBarItemAccordion'
 import { ExtLink, LocaleLink } from '@/components/core/links'
-import i18n from './NavBar.i18n'
-import navBarItems from './nav-bar-items'
 
 export default {
     i18n,

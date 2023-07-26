@@ -60,10 +60,6 @@ export default {
     @apply text-primary-500;
 }
 
-.underline {
-    @apply underline;
-}
-
 .core-localeLink:not(.highlight):not(.--customized) {
     @apply text-pink-700;
 }

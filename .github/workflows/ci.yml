@@ -11,36 +11,40 @@ on:
             - master
 
 jobs:
-    ci:
-        runs-on: ${{ matrix.os }}
-
-        strategy:
-            matrix:
-                os: [ ubuntu-latest ]
-                node: [ 14 ]
-
+    build:
+        name: ⚙️ Build
+        runs-on: ubuntu-latest
         steps:
+            -   name: 🛑 Cancel Previous Runs
+                uses: styfle/cancel-workflow-action@0.11.0
+
             -   name: Checkout 🛎
                 uses: actions/checkout@master
 
-            -   name: Setup node env 🏗
-                uses: actions/setup-node@v2.1.2
+            -   name: ⎔ Setup node 🏗
+                uses: actions/setup-node@v3
                 with:
-                    node-version: ${{ matrix.node }}
+                    node-version-file: ".nvmrc"
+                    cache: "yarn"
+
+            -   name: Get yarn cache directory path
+                id: yarn-cache-dir-path
+                run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
             -   name: Cache node_modules 📦
-                uses: actions/cache@v2
+                uses: actions/cache@v3
+                id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
                 with:
-                    path: ~/.npm
-                    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+                    path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                    key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
                     restore-keys: |
-                        ${{ runner.os }}-node-
+                        ${{ runner.os }}-yarn-e-
 
-            -   name: Install dependencies 👨🏻‍💻
-                run: npm ci
+            -   name: Install deps 👨🏻‍💻
+                run: yarn --frozen-lockfile
 
             -   name: Run linter 👀
-                run: npm run lint
+                run: yarn lint
 
             -   name: Run tests 🧪
-                run: npm run test
+                run: yarn test
