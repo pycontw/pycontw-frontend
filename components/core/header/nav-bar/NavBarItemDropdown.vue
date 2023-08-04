@@ -1,6 +1,6 @@
 <template>
     <div
-        class="relative flex h-full items-center justify-center px-8 text-left"
+        class="relative flex h-full items-center justify-center px-5 text-left"
         @mouseenter="showMenu"
         @mouseleave="hideMenu"
     >

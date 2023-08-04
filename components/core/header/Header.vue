@@ -25,8 +25,8 @@
 import HomeIcon from './HomeIcon'
 import NavBar from './nav-bar/NavBar'
 import NavBarHamburger from './nav-bar/NavBarHamburger'
-import ScrollableNavBar from './nav-bar/ScrollableNavBar'
 import LocaleSwitch from './locale-switch/LocaleSwitch'
+import ScrollableNavBar from './nav-bar/ScrollableNavBar'
 export default {
     name: 'CoreHeader',
     components: {
@@ -47,7 +47,7 @@ export default {
 }
 
 .header__nav-bar {
-    @apply flex w-full items-center justify-between px-4;
+    @apply flex w-full items-center justify-between px-2;
     pointer-events: auto; /*enable click-through ScrollableNavBar*/
 }
 .header-container,
