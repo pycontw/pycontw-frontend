@@ -130,7 +130,7 @@ export default {
                 event_id: eventId,
                 speakers,
             } = this.value
-            if (eventType === 'keynote') {
+            if (eventType === 'keynote' && speakers[0].en_us) {
                 const keynoteSpeakerId = speakers[0].en_us
                     .replaceAll(' ', '_')
                     .replaceAll('.', '')

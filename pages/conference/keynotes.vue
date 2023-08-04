@@ -168,9 +168,11 @@ export default {
     },
     methods: {
         getKeynoteId(keynote) {
-            return keynote.speaker.name_en_us
-                .replaceAll(' ', '_')
-                .replaceAll('.', '')
+            if (keynote.speaker.name_en_us) {
+                return keynote.speaker.name_en_us
+                    .replaceAll(' ', '_')
+                    .replaceAll('.', '')
+            }
         },
         getAttributeByLocale(data, attr) {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
