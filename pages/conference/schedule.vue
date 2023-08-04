@@ -12,7 +12,7 @@
             </schedule-day-tab>
         </schedule-day-tabs>
         <schedule>
-            <schedule-rooms :date-index="selectedDayIndex">
+            <schedule-rooms class="lg:grid" :date-index="selectedDayIndex">
                 <schedule-block></schedule-block>
                 <schedule-room
                     v-for="(room, i) in rooms"
@@ -168,29 +168,7 @@ export default {
             })
         },
         makeRooms() {
-            if (this.selectedDayIndex === 0) {
-                this.rooms = [
-                    '4-r0',
-                    '4-r0-1',
-                    '4-r0-2',
-                    '5-r1',
-                    '5-r1-1',
-                    '5-r1-2',
-                    '6-r2',
-                    '6-r2-1',
-                    '1-r3',
-                ]
-            } else {
-                this.rooms = [
-                    '4-r0',
-                    '4-r0-1',
-                    '5-r1',
-                    '5-r1-1',
-                    '6-r2',
-                    '6-r2-1',
-                    '1-r3',
-                ]
-            }
+            this.rooms = ['4-r0', '5-r1', '6-r2', '1-r3']
         },
         makeTables() {
             this.tables = this.schedulesData.map((schedule) => ({
@@ -286,4 +264,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped></style>
+<style lang="postcss" scoped>
+.pageWrapper {
+    @apply md:px-24;
+}
+</style>
