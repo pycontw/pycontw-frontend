@@ -5,8 +5,10 @@
         <img class="md:hidden" :src="icon.publicTransporterGuide" />
         <img class="hidden md:block" :src="icon.publicTransporterGuideMd" />
 
-        <div class="md:flex md:gap-10">
-            <div class="md:flex md:flex-1 md:flex-col">
+        <div
+            class="publicTransporter-two-col grid grid-cols-1 md:grid-cols-2 md:gap-10"
+        >
+            <div class="md:flex md:flex-col">
                 <div class="flex items-center pb-3 pt-6">
                     <img :src="icon.taxiWhite" />
                     <h5 class="whitespace-nowrap pl-2">
@@ -17,19 +19,30 @@
                     {{ $t('publicTransport.taxi.description') }}
                 </p>
             </div>
-            <div class="md:flex md:flex-1 md:flex-col">
+            <div class="md:flex md:flex-col">
+                <div class="flex items-center pb-3 pt-6">
+                    <img :src="icon.busWhite" />
+                    <h5 class="whitespace-nowrap pl-2">
+                        {{ $t('publicTransport.bus.title') }}
+                    </h5>
+                </div>
+                <p>
+                    {{ $t('publicTransport.bus.description') }}
+                </p>
+            </div>
+            <div class="md:flex md:flex-col">
                 <div class="flex items-center pb-3 pt-6">
                     <img :src="icon.uBike" />
                 </div>
                 <i18n path="publicTransport.uBike.description1" tag="p">
                     <a
-                        href="https://www.youbike.com.tw/region/taipei/stations/"
+                        :href="publicTransportUBikeLink[0]"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description1') }}</a
                     >
                     <a
-                        href="https://www.opencyclemap.org/?zoom=16&lat=25.04974&lon=121.61213&layers=B000"
+                        :href="publicTransportUBikeLink[1]"
                         class="text-pink-500 underline"
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description2') }}</a
@@ -37,45 +50,131 @@
                     <br />
                 </i18n>
             </div>
-        </div>
-
-        <div class="publicTransporter-trafficInfo pt-6 md:pb-10 md:pt-16">
-            <div class="publicTransporter-trafficInfo-container flex-1">
-                <h3>
-                    <img class="mr-1" :src="icon.airplane" />
-                    {{ $t('publicTransport.title') }}
-                </h3>
+            <div class="md:flex md:flex-col">
+                <div class="flex items-center pb-3 pt-6">
+                    {{ $t('publicTransport.uBikePark.title') }}
+                </div>
+                <ul class="ml-[19px] list-outside list-disc pb-3 md:pb-0">
+                    <i18n
+                        v-for="info in uBikeParkInfo"
+                        :key="info.i18nPath"
+                        :path="info.i18nPath"
+                        tag="li"
+                    >
+                        <a
+                            :href="info.link"
+                            class="text-pink-500"
+                            target="_blank"
+                            >{{ info.i18nLinkPath }}</a
+                        >
+                    </i18n>
+                </ul>
             </div>
         </div>
-        <div class="md:flex md:gap-10">
-            <div>
-                <div class="flex items-center pb-3 pt-6 md:pb-4">
-                    <img :src="icon.transporterWhite" />
-                    <h5 class="pl-2">
-                        {{ $t('publicTransportInfo.title') }}
-                    </h5>
-                </div>
-                <p>
-                    {{ $t('publicTransportInfo.info') }}
-                </p>
+
+        <VenueDivision>
+            <h3>
+                <img class="mr-1" :src="icon.airplane" />
+                {{ $t('publicTransport.title') }}
+            </h3>
+        </VenueDivision>
+
+        <div>
+            <div class="flex items-center pb-3 pt-6 md:pb-4">
+                <img :src="icon.transporterWhite" />
+                <h5 class="pl-2">
+                    {{ $t('publicTransportInfo.title') }}
+                </h5>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
                 <div>
-                    <span>
-                        {{ $t('publicTransportInfo.1843infoTitle') }}
-                    </span>
-                    <ul class="ml-[19px] list-outside list-disc">
+                    <i18n
+                        path="publicTransportInfo.info"
+                        tag="p"
+                        class="pb-3 md:pb-0"
+                    >
+                        <a
+                            :href="publicTransportBusLink"
+                            class="text-pink-500"
+                            target="_blank"
+                            >{{ $t('publicTransportInfo.publicTransport') }}</a
+                        >
+                    </i18n>
+                </div>
+                <div>
+                    <i18n path="publicTransportInfo.1843infoTitle">
+                        <a
+                            :href="publicTransportBusLink"
+                            class="text-pink-500"
+                            target="_blank"
+                            >{{ $t('publicTransportInfo.publicTransport') }}</a
+                        >
+                    </i18n>
+
+                    <ul class="ml-[19px] list-outside list-disc pb-3 md:pb-0">
                         <li>
                             {{ $t('publicTransportInfo.description1') }}
                         </li>
                         <li>
-                            {{ $t('publicTransportInfo.description2') }}
+                            {{ $t('publicTransportInfo.description2.title') }}
+
+                            <ul class="ml-[19px] list-outside list-disc">
+                                <li>
+                                    {{
+                                        $t(
+                                            'publicTransportInfo.description2.info1',
+                                        )
+                                    }}
+                                </li>
+                                <li>
+                                    {{
+                                        $t(
+                                            'publicTransportInfo.description2.info2',
+                                        )
+                                    }}
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            {{ $t('publicTransportInfo.description3') }}
+                            {{ $t('publicTransportInfo.description3.title') }}
+                            <ul class="ml-[19px] list-outside list-disc">
+                                <li>
+                                    {{
+                                        $t(
+                                            'publicTransportInfo.description3.info1',
+                                        )
+                                    }}
+                                </li>
+                                <li>
+                                    {{
+                                        $t(
+                                            'publicTransportInfo.description3.info2',
+                                        )
+                                    }}
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             {{ $t('publicTransportInfo.description4') }}
                         </li>
+                        <li>
+                            {{ $t('publicTransportInfo.description5') }}
+                        </li>
                     </ul>
+                    <i18n path="publicTransportInfo.moreInfo.title">
+                        <a
+                            :href="publicTransportMoreInfoLink[0]"
+                            class="text-pink-500"
+                            target="_blank"
+                            >{{ $t('publicTransportInfo.moreInfo.info1') }}</a
+                        >
+                        <a
+                            :href="publicTransportMoreInfoLink[1]"
+                            class="text-pink-500"
+                            target="_blank"
+                            >{{ $t('publicTransportInfo.moreInfo.info2') }}</a
+                        >
+                    </i18n>
                 </div>
             </div>
         </div>
@@ -84,23 +183,69 @@
 
 <script>
 import i18n from '@/i18n/venue/index.i18n'
+import VenueDivision from './VenueDivision.vue'
+import { venuePublicTransportIconConfig } from './config/venueIconConfig'
 
 export default {
     i18n,
     name: 'VenuePublicTransporterTab',
+    components: { VenueDivision },
     data() {
         return {
-            icon: {
-                carWhite: require('~/static/img/venue/car-white.svg'),
-                publicTransporterGuide: require('~/static/img/venue/publicTransporterGuide.svg'),
-                publicTransporterGuideMd: require('~/static/img/venue/publicTransporterGuide-md.svg'),
-                taxiWhite: require('~/static/img/venue/taxi-white.svg'),
-                transporterWhite: require('~/static/img/venue/transporter-white.svg'),
-                uBike: require('~/static/img/venue/uBike.svg'),
-                parking: require('~/static/img/venue/parking.svg'),
-                airplane: require('~/static/img/venue/airplane.svg'),
-            },
+            publicTransportBusLink:
+                'https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=18430',
+            publicTransportUBikeLink: [
+                'https://www.youbike.com.tw/region/taipei/stations/',
+                'https://www.opencyclemap.org/?zoom=16&lat=25.04974&lon=121.61213&layers=B000',
+            ],
+            publicTransportMoreInfoLink: [
+                'https://dga.sinica.edu.tw/pages/1349',
+                'https://www.taoyuan-airport.com/transportation?lang=ch',
+            ],
+            uBikeParkInfo: [
+                {
+                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park1',
+                    link: '',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park1',
+                    ),
+                },
+                {
+                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park2',
+                    link: '',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park2',
+                    ),
+                },
+                {
+                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park3',
+                    link: '',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park3',
+                    ),
+                },
+                {
+                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park4',
+                    link: '',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park4',
+                    ),
+                },
+                {
+                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park5',
+                    link: '',
+                    i18nLinkPath: this.$t(
+                        'publicTransport.uBikePark.parkPlace.park5',
+                    ),
+                },
+            ],
         }
+    },
+
+    computed: {
+        icon() {
+            return venuePublicTransportIconConfig[this.$i18n.locale]
+        },
     },
 }
 </script>
@@ -109,51 +254,6 @@ export default {
 .publicTransporter {
     & >>> ul {
         padding-left: 0px;
-    }
-}
-.publicTransporter-trafficInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    color: #9387ff;
-    & >>> h3 {
-        padding: 0 14px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &::before {
-            position: absolute;
-            content: '';
-            left: 0;
-            border: 4px solid #9387ff;
-            display: inline-block;
-            border-radius: 50%;
-        }
-        &::after {
-            position: absolute;
-            content: '';
-            right: 0;
-            border: 4px solid #9387ff;
-            display: inline-block;
-            border-radius: 50%;
-        }
-        margin: 0;
-    }
-    &::before {
-        max-width: 280px;
-        content: '';
-        width: 100%;
-        border-top: 1px solid #9387ff;
-        display: inline-block;
-    }
-    &::after {
-        max-width: 280px;
-        width: 100%;
-        content: '';
-        border-top: 1px solid #9387ff;
-        display: inline-block;
     }
 }
 </style>
