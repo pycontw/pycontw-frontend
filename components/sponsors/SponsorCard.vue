@@ -48,7 +48,6 @@ export default {
 .sponsorCard > img {
     @apply absolute object-contain;
     width: calc(100% - 10px);
-    border-radius: inherit;
 }
 
 .sponsorCard.-small {
@@ -58,7 +57,7 @@ export default {
 
 .sponsorCard__tag {
     @apply absolute flex h-5 w-full items-center justify-center text-[12px] font-semibold;
-    bottom: 20px;
+    bottom: 13px;
     background-color: hsla(321, 32%, 62%, 1);
     color: #ffffff;
 
