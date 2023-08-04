@@ -16,7 +16,7 @@ export const state = () => ({
         showSpeakingPage: false,
         showAboutStaffPage: false,
         showSchedulePage: false,
-        showSponsorPage: true,
+        showSponsorPage: false,
         showRegistrationPage: true,
         showEventOverviewPage: false,
         showEventsPage: true,
