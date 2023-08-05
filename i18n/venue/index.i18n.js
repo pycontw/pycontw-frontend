@@ -1,15 +1,11 @@
 import { genI18nMessages } from '~/utils/i18n.utils'
-
 export default genI18nMessages({
     'en-us': {
         title: 'Venue Information',
         og: {
             title: 'Venue Information',
             description:
-                'PyCon Taiwan 2023 will be held at the Humanities and Social Science Building, Academia Sinica' +
-                ', with a focus on the latest technology and best practices in Python. The open-source community' +
-                ' will bring high-quality speeches and workshops, providing valuable learning and networking' +
-                ' opportunities for both novice and experienced Python developers.',
+                'PyCon Taiwan 2023 will be held at the Humanities and Social Science Building, Academia Sinica, with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
             name: 'Humanities and Social Science Building, Academia Sinica',
@@ -19,6 +15,7 @@ export default genI18nMessages({
         transMode: {
             car: 'By Car',
             publicTransport: 'By Public Transport',
+            shuttleService: 'Shuttle Service',
         },
         carInstructions: {
             title: 'Driving',
@@ -38,15 +35,12 @@ export default genI18nMessages({
                 title: 'Car',
                 parkingPlace: 'Humanities and Social Science Building (HSSB)',
                 description:
-                    'The underground parking lot (B2) in the {0} is available for cars. ' +
-                    'Upon entering the campus, drivers should present their identification to the main gate security guard' +
-                    ' and obtain a parking permit. The parking fee is NT$20 per hour.',
+                    'The underground parking lot (B2) in the {0} is available for cars. Upon entering the campus, drivers should present their identification to the main gate security guard and obtain a parking permit. The parking fee is NT$20 per hour.',
             },
             motor: {
                 title: 'Motorcycle',
                 description:
-                    'Motorcycles are not allowed to enter Academia Sinica. There are free motorcycle parking lots (not' +
-                    ' responsible for safekeeping) for staff and visitors provided next to {0}, {1}, and {2}.',
+                    'Motorcycles are not allowed to enter Academia Sinica. There are free motorcycle parking lots (not responsible for safekeeping) for staff and visitors provided next to {0}, {1}, and {2}.',
                 descriptionLinkTitle1: 'the right side of the main gate',
                 descriptionLinkTitle2: 'the vacant lot opposite the gate',
                 descriptionLinkTitle3: 'Hu Shih Graveyard Park',
@@ -60,9 +54,7 @@ export default genI18nMessages({
             taxi: {
                 title: 'Taxi',
                 description:
-                    'Taxis can also be taken instead of buses, costing around NT$100.' +
-                    ' Based on past experience, many people choose this option,' +
-                    ' so sharing a taxi from the MRT station is a good idea.',
+                    'Taxis can also be taken instead of buses, costing around NT$100. Based on past experience, many people choose this option, so sharing a taxi from the MRT station is a good idea.',
             },
             bus: {
                 title: 'Passenger bus',
@@ -75,10 +67,7 @@ export default genI18nMessages({
                     description2: 'OpenCycleMap',
                 },
                 description1:
-                    'There are several YouBike (Taipei’s bike-sharing program) rental stations near Academia Sinica.' +
-                    'For more information about the YouBike routes in the vicinity, you can visit the  {0} and {1}，' +
-                    'It is recommended to check the available docking stations on the app to return the bike. {2}' +
-                    'Cycling time from Nangang Station or Nangang Exhibition Center Station to Academia Sinica is approximately 10-15 minutes',
+                    'There are several YouBike (Taipei’s bike-sharing program) rental stations near Academia Sinica.For more information about the YouBike routes in the vicinity, you can visit the  {0} and {1}，It is recommended to check the available docking stations on the app to return the bike. {2}Cycling time from Nangang Station or Nangang Exhibition Center Station to Academia Sinica is approximately 10-15 minutes',
             },
             uBikePark: {
                 parkPlace: {
@@ -100,17 +89,11 @@ export default genI18nMessages({
         },
         publicTransportInfo: {
             title: 'Public transportation',
-            info:
-                'You can take the {0} to travel between Nangang Exhibition' +
-                ' Center and Terminal 1 and Terminal 2 of Taoyuan International Airport.',
+            info: 'You can take the {0} to travel between Nangang Exhibition Center and Terminal 1 and Terminal 2 of Taoyuan International Airport.',
             '1843infoTitle': '{0} Route Information:',
             publicTransport: 'Kuo-Kuang Bus 1843',
-
             description1:
-                'Route: Taiwan Taoyuan Airport Terminal 1 ->' +
-                ' Taiwan Taoyuan Airport Terminal 2 -> MRT Gangqian Station' +
-                ' -> Ruiguang Road -> Neihu Administrative Center ->' +
-                ' MRT Nangang Exhibition Center Station (Nangang Rd.) -> Nangang Bus Station (West)',
+                'Route: Taiwan Taoyuan Airport Terminal 1 -> Taiwan Taoyuan Airport Terminal 2 -> MRT Gangqian Station -> Ruiguang Road -> Neihu Administrative Center -> MRT Nangang Exhibition Center Station (Nangang Rd.) -> Nangang Bus Station (West)',
             description2: {
                 title: 'Bus platform location:',
                 info1: 'Terminal I: B1 bus area of Arrivals Hall',
@@ -129,15 +112,32 @@ export default genI18nMessages({
                 info2: 'the public transportation information of Taoyuan international Airport',
             },
         },
+        shuttleService: {
+            shuttleTime: {
+                day2: {
+                    to: 'Return | HSSB → Nangang18:00–19:00 (the last bus at 18:40)',
+                    from: 'Departure | Nangang → HSSB08:30–09:30 (the last bus at 09:10)',
+                    title: '2023-09-03 (Day 2)',
+                },
+                title: 'Schedule',
+                day1: {
+                    title: '2023-09-02 (Day 1)',
+                    from: 'Departure | Nangang → HSSB09:15–10:15 (the last bus at 10:00)',
+                    to: 'Return | HSSB → Nangang18:00–21:00 (the last bus at 20:40)',
+                },
+            },
+            title: 'Shuttle Service',
+            description:
+                'Shuttle buses will be provided between {0} and HSSB during the two-day event. Attendees are welcome to use this service.',
+            descriptionLink: 'Nangang Station (BL22, Exit 1)',
+        },
     },
     'zh-hant': {
         title: '會場資訊',
         og: {
             title: '會場資訊',
             description:
-                'PyCon Taiwan 2023 將在中央研究院人文社會科學館舉辦，聚焦於 Python 的最新技術和最佳實踐' +
-                '，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，' +
-                '都能在這裡找到有價值的學習和交流機會。',
+                'PyCon Taiwan 2023 將在中央研究院人文社會科學館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
             name: '中央研究院\n人文社會科學館',
@@ -146,6 +146,7 @@ export default genI18nMessages({
         transMode: {
             car: '自行開車',
             publicTransport: '大眾運輸工具',
+            shuttleService: '大會接駁車',
         },
         carInstructions: {
             title: '開車',
@@ -222,11 +223,7 @@ export default genI18nMessages({
             '1843infoTitle': '{0} 路線資訊：',
             publicTransport: '國光客運 1843',
             description1:
-                '路線：桃園機場第一航廈 → ' +
-                '桃園機場第二航廈 → ' +
-                '捷運港墘站→瑞光路 → ' +
-                '內湖行政中心→捷運南港展覽館站 → ' +
-                '南港轉運站西站（高鐵台鐵）',
+                '路線：桃園機場第一航廈 → 桃園機場第二航廈 → 捷運港墘站→瑞光路 → 內湖行政中心→捷運南港展覽館站 → 南港轉運站西站（高鐵台鐵）',
             description2: {
                 title: '站台位置：',
                 info1: '第一航廈：B1 層巴士乘車區。',
@@ -243,6 +240,25 @@ export default genI18nMessages({
                 title: '更多詳細資訊請參考 {0} 以及 {1} 。',
                 info1: '中央研究院交通資訊',
                 info2: '桃園國際機場公共運輸交通資訊',
+            },
+        },
+        shuttleService: {
+            title: '會場接駁',
+            description:
+                '會期兩天早上有提供從 {0} 到人文社會科學館的接駁車，晚上議程結束後也有回程接駁，歡迎會眾們使用。',
+            descriptionLink: '捷運南港站一號出口',
+            shuttleTime: {
+                title: '接駁時間',
+                day1: {
+                    title: '2023-09-02 (Day 1)',
+                    from: '去程｜南港火車站 → 人文社會科學館09:15–10:15（末班 10:00）',
+                    to: '回程｜人文社會科學館 → 南港火車站18:00–21:00（末班 20:40）',
+                },
+                day2: {
+                    title: '2023-09-03 (Day 2)',
+                    from: '去程｜南港火車站 → 人文社會科學館08:30–09:30（末班 09:10',
+                    to: '回程｜人文社會科學館 → 南港火車站18:00–19:00（末班 18:40）',
+                },
             },
         },
     },

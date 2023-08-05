@@ -25,6 +25,10 @@
             <VenuePublicTransporterTab
                 v-if="selectedTransModeIndex === 1"
             ></VenuePublicTransporterTab>
+
+            <VenueShuttleServiceTab
+                v-if="selectedTransModeIndex === 2"
+            ></VenueShuttleServiceTab>
         </div>
     </i18n-page-wrapper>
 </template>
@@ -37,6 +41,7 @@ import VenueTabs from '@/components/venue/VenueTabs.vue'
 import VenueTab from '@/components/venue/VenueTab.vue'
 import VenuePublicTransporterTab from '@/components/venue/VenuePublicTransporterTab.vue'
 import VenueDriveTab from '@/components/venue/VenueDriveTab.vue'
+import VenueShuttleServiceTab from '@/components/venue/VenueShuttleServiceTab.vue'
 
 export default {
     i18n,
@@ -48,6 +53,7 @@ export default {
         VenueTab,
         VenuePublicTransporterTab,
         VenueDriveTab,
+        VenueShuttleServiceTab,
     },
     data() {
         return {
@@ -60,6 +66,10 @@ export default {
                 {
                     label: this.$t('transMode.publicTransport'),
                     value: 'publicTransport',
+                },
+                {
+                    label: this.$t('transMode.shuttleService'),
+                    value: 'shuttleService',
                 },
             ],
         }
