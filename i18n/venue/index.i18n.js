@@ -12,6 +12,9 @@ export default genI18nMessages({
             address:
                 'No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan',
         },
+        venueMap: {
+            title: 'Venue Map',
+        },
         transMode: {
             car: 'By Car',
             publicTransport: 'By Public Transport',
@@ -142,6 +145,9 @@ export default genI18nMessages({
         venueInfo: {
             name: '中央研究院\n人文社會科學館',
             address: '台北市南港區研究院路 2 段 128 號',
+        },
+        venueMap: {
+            title: '會場地圖',
         },
         transMode: {
             car: '自行開車',

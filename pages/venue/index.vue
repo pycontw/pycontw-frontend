@@ -30,6 +30,15 @@
                 v-if="selectedTransModeIndex === 2"
             ></VenueShuttleServiceTab>
         </div>
+        <client-only v-if="selectedTransModeIndex === 1">
+            <core-h1
+                class="venue-title whitespace-pre-line pt-20 text-center"
+                :title="$t('venueMap.title')"
+                center
+            >
+            </core-h1>
+            <VenueMap class=""></VenueMap>
+        </client-only>
     </i18n-page-wrapper>
 </template>
 
@@ -42,7 +51,6 @@ import VenueTab from '@/components/venue/VenueTab.vue'
 import VenuePublicTransporterTab from '@/components/venue/VenuePublicTransporterTab.vue'
 import VenueDriveTab from '@/components/venue/VenueDriveTab.vue'
 import VenueShuttleServiceTab from '@/components/venue/VenueShuttleServiceTab.vue'
-
 export default {
     i18n,
     name: 'PageVenue',
@@ -54,6 +62,7 @@ export default {
         VenuePublicTransporterTab,
         VenueDriveTab,
         VenueShuttleServiceTab,
+        VenueMap: () => import('./venueMap.vue'),
     },
     data() {
         return {

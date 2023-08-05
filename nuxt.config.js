@@ -61,11 +61,12 @@ export default {
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [
-        '~/plugins/iterator.js',
-        '~/plugins/http.js',
-        '~/plugins/strings.js',
-        '~/plugins/vue-dompurify.js',
-        '~/plugins/vue-awesome-swiper.js',
+        { src: '~/plugins/iterator.js' },
+        { src: '~/plugins/http.js' },
+        { src: '~/plugins/strings.js' },
+        { src: '~/plugins/vue-dompurify.js' },
+        { src: '~/plugins/vue-awesome-swiper.js' },
+        { src: '~/plugins/leaflet.js', mode: 'client' },
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -97,7 +98,7 @@ export default {
         // https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
         'nuxt-facebook-pixel-module',
         // https://i18n.nuxtjs.org/
-        'nuxt-i18n',
+        '@nuxtjs/i18n',
         [
             'nuxt-fontawesome',
             {
@@ -124,7 +125,6 @@ export default {
         // This module must be at the end of the modules array
         '@nuxtjs/sitemap',
     ],
-
     i18n: {
         strategy: 'prefix',
         locale: 'en-us',
@@ -132,7 +132,7 @@ export default {
         fallbackLocale: 'en-us',
         locales: ['en-us', 'zh-hant'],
         detectBrowserLanguage: {
-            onlyOnRoot: true, // recommended
+            redirectOn: 'root',
         },
     },
 
