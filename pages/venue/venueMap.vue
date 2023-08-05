@@ -15,10 +15,13 @@
             :attribution="tileProvider.attribution"
             layer-type="base"
         />
+
         <l-control-layers position="bottomright"></l-control-layers>
         <l-control-zoom position="topright"></l-control-zoom>
         <l-control position="topright" class="custom-control">
-            <p @click="centerMap">Go Back</p>
+            <p @click="centerMap">
+                <img :src="venueButtonUrl" alt="venue-center-btn" />
+            </p>
         </l-control>
         <l-marker :lat-lng="markerLatLng" :icon="icon">
             <l-tooltip
@@ -56,10 +59,12 @@ export default {
     },
     data() {
         return {
-            communityImgUrl: {},
+            venueButtonUrl: require('@/static/venue-button.png'),
+            currentCenter: [25.040997, 121.611417],
             options: {
                 zoomControl: false,
                 scrollWheelZoom: false,
+                minZoom: 10,
             },
             tileProviders: [
                 {
@@ -81,11 +86,14 @@ export default {
             url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             attribution:
                 '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-            zoom: 15,
+            zoom: 16,
             icon: icon({
-                iconUrl: '/snake-icon.png',
-                iconSize: [41, 42],
-                iconAnchor: [33, 15],
+                iconUrl: '/snake.png',
+                shadowUrl: '/snake-bg.png',
+                iconSize: [42, 42],
+                iconAnchor: [21, 21],
+                shadowSize: [45, 55],
+                shadowAnchor: [25, 30],
             }),
             center: [25.040997, 121.611417],
             markerLatLng: [25.040997, 121.611417],
