@@ -43,3 +43,18 @@ export const venuePublicTransportIconConfig = {
         airplane: require('~/static/img/venue/airplane.svg'),
     },
 }
+
+export const venueShuttleServiceIconConfig = {
+    'en-us': {
+        shuttleServiceGuide: require('~/static/img/venue/en-us/shuttleServiceGuide.svg'),
+        shuttleServiceGuideMd: require('~/static/img/venue/en-us/shuttleServiceGuide-md.svg'),
+        busAlert: require('~/static/img/venue/bus-alert.svg'),
+        moreTimeWhite: require('~/static/img/venue/more-time-white.svg'),
+    },
+    'zh-hant': {
+        shuttleServiceGuide: require('~/static/img/venue/shuttleServiceGuide.svg'),
+        shuttleServiceGuideMd: require('~/static/img/venue/shuttleServiceGuide-md.svg'),
+        busAlert: require('~/static/img/venue/bus-alert.svg'),
+        moreTimeWhite: require('~/static/img/venue/more-time-white.svg'),
+    },
+}
