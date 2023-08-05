@@ -35,7 +35,7 @@ export default genI18nMessages({
                 title: 'Car',
                 parkingPlace: 'Humanities and Social Science Building (HSSB)',
                 description:
-                    'The underground parking lot (B2) in the {0} is available for cars. Upon entering the campus, drivers should present their identification to the main gate security guard and obtain a parking permit. The parking fee is NT$20 per hour.',
+                    'Parking spaces are available within the Academia Sinica. Upon entering the campus, drivers should present their identification to the main gate security guard and obtain a parking permit.',
             },
             motor: {
                 title: 'Motorcycle',
@@ -165,7 +165,7 @@ export default genI18nMessages({
                 title: '汽車',
                 parkingPlace: '人文社會科學館',
                 description:
-                    '{0} B2 設有汽車停車場，車輛進入院區持證件向大門警衛換證後可駛入院區，停車費用每小時 20 元。',
+                    '中研院內設有停車格，車輛進入院區持證件向大門警衛換證後可駛入院區。',
             },
             motor: {
                 title: '機車',
