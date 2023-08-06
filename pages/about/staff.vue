@@ -291,7 +291,6 @@ export default {
                     { name: 'JunWei Song', photo: 'program/JunWei Song.jpeg' },
                 ],
             },
-            isAppMode: false,
         }
     },
     head() {
