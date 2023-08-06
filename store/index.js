@@ -26,7 +26,7 @@ export const state = () => ({
         showIndexSecondaryBtn: true,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
         eventsHideItems: ['openSpaces'], // ['sprints', 'openSpaces', 'jobs']
-        conferenceHideItems: ['youngInspirers'], // ['keynotes', 'talks', 'tutorials', 'youngInspirers']
+        conferenceHideItems: [], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: [], // ['venueInfo', 'accommodation']
     },
