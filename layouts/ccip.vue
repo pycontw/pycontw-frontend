@@ -1,7 +1,8 @@
 <template>
     <div class="default-layout">
         <div class="default-layout__body">
-            <Nuxt keep-alive :keep-alive-props="{ include: includeArr }" />
+            <Nuxt />
+            <core-footer />
         </div>
     </div>
 </template>
