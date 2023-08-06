@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/conference/panel-discussion", {data:[{}],fetch:{},mutations:[]});
