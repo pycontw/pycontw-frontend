@@ -7,11 +7,6 @@
                 id="sponsor"
                 class="lg:w-full; pt-12 lg:mx-auto"
             >
-                <core-h2
-                    :title="$t('sponsorList')"
-                    :is-bulleted="isBulleted"
-                    class="mx-auto justify-center md:justify-start"
-                ></core-h2>
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
                     :key="`index_sponsor_level_${i}`"
@@ -46,6 +41,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/about/sponsor.i18n'
@@ -70,10 +66,12 @@ export default {
     },
     data() {
         return {
+            isOpened: false,
             selectedSponsor: {},
         }
     },
     computed: {
+        ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
