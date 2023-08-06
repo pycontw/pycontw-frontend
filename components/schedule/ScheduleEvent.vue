@@ -130,7 +130,11 @@ export default {
                 event_id: eventId,
                 speakers,
             } = this.value
-            if (eventType === 'keynote' && speakers[0].en_us) {
+            if (
+                eventType === 'keynote' &&
+                speakers.length > 0 &&
+                speakers[0].en_us
+            ) {
                 const keynoteSpeakerId = speakers[0].en_us
                     .replaceAll(' ', '_')
                     .replaceAll('.', '')
@@ -163,8 +167,7 @@ export default {
 
 <style lang="postcss" scoped>
 .scheduleEvent__context {
-    @apply sticky top-28;
-    /* top: 75px; */
+    @apply sticky top-36;
 }
 
 .scheduleEvent__title {

@@ -21,16 +21,10 @@ export default {
 
 <style lang="postcss" scoped>
 .scheduleRooms {
+    top: 64px;
     z-index: 900;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
     grid-gap: 12px;
     background-color: rgba(18, 16, 35, 0.6);
-}
-.scheduleRooms.day1 {
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
-    width: 140%;
-}
-.scheduleRooms.day2 {
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
-    width: 110.5%;
 }
 </style>
