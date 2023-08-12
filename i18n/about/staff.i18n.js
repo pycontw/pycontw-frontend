@@ -9,14 +9,6 @@ export default genI18nMessages({
                 teamName: 'Chairperson',
             },
             {
-                key: 'vice_chairperson',
-                teamName: 'Vice Chairperson',
-            },
-            {
-                key: 'everywhere',
-                teamName: 'Everywhere',
-            },
-            {
                 key: 'program',
                 teamName: 'Program',
             },
