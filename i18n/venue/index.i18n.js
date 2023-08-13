@@ -115,15 +115,15 @@ export default genI18nMessages({
         shuttleService: {
             shuttleTime: {
                 day2: {
-                    to: 'Return | HSSB → Nangang18:00–19:00 (the last bus at 18:40)',
-                    from: 'Departure | Nangang → HSSB08:30–09:30 (the last bus at 09:10)',
+                    to: 'Return | HSSB → Nangang 17:30-18:30 (the last bus at 18:10)',
+                    from: 'Departure | Nangang → HSSB 08:30-09:30 (the last bus at 09:10)',
                     title: '2023-09-03 (Day 2)',
                 },
                 title: 'Schedule',
                 day1: {
                     title: '2023-09-02 (Day 1)',
-                    from: 'Departure | Nangang → HSSB09:15–10:15 (the last bus at 10:00)',
-                    to: 'Return | HSSB → Nangang18:00–21:00 (the last bus at 20:40)',
+                    from: 'Departure | Nangang → HSSB 09:15-10:15 (the last bus at 10:00)',
+                    to: 'Return | HSSB → Nangang 18:00-21:00 (the last bus at 20:40)',
                 },
             },
             title: 'Shuttle Service',
@@ -251,13 +251,13 @@ export default genI18nMessages({
                 title: '接駁時間',
                 day1: {
                     title: '2023-09-02 (Day 1)',
-                    from: '去程｜南港火車站 → 人文社會科學館09:15–10:15（末班 10:00）',
-                    to: '回程｜人文社會科學館 → 南港火車站18:00–21:00（末班 20:40）',
+                    from: '去程｜南港火車站 → 人文社會科學館：09:15-10:15（末班 10:00）',
+                    to: '回程｜人文社會科學館 → 南港火車站：18:00-21:00（末班 20:40）',
                 },
                 day2: {
                     title: '2023-09-03 (Day 2)',
-                    from: '去程｜南港火車站 → 人文社會科學館08:30–09:30（末班 09:10',
-                    to: '回程｜人文社會科學館 → 南港火車站18:00–19:00（末班 18:40）',
+                    from: '去程｜南港火車站 → 人文社會科學館：08:30-09:30（末班 09:10）',
+                    to: '回程｜人文社會科學館 → 南港火車站：17:30-18:30（末班 18:10）',
                 },
             },
         },
