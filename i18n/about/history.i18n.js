@@ -4,10 +4,13 @@ export default genI18nMessages({
     'en-us': {
         title: 'History of PyCon Taiwan',
         pageAbstract:
-            'This year, in addition to inheriting ten years of community communication experience, ' +
-            'we have also made some new attempts, such as Podcasts and Young Inspirers sharing sessions. ' +
-            'It is hoped that the tenth anniversary of PyCon Taiwan can promote exchanges between' +
-            'the diverse ethnic groups and ignite different sparks.',
+            'After two years of anticipation, PyCon Taiwan returns to the physical conference for the first time. ' +
+            'We have invited past chairs and significant guests to participate in video projects, ' +
+            'celebrating the 11th anniversary of PyCon Taiwan. ' +
+            'This year also marks the first time we are hosting a Panel Discussion, ' +
+            'inviting three influential speakers to explore the inspiration and impact of generative AI on Python developers. ' +
+            'Additionally, we have prepared distinctive conference merchandise. ' +
+            'We hope PyCon Taiwan will provide participants with an unforgettable learning and networking experience.',
         beforePyCon: {
             title: 'Before PyCon Taiwan',
             pyctw2008: '2008 PyCTW',
@@ -114,6 +117,18 @@ export default genI18nMessages({
                 '“Awesome Python Awesome Community” is our view of the “APAC” in PyCon APAC for 2022. ' +
                 'The Python community is not established overnight.We look forward to meeting with all the Python developers in APAC.',
         },
+        pycon2023: {
+            title: '2023 “Rebirth”',
+            content:
+                'Having overcome the challenges of the pandemic, ' +
+                'PyCon Taiwan 2023 is poised to guide attendees from the virtual world back to physical conferences. ' +
+                'Over the past two years, developers have had fewer opportunities for face-to-face interactions. ' +
+                'This year, we are returning to Academia Sinica to host an in-person annual conference and several offline activities, ' +
+                'including meetups and sprints. Allowing participants to directly engage with speakers/project hosts, ' +
+                'once again experiencing the warmth of human interaction. ' +
+                'Furthermore, we have invited past chairs and Keynote speakers to record documentaries and ' +
+                'promotional videos and host panel discussions to infuse the Python community with innovative ideas and energy.',
+        },
         terms: {
             communityTrack: 'Community Track',
         },
@@ -121,8 +136,10 @@ export default genI18nMessages({
     'zh-hant': {
         title: 'PyCon Taiwan 年會歷史',
         pageAbstract:
-            '今年除了傳承十年來的社群交流經驗，我們更做了一些新嘗試，像 Podcast 及 Young Inspirers 分享會。' +
-            '以期 PyCon Taiwan 十周年能促進不同族群間不一樣的火花。',
+            'PyCon Taiwan 經歷兩年的等待後，首次回歸實體年會舞台。' +
+            '我們邀請歷屆主席和重要嘉賓參與影片企劃，一同慶祝 PyCon Taiwan 十一週年，' +
+            '同時舉辦 Panel Discussion，邀請三位極具影響力的講者，探討生成式 AI 對於 Python 開發者的啟發與影響。' +
+            '此外，我們也準備了獨具特色的年會周邊紀念品。希望 PyCon Taiwan 能為參與者帶來難忘的學習與交流體驗。',
         beforePyCon: {
             title: 'PyCon Taiwan 之前',
             pyctw2008: '2008 PyCTW',
@@ -200,6 +217,15 @@ export default genI18nMessages({
                 '今年融入過去十年在 PyCon Taiwan 的活動，如：開放空間、Young Inspirers、PyCast 等。' +
                 '「Awesome Python Awesome Community」是我們給 PyCon APAC 2022 的註解，Python 社群能有今天的規模並非一朝一夕，' +
                 '期待與 APAC 的 Python 開發者產生火花。',
+        },
+        pycon2023: {
+            title: '2023 重生',
+            content:
+                '經歷疫情的挑戰，PyCon Taiwan 2023 將帶著會眾們從虛擬世界重返實體會議。' +
+                '過去兩年，開發者們面對面交流的機會不如以往。' +
+                '今年，我們重新回到中研院舉辦實體年會，並搭配數個線下活動 meetup 及 sprints，' +
+                '讓會眾們能夠直接與講者/專案主持人互動，再次感受人與人之間交流的溫度，' +
+                '同時也邀請歷屆主席與 Keynote 錄製紀錄片與宣傳片，並舉辦 Panel，為 Python 社群帶來更多創新想法與能量。',
         },
         terms: {
             communityTrack: '社群體驗式議程軌',
