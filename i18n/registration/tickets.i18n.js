@@ -167,6 +167,7 @@ export default genI18nMessages({
             comingSoon: 'Coming Soon',
             selling: 'On Sale Now',
             ended: 'Closed',
+            soldOut: 'Sold Out',
         },
         terms: {
             codeOfConduct: 'Code of Conduct of PyCon TW 2023',
@@ -360,6 +361,7 @@ export default genI18nMessages({
             comingSoon: '即將開賣',
             selling: '立即搶購',
             ended: '結束販售',
+            soldOut: '票種售罄',
         },
         terms: {
             codeOfConduct: 'PyCon TW 2023 行為準則',
