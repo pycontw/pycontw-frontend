@@ -3,6 +3,7 @@ export const ticketSellingStatus = {
     COMING_SOON: 'comingSoon',
     SELLING: 'selling',
     ENDED: 'ended',
+    SOLD_OUT: 'soldOut',
 }
 
 export const pageLinks = {
@@ -38,7 +39,7 @@ export const ticketInfoConfig = [
             'invitationOfSpeakerNight',
             'conferencePass',
         ],
-        statusI18nKey: ticketSellingStatus.SELLING,
+        statusI18nKey: ticketSellingStatus.SOLD_OUT,
         link: pageLinks.kktixIndividual2023,
     },
     {
