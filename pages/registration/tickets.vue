@@ -64,19 +64,19 @@
                     </template>
                 </i18n>
             </div>
-            <div class="mb-[50px] flex w-full flex-col gap-[80px]">
+            <section class="mb-[50px] flex w-full flex-col gap-20">
                 <div
                     v-for="(ticket, index) in ticketInfoConfig"
                     :key="`tickets.${index}`"
-                    class="ticketContainer flex flex-col justify-around xl:flex-row"
+                    class="flex flex-col xl:flex-row"
                 >
                     <div
-                        class="m-auto flex w-[160px] flex-col items-center justify-center xs:pb-[24px] lg:p-0"
+                        class="m-auto flex flex-1 flex-col items-center justify-center pb-6 xl:flex-grow-[2] xl:items-start xl:pb-0"
                     >
                         <img
                             :src="ticket.image"
                             :alt="ticket.title"
-                            class="mx-auto w-20 px-0 pb-[12px] pt-0"
+                            class="mx-auto w-20 px-0 pb-[12px] pt-0 xl:m-0"
                         />
                         <div
                             class="text-center font-serif font-semibold"
@@ -85,7 +85,9 @@
                             {{ $t(ticket.titleI18nKey) }}
                         </div>
                     </div>
-                    <ul class="features">
+                    <ul
+                        class="features mx-auto flex flex-1 flex-col justify-center xl:flex-grow-[4]"
+                    >
                         <li
                             v-for="(feature, i) in ticket.featuresI18nKey"
                             :key="`tickets.features.${i}`"
@@ -109,7 +111,10 @@
                             </i18n>
                         </li>
                     </ul>
-                    <div class="price">
+
+                    <div
+                        class="mx-auto pb-6 xl:flex xl:flex-1 xl:flex-grow-[2] xl:items-center xl:pb-0"
+                    >
                         <div
                             v-if="ticket.priceOnSale"
                             class="mx-1.5 my-auto text-center font-bold text-pink-700"
@@ -138,7 +143,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mx-[20px] flex items-center justify-center">
+                    <div
+                        class="sellingStatusButton flex items-center justify-center xl:justify-end"
+                    >
                         <text-button
                             :href="
                                 ticket.statusI18nKey ===
@@ -155,7 +162,7 @@
                         >
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- 購票前請留意 -->
             <div class="mb-[60px]">
@@ -603,25 +610,12 @@ li.li-mb-6 {
     margin-bottom: 6px;
 }
 
-.ticketContainer .ticketHeader {
-    @apply m-auto px-0 pb-[24px] pt-0;
-    @media (min-width: 1440px) {
-        @apply p-0;
-    }
+.features {
+    @apply xl:mb-0;
 }
-
-.ticketContainer .features {
-    @apply mx-auto flex min-w-0 flex-col justify-center px-0 pb-[24px] pt-0;
-    margin-bottom: 0 !important;
-    @media (min-width: 1440px) {
-        @apply min-w-[240px] p-0;
-    }
-}
-
-.ticketContainer .price {
-    @apply m-auto flex flex-row-reverse px-0 pb-[24px] pt-0 text-center text-[22px] xl:flex-col;
-    @media (min-width: 1440px) {
-        @apply p-0 text-[28px];
+.sellingStatusButton {
+    @media (min-width: 1480px) {
+        flex-basis: 160px;
     }
 }
 
