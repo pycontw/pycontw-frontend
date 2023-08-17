@@ -1,7 +1,7 @@
 <template>
     <locale-link
         to="/"
-        class="core-homeIcon flex items-center justify-center py-2 md:px-8"
+        class="core-homeIcon flex items-center justify-center py-2 md:px-4"
         customized
     >
         <img
@@ -35,5 +35,6 @@ export default {
 <style scoped>
 .core-homeIcon {
     @apply text-pink-700;
+    flex-shrink: 0;
 }
 </style>

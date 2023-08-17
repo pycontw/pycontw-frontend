@@ -47,6 +47,7 @@ export default {
 <style lang="postcss" scoped>
 .core-localeSwitch {
     @apply font-bold;
+    flex-shrink: 0;
 }
 .core-localeSwitch:hover {
     @apply text-pink-700;
