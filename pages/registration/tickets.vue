@@ -71,7 +71,7 @@
                     class="flex flex-col xl:flex-row"
                 >
                     <div
-                        class="m-auto flex flex-1 flex-col items-center justify-center pb-6 xl:flex-grow-[2] xl:items-start xl:pb-0"
+                        class="m-auto flex flex-1 flex-col items-center justify-center pb-6 xl:mr-2 xl:flex-grow-[2] xl:items-start xl:pb-0"
                     >
                         <img
                             :src="ticket.image"
@@ -79,7 +79,7 @@
                             class="mx-auto w-20 px-0 pb-[12px] pt-0 xl:m-0"
                         />
                         <div
-                            class="text-center font-serif font-semibold"
+                            class="font-serif font-semibold"
                             :style="ticketTitleStyle"
                         >
                             {{ $t(ticket.titleI18nKey) }}
@@ -91,7 +91,7 @@
                         <li
                             v-for="(feature, i) in ticket.featuresI18nKey"
                             :key="`tickets.features.${i}`"
-                            class="li-mt-0 li-mb-6 inline-block font-sans text-[18px]"
+                            class="li-mt-0 li-mb-6 flex gap-1 font-sans text-[18px]"
                         >
                             ✓
                             <i18n
