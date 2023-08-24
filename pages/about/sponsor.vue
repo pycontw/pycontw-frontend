@@ -51,10 +51,7 @@ import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 export default {
     layout(context) {
         const ccip = context.query.ccip // to determine if it's opass mobile app
-        if (ccip) {
-            return 'ccip'
-        }
-        return 'default'
+        return ccip ? 'ccip' : 'default'
     },
     i18n,
     name: 'PageSponsor',
