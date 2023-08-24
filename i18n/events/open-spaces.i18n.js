@@ -18,21 +18,19 @@ export default genI18nMessages({
             participate: {
                 title: 'How to participate',
                 description:
-                    'It’s pretty easy: Just show up :){br}' +
-                    'Instead of Academia Sinica, this year’s PyCon will be hosted online at Gather Town Service.{br}' +
-                    'Therefore, the Open Space has its dedicated space. ' +
+                    "It's pretty easy: Just show up :){br}" +
                     'Just find a subject that interests you, greet with the host, and enjoy!',
             },
             location: {
                 title: 'Location',
-                description: 'The open space area at gather town.',
+                description:
+                    'There will be several tables on the aisles beside R4 (4th floor) and each has a board on it as its topic. ' +
+                    'You can find your interested topic and use the memo to write down your thoughts and feedbacks. ' +
+                    'If a topic is not listed yet, just write down what you would like to talk about on a non-topic board!',
             },
             time: {
                 title: 'Time',
-                description:
-                    'Main session will be held at day 2 15:45 ~ 16:35, and its okay to be held at anytime during the conference{br}' +
-                    'There can be up to 9 Open Spaces running in parallel. ' +
-                    'There are no other conferences on day 2 (15:45 ~ 16:35) so that you can enjoy the Open Spaces well.',
+                description: 'Day 1: 12:05-17:10{br}Day 2: 12:05-17:10',
             },
             subjects: {
                 title: 'Topics',
@@ -86,18 +84,18 @@ export default genI18nMessages({
                 title: '如何參與',
                 description:
                     '很簡單：人到場就好了 :){br}' +
-                    '不同於往年舉辦在中研院，本次 PyCon TW 首次在線上 Gather Town 舉辦。' +
-                    '你只需要在 Open Space 區域找到有興趣的主題，友善的與主持人打個招呼，就可以坐下與大家一起參與了。',
+                    '地點位於中研院的人文館，你只需要找到有興趣的主題，友善的與主持人打個招呼，就可以坐下與大家一起參與了。',
             },
             location: {
                 title: '活動地點',
-                description:
-                    'Gather Town 的 Open Space 區域，總共九個開放空間同時舉行',
+                description: '中研院人文館 四樓側邊長廊 (共有兩側) 的白板區',
             },
             time: {
                 title: '活動時間',
                 description:
-                    '第二天 15:45 ~ 16:35 有獨立時段，鼓勵可優先 Host 於此時段，其他時段亦可發起，將與議程同時進行！{br}',
+                    '總計有超過四個多小時的時間可以讓會眾們盡情享受開放空間中盈滿熱情的交流和討論！{br}' +
+                    '第一天 12:05-17:10{br}' +
+                    '第二天 12:05-17:10',
             },
             subjects: {
                 title: '活動主題',
