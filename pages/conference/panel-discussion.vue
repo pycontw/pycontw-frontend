@@ -96,6 +96,13 @@
                                 >
                                     {{ $t('terms.note') }}
                                 </text-button>
+                                <text-button
+                                    :href="speech.slido_link"
+                                    :secondary="true"
+                                    class="linkButton"
+                                >
+                                    {{ $t('terms.slido') }}
+                                </text-button>
                             </div>
                         </div>
                     </div>
@@ -185,7 +192,9 @@ export default {
                             speechtime: '15:40-16:40 (GMT+8)',
                             title: this.$t('speechTitle'),
                             full_description: [this.$t('speechDescription')],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/H1PtLsmph',
+                            slido_link:
+                                'https://app.sli.do/event/eXMeazdzUYv1pv2LePFnfc',
                         },
                     ],
                 },

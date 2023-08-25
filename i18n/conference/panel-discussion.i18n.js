@@ -35,6 +35,7 @@ export default genI18nMessages({
             " Let's explore this exciting field together!",
         terms: {
             note: 'Speech Note',
+            slido: 'Slido Link',
         },
     },
     'zh-hant': {
@@ -60,6 +61,7 @@ export default genI18nMessages({
             '我們也將探討可能出現的問題與挑戰，例如倫理和數據隱私問題。讓我們一起在這個激動人心的領域探索前行吧！',
         terms: {
             note: '前往共筆',
+            slido: '前往 Slido',
         },
     },
 })
