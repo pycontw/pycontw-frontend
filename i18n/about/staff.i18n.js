@@ -9,14 +9,6 @@ export default genI18nMessages({
                 teamName: 'Chairperson',
             },
             {
-                key: 'vice_chairperson',
-                teamName: 'Vice Chairperson',
-            },
-            {
-                key: 'everywhere',
-                teamName: 'Everywhere',
-            },
-            {
                 key: 'program',
                 teamName: 'Program',
             },
@@ -88,14 +80,6 @@ export default genI18nMessages({
             {
                 key: 'chairperson',
                 teamName: '主席',
-            },
-            {
-                key: 'vice_chairperson',
-                teamName: '副主席',
-            },
-            {
-                key: 'everywhere',
-                teamName: '到處都看得到他們',
             },
             {
                 key: 'program',
