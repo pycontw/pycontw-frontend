@@ -18,10 +18,20 @@
 
         <l-control-layers position="bottomright"></l-control-layers>
         <l-control-zoom position="topright"></l-control-zoom>
-        <l-control position="topright" class="custom-control">
-            <p @click="centerMap">
-                <img :src="venueButtonUrl" alt="venue-center-btn" />
-            </p>
+        <l-control
+            position="topright"
+            class="leaflet-bar custom-control rounded-sm"
+        >
+            <button
+                class="h-[30px] w-[30px] bg-white leading-[30px]"
+                @click="centerMap"
+            >
+                <img
+                    class="m-auto"
+                    :src="venueButtonUrl"
+                    alt="venue-center-btn"
+                />
+            </button>
         </l-control>
         <l-marker :lat-lng="markerLatLng" :icon="icon">
             <l-tooltip
@@ -109,12 +119,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.custom-control {
-    cursor: pointer;
-    background: #fff;
-    padding: 0 0.5em;
-    border: 1px solid #aaa;
-    border-radius: 0.1em;
-}
-</style>
+<style scoped></style>
