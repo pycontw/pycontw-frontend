@@ -39,6 +39,10 @@ import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/about/staff.i18n'
 
 export default {
+    layout(context) {
+        const ccip = context.query.ccip // to determine if it's opass mobile app
+        return ccip ? 'ccip' : 'default'
+    },
     i18n,
     name: 'PageStaff',
     components: {
