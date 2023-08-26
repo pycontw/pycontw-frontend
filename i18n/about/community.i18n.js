@@ -45,12 +45,12 @@ export default genI18nMessages({
                 tag: 'tainan',
                 title: 'Tainan - Tainan.py',
                 description:
-                    'Joe, who moved to Tainan in 2013, founded Tainan.py. ' +
-                    'Decided to co-organize a gathering with the MOSUT community in Tainan' +
-                    ' to become "Tainan.py × MOSUT". ' +
-                    'The gathering is held once a month, usually on weekend afternoons. ' +
-                    'Tainan.py will promote local delicacies, ' +
-                    'so that everyone can enjoy the local flavors.',
+                    'In 2013, Joe founded Tainan.py in Tainan. ' +
+                    'After a pause due to the 2021 pandemic, Jesse joined in 2022, ' +
+                    'revitalizing Tainan.py and establishing a Facebook fan page. ' +
+                    'Meetings now occur twice a year, with occasional gatherings. ' +
+                    "We're actively inviting new members to join and enjoy Tainan's " +
+                    'cuisine while networking.',
             },
             {
                 tag: 'kaohsiung',
@@ -149,10 +149,9 @@ export default genI18nMessages({
                 tag: 'tainan',
                 title: '台南 - Tainan.py',
                 description:
-                    '2013 年搬到台南的 Joe 成立了 Tainan.py。' +
-                    '決定與同在台南的 MOSUT 社群合辦聚會，成為「Tainan.py × MOSUT」。' +
-                    '聚會一個月一次，時間通常會在週末下午， Tainan.py 的中場休息時間，' +
-                    '會推廣台南在地美食，讓大家邊交流邊品嘗在地風味。',
+                    '2013 年 Joe 在台南成立了 Tainan.py' +
+                    '經過 2021 年疫情的停辦，2022 年 Jesse 加入，重啟 Tainan.py，並有了 FB 粉絲專頁。' +
+                    '目前半年一次聚會，偶有不定期聚會，誠招新成員加入，來 Tainan.py 邊交流邊品嘗台南美食吧！',
             },
             {
                 tag: 'kaohsiung',

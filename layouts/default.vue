@@ -153,7 +153,8 @@ html {
 
 .default-layout__header {
     @apply fixed w-full;
-    z-index: 1000;
+    /* over leaflet z-index 1000 */
+    z-index: 1001;
     height: 52px;
 }
 

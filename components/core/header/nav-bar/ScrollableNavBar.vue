@@ -100,7 +100,7 @@ export default {
 .core-scrollableNavBar,
 .core-scrollableNavBar__scroll,
 .core-scrollableNavBar__slot {
-    @apply h-full w-full;
+    @apply h-full max-w-full;
 }
 .core-scrollableNavBar__left-arrow,
 .core-scrollableNavBar__right-arrow {

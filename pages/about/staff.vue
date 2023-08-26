@@ -39,6 +39,10 @@ import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/about/staff.i18n'
 
 export default {
+    layout(context) {
+        const ccip = context.query.ccip // to determine if it's opass mobile app
+        return ccip ? 'ccip' : 'default'
+    },
     i18n,
     name: 'PageStaff',
     components: {
@@ -97,6 +101,11 @@ export default {
                     { name: 'Tumi', photo: 'marketing/Tumi.jpg' },
                     { name: 'Anan', photo: 'design/Anan.jpg' },
                     { name: 'Weifan', photo: 'cat-smile.jpg' },
+                    { name: 'subird', photo: 'cat-smile.jpg' },
+                    { name: 'Heidi', photo: 'cat-smile.jpg' },
+                    { name: '愛德華橙', photo: 'cat-smile.jpg' },
+                    { name: 'Tumi', photo: 'marketing/Tumi.jpg' },
+                    { name: 'Anan', photo: 'design/Anan.jpg' },
                 ],
                 development_web: [
                     { name: 'Josix', photo: 'web/Josix.jpg' },
@@ -116,9 +125,9 @@ export default {
                     { name: 'Ian', photo: 'cat-smile.jpg' },
                 ],
                 development_data: [
+                    { name: 'Henry', photo: 'data/Henry.jpg' },
                     { name: 'David Jr', photo: 'data/David Jr.jpg' },
                     { name: 'Shirley', photo: 'data/Shirley.jpg' },
-                    { name: 'Henry', photo: 'data/Henry.jpg' },
                     { name: 'LY', photo: 'registration/LY.jpg' },
                     { name: 'Angus', photo: 'data/Angus_Yang.jpg' },
                     { name: 'Kuan', photo: 'registration/Kuan.jpg' },
@@ -126,9 +135,9 @@ export default {
                     { name: 'Albert', photo: 'cat-smile.jpg' },
                 ],
                 development_infra: [
+                    { name: 'Josix', photo: 'web/Josix.jpg' },
                     { name: 'LY', photo: 'registration/LY.jpg' },
                     { name: 'Sean', photo: 'infra/Sean.jpg' },
-                    { name: 'Josix', photo: 'web/Josix.jpg' },
                     { name: 'Ben', photo: 'cat-smile.jpg' },
                     { name: 'Tim', photo: 'cat-smile.jpg' },
                 ],
@@ -185,8 +194,8 @@ export default {
                     { name: 'Gobby', photo: 'marketing/Gobby.jpg' },
                 ],
                 pr: [
-                    { name: 'tai', photo: 'everywhere/tai.jpg' },
                     { name: '9ukei', photo: 'cat-smile.jpg' },
+                    { name: 'tai', photo: 'everywhere/tai.jpg' },
                     { name: 'TN Lee', photo: 'program/TN Lee.jpg' },
                     { name: 'JennyChu', photo: 'cat-smile.jpg' },
                     { name: 'Leila', photo: 'recruitment/Leila.jpg' },
@@ -197,9 +206,8 @@ export default {
                 ],
                 registration: [
                     { name: 'David Lu', photo: 'registration/David Lu.jpg' },
-                    { name: 'Leila', photo: 'recruitment/Leila.jpg' },
-                    { name: 'David Lu', photo: 'registration/David Lu.jpg' },
                     { name: 'Derick', photo: 'registration/Derick.jpg' },
+                    { name: 'Leila', photo: 'recruitment/Leila.jpg' },
                     { name: 'Li-Ying', photo: 'registration/LY.jpg' },
                     { name: '弘哲', photo: 'registration/twtrubiks.jpg' },
                     { name: 'Yucheng', photo: 'registration/yucheng.jpg' },
@@ -212,8 +220,8 @@ export default {
                     { name: 'Liam', photo: 'cat-smile.jpg' },
                 ],
                 recruitment: [
-                    { name: 'David Lu', photo: 'registration/David Lu.jpg' },
                     { name: 'Leila', photo: 'recruitment/Leila.jpg' },
+                    { name: 'David Lu', photo: 'registration/David Lu.jpg' },
                 ],
                 design: [
                     { name: 'Andy', photo: 'design/Andy.jpg' },

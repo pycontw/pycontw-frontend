@@ -19,19 +19,21 @@
         "@fortawesome/free-regular-svg-icons": "^5.15.4",
         "@fortawesome/free-solid-svg-icons": "^5.15.3",
         "@nuxt/http": "^0.6.2",
+        "@nuxtjs/i18n": "^7.3.1",
         "@nuxtjs/markdownit": "^2.0.0",
         "@nuxtjs/sitemap": "^2.4.0",
         "@tailwindcss/aspect-ratio": "^0.2.1",
         "core-js": "^3.6.5",
         "dayjs": "^1.10.6",
+        "leaflet": "^1.9.4",
         "nuxt": "^2.15.3",
         "nuxt-facebook-pixel-module": "^1.5.0",
         "nuxt-fontawesome": "^0.4.0",
-        "nuxt-i18n": "^6.18.0",
         "swiper": "^6.7.5",
         "uuid": "^8.3.2",
         "vue-awesome-swiper": "^4.1.1",
-        "vue-dompurify-html": "^2.3.0"
+        "vue-dompurify-html": "^2.3.0",
+        "vue2-leaflet": "^2.7.1"
     },
     "devDependencies": {
         "@nuxt/types": "^2.14.11",

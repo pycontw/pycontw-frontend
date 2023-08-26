@@ -182,7 +182,7 @@ export default {
                 'h-full': isLink,
                 'justify-center': isLink,
                 'items-center': isLink,
-                'px-8': isLink,
+                'px-4': isLink,
                 'py-2': isLink,
                 'bg-transparent': !isOnCurrentPath,
                 '--active': isOnCurrentPath,

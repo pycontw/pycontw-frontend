@@ -17,6 +17,10 @@ export default genI18nMessages({
                 teamName: 'Program',
             },
             {
+                key: 'pycast',
+                teamName: 'PyCast',
+            },
+            {
                 key: 'development_web',
                 teamName: 'Development (web)',
             },
@@ -69,13 +73,17 @@ export default genI18nMessages({
                 teamName: 'Photography',
             },
             {
+                key: 'pycast',
+                teamName: 'PyCast',
+            },
+            {
                 key: 'reviewer',
                 teamName: 'Review Committee',
             },
         ],
         og: {
             title: 'Staff',
-            description: 'Staff of PyCon APAC 2022',
+            description: 'Staff of PyCon Taiwan 2023',
         },
     },
     'zh-hant': {
@@ -92,6 +100,10 @@ export default genI18nMessages({
             {
                 key: 'program',
                 teamName: '議程',
+            },
+            {
+                key: 'pycast',
+                teamName: 'PyCast',
             },
             {
                 key: 'development_web',
@@ -152,7 +164,7 @@ export default genI18nMessages({
         ],
         og: {
             title: '工作人員',
-            description: 'PyCon APAC 2022 工作人員',
+            description: 'PyCon Taiwan 2023 工作人員',
         },
     },
 })
