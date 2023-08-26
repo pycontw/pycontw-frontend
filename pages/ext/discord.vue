@@ -1,5 +1,5 @@
 <template>
-    <i18n-page-wrapper class="px-8 pt-8 md:px-56">
+    <i18n-page-wrapper class="px-8 pt-8 md:px-12">
         <div>
             <div class="section">
                 <core-h1 :title="$t('title')"></core-h1>
@@ -23,7 +23,7 @@
                     </template>
                     <template #br><br /></template>
                     <template #info>
-                        <span class="category">PYCON APAC 2022</span>
+                        <span class="category">PYCON TW 2023</span>
                     </template>
                     <template #registrationDesk>
                         <span class="channel">⚠｜registration-desk</span>
@@ -76,9 +76,10 @@
                         <ul>
                             <li
                                 v-for="(channel, j) in [
-                                    '📝｜program-keynote',
-                                    '📝｜program-talk',
-                                    '📝｜program-tutorial',
+                                    '📝｜r0-track',
+                                    '📝｜r1-track',
+                                    '📝｜r2-track',
+                                    '📝｜r3-track',
                                 ]"
                                 :key="`discord_joinChannels_channels_${j}`"
                                 class="ml-6 list-disc"
@@ -91,7 +92,7 @@
                         <span class="channel">📝｜program-keynote</span>
                     </template>
                     <template #tracks>
-                        <span class="category">PYCON APAC 2022</span>
+                        <span class="category">PYCON TW 2023</span>
                     </template>
                 </i18n>
             </div>
@@ -234,14 +235,17 @@ export default {
                 'booth-game': {
                     name: '💪｜booth-game',
                 },
-                'program-keynote': {
-                    name: '📝｜program-keynote',
+                'r0-track': {
+                    name: '📝｜r0-track',
                 },
-                'program-talk': {
-                    name: '📝｜program-talk',
+                'r1-track': {
+                    name: '📝｜r1-track',
                 },
-                'program-tutorial': {
-                    name: '📝｜program-tutorial',
+                'r2-track': {
+                    name: '📝｜r2-track',
+                },
+                'r3-track': {
+                    name: '📝｜r3-track',
                 },
             },
         }
