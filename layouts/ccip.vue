@@ -2,19 +2,37 @@
     <div class="default-layout">
         <div class="default-layout__body">
             <Nuxt />
-            <core-footer />
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    components: {},
-    data() {
-        return {}
-    },
     head() {
-        return {}
+        return {
+            meta: [
+                { charset: 'utf-8' },
+                {
+                    name: 'viewport',
+                    content: 'width=device-width, initial-scale=1',
+                },
+            ],
+            link: [
+                {
+                    rel: 'preconnect',
+                    href: 'https://fonts.googleapis.com',
+                },
+                {
+                    rel: 'preconnect',
+                    href: 'https://fonts.gstatic.com',
+                    crossorigin: 'anonymous',
+                },
+                {
+                    rel: 'stylesheet',
+                    href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap',
+                },
+            ],
+        }
     },
 }
 </script>
