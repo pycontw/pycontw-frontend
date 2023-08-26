@@ -2,11 +2,7 @@
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
         <div>
-            <div
-                v-if="showIndexSponsorSection"
-                id="sponsor"
-                class="lg:w-full; pt-12 lg:mx-auto"
-            >
+            <div id="sponsor" class="lg:w-full; pt-12 lg:mx-auto">
                 <sponsor-card-collection
                     v-for="(leveledSponsors, i) in sponsorsData"
                     :key="`index_sponsor_level_${i}`"
@@ -45,21 +41,23 @@ import { mapState } from 'vuex'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/about/sponsor.i18n'
+import Modal from '@/components/core/modal/Modal'
 import SponsorCard from '@/components/sponsors/SponsorCard'
 import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 
 export default {
-    layout(context) {
-        const ccip = context.query.ccip // to determine if it's opass mobile app
-        return ccip ? 'ccip' : 'default'
-    },
     i18n,
     name: 'PageSponsor',
     components: {
         I18nPageWrapper,
         CoreH1,
+        Modal,
         SponsorCard,
         SponsorCardCollection,
+    },
+    layout(context) {
+        const ccip = context.query.ccip // to determine if it's opass mobile app
+        return ccip ? 'ccip' : 'default'
     },
     data() {
         return {
@@ -69,18 +67,6 @@ export default {
     },
     computed: {
         ...mapState(['sponsorsData']),
-        isBulleted() {
-            if (process.client) {
-                const width = window.innerWidth
-                if (width < 768) {
-                    return false
-                }
-            }
-            return true
-        },
-        showIndexSponsorSection() {
-            return this.$store.state.configs.showIndexSponsorSection
-        },
     },
     created() {
         this.$store.dispatch('$getSponsorsData')
@@ -89,6 +75,11 @@ export default {
         showModal(sponsor) {
             this.isOpened = true
             this.selectedSponsor = sponsor
+        },
+        getAttributeByLocale(data, attr) {
+            const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
+            const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`
+            return data[attributeName]
         },
     },
 }
