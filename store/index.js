@@ -14,7 +14,7 @@ export const state = () => ({
         conferenceYear: '2023',
         conferenceDate: '2023-09-02',
         showSpeakingPage: false,
-        showAboutStaffPage: false,
+        showAboutStaffPage: true,
         showSchedulePage: true,
         showSponsorPage: false,
         showRegistrationPage: true,
@@ -23,9 +23,9 @@ export const state = () => ({
         showConferencePage: true,
         showVenuePage: true,
         showIndexSponsorSection: true,
-        showIndexSecondaryBtn: true,
+        showIndexSecondaryBtn: false,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
-        eventsHideItems: ['openSpaces'], // ['sprints', 'openSpaces', 'jobs']
+        eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
         conferenceHideItems: [], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: [], // ['venueInfo', 'accommodation']

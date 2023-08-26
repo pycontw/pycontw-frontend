@@ -27,7 +27,7 @@ export const landingButtonConfig = {
         path: '/conference/schedule',
         textKey: 'checkEvents',
         isPrimary: true,
-        isLarge: true,
+        isLarge: false,
     },
     BUY_TICKETS: {
         isExternalLink: false,
