@@ -53,22 +53,13 @@ export default {
             banner: require('@/static/img/about/Banner.svg'),
             eventInfos: [
                 {
-                    tag: 'youngInspirers',
-                    eventTag: 'warmup',
-                    tagColor: 'orange',
-                    imgUrl: require('~/static/img/events/overview/young-inspirers.png'),
-                    imgAlt: 'Young Inspirers',
-                    to: '/conference/young-inspirers',
-                    openToView: false,
-                },
-                {
                     tag: 'sprint',
                     eventTag: 'warmup',
                     tagColor: 'orange',
                     imgUrl: require('~/static/img/events/overview/sprint.png'),
                     imgAlt: 'Sprint',
                     to: '/events/sprints',
-                    openToView: false,
+                    openToView: true,
                 },
                 {
                     tag: 'pycast',
@@ -86,7 +77,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/keynote.png'),
                     imgAlt: 'Keynote',
                     to: '/conference/keynotes',
-                    openToView: false,
+                    openToView: true,
                 },
                 {
                     tag: 'talk',
@@ -95,7 +86,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/talk.png'),
                     imgAlt: 'Talk',
                     to: '/conference/talks',
-                    openToView: false,
+                    openToView: true,
                 },
                 {
                     tag: 'tutorial',
@@ -104,7 +95,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/tutorial.png'),
                     imgAlt: 'Tutorial',
                     to: '/conference/tutorials',
-                    openToView: false,
+                    openToView: true,
                 },
                 {
                     tag: 'openSpace',
@@ -113,7 +104,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/open-space.png'),
                     imgAlt: 'Open Space',
                     to: '/events/open-spaces',
-                    openToView: false,
+                    openToView: true,
                 },
                 {
                     tag: 'lightningTalk',

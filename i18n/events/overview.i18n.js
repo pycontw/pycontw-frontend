@@ -4,17 +4,9 @@ export default genI18nMessages({
     'en-us': {
         title: 'Events Overview',
         intro:
-            'There are 3 types of speeches and 7 different activities ' +
+            'There are 3 types of speeches and 6 different activities ' +
             "in the annual conference. Let's meet Pythonistas here!",
         eventInfo: {
-            youngInspirers: {
-                title: 'Young Inspirers',
-                description:
-                    'Young Inspirers aims to create a learning and communication space for young people. ' +
-                    'Through this activity, young people can share their own experiences, ' +
-                    'develop their ability of multi-thinking' +
-                    ', and exchange information between different generations.',
-            },
             sprint: {
                 title: 'Sprint',
                 description:
@@ -104,17 +96,10 @@ export default genI18nMessages({
     'zh-hant': {
         title: '議程總覽',
         intro:
-            '年會總共有 3 種形式的演講與 7 種不同性質的交流活動。' +
+            '年會總共有 3 種形式的演講與 6 種不同性質的交流活動。' +
             '可以說是非常多元有趣，讓你可以從演講中吸取知識的同時，' +
             '還能在交流活動中結識許多各方好友。',
         eventInfo: {
-            youngInspirers: {
-                title: 'Young Inspirers',
-                description:
-                    'Young Inspirers 旨在於創建一個屬於青少年的學習、交流空間。' +
-                    '讓青少年們透過這個活動去分享自身經歷，並培養多元思考、系統整合的能力' +
-                    '，交流不同世代間的資訊。',
-            },
             sprint: {
                 title: '衝刺開發',
                 description:
