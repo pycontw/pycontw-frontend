@@ -101,11 +101,6 @@ export default {
                     { name: 'Tumi', photo: 'marketing/Tumi.jpg' },
                     { name: 'Anan', photo: 'design/Anan.jpg' },
                     { name: 'Weifan', photo: 'cat-smile.jpg' },
-                    { name: 'subird', photo: 'cat-smile.jpg' },
-                    { name: 'Heidi', photo: 'cat-smile.jpg' },
-                    { name: '愛德華橙', photo: 'cat-smile.jpg' },
-                    { name: 'Tumi', photo: 'marketing/Tumi.jpg' },
-                    { name: 'Anan', photo: 'design/Anan.jpg' },
                 ],
                 development_web: [
                     { name: 'Josix', photo: 'web/Josix.jpg' },

@@ -73,10 +73,6 @@ export default genI18nMessages({
                 teamName: 'Photography',
             },
             {
-                key: 'pycast',
-                teamName: 'PyCast',
-            },
-            {
                 key: 'reviewer',
                 teamName: 'Review Committee',
             },
