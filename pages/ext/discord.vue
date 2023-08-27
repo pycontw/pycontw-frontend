@@ -196,6 +196,10 @@ export default {
         ExtLink,
     },
     fetchOnServer: false,
+    layout(context) {
+        const ccip = context.query.ccip // to determine if it's opass mobile app
+        return ccip ? 'ccip' : 'default'
+    },
     async fetch() {
         this.token = this.$nuxt.context.query.token
         const store = this.$nuxt.context.store
