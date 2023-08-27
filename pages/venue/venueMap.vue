@@ -98,8 +98,8 @@ export default {
                 '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
             zoom: 16,
             icon: icon({
-                iconUrl: '/snake.png',
-                shadowUrl: '/snake-bg.png',
+                iconUrl: '/2023/snake.png',
+                shadowUrl: '/2023/snake-bg.png',
                 iconSize: [42, 42],
                 iconAnchor: [21, 21],
                 shadowSize: [45, 55],
