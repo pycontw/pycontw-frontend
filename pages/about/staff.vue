@@ -189,7 +189,7 @@ export default {
                     { name: 'Gobby', photo: 'marketing/Gobby.jpg' },
                 ],
                 pr: [
-                    { name: '9ukei', photo: 'cat-smile.jpg' },
+                    { name: '鈺馨', photo: 'pr/鈺馨.jpg' },
                     { name: 'tai', photo: 'everywhere/tai.jpg' },
                     { name: 'TN Lee', photo: 'program/TN Lee.jpg' },
                     { name: 'JennyChu', photo: 'cat-smile.jpg' },
@@ -197,7 +197,6 @@ export default {
                     { name: 'Fish', photo: 'venue/Fish.jpg' },
                     { name: '阿球', photo: 'pr/阿球.jpg' },
                     { name: 'Wei', photo: 'pr/Wei.jpg' },
-                    { name: '鈺馨', photo: 'pr/鈺馨.jpg' },
                 ],
                 registration: [
                     { name: 'David Lu', photo: 'registration/David Lu.jpg' },
