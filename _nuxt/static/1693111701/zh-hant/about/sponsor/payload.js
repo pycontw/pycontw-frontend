@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-hant/about/sponsor", {data:[{}],fetch:{},mutations:[]});
