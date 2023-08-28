@@ -1,7 +1,7 @@
 <template>
     <l-map
         ref="leafletMap"
-        style="height: 300px"
+        style="height: 500px"
         :zoom="zoom"
         :center="center"
         :options="options"

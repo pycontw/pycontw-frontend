@@ -3,7 +3,10 @@
         class="flex flex-col rounded-xl bg-primary-900 px-6 py-10 md:px-16 md:py-20"
     >
         <img class="md:hidden" :src="icon.shuttleServiceGuide" />
-        <img class="hidden md:block" :src="icon.shuttleServiceGuideMd" />
+        <img
+            class="hidden md:m-auto md:block md:w-3/5"
+            :src="icon.shuttleServiceGuideMd"
+        />
 
         <VenueDivision>
             <h3>
