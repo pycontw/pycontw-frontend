@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 pt-20">
+    <div class="px-4 pt-20 md:px-32">
         <core-h1 :title="$t('Schedule')"></core-h1>
         <schedule-day-tabs v-model="selectedDayIndex">
             <schedule-day-tab
