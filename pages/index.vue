@@ -1,11 +1,6 @@
 <template>
     <div class="landing">
         <div class="landing__background flex pt-4 md:pt-24">
-            <button class="btn btn-default btn-fill" @click="showSwal">
-                <i18n tag="p" path="typhoonInfo">
-                    <template #br><br /></template>
-                </i18n>
-            </button>
             <div class="landing__background__items">
                 <img
                     class="landing__background__items__meter"
@@ -135,6 +130,7 @@ import Modal from '@/components/core/modal/Modal'
 import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 import Intro from '@/components/intro/Intro'
 import swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.css'
 
 export default {
     i18n,
@@ -185,6 +181,9 @@ export default {
     created() {
         this.$store.dispatch('$getSponsorsData')
     },
+    mounted() {
+        this.showSwal()
+    },
     methods: {
         showModal(sponsor) {
             this.isOpened = true
@@ -196,7 +195,7 @@ export default {
             return data[attributeName]
         },
         showSwal() {
-            swal({
+            return new swal({  // eslint-disable-line
                 title: `Notification`,
                 buttonsStyling: false,
                 confirmButtonClass: 'btn btn-success btn-fill',
