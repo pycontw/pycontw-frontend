@@ -64,7 +64,6 @@
                 </div>
             </div>
         </div>
-
         <I18nPageWrapper>
             <Intro :is-bulleted="isBulleted"></Intro>
             <div class="pt-12 lg:mx-auto lg:w-full">
@@ -130,6 +129,8 @@ import SponsorCard from '@/components/sponsors/SponsorCard'
 import Modal from '@/components/core/modal/Modal'
 import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 import Intro from '@/components/intro/Intro'
+import swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.css'
 
 export default {
     i18n,
@@ -180,6 +181,9 @@ export default {
     created() {
         this.$store.dispatch('$getSponsorsData')
     },
+    mounted() {
+        this.showSwal()
+    },
     methods: {
         showModal(sponsor) {
             this.isOpened = true
@@ -189,6 +193,15 @@ export default {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
             const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`
             return data[attributeName]
+        },
+        showSwal() {
+            return new swal({  // eslint-disable-line
+                title: this.$i18n.t('typhoonInfoTitle'),
+                html: this.$i18n
+                    .t('typhoonInfo')
+                    .replaceAll('{br}', '<br/><br/>'),
+                buttonsStyling: true,
+            })
         },
     },
 }
