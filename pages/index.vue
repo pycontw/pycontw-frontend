@@ -1,6 +1,11 @@
 <template>
     <div class="landing">
         <div class="landing__background flex pt-4 md:pt-24">
+            <button class="btn btn-default btn-fill" @click="showSwal">
+                <i18n tag="p" path="typhoonInfo">
+                    <template #br><br /></template>
+                </i18n>
+            </button>
             <div class="landing__background__items">
                 <img
                     class="landing__background__items__meter"
@@ -64,7 +69,6 @@
                 </div>
             </div>
         </div>
-
         <I18nPageWrapper>
             <Intro :is-bulleted="isBulleted"></Intro>
             <div class="pt-12 lg:mx-auto lg:w-full">
@@ -130,6 +134,7 @@ import SponsorCard from '@/components/sponsors/SponsorCard'
 import Modal from '@/components/core/modal/Modal'
 import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 import Intro from '@/components/intro/Intro'
+import swal from 'sweetalert2'
 
 export default {
     i18n,
@@ -189,6 +194,13 @@ export default {
             const localeMap = { 'en-us': 'en_us', 'zh-hant': 'zh_hant' }
             const attributeName = `${attr}_${localeMap[this.$i18n.locale]}`
             return data[attributeName]
+        },
+        showSwal() {
+            swal({
+                title: `Notification`,
+                buttonsStyling: false,
+                confirmButtonClass: 'btn btn-success btn-fill',
+            })
         },
     },
 }
