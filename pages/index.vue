@@ -196,9 +196,11 @@ export default {
         },
         showSwal() {
             return new swal({  // eslint-disable-line
-                title: `Notification`,
-                buttonsStyling: false,
-                confirmButtonClass: 'btn btn-success btn-fill',
+                title: this.$i18n.t('typhoonInfoTitle'),
+                html: this.$i18n
+                    .t('typhoonInfo')
+                    .replaceAll('{br}', '<br/><br/>'),
+                buttonsStyling: true,
             })
         },
     },

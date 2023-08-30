@@ -18,6 +18,7 @@ export default genI18nMessages({
         callForProposals: 'Call for Proposals',
         checkEvents: 'Event Schedule',
         buyTickets: 'Buy Tickets Now',
+        typhoonInfoTitle: 'Typhoon Preparedness Measures',
         typhoonInfo:
             "The event on September 2nd-3rd, 2023, depends on Taipei City Government's Closure Announcement. " +
             'Stay updated via PyCon Taiwan official website and social media.{br}' +
@@ -42,6 +43,7 @@ export default genI18nMessages({
         callForProposals: '投稿募集',
         checkEvents: '查看議程',
         buyTickets: '立即購票',
+        typhoonInfoTitle: '颱風因應措施',
         typhoonInfo:
             '本次活動期間 (2023 年 09 月 02 日至 03 日) 將依照「臺北市政府之停班公告」決定是否舉行，' +
             '最新消息請關注「PyCon Taiwan 官網與社群媒體」之公告。{br}' +
