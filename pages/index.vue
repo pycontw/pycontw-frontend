@@ -181,9 +181,6 @@ export default {
     created() {
         this.$store.dispatch('$getSponsorsData')
     },
-    mounted() {
-        this.showSwal()
-    },
     methods: {
         showModal(sponsor) {
             this.isOpened = true
