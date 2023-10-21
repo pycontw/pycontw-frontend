@@ -8,9 +8,9 @@ export default genI18nMessages({
         jobDescription: 'What you will be doing:',
         jobRequirement: 'Requirements:',
         og: {
-            title: '【2022 年 Python 熱門工作】Python 知名企業職缺一覽表 － PyCon APAC',
+            title: '【Python 熱門工作】Python 知名企業職缺一覽表 － PyCon TW',
             description:
-                '2022 年知名企業內部 Python 熱門工作職缺、Python 工程師職缺一覽表，' +
+                '知名企業內部 Python 熱門工作職缺、Python 工程師職缺一覽表，' +
                 '提供知名品牌企業內部 Python 工程師職缺、Python 工作機會！',
         },
     },
@@ -21,9 +21,9 @@ export default genI18nMessages({
         jobDescription: '【職務內容】',
         jobRequirement: '【具備條件】',
         og: {
-            title: '【2022 年 Python 熱門工作】Python 知名企業職缺一覽表 － PyCon APAC',
+            title: '【Python 熱門工作】Python 知名企業職缺一覽表 － PyCon TW',
             description:
-                '2022 年知名企業內部 Python 熱門工作職缺、Python 工程師職缺一覽表，' +
+                '知名企業內部 Python 熱門工作職缺、Python 工程師職缺一覽表，' +
                 '提供知名品牌企業內部 Python 工程師職缺、Python 工作機會！',
         },
     },
