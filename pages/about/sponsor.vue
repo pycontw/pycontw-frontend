@@ -59,17 +59,19 @@ export default {
         const ccip = context.query.ccip // to determine if it's opass mobile app
         return ccip ? 'ccip' : 'default'
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { sponsorsData: payload }
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
+        }
+    },
     data() {
         return {
             isOpened: false,
             selectedSponsor: {},
         }
-    },
-    computed: {
-        ...mapState(['sponsorsData']),
-    },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {
