@@ -1,48 +1,48 @@
 <template>
-        <l-map
-            ref="leafletMap"
-            style="height: 500px"
-            :zoom="zoom"
-            :center="center"
-            :options="options"
+    <l-map
+        ref="leafletMap"
+        style="height: 500px"
+        :zoom="zoom"
+        :center="center"
+        :options="options"
+    >
+        <l-tile-layer
+            v-for="tileProvider in tileProviders"
+            :key="tileProvider.name"
+            :name="tileProvider.name"
+            :visible="tileProvider.visible"
+            :url="tileProvider.url"
+            :attribution="tileProvider.attribution"
+            layer-type="base"
+        />
+
+        <l-control-layers position="bottomright"></l-control-layers>
+        <l-control-zoom position="topright"></l-control-zoom>
+        <l-control
+            position="topright"
+            class="leaflet-bar custom-control rounded-sm"
         >
-            <l-tile-layer
-                v-for="tileProvider in tileProviders"
-                :key="tileProvider.name"
-                :name="tileProvider.name"
-                :visible="tileProvider.visible"
-                :url="tileProvider.url"
-                :attribution="tileProvider.attribution"
-                layer-type="base"
-            />
-    
-            <l-control-layers position="bottomright"></l-control-layers>
-            <l-control-zoom position="topright"></l-control-zoom>
-            <l-control
-                position="topright"
-                class="leaflet-bar custom-control rounded-sm"
+            <button
+                class="h-[30px] w-[30px] bg-white leading-[30px]"
+                @click="centerMap"
             >
-                <button
-                    class="h-[30px] w-[30px] bg-white leading-[30px]"
-                    @click="centerMap"
-                >
-                    <img
-                        class="m-auto"
-                        :src="venueButtonUrl"
-                        alt="venue-center-btn"
-                    />
-                </button>
-            </l-control>
-            <l-marker :lat-lng="markerLatLng" :icon="icon">
-                <l-tooltip
-                    :options="{
-                        offset: [-4, 20],
-                        direction: 'bottom',
-                    }"
-                    >中央研究院 人文社會科學館</l-tooltip
-                ></l-marker
-            >
-        </l-map>
+                <img
+                    class="m-auto"
+                    :src="venueButtonUrl"
+                    alt="venue-center-btn"
+                />
+            </button>
+        </l-control>
+        <l-marker :lat-lng="markerLatLng" :icon="icon">
+            <l-tooltip
+                :options="{
+                    offset: [-4, 20],
+                    direction: 'bottom',
+                }"
+                >中央研究院 人文社會科學館</l-tooltip
+            ></l-marker
+        >
+    </l-map>
 </template>
 
 <script>
