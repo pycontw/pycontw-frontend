@@ -5,10 +5,9 @@ const DEFAULT_BUILD_TARGET = 'static'
 const DEFAULT_VUE_DEVTOOL = false
 
 export default {
-    target:"static",
     generate: {
         async routes() {
-            const config = { 
+            const config = {
                 headers: {
                     authorization: `Token ${process.env.AUTH_TOKEN}`,
                 },

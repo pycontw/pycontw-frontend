@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/about/sponsor.i18n'
