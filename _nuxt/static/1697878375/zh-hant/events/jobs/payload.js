@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-hant/events/jobs", {data:[{}],fetch:{},mutations:[]});

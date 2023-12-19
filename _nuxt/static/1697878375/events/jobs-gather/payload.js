@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/events/jobs-gather", {data:[{}],fetch:{},mutations:[]});
