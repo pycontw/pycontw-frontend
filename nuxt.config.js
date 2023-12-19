@@ -1,9 +1,68 @@
+import axios from 'axios'
 const DEFAULT_BASE_URL = 'https://tw.pycon.org/prs'
 const DEFAULT_ROUTER_BASE = '/2023/'
 const DEFAULT_BUILD_TARGET = 'static'
 const DEFAULT_VUE_DEVTOOL = false
 
 export default {
+    generate: {
+        async routes() {
+            const config = {
+                headers: {
+                    authorization: `Token ${process.env.AUTH_TOKEN}`,
+                },
+            }
+            const talks = await axios.get(
+                `${DEFAULT_BASE_URL}/api/events/speeches/?event_types=talk,sponsored`,
+                config,
+            )
+            const tutorials = await axios.get(
+                `${DEFAULT_BASE_URL}/api/events/speeches/?event_types=tutorial`,
+                config,
+            )
+            const getAllDetailTalks = async () => {
+                const data = await Promise.all(
+                    talks.data.map(async (talk) => {
+                        return await axios
+                            .get(
+                                `${DEFAULT_BASE_URL}/api/events/speeches/${talk.event_type}/${talk.id}/`,
+                                config,
+                            )
+                            .then((response) => response.data)
+                    }),
+                )
+                return data
+            }
+            const getAllDetailTutorials = async () => {
+                const data = await Promise.all(
+                    tutorials.data.map(async (tutorial) => {
+                        return await axios
+                            .get(
+                                `${DEFAULT_BASE_URL}/api/events/speeches/${tutorial.event_type}/${tutorial.id}/`,
+                                config,
+                            )
+                            .then((response) => response.data)
+                    }),
+                )
+                return data
+            }
+
+            const detailTalks = await getAllDetailTalks()
+            const detailTutorials = await getAllDetailTutorials()
+
+            const routes = [
+                ...detailTalks.map((talk) => ({
+                    route: `/conference/${talk.event_type}/${talk.id}`,
+                    payload: talk,
+                })),
+                ...detailTutorials.map((tutorial) => ({
+                    route: `/conference/${tutorial.event_type}/${tutorial.id}`,
+                    payload: tutorial,
+                })),
+            ]
+            return routes
+        },
+    },
     vue: {
         config: {
             devtools: process.env.VUE_DEVTOOL || DEFAULT_VUE_DEVTOOL,

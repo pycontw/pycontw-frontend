@@ -145,6 +145,14 @@ export default {
         I18nPageWrapper,
         Intro,
     },
+    async asyncData({ store, payload }) {
+        if (payload) return { sponsorsData: payload }
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
+        }
+    },
     data() {
         return {
             isOpened: false,
@@ -177,9 +185,6 @@ export default {
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
         },
-    },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {
