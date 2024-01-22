@@ -1,6 +1,6 @@
 import axios from 'axios'
 const DEFAULT_BASE_URL = 'https://tw.pycon.org/prs'
-const DEFAULT_ROUTER_BASE = '/2023/'
+const DEFAULT_ROUTER_BASE = '/2024/'
 const DEFAULT_BUILD_TARGET = 'static'
 const DEFAULT_VUE_DEVTOOL = false
 

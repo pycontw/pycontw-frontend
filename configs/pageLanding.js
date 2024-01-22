@@ -50,7 +50,7 @@ export const landingBulletinsConfig = [
     {
         titleI18nKey: 'hackmd.title',
         descriptionI18nKey: 'hackmd.description',
-        link: 'https://hackmd.io/@pycontw/2022',
+        link: 'https://hackmd.io/@pycontw/2023',
         isExternalLink: true,
         icon: 'HackMD.svg',
         showBulletin: false,
@@ -125,6 +125,10 @@ export const landingFooterHistoryConfig = [
     {
         text: '2022',
         link: 'https://tw.pycon.org/2022/',
+    },
+    {
+        text: '2023',
+        link: 'https://tw.pycon.org/2023/',
     },
 ]
 
