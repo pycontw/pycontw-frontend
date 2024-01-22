@@ -63,7 +63,7 @@ export default {
         VenuePublicTransporterTab,
         VenueDriveTab,
         VenueShuttleServiceTab,
-        VenueMap: () => import("@/components/venue/VenueMap.vue"),
+        VenueMap: () => import('@/components/venue/VenueMap.vue'),
     },
     data() {
         return {
