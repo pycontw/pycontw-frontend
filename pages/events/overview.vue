@@ -59,7 +59,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/sprint.png'),
                     imgAlt: 'Sprint',
                     to: '/events/sprints',
-                    openToView: true,
+                    openToView: false,
                 },
                 {
                     tag: 'pycast',
@@ -68,7 +68,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/pycast.png'),
                     imgAlt: 'PyCast',
                     href: 'https://podcasts.apple.com/podcast/id1559843325',
-                    openToView: true,
+                    openToView: false,
                 },
                 {
                     tag: 'keynote',
@@ -77,7 +77,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/keynote.png'),
                     imgAlt: 'Keynote',
                     to: '/conference/keynotes',
-                    openToView: true,
+                    openToView: false,
                 },
                 {
                     tag: 'talk',
@@ -86,7 +86,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/talk.png'),
                     imgAlt: 'Talk',
                     to: '/conference/talks',
-                    openToView: true,
+                    openToView: false,
                 },
                 {
                     tag: 'tutorial',
@@ -95,7 +95,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/tutorial.png'),
                     imgAlt: 'Tutorial',
                     to: '/conference/tutorials',
-                    openToView: true,
+                    openToView: false,
                 },
                 {
                     tag: 'openSpace',
@@ -104,7 +104,7 @@ export default {
                     imgUrl: require('~/static/img/events/overview/open-space.png'),
                     imgAlt: 'Open Space',
                     to: '/events/open-spaces',
-                    openToView: true,
+                    openToView: false,
                 },
                 {
                     tag: 'lightningTalk',
