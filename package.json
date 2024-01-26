@@ -35,7 +35,8 @@
         "uuid": "^8.3.2",
         "vue-awesome-swiper": "^4.1.1",
         "vue-dompurify-html": "^2.3.0",
-        "vue2-leaflet": "^2.7.1"
+        "vue2-leaflet": "^2.7.1",
+        "webpack": "^4.46.0"
     },
     "devDependencies": {
         "@nuxt/types": "^2.14.11",
