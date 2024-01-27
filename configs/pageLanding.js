@@ -18,7 +18,7 @@ export const landingButtonConfig = {
         isExternalLink: false,
         path: '/speaking/cfp',
         textKey: 'callForProposals',
-        isPrimary: false,
+        isPrimary: true,
         isBordered: true,
         isLarge: true,
     },
