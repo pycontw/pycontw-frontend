@@ -51,7 +51,7 @@ import VenueTab from '@/components/venue/VenueTab.vue'
 import VenuePublicTransporterTab from '@/components/venue/VenuePublicTransporterTab.vue'
 import VenueDriveTab from '@/components/venue/VenueDriveTab.vue'
 import VenueShuttleServiceTab from '@/components/venue/VenueShuttleServiceTab.vue'
-import VenueMap from '@/components/venue/VenueMap.vue'
+// import VenueMap from '@/components/venue/VenueMap.vue'
 export default {
     i18n,
     name: 'PageVenue',
@@ -63,7 +63,7 @@ export default {
         VenuePublicTransporterTab,
         VenueDriveTab,
         VenueShuttleServiceTab,
-        VenueMap,
+        VenueMap: () => import('@/components/venue/VenueMap.vue'),
     },
     data() {
         return {
