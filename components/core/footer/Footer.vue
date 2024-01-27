@@ -6,7 +6,7 @@
             <div class="flex justify-center">
                 <div class="flex flex-col items-center">
                     <ext-link
-                        href="https://forms.gle/vLz3Xev8tUpnRqacA"
+                        href="https://forms.gle/seaori7xF4vLSSUb7"
                         class="highlight my-2"
                     >
                         {{ $t('joinUs') }}
