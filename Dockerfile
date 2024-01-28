@@ -5,8 +5,6 @@ WORKDIR /usr/local
 COPY package-lock.json package-lock.json
 COPY package.json package.json
 
-RUN apt-get update && apt-get install -y python
-RUN apt-get install -y build-essential
 RUN npm ci
 
 COPY assets ./assets
