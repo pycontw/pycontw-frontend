@@ -1,1 +1,2 @@
-export const sponsorFormLink = 'https://forms.gle/sLZRYGz9jQpeBNh79'
+export const sponsorFormLink =
+    'https://docs.google.com/forms/d/e/1FAIpQLSfUJJlrdauqiAw9kteSGkCmfIMZqFPy5w8yMU60YilevWA56g/viewform'

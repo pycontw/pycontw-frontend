@@ -156,7 +156,7 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.CHECK_EVENTS,
+            primaryButton: landingButtonConfig.CFP,
             secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
             selectedSponsor: {},
         }

@@ -1,14 +1,14 @@
 export const landingButtonConfig = {
     PRIMARY_JOIN_US: {
         isExternalLink: true,
-        path: 'https://forms.gle/vLz3Xev8tUpnRqacA',
+        path: 'https://forms.gle/seaori7xF4vLSSUb7',
         textKey: 'joinUs',
         isPrimary: true,
         isLarge: true,
     },
     SECONDARY_JOIN_US: {
         isExternalLink: true,
-        path: 'https://forms.gle/vLz3Xev8tUpnRqacA',
+        path: 'https://forms.gle/seaori7xF4vLSSUb7',
         textKey: 'joinUs',
         isPrimary: false,
         isBordered: true,
@@ -18,7 +18,7 @@ export const landingButtonConfig = {
         isExternalLink: false,
         path: '/speaking/cfp',
         textKey: 'callForProposals',
-        isPrimary: false,
+        isPrimary: true,
         isBordered: true,
         isLarge: true,
     },
@@ -50,7 +50,7 @@ export const landingBulletinsConfig = [
     {
         titleI18nKey: 'hackmd.title',
         descriptionI18nKey: 'hackmd.description',
-        link: 'https://hackmd.io/@pycontw/2022',
+        link: 'https://hackmd.io/@pycontw/2023',
         isExternalLink: true,
         icon: 'HackMD.svg',
         showBulletin: false,
@@ -125,6 +125,10 @@ export const landingFooterHistoryConfig = [
     {
         text: '2022',
         link: 'https://tw.pycon.org/2022/',
+    },
+    {
+        text: '2023',
+        link: 'https://tw.pycon.org/2023/',
     },
 ]
 
