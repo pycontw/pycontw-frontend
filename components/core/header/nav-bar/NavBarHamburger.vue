@@ -82,6 +82,7 @@
                 @click.native="toggleAccordion('venue')"
             ></nav-bar-item-accordion>
             <ext-link
+                v-if="showProposalSystem"
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="proposalSystemUrl"
                 >{{ $t('proposalSystemUrl') }}</ext-link

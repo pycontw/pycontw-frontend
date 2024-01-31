@@ -64,6 +64,7 @@
         >
         </nav-bar-item-dropdown>
         <ext-link
+            v-if="showProposalSystem"
             :href="proposalSystemUrl"
             :class="getPageClassesByPath('proposalSystemUrl', true)"
         >
