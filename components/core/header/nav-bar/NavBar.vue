@@ -64,7 +64,7 @@
         >
         </nav-bar-item-dropdown>
         <ext-link
-            v-if="showProposalSystem"
+            v-if="showProposalSystemPage"
             :href="proposalSystemUrl"
             :class="getPageClassesByPath('proposalSystemUrl', true)"
         >
@@ -147,6 +147,9 @@ export default {
         },
         showVenuePage() {
             return this.$store.state.configs.showVenuePage
+        },
+        showProposalSystemPage() {
+            return this.$store.state.configs.showProposalSystemPage
         },
     },
     methods: {
