@@ -20,7 +20,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: 'How to Submit Your Proposal',
                 description: [
-                    'You need to {signUp} for a new account on our system. With an activated account, you can fill up the speaker profile and create new proposals through the {proposalSystem} page.',
+                    'You need to sign up for a new account on our system. With an activated account, you can fill up the speaker profile and create new proposals through the proposal system page.',
                     'We encourage you to submit the proposal as early as possible. You are welcomed to submit multiple proposals.',
                     'Since COVID-19 become stable, we recommend attending the meeting venue in person. If you have personal reasons, you may ask to give your talk or tutorial remotely.',
                 ],
@@ -151,7 +151,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: '提交稿件',
                 description: [
-                    '您需要先在系統上 {signUp} 一個新的帳號。在啟用您的帳號之後，就可以填寫講者資訊，並從 {proposalSystem} 頁面中建立新的投搞。我們強烈建議您儘早送出您的投稿。',
+                    '您需要先在系統上註冊一個新的帳號。在啟用您的帳號之後，就可以填寫講者資訊，並從投稿系統頁面中建立新的投搞。我們強烈建議您儘早送出您的投稿。',
                     '因應 COVID-19 疫情逐漸穩定，今年演講與專業課程將會以實體會議形式舉辦，建議講者來到現場與會眾互動。若有不可抗力之因素，您仍可以依照自身狀況選擇是否親自前來。',
                 ],
                 steps: [],

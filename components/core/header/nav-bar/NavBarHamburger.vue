@@ -82,6 +82,7 @@
                 @click.native="toggleAccordion('venue')"
             ></nav-bar-item-accordion>
             <ext-link
+                v-if="showProposalSystemPage"
                 class="core-navBarHamburgerSlideInMenu__item"
                 :href="proposalSystemUrl"
                 >{{ $t('proposalSystemUrl') }}</ext-link
@@ -172,6 +173,9 @@ export default {
         },
         showVenuePage() {
             return this.$store.state.configs.showVenuePage
+        },
+        showProposalSystemPage() {
+            return this.$store.state.configs.showProposalSystemPage
         },
     },
     watch: {
