@@ -4,11 +4,12 @@ export default genI18nMessages({
     'en-us': {
         title: 'Why Sponsorship',
         intro: [
-            'PyCon Taiwan has held over 12 annual conferences to date. Last year, we invited 2 keynote speakers, 27 general talks, 3 tutorials and 1 panel totaling over 36 hours of technical presentations. {br}' +
-                "At the same time, our community's social media activity has also increased, with a growth of 11,162 followers. {br}" +
-                'In addition, the podcast has been downloaded 12,000 times. ' +
-                'These statistics demonstrate the success of PyCon Taiwan.With over 150 volunteers, ' +
-                'we have brought countless technical skills and inspiration to the Python community.',
+            'PyCon Taiwan has held over 12 annual conferences to date. Last year, we invited 2 keynote speakers, 27 general talks, 3 tutorials and 1 panel ' +
+                'totaling over 36 hours of technical presentations.',
+            "At the same time, our community's social media activity has also increased, with a growth of 11,162 followers.",
+            'In addition, the podcast has been downloaded 12,000 times. ' +
+                'These statistics demonstrate the success of PyCon Taiwan.With over 150 volunteers, ',
+            'we have brought countless technical skills and inspiration to the Python community.',
         ],
         milestone: [
             {
@@ -59,10 +60,11 @@ export default genI18nMessages({
     'zh-hant': {
         title: '贊助召集令',
         intro: [
-            'PyCon Taiwan 迄今已舉辦超過 12 場年度會議。去年我們邀請 2 場主題演講、27 場一般演講、1 場專業課程以及 1 場專業論壇，{br}' +
-                '總計超過 36 小時的技術演講。同時，我們的社群媒體活躍度也隨之提高，追蹤人數增加到了 11162 位。{br}' +
-                '此外，Podcast 下載量高達 12000次。這些數據充分展現了 PyCon Taiwan 的成功。 {br}' +
-                '我們擁有超過 150 位志工，為 Python 社群帶來了無數的技術與靈感。',
+            'PyCon Taiwan 迄今已舉辦超過 12 場年度會議。去年我們邀請 2 場主題演講、27 場一般演講、1 場專業課程以及 1 場專業論壇' +
+                '總計超過 36 小時的技術演講。',
+            '同時，我們的社群媒體活躍度也隨之提高，追蹤人數增加到了 11162 位。',
+            '此外，Podcast 下載量高達 12000次。這些數據充分展現了 PyCon Taiwan 的成功。',
+            '我們擁有超過 150 位志工，為 Python 社群帶來了無數的技術與靈感。',
         ],
         milestone: [
             {
