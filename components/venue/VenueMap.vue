@@ -15,7 +15,6 @@
             :attribution="tileProvider.attribution"
             layer-type="base"
         />
-
         <l-control-layers position="bottomright"></l-control-layers>
         <l-control-zoom position="topright"></l-control-zoom>
         <l-control
@@ -46,27 +45,11 @@
 </template>
 
 <script>
-import {
-    LMap,
-    LControl,
-    LTileLayer,
-    LMarker,
-    LControlZoom,
-    LControlLayers,
-    LTooltip,
-} from 'vue2-leaflet'
-import { icon } from 'leaflet'
+// import { icon } from 'leaflet'
+let L = { icon() {} }
+if (process.browser) L = require('leaflet')
 export default {
     name: 'VenueMap',
-    components: {
-        LMap,
-        LTileLayer,
-        LMarker,
-        LControlZoom,
-        LControlLayers,
-        LTooltip,
-        LControl,
-    },
     data() {
         return {
             venueButtonUrl: require('@/static/venue-button.png'),
@@ -97,17 +80,20 @@ export default {
             attribution:
                 '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
             zoom: 16,
-            icon: icon({
-                iconUrl: '/2023/snake.png',
-                shadowUrl: '/2023/snake-bg.png',
-                iconSize: [42, 42],
-                iconAnchor: [21, 21],
-                shadowSize: [45, 55],
-                shadowAnchor: [25, 30],
-            }),
+            icon: null,
             center: [25.040997, 121.611417],
             markerLatLng: [25.040997, 121.611417],
         }
+    },
+    mounted() {
+        this.icon = L.icon({
+            iconUrl: '/snake.png',
+            shadowUrl: '/snake-bg.png',
+            iconSize: [42, 42],
+            iconAnchor: [21, 21],
+            shadowSize: [45, 55],
+            shadowAnchor: [25, 30],
+        })
     },
     methods: {
         centerMap() {
