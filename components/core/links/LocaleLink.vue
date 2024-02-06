@@ -61,7 +61,7 @@ export default {
 }
 
 .underline {
-    @apply underline;
+    text-decoration-line: underline;
 }
 
 .core-localeLink:not(.highlight):not(.--customized) {

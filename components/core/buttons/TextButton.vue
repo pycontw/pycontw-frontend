@@ -98,13 +98,13 @@ export default {
     @apply relative;
 
     & > a {
-        @apply outline-none font-sans;
+        @apply font-sans outline-none;
     }
 }
 
 .core-button:not(.--is-link),
 .core-button.--is-link > a {
-    @apply outline-none inline-flex items-center justify-center;
+    @apply inline-flex items-center justify-center outline-none;
     line-height: 1.25rem;
     border-radius: 40px;
 }
