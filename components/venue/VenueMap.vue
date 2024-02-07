@@ -45,9 +45,6 @@
 </template>
 
 <script>
-// import { icon } from 'leaflet'
-let L = { icon() {} }
-if (process.browser) L = require('leaflet')
 export default {
     name: 'VenueMap',
     data() {
@@ -86,19 +83,23 @@ export default {
         }
     },
     mounted() {
-        this.icon = L.icon({
-            iconUrl: '/snake.png',
-            shadowUrl: '/snake-bg.png',
-            iconSize: [42, 42],
-            iconAnchor: [21, 21],
-            shadowSize: [45, 55],
-            shadowAnchor: [25, 30],
-        })
+        this.getLeaflet()
     },
     methods: {
         centerMap() {
             this.$nextTick(() => {
                 this.$refs.leafletMap.mapObject.panTo([25.040997, 121.611417])
+            })
+        },
+        async getLeaflet() {
+            this.L = await import('leaflet')
+            this.icon = this.L.icon({
+                iconUrl: '/snake.png',
+                shadowUrl: '/snake-bg.png',
+                iconSize: [42, 42],
+                iconAnchor: [21, 21],
+                shadowSize: [45, 55],
+                shadowAnchor: [25, 30],
             })
         },
     },
