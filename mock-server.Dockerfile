@@ -1,8 +1,8 @@
-FROM node:12.20.2-buster-slim
+FROM node:14.21.3-buster-slim
 
 WORKDIR /usr/local
 
-RUN npm install -g json-server
+RUN npm install -g json-server@0.16.3
 
 COPY db.json routes.json json-server-middlewares.js ./
 

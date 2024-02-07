@@ -1,4 +1,4 @@
-FROM node:12.20.2-buster-slim
+FROM node:14.21.3-buster-slim
 
 WORKDIR /usr/local
 
