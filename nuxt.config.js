@@ -125,7 +125,6 @@ export default {
         { src: '~/plugins/strings.js' },
         { src: '~/plugins/vue-dompurify.js' },
         { src: '~/plugins/vue-awesome-swiper.js' },
-        // { src: '~/plugins/leaflet.js', ssr: false },
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
