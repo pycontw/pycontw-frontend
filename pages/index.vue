@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import { landingButtonConfig } from '@/configs/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
@@ -163,7 +163,7 @@ export default {
     },
     fetchOnServer: false,
     computed: {
-        ...mapState(['sponsorsData']),
+        // ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth

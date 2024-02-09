@@ -125,7 +125,6 @@ export default {
         { src: '~/plugins/strings.js' },
         { src: '~/plugins/vue-dompurify.js' },
         { src: '~/plugins/vue-awesome-swiper.js' },
-        { src: '~/plugins/leaflet.js', mode: 'client' },
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -183,6 +182,8 @@ export default {
         // https://sitemap.nuxtjs.org/
         // This module must be at the end of the modules array
         '@nuxtjs/sitemap',
+        // https://github.com/schlunsen/nuxt-leaflet
+        'nuxt-leaflet',
     ],
     i18n: {
         strategy: 'prefix',
