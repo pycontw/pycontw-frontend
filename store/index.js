@@ -24,7 +24,7 @@ export const state = () => ({
         showVenuePage: false,
         showProposalSystemPage: false,
         showIndexSponsorSection: false,
-        showIndexSecondaryBtn: true,
+        showIndexSecondaryBtn: false,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
         eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
         conferenceHideItems: [], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
