@@ -10,7 +10,7 @@ Frontend of PyCon TW official website.
 
 ### Requirements
 
-- node >= 12.20.2
+- node >= 14.21.3
 
 > You can refer to `package.json` file for more details.
 
