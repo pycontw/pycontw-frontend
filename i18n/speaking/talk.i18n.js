@@ -3,11 +3,13 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'How to Propose a Talk?',
-        intro:
-            'First of all, thank you for your interest in speaking at PyCon Taiwan 2023! ' +
-            'The following will help you submit a successful proposal. ' +
-            'In the following, we will provide tips to make your proposal strong ' +
-            'and informative to increase the chance of your proposal to be accepted. ',
+        intro: [
+            'For information on the overall CfP process, see {cfp}.',
+            'First of all, thank you for your interest in speaking at PyCon Taiwan 2024! ' +
+                'The following will help you submit a successful proposal. ' +
+                'In the following, we will provide tips to make your proposal strong ' +
+                'and informative to increase the chance of your proposal to be accepted. ',
+        ],
         tips: [
             'What’s your topic?',
             'Who is your target audience?',
@@ -97,10 +99,14 @@ export default genI18nMessages({
                     'the internals of how a module works should be at this level. ',
             },
         ],
+
+        terms: {
+            cfp: 'Call for Proposals',
+        },
         og: {
             title: 'How to Propose a Talk?',
             description:
-                'First of all, thank you for your interest in speaking at PyCon Taiwan 2023! ' +
+                'First of all, thank you for your interest in speaking at PyCon Taiwan 2024! ' +
                 'The following will help you submit a successful proposal. ' +
                 'In the following, we will provide tips to make your proposal strong ' +
                 'and informative to increase the chance of your proposal to be accepted. ',
@@ -108,10 +114,12 @@ export default genI18nMessages({
     },
     'zh-hant': {
         title: '如何投稿演講？',
-        intro:
-            '首先，感謝您投稿 PyCon Taiwan 2023！下面的內容將會幫助您成功地送出一份投稿。' +
-            '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
-            '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路：',
+        intro: [
+            '有關投稿的整體流程說明，請參考{cfp}一頁。',
+            '首先，感謝您投稿 PyCon Taiwan 2024！下面的內容將會幫助您成功地送出一份投稿。' +
+                '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
+                '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路：',
+        ],
         tips: [
             '投稿的主題是？',
             '誰是您的目標觀眾群？',
@@ -186,10 +194,14 @@ export default genI18nMessages({
                     '例如：效能的優化、工具的內部實作可能會在此難易度。',
             },
         ],
+
+        terms: {
+            cfp: '投稿募集',
+        },
         og: {
             title: '如何投稿演講？',
             description:
-                '首先，感謝您投稿 PyCon Taiwan 2023！下面的內容將會幫助您成功地送出一份投稿。' +
+                '首先，感謝您投稿 PyCon Taiwan 2024！下面的內容將會幫助您成功地送出一份投稿。' +
                 '我們將會提供一些訣竅使得您的投稿資訊更加完整豐富且具吸引力，並有更高的機率通過審稿。' +
                 '從大方向來說，在投稿之前將從下面幾個方面與問題展開您的思路',
         },
