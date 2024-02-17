@@ -14,8 +14,8 @@ export default genI18nMessages({
                 descriptions: [
                     'PyCon Taiwan is dedicated to providing a harassment-free conference ' +
                         'experience for everyone. We do not tolerate harassment toward conference ' +
-                        'participants in any form.Remember that harassment and jokes that are sexist, ' +
-                        'racist, or exclusionary are not tolerated at PyCon Taiwan. PyCon Taiwan take ' +
+                        'participants in any form. Remember that harassment and jokes that are sexist, ' +
+                        'racist, or exclusionary are not tolerated at PyCon Taiwan. PyCon Taiwan takes ' +
                         'appropriate actions to redirect behavior violating the Code of Conduct.',
                 ],
                 list: [
@@ -40,7 +40,7 @@ export default genI18nMessages({
                                 'Users of Python are diverse in their professional roles, technical backgrounds, ' +
                                 'and application areas. They contribute to the technology in many different ways, ' +
                                 'some amazingly unimaginable. Opinions or actions that undervalue other members of ' +
-                                'the community are inappropriate and will not be tolerated. ',
+                                'the community are inappropriate and will not be tolerated.',
                         ],
                     },
                     {
@@ -77,12 +77,10 @@ export default genI18nMessages({
                     {
                         title: 'How to Report',
                         descriptions: [
-                            'In the event where there is conflict of interest, you may directly contact any of the lead incident responders:',
+                            'In the event of a conflict of interest, feel free to contact the official lead incident responders directly:',
                         ],
                         list: [
                             'Committee of Incident Response, PyCon Taiwan (report@python.tw)',
-                            'Winnie (Chairperson of PyCon TW 2023, winniepopu@python.tw)',
-                            'Pochun (Chairperson PyCon TW 2023, pochunlu@python.tw)',
                         ],
                     },
                     {
@@ -158,7 +156,7 @@ export default genI18nMessages({
                     'PyCon Taiwan 致力於為所有人提供無騷擾的會議體驗（包含數位場域），我們不容許以任何形式騷擾任何參與者。' +
                         '期望大家一起合作，務必遵守以下三大原則，PyCon Taiwan 籌備團隊有權調整任何違反此準則的行為。',
                 ],
-                list: ['禁止騷擾言行', '彼此欣賞', '體貼他人'],
+                list: ['禁止騷擾', '彼此欣賞', '體貼他人'],
                 subtitle: [
                     {
                         title: '禁止騷擾',
@@ -200,12 +198,10 @@ export default genI18nMessages({
                     {
                         title: '如何通報',
                         descriptions: [
-                            '如果發生衝突，可以直接聯繫任一通報應變者：',
+                            '如果發生衝突，可以直接聯繫官方通報應變者：',
                         ],
                         list: [
                             'PyCon Taiwan 事件通報應變委員會 (report@python.tw)',
-                            'Winnie (PyCon TW 2023 大會主席, winniepopu@python.tw)',
-                            'Pochun (PyCon TW 2023 大會主席, pochunlu@python.tw)',
                         ],
                     },
                     {
