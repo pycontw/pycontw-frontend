@@ -75,7 +75,16 @@
                                             "
                                         />
                                     </div>
-                                    <ol class="ml-4 list-decimal">
+                                    <ol
+                                        v-if="subtitle && subtitle.list"
+                                        class="ml-4"
+                                        :class="{
+                                            'list-decimal':
+                                                subtitle.list.length > 1,
+                                            'list-disc':
+                                                subtitle.list.length === 1,
+                                        }"
+                                    >
                                         <li
                                             v-for="(
                                                 li, liIndex
