@@ -62,8 +62,11 @@
                                 </template>
                                 <template #right-col>
                                     <i18n
-                                        :key="`coc.${i}.subtitle.${subtitleIndex}.descriptions[0]`"
-                                        :path="`contents.${i}.subtitle.${subtitleIndex}.descriptions[0]`"
+                                        v-for="(
+                                            _, subtitleDescriptionIndex
+                                        ) in subtitle.descriptions"
+                                        :key="`coc.${i}.subtitle.${subtitleIndex}.descriptions.${subtitleDescriptionIndex}`"
+                                        :path="`contents.${i}.subtitle.${subtitleIndex}.descriptions.${subtitleDescriptionIndex}`"
                                         tag="p"
                                     >
                                         <template #process>
