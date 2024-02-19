@@ -137,12 +137,15 @@ export default genI18nMessages({
                     {
                         title: 'Notes',
                         descriptions: [
-                            'This procedure has been adapted from the PyCon Procedure for Incident Handling.',
+                            'This procedure has been adapted from the {process}.',
                         ],
                     },
                 ],
             },
         ],
+        terms: {
+            process: 'PyCon Procedure for Incident Handling',
+        },
     },
     'zh-hant': {
         title: '行為準則',
@@ -242,12 +245,13 @@ export default genI18nMessages({
                     },
                     {
                         title: '備註',
-                        descriptions: [
-                            '以上通報流程改寫自 PyCon 通報行為準則事件處理流程。',
-                        ],
+                        descriptions: ['以上通報流程改寫自 {process}。'],
                     },
                 ],
             },
         ],
+        terms: {
+            process: 'PyCon 通報行為準則事件安處理流程',
+        },
     },
 })
