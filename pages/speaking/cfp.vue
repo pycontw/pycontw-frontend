@@ -248,6 +248,10 @@ export default {
         previousConfLinks() {
             return [
                 [
+                    'PyCon Taiwan 2023',
+                    `https://tw.pycon.org/2023/zh-hant/conference/schedule`,
+                ],
+                [
                     'PyCon APAC 2022',
                     `https://tw.pycon.org/2022/zh-hant/conference/schedule`,
                 ],
