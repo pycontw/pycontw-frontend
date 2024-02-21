@@ -120,6 +120,7 @@ export default {
     },
     data() {
         return {
+            div: null,
             info: [
                 {
                     tag: 'importantDates',
