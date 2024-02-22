@@ -61,20 +61,24 @@
                                     <h2>{{ subtitle.title }}</h2>
                                 </template>
                                 <template #right-col>
-                                    <div
+                                    <i18n
                                         v-for="(
-                                            description, index
+                                            _, subtitleDescriptionIndex
                                         ) in subtitle.descriptions"
-                                        :key="'description-' + index"
+                                        :key="`coc.${i}.subtitle.${subtitleIndex}.descriptions.${subtitleDescriptionIndex}`"
+                                        :path="`contents.${i}.subtitle.${subtitleIndex}.descriptions.${subtitleDescriptionIndex}`"
+                                        tag="p"
                                     >
-                                        <p>{{ description }}</p>
-                                        <br
-                                            v-if="
-                                                index !==
-                                                subtitle.descriptions.length - 1
-                                            "
-                                        />
-                                    </div>
+                                        <template #process>
+                                            <ext-link
+                                                href="https://github.com/python/pycon-code-of-conduct/blob/master/Attendee%20Procedure%20for%20incident%20handling.md"
+                                                highlight
+                                                >{{
+                                                    $t('terms.process')
+                                                }}</ext-link
+                                            >
+                                        </template>
+                                    </i18n>
                                     <ol
                                         v-if="subtitle && subtitle.list"
                                         class="ml-4"
@@ -129,6 +133,7 @@ import i18n from '@/i18n/about/code-of-conduct.i18n'
 import AboutBanner from '@/static/img/about/Banner.svg'
 import Banner from '@/components/core/layout/Banner'
 import CoreH1 from '@/components/core/titles/H1'
+import ExtLink from '@/components/core/links/ExtLink.vue'
 import IntroImg1 from '@/static/img/about/code-of-conduct/Intro-1.png'
 import IntroImg2 from '@/static/img/about/code-of-conduct/Intro-2.png'
 import IntroImg3 from '@/static/img/about/code-of-conduct/Intro-3.png'
@@ -148,6 +153,7 @@ export default {
         I18nPageWrapper,
         CoreH1,
         Banner,
+        ExtLink,
         TwoColWrapper,
     },
     data() {
