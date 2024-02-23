@@ -86,7 +86,7 @@
                                     )"
                                     :key="`info.${section.tag}.steps[${stepIndex}].description.${index}`"
                                     :path="`info.${section.tag}.steps[${stepIndex}].description.${index}`"
-                                    :tag="div"
+                                    tag="div"
                                 >
                                 </i18n>
                             </template>
