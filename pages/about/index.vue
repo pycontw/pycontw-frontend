@@ -53,7 +53,7 @@
                     <template #activityNumber>
                         <span
                             class="section-description section-description--highlight"
-                            >7</span
+                            >6</span
                         >
                     </template>
                 </i18n>
