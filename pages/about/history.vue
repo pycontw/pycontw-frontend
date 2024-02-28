@@ -173,6 +173,14 @@
                         class="history__paragraph-content"
                         path="pycon2023.content"
                     ></i18n>
+                    <p class="history__paragraph-title">
+                        {{ $t('pycon2024.title') }}
+                    </p>
+                    <i18n
+                        tag="p"
+                        class="history__paragraph-content"
+                        path="pycon2024.content"
+                    ></i18n>
                 </div>
                 <div
                     class="hidden flex-1 flex-col items-center justify-between md:flex"
