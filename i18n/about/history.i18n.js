@@ -4,13 +4,11 @@ export default genI18nMessages({
     'en-us': {
         title: 'History of PyCon Taiwan',
         pageAbstract:
-            'After two years of anticipation, PyCon Taiwan returns to the physical conference for the first time. ' +
-            'We have invited past chairs and significant guests to participate in video projects, ' +
-            'celebrating the 11th anniversary of PyCon Taiwan. ' +
-            'This year also marks the first time we are hosting a Panel Discussion, ' +
-            'inviting three influential speakers to explore the inspiration and impact of generative AI on Python developers. ' +
-            'Additionally, we have prepared distinctive conference merchandise. ' +
-            'We hope PyCon Taiwan will provide participants with an unforgettable learning and networking experience.',
+            'PyCon Taiwan, following its expansion beyond Taipei in 2020, ' +
+            'is once again breaking geographical boundaries and moving southward to Kaohsiung. ' +
+            'This year, we aim to provide attendees from all corners of Taiwan ' +
+            'and around the world with an immersive experience in the vibrant city of Kaohsiung, ' +
+            'fostering even more brilliant collaborations with the local community.',
         beforePyCon: {
             title: 'Before PyCon Taiwan',
             pyctw2008: '2008 PyCTW',
@@ -129,6 +127,15 @@ export default genI18nMessages({
                 'Furthermore, we have invited past chairs and Keynote speakers to record documentaries and ' +
                 'promotional videos and host panel discussions to infuse the Python community with innovative ideas and energy.',
         },
+        pycon2024: {
+            title: '2024 “Connection”',
+            content:
+                'Last year, PyCon Taiwan guided attendees back to physical conferences from the virtual world. ' +
+                'In PyCon Taiwan 2024, we’re taking attendees to Kaohsiung! ' +
+                'Drawing inspiration from other Python Conferences worldwide, this year’s program ' +
+                'introduces Poster Sessions to bridge the gap between speakers and attendees. ' +
+                'We aim to foster closer connections through face-to-face discussions, sparking creativity and exchanging ideas.',
+        },
         terms: {
             communityTrack: 'Community Track',
         },
@@ -136,10 +143,8 @@ export default genI18nMessages({
     'zh-hant': {
         title: 'PyCon Taiwan 年會歷史',
         pageAbstract:
-            'PyCon Taiwan 經歷兩年的等待後，首次回歸實體年會舞台。' +
-            '我們邀請歷屆主席和重要嘉賓參與影片企劃，一同慶祝 PyCon Taiwan 十一週年，' +
-            '同時舉辦 Panel Discussion，邀請三位極具影響力的講者，探討生成式 AI 對於 Python 開發者的啟發與影響。' +
-            '此外，我們也準備了獨具特色的年會周邊紀念品。希望 PyCon Taiwan 能為參與者帶來難忘的學習與交流體驗。',
+            'PyCon Taiwan 繼 2020 年後，再次嘗試突破地域限制走出台北前進南台灣——高雄。' +
+            '在今年我們希望讓來自台灣各地、世界各國的會眾體驗熱情的港都高雄，與在地的社群產生更絢麗的火花。',
         beforePyCon: {
             title: 'PyCon Taiwan 之前',
             pyctw2008: '2008 PyCTW',
@@ -226,6 +231,13 @@ export default genI18nMessages({
                 '今年，我們重新回到中研院舉辦實體年會，並搭配數個線下活動 meetup 及 sprints，' +
                 '讓會眾們能夠直接與講者/專案主持人互動，再次感受人與人之間交流的溫度，' +
                 '同時也邀請歷屆主席與 Keynote 錄製紀錄片與宣傳片，並舉辦 Panel，為 Python 社群帶來更多創新想法與能量。',
+        },
+        pycon2024: {
+            title: '2024 連結',
+            content:
+                '去年 PyCon Taiwan 帶會眾們從虛擬重返實體，今年 PyCon Taiwan 2024 將帶著會眾們前進高雄！' +
+                '議程活動上持續向其他國家 Python Conference 取經，引入 Posters Sessions 的環節，' +
+                '期待拉近講者與會眾間的距離，透過面對面的討論為彼此帶來更多的創意與想法。',
         },
         terms: {
             communityTrack: '社群體驗式議程軌',
