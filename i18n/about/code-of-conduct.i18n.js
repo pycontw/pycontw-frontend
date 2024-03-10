@@ -251,7 +251,7 @@ export default genI18nMessages({
             },
         ],
         terms: {
-            process: 'PyCon 通報行為準則事件安處理流程',
+            process: 'PyCon 通報行為準則事件處理流程',
         },
     },
 })
