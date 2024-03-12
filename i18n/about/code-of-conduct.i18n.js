@@ -143,8 +143,20 @@ export default genI18nMessages({
                 ],
             },
         ],
+        authorization: {
+            title: 'License (CC BY-SA 3.0 TW)',
+            description:
+                'This document is licensed under an {license} license.',
+            label: 'https://i.imgur.com/cVjN760.jpg',
+            content:
+                'The Privacy Policy of PyCon Taiwan will be effective February 2nd, 2024. ' +
+                'However, due to the rapidly changing social and legal environment and ' +
+                'the continual advancement in technology, we reserve the right to modify this ' +
+                'privacy policy at any time and will announce any update when available. Thank you.',
+        },
         terms: {
             process: 'PyCon Procedure for Incident Handling',
+            license: 'Attribution-ShareAlike 3.0 Taiwan',
         },
     },
     'zh-hant': {
@@ -250,8 +262,16 @@ export default genI18nMessages({
                 ],
             },
         ],
+        authorization: {
+            title: '授權 (CC BY-SA 3.0 TW)',
+            description: '此文件採用 {license} 授權條款。',
+            content:
+                '本個人資料保護聲明從 2024 年 02 月 02 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，' +
+                '為保護客戶個人資料安全及隱私，我們將隨時修改這份公告聲明，並將儘速更新與公告予您，感謝。',
+        },
         terms: {
             process: 'PyCon 通報行為準則事件處理流程',
+            license: '姓名標示-相同方式分享 3.0 台灣',
         },
     },
 })

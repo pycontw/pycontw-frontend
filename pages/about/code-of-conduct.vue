@@ -122,6 +122,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="authorization">
+                    <div>
+                        <i18n
+                            path="authorization.title"
+                            tag="h2"
+                            class="authorizationTitle"
+                        >
+                        </i18n>
+                    </div>
+                    <div>
+                        <i18n
+                            path="authorization.description"
+                            tag="p"
+                            class="authorizationDescription"
+                        >
+                            <template #br><br /></template>
+                            <template #license>
+                                <ext-link
+                                    href="https://creativecommons.org/licenses/by-sa/3.0/tw/deed.zh_TW"
+                                    highlight
+                                    >{{ $t(`terms.license`) }}
+                                </ext-link>
+                            </template>
+                        </i18n>
+                    </div>
+                    <div>
+                        <img
+                            :src="authorizationIcon"
+                            class="authorizationLabel"
+                        />
+                    </div>
+                    <i18n
+                        path="authorization.content"
+                        tag="p"
+                        class="authorizationContent"
+                    >
+                        <template #br><br /></template>
+                    </i18n>
+                </div>
             </div>
         </I18nPageWrapper>
     </div>
@@ -163,6 +202,7 @@ export default {
             sub1: [Icon1, Icon2, Icon3],
             sub2_zh: [ProcedureZh, ProcedureZhRwd],
             sub2_en: [ProcedureEn, ProcedureEnRwd],
+            authorizationIcon: require('~/static/img/footer/ccby-sa3_0.svg'),
         }
     },
     computed: {
@@ -230,38 +270,63 @@ export default {
 .paragraph-title {
     @apply mb-8 mt-8 text-left text-center font-serif text-2xl font-bold text-pink-700;
 }
+
 @media (min-width: 768px) {
     .paragraph-title {
         @apply text-3xl;
     }
 }
+
 .img_text {
     @apply absolute mt-24 whitespace-nowrap text-center text-sm;
 }
+
 @media (max-width: 640px) {
     .img_text {
         @apply sm:mt-20;
     }
 }
+
 @media (max-width: 768px) {
     .img_text {
         @apply whitespace-normal text-xs;
     }
 }
+
 .sub1_img {
     @apply mx-2 my-3 h-96 w-full bg-contain bg-no-repeat md:mx-5 md:h-96;
 }
+
 .sub2_img {
     @apply mx-2 my-2 hidden bg-no-repeat md:mx-5;
     width: 30rem;
     height: 40rem;
 }
+
 @media (max-width: 640px) {
     .sub1_img {
         @apply hidden;
     }
+
     .sub2_img {
         @apply -ml-6 -mr-6 flex;
     }
+}
+
+.authorization {
+    @apply text-center;
+}
+.authorizationTitle {
+    @apply mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-left md:text-xl;
+    @apply text-center;
+}
+.authorizationDescription {
+    @apply text-center text-xs md:text-sm;
+}
+.authorizationLabel {
+    @apply m-auto w-64 md:w-80;
+}
+.authorizationContent {
+    @apply text-center text-xs md:text-sm;
 }
 </style>
