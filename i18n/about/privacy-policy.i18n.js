@@ -105,7 +105,7 @@ export default genI18nMessages({
                 'This document is licensed under an {license} license.',
             label: 'https://i.imgur.com/cVjN760.jpg',
             content:
-                'The Privacy Policy of PyCon Taiwan will be effective January 1st, 2023. ' +
+                'The Privacy Policy of PyCon Taiwan will be effective February 2nd, 2024. ' +
                 'However, due to the rapidly changing social and legal environment and ' +
                 'the continual advancement in technology, we reserve the right to modify this ' +
                 'privacy policy at any time and will announce any update when available. Thank you.',
@@ -206,7 +206,7 @@ export default genI18nMessages({
             title: '授權 (CC BY-SA 3.0 TW)',
             description: '此文件採用 {license} 授權條款。',
             content:
-                '本個人資料保護聲明從 2023 年 01 月 01 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，' +
+                '本個人資料保護聲明從 2024 年 02 月 02 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，' +
                 '為保護客戶個人資料安全及隱私，我們將隨時修改這份公告聲明，並將儘速更新與公告予您，感謝。',
         },
         question:
