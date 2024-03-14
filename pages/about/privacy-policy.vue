@@ -46,7 +46,16 @@
                     tag="p"
                 />
             </div>
-            <div class="authorization">
+            <div class="pt-8">
+                <i18n path="question" tag="p" class="question">
+                    <template #contact>
+                        <ext-link href="mailto:organizers@python.tw" highlight
+                            >{{ $t(`terms.contact`) }}
+                        </ext-link>
+                    </template>
+                </i18n>
+            </div>
+            <div class="authorization pb-5">
                 <div>
                     <i18n
                         path="authorization.title"
@@ -80,15 +89,6 @@
                     class="authorizationContent"
                 >
                     <template #br><br /></template>
-                </i18n>
-            </div>
-            <div class="pt-8">
-                <i18n path="question" tag="p" class="question">
-                    <template #contact>
-                        <ext-link href="mailto:organizers@python.tw" highlight
-                            >{{ $t(`terms.contact`) }}
-                        </ext-link>
-                    </template>
                 </i18n>
             </div>
         </i18n-page-wrapper>
