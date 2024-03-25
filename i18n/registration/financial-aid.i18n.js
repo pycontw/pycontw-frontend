@@ -24,19 +24,28 @@ export default genI18nMessages({
             {
                 title: 'Auxiliary Items',
                 content:
-                    'The Financial Aid accepts conference fees and travel compensation but may be reduced based on the number of applicants.',
+                    'The financial aid auxiliary items encompass conference fees, ' +
+                    'travel grants, transit provisions including Taiwan High Speed Rail ' +
+                    'and Taiwan Railway passes, economy-class airfare to/from ' +
+                    'any Taiwanese airport, and accommodation expenses.',
             },
             {
                 title: 'Reimbursement',
                 content:
-                    'PyCon TW will e-mail you the discount code for registration ' +
-                    'if your application is accepted.',
+                    'Once your PyCon TW application is accepted, you will receive a ' +
+                    'discount code via email for conference registration. After registering, ' +
+                    'you can seek reimbursement for approved travel expenses by submitting ' +
+                    'your receipt at the reception desk of the venue. We will process your ' +
+                    'reimbursement promptly, ensuring you are reimbursed for your ' +
+                    'approved travel costs.',
             },
-            {
-                title: 'Deadline',
-                content:
-                    'The Financial Aid Program will be closed on July 1st (15:30 UTC).',
-            },
+        ],
+        applicationDeadline: 'Deadline',
+        DeadlineContent: [
+            '2024-03-24 23:59 (TST) Financial aid application opens.',
+            '2024-06-17 23:59 (TST) Financial aid application closes.',
+            '2024-06-23 23:59 (TST) Financial aid application review results announcement.',
+            '2024-09-21 18:00 (TST) Disbursement sessions at PyCon TW.',
         ],
         applicationHowTo: 'Application Process',
         remarkTitle: 'Remarks',
@@ -77,17 +86,25 @@ export default genI18nMessages({
             },
             {
                 title: '補助項目',
-                content: '大會門票及交通補助（補助金額依審核結果決定）',
+                content:
+                    '我們提供多項補助項目，包括大會門票交通補助（補助金額依審核結果決定）' +
+                    '交通補助涵蓋高鐵和台鐵費用，而機票費用則涵蓋經濟艙的飛機票。此外，' +
+                    '我們也提供住宿費用的補助。',
             },
             {
                 title: '領取方式',
                 content:
-                    '大會將寄送 KKTIX 優惠碼，請至 KKTIX 上使用優惠碼購票。',
+                    '一旦您的 FA 申請被接受，我們會通過電子郵件給您發送會議註冊的折扣碼。註冊後，' +
+                    '您就有資格報銷已批准的差旅費用。只需將旅行費用收據副本提交到會場的接待處，' +
+                    '我們將根據您提供的收據為您進行報銷，確保您獲得已批准的旅行費用的退款。',
             },
-            {
-                title: '受理期限',
-                content: '即日起至 2023 年 7 月  1 日 23:30 （台北時間）截止。',
-            },
+        ],
+        applicationDeadline: '受理期限',
+        DeadlineContent: [
+            '2024-03-24 23:59 (台北時間) 開始接受財務補助',
+            '2024-06-17 23:59 (台北時間) 財務補助申請截止',
+            '2024-06-23 23:59 (台北時間) 財務補助審查結果通知',
+            '2024-09-21 18:00 (台北時間) 大會當場支付',
         ],
         applicationHowTo: '申請流程',
         remarkTitle: '備註',
