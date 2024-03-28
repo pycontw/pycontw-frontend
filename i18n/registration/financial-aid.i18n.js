@@ -17,7 +17,7 @@ export default genI18nMessages({
             {
                 title: 'Eligibility',
                 content:
-                    'The financial aid program is open to all contributors, attendees, students,' +
+                    'The financial aid program is open to all contributors, attendees, students, ' +
                     'and speakers and aims to provide assistance to ' +
                     'those who otherwise might not be able to attend the conference.',
             },
@@ -32,7 +32,7 @@ export default genI18nMessages({
             {
                 title: 'Reimbursement',
                 content:
-                    'Once your PyCon TW application is accepted, you will receive a ' +
+                    'Once your financial aid application is accepted, you will receive a ' +
                     'discount code via email for conference registration. After registering, ' +
                     'you can seek reimbursement for approved travel expenses by submitting ' +
                     'your receipt at the reception desk of the venue. We will process your ' +
@@ -40,7 +40,7 @@ export default genI18nMessages({
                     'approved travel costs.',
             },
         ],
-        applicationDeadline: 'Deadline',
+        applicationDeadline: 'Timeline',
         DeadlineContent: [
             '2024-03-24 23:59 (TST) Financial aid application opens.',
             '2024-06-17 23:59 (TST) Financial aid application closes.',
@@ -99,7 +99,7 @@ export default genI18nMessages({
                     '我們將根據您提供的收據為您進行報銷，確保您獲得已批准的旅行費用的退款。',
             },
         ],
-        applicationDeadline: '受理期限',
+        applicationDeadline: '財務補助時程',
         DeadlineContent: [
             '2024-03-24 23:59 (台北時間) 開始接受財務補助',
             '2024-06-17 23:59 (台北時間) 財務補助申請截止',
