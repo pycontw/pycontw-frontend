@@ -24,6 +24,22 @@
                 </template>
             </two-col-wrapper>
 
+            <two-col-wrapper>
+                <template #default>
+                    <p>{{ $t('applicationDeadline') }}</p>
+                </template>
+                <template #right-col>
+                    <ul class="list-disc">
+                        <li
+                            v-for="(content, i) in $t('DeadlineContent')"
+                            :key="`application_deadline_content_${i}`"
+                        >
+                            {{ content }}
+                        </li>
+                    </ul>
+                </template>
+            </two-col-wrapper>
+
             <two-col-wrapper class="spacing">
                 <template #default>
                     <p>{{ $t('remarkTitle') }}</p>
@@ -33,7 +49,7 @@
                         <i18n path="fillFormProcess" tag="li">
                             <template #form>
                                 <ext-link
-                                    href="https://lihi1.com/433eL"
+                                    href="https://forms.gle/PBu5k6HHNanEkCd47"
                                     highlight
                                     underline
                                     >{{ $t('form') }}</ext-link
