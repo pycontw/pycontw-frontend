@@ -1,8 +1,10 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <p class="intro">{{ $t('intro') }}</p>
-        <div class="container">
+        <div class="mb-[50px]">
+            <i18n path="intro" tag="div"></i18n>
+        </div>
+        <div>
             <two-col-wrapper
                 v-for="(field, i) in $t('plainTextFields')"
                 :key="`financial_plain_text_field_${i}`"
@@ -155,11 +157,7 @@ export default {
 }
 
 .bg-img {
-    @apply mt-4 bg-contain bg-left bg-no-repeat pt-20 lg:pt-52;
-}
-
-.container {
-    @apply mx-auto w-full lg:w-9/12;
+    @apply mt-4 bg-contain bg-left bg-no-repeat pt-40 lg:pt-52;
 }
 
 .spacing {
