@@ -1,8 +1,10 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <p class="intro">{{ $t('intro') }}</p>
-        <div class="container">
+        <div class="mb-[50px]">
+            <i18n path="intro" tag="div"></i18n>
+        </div>
+        <div>
             <two-col-wrapper
                 v-for="(field, i) in $t('plainTextFields')"
                 :key="`financial_plain_text_field_${i}`"
@@ -24,6 +26,22 @@
                 </template>
             </two-col-wrapper>
 
+            <two-col-wrapper>
+                <template #default>
+                    <p>{{ $t('applicationDeadline') }}</p>
+                </template>
+                <template #right-col>
+                    <ul class="list-disc">
+                        <li
+                            v-for="(content, i) in $t('DeadlineContent')"
+                            :key="`application_deadline_content_${i}`"
+                        >
+                            {{ content }}
+                        </li>
+                    </ul>
+                </template>
+            </two-col-wrapper>
+
             <two-col-wrapper class="spacing">
                 <template #default>
                     <p>{{ $t('remarkTitle') }}</p>
@@ -33,7 +51,7 @@
                         <i18n path="fillFormProcess" tag="li">
                             <template #form>
                                 <ext-link
-                                    href="https://lihi1.com/433eL"
+                                    href="https://forms.gle/PBu5k6HHNanEkCd47"
                                     highlight
                                     underline
                                     >{{ $t('form') }}</ext-link
@@ -139,11 +157,7 @@ export default {
 }
 
 .bg-img {
-    @apply mt-4 bg-contain bg-left bg-no-repeat pt-20 lg:pt-52;
-}
-
-.container {
-    @apply mx-auto w-full lg:w-9/12;
+    @apply mt-4 bg-contain bg-left bg-no-repeat pt-40 lg:pt-52;
 }
 
 .spacing {
