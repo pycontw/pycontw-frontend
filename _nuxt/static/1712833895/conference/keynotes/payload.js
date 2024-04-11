@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/conference/keynotes", {data:[{keynotesData:[]}],fetch:{},mutations:[["setKeynotesData",[]]]});
