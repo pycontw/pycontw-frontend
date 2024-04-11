@@ -55,6 +55,7 @@ export const actions = {
     },
     async $getSchedulesData({ commit }) {
         const { data } = await this.$http.$get('/api/events/schedule/')
+        if (!data) return
         commit('setSchedulesData', data)
     },
     async $getKeynotesData({ commit }) {
