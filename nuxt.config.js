@@ -17,25 +17,18 @@ export default {
                     `${DEFAULT_BASE_URL}/api/events/speeches/?event_types=talk,sponsored`,
                     config,
                 )
-                .catch((error) => {
-                    if (error.response.status === 404) {
-                        return { data: [] }
-                    }
+                .catch((error) => { // eslint-disable-line
+                    return { data: [] }
                 })
             const tutorials = await axios
                 .get(
                     `${DEFAULT_BASE_URL}/api/events/speeches/?event_types=tutorial`,
                     config,
                 )
-                .catch((error) => {
-                    if (error.response.status === 404) {
-                        return { data: [] }
-                    }
+                .catch((error) => { // eslint-disable-line
+                    return { data: [] }
                 })
             const getAllDetailTalks = async () => {
-                if (!talks.data) {
-                    return []
-                }
                 const data = await Promise.all(
                     talks.data.map(async (talk) => {
                         return await axios
@@ -49,9 +42,6 @@ export default {
                 return data
             }
             const getAllDetailTutorials = async () => {
-                if (!tutorials.data) {
-                    return []
-                }
                 const data = await Promise.all(
                     tutorials.data.map(async (tutorial) => {
                         return await axios

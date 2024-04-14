@@ -55,7 +55,7 @@ export const actions = {
     },
     async $getSchedulesData({ commit }) {
         const { data } = await this.$http.$get('/api/events/schedule/')
-        if (!data) return
+        if (!data) return // FIXME: should be removed after API fixed
         commit('setSchedulesData', data)
     },
     async $getKeynotesData({ commit }) {
