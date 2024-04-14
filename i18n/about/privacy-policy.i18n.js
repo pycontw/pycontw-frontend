@@ -100,10 +100,9 @@ export default genI18nMessages({
             },
         ],
         authorization: {
-            title: 'License (CC BY-SA 3.0 TW)',
+            title: 'License {licenseTitle}',
             description:
                 'This document is licensed under an {license} license.',
-            label: 'https://i.imgur.com/cVjN760.jpg',
             content:
                 'The Privacy Policy of PyCon Taiwan will be effective February 2nd, 2024. ' +
                 'However, due to the rapidly changing social and legal environment and ' +
@@ -114,7 +113,6 @@ export default genI18nMessages({
             'If you have any questions regarding the gathering and usage of your personal information, ' +
             'please feel free to contact us at {contact}',
         terms: {
-            contact: 'organizers@python.tw.',
             MeetingManagement: 'Personal Information Protection Act 130',
             license: 'Attribution-ShareAlike 3.0 Taiwan',
         },
@@ -203,7 +201,7 @@ export default genI18nMessages({
             },
         ],
         authorization: {
-            title: '授權 (CC BY-SA 3.0 TW)',
+            title: '授權 {licenseTitle}',
             description: '此文件採用 {license} 授權條款。',
             content:
                 '本個人資料保護聲明從 2024 年 02 月 02 日起開始生效，惟為因應社會環境及法令的變遷與科技的進步，' +
@@ -212,7 +210,6 @@ export default genI18nMessages({
         question:
             '如果您對於我們的隱私權保護政策或是有個人資料蒐集、利用、更新等問題，請來信 {contact}。',
         terms: {
-            contact: 'organizers@python.tw.',
             MeetingManagement: '其法定特定目的為一三〇會議管理',
             license: '姓名標示-相同方式分享 3.0 台灣',
         },

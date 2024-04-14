@@ -49,8 +49,8 @@
             <div class="pt-8">
                 <i18n path="question" tag="p" class="question">
                     <template #contact>
-                        <ext-link href="mailto:organizers@python.tw" highlight
-                            >{{ $t(`terms.contact`) }}
+                        <ext-link href="mailto:organizers@python.tw" highlight>
+                            organizers@python.tw.
                         </ext-link>
                     </template>
                 </i18n>
@@ -62,6 +62,9 @@
                         tag="h2"
                         class="authorizationTitle"
                     >
+                        <template v-slot:licenseTitle>
+                            (CC BY-SA 3.0 TW)
+                        </template>
                     </i18n>
                 </div>
                 <div>
