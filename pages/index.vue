@@ -146,7 +146,7 @@ export default {
         Intro,
     },
     async asyncData({ store, payload }) {
-        if (payload) return { sponsorsData: payload }
+        // if (payload) return { sponsorsData: payload }
         await store.dispatch('$getSponsorsData')
         const sponsorsData = store.state.sponsorsData
         return {
@@ -163,7 +163,6 @@ export default {
     },
     fetchOnServer: false,
     computed: {
-        // ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
