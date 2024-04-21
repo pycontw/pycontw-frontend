@@ -78,12 +78,13 @@ export default genI18nMessages({
                 tag: 'nantou',
                 title: 'Nantou - Nantou.py',
                 description:
-                    'Led by the Vice President of Nan Kai University of Technology, ' +
-                    'Prof. Cheng-Min Lin, Nantou.py has regularly held a monthly meeting at ' +
-                    '768 Art Space to share the latest information and newest experiences ' +
-                    'with all the Python lovers in central Taiwan. ' +
-                    'Members have contributed their efforts to bring along industry connection ' +
-                    'as well as a selfless and boundless location or all the Python learners.',
+                    'Founded by Prof. Cheng-Min Lin, Vice President of Nan Kai University of Technology, ' +
+                    'towards the end of 2019, Nantou.py was later handed over to Huang Jun-Yu in 2024, ' +
+                    'a native of Zhushan, Nantou. Jyun-Yu, also an active contributor to open-source projects, ' +
+                    'frequently shares his side projects through community events and workshops.' +
+                    'In a region often referred to as a "technology desert," this group of dedicated ' +
+                    'Python enthusiasts provides a selfless ' +
+                    'and limitless learning environment for those interested in Python.',
             },
             {
                 tag: 'pyladiestw',
@@ -175,8 +176,8 @@ export default genI18nMessages({
                 title: '南投 - Nantou.py',
                 description:
                     '2019年底，南開科技大學副校長林正敏教授，創立了 Nantou.py。' +
-                    '聚會地點在草屯768藝術空間，固定每月舉行分享會，來自各地的大夥也無私地向大家分享技術。' +
-                    '在南投人稱科技沙漠的地區，有著這一群人為python貢獻己力，' +
+                    '2024年由南投竹山長大的黃俊毓接棒。黃召集也是一名的開放原始碼專案貢獻者，' +
+                    '經常透過社群或研討會分享 side projects。在南投人稱科技沙漠的地區，有著這一群人為 python 貢獻己力，' +
                     '並為有意學習的大家，帶來一場無私、無限的學習地。',
             },
             {
