@@ -42,6 +42,18 @@ export default genI18nMessages({
                     'Fengjia Night Market after the event.',
             },
             {
+                tag: 'nantou',
+                title: 'Nantou - Nantou.py',
+                description:
+                    'Founded by Prof. Cheng-Min Lin, Vice President of Nan Kai University of Technology, ' +
+                    'towards the end of 2019, Nantou.py was later handed over to Huang Jun-Yu in 2024, ' +
+                    'a native of Zhushan, Nantou. Jyun-Yu, also an active contributor to open-source projects, ' +
+                    'frequently shares his side projects through community events and workshops.' +
+                    'In a region often referred to as a "technology desert," this group of dedicated ' +
+                    'Python enthusiasts provides a selfless ' +
+                    'and limitless learning environment for those interested in Python.',
+            },
+            {
                 tag: 'tainan',
                 title: 'Tainan - Tainan.py',
                 description:
@@ -73,18 +85,6 @@ export default genI18nMessages({
                     'With the willingness of Mosky, Hualien.py started smoothly in 2014. ' +
                     'In the current form of gatherings, apart from speech sharing, ' +
                     'there are also free gatherings and workshops on specific topics.',
-            },
-            {
-                tag: 'nantou',
-                title: 'Nantou - Nantou.py',
-                description:
-                    'Founded by Prof. Cheng-Min Lin, Vice President of Nan Kai University of Technology, ' +
-                    'towards the end of 2019, Nantou.py was later handed over to Huang Jun-Yu in 2024, ' +
-                    'a native of Zhushan, Nantou. Jyun-Yu, also an active contributor to open-source projects, ' +
-                    'frequently shares his side projects through community events and workshops.' +
-                    'In a region often referred to as a "technology desert," this group of dedicated ' +
-                    'Python enthusiasts provides a selfless ' +
-                    'and limitless learning environment for those interested in Python.',
             },
             {
                 tag: 'pyladiestw',
@@ -147,6 +147,15 @@ export default genI18nMessages({
                     '剛好可以在聚會結束後，到附近的逢甲夜市散步、覓食。',
             },
             {
+                tag: 'nantou',
+                title: '南投 - Nantou.py',
+                description:
+                    '2019年底，南開科技大學副校長林正敏教授，創立了 Nantou.py。' +
+                    '2024年由南投竹山長大的黃俊毓接棒。黃召集也是一名的開放原始碼專案貢獻者，' +
+                    '經常透過社群或研討會分享 side projects。在南投人稱科技沙漠的地區，有著這一群人為 python 貢獻己力，' +
+                    '並為有意學習的大家，帶來一場無私、無限的學習地。',
+            },
+            {
                 tag: 'tainan',
                 title: '台南 - Tainan.py',
                 description:
@@ -170,15 +179,6 @@ export default genI18nMessages({
                     '2013年，魏澤人老師有感於東部較缺乏開源及技術社群，開始邀約各地的 Python 講者。' +
                     '在 Mosky 等人爽快答應下，花蓮.py 在 2014 年順利展開。現在花蓮本地的講者也越來越多了。' +
                     '目前聚會的形式，除了演講分享外，也常有自由聚會及特定主題的workshop。',
-            },
-            {
-                tag: 'nantou',
-                title: '南投 - Nantou.py',
-                description:
-                    '2019年底，南開科技大學副校長林正敏教授，創立了 Nantou.py。' +
-                    '2024年由南投竹山長大的黃俊毓接棒。黃召集也是一名的開放原始碼專案貢獻者，' +
-                    '經常透過社群或研討會分享 side projects。在南投人稱科技沙漠的地區，有著這一群人為 python 貢獻己力，' +
-                    '並為有意學習的大家，帶來一場無私、無限的學習地。',
             },
             {
                 tag: 'pyladiestw',
