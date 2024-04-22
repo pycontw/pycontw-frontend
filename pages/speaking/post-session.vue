@@ -2,16 +2,17 @@
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
         <div class="mb-[50px]">
-            <i18n path="intro" tag="div">
-                <template #talk>
-                    <locale-link to="/speaking/post-session" highlight>{{
-                        $t('terms.post-session')
-                    }}</locale-link>
-                </template>
+            <i18n
+                v-for="(content, i) in $t('intro')"
+                :key="`postSession_${i}`"
+                :path="`intro.${i}`"
+                tag="p"
+                class="postSession"
+            >
             </i18n>
         </div>
 
-        <div v-for="(section, i) in info" :key="`cfp.${i}`">
+        <div v-for="(section, i) in info" :key="`postSession.${i}`">
             <two-col-wrapper>
                 <div slot="default">
                     <i18n
@@ -105,11 +106,11 @@ import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import Steps from '@/components/core/steps/Steps.vue'
-import i18n from '@/i18n/speaking/cfp.i18n'
+import i18n from '@/i18n/speaking/post-session.i18n'
 
 export default {
     i18n,
-    name: 'PageSpeakingCfp',
+    name: 'PageSpeakingPostSession',
     components: {
         I18nPageWrapper,
         CoreH1,
@@ -152,68 +153,6 @@ export default {
                     ],
                 },
                 {
-                    tag: 'reviewProcess',
-                    isDescriptionList: false,
-                },
-                {
-                    tag: 'revise',
-                    isDescriptionList: false,
-                    links: [
-                        {
-                            slot: 'programEmail',
-                            textKey: 'terms.programEmail',
-                            url: 'mailto:program@python.tw',
-                            isExternalLink: true,
-                        },
-                    ],
-                },
-                {
-                    tag: 'post-session',
-                    isDescriptionList: false,
-                    links: [
-                        {
-                            slot: 'pyVideo',
-                            textKey: 'terms.pyVideo',
-                            url: 'https://pyvideo.org',
-                            isExternalLink: true,
-                        },
-                        {
-                            slot: 'post-session',
-                            textKey: 'terms.post-session',
-                            url: '/speaking/post-session',
-                            isExternalLink: false,
-                        },
-                        {
-                            slot: 'everyoneContributesPolicy',
-                            textKey: 'terms.everyoneContributesPolicy',
-                            url: 'https://pyfound.blogspot.com/2017/10/psfs-october-board-meeting.html',
-                            isExternalLink: true,
-                        },
-                    ],
-                },
-                {
-                    tag: 'talksDuration',
-                    isDescriptionList: false,
-                },
-                {
-                    tag: 'tutorialsDuration',
-                    isDescriptionList: false,
-                    links: [
-                        {
-                            slot: 'talk',
-                            textKey: 'terms.talk',
-                            url: '/speaking/talk',
-                            isExternalLink: false,
-                        },
-                        {
-                            slot: 'tutorial',
-                            textKey: 'terms.tutorial',
-                            url: '/speaking/tutorial',
-                            isExternalLink: false,
-                        },
-                    ],
-                },
-                {
                     tag: 'topics',
                     isDescriptionList: false,
                     links: [
@@ -224,10 +163,6 @@ export default {
                             isExternalLink: false,
                         },
                     ],
-                },
-                {
-                    tag: 'pastTopics',
-                    isDescriptionList: false,
                 },
                 {
                     tag: 'inappropriate',
