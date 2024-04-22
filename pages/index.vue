@@ -118,7 +118,7 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import { landingButtonConfig } from '@/configs/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
@@ -145,14 +145,12 @@ export default {
         I18nPageWrapper,
         Intro,
     },
-    async asyncData({ store, payload }) {
-        // if (payload) return { sponsorsData: payload }
-        await store.dispatch('$getSponsorsData')
-        const sponsorsData = store.state.sponsorsData
-        return {
-            sponsorsData,
+    async asyncData({ store }) {
+        if (process.client) {
+            await store.dispatch('$getSponsorsData')
         }
     },
+    fetchOnServer: false,
     data() {
         return {
             isOpened: false,
@@ -161,8 +159,11 @@ export default {
             selectedSponsor: {},
         }
     },
-    fetchOnServer: false,
+    created() {
+        this.$store.dispatch('$getSponsorsData')
+    },
     computed: {
+        // ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
@@ -196,7 +197,8 @@ export default {
             return data[attributeName]
         },
         showSwal() {
-            return new swal({  // eslint-disable-line
+            return new swal({
+                // eslint-disable-line
                 title: this.$i18n.t('typhoonInfoTitle'),
                 html: this.$i18n
                     .t('typhoonInfo')
