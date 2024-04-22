@@ -159,11 +159,8 @@ export default {
             selectedSponsor: {},
         }
     },
-    created() {
-        this.$store.dispatch('$getSponsorsData')
-    },
     computed: {
-        // ...mapState(['sponsorsData']),
+        ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
@@ -185,6 +182,9 @@ export default {
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
         },
+    },
+    created() {
+        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {
