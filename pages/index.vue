@@ -197,8 +197,7 @@ export default {
             return data[attributeName]
         },
         showSwal() {
-            return new swal({
-                // eslint-disable-line
+            return new swal({  // eslint-disable-line
                 title: this.$i18n.t('typhoonInfoTitle'),
                 html: this.$i18n
                     .t('typhoonInfo')
