@@ -145,9 +145,12 @@ export default {
         I18nPageWrapper,
         Intro,
     },
-    async asyncData({ store }) {
-        if (process.client) {
-            await store.dispatch('$getSponsorsData')
+    async asyncData({ store, payload }) {
+        if (payload) return { sponsorsData: payload }
+        await store.dispatch('$getSponsorsData')
+        const sponsorsData = store.state.sponsorsData
+        return {
+            sponsorsData,
         }
     },
     fetchOnServer: false,
