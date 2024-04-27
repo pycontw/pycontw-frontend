@@ -148,10 +148,10 @@ export default {
     async asyncData({ store, payload }) {
         if (payload) return { sponsorsData: payload }
         await store.dispatch('$getSponsorsData')
-        const sponsorsData = store.state.sponsorsData
-        return {
-            sponsorsData,
-        }
+        // const sponsorsData = store.state.sponsorsData
+        // return {
+        //     sponsorsData,
+        // }
     },
     data() {
         return {
