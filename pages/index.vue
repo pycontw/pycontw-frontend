@@ -150,7 +150,7 @@ export default {
             await store.dispatch('$getSponsorsData')
         }
     },
-    fetchOnServer: false,
+    // fetchOnServer: false,
     data() {
         return {
             isOpened: false,
