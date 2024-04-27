@@ -118,7 +118,7 @@
 </template>
 
 <script>
-// import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import { landingButtonConfig } from '@/configs/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
@@ -148,10 +148,10 @@ export default {
     async asyncData({ store, payload }) {
         if (payload) return { sponsorsData: payload }
         await store.dispatch('$getSponsorsData')
-        const sponsorsData = store.state.sponsorsData
-        return {
-            sponsorsData,
-        }
+        // const sponsorsData = store.state.sponsorsData
+        // return {
+        //     sponsorsData,
+        // }
     },
     data() {
         return {
@@ -161,9 +161,8 @@ export default {
             selectedSponsor: {},
         }
     },
-    fetchOnServer: false,
     computed: {
-        // ...mapState(['sponsorsData']),
+        ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
@@ -185,6 +184,9 @@ export default {
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
         },
+    },
+    created() {
+        this.$store.dispatch('$getSponsorsData')
     },
     methods: {
         showModal(sponsor) {
