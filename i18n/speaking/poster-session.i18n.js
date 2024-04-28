@@ -17,7 +17,6 @@ export default genI18nMessages({
                     'Call for Poster Ends：Jun 15th 23:59:5 ({aoe})',
                     'Announcement of Acceptance：Jun 30th',
                 ],
-                steps: [],
             },
 
             howToSubmit: {
@@ -27,7 +26,6 @@ export default genI18nMessages({
                         'content description, and your personal information.',
                     'Backboard dimensions 900mm x 1800mm, multiple posters allowed within the above dimensions.',
                 ],
-                steps: [],
             },
 
             topics: {
@@ -42,7 +40,6 @@ export default genI18nMessages({
                         "For your inspiration, our committee has suggested that they'd love to see talks on the following topics: " +
                         'A.I., Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc.',
                 ],
-                steps: [],
             },
 
             inappropriate: {
@@ -50,28 +47,18 @@ export default genI18nMessages({
                 description: [
                     'Please note that PyCon Taiwan is a conference where the audience comes from different cultural backgrounds. Some jokes may be rude to others. If you want to add some humorous images or words to your speech, please double check if there is any possibility of offense, and refer to our {coc}.',
                 ],
-                steps: [],
             },
         },
 
         terms: {
             aoe: 'AoE',
-            signUp: 'sign up',
-            proposalSystem: 'Proposal System',
-            pyVideo: 'pyvideo.org',
-            recording: 'recording release',
-            everyoneContributesPolicy: 'Everyone Contributes Policy',
-            programEmail: 'program@python.tw',
-            talk: 'How to Propose a Talk?',
-            tutorial: 'How to Propose a Tutorial?',
             coc: 'Code of Conduct',
             posterForm: 'Poster Session submission',
         },
 
         og: {
-            title: 'Call for Proposals',
-            description:
-                'The Call for Proposals is now open. PyCon Taiwan 2024 is accepting talks and tutorials!',
+            title: 'Call for Poster Session',
+            description: "Welcome to PyCon TW's first Poster Session!",
         },
     },
     'zh-hant': {
@@ -125,22 +112,13 @@ export default genI18nMessages({
 
         terms: {
             aoe: 'AoE',
-            signUp: '註冊',
-            proposalSystem: '投稿系統',
-            pyVideo: 'pyvideo.org',
-            recording: '錄影釋出',
-            everyoneContributesPolicy: 'Everyone Contributes Policy',
-            programEmail: 'program@python.tw',
-            talk: '如何投稿演講？',
-            tutorial: '如何投稿專業課程？',
             coc: '行為準則',
             posterForm: 'Poster Session 投稿表單',
         },
 
         og: {
-            title: '稿件募集',
-            description:
-                'PyCon Taiwan 2024 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！',
+            title: 'Poster Session 稿件募集',
+            description: '首先，謝謝您考慮投稿 Poster 至 PyCon Taiwan 2024。',
         },
     },
 })

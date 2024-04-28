@@ -55,35 +55,6 @@
                             </locale-link>
                         </template>
                     </i18n>
-                    <template v-if="$t(`info.${section.tag}.steps`).length">
-                        <steps
-                            v-for="(step, stepIndex) in $t(
-                                `info.${section.tag}.steps`,
-                            )"
-                            :key="stepIndex"
-                            :show-step-line="stepIndex > 0"
-                        >
-                            <template #title>
-                                <i18n
-                                    :key="`info.${section.tag}.steps[${stepIndex}].title`"
-                                    :path="`info.${section.tag}.steps[${stepIndex}].title`"
-                                    tag="div"
-                                >
-                                </i18n>
-                            </template>
-                            <template #description>
-                                <i18n
-                                    v-for="(description, index) in $t(
-                                        `info.${section.tag}.steps[${stepIndex}].description`,
-                                    )"
-                                    :key="`info.${section.tag}.steps[${stepIndex}].description.${index}`"
-                                    :path="`info.${section.tag}.steps[${stepIndex}].description.${index}`"
-                                    tag="div"
-                                >
-                                </i18n>
-                            </template>
-                        </steps>
-                    </template>
                 </div>
             </two-col-wrapper>
         </div>
@@ -96,7 +67,6 @@ import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
-import Steps from '@/components/core/steps/Steps.vue'
 import i18n from '@/i18n/speaking/poster-session.i18n'
 
 export default {
@@ -108,7 +78,6 @@ export default {
         TwoColWrapper,
         ExtLink,
         LocaleLink,
-        Steps,
     },
     data() {
         return {
@@ -136,18 +105,6 @@ export default {
                     isDescriptionList: true,
                     links: [
                         {
-                            slot: 'signUp',
-                            textKey: 'terms.signUp',
-                            url: `https://tw.pycon.org/prs/${this.$i18n.locale}/accounts/login`,
-                            isExternalLink: true,
-                        },
-                        {
-                            slot: 'proposalSystem',
-                            textKey: 'terms.proposalSystem',
-                            url: `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`,
-                            isExternalLink: true,
-                        },
-                        {
                             slot: 'posterForm',
                             textKey: 'terms.posterForm',
                             url: `https://docs.google.com/forms/d/e/1FAIpQLScfBC52CJ35-0mlp894sMkHxpB1dYDPf-10nUgPIbRUxV7Ayw/viewform`,
@@ -158,14 +115,6 @@ export default {
                 {
                     tag: 'topics',
                     isDescriptionList: false,
-                    links: [
-                        {
-                            slot: 'talk',
-                            textKey: 'terms.talk',
-                            url: '/speaking/talk',
-                            isExternalLink: false,
-                        },
-                    ],
                 },
                 {
                     tag: 'inappropriate',
