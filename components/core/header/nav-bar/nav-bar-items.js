@@ -11,7 +11,7 @@ export default Object.freeze({
         { i18nKey: 'talk', value: '/speaking/talk' },
         { i18nKey: 'tutorial', value: '/speaking/tutorial' },
         { i18nKey: 'recording', value: '/speaking/recording' },
-        { i18nKey: 'postSession', value: '/speaking/post-session' },
+        { i18nKey: 'posterSession', value: '/speaking/poster-session' },
     ],
     conference: [
         { i18nKey: 'keynotes', value: '/conference/keynotes' },

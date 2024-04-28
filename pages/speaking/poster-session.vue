@@ -4,15 +4,15 @@
         <div class="mb-[50px]">
             <i18n
                 v-for="(content, i) in $t('intro')"
-                :key="`postSession_${i}`"
+                :key="`posterSession_${i}`"
                 :path="`intro.${i}`"
                 tag="p"
-                class="postSession"
+                class="posterSession"
             >
             </i18n>
         </div>
 
-        <div v-for="(section, i) in info" :key="`postSession.${i}`">
+        <div v-for="(section, i) in info" :key="`posterSession.${i}`">
             <two-col-wrapper>
                 <div slot="default">
                     <i18n
@@ -52,16 +52,6 @@
                             >
                                 {{ $t(link.textKey) }}
                             </locale-link>
-                        </template>
-                        <template slot="previousConfs">
-                            <li
-                                v-for="(conf, confIndex) in previousConfLinks"
-                                :key="`previousConfs.${confIndex}`"
-                            >
-                                <ext-link :href="conf[1]" highlight>
-                                    {{ conf[0] }}
-                                </ext-link>
-                            </li>
                         </template>
                     </i18n>
                     <template v-if="$t(`info.${section.tag}.steps`).length">
@@ -106,11 +96,11 @@ import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import Steps from '@/components/core/steps/Steps.vue'
-import i18n from '@/i18n/speaking/post-session.i18n'
+import i18n from '@/i18n/speaking/poster-session.i18n'
 
 export default {
     i18n,
-    name: 'PageSpeakingPostSession',
+    name: 'PageSpeakingposterSession',
     components: {
         I18nPageWrapper,
         CoreH1,
@@ -129,14 +119,20 @@ export default {
                         {
                             slot: 'aoe',
                             textKey: 'terms.aoe',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240408T235900&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240615T155900&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'position',
+                            textKey: 'terms.position',
+                            url: 'https://www.nstm.gov.tw/English/InformationForVisitorsEng/EnvironmentEng/EnvirInfoEng.htm',
                             isExternalLink: true,
                         },
                     ],
                 },
                 {
                     tag: 'howToSubmit',
-                    isDescriptionList: false,
+                    isDescriptionList: true,
                     links: [
                         {
                             slot: 'signUp',
@@ -148,6 +144,12 @@ export default {
                             slot: 'proposalSystem',
                             textKey: 'terms.proposalSystem',
                             url: `https://tw.pycon.org/prs/${this.$i18n.locale}/dashboard`,
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'posterForm',
+                            textKey: 'terms.posterForm',
+                            url: `https://docs.google.com/forms/d/e/1FAIpQLScfBC52CJ35-0mlp894sMkHxpB1dYDPf-10nUgPIbRUxV7Ayw/viewform`,
                             isExternalLink: true,
                         },
                     ],
@@ -178,38 +180,6 @@ export default {
                 },
             ],
         }
-    },
-    computed: {
-        previousConfLinks() {
-            return [
-                [
-                    'PyCon Taiwan 2023',
-                    `https://tw.pycon.org/2023/zh-hant/conference/schedule`,
-                ],
-                [
-                    'PyCon APAC 2022',
-                    `https://tw.pycon.org/2022/zh-hant/conference/schedule`,
-                ],
-                ['PyCon APAC 2021', `https://th.pycon.org/pages/schedule`],
-                [
-                    'PyCon APAC 2020',
-                    `https://pycon.my/pycon-apac-2020-conference-talks/`,
-                ],
-                ['PyCon APAC 2019', `https://pycon.python.ph/`],
-                [
-                    'PyCon Taiwan 2021',
-                    `https://tw.pycon.org/2021/${this.$i18n.locale}/conference/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2020',
-                    `https://tw.pycon.org/2020/${this.$i18n.locale}/conference/schedule/`,
-                ],
-                [
-                    'PyCon Taiwan 2019',
-                    `https://tw.pycon.org/2019/${this.$i18n.locale}/events/schedule/`,
-                ],
-            ]
-        },
     },
     head() {
         return {

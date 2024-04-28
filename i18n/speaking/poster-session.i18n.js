@@ -2,17 +2,20 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'Call for Proposals',
-        intro: 'The Call for Proposals is now open. PyCon Taiwan 2024 is accepting talks and tutorials! Talks will be lasting either 45 minutes, 30 minutes, or 15 minutes, depending on you, you’ll measure and decide how much time you need. Note that the length of a talk includes setup and Q&A session. If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
+        title: 'Call for Poster Session',
+        intro: [
+            "Welcome to PyCon TW's first Poster Session!",
+            'Poster Session is a presentation format that allows speakers to present their topic through posters and interact directly with individual audiences. At PyCon Taiwan 2024, we tried the Poster Session activity for the first time, hoping to allow more people to introduce their results or issues of concern. You can submit a paper on any Python-related topic and it will be displayed as a poster, and then audiences can interact with you directly.',
+        ],
 
         info: {
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'Conference dates: 9/21 - 9/22',
-                    'Talks & Tutorial CFP Begins: February 25th, 2024',
-                    'Talks & Tutorial CFP Ends: April 8th, 2024, 23:59:59 ({aoe})',
-                    'Announcement of Acceptance: June 10th, 2024',
+                    'PyCon TW Conference dates：Sep. 21st - 22nd at {position} ',
+                    'Call for Poster Begins：May. 1st',
+                    'Call for Poster Ends：Jun 15th 23:59:5 ({aoe})',
+                    'Announcement of Acceptance：Jun 30th',
                 ],
                 steps: [],
             },
@@ -20,9 +23,8 @@ export default genI18nMessages({
             howToSubmit: {
                 title: 'How to Submit Your Proposal',
                 description: [
-                    'You need to {signUp} for a new account on our system. With an activated account, you can fill up the speaker profile and create new proposals through the proposal system page.',
-                    'We encourage you to submit the proposal as early as possible. You are welcomed to submit multiple proposals.',
-                    'Since COVID-19 become stable, we recommend attending the meeting venue in person. If you have personal reasons, you may ask to give your talk or tutorial remotely.',
+                    'Please go to the {posterForm} form to submit, provide the Poster topic, abstract, and content description, and your personal information.',
+                    'Backboard dimensions 900mm x 1800mm, multiple posters allowed within the above dimensions.',
                 ],
                 steps: [],
             },
@@ -32,8 +34,6 @@ export default genI18nMessages({
                 description: [
                     'We accept a broad range of Python-related proposals from academic research to commercial projects, case studies, or soft topics such as running a community, making good communication, mental health, etc. So basically, if you are reading this, just submit your proposal!',
                     'We encourage speakers to talk about your own Python package or application, your experience of learning Python or hosting a Python community, etc. Talks on advanced topics are highly welcomed as well. For your inspiration, our committee has suggested that they’d love to see talks on the following topics: A.I., Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc.',
-                    'If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
-                    'This year, we will invite part of the unselected talks to share at the local communities. PyCon Taiwan will partially compensate for your transportation cost.',
                 ],
                 steps: [],
             },
@@ -58,6 +58,8 @@ export default genI18nMessages({
             talk: 'How to Propose a Talk?',
             tutorial: 'How to Propose a Tutorial?',
             coc: 'Code of Conduct',
+            position: 'Kaohsiung NSTM South Complex',
+            posterForm: 'Poster Session submission',
         },
 
         og: {
@@ -78,8 +80,8 @@ export default genI18nMessages({
                 description: [
                     '大會日期： 9/21 - 9/22',
                     'Poster 開放徵稿：2024 年 05 月 01 日',
-                    'Poster 徵稿截止：2024 年 0X 月 XX 日 23:59:59 ({aoe})',
-                    '稿件錄取通知：2024 年 XX 月 XX 日',
+                    'Poster 徵稿截止：2024 年 06 月 15 日 23:59:59 ({aoe})',
+                    '稿件錄取通知：2024 年 06 月 30 日',
                 ],
                 steps: [],
             },
@@ -87,7 +89,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: '提交稿件',
                 description: [
-                    '請您前往 Poster Session 投稿表單 進行投稿，提供 Poster 的主題、摘要、以及內容說明，以及填妥您的個人資訊。',
+                    '請您前往 {posterForm} 進行投稿，提供 Poster 的主題、摘要、以及內容說明，以及填妥您的個人資訊。',
                     '背板尺寸 900mm x 1800mm，在上述尺寸內允許多張海報',
                 ],
                 steps: [],
@@ -130,6 +132,8 @@ export default genI18nMessages({
             talk: '如何投稿演講？',
             tutorial: '如何投稿專業課程？',
             coc: '行為準則',
+            position: 'Kaohsiung NSTM South Complex',
+            posterForm: 'Poster Session 投稿表單',
         },
 
         og: {
