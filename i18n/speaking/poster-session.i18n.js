@@ -12,7 +12,7 @@ export default genI18nMessages({
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'PyCon TW Conference dates：Sep. 21st - 22nd at {position} ',
+                    'PyCon TW Conference dates：Sep. 21st - 22nd',
                     'Call for Poster Begins：May. 1st',
                     'Call for Poster Ends：Jun 15th 23:59:5 ({aoe})',
                     'Announcement of Acceptance：Jun 30th',
@@ -58,7 +58,6 @@ export default genI18nMessages({
             talk: 'How to Propose a Talk?',
             tutorial: 'How to Propose a Tutorial?',
             coc: 'Code of Conduct',
-            position: 'Kaohsiung NSTM South Complex',
             posterForm: 'Poster Session submission',
         },
 
@@ -132,7 +131,6 @@ export default genI18nMessages({
             talk: '如何投稿演講？',
             tutorial: '如何投稿專業課程？',
             coc: '行為準則',
-            position: 'Kaohsiung NSTM South Complex',
             posterForm: 'Poster Session 投稿表單',
         },
 
