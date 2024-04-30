@@ -32,6 +32,7 @@
                         :path="`info.${section.tag}.description.${index}`"
                         :tag="`${section.isDescriptionList ? 'li' : 'div'}`"
                     >
+                        <template #br><br /></template>
                         <template
                             v-for="link in section.links"
                             :slot="link.slot"

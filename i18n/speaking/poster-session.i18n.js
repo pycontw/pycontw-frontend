@@ -23,7 +23,8 @@ export default genI18nMessages({
             howToSubmit: {
                 title: 'How to Submit Your Proposal',
                 description: [
-                    'Please go to the {posterForm} form to submit, provide the Poster topic, abstract, and content description, and your personal information.',
+                    'Please go to the {posterForm} form to submit, provide the Poster topic, abstract, ' +
+                        'content description, and your personal information.',
                     'Backboard dimensions 900mm x 1800mm, multiple posters allowed within the above dimensions.',
                 ],
                 steps: [],
@@ -32,8 +33,14 @@ export default genI18nMessages({
             topics: {
                 title: 'Topics',
                 description: [
-                    'We accept a broad range of Python-related proposals from academic research to commercial projects, case studies, or soft topics such as running a community, making good communication, mental health, etc. So basically, if you are reading this, just submit your proposal!',
-                    'We encourage speakers to talk about your own Python package or application, your experience of learning Python or hosting a Python community, etc. Talks on advanced topics are highly welcomed as well. For your inspiration, our committee has suggested that they’d love to see talks on the following topics: A.I., Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc.',
+                    'We accept a broad range of Python-related proposals from academic research to commercial projects, case studies, ' +
+                        'or soft topics such as running a community, making good communication, mental health, etc. ' +
+                        'So basically, if you are reading this, just submit your proposal!{br}{br}',
+                    'We encourage speakers to talk about your own Python package or application, ' +
+                        'your experience of learning Python or hosting a Python community, etc. ' +
+                        'Talks on advanced topics are highly welcomed as well. ' +
+                        "For your inspiration, our committee has suggested that they'd love to see talks on the following topics: " +
+                        'A.I., Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc.',
                 ],
                 steps: [],
             },
@@ -88,7 +95,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: '提交稿件',
                 description: [
-                    '請您前往 {posterForm} 進行投稿，提供 Poster 的主題、摘要、以及內容說明，以及填妥您的個人資訊。',
+                    '請您前往 {posterForm} 進行投稿，提供 Poster 的主題、摘要、內容說明，以及填妥您的個人資訊。',
                     '背板尺寸 900mm x 1800mm，在上述尺寸內允許多張海報',
                 ],
                 steps: [],
@@ -97,16 +104,12 @@ export default genI18nMessages({
             topics: {
                 title: '投稿主題',
                 description: [
-                    '我們接受 Python 相關的各類投稿，包括學術報告、商用專案以及案例研究等，或是社群經營、溝通、心理健康、失敗經驗等軟議題。',
-                    '包含但不限於以下領域：' +
-                        '人工智慧(AI)機器學習（Machine Learning）、' +
-                        '資料分析（Data Analysis）、' +
-                        '金融科技（FinTech）、' +
-                        '醫療（Medical Care）、' +
-                        '半導體（Semiconductor）、' +
-                        '製造業（Manufacturing）、' +
-                        '公民科技（Civic Technology）。',
-                    '如果您有任何關於 Python 的應用、使用 Python 解決問題或如何主持您的社群圈的經驗，也都邀請您投稿到 PyCon Taiwan。當然我們也非常歡迎適合進階者內容的投稿，例如探討 Python 內部運作等。另外，如果您的演講是關於特定的 Python 套件，請確保它已被廣泛使用，或者您可以考慮將重點放在相關的最佳實踐上，這類主題會有更多的受眾。',
+                    '我們接受 Python 相關的各類投稿，包括學術報告、商用專案以及案例研究等，或是社群經營、溝通、心理健康、失敗經驗等軟議題。{br}{br}',
+                    '若您在人工智慧（AI）、機器學習（Machine Learning）、資料分析（Data Analysis）、金融科技（FinTech）、醫療（Medical Care）、半導體（Semiconductor）、製造業（Manufacturing）、公民科技（Civic Technology）' +
+                        '等相關領域上有卓越成就與發現，我們誠摯歡迎您的投稿。' +
+                        '如果講師有任何關於 Python 的應用、使用 Python 解決問題或如何主持您的社群圈的經驗，也都邀請您投稿到 PyCon Taiwan。' +
+                        '當然我們也非常歡迎適合進階者內容的投稿，例如探討 Python 內部運作等。' +
+                        '另外，如果您的演講是關於特定的 Python 套件，請確保它已被廣泛使用，或者您可以考慮將重點放在相關的最佳實踐上，這類主題會有更多的受眾。',
                 ],
                 steps: [],
             },
