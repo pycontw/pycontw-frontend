@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-hant/speaking/poster-session", {data:[{}],fetch:{},mutations:[]});
