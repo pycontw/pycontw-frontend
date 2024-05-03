@@ -2,9 +2,9 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'Call for Poster Session',
+        title: 'Call for Poster',
         intro: [
-            'Poster Session is a presentation format that allows speakers to present their topic through posters and interact directly with individual audiences. At PyCon Taiwan 2024, we tried the Poster Session activity for the first time, hoping to allow more people to introduce their results or issues of concern.You can submit a paper on any Python - related topic and it will be displayed as a poster, and then audiences can interact with you directly.',
+            "Poster Session allows speakers to showcase their topics using posters and engage directly with individual audiences. At PyCon Taiwan 2024, we'll host the Poster Session for the first time, aiming to provide a platform for more individuals to share their projects or topics of interest. You are invited to submit a paper on any Python-related topic, which will be exhibited as a poster, enabling you to have direct conversations with attendees.",
         ],
 
         info: {
@@ -12,8 +12,8 @@ export default genI18nMessages({
                 title: 'Important Dates',
                 description: [
                     'Conference dates: 9/21 - 9/22',
-                    'Call For Poster Session Begins: May 1st, 2024',
-                    'Call For Poster Session Ends: Jun 15th, 2024, 23:59:59 ({aoe})',
+                    'Call For Poster Begins: May 1st, 2024',
+                    'Call For Poster Ends: Jun 15th, 2024, 23:59:59 ({aoe})',
                     'Announcement of Acceptance: Jun 30th, 2024',
                 ],
             },
