@@ -107,7 +107,7 @@ export default {
                         {
                             slot: 'posterForm',
                             textKey: 'terms.posterForm',
-                            url: `https://docs.google.com/forms/d/e/1FAIpQLScfBC52CJ35-0mlp894sMkHxpB1dYDPf-10nUgPIbRUxV7Ayw/viewform`,
+                            url: `https://bit.ly/web-cfp-2024`,
                             isExternalLink: true,
                         },
                     ],
