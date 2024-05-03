@@ -8,10 +8,10 @@ export default Object.freeze({
     ],
     speaking: [
         { i18nKey: 'cfp', value: '/speaking/cfp' },
+        { i18nKey: 'posterSession', value: '/speaking/poster-session' },
         { i18nKey: 'talk', value: '/speaking/talk' },
         { i18nKey: 'tutorial', value: '/speaking/tutorial' },
         { i18nKey: 'recording', value: '/speaking/recording' },
-        { i18nKey: 'posterSession', value: '/speaking/poster-session' },
     ],
     conference: [
         { i18nKey: 'keynotes', value: '/conference/keynotes' },

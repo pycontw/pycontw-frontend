@@ -2,20 +2,19 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'Call for Poster Session',
+        title: 'Call for Poster',
         intro: [
-            "Welcome to PyCon TW's first Poster Session!",
-            'Poster Session is a presentation format that allows speakers to present their topic through posters and interact directly with individual audiences. At PyCon Taiwan 2024, we tried the Poster Session activity for the first time, hoping to allow more people to introduce their results or issues of concern. You can submit a paper on any Python-related topic and it will be displayed as a poster, and then audiences can interact with you directly.',
+            "Poster Session allows speakers to showcase their topics using posters and engage directly with individual audiences. At PyCon Taiwan 2024, we'll host the Poster Session for the first time, aiming to provide a platform for more individuals to share their projects or topics of interest. You are invited to submit a paper on any Python-related topic, which will be exhibited as a poster, enabling you to have direct conversations with attendees.",
         ],
 
         info: {
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'PyCon TW Conference dates：Sep. 21st - 22nd',
-                    'Call for Poster Begins：May. 1st',
-                    'Call for Poster Ends：Jun 15th 23:59:5 ({aoe})',
-                    'Announcement of Acceptance：Jun 30th',
+                    'Conference dates: 9/21 - 9/22',
+                    'Call For Poster Begins: May 1st, 2024',
+                    'Call For Poster Ends: Jun 15th, 2024, 23:59:59 ({aoe})',
+                    'Announcement of Acceptance: Jun 30th, 2024',
                 ],
             },
 
@@ -64,7 +63,6 @@ export default genI18nMessages({
     'zh-hant': {
         title: 'Poster Session 稿件募集',
         intro: [
-            '首先，謝謝您考慮投稿 Poster 至 PyCon Taiwan 2024。',
             'Poster Session 是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者直接互動的一種展示形式。在 PyCon Taiwan 2024 我們初次嘗試 Poster Session 的活動，希望可以讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，然後與會者可與您直接互動。',
         ],
         info: {
