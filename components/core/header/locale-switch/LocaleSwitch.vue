@@ -2,6 +2,11 @@
     <div class="core-localeSwitch h-full">
         <nav-bar-item-dropdown sm>
             <template #label>
+                <img
+                    src="~/static/locale-icon.svg"
+                    :alt="`Locale Icon`"
+                    class="w-4 pr-1"
+                />
                 {{ $t($i18n.locale) }}
             </template>
             <template v-slot:items="{ hideMenu }">
