@@ -77,10 +77,10 @@ export default {
                     label: this.$t('transMode.publicTransport'),
                     value: 'publicTransport',
                 },
-                {
-                    label: this.$t('transMode.shuttleService'),
-                    value: 'shuttleService',
-                },
+                // {
+                //     label: this.$t('transMode.shuttleService'),
+                //     value: 'shuttleService',
+                // },
             ],
         }
     },

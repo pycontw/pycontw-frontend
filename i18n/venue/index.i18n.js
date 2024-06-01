@@ -8,9 +8,8 @@ export default genI18nMessages({
                 'PyCon Taiwan 2023 will be held at the Humanities and Social Science Building, Academia Sinica, with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'Humanities and Social Science Building, Academia Sinica',
-            address:
-                'No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan',
+            name: 'National Science and Technology Museum\n（South Complex)',
+            address: '797 Jiuru 1st Rd. Sanmin District, Kaohsiung City',
         },
         venueMap: {
             title: 'Venue Map',
@@ -23,30 +22,25 @@ export default genI18nMessages({
         carInstructions: {
             title: 'Driving',
             footerTitle: 'Parking',
-            description: 'Navigate to {0},',
-            destination: 'Academia Sinica',
-            description1:
-                'Exiting the Donghu Interchange on the Sun Yat-sen Freeway, pass the Nanhu Lake Bridge, and then proceed along Academia Rd.',
-            description2:
-                'Exiting the Nangang Interchange on National Highway No.3, proceed along Nansen Road, turn left onto Jiuzhuang Road, and proceed along Academia Rd.',
-            description3:
-                'From the Nangang exit of HuanDong Boulevard, proceed along Academia Rd.',
+            description: 'Navigate to {0}.',
+            destination: 'National Science and Technology Museum',
         },
         parkingInfo: {
             title: 'Parking Info',
             car: {
                 title: 'Car',
-                parkingPlace: 'Humanities and Social Science Building (HSSB)',
+                parkingPlace: 'North Complex',
+                parkingPlace2: 'South Complex',
                 description:
-                    'Parking spaces are available within the Academia Sinica. Upon entering the campus, drivers should present their identification to the main gate security guard and obtain a parking permit.',
+                    'Paid parking lots are available near the National Science and Technology Museum: {0} Underground parking lot, accessible from the north side of Pingdeng Rd. The parking fee is 25 NTD per half hour on Fridays to Sundays and consecutive holidays, with a maximum of 250 NTD daily. {1} Outdoor parking lot, accessible from the south side of Pingdeng Rd. The parking fee is 25 NTD per half hour on Fridays to Sundays and consecutive holidays, with a maximum of 250 NTD daily.',
             },
             motor: {
                 title: 'Motorcycle',
                 description:
-                    'Motorcycles are not allowed to enter Academia Sinica. There are free motorcycle parking lots (not responsible for safekeeping) for staff and visitors provided next to {0}, {1}, and {2}.',
-                descriptionLinkTitle1: 'the right side of the main gate',
-                descriptionLinkTitle2: 'the vacant lot opposite the gate',
-                descriptionLinkTitle3: 'Hu Shih Graveyard Park',
+                    'North Complex Two paid parking lots located at {0}. and {1}. The fee is 20 NTD per entry, additional charges apply for re-entry or overnight parking. {2} One paid parking lot, accessible from the south side of Pingdeng Rd. The fee is 20 NTD per entry, additional charges apply for re-entry or overnight parking.',
+                descriptionLinkTitle1: 'Liming Rd',
+                descriptionLinkTitle2: 'Juemin Rd',
+                descriptionLinkTitle3: 'South Complex',
             },
             moreInfo:
                 '※ For detailed information regarding parking, please refer to {0}',
@@ -143,8 +137,8 @@ export default genI18nMessages({
                 'PyCon Taiwan 2023 將在中央研究院人文社會科學館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
-            name: '中央研究院\n人文社會科學館',
-            address: '台北市南港區研究院路 2 段 128 號',
+            name: '國立科學工藝博物館\n南館',
+            address: '高雄市三民區九如一路 797 號',
         },
         venueMap: {
             title: '會場地圖',
@@ -158,32 +152,27 @@ export default genI18nMessages({
             title: '開車',
             footerTitle: '停車',
             description: '導航至{0}',
-            destination: '中央研究院',
-            description1:
-                '中山高速公路東湖交流道下，過南湖大橋後，接研究院路。',
-            description2:
-                '北二高南港交流道下，接南深路左轉舊庄路，接研究院路。',
-            description3: '環東大道南港出口下，接研究院路。',
+            destination: '科工館南館',
         },
         parkingInfo: {
             title: '停車資訊',
             car: {
                 title: '汽車',
-                parkingPlace: '人文社會科學館',
+                parkingPlace: '北館',
+                parkingPlace2: '南館',
                 description:
-                    '中研院內設有停車格，車輛進入院區持證件向大門警衛換證後可駛入院區。',
+                    '科工館週邊設有付費停車場：{0}設有地下停車場，由平等路北側（7-11 對面）進入。週五至週日及連續假日每半小時收費 25 元，每日最高上限 250 元。{1} 設有戶外停車場，由平等路南側進入。週五至週日及連續假日每半小時收費 25 元，每日最高上限 250 元。',
             },
             motor: {
                 title: '機車',
                 description:
-                    '機車禁止進入中研院院區。於其{0}及{1}、{2}旁均設有機車停車場，供員工和來賓停放不予收費（不負保管責任）。',
-                descriptionLinkTitle1: '大門右側',
-                descriptionLinkTitle2: '對面空地',
-                descriptionLinkTitle3: '胡適公園',
+                    '北館 設有 {0} 與 {1} 兩處停車場。每次收費 20 元，離場再停車或跨日則另計次收費。{2} 設有付費機車停車場乙處，由平等路南側進入。每次收費 20 元，離場再停車或跨日則另計次收費。',
+                descriptionLinkTitle1: '禮明路',
+                descriptionLinkTitle2: '覺民路',
+                descriptionLinkTitle3: '南館',
             },
-            moreInfo: '※停車相關資訊詳細說明請見 {0}、{1} 。',
-            moreInfoLinkTitle: '中央研究院院區車輛通行停放管理施行要點',
-            moreInfoLinkTitle2: '中央研究院院區停車 Q&A ',
+            moreInfo: '※停車相關資訊詳細說明請見 {0}。',
+            moreInfoLinkTitle: '國立科學工藝博物館交通資訊',
         },
         publicTransport: {
             title: '桃園國際機場交通資訊',
