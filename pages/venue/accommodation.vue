@@ -5,61 +5,71 @@
         <div class="mx-auto w-full lg:w-9/12">
             <two-col-wrapper class="py-2 lg:py-5">
                 <template #default>
-                    <p>{{ $t('roomType.fieldName') }}</p>
+                    <p>$$$</p>
                 </template>
                 <template #right-col>
                     <ul class="ml-[19px] list-outside list-disc">
                         <li
-                            v-for="(content, i) in $t('roomType.content')"
+                            v-for="(content, i) in $t('$$$.hotel')"
                             :key="`room_type_content_${i}`"
                         >
-                            {{ content }}
+                            <a
+                                :href="$t('$$$.links')[i]"
+                                class="text-pink-500 underline"
+                                target="_blank"
+                                >{{ content }}</a
+                            >：
+                            <p class="p-2 pl-0">
+                                {{ $t('$$$.descriptions')[i] }}
+                            </p>
                         </li>
                     </ul>
-                    <span>
-                        {{ $t('roomType.remark') }}
-                    </span>
                 </template>
             </two-col-wrapper>
-
-            <two-col-wrapper>
+            <two-col-wrapper class="py-2 lg:py-5">
                 <template #default>
-                    <p>{{ $t('roomFacilities.fieldName') }}</p>
+                    <p>$$</p>
                 </template>
                 <template #right-col>
-                    <i18n path="roomFacilities.content" tag="p">
-                        <ext-link
-                            href="https://dga.sinica.edu.tw/posts/78730"
-                            highlight
-                            underline
-                            >{{ $t('roomFacilities.linkName') }}</ext-link
-                        >
-                    </i18n>
-                </template>
-            </two-col-wrapper>
-            <two-col-wrapper>
-                <template #default>
-                    <p>{{ $t('applicationHowTo.fieldName') }}</p>
-                </template>
-                <template #right-col>
-                    <i18n path="applicationHowTo.content" tag="p">
-                        <ext-link :href="`mailto:${venueTeamEmail}`" highlight
-                            >{{ venueTeamEmail }}
-                        </ext-link>
-                    </i18n>
-                    <ul class="ml-[19px] list-outside list-disc py-2">
+                    <ul class="ml-[19px] list-outside list-disc">
                         <li
-                            v-for="(item, i) in $t(
-                                'applicationHowTo.applicationInfo',
-                            )"
-                            :key="`application_info_${i}`"
+                            v-for="(content, i) in $t('$$.hotel')"
+                            :key="`room_type_content_${i}`"
                         >
-                            {{ item }}
+                            <a
+                                :href="$t('$$.links')[i]"
+                                class="text-pink-500 underline"
+                                target="_blank"
+                                >{{ content }}</a
+                            >：
+                            <p class="p-2 pl-0">
+                                {{ $t('$$.descriptions')[i] }}
+                            </p>
                         </li>
                     </ul>
-                    <span>
-                        {{ $t('applicationHowTo.remark') }}
-                    </span>
+                </template>
+            </two-col-wrapper>
+            <two-col-wrapper class="py-2 lg:py-5">
+                <template #default>
+                    <p>$</p>
+                </template>
+                <template #right-col>
+                    <ul class="ml-[19px] list-outside list-disc">
+                        <li
+                            v-for="(content, i) in $t('$.hotel')"
+                            :key="`room_type_content_${i}`"
+                        >
+                            <a
+                                :href="$t('$.links')[i]"
+                                class="text-pink-500 underline"
+                                target="_blank"
+                                >{{ content }}</a
+                            >：
+                            <p class="p-2 pl-0">
+                                {{ $t('$.descriptions')[i] }}
+                            </p>
+                        </li>
+                    </ul>
                 </template>
             </two-col-wrapper>
         </div>
@@ -71,7 +81,6 @@ import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import i18n from '@/i18n/venue/accommodation.i18n'
 import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
-import ExtLink from '@/components/core/links/ExtLink.vue'
 
 export default {
     i18n,
@@ -80,12 +89,6 @@ export default {
         CoreH1,
         I18nPageWrapper,
         TwoColWrapper,
-        ExtLink,
-    },
-    data() {
-        return {
-            venueTeamEmail: 'pycon-tw-venue@python.tw',
-        }
     },
     head() {
         return {
