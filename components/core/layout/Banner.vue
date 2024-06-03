@@ -25,6 +25,6 @@ export default {
 
 .banner-texts {
     @apply mx-1.5 text-center md:mx-14;
-    max-width: 920px;
+    max-width: 930px;
 }
 </style>

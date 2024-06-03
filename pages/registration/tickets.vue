@@ -108,6 +108,20 @@
                                         {{ $t('terms.sponsorshipFromPyConTW') }}
                                     </locale-link>
                                 </template>
+                                <template #groupBuyCorporateApplication>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.groupBuyCorporateTicketsForm
+                                        "
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t(
+                                                'terms.groupBuyCorporateApplication',
+                                            )
+                                        }}</ext-link
+                                    >
+                                </template>
                             </i18n>
                         </li>
                     </ul>
@@ -244,6 +258,7 @@
                                     }}</ext-link
                                 >
                             </template>
+
                             <template #financialAid>
                                 <locale-link
                                     :to="pageLinks.financialAid"
@@ -396,12 +411,21 @@
                                     }}</locale-link
                                 >
                             </template>
-                            <template #organizerEmail>
+                            <template #contact>
                                 <ext-link
                                     :href="pageLinks.organizerEmail"
                                     underline
                                     highlight
-                                    >{{ $t('terms.organizerEmail') }}</ext-link
+                                >
+                                    organizers@python.tw
+                                </ext-link>
+                            </template>
+                            <template #officialWebsite>
+                                <ext-link
+                                    :href="pageLinks.officialWebsite"
+                                    highlight
+                                    underline
+                                    >{{ $t('terms.officialWebsite') }}</ext-link
                                 >
                             </template>
                         </i18n>
@@ -482,13 +506,14 @@
                                     }}</ext-link
                                 >
                             </template>
-                            <template #organizerEmail>
+                            <template #contact>
                                 <ext-link
                                     :href="pageLinks.organizerEmail"
                                     highlight
                                     underline
-                                    >{{ $t('terms.organizerEmail') }}</ext-link
                                 >
+                                    organizers@python.tw
+                                </ext-link>
                             </template>
                             <template #concessionTicket>
                                 <ext-link

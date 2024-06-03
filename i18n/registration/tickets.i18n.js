@@ -2,14 +2,15 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        titlePart1: 'Registration Is Now Open!',
+        titlePart1: 'PyCon TW 2024 Calling in Kaohsiung: Dive into Python!',
         titlePart2: ' ',
         pageAbstract:
-            'Welcome on board the PyCon TW 2023 Challenger for discovering the Python Universe.{br} More with multiple ticket types to choose from. Engage with experts and learn from peers.',
+            'The spark between technology and humanity will ignite your inspiration at PyCon TW 2024!{br}' +
+            'More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         about: {
             title: 'Conference Information',
-            date: 'Date & Time: 10:00 - 18:00 September 02 & 09:00 - 18:00, September 03, 2023 (GMT+8)',
-            place: 'Venue & Address: Humanities and Social Science Building, Academia Sinica - Humanities and Social Science Building, No. 128, Sec. 2, Academia Rd., Nankang, Taipei 115, Taiwan (R.O.C.)',
+            date: 'Date & Time: September 21 to September 22, 2024 (GMT+8)',
+            place: 'Venue & Address: National Science and Technology Museum - No. 720, Jiuru 1st Rd., Sanmin Dist., Kaohsiung City 807412, Taiwan (R.O.C.) ',
         },
         ticketsIntro: {
             title: 'Tickets',
@@ -22,15 +23,7 @@ export default genI18nMessages({
                 {
                     title: 'Need Reimbursement from Your Company? Get a {corporateTicketPage}!',
                     description: [
-                        'If you need reimbursement from your company, please get your “{corporateTicketPage}”. You will see two EXTRA required fields, Invoiced Company Name and VAT Number, needed specially for the reimbursement, to meet our local tax regulation.',
                         'We will NOT provide an invoice for “Non-Corporate Tickets”. ',
-                        'If you need reimbursement after purchasing "Individual Tickets", please apply {nonCorporateTicketsInvoicing}.',
-                    ],
-                },
-                {
-                    title: 'Need Financial Aid?',
-                    description: [
-                        'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. If you received the financial aid, you can buy the ticket “{sponsorshipFromPyConTW}” with the certification.',
                     ],
                 },
                 {
@@ -38,13 +31,7 @@ export default genI18nMessages({
                     description: [
                         'We provide “Group-Buy Corporate Discounts” for purchasing at least 3 Corporate Tickets. Please fill out the {groupBuyCorporateTicketsForm} with your current needs if you have interest in group-buy corporate tickets.',
                         'NO refunds or exchanges once group-buy corporate tickets are sold.',
-                        'Once group-buy corporate tickets are sold, we will send invitation codes for registering “{groupBuyCorporateTickets}” on KKTIX. Each of the invitation codes is time-sensitive. The invitation codes that do not register on KKTIX within the time limit will automatically expire, and there will be NO refunds or exchanges of tickets.',
-                    ],
-                },
-                {
-                    title: 'Exclusive offers for Submitting Proposals in PyCon TW 2023!',
-                    description: [
-                        'If you have submitted a proposal for PyCon TW 2023, no matter whether your proposal is accepted or not, we will send you an exclusive "Invitation Code for Submitter Ticket" after the agenda is announced. You can participate in PyCon TW 2023 with a more favorable ticket price.',
+                        'Once group-buy corporate tickets are sold, we will send invitation codes for registering “Group-Buy Corporate Tickets” on KKTIX. Each of the invitation codes is time-sensitive. The invitation codes that do not register on KKTIX within the time limit will automatically expire, and there will be NO refunds or exchanges of tickets.',
                     ],
                 },
             ],
@@ -61,7 +48,7 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: 'PyCon TW 2023 will have around 45% of the talks in English.',
+                    title: 'PyCon TW 2024 will have around 45% of the talks in English.',
                     description: [],
                 },
                 {
@@ -72,34 +59,31 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: 'About “{corporateTickets}”',
+                    title: 'About “Corporate Tickets”',
                     description: [
                         'We will send electronic invoices directly to your email address AFTER the event if you bought corporate tickets.',
+                        'We will send electronic invoices directly to your email address AFTER confirming the remittance if you bought group-buy corporate tickets.',
                         'To buy “Group-Buy Corporate Tickets”, please fill out the {groupBuyCorporateTicketsForm} for discounts. NO refunds or exchanges once group-buy corporate tickets are sold.',
                         'We will base on the “remittance time” to determine whether the group-buy corporate tickets include a t-shirt.',
                     ],
                 },
                 {
-                    title: 'About “{concessionTicket}”',
+                    title: 'About “Concession Tickets”',
                     description: [
-                        'If you are a disability (holding {disabilityCertification} ), both the disability and ONE accompanying person should buy "{concessionTicket}".',
-                        'If you want to buy "{concessionTicket}", please complete the "{identityVerificationOfPeopleWithDisability}" on the KKTIX one day before buying the ticket.',
-                        'The disability must register with an accompanying person. When registering, please show the {disabilityCertification} and carry it with you during the event for inspection. If the {disabilityCertification} cannot be presented, the disability and accompanying person need to make up the balance with the "{individualRegular}" before entering the venue.',
+                        'If you are a disability (holding {disabilityCertification} ), both the disability and ONE accompanying person should buy "Concession Tickets".',
+                        'If you want to buy "Concession Tickets", please complete the "{identityVerificationOfPeopleWithDisability}" on the KKTIX one day before buying the ticket.',
+                        'The disability must register with an accompanying person. When registering, please show the {disabilityCertification} and carry it with you during the event for inspection. If the Certificate of Disability cannot be presented, the disability and accompanying person need to make up the balance with the "Individual Ticket (Regular Stage)" before entering the venue.',
                     ],
                 },
                 {
                     title: 'About “T-Shirt & Exclusive Swag”',
                     description: [
-                        'If you bought the tickets with t-shirt or exclusive swag, we will redeem them to you at the service counter during the conference (September 02 - 03, 2023).',
+                        'If you bought the tickets with t-shirt or exclusive swag, we will redeem them to you at the service counter during the conference (September 21 - 22, 2024).',
                         'If you bought the ticket with t-shirt, please fill out the correct size of t-shirt. We will NOT provide changing the size of t-shirts.',
                     ],
                 },
                 {
-                    title: 'Feel free to apply for {financialAid} if needed. Please apply WITHIN the period and BEFORE purchasing the ticket. The Financial Aid Program will be closed on 23:30, July 01, 2023 (GMT+8).',
-                    description: [],
-                },
-                {
-                    title: 'Ticket refund and exchange are handled by {kktixOnBehalf}. If you want to apply for a refund or exchange via KKTIX, please mail to {organizerEmail}. If you request a refund via KKTIX, a 10% handling fee will be charged, and refunds will not be accepted within ten days before the event (excluding the event day). Please refer to the {kktixTicketExchangeRefundPolicy}.',
+                    title: 'Ticket refund and exchange are handled by {kktixOnBehalf}. If you want to apply for a refund or exchange via KKTIX, please mail to {contact}. If you request a refund via KKTIX, a 10% handling fee will be charged, and refunds will not be accepted within ten days before the event (excluding the event day). Please refer to the {kktixTicketExchangeRefundPolicy}.',
                     description: [],
                 },
                 {
@@ -107,15 +91,15 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: 'Please kindly mail to {organizerEmail} if you have any questions about tickets.',
+                    title: 'Please kindly mail to {contact} if you have any questions about tickets.',
                     description: [],
                 },
                 {
-                    title: 'For more information on PyCon TW 2023, please refer to our official website.',
+                    title: 'For more information on PyCon TW 2024, please refer to our {officialWebsite}.',
                     description: [],
                 },
                 {
-                    title: 'The organizer reserves the right to make final revisions, changes, interpretations of the event, and cancellations of PyCon TW 2023.',
+                    title: 'The organizer reserves the right to make final revisions, changes, interpretations of the event, and cancellations of PyCon TW 2024.',
                     description: [],
                 },
             ],
@@ -126,36 +110,39 @@ export default genI18nMessages({
             concessionTicket: 'Concession Ticket',
             corporate: 'Corporate',
             groupBuyCorporate: 'Group-Buy Corporate',
-            groupBuuIndividual: 'Group-Buy Individual Ticket',
             individual: 'Individual',
             individualRegular: 'Individual Ticket (Regular Stage)',
-            premium: 'Premium',
+            premium: 'Individual Sponsor',
             reserved: 'Reserved',
             sponsorshipFromPyConTW: 'Sponsorship from PyCon TW',
         },
         features: {
             communityDiscount: 'Community Discount',
-            conferencePass: 'Conference pass',
+            conferencePass: 'Conference Pass',
             disabilitiesOnly: 'ONLY for Disabilities',
-            earlyStageDiscount: 'Discount for Early Stage',
-            earlyStageTShirt: 'T-Shirt ONLY for Early Stage',
+            earlyStageDiscount: 'Discount for Early Bird',
+            tShirt: 'T-Shirt',
+            earlyStageTShirt: 'T-Shirt ONLY for Early Bird Stage',
+            earlyRegularStageTShirt:
+                'T-Shirt ONLY for Early Bird and Regular Stage',
+            regularTShirt: 'T-Shirt ONLY for Regular Stage',
             exclusiveLunchBoxAndDesserts: 'Exclusive Lunch Box & Desserts',
             exclusiveSwag: 'Exclusive Swag',
             expressRegistration: 'Express Registration',
             financialAid: 'Financial Aid',
             groupBuyDiscount: 'Group-Buy Discount',
+            groupBuyApply: 'Apply for {groupBuyCorporateApplication}',
             invitationOfSpeakerNight: 'Invitation of “Speakers’ Night”',
             lunchBoxAndDesserts: 'Lunch Box & Desserts',
-            pyductsEarlyStage: 'Pyducts Pre-Order for Early Stage Tickets',
-            pyductsRegularStage: 'Pyducts Pre-Order for Regular Stage Tickets',
             reimbursementReceipt: 'Reimbursement Receipt',
             reservedSeat: 'Reserved Seat',
             speakersDiscount: 'Speakers Discount',
             sponsorshipFromPyConTW: '{sponsorshipFromPyConTW}',
             submittersDiscount: 'Submitters Discount',
-            tShirt: 'T-Shirt',
             vatAvailable: 'Tax ID number',
             vipLounge: 'VIP Lounge',
+            thankYouList:
+                'Name Listed At The Venue To Thank You For Supporting PyCon TW 2024',
         },
         sellingStage: {
             earlyStage: 'Early Stage',
@@ -170,41 +157,41 @@ export default genI18nMessages({
             soldOut: 'Sold Out',
         },
         terms: {
-            codeOfConduct: 'Code of Conduct of PyCon TW 2023',
+            codeOfConduct: 'Code of Conduct of PyCon TW 2024',
             corporateTickets: 'Corporate Tickets',
             corporateTicketPage: 'Corporate Ticket',
             disabilityCertification: 'Certificate of Disability',
-            everybodyContributesPrinciple: 'Principle of Everybody Contribute',
+            everybodyContributesPrinciple: 'Principle of Everybody Contributes',
             financialAid: 'Financial Aid',
             freeToApply: 'Free to Apply',
-            groupBuyCorporateTickets: 'Group-Buy Corporate Tickets',
             groupBuyCorporateTicketsForm: 'application form',
+            groupBuyCorporateApplication: 'Group-Buy Corporate Tickets',
             identityVerificationOfPeopleWithDisability:
                 'Identity Verification of People with Disability',
             kktixOnBehalf: 'KKTIX on behalf of the event organizer',
             kktixTicketExchangeRefundPolicy:
                 'KKTIX ticket exchange and refund policy',
             nonCorporateTicketsInvoicing: 'Non-Corporate Tickets Invoicing',
-            privacyPolicy: 'Privacy Policy of PyCon Taiwan 2023',
-            organizerEmail: 'organizers@python.tw',
+            privacyPolicy: 'Privacy Policy of PyCon Taiwan 2024',
             sponsorshipFromPyConTW: 'Sponsorship from PyCon TW',
             viewPricePage: 'See on KKTIX',
+            officialWebsite: 'official website',
         },
         og: {
             title: 'Ticket Info',
             description:
-                'Welcome on board the PyCon TW 2023 Challenger for discovering the Python Universe.{br} More with multiple ticket types to choose from. Engage with experts and learn from peers.',
+                'Welcome on board the PyCon TW 2024 Challenger for discovering the Python Universe.{br} More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         },
     },
     'zh-hant': {
-        titlePart1: '重新與人群連結，開啟全新旅程。',
-        titlePart2: 'PyCon TW 2023，一同出發！',
+        titlePart1: '科技與人性的火花，',
+        titlePart2: '讓PyCon TW 2024為你激發！',
         pageAbstract:
             '多樣票價供您選擇，{conditionalBr}人人都可以找到適合自己的方案。{br} 多元化學習與多視角觀察技術應用，{conditionalBr}深入淺出引你進入 Python 學習殿堂。{br}',
         about: {
             title: '大會資訊',
-            date: '日期與時間：2023 年 09 月 02 日 10:00 - 18:00 與 2023 年 09 月 03 日 09:00 - 18:00 (GMT+8)',
-            place: '地點與地址：中央研究院人文社會科學館 - 115 臺北市南港區研究院路二段 128 號人文社會科學館',
+            date: '日期與時間：2024 年 09 月 21 日 與 2024 年 09 月 22 日 (GMT+8)',
+            place: '地點與地址：國立科學工藝博物館 - 807高雄市三民區九如一路720號',
         },
         ticketsIntro: {
             title: '購票方案',
@@ -215,31 +202,19 @@ export default genI18nMessages({
             title: '購票前請留意',
             content: [
                 {
-                    title: '您有需要填寫統編向公司申請報帳嗎? 請至 {corporateTicketPage}！',
+                    title: '您有需要填寫統編向公司申請報帳嗎? 請至企業票購票頁！',
                     description: [
-                        '如果您有報帳需求，請至「{corporateTicketPage}」購票，企業票購票表單有提供有報帳抬頭與統一編號的欄位。',
+                        '如果您有報帳需求，請至「企業票購票頁」購票，企業票購票表單有提供有報帳抬頭與統一編號的欄位。',
                         '非企業票種不支援任何報帳需求。',
                         '如果您購買「非企業票種」後有報帳需求，請填寫 {nonCorporateTicketsInvoicing}。',
                     ],
                 },
                 {
-                    title: '您有需要財務補助嗎？',
-                    description: [
-                        '歡迎申請 PyCon TW 2023 財務補助計劃。請於申請期限內並在購票之前提出申請，如果您獲得我們的財務補助，再請依照憑證購買「{sponsorshipFromPyConTW}」。如果您有意願申請，請詳見 {financialAid}。以下售票時間皆為 GMT+8。',
-                    ],
-                },
-                {
                     title: '您有需要企業團購優惠嗎？企業團體票有優惠！',
                     description: [
-                        '如果您想購買 3 張以上的企業票，歡迎填寫 {groupBuyCorporateTicketsForm} 洽談團購優惠，購買張數愈多優惠愈多。',
+                        '如果您想購買 3 張以上的企業票，歡迎填寫 {groupBuyCorporateTicketsForm}洽談團購優惠。',
                         '企業團體票一經售出，恕不退費或換票。',
-                        '企業團體票售出後，我們將寄送「符合購買張數的邀請碼」用於 KKTIX 註冊「{groupBuyCorporateTickets}」，每一組邀請碼皆有時效性，未在時限內於 KKTIX 完成註冊的邀請碼會自動失效，屆時視同放棄，恕不退費或換票。',
-                    ],
-                },
-                {
-                    title: 'PyCon TW 2023 投稿者專屬優惠！',
-                    description: [
-                        '如果您有投稿 PyCon TW 2023，不論您的稿件是否被錄取，我們將於公告議程後寄送專屬的「投稿者票邀請碼」，能以更優惠的票價參與今年的年會。',
+                        '企業團體票售出後，我們將寄送「符合購買張數的邀請碼」用於 KKTIX 註冊「企業團體票」，每一組邀請碼皆有時效性，未在時限內於 KKTIX 完成註冊的邀請碼會自動失效，屆時視同放棄，恕不退費或換票。',
                     ],
                 },
             ],
@@ -248,7 +223,7 @@ export default genI18nMessages({
             title: '注意事項',
             content: [
                 {
-                    title: 'PyCon TW 2023 為公開售票活動。所有參與者 (包含講者與籌備人員)，均需透過對 PyCon TW 貢獻或付費參與。詳見 {everybodyContributesPrinciple}。',
+                    title: 'PyCon TW 2024 為公開售票活動。所有參與者 (包含講者與籌備人員)，均需透過對 PyCon TW 貢獻或付費參與。詳見 {everybodyContributesPrinciple}。',
                     description: [],
                 },
                 {
@@ -260,41 +235,38 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: '如果您有報帳需求，請前往「{corporateTicketPage}」。',
+                    title: '如果您有報帳需求，請前往「企業票種購票頁」。',
                     description: [
                         '企業票種購買頁將提供額外兩個必填欄位用於報帳：「發票抬頭」和「統一編號」，以滿足稅收法規。',
                         '如果您購買「非企業票種」後有報帳需求，請填寫 {nonCorporateTicketsInvoicing}。',
                     ],
                 },
                 {
-                    title: '關於「{corporateTickets}」',
+                    title: '關於「企業票種 (企業票與企業團體票)」',
                     description: [
-                        '如果您是購買企業票種 (企業票和企業團體票)，我們將於「活動結束後」開立電子發票，並寄送至您提供的電子信箱。',
+                        '如果您是購買「企業票」，我們將於「活動結束後」開立電子發票，並寄送至您提供的電子信箱。',
+                        '如果您是購買「企業團體票」，我們將於「確認匯款後」開立電子發票，並寄送至您提供的電子信箱。',
                         '欲購買「企業團體票」請填寫 {groupBuyCorporateTicketsForm} 洽談團購優惠。企業團體票一經售出，恕不退費或換票。',
-                        '企業團體票一律以「匯款時間」為準決定是否有包含紀念衣服。',
+                        '企業團體票一律以匯款時間為準決定是否有包含紀念衣服。',
                     ],
                 },
                 {
-                    title: '關於「{concessionTicket}」',
+                    title: '關於「愛心優待票」',
                     description: [
-                        '如果您是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「{concessionTicket}」。',
-                        '如果您欲購買「{concessionTicket}」，請在購票前一日於 KKTIX 完成「{identityVerificationOfPeopleWithDisability}」。',
-                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示 {disabilityCertification}，身心障礙人士與陪同人員皆需補足與「{individualRegular}」之票價差方可入場。',
+                        '如果您是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
+                        '如果您欲購買「愛心優待票」，請在購票前一日於 KKTIX 完成「{identityVerificationOfPeopleWithDisability}」。',
+                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票 (一般階段)」之票價差方可入場。',
                     ],
                 },
                 {
                     title: '關於「紀念衣服與限定紀念品」',
                     description: [
-                        '如果您購買的票種有包含紀念衣服或限定紀念品，我們將於年會期間 (2023 年 09 月 02 日至 03 日) 於大會服務櫃檯兌換給您。',
+                        '如果您購買的票種有包含紀念衣服或限定紀念品，我們將於年會期間 (2024 年 09 月 21 日至 22 日) 於大會服務櫃檯兌換給您。',
                         '如果您購買的票種有包含紀念衣服，請務必填寫「正確的衣服尺寸」。紀念衣服售出後不提供衣服尺寸更換。',
                     ],
                 },
                 {
-                    title: '如果您有意願申請 PyCon TW 2023 財務補助計畫，請於申請期限內並在購票之前提出申請，詳見 {financialAid}。受理期限：即日起至 2023 年 07 月 01 日 23:30 (GMT+8) 截止。',
-                    description: [],
-                },
-                {
-                    title: '本活動委託 {kktixOnBehalf}。如果您欲透過 KKTIX 辦理退換票，請來信至 {organizerEmail}。如果您自行透過 KKTIX 退票，將酌收 10% 手續費且活動前十天內 (不含活動日) 不予退票。詳情請見 {kktixTicketExchangeRefundPolicy}。',
+                    title: '本活動委託 {kktixOnBehalf}。如果您欲透過 KKTIX 辦理退換票，請來信至 {contact}。如果您自行透過 KKTIX 退票，將酌收 10% 手續費且活動前十天內 (不含活動日) 不予退票。詳情請見 {kktixTicketExchangeRefundPolicy}。',
                     description: [],
                 },
                 {
@@ -302,15 +274,15 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: '如果您有任何購票相關疑問，請來信至 {organizerEmail}。',
+                    title: '如果您有任何購票相關疑問，請來信至 {contact}。',
                     description: [],
                 },
                 {
-                    title: '更多關於今年大會的訊息，請關注 PyCon TW 2023 大會官方網站。',
+                    title: '更多關於今年大會的訊息，請關注 {officialWebsite}。',
                     description: [],
                 },
                 {
-                    title: '主辦單位保有對 PyCon TW 2023 最終修改、變更、活動解釋及取消本活動之權利。',
+                    title: '主辦單位保有對 PyCon TW 2024 最終修改、變更、活動解釋及取消本活動之權利。',
                     description: [],
                 },
             ],
@@ -321,27 +293,27 @@ export default genI18nMessages({
             concessionTicket: '愛心優待票',
             corporate: '企業票',
             groupBuyCorporate: '企業團體票',
-            groupBuuIndividual: '團體票',
             individual: '個人票',
             individualRegular: '個人票 (一般階段)',
-            premium: '個人尊榮票',
+            premium: '個人贊助票',
             reserved: '保留票種',
             sponsorshipFromPyConTW: '大會贊助票',
         },
         features: {
             communityDiscount: '社群優惠',
-            conferencePass: '全程參與 PyCon TW 2023',
+            conferencePass: '全程參與 PyCon TW 2024',
             disabilitiesOnly: '限身心障礙人士購買',
             earlyStageDiscount: '早鳥階段限定購票優惠',
-            earlyStageTShirt: '早鳥階段限定紀念衣服',
+            earlyStageTShirt: '紀念衣服',
+            earlyRegularStageTShirt: '紀念衣服（晚鳥除外）',
+            regularStageTShirt: '紀念衣服（晚鳥除外）',
             exclusiveLunchBoxAndDesserts: '尊榮午餐與茶點餐盒',
             exclusiveSwag: '大會限定紀念品',
             expressRegistration: '快速通關報到',
-            groupBuyDiscount: '購買張數愈多優惠愈多',
+            groupBuyDiscount: '團體購票折扣',
+            groupBuyApply: '請洽{groupBuyCorporateApplication}',
             invitationOfSpeakerNight: '講者晚宴入場邀請',
             lunchBoxAndDesserts: '午餐餐盒與茶點',
-            pyductsEarlyStage: '早鳥階段購票享 Pyducts 加購價',
-            pyductsRegularStage: '一般階段購票享 Pyducts 加購價',
             reimbursementReceipt: '提供企業報帳收據',
             reservedSeat: '議程廳保留席',
             speakersDiscount: '講者專屬優惠',
@@ -350,6 +322,7 @@ export default genI18nMessages({
             tShirt: '紀念衣服',
             vatAvailable: '提供統一編號及抬頭',
             vipLounge: '貴賓休息室',
+            thankYouList: '購票支持本屆大會舉辦大會現場列名',
         },
         sellingStage: {
             earlyStage: '早鳥階段',
@@ -364,7 +337,7 @@ export default genI18nMessages({
             soldOut: '票種售罄',
         },
         terms: {
-            codeOfConduct: 'PyCon TW 2023 行為準則',
+            codeOfConduct: 'PyCon TW 2024 行為準則',
             corporateTickets: '企業票種 (企業票和企業團體票)',
             corporateTicketPage: '企業票購票頁',
             disabilityCertification: '身心障礙證明',
@@ -372,16 +345,17 @@ export default genI18nMessages({
             financialAid: '財務補助計畫',
             freeToApply: '歡迎洽詢',
             groupBuyCorporateTickets: '企業團體票',
-            groupBuyCorporateTicketsForm: 'PyCon TW 2023 企業團體票申請',
-            identityVerificationOfPeopleWithDisability: '身心障礙者身份認證',
+            groupBuyCorporateTicketsForm: 'PyCon TW 2024 企業團體票申請',
+            groupBuyCorporateApplication: '企業團體票申請',
+            VerificationOfPeopleWithDisability: '身心障礙者身份認證',
             kktixOnBehalf: 'KKTIX 代理退票與退費',
             kktixTicketExchangeRefundPolicy: 'KKTIX 代理退換票辦法',
             nonCorporateTicketsInvoicing:
-                'PyCon TW 2023 非企業票種開立發票申請',
-            privacyPolicy: 'PyCon Taiwan 2023 個人資料保護聲明',
-            organizerEmail: 'organizers@python.tw',
+                'PyCon TW 2024 非企業票種開立發票申請',
+            privacyPolicy: 'PyCon Taiwan 2024 個人資料保護聲明',
             sponsorshipFromPyConTW: '大會贊助票 (財務補助)',
             viewPricePage: '詳見售票',
+            officialWebsite: 'PyCon TW 2024 大會官方網站',
         },
         og: {
             title: '購票資訊',
