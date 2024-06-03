@@ -205,79 +205,87 @@
                                 >
                             </template>
                         </i18n>
-                        <i18n
-                            v-for="(string, index) in $t(
-                                `beforeBuyingTickets.content.${i}.description`,
-                            )"
-                            :key="`${string}.${index}`"
-                            class="leading-[30px]"
-                            :path="`beforeBuyingTickets.content.${i}.description.${index}`"
-                            tag="div"
-                        >
-                            <template #corporateTicketPage>
-                                <ext-link
-                                    :href="pageLinks.kktixCorporate2023"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('terms.corporateTicketPage')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #nonCorporateTicketsInvoicing>
-                                <ext-link
-                                    :href="
-                                        pageLinks.nonCorporateTicketsInvoicing
-                                    "
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.nonCorporateTicketsInvoicing')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #groupBuyCorporateTicketsForm>
-                                <ext-link
-                                    :href="
-                                        pageLinks.groupBuyCorporateTicketsForm
-                                    "
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.groupBuyCorporateTicketsForm')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #groupBuyCorporateTickets>
-                                <ext-link
-                                    :href="pageLinks.kktixCorporate2023"
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.groupBuyCorporateTickets')
-                                    }}</ext-link
-                                >
-                            </template>
+                        <ul class="list-disc">
+                            <i18n
+                                v-for="(string, index) in $t(
+                                    `beforeBuyingTickets.content.${i}.description`,
+                                )"
+                                :key="`${string}.${index}`"
+                                class="leading-[30px]"
+                                :path="`beforeBuyingTickets.content.${i}.description.${index}`"
+                                tag="li"
+                            >
+                                <template #corporateTicketPage>
+                                    <ext-link
+                                        :href="pageLinks.kktixCorporate2023"
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('terms.corporateTicketPage')
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #nonCorporateTicketsInvoicing>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.nonCorporateTicketsInvoicing
+                                        "
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t(
+                                                'terms.nonCorporateTicketsInvoicing',
+                                            )
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #groupBuyCorporateTicketsForm>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.groupBuyCorporateTicketsForm
+                                        "
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t(
+                                                'terms.groupBuyCorporateTicketsForm',
+                                            )
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #groupBuyCorporateTickets>
+                                    <ext-link
+                                        :href="pageLinks.kktixCorporate2023"
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t('terms.groupBuyCorporateTickets')
+                                        }}</ext-link
+                                    >
+                                </template>
 
-                            <template #financialAid>
-                                <locale-link
-                                    :to="pageLinks.financialAid"
-                                    underline
-                                    highlight
-                                    >{{ $t('terms.financialAid') }}</locale-link
-                                >
-                            </template>
-                            <template #sponsorshipFromPyConTW>
-                                <ext-link
-                                    :href="pageLinks.kktixReserved2023"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('tickets.sponsorshipFromPyConTW')
-                                    }}</ext-link
-                                >
-                            </template>
-                        </i18n>
+                                <template #financialAid>
+                                    <locale-link
+                                        :to="pageLinks.financialAid"
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('terms.financialAid')
+                                        }}</locale-link
+                                    >
+                                </template>
+                                <template #sponsorshipFromPyConTW>
+                                    <ext-link
+                                        :href="pageLinks.kktixReserved2023"
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('tickets.sponsorshipFromPyConTW')
+                                        }}</ext-link
+                                    >
+                                </template>
+                            </i18n>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -429,103 +437,113 @@
                                 >
                             </template>
                         </i18n>
-                        <i18n
-                            v-for="(string, index) in $t(
-                                `notice.content.${i}.description`,
-                            )"
-                            :key="`${string}.${index}`"
-                            :path="`notice.content.${i}.description.${index}`"
-                            class="leading-[30px]"
-                            tag="div"
-                        >
-                            <template #concession>
-                                <ext-link
-                                    :href="pageLinks.kktixIndividual2023"
-                                    underline
-                                    highlight
-                                    >{{ $t('tickets.concession') }}</ext-link
-                                >
-                            </template>
-                            <template
-                                #identityVerificationOfPeopleWithDisability
+                        <ul class="list-disc">
+                            <i18n
+                                v-for="(string, index) in $t(
+                                    `notice.content.${i}.description`,
+                                )"
+                                :key="`${string}.${index}`"
+                                :path="`notice.content.${i}.description.${index}`"
+                                class="leading-[30px]"
+                                tag="li"
                             >
-                                <ext-link
-                                    :href="
-                                        pageLinks.identityVerificationOfPeopleWithDisability
-                                    "
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t(
-                                            'terms.identityVerificationOfPeopleWithDisability',
-                                        )
-                                    }}</ext-link
+                                <template #concession>
+                                    <ext-link
+                                        :href="pageLinks.kktixIndividual2023"
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('tickets.concession')
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template
+                                    #identityVerificationOfPeopleWithDisability
                                 >
-                            </template>
-                            <template #disabilityCertification>
-                                <ext-link
-                                    :href="pageLinks.disabilityCertification"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('terms.disabilityCertification')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #individualRegular>
-                                <ext-link
-                                    :href="pageLinks.kktixIndividual2023"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('tickets.individualRegular')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #nonCorporateTicketsInvoicing>
-                                <ext-link
-                                    :href="
-                                        pageLinks.nonCorporateTicketsInvoicing
-                                    "
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.nonCorporateTicketsInvoicing')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #groupBuyCorporateTicketsForm>
-                                <ext-link
-                                    :href="
-                                        pageLinks.groupBuyCorporateTicketsForm
-                                    "
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.groupBuyCorporateTicketsForm')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #contact>
-                                <ext-link
-                                    :href="pageLinks.organizerEmail"
-                                    highlight
-                                    underline
-                                >
-                                    organizers@python.tw
-                                </ext-link>
-                            </template>
-                            <template #concessionTicket>
-                                <ext-link
-                                    :href="pageLinks.kktixIndividual2023"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('tickets.concessionTicket')
-                                    }}</ext-link
-                                >
-                            </template>
-                        </i18n>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.identityVerificationOfPeopleWithDisability
+                                        "
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t(
+                                                'terms.identityVerificationOfPeopleWithDisability',
+                                            )
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #disabilityCertification>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.disabilityCertification
+                                        "
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('terms.disabilityCertification')
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #individualRegular>
+                                    <ext-link
+                                        :href="pageLinks.kktixIndividual2023"
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('tickets.individualRegular')
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #nonCorporateTicketsInvoicing>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.nonCorporateTicketsInvoicing
+                                        "
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t(
+                                                'terms.nonCorporateTicketsInvoicing',
+                                            )
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #groupBuyCorporateTicketsForm>
+                                    <ext-link
+                                        :href="
+                                            pageLinks.groupBuyCorporateTicketsForm
+                                        "
+                                        highlight
+                                        underline
+                                        >{{
+                                            $t(
+                                                'terms.groupBuyCorporateTicketsForm',
+                                            )
+                                        }}</ext-link
+                                    >
+                                </template>
+                                <template #contact>
+                                    <ext-link
+                                        :href="pageLinks.organizerEmail"
+                                        highlight
+                                        underline
+                                    >
+                                        organizers@python.tw
+                                    </ext-link>
+                                </template>
+                                <template #concessionTicket>
+                                    <ext-link
+                                        :href="pageLinks.kktixIndividual2023"
+                                        underline
+                                        highlight
+                                        >{{
+                                            $t('tickets.concessionTicket')
+                                        }}</ext-link
+                                    >
+                                </template>
+                            </i18n>
+                        </ul>
                     </li>
                 </ul>
             </div>
