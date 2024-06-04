@@ -11,7 +11,6 @@ export const pageLinks = {
     disabilityCertification: 'https://www.mohw.gov.tw/cp-88-235-1-45.html',
     everybodyContributesPrinciple:
         'http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays',
-    financialAid: '/registration/financial-aid',
     groupBuyCorporateTicketsForm: 'https://forms.gle/HRBH3KfDpFm2Y4nK6',
     identityVerificationOfPeopleWithDisability:
         'https://kktix.com/account/identities',

@@ -14,14 +14,13 @@ export default genI18nMessages({
         },
         ticketsIntro: {
             title: 'Tickets',
-            description:
-                'If you need financial aid, please visit {financialAid}. The following time is GMT+8.',
+            description: 'The following time is GMT+8.',
         },
         beforeBuyingTickets: {
             title: 'Before Buying Tickets',
             content: [
                 {
-                    title: 'Need Reimbursement from Your Company? Get a {corporateTicketPage}!',
+                    title: 'Need Reimbursement from Your Company? Get a Corporate Ticket!',
                     description: [
                         'We will NOT provide an invoice for “Non-Corporate Tickets”. ',
                     ],
@@ -52,7 +51,7 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: 'If you need reimbursement from your company, please get your “{corporateTicketPage}”.',
+                    title: 'If you need reimbursement from your company, please get your “Corporate Tickets”.',
                     description: [
                         'You will see two EXTRA required fields, Invoiced Company Name and VAT Number, needed specially for the reimbursement purpose, to meet our local tax regulation in corporate tickets.',
                         'If you need reimbursement after purchasing "Non-Corporate Tickets", please apply {nonCorporateTicketsInvoicing}.',
@@ -105,7 +104,6 @@ export default genI18nMessages({
             ],
         },
         tickets: {
-            community: 'Community',
             concession: 'Concession',
             concessionTicket: 'Concession Ticket',
             corporate: 'Corporate',
@@ -113,11 +111,8 @@ export default genI18nMessages({
             individual: 'Individual',
             individualRegular: 'Individual Ticket (Regular Stage)',
             premium: 'Individual Sponsor',
-            reserved: 'Reserved',
-            sponsorshipFromPyConTW: 'Sponsorship from PyCon TW',
         },
         features: {
-            communityDiscount: 'Community Discount',
             conferencePass: 'Conference Pass',
             disabilitiesOnly: 'ONLY for Disabilities',
             earlyStageDiscount: 'Discount for Early Bird',
@@ -125,24 +120,15 @@ export default genI18nMessages({
             earlyStageTShirt: 'T-Shirt ONLY for Early Bird Stage',
             earlyRegularStageTShirt:
                 'T-Shirt ONLY for Early Bird and Regular Stage',
-            regularTShirt: 'T-Shirt ONLY for Regular Stage',
-            exclusiveLunchBoxAndDesserts: 'Exclusive Lunch Box & Desserts',
+            regularStageTShirt: 'T-Shirt ONLY for Regular Stage',
             exclusiveSwag: 'Exclusive Swag',
-            expressRegistration: 'Express Registration',
-            financialAid: 'Financial Aid',
             groupBuyDiscount: 'Group-Buy Discount',
             groupBuyApply: 'Apply for {groupBuyCorporateApplication}',
             invitationOfSpeakerNight: 'Invitation of “Speakers’ Night”',
             lunchBoxAndDesserts: 'Lunch Box & Desserts',
             reimbursementReceipt: 'Reimbursement Receipt',
-            reservedSeat: 'Reserved Seat',
-            speakersDiscount: 'Speakers Discount',
-            sponsorshipFromPyConTW: '{sponsorshipFromPyConTW}',
-            submittersDiscount: 'Submitters Discount',
-            vatAvailable: 'Tax ID number',
-            vipLounge: 'VIP Lounge',
             thankYouList:
-                'Name Listed At The Venue To Thank You For Supporting PyCon TW 2024',
+                'Name Listed at the Venue to Thank You for Supporting PyCon TW 2024',
         },
         sellingStage: {
             earlyStage: 'Early Stage',
@@ -158,12 +144,8 @@ export default genI18nMessages({
         },
         terms: {
             codeOfConduct: 'Code of Conduct of PyCon TW 2024',
-            corporateTickets: 'Corporate Tickets',
-            corporateTicketPage: 'Corporate Ticket',
             disabilityCertification: 'Certificate of Disability',
             everybodyContributesPrinciple: 'Principle of Everybody Contributes',
-            financialAid: 'Financial Aid',
-            freeToApply: 'Free to Apply',
             groupBuyCorporateTicketsForm: 'application form',
             groupBuyCorporateApplication: 'Group-Buy Corporate Tickets',
             identityVerificationOfPeopleWithDisability:
@@ -173,14 +155,14 @@ export default genI18nMessages({
                 'KKTIX ticket exchange and refund policy',
             nonCorporateTicketsInvoicing: 'Non-Corporate Tickets Invoicing',
             privacyPolicy: 'Privacy Policy of PyCon Taiwan 2024',
-            sponsorshipFromPyConTW: 'Sponsorship from PyCon TW',
             viewPricePage: 'See on KKTIX',
             officialWebsite: 'official website',
         },
         og: {
             title: 'Ticket Info',
             description:
-                'Welcome on board the PyCon TW 2024 Challenger for discovering the Python Universe.{br} More with multiple ticket types to choose from. Engage with experts and learn from peers.',
+                'The spark between technology and humanity will ignite your inspiration at PyCon TW 2024!{br}' +
+                'More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         },
     },
     'zh-hant': {
@@ -196,7 +178,7 @@ export default genI18nMessages({
         ticketsIntro: {
             title: '購票方案',
             description:
-                '從早鳥票到一般票，企業票至個人贊助票，您可以依照您的需求選擇您需要的票種，若需要財務補助的你，請至 {financialAid} 進行申請。',
+                '從早鳥票到一般票，企業票至個人贊助票，您可以依照您的需求選擇您需要的票種。',
         },
         beforeBuyingTickets: {
             title: '購票前請留意',
@@ -288,7 +270,6 @@ export default genI18nMessages({
             ],
         },
         tickets: {
-            community: '社群票',
             concession: '愛心優待票',
             concessionTicket: '愛心優待票',
             corporate: '企業票',
@@ -296,32 +277,21 @@ export default genI18nMessages({
             individual: '個人票',
             individualRegular: '個人票 (一般階段)',
             premium: '個人贊助票',
-            reserved: '保留票種',
-            sponsorshipFromPyConTW: '大會贊助票',
         },
         features: {
-            communityDiscount: '社群優惠',
             conferencePass: '全程參與 PyCon TW 2024',
             disabilitiesOnly: '限身心障礙人士購買',
             earlyStageDiscount: '早鳥階段限定購票優惠',
+            tShirt: '紀念衣服',
             earlyStageTShirt: '紀念衣服',
             earlyRegularStageTShirt: '紀念衣服（晚鳥除外）',
             regularStageTShirt: '紀念衣服（晚鳥除外）',
-            exclusiveLunchBoxAndDesserts: '尊榮午餐與茶點餐盒',
             exclusiveSwag: '大會限定紀念品',
-            expressRegistration: '快速通關報到',
             groupBuyDiscount: '團體購票折扣',
             groupBuyApply: '請洽{groupBuyCorporateApplication}',
             invitationOfSpeakerNight: '講者晚宴入場邀請',
             lunchBoxAndDesserts: '午餐餐盒與茶點',
             reimbursementReceipt: '提供企業報帳收據',
-            reservedSeat: '議程廳保留席',
-            speakersDiscount: '講者專屬優惠',
-            sponsorshipFromPyConTW: '{sponsorshipFromPyConTW}',
-            submittersDiscount: '投稿者專屬優惠',
-            tShirt: '紀念衣服',
-            vatAvailable: '提供統一編號及抬頭',
-            vipLounge: '貴賓休息室',
             thankYouList: '購票支持本屆大會舉辦大會現場列名',
         },
         sellingStage: {
@@ -331,29 +301,23 @@ export default genI18nMessages({
         },
         sellingStatus: {
             apply: '歡迎洽詢',
-            comingSoon: '即將開賣',
-            selling: '立即搶購',
-            ended: '結束販售',
+            comingSoon: '尚未開賣',
+            selling: '售票中',
+            ended: '結束',
             soldOut: '票種售罄',
         },
         terms: {
             codeOfConduct: 'PyCon TW 2024 行為準則',
-            corporateTickets: '企業票種 (企業票和企業團體票)',
-            corporateTicketPage: '企業票購票頁',
             disabilityCertification: '身心障礙證明',
             everybodyContributesPrinciple: 'Everybody Contributes 原則',
-            financialAid: '財務補助計畫',
-            freeToApply: '歡迎洽詢',
-            groupBuyCorporateTickets: '企業團體票',
             groupBuyCorporateTicketsForm: 'PyCon TW 2024 企業團體票申請',
             groupBuyCorporateApplication: '企業團體票申請',
-            VerificationOfPeopleWithDisability: '身心障礙者身份認證',
+            identityVerificationOfPeopleWithDisability: '身心障礙者身份認證',
             kktixOnBehalf: 'KKTIX 代理退票與退費',
             kktixTicketExchangeRefundPolicy: 'KKTIX 代理退換票辦法',
             nonCorporateTicketsInvoicing:
                 'PyCon TW 2024 非企業票種開立發票申請',
             privacyPolicy: 'PyCon Taiwan 2024 個人資料保護聲明',
-            sponsorshipFromPyConTW: '大會贊助票 (財務補助)',
             viewPricePage: '詳見售票',
             officialWebsite: 'PyCon TW 2024 大會官方網站',
         },

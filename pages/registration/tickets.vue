@@ -99,15 +99,6 @@
                                 :path="`features.${feature}`"
                                 tag="div"
                             >
-                                <template #sponsorshipFromPyConTW>
-                                    <locale-link
-                                        :to="pageLinks.financialAid"
-                                        underline
-                                        highlight
-                                    >
-                                        {{ $t('terms.sponsorshipFromPyConTW') }}
-                                    </locale-link>
-                                </template>
                                 <template #groupBuyCorporateApplication>
                                     <ext-link
                                         :href="
@@ -194,16 +185,6 @@
                             tag="div"
                         >
                             <template #br><br /></template>
-                            <template #corporateTicketPage>
-                                <ext-link
-                                    :href="pageLinks.kktixCorporate2023"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('terms.corporateTicketPage')
-                                    }}</ext-link
-                                >
-                            </template>
                         </i18n>
                         <ul class="list-disc">
                             <i18n
@@ -215,16 +196,6 @@
                                 :path="`beforeBuyingTickets.content.${i}.description.${index}`"
                                 tag="li"
                             >
-                                <template #corporateTicketPage>
-                                    <ext-link
-                                        :href="pageLinks.kktixCorporate2023"
-                                        underline
-                                        highlight
-                                        >{{
-                                            $t('terms.corporateTicketPage')
-                                        }}</ext-link
-                                    >
-                                </template>
                                 <template #nonCorporateTicketsInvoicing>
                                     <ext-link
                                         :href="
@@ -250,37 +221,6 @@
                                             $t(
                                                 'terms.groupBuyCorporateTicketsForm',
                                             )
-                                        }}</ext-link
-                                    >
-                                </template>
-                                <template #groupBuyCorporateTickets>
-                                    <ext-link
-                                        :href="pageLinks.kktixCorporate2023"
-                                        highlight
-                                        underline
-                                        >{{
-                                            $t('terms.groupBuyCorporateTickets')
-                                        }}</ext-link
-                                    >
-                                </template>
-
-                                <template #financialAid>
-                                    <locale-link
-                                        :to="pageLinks.financialAid"
-                                        underline
-                                        highlight
-                                        >{{
-                                            $t('terms.financialAid')
-                                        }}</locale-link
-                                    >
-                                </template>
-                                <template #sponsorshipFromPyConTW>
-                                    <ext-link
-                                        :href="pageLinks.kktixReserved2023"
-                                        underline
-                                        highlight
-                                        >{{
-                                            $t('tickets.sponsorshipFromPyConTW')
                                         }}</ext-link
                                     >
                                 </template>
@@ -325,16 +265,6 @@
                                     }}</ext-link
                                 >
                             </template>
-                            <template #corporateTicketPage>
-                                <ext-link
-                                    :href="pageLinks.kktixCorporate2023"
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.corporateTicketPage')
-                                    }}</ext-link
-                                >
-                            </template>
                             <template #nonCorporateTicketsInvoicing>
                                 <ext-link
                                     :href="
@@ -349,7 +279,7 @@
                             </template>
                             <template #corporateTickets>
                                 <ext-link
-                                    :href="pageLinks.kktixCorporate2023"
+                                    :href="pageLinks.kktixCorporate2024"
                                     highlight
                                     underline
                                     >{{
@@ -371,7 +301,7 @@
                             </template>
                             <template #concessionTicket>
                                 <ext-link
-                                    :href="pageLinks.kktixIndividual2023"
+                                    :href="pageLinks.kktixIndividual2024"
                                     underline
                                     highlight
                                     >{{
@@ -449,7 +379,7 @@
                             >
                                 <template #concession>
                                     <ext-link
-                                        :href="pageLinks.kktixIndividual2023"
+                                        :href="pageLinks.kktixIndividual2024"
                                         underline
                                         highlight
                                         >{{
@@ -487,7 +417,7 @@
                                 </template>
                                 <template #individualRegular>
                                     <ext-link
-                                        :href="pageLinks.kktixIndividual2023"
+                                        :href="pageLinks.kktixIndividual2024"
                                         underline
                                         highlight
                                         >{{
@@ -534,7 +464,7 @@
                                 </template>
                                 <template #concessionTicket>
                                     <ext-link
-                                        :href="pageLinks.kktixIndividual2023"
+                                        :href="pageLinks.kktixIndividual2024"
                                         underline
                                         highlight
                                         >{{
