@@ -58,7 +58,7 @@ export default {
                 {
                     hid: 'og:image',
                     property: 'og:image',
-                    content: 'https://tw.pycon.org/2023/og-img.jpg',
+                    content: `https://tw.pycon.org/${conferenceYear}/og-img.jpg`,
                 },
                 {
                     hid: 'og:url',
