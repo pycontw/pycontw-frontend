@@ -14,10 +14,10 @@ export const pageLinks = {
     groupBuyCorporateTicketsForm: 'https://forms.gle/HRBH3KfDpFm2Y4nK6',
     identityVerificationOfPeopleWithDisability:
         'https://kktix.com/account/identities',
-    kktixCorporate2024: 'https://pycontw.kktix.cc/events/2023-corporate',
-    kktixIndividual2024: 'https://pycontw.kktix.cc/events/2023-individual',
+    kktixCorporate2024: 'https://pycontw.kktix.cc/events/2024-corporate',
+    kktixIndividual2024: 'https://pycontw.kktix.cc/events/2024-individual',
     kktixOnBehalf: 'https://support.kktix.com/knowledgebase/articles/356418',
-    kktixReserved2024: 'https://pycontw.kktix.cc/events/2023-reserved',
+    kktixReserved2024: 'https://pycontw.kktix.cc/events/2024-reserved',
     nonCorporateTicketsInvoicing: 'https://forms.gle/neJhs8xKQ1gykQQB8',
     privacyPolicy: '/about/privacy-policy',
     organizerEmail: 'mailto:organizers@python.tw',
@@ -106,7 +106,7 @@ export const ticketInfoConfig = [
         prices: [
             {
                 titleI18nKey: 'sellingStage.regularStage',
-                price: 'NT$ 5,222',
+                price: 'NT$ 5,220',
             },
         ],
         image: require('~/static/img/registration/tickets/corporate.svg'),
