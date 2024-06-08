@@ -47,66 +47,49 @@ export default genI18nMessages({
             moreInfoLinkTitle: 'Academia Sinica Announcement',
         },
         publicTransport: {
-            title: 'From Taoyuan Intl. Airport',
+            title: 'Taiwan Kaohsiung International Airport',
             taxi: {
-                title: 'Taxi',
+                title: 'Taxis',
                 description:
-                    'Taxis can also be taken instead of buses, costing around NT$100. Based on past experience, many people choose this option, so sharing a taxi from the MRT station is a good idea.',
+                    'Taxis can also be taken instead of buses. Based on past experience, many people choose this option, so sharing a taxi from the Railway station or Light Rail station is a good idea.',
             },
             bus: {
                 title: 'Passenger bus',
                 description:
-                    "To reach Academia Sinica, you can take buses 205, 212, 212 (212 Express), 270, 270 (270 Shuttle), 276, 306, 306 (306 Shuttle), 620, 645, 645 (645 Sub), S1, S12, 小 12 (S12 Shuttle), S5, or 藍 25 (Blue 25), and get off at Academia Sinica Station. From there, it's approximately an 8-minute walk to your destination.",
+                    'Red28(Extend)、Red28、60 Jyuemin Main Line、60 Jyuemin Main Line(Interval)、73、37、 76、77、81、、168W Main Line、168E Main Line、8503',
             },
             uBike: {
                 link: {
                     description1: 'official YouBike website',
-                    description2: 'OpenCycleMap',
                 },
                 description1:
-                    'There are several YouBike (Taipei’s bike-sharing program) rental stations near Academia Sinica.For more information about the YouBike routes in the vicinity, you can visit the  {0} and {1}，It is recommended to check the available docking stations on the app to return the bike. {2}Cycling time from Nangang Station or Nangang Exhibition Center Station to Academia Sinica is approximately 10-15 minutes',
+                    'There are several YouBike rental stations near the National Science and Technology Museum. For more information about the YouBike routes in the vicinity, you can visit the {0}. It is recommended to check the available docking stations on the app to return the bike. Cycling time from Taiwan Railway-Science and Technology Museum Station or Light Rail-C30 Science and Technology Museum to the National Science and Technology Museum （South Complex） is approximately 5-10 minutes.',
             },
             uBikePark: {
                 parkPlace: {
-                    park1: 'YouBike 2.0: Humanities and Social Science Building',
-                    park2: 'YouBike 2.0: Academia Sinica Gymnasium (East)',
-                    park3: 'YouBike 2.0: Academia Sinica (Jiuzhuang St. Intersection)',
-                    park4: 'YouBike 2.0: Academia Park',
-                    park5: 'YouBike 2.0: Dr. Hu Shih Par',
+                    park1: 'YouBike 2.0: Science and Technology Museum',
+                    park2: 'YouBike 2.0: National Science and Technology Museum',
+                    park3: 'YouBike 2.0: Tiedao 1st St.  and Ln. 138, Xianzheng Rd. Intersection',
+                    park4: 'YouBike 2.0: PingdengJiouru 1st Rd. Intersection',
                 },
                 parkingInfo: {
                     park1: '{0}',
                     park2: '{0}',
-                    park3: '{0} — Approximately a 10-minute walk',
-                    park4: '{0} — Approximately a 12-minute walk',
-                    park5: '{0} — Approximately a 13-minute walk',
+                    park3: '{0} —  Approximately a 10-minute walk.',
+                    park4: '{0} —  Approximately a 10-minute walk.',
                 },
                 title: 'Youbike Nearby rental stations',
             },
         },
         publicTransportInfo: {
             title: 'Public transportation',
-            info: 'You can take the {0} to travel between Nangang Exhibition Center and Terminal 1 and Terminal 2 of Taoyuan International Airport.',
-            '1843infoTitle': '{0} Route Information:',
-            publicTransport: 'Kuo-Kuang Bus 1843',
             description1:
-                'Route: Taiwan Taoyuan Airport Terminal 1 -> Taiwan Taoyuan Airport Terminal 2 -> MRT Gangqian Station -> Ruiguang Road -> Neihu Administrative Center -> MRT Nangang Exhibition Center Station (Nangang Rd.) -> Nangang Bus Station (West)',
-            description2: {
-                title: 'Bus platform location:',
-                info1: 'Terminal I: B1 bus area of Arrivals Hall',
-                info2: 'Terminal II: Outdoor gallery at East side of 1F Arrivals Hall',
-            },
-            description3: {
-                title: 'Fare (for reference only)：',
-                info1: 'Fare: NT$140',
-                info2: 'Fare: NT$75',
-            },
-            description4: 'Schedule: 09:10, 13:10, and 17:20, From Terminal II',
-            description5: 'Estimated time: 1 hour with moderate traffic',
+                'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station (R11) and then take the train to Science and Technology Museum Station.  Walk approximately 15 min to arrive at the museum.',
+            description2:
+                'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station(R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
             moreInfo: {
-                title: 'For more information, please refer to {0} and {1} 。',
-                info1: 'the traffic information of Academia Sinica',
-                info2: 'the public transportation information of Taoyuan international Airport',
+                title: 'For more information, please refer to {0}。',
+                info1: 'the traffic information of national science and technology museum.',
             },
         },
         shuttleService: {
@@ -175,16 +158,16 @@ export default genI18nMessages({
             moreInfoLinkTitle: '國立科學工藝博物館交通資訊',
         },
         publicTransport: {
-            title: '桃園國際機場交通資訊',
+            title: '高雄國際機場交通資訊',
             taxi: {
                 title: '計程車',
                 description:
-                    '可以搭計程車代替公車，約 NT$ 100 元。 根據過去的經驗，屆時將會有不少人採取此方式，不妨採取計程車共乘由捷運站前往。',
+                    '可以搭計程車代替公車。根據過去的經驗，屆時將會有不少人採取此方式，不妨採取計程車共乘由火車站、輕軌站前往。',
             },
             bus: {
                 title: '公車',
                 description:
-                    '搭乘 205、212、212 直、270、270 區、276、306、306 區、620、645、645 副、小 1、 小 12、小 12 區、 小 5、藍 25，並在中研院站下車，步行約 8 分鐘。',
+                    '紅28繞中都濕地公園、紅28、紅28公車式小黃、60覺民幹線、60覺民幹線區間車、73、37、 76、77、81、168環西幹線、168環西幹線區間車、168環東幹線、168環東幹線區間車、8503',
             },
             uBike: {
                 link: {
@@ -192,49 +175,33 @@ export default genI18nMessages({
                     description2: 'OpenCycleMap',
                 },
                 description1:
-                    '中研院週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0} 以及 {1}，建議還車前留意APP上站點可停駐數量。{2}由南港車站或南港展覽館站出發騎乘時間約 10-15 分鐘。',
+                    '科工館週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0}，建議還車前留意APP上站點可停駐數量。由台鐵科工館站或輕軌科工館出發騎乘時間約 5-10 分鐘。',
             },
             uBikePark: {
                 parkPlace: {
-                    park1: 'YouBike 2.0：中研院人文社會科學館',
-                    park2: 'YouBike 2.0：中研院綜合體育館東側',
-                    park3: 'YouBike 2.0：研究院舊莊街口',
-                    park4: 'YouBike 2.0：中研公園',
-                    park5: 'YouBike 2.0： 胡適公園',
+                    park1: 'YouBike 2.0：科工館',
+                    park2: 'YouBike 2.0：平等九如一路口',
+                    park3: 'YouBike 2.0：鐵道憲政139巷口',
+                    park4: 'YouBike 2.0：國立科學工藝博物館',
                 },
                 parkingInfo: {
                     park1: '{0}',
                     park2: '{0}',
                     park3: '{0} — 步行約 10 分鐘',
-                    park4: '{0} — 步行約 12 分鐘',
-                    park5: '{0} — 步行約 13 分鐘',
+                    park4: '{0} — 步行約 10 分鐘',
                 },
                 title: 'Youbike 附近租賃站點',
             },
         },
         publicTransportInfo: {
             title: '乘車方式',
-            info: '可乘坐 {0} 於南港展覽館與桃園機場第一航廈與第二航廈之間往返。',
-            '1843infoTitle': '{0} 路線資訊：',
-            publicTransport: '國光客運 1843',
             description1:
-                '路線：桃園機場第一航廈 → 桃園機場第二航廈 → 捷運港墘站→瑞光路 → 內湖行政中心→捷運南港展覽館站 → 南港轉運站西站（高鐵台鐵）',
-            description2: {
-                title: '站台位置：',
-                info1: '第一航廈：B1 層巴士乘車區。',
-                info2: '第二航廈：1F 層巴士乘車區。',
-            },
-            description3: {
-                title: '票價（票價僅供參考）：',
-                info1: '全票 NT$140',
-                info2: '半票 NT$75',
-            },
-            description4: '時間：09:10、13:10、17:20，從第二航廈發車',
-            description5: '路程時間：一般交通狀況下一小時',
+                '高雄捷運紅線「高雄國際機場站 (R4)」搭乘至「高雄車站 (R11)」，轉乘台鐵至「科工館車站」下車，步行約10分鐘至本館。',
+            description2:
+                '搭乘高雄捷運紅線至「高雄車站 (R11)」，轉搭60號公車（覺民幹線）至科工館站即可抵達。',
             moreInfo: {
-                title: '更多詳細資訊請參考 {0} 以及 {1} 。',
-                info1: '中央研究院交通資訊',
-                info2: '桃園國際機場公共運輸交通資訊',
+                title: '更多詳細資訊請參考 {0}。',
+                info1: '國立科學工藝博物館交通資訊',
             },
         },
         shuttleService: {
