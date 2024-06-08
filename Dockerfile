@@ -5,7 +5,7 @@ WORKDIR /usr/local
 COPY package-lock.json package-lock.json
 COPY package.json package.json
 
-RUN npm ci --legacy-peer-deps
+RUN npm ci
 
 COPY assets ./assets
 COPY components ./components
