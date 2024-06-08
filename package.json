@@ -12,7 +12,7 @@
         "lint": "npm run lint:js",
         "test": "jest",
         "prettier:lint": "prettier --ignore-path .gitignore --write '**/*.vue' ",
-        "json-server": "./node_modules/.bin/json-server --watch db.json --routes routes.json --port 9876 --middlewares json-server-middlewares.js"
+        "json-server": "json-server --watch db.json --routes routes.json --port 9876 --middlewares json-server-middlewares.js"
     },
     "dependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
