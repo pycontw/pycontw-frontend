@@ -10,7 +10,7 @@ export default genI18nMessages({
         about: {
             title: 'Conference Information',
             date: 'Date & Time: September 21 to September 22, 2024 (GMT+8)',
-            place: 'Venue & Address: National Science and Technology Museum - No. 720, Jiuru 1st Rd., Sanmin Dist., Kaohsiung City 807412, Taiwan (R.O.C.) ',
+            place: 'Venue & Address: National Science and Technology Museum (South Complex) - No. 797, Jiuru 1st Rd., Sanmin Dist., Kaohsiung City 807044, Taiwan ',
         },
         ticketsIntro: {
             title: 'Tickets',
@@ -173,7 +173,7 @@ export default genI18nMessages({
         about: {
             title: '大會資訊',
             date: '日期與時間：2024 年 09 月 21 日 與 2024 年 09 月 22 日 (GMT+8)',
-            place: '地點與地址：國立科學工藝博物館 - 807高雄市三民區九如一路720號',
+            place: '地點與地址：國立科學工藝博物館(南館) - 高雄市三民區九如一路797號',
         },
         ticketsIntro: {
             title: '購票方案',
