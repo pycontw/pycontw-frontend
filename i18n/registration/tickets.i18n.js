@@ -127,6 +127,7 @@ export default genI18nMessages({
             invitationOfSpeakerNight: 'Invitation of “Speakers’ Night”',
             lunchBoxAndDesserts: 'Lunch Box & Desserts',
             reimbursementReceipt: 'Reimbursement Receipt',
+            support: 'Ticket for Supporting PyCon TW 2024',
             thankYouList:
                 'Name Listed at the Venue to Thank You for Supporting PyCon TW 2024',
         },
@@ -292,7 +293,8 @@ export default genI18nMessages({
             invitationOfSpeakerNight: '講者晚宴入場邀請',
             lunchBoxAndDesserts: '午餐餐盒與茶點',
             reimbursementReceipt: '提供企業報帳收據',
-            thankYouList: '購票支持本屆大會舉辦大會現場列名',
+            support: '購票支持本屆大會',
+            thankYouList: '舉辦大會現場列名',
         },
         sellingStage: {
             earlyStage: '早鳥階段',

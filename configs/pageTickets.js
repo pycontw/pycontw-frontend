@@ -30,6 +30,7 @@ export const ticketInfoConfig = [
         price: 'NT$ 5,500',
         image: require('~/static/img/registration/tickets/regular.svg'),
         featuresI18nKey: [
+            'support',
             'thankYouList',
             'tShirt',
             'exclusiveSwag',
