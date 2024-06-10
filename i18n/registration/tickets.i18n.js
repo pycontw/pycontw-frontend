@@ -10,7 +10,7 @@ export default genI18nMessages({
         about: {
             title: 'Conference Information',
             date: 'Date & Time: September 21 to September 22, 2024 (GMT+8)',
-            place: 'Venue & Address: National Science and Technology Museum - No. 720, Jiuru 1st Rd., Sanmin Dist., Kaohsiung City 807412, Taiwan (R.O.C.) ',
+            place: 'Venue & Address: National Science and Technology Museum (South Complex) - No. 797, Jiuru 1st Rd., Sanmin Dist., Kaohsiung City 807044, Taiwan ',
         },
         ticketsIntro: {
             title: 'Tickets',
@@ -127,6 +127,7 @@ export default genI18nMessages({
             invitationOfSpeakerNight: 'Invitation of “Speakers’ Night”',
             lunchBoxAndDesserts: 'Lunch Box & Desserts',
             reimbursementReceipt: 'Reimbursement Receipt',
+            support: 'Ticket for Supporting PyCon TW 2024',
             thankYouList:
                 'Name Listed at the Venue to Thank You for Supporting PyCon TW 2024',
         },
@@ -173,7 +174,7 @@ export default genI18nMessages({
         about: {
             title: '大會資訊',
             date: '日期與時間：2024 年 09 月 21 日 與 2024 年 09 月 22 日 (GMT+8)',
-            place: '地點與地址：國立科學工藝博物館 - 807高雄市三民區九如一路720號',
+            place: '地點與地址：國立科學工藝博物館(南館) - 高雄市三民區九如一路797號',
         },
         ticketsIntro: {
             title: '購票方案',
@@ -292,7 +293,8 @@ export default genI18nMessages({
             invitationOfSpeakerNight: '講者晚宴入場邀請',
             lunchBoxAndDesserts: '午餐餐盒與茶點',
             reimbursementReceipt: '提供企業報帳收據',
-            thankYouList: '購票支持本屆大會舉辦大會現場列名',
+            support: '購票支持本屆大會',
+            thankYouList: '舉辦大會現場列名',
         },
         sellingStage: {
             earlyStage: '早鳥階段',
