@@ -5,7 +5,7 @@ export default genI18nMessages({
         og: {
             title: 'Venue Information',
             description:
-                'PyCon Taiwan 2023 will be held at the Humanities and Social Science Building, Academia Sinica, with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
+                'PyCon Taiwan 2024 will be held at the National Science and Technology Museum（South Complex) for both novice and experienced Python developers.',
         },
         venueInfo: {
             name: 'National Science and Technology Museum\n（South Complex)',
@@ -117,7 +117,7 @@ export default genI18nMessages({
         og: {
             title: '會場資訊',
             description:
-                'PyCon Taiwan 2023 將在中央研究院人文社會科學館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
+                'PyCon Taiwan 2024 將在國立科學工藝博物館南館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
             name: '國立科學工藝博物館\n南館',
