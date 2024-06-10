@@ -37,7 +37,7 @@
                 center
             >
             </core-h1>
-            <VenueMap class=""></VenueMap>
+            <VenueMap v-if="showVenueMap" class=""></VenueMap>
         </client-only>
     </i18n-page-wrapper>
 </template>
@@ -68,6 +68,7 @@ export default {
     data() {
         return {
             selectedTransModeIndex: 0,
+            showVenueMap: false,
             transModes: [
                 {
                     label: this.$t('transMode.car'),
