@@ -30,14 +30,14 @@
                 v-if="selectedTransModeIndex === 2"
             ></VenueShuttleServiceTab>
         </div>
-        <client-only>
+        <client-only v-if="showVenueMap">
             <core-h1
                 class="venue-title whitespace-pre-line pt-20 text-center"
                 :title="$t('venueMap.title')"
                 center
             >
             </core-h1>
-            <VenueMap v-if="showVenueMap" class=""></VenueMap>
+            <VenueMap class=""></VenueMap>
         </client-only>
     </i18n-page-wrapper>
 </template>

@@ -5,7 +5,7 @@ export default genI18nMessages({
         og: {
             title: 'Venue Information',
             description:
-                'PyCon Taiwan 2024 will be held at the National Science and Technology Museum（South Complex) for both novice and experienced Python developers.',
+                'PyCon Taiwan 2024 will be held at the National Science and Technology Museum (South Complex), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
             name: 'National Science and Technology Museum\n（South Complex)',
