@@ -12,7 +12,7 @@ export const landingButtonConfig = {
         textKey: 'joinUs',
         isPrimary: false,
         isBordered: true,
-        isLarge: true,
+        isLarge: false,
     },
     CFP: {
         isExternalLink: false,
@@ -20,7 +20,7 @@ export const landingButtonConfig = {
         textKey: 'callForProposals',
         isPrimary: true,
         isBordered: true,
-        isLarge: true,
+        isLarge: false,
     },
     CHECK_EVENTS: {
         isExternalLink: false,
