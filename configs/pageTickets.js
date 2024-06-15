@@ -33,8 +33,6 @@ export const ticketInfoConfig = [
             'support',
             'thankYouList',
             'tShirt',
-            'exclusiveSwag',
-            'invitationOfSpeakerNight',
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
