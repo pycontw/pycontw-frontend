@@ -213,7 +213,7 @@ export default {
     @apply mb-20 md:mb-28;
 }
 .keynote__photo {
-    @apply mx-auto my-2 h-24 w-24 md:h-28 md:w-28;
+    @apply mx-auto my-2 flex h-24 w-24 justify-center md:h-28 md:w-28;
 }
 
 .keynote__photo img {
