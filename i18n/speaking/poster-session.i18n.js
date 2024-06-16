@@ -13,8 +13,8 @@ export default genI18nMessages({
                 description: [
                     'Conference dates: 9/21 - 9/22',
                     'Call For Poster Begins: May 1st, 2024',
-                    'Call For Poster Ends: Jun 15th, 2024, 23:59:59 ({aoe})',
-                    'Announcement of Acceptance: Jun 30th, 2024',
+                    'Call For Poster Ends: Jun 30th, 2024, 23:59:59 ({aoe})',
+                    'Announcement of Acceptance: Jul 13th, 2024',
                 ],
             },
 
@@ -71,8 +71,8 @@ export default genI18nMessages({
                 description: [
                     '大會日期： 9/21 - 9/22',
                     'Poster 開放徵稿：2024 年 05 月 01 日',
-                    'Poster 徵稿截止：2024 年 06 月 15 日 23:59:59 ({aoe})',
-                    '稿件錄取通知：2024 年 06 月 30 日',
+                    'Poster 徵稿截止：2024 年 06 月 30 日 23:59:59 ({aoe})',
+                    '稿件錄取通知：2024 年 07 月 13 日',
                 ],
                 steps: [],
             },
