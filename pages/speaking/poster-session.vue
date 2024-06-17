@@ -89,7 +89,7 @@ export default {
                         {
                             slot: 'aoe',
                             textKey: 'terms.aoe',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240616T115900&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240701T115900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
