@@ -96,15 +96,15 @@
                     </ul>
                 </div>
             </div>
-            <i18n path="publicTransportInfo.moreInfo.title">
-                <a
-                    :href="publicTransportMoreInfoLink[0]"
-                    class="text-pink-500"
-                    target="_blank"
-                    >{{ $t('publicTransportInfo.moreInfo.info1') }}</a
-                >
-            </i18n>
         </div>
+        <i18n class="pt-10" path="publicTransportInfo.moreInfo.title" tag="p">
+            <a
+                :href="publicTransportMoreInfoLink[0]"
+                class="text-pink-500"
+                target="_blank"
+                >{{ $t('publicTransportInfo.moreInfo.info1') }}</a
+            >
+        </i18n>
     </div>
 </template>
 
