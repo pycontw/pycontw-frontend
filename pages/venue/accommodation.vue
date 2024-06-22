@@ -1,7 +1,14 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <p class="mb-14 text-sm md:text-base">{{ $t('intro') }}</p>
+        <i18n path="intro" tag="p" class="mb-14 text-sm md:text-base">
+            <locale-link
+                to="/venue"
+                class="text-pink-500 underline"
+                customized
+                >{{ $t('venue') }}</locale-link
+            >
+        </i18n>
         <div class="mx-auto w-full lg:w-9/12">
             <two-col-wrapper class="py-2 lg:py-5">
                 <template #default>
@@ -81,6 +88,7 @@ import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import i18n from '@/i18n/venue/accommodation.i18n'
 import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
+import { LocaleLink } from '@/components/core/links'
 
 export default {
     i18n,
@@ -89,6 +97,7 @@ export default {
         CoreH1,
         I18nPageWrapper,
         TwoColWrapper,
+        LocaleLink,
     },
     head() {
         return {

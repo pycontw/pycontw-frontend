@@ -3,7 +3,8 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Accommodation at National Science and Technology Museum （South Complex）',
-        intro: 'Following is a list of recommended accommodation outside the venue. PyCon TW does not assist with booking, nor provide direct shuttle service from and to the hotels. Please see the traffic information if needed.',
+        intro: 'Following is a list of recommended accommodation outside the venue. PyCon TW does not assist with booking, nor provide direct shuttle service from and to the hotels. Please see {0} if needed.',
+        venue: 'the traffic information',
         $$$: {
             hotel: [
                 'InterContinental Kaohsiung',
@@ -72,7 +73,8 @@ export default genI18nMessages({
     },
     'zh-hant': {
         title: '住宿指引',
-        intro: '以下住宿選擇僅提供與會來賓參考，未提供代訂或折扣服務。如有需要請自行訂房，並自行前往會場',
+        intro: '以下住宿選擇僅提供與會來賓參考，未提供代訂或折扣服務。如有需要請自行訂房，並自行{0}',
+        venue: '前往會場',
         $$$: {
             hotel: [
                 '高雄洲際酒店',
