@@ -88,7 +88,7 @@ export default genI18nMessages({
             description2:
                 'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station(R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
             moreInfo: {
-                title: 'For more information, please refer to {0}。',
+                title: '※ For more information, please refer to {0}。',
                 info1: 'the traffic information of national science and technology museum.',
             },
         },
@@ -200,7 +200,7 @@ export default genI18nMessages({
             description2:
                 '搭乘高雄捷運紅線至「高雄車站 (R11)」，轉搭60號公車（覺民幹線）至科工館站即可抵達。',
             moreInfo: {
-                title: '更多詳細資訊請參考 {0}。',
+                title: '※更多詳細資訊請參考 {0}。',
                 info1: '國立科學工藝博物館交通資訊',
             },
         },
