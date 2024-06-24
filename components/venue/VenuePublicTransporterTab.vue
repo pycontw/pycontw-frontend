@@ -41,12 +41,6 @@
                         target="_blank"
                         >{{ $t('publicTransport.uBike.link.description1') }}</a
                     >
-                    <a
-                        :href="publicTransportUBikeLink[1]"
-                        class="text-pink-500 underline"
-                        target="_blank"
-                        >{{ $t('publicTransport.uBike.link.description2') }}</a
-                    >
                     <br />
                 </i18n>
             </div>
@@ -88,96 +82,29 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
                 <div>
-                    <i18n
-                        path="publicTransportInfo.info"
-                        tag="p"
-                        class="pb-3 md:pb-0"
-                    >
-                        <a
-                            :href="publicTransportBusLink"
-                            class="text-pink-500"
-                            target="_blank"
-                            >{{ $t('publicTransportInfo.publicTransport') }}</a
-                        >
-                    </i18n>
-                </div>
-                <div>
-                    <i18n path="publicTransportInfo.1843infoTitle">
-                        <a
-                            :href="publicTransportBusLink"
-                            class="text-pink-500"
-                            target="_blank"
-                            >{{ $t('publicTransportInfo.publicTransport') }}</a
-                        >
-                    </i18n>
-
                     <ul class="ml-[19px] list-outside list-disc pb-3 md:pb-0">
                         <li>
                             {{ $t('publicTransportInfo.description1') }}
                         </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="ml-[19px] list-outside list-disc pb-3 md:pb-0">
                         <li>
-                            {{ $t('publicTransportInfo.description2.title') }}
-
-                            <ul class="ml-[19px] list-outside list-disc">
-                                <li>
-                                    {{
-                                        $t(
-                                            'publicTransportInfo.description2.info1',
-                                        )
-                                    }}
-                                </li>
-                                <li>
-                                    {{
-                                        $t(
-                                            'publicTransportInfo.description2.info2',
-                                        )
-                                    }}
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            {{ $t('publicTransportInfo.description3.title') }}
-                            <ul class="ml-[19px] list-outside list-disc">
-                                <li>
-                                    {{
-                                        $t(
-                                            'publicTransportInfo.description3.info1',
-                                        )
-                                    }}
-                                </li>
-                                <li>
-                                    {{
-                                        $t(
-                                            'publicTransportInfo.description3.info2',
-                                        )
-                                    }}
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            {{ $t('publicTransportInfo.description4') }}
-                        </li>
-                        <li>
-                            {{ $t('publicTransportInfo.description5') }}
+                            {{ $t('publicTransportInfo.description2') }}
                         </li>
                     </ul>
-                    <i18n path="publicTransportInfo.moreInfo.title">
-                        <a
-                            :href="publicTransportMoreInfoLink[0]"
-                            class="text-pink-500"
-                            target="_blank"
-                            >{{ $t('publicTransportInfo.moreInfo.info1') }}</a
-                        >
-                        <a
-                            :href="publicTransportMoreInfoLink[1]"
-                            class="text-pink-500"
-                            target="_blank"
-                            >{{ $t('publicTransportInfo.moreInfo.info2') }}</a
-                        >
-                    </i18n>
                 </div>
             </div>
         </div>
+        <i18n class="pt-10" path="publicTransportInfo.moreInfo.title" tag="p">
+            <a
+                :href="publicTransportMoreInfoLink[0]"
+                class="text-pink-500"
+                target="_blank"
+                >{{ $t('publicTransportInfo.moreInfo.info1') }}</a
+            >
+        </i18n>
     </div>
 </template>
 
@@ -192,50 +119,39 @@ export default {
     components: { VenueDivision },
     data() {
         return {
-            publicTransportBusLink:
-                'https://www.taiwanbus.tw/eBUSPage/Query/QueryResult.aspx?rno=18430',
             publicTransportUBikeLink: [
                 'https://www.youbike.com.tw/region/taipei/stations/',
-                'https://www.opencyclemap.org/?zoom=16&lat=25.04974&lon=121.61213&layers=B000',
             ],
             publicTransportMoreInfoLink: [
-                'https://dga.sinica.edu.tw/pages/1349',
-                'https://www.taoyuan-airport.com/transportation?lang=ch',
+                'https://www.nstm.gov.tw/Reference/VisitorInformation/TrafficInfo.htm',
             ],
             uBikeParkInfo: [
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park1',
-                    link: '',
+                    link: 'https://maps.app.goo.gl/dVtGS7SicBGKs8Uw9',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park1',
                     ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park2',
-                    link: '',
+                    link: 'https://maps.app.goo.gl/qdDmHFTVtVxadus76',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park2',
                     ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park3',
-                    link: '',
+                    link: 'https://maps.app.goo.gl/xFjq5akYqWq5jpnf6',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park3',
                     ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park4',
-                    link: '',
+                    link: 'https://maps.app.goo.gl/szJsnmgTjk5yR1Y98',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park4',
-                    ),
-                },
-                {
-                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park5',
-                    link: '',
-                    i18nLinkPath: this.$t(
-                        'publicTransport.uBikePark.parkPlace.park5',
                     ),
                 },
             ],

@@ -52,13 +52,24 @@
                         {{ $t('parkingInfo.car.title') }}
                     </h5>
                 </div>
-                <i18n path="parkingInfo.car.description" tag="p">
+                <i18n
+                    path="parkingInfo.car.description"
+                    tag="p"
+                    class="whitespace-pre-line"
+                >
                     <a
                         :href="parkingPlaceCarLink"
-                        class="text-pink-500"
+                        class="text-pink-500 underline"
                         target="_blank"
                     >
                         {{ $t('parkingInfo.car.parkingPlace') }}
+                    </a>
+                    <a
+                        :href="parkingPlaceCar2Link"
+                        class="text-pink-500 underline"
+                        target="_blank"
+                    >
+                        {{ $t('parkingInfo.car.parkingPlace2') }}
                     </a>
                 </i18n>
             </div>
@@ -89,23 +100,16 @@
                         >{{ $t('parkingInfo.motor.descriptionLinkTitle3') }}</a
                     >
                 </i18n>
-
-                <i18n class="pt-10 md:pt-0" path="parkingInfo.moreInfo" tag="p">
-                    <a
-                        :href="parkingMoreInfoLink[0]"
-                        class="text-pink-500"
-                        target="_blank"
-                        >{{ $t('parkingInfo.moreInfoLinkTitle') }}</a
-                    >
-                    <a
-                        :href="parkingMoreInfoLink[1]"
-                        class="text-pink-500"
-                        target="_blank"
-                        >{{ $t('parkingInfo.moreInfoLinkTitle2') }}</a
-                    >
-                </i18n>
             </div>
         </div>
+        <i18n class="pt-10" path="parkingInfo.moreInfo" tag="p">
+            <a
+                :href="parkingMoreInfoLink[0]"
+                class="text-pink-500 underline"
+                target="_blank"
+                >{{ $t('parkingInfo.moreInfoLinkTitle') }}</a
+            >
+        </i18n>
     </div>
 </template>
 
@@ -119,18 +123,16 @@ export default {
     components: { VenueDivision },
     data() {
         return {
-            carDestinationLink: 'https://goo.gl/maps/HfVQkZULCWNs4tfz6',
-            parkingPlaceCarLink:
-                'https://www.google.com/maps/place/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2%E4%BA%BA%E6%96%87%E7%A4%BE%E6%9C%83%E7%A7%91%E5%AD%B8%E9%A4%A8/@25.0409679,121.6068671,17z/data=!4m7!3m6!1s0x3442ab46b3aaaaab:0x6ad0b8243ddc70ef!8m2!3d25.0409679!4d121.6113732!15sCiTkuK3lpK7noJTnqbbpmaLkurrmlofnpL7mnIPnp5HlrbjppKhaLCIq5Lit5aSuIOeglOeptiDpmaIg5Lq65paHIOekvuacgyDnp5Hlrbgg6aSokgEGc2Nob29s4AEA!16s%2Fg%2F11f50wylmj?entry=tts&shorturl=1',
-
+            carDestinationLink: 'https://maps.app.goo.gl/hrRwqEmNmLBpZUHx6',
+            parkingPlaceCarLink: 'https://maps.app.goo.gl/vYTZGnDHgTViKsL47',
+            parkingPlaceCar2Link: 'https://maps.app.goo.gl/BFgMmi6MqgjY3FbZA',
             parkingPlaceMotorLink: [
-                'https://goo.gl/maps/DnFQvhu8QiCvRgYE7',
-                'https://goo.gl/maps/BaJw3ufc4rfqz5wh8',
-                'https://goo.gl/maps/EZ4RDMZTPYwFxAvh9',
+                'https://maps.app.goo.gl/PpmgUFNRgFi3Cm3Y9',
+                'https://maps.app.goo.gl/kxGrgPbr9EXTvqiQ6',
+                'https://maps.app.goo.gl/SzU75zJ1c9wrrUug9',
             ],
             parkingMoreInfoLink: [
-                'https://dga.sinica.edu.tw/posts/78705',
-                'https://dga.sinica.edu.tw/pages/1442',
+                'https://www.nstm.gov.tw/Reference/VisitorInformation/TrafficInfo.htm',
             ],
         }
     },

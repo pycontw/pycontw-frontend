@@ -2,87 +2,143 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'Accommodation Guidelines',
-        intro:
-            'PyCon TW has on-site lodging at Academia Sinica Activities' +
-            ' Center, a 3-minute walk to the venue.',
-        roomType: {
-            fieldName: 'Room Type',
-            content: ['Single room: NT$1,500/day', 'Twin room: NT$1,600/day'],
-            remark:
-                'An extra person is available for a single room for $150/day.' +
-                ' An extra bed is available for a twin room for $300/day',
-        },
-        roomFacilities: {
-            fieldName: 'Room Facilities',
-            content:
-                'Room facilities include TV, Wi-Fi, water kettle,' +
-                ' hair dryer, bodywash and shampoo. No disposable toiletries ' +
-                '(toothbrush, comb, razor, shower cap, soap and paper slippers) are provided. ' +
-                'More information on {0}.',
-            linkName: 'the original website',
-        },
-        applicationHowTo: {
-            fieldName: 'Application Process',
-            content:
-                'To apply for on-site lodging, please send an email to {0}' +
-                ' (the venue team of PyCon TW) with the following information by 23:59, July 23:',
-            applicationInfo: [
-                'Check-in and check-out dates',
-                'Number of people',
-                'Room type and number of rooms',
-                'Names and genders of guests',
+        title: 'Accommodation at National Science and Technology Museum （South Complex）',
+        intro: 'Following is a list of recommended accommodation outside the venue. PyCon TW does not assist with booking, nor provide direct shuttle service from and to the hotels. Please see {0} if needed.',
+        venue: 'the traffic information',
+        $$$: {
+            hotel: [
+                'InterContinental Kaohsiung',
+                'Kaohsiung Marriott Hotel',
+                'Chateau de Chine Hotel Kaohsiung',
+                'Q21 Hotel',
             ],
-            remark:
-                'Note: All date / time is represented in the UTC+08 time zone.' +
-                ' Early check-in and late check-out must be noted in advance.',
-        },
-        og: {
-            title: 'Accommodation Guidelines',
-            description:
-                'Stay at the Academia Sinica Activity Center during PyCon TW, ' +
-                'just a 3-minute walk from the venue. Choose from elegant single or double' +
-                ' rooms with optional extra beds, and enjoy amenities like TV, Wi-Fi, and toiletries.' +
-                "Apply by emailing PyCon TW's venue team with your details.",
-        },
-    },
-    'zh-hant': {
-        title: '住宿指引',
-        intro: 'PyCon TW 提供中研院學術活動中心的住宿，距會場約 3 分鐘走路路程，若有需要可以提出申請。',
-        roomType: {
-            fieldName: '房型',
-            content: [
-                '精緻單人房：新台幣 1,500 元/日',
-                '精緻雙人房：新台幣 1,600 元/日',
+            links: [
+                'https://ickaohsiung.com/',
+                'https://www.khhmarriott.com/',
+                'https://kaohsiung.chateaudechine.com/tw/index',
+                'https://www.q21hotel.com/',
             ],
-            remark: '單人房可加一人 150元/日；雙人房可加一床 300元/日',
-        },
-        roomFacilities: {
-            fieldName: '客房設施',
-            content:
-                '客房設施包括電視、無線網路、熱水壺、吹風機、沐浴乳和洗髮精。' +
-                '未提供一次性備品（牙刷、梳子、刮鬍刀、浴帽及紙拖鞋），請住宿人自行攜帶。' +
-                '更多資訊請見 {0}。',
-            linkName: '原住宿提供網站',
-        },
-        applicationHowTo: {
-            fieldName: '申請流程',
-            content:
-                '請於 7 月 23 日 23:59 前寄信至 {0} （PyCon TW 場務組） 並提供以下資訊：',
-            applicationInfo: [
-                '入住和退房日期',
-                '人數',
-                '各房型所需之數目',
-                '入住人員姓名與性別',
+            descriptions: [
+                'MRT Sanduo Shopping District in 300 m',
+                'MRT Aozihdi in 500 m',
+                'MRT Yanchengpu in 210 m',
+                'MRT Yanchengpu in 300 m',
             ],
-            remark: '註：所有使用的時間皆為時區 UTC+08。提早 check-in 和晚 check-out 都需要事先告知。',
+        },
+        $$: {
+            hotel: [
+                'Fullon Poshtel Kaohsiung',
+                'Howard Plaza Hotel',
+                'Just Sleep Kaohsiung Station',
+                'JÒHŌ HOTEL',
+            ],
+            links: [
+                'https://www.fullon-hotels.com.tw/fullon-poshtels/kh/tw/',
+                'https://www.howard-hotels.com.tw/zh_TW/HotelBusiness/136',
+                'https://www.justsleephotels.com/kaohsiungStation/tw/promotions?sjrncid=GA_10966570753&sjrnaid=GA_595874720084&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pRR4Z4Zjn7JcY0TYbiUnpi6Wnp1LzBygRP4JajneYini2JgEnCEatxoCFmsQAvD_BwE&gclsrc=aw.ds',
+                'https://johohotel.com/',
+            ],
+            descriptions: [
+                'MRT Cianjin in 130 m',
+                'MRT Sinyi Elementary School in 750 m',
+                'MRT Formosa Boulevard in 400 m',
+                'MRT Formosa Boulevard in 650 m',
+            ],
+        },
+        $: {
+            hotel: [
+                'Kindness Hotel - Kaohsiung Main Station',
+                'Royal Group Hotel Chang Chien Branch',
+                'Airline Inn - Kaohsiung Station',
+                'Hotel Kins Town',
+            ],
+            links: [
+                'https://www.kindness-hotel.com.tw/location-kaohsiung-zhanchien',
+                'https://www.royal-group.com.tw/location_page?id=3&type=1&cur=1',
+                'https://www.airlineinn.com/KS/index.php',
+                'http://www.kingstown-hotel.com.tw/',
+            ],
+            descriptions: [
+                'Kaohsiung Main Station in 700 m',
+                'Kaohsiung Main Station in 750 m',
+                'Kaohsiung Main Station in 600 m',
+                'Kaohsiung Main Station in 400 m',
+            ],
         },
         og: {
             title: '住宿指引',
             description:
-                '在 PyCon TW 期間，您可以入住位於中央研究院活動中心的住宿，距離會場僅有三分鐘步行路程。' +
-                '您可以選擇優雅的單人或雙人房，也可以選擇加床服務，同時享受電視、Wi-Fi和盥洗用品等設施。' +
-                '請透過發送電子郵件至 PyCon TW 的會場團隊，提供您的詳細資料進行申請。',
+                '以下住宿選擇僅提供與會來賓參考，未提供代訂或折扣服務。如有需要請自行訂房，並自行前往會場',
+        },
+    },
+    'zh-hant': {
+        title: '住宿指引',
+        intro: '以下住宿選擇僅提供與會來賓參考，未提供代訂或折扣服務。如有需要請自行訂房，並自行{0}',
+        venue: '前往會場',
+        $$$: {
+            hotel: [
+                '高雄洲際酒店',
+                '高雄萬豪酒店',
+                '翰品酒店 高雄',
+                '帝后大飯店',
+            ],
+            links: [
+                'https://ickaohsiung.com/',
+                'https://www.khhmarriott.com/',
+                'https://kaohsiung.chateaudechine.com/tw/index',
+                'https://www.q21hotel.com/',
+            ],
+            descriptions: [
+                '距捷運三多商圈站 300 m 步行約5分',
+                '距捷運凹子底站 500 m 步行約8分',
+                '距捷運鹽埕埔站 210 m 步行約 3分',
+                '距捷運鹽埕埔站 300 m 步行約 5 分',
+            ],
+        },
+        $$: {
+            hotel: [
+                '福容徠旅 高雄',
+                '福華大飯店 高雄',
+                '捷絲旅高雄站前館',
+                'JÒHŌ HOTEL',
+            ],
+            links: [
+                'https://www.fullon-hotels.com.tw/fullon-poshtels/kh/tw/',
+                'https://www.howard-hotels.com.tw/zh_TW/HotelBusiness/136',
+                'https://www.justsleephotels.com/kaohsiungStation/tw/promotions?sjrncid=GA_10966570753&sjrnaid=GA_595874720084&gad_source=1&gclid=CjwKCAjw88yxBhBWEiwA7cm6pRR4Z4Zjn7JcY0TYbiUnpi6Wnp1LzBygRP4JajneYini2JgEnCEatxoCFmsQAvD_BwE&gclsrc=aw.ds',
+                'https://johohotel.com/',
+            ],
+            descriptions: [
+                '距捷運前金站 130 m 步行約 2分',
+                '距捷運信義國小站 750 m 步行約10 分',
+                '距捷運美麗島站 400 m 步行約 6 分',
+                '距捷運美麗島站 650 m 步行約 9分',
+            ],
+        },
+        $: {
+            hotel: [
+                '康橋商旅-高雄站前館',
+                '高雄御宿商旅-站前一館',
+                '頭等艙飯店 - 高雄站前館',
+                '京城大飯店',
+            ],
+            links: [
+                'https://www.kindness-hotel.com.tw/location-kaohsiung-zhanchien',
+                'https://www.royal-group.com.tw/location_page?id=3&type=1&cur=1',
+                'https://www.airlineinn.com/KS/index.php',
+                'http://www.kingstown-hotel.com.tw/',
+            ],
+            descriptions: [
+                '距高雄火車站 700 m 步行約10 分',
+                '距高雄火車站 750 m 步行約10 分',
+                '距高雄火車站 600m 步行約 8 分',
+                '距高雄火車站 400m 步行約6 分',
+            ],
+        },
+        og: {
+            title: '住宿指引',
+            description:
+                '以下住宿選擇僅提供與會來賓參考，未提供代訂或折扣服務。如有需要請自行訂房，並自行前往會場',
         },
     },
 })
