@@ -28,7 +28,7 @@ export default genI18nMessages({
             ' interested in Python to join PyCon Taiwan to share knowledge, exchange ideas,' +
             ' make connections and to help us grow our network.' +
             ' Last year, PyCon Taiwan guided attendees back to physical conferences from the virtual world.' +
-            ' In PyCon Taiwan 2024, we are’re taking attendees to Kaohsiung!' +
+            ' In PyCon Taiwan 2024, we are taking attendees to Kaohsiung!' +
             ' With the theme of "Connection", we aim to foster an environment where attendees from diverse regions' +
             ' can share and collaborate, bringing fresh and innovative ideas to the Python community.',
         whatIsPyCon: 'What is PyCon',
