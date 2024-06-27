@@ -175,7 +175,7 @@ export default genI18nMessages({
                     description2: 'OpenCycleMap',
                 },
                 description1:
-                    '科工館週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0}，建議還車前留意APP上站點可停駐數量。由台鐵科工館站或輕軌科工館出發騎乘時間約 5-10 分鐘。',
+                    '科工館週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0}，建議還車前留意 APP 上站點可停。由台鐵科工館站或輕軌科工館出發騎乘時間約 5-10 分鐘。',
             },
             uBikePark: {
                 parkPlace: {
