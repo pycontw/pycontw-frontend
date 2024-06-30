@@ -8,7 +8,7 @@ export default genI18nMessages({
                 'PyCon Taiwan 2024 will be held at the National Science and Technology Museum (South Complex), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'National Science and Technology Museum\n（South Complex)',
+            name: 'National Science and Technology Museum\n (South Complex)',
             address: '797 Jiuru 1st Rd. Sanmin District, Kaohsiung City',
         },
         venueMap: {
@@ -44,7 +44,8 @@ export default genI18nMessages({
             },
             moreInfo:
                 '※ For detailed information regarding parking, please refer to {0}',
-            moreInfoLinkTitle: 'Academia Sinica Announcement',
+            moreInfoLinkTitle:
+                'the parking information of National Science and Technology Museum.',
         },
         publicTransport: {
             title: 'Taiwan Kaohsiung International Airport',
@@ -56,14 +57,14 @@ export default genI18nMessages({
             bus: {
                 title: 'Passenger bus',
                 description:
-                    'Red28(Extend)、Red28、60 Jyuemin Main Line、60 Jyuemin Main Line(Interval)、73、37、 76、77、81、、168W Main Line、168E Main Line、8503',
+                    'Red28 (Extend), Red28, 60 Jyuemin Main Line, 60 Jyuemin Main Line (Interval), 73, 37,  76, 77, 81, 168W Main Line, 168E Main Line, 8503',
             },
             uBike: {
                 link: {
                     description1: 'official YouBike website',
                 },
                 description1:
-                    'There are several YouBike rental stations near the National Science and Technology Museum. For more information about the YouBike routes in the vicinity, you can visit the {0}. It is recommended to check the available docking stations on the app to return the bike. Cycling time from Taiwan Railway-Science and Technology Museum Station or Light Rail-C30 Science and Technology Museum to the National Science and Technology Museum （South Complex） is approximately 5-10 minutes.',
+                    'There are several YouBike rental stations near the National Science and Technology Museum. For more information about the YouBike routes in the vicinity, you can visit the {0}. It is recommended to check the available docking stations on the app to return the bike. Cycling time from Taiwan Railway-Science and Technology Museum Station or Light Rail-C30 Science and Technology Museum to the National Science and Technology Museum (South Complex） is approximately 5-10 minutes.',
             },
             uBikePark: {
                 parkPlace: {
@@ -84,12 +85,12 @@ export default genI18nMessages({
         publicTransportInfo: {
             title: 'Public transportation',
             description1:
-                'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station (R11) and then take the train to Science and Technology Museum Station.  Walk approximately 15 min to arrive at the museum.',
+                'Take the MRT Red Line from Kaohsiung International Airport (R4) to Kaohsiung Main Station (R11) and then take the train to Science and Technology Museum Station.  Walk approximately 15 min to arrive at the museum.',
             description2:
-                'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station(R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
+                'Take the MRT Red Line from Kaohsiung International Airport (R4) to Kaohsiung Main Station (R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
             moreInfo: {
                 title: '※ For more information, please refer to {0}。',
-                info1: 'the traffic information of national science and technology museum.',
+                info1: 'the traffic information of National Science and Technology Museum.',
             },
         },
         shuttleService: {
