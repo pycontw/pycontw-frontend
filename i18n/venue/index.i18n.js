@@ -8,7 +8,7 @@ export default genI18nMessages({
                 'PyCon Taiwan 2024 will be held at the National Science and Technology Museum (South Complex), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'National Science and Technology Museum\n（South Complex)',
+            name: 'National Science and Technology Museum\n (South Complex)',
             address: '797 Jiuru 1st Rd. Sanmin District, Kaohsiung City',
         },
         venueMap: {
@@ -44,7 +44,8 @@ export default genI18nMessages({
             },
             moreInfo:
                 '※ For detailed information regarding parking, please refer to {0}',
-            moreInfoLinkTitle: 'Academia Sinica Announcement',
+            moreInfoLinkTitle:
+                'the parking information of National Science and Technology Museum.',
         },
         publicTransport: {
             title: 'Taiwan Kaohsiung International Airport',
@@ -56,14 +57,14 @@ export default genI18nMessages({
             bus: {
                 title: 'Passenger bus',
                 description:
-                    'Red28(Extend)、Red28、60 Jyuemin Main Line、60 Jyuemin Main Line(Interval)、73、37、 76、77、81、、168W Main Line、168E Main Line、8503',
+                    'Red28 (Extend), Red28, 60 Jyuemin Main Line, 60 Jyuemin Main Line (Interval), 73, 37,  76, 77, 81, 168W Main Line, 168E Main Line, 8503',
             },
             uBike: {
                 link: {
                     description1: 'official YouBike website',
                 },
                 description1:
-                    'There are several YouBike rental stations near the National Science and Technology Museum. For more information about the YouBike routes in the vicinity, you can visit the {0}. It is recommended to check the available docking stations on the app to return the bike. Cycling time from Taiwan Railway-Science and Technology Museum Station or Light Rail-C30 Science and Technology Museum to the National Science and Technology Museum （South Complex） is approximately 5-10 minutes.',
+                    'There are several YouBike rental stations near the National Science and Technology Museum. For more information about the YouBike routes in the vicinity, you can visit the {0}. It is recommended to check the available docking stations on the app to return the bike. Cycling time from Taiwan Railway-Science and Technology Museum Station or Light Rail-C30 Science and Technology Museum to the National Science and Technology Museum (South Complex） is approximately 5-10 minutes.',
             },
             uBikePark: {
                 parkPlace: {
@@ -84,12 +85,12 @@ export default genI18nMessages({
         publicTransportInfo: {
             title: 'Public transportation',
             description1:
-                'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station (R11) and then take the train to Science and Technology Museum Station.  Walk approximately 15 min to arrive at the museum.',
+                'Take the MRT Red Line from Kaohsiung International Airport (R4) to Kaohsiung Main Station (R11) and then take the train to Science and Technology Museum Station.  Walk approximately 15 min to arrive at the museum.',
             description2:
-                'Take the MRT Red Line from Kaohsiung International Airport(R4) to Kaohsiung Main Station(R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
+                'Take the MRT Red Line from Kaohsiung International Airport (R4) to Kaohsiung Main Station (R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
             moreInfo: {
-                title: 'For more information, please refer to {0}。',
-                info1: 'the traffic information of national science and technology museum.',
+                title: '※ For more information, please refer to {0}。',
+                info1: 'the traffic information of National Science and Technology Museum.',
             },
         },
         shuttleService: {
@@ -154,7 +155,7 @@ export default genI18nMessages({
                 descriptionLinkTitle2: '覺民路',
                 descriptionLinkTitle3: '南館',
             },
-            moreInfo: '※停車相關資訊詳細說明請見 {0}。',
+            moreInfo: '※ 停車相關資訊詳細說明請見 {0}。',
             moreInfoLinkTitle: '國立科學工藝博物館交通資訊',
         },
         publicTransport: {
@@ -167,7 +168,7 @@ export default genI18nMessages({
             bus: {
                 title: '公車',
                 description:
-                    '紅28繞中都濕地公園、紅28、紅28公車式小黃、60覺民幹線、60覺民幹線區間車、73、37、 76、77、81、168環西幹線、168環西幹線區間車、168環東幹線、168環東幹線區間車、8503',
+                    '紅 28 繞中都濕地公園、紅 28、紅 28 公車式小黃、60 覺民幹線、60 覺民幹線區間車、73、37、 76、77、81、168 環西幹線、168 環西幹線區間車、168 環東幹線、168 環東幹線區間車、8503',
             },
             uBike: {
                 link: {
@@ -175,13 +176,13 @@ export default genI18nMessages({
                     description2: 'OpenCycleMap',
                 },
                 description1:
-                    '科工館週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0}，建議還車前留意APP上站點可停駐數量。由台鐵科工館站或輕軌科工館出發騎乘時間約 5-10 分鐘。',
+                    '科工館週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0}，建議還車前留意 APP 上站點可停。由台鐵科工館站或輕軌科工館出發騎乘時間約 5-10 分鐘。',
             },
             uBikePark: {
                 parkPlace: {
                     park1: 'YouBike 2.0：科工館',
                     park2: 'YouBike 2.0：平等九如一路口',
-                    park3: 'YouBike 2.0：鐵道憲政139巷口',
+                    park3: 'YouBike 2.0：鐵道憲政 139 巷口',
                     park4: 'YouBike 2.0：國立科學工藝博物館',
                 },
                 parkingInfo: {
@@ -196,11 +197,11 @@ export default genI18nMessages({
         publicTransportInfo: {
             title: '乘車方式',
             description1:
-                '高雄捷運紅線「高雄國際機場站 (R4)」搭乘至「高雄車站 (R11)」，轉乘台鐵至「科工館車站」下車，步行約10分鐘至本館。',
+                '高雄捷運紅線「高雄國際機場站 (R4)」搭乘至「高雄車站 (R11)」，轉乘台鐵至「科工館車站」下車，步行約 10 分鐘至本館。',
             description2:
-                '搭乘高雄捷運紅線至「高雄車站 (R11)」，轉搭60號公車（覺民幹線）至科工館站即可抵達。',
+                '搭乘高雄捷運紅線至「高雄車站 (R11)」，轉搭 60 號公車（覺民幹線）至科工館站即可抵達。',
             moreInfo: {
-                title: '更多詳細資訊請參考 {0}。',
+                title: '※ 更多詳細資訊請參考 {0}。',
                 info1: '國立科學工藝博物館交通資訊',
             },
         },
