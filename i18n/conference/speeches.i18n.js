@@ -6,12 +6,12 @@ export default genI18nMessages({
             title: 'Talks',
             intro:
                 'The two conference days are packed with talks about Python by speakers' +
-                ' from Taiwan and around the world. The talks will be either 15-, 30-,' +
-                ' or 45-minute long. Three tracks of talks will be delivered simultaneously,' +
-                ' all with different topics and difficulties. We suggest you to make a schedule' +
-                ' beforehand, and choose what you want ot listen based on your interests.' +
-                ' Many people take notes on the program schedule before the meeting so they don’t ' +
-                'run to wrong places.',
+                ' from Taiwan and around the world. The talks will be either 15, 30,' +
+                ' or 45 minutes long. Three tracks of talks will be delivered simultaneously,' +
+                ' all with different topics and difficulties. We suggest you make a schedule' +
+                ' beforehand, and choose what you want to listen based on your interests.' +
+                ' Many people take notes on the program schedule before the meeting so they don’t' +
+                ' run to the wrong places.',
             categoryFilter: 'Category',
         },
         tutorials: {
