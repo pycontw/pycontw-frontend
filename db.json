@@ -150,6 +150,31 @@
                         "logo_url": "https://i.imgur.com/ARxWY48.gif"
                     }
                 ]
+            },
+            {
+                "level_name": "sprint-coorganizer",
+                "sponsors": [
+                    {
+                        "name_en_us": "test",
+                        "name_zh_hant": "測試",
+                        "subtitle_en_us": "",
+                        "subtitle_zh_hant": "",
+                        "intro_en_us": "sponsor with empty logo & shouldn't be displayed",
+                        "intro_zh_hant": "",
+                        "website_url": "https://google.com",
+                        "logo_url": ""
+                    },
+                    {
+                        "name_en_us": "test",
+                        "name_zh_hant": "測試",
+                        "subtitle_en_us": "test",
+                        "subtitle_zh_hant": "test",
+                        "intro_en_us": "test",
+                        "intro_zh_hant": "test",
+                        "website_url": "https://google.com",
+                        "logo_url": "https://i.imgur.com/ARxWY48.gif"
+                    }
+                ]
             }
         ]
     },
