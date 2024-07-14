@@ -91,6 +91,7 @@ export default genI18nMessages({
             speech: 'Speech',
             podcast: 'Podcast',
             activity: 'Activity',
+            post_event: 'Post-Event Activity',
         },
     },
     'zh-hant': {
@@ -165,6 +166,7 @@ export default genI18nMessages({
             speech: '大會演講',
             podcast: '線上廣播',
             activity: '會中活動',
+            post_event: '會後活動',
         },
     },
 })
