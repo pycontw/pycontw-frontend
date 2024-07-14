@@ -11,7 +11,7 @@ export default genI18nMessages({
         'special-thanks': 'Special Thanks to',
         'co-organizer': 'Co-organizer',
         organizer: 'Organizer',
-        'sprint-coorganizer': 'Sprint Co-organizer',
+        'sprint-coorganizer': 'Sprints Co-organizer',
     },
     'zh-hant': {
         diamond: '鑽石級贊助',
