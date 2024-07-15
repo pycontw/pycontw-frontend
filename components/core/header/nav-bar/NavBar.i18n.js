@@ -68,7 +68,7 @@ export default genI18nMessages({
         accommodation: '住宿資訊',
         proposalSystemUrl: '投稿系統',
         codeOfConduct: '行為準則',
-        posterSession: 'Poster 募集',
+        posterSession: '海報募集',
         posterSessions: '海報環節',
     },
 })
