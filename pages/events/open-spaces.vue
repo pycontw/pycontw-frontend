@@ -25,18 +25,26 @@
                         tag="p"
                     >
                         <template #br><br /></template>
-                        <template #examples>
-                            <ul>
-                                <i18n
-                                    v-for="(example, idx) in $t(
-                                        'openSpaceInfo.ideas.examples',
-                                    )"
-                                    :key="`openspace_example_${idx}`"
-                                    :path="`openSpaceInfo.ideas.examples.${idx}`"
-                                    class="ml-4 list-disc"
-                                    tag="li"
-                                ></i18n>
-                            </ul>
+                        <template
+                            v-for="link in openSpace.links"
+                            :slot="link.slot"
+                        >
+                            <ext-link
+                                v-if="link.isExternalLink"
+                                :key="`${link.textKey}.external`"
+                                :href="link.url"
+                                highlight
+                            >
+                                {{ $t(link.textKey) }}
+                            </ext-link>
+                            <locale-link
+                                v-else
+                                :key="`${link.textKey}.local`"
+                                :to="link.url"
+                                highlight
+                            >
+                                {{ $t(link.textKey) }}
+                            </locale-link>
                         </template>
                     </i18n>
                 </template>
@@ -54,6 +62,8 @@ import i18n from '@/i18n/events/open-spaces.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
+import LocaleLink from '@/components/core/links/LocaleLink.vue'
+import ExtLink from '@/components/core/links/ExtLink.vue'
 
 export default {
     i18n,
@@ -62,6 +72,8 @@ export default {
         I18nPageWrapper,
         CoreH1,
         TwoColWrapper,
+        ExtLink,
+        LocaleLink,
     },
     data() {
         return {
@@ -71,15 +83,48 @@ export default {
                 },
                 {
                     tag: 'location',
+                    isDescriptionList: true,
+                    links: [
+                        {
+                            slot: 'tbc',
+                            textKey: 'terms.tbc',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240409T115900&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                    ],
                 },
                 {
                     tag: 'time',
+                    isDescriptionList: true,
+                    links: [
+                        {
+                            slot: 'tbc',
+                            textKey: 'terms.tbc',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240409T115900&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'aoe',
+                            textKey: 'terms.aoe',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240701T115900&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                    ],
                 },
                 {
                     tag: 'subjects',
                 },
                 {
                     tag: 'host',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'registrationForm',
+                            textKey: 'terms.registrationForm',
+                            url: 'https://hackmd.io/@pycontw/SyTf40eVA',
+                            isExternalLink: true,
+                        },
+                    ],
                 },
                 {
                     tag: 'ideas',
