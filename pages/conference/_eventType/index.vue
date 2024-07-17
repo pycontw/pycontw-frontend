@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:py24 py-10 md:py-24">
+    <div class="py-10 md:py-24">
         <banner>
             <core-h1 :title="title"></core-h1>
             <p class="leading-6">
