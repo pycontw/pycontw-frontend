@@ -26,7 +26,7 @@ export default genI18nMessages({
             we'll host the Poster Session for the first time, aiming to provide a platform for more individuals to share their projects or topics of interest. 
             You are invited to submit a paper on any Python-related topic, which will be exhibited as a poster, enabling you to have direct conversations with attendees.
         `,
-        sessions: [
+        posters: [
             {
                 id: '1',
                 name: 'KK',
@@ -229,7 +229,7 @@ export default genI18nMessages({
             希望可以讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，
             屆時將以海報形式展出，然後與會者可與您直接互動。
         `,
-        sessions: [
+        posters: [
             {
                 id: '1',
                 name: 'KK',

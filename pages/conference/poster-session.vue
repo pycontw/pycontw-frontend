@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-    <div class="poster-sessions">
+    <div class="poster-session">
         <banner>
             <core-h1 :title="$t('title')"></core-h1>
             <i18n path="intro" tag="p" class="intro">
@@ -8,33 +8,31 @@
             </i18n>
         </banner>
         <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
-            <div class="poster-sessions__container">
+            <div class="poster-session__container">
                 <article
-                    v-for="session in $t('sessions')"
-                    :id="session.id"
-                    :key="session.id"
-                    class="poster-sessions__card"
-                    @click="showModal(session)"
+                    v-for="poster in $t('posters')"
+                    :id="poster.id"
+                    :key="poster.id"
+                    class="poster-session__card"
+                    @click="showModal(poster)"
                 >
                     <div class="mb-6 text-right text-xs">
-                        {{ session.type }}
+                        {{ poster.type }}
                     </div>
                     <div
                         class="line-clamp-5 five-line-height mb-6 text-[#CDCBFF]"
                     >
-                        {{ session.title }}
+                        {{ poster.title }}
                     </div>
                     <div
                         class="mb-2 flex flex-wrap gap-x-1 text-xs text-[#BB75BC]"
                     >
                         <span>
-                            {{ session.name }}
+                            {{ poster.name }}
                         </span>
                         <span>
                             {{
-                                `${session.community && '|'} ${
-                                    session.community
-                                }`
+                                `${poster.community && '|'} ${poster.community}`
                             }}
                         </span>
                     </div>
@@ -42,7 +40,7 @@
                         class="flex flex-1 flex-col items-start justify-end gap-y-1 text-center text-[10px]"
                     >
                         <span
-                            v-for="topic in session.topics"
+                            v-for="topic in poster.topics"
                             :id="topic"
                             :key="topic"
                             class="rounded-md bg-[#BB75BC] p-1 text-[#000]"
@@ -57,19 +55,19 @@
             <modal v-if="isOpened" v-model="isOpened">
                 <div class="flex flex-col items-center space-y-3 p-2">
                     <div class="text-xl text-[#CDCBFF]">
-                        {{ selectedSession.title }}
+                        {{ selectedPoster.title }}
                     </div>
                     <div class="text-center text-sm">
                         <div class="text-[#BB75BC]">
-                            {{ selectedSession.name }}
+                            {{ selectedPoster.name }}
                         </div>
                         <div class="text-[#BB75BC]">
-                            {{ selectedSession.community }}
+                            {{ selectedPoster.community }}
                         </div>
                     </div>
 
                     <div
-                        v-html="$md.render(selectedSession.summary.trim())"
+                        v-html="$md.render(selectedPoster.summary.trim())"
                     ></div>
                 </div>
             </modal>
@@ -85,7 +83,7 @@ import Modal from './_components/modal/Modal'
 
 export default {
     i18n,
-    name: 'PageConferencePosterSessions',
+    name: 'PageConferencePosterSession',
     components: {
         Banner,
         CoreH1,
@@ -95,7 +93,7 @@ export default {
     data() {
         return {
             isOpened: false,
-            selectedSession: {
+            selectedPoster: {
                 id: '1',
                 name: 'KK',
                 type: '社群講',
@@ -108,9 +106,9 @@ export default {
         }
     },
     methods: {
-        showModal(session) {
+        showModal(poster) {
             this.isOpened = true
-            this.selectedSession = session
+            this.selectedPoster = poster
         },
     },
 }
@@ -121,14 +119,14 @@ p.description {
     text-align: unset;
 }
 
-.poster-sessions__container {
+.poster-session__container {
     display: grid;
     justify-content: center;
     gap: 8px;
     grid-template-columns: repeat(auto-fit, 239px);
 }
 
-.poster-sessions {
+.poster-session {
     @apply py-10 md:py-24;
 
     .five-line-height {
@@ -138,7 +136,7 @@ p.description {
     }
 }
 
-.poster-sessions__card {
+.poster-session__card {
     @apply flex cursor-pointer flex-col rounded-3xl bg-[#1f1c3b] p-6;
     border: 1px solid transparent;
 
@@ -156,7 +154,7 @@ p.description {
     }
 }
 
-.poster-sessions .summary-link {
+.poster-session .summary-link {
     text-decoration: underline;
     color: #da8bdc;
 }
