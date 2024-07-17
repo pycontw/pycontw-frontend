@@ -7,13 +7,13 @@
                 <template #br><br /></template>
             </i18n>
         </banner>
-        <i18n-page-wrapper>
+        <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
             <div class="poster-sessions__container">
                 <article
                     v-for="session in $t('sessions')"
                     :id="session.id"
                     :key="session.id"
-                    class="flex cursor-pointer flex-col rounded-3xl bg-[#1f1c3b] p-6"
+                    class="poster-sessions__card"
                     @click="showModal(session)"
                 >
                     <div class="mb-6 text-right text-xs">
@@ -116,7 +116,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 p.description {
     text-align: unset;
 }
@@ -128,10 +128,32 @@ p.description {
     grid-template-columns: repeat(auto-fit, 239px);
 }
 
-.poster-sessions .five-line-height {
-    line-height: 1.5em;
-    height: calc(5 * 1.5em);
-    overflow: hidden;
+.poster-sessions {
+    @apply py-10 md:py-24;
+
+    .five-line-height {
+        line-height: 1.5em;
+        height: calc(5 * 1.5em);
+        overflow: hidden;
+    }
+}
+
+.poster-sessions__card {
+    @apply flex cursor-pointer flex-col rounded-3xl bg-[#1f1c3b] p-6;
+    border: 1px solid transparent;
+
+    &:hover {
+        @apply bg-primary-800;
+        border: 1px solid #746bb8;
+        box-shadow: 0px 0px 10px 10px #352d66;
+
+        & .title {
+            @apply text-pink-700;
+        }
+        & .cardTxt {
+            @apply text-primary-100;
+        }
+    }
 }
 
 .poster-sessions .summary-link {
