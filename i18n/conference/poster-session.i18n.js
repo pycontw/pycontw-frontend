@@ -89,7 +89,7 @@ export default genI18nMessages({
                 topics: ['Community Connection'],
                 title: 'Code, Connect, and Enjoy with PyLadies Tokyo!',
                 summary:
-                    "PyLadies Tokyo is one of the PyLaides chapters since 2014, it works to connect women Pythonistas.we'll display to Community Overview, Activities Report.Come see what we're all about and let's talk!",
+                    "PyLadies Tokyo is one of the PyLaides chapters since 2014, it works to connect women Pythonistas. We'll display to Community Overview, Activities Report. Come see what we're all about and let's talk!",
             },
             {
                 id: '7',
