@@ -21,8 +21,8 @@ export const state = () => ({
         showIndexSponsorSection: true,
         showProposalSystemPage: true,
         showRegistrationPage: true,
-        showSchedulePage: false,
-        showSpeakingPage: false,
+        showSchedulePage: true,
+        showSpeakingPage: true,
         showSponsorPage: true,
         showVenuePage: true,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
