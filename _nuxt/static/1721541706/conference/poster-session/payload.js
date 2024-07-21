@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/conference/poster-session", {data:[{}],fetch:{},mutations:[]});
