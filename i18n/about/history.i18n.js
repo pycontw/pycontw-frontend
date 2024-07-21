@@ -133,7 +133,7 @@ export default genI18nMessages({
                 'Last year, PyCon Taiwan guided attendees back to physical conferences from the virtual world. ' +
                 'In PyCon Taiwan 2024, we’re taking attendees to Kaohsiung! ' +
                 'Drawing inspiration from other Python Conferences worldwide, this year’s program ' +
-                'introduces Poster Sessions to bridge the gap between speakers and attendees. ' +
+                'introduces Poster Session to bridge the gap between speakers and attendees. ' +
                 'We aim to foster closer connections through face-to-face discussions, sparking creativity and exchanging ideas.',
         },
         terms: {

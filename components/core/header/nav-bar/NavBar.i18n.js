@@ -33,7 +33,8 @@ export default genI18nMessages({
         accommodation: 'Accommodation',
         proposalSystemUrl: 'Proposal System',
         codeOfConduct: 'Code of Conduct',
-        posterSession: 'Call for Poster',
+        cfpPoster: 'Propose a Poster',
+        posterSession: 'Poster Session',
     },
     'zh-hant': {
         about: '關於',
@@ -67,6 +68,7 @@ export default genI18nMessages({
         accommodation: '住宿資訊',
         proposalSystemUrl: '投稿系統',
         codeOfConduct: '行為準則',
-        posterSession: 'Poster 募集',
+        cfpPoster: '如何投稿海報',
+        posterSession: '海報環節',
     },
 })

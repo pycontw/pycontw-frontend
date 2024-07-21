@@ -67,7 +67,7 @@ import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
-import i18n from '@/i18n/speaking/poster-session.i18n'
+import i18n from '@/i18n/speaking/cfp-poster.i18n'
 
 export default {
     i18n,

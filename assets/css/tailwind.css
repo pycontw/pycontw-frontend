@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .line-clamp-5 {
+        overflow: hidden;
+        display: -webkit-box;
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+    }
+}
