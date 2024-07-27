@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'Open Space',
         intro:
-            'Open Spaces are self-organizing meetup events that happen simultaneously with the main conference. ' +
+            'Open Space is self-organizing meetup events that happen simultaneously with the main conference. ' +
             'Organized by attendees during PyCon Taiwan, ' +
             'Open Space allows you to define, organize, and plan meetups as you prefer. ' +
             'Enjoy Open Space by making new friends and chatting about any topic you like. {br}' +
@@ -30,7 +30,7 @@ export default genI18nMessages({
             time: {
                 title: 'Time',
                 description:
-                    'Main Session: Day 2, 14:40–15:40' +
+                    'Main Session: Day 2, 14:40–15:40{br}' +
                     'Feel free to visit the service desk at any time to obtain a whiteboard, ' +
                     'write down a topic, and initiate a discussion. ' +
                     'Enjoy ‌lively and engaging conversations in the open space!',
@@ -38,7 +38,7 @@ export default genI18nMessages({
             subjects: {
                 title: 'Topics',
                 description:
-                    'We don’t know either! It’s up to you and fellow attendees 😉{br}' +
+                    'We don’t know either! It’s up to you and fellow attendees. 😉{br}' +
                     'Just like the attendees, Open Space is very versatile. ' +
                     'There are no limits to the subject of the Open Space! ' +
                     'An Open Space can be a mani/pedi party, a feminist hacking space, ' +
@@ -57,7 +57,7 @@ export default genI18nMessages({
                     'find an Open Space table, and start your discussion.',
             },
             ideas: {
-                title: 'Ideas for Open Spaces',
+                title: 'Ideas for Open Space',
                 description:
                     'Here are a few ideas for potential Open Space topics and activities:{br}',
                 examples: [
@@ -83,7 +83,7 @@ export default genI18nMessages({
     'zh-hant': {
         title: '開放空間',
         intro:
-            '開放空間（Open Spaces）是自助式、聚會形式的活動，與大會議程同時進行。' +
+            '開放空間（Open Space）是自助式、聚會形式的活動，與大會議程同時進行。' +
             '開放空間的主題是由大會與會者「當場」計畫的。' +
             '開放空間讓你能用任何你喜歡的方式定義、組織、規劃你自己的小聚。' +
             '也歡迎你揪其他好夥伴一起來參與、分享、聊天、交朋友！ {br}' +

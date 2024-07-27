@@ -47,7 +47,7 @@ export default genI18nMessages({
                         title: 'Show consideration',
                         descriptions: [
                             'Sexual contents in any form are inappropriate in any conference venue, ' +
-                                'including but not limited to talks, open spaces, or social media. Words ' +
+                                'including but not limited to talks, Open Space, or social media. Words ' +
                                 'and actions originated from stereotypes are discouraged. Cell phones should ' +
                                 'be set to silent or a mode that does not annoy others in the conference rooms.',
                         ],
