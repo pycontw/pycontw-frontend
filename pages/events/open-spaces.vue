@@ -1,7 +1,9 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p" class="intro"></i18n>
+        <i18n path="intro" tag="p" class="intro">
+            <template #br><br /></template>
+        </i18n>
         <div
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
@@ -47,12 +49,31 @@
                             </locale-link>
                         </template>
                     </i18n>
+                    <div v-if="openSpace.hasExamples">
+                        <i18n
+                            v-for="(description, index) in $t(
+                                `openSpaceInfo.${openSpace.tag}.examples`,
+                            )"
+                            :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
+                            :path="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
+                            class="example"
+                            tag="li"
+                        >
+                            <template #br><br /></template>
+                        </i18n>
+                    </div>
+                    <img
+                        v-if="openSpace.tag === 'location'"
+                        :src="
+                            require(`~/static/img/events/overview/open-space-location.png`)
+                        "
+                    />
                 </template>
             </two-col-wrapper>
         </div>
         <iframe
             class="hackmd"
-            src="https://hackmd.io/@pycontw/S1XFoGZhh"
+            src="https://hackmd.io/l4JCd4AeQWqunh4PThZbRA"
         ></iframe>
     </i18n-page-wrapper>
 </template>
@@ -84,32 +105,10 @@ export default {
                 {
                     tag: 'location',
                     isDescriptionList: true,
-                    links: [
-                        {
-                            slot: 'tbc',
-                            textKey: 'terms.tbc',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240409T115900&p1=tz_aoe&p2=241&p3=1440',
-                            isExternalLink: true,
-                        },
-                    ],
                 },
                 {
                     tag: 'time',
                     isDescriptionList: true,
-                    links: [
-                        {
-                            slot: 'tbc',
-                            textKey: 'terms.tbc',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240409T115900&p1=tz_aoe&p2=241&p3=1440',
-                            isExternalLink: true,
-                        },
-                        {
-                            slot: 'aoe',
-                            textKey: 'terms.aoe',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240701T115900&p1=tz_aoe&p2=241&p3=1440',
-                            isExternalLink: true,
-                        },
-                    ],
                 },
                 {
                     tag: 'subjects',
@@ -128,6 +127,7 @@ export default {
                 },
                 {
                     tag: 'ideas',
+                    hasExamples: true,
                 },
             ],
         }
