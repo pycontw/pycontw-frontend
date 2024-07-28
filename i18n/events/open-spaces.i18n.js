@@ -4,10 +4,10 @@ export default genI18nMessages({
     'en-us': {
         title: 'Open Space',
         intro:
-            'Open Space is self-organizing meetup events that happen simultaneously with the main conference. ' +
+            'Open Space is a self-organizing meetup event that occurs simultaneously with the main conference. ' +
             'Organized by attendees during PyCon Taiwan, ' +
             'Open Space allows you to define, organize, and plan meetups as you prefer. ' +
-            'Enjoy Open Space by making new friends and chatting about any topic you like. {br}' +
+            'Enjoy Open Space by making new friends and chatting about any topic you like. {br}{br}' +
             'For those who have participated in past PyCon Taiwan or other conferences, ' +
             'the concept of Open Space might sound similar to BoF (Birds of a Feather). ' +
             'However, the term "Open Space" is more easily understood by PyCon Taiwan beginners. ',
@@ -23,7 +23,7 @@ export default genI18nMessages({
                 description:
                     'The area in front of Room R0 on the 2nd floor will have several tables on either side. ' +
                     'Each table will have a whiteboard displaying a specific topic.{br}{br}' +
-                    'Find a topic that interests you and use the memo to write down your thoughts and feedback.' +
+                    'Find a topic that interests you and use the memo to write down your thoughts and feedback.{br}' +
                     'If a topic is not listed yet, ' +
                     'just write down what you would like to talk about on a non-topic board!',
             },
@@ -49,9 +49,9 @@ export default genI18nMessages({
             host: {
                 title: 'How to host',
                 description:
-                    'Simply fill in the topic you want to discuss on {registrationForm} below.' +
-                    'Before the Open Space session begins,' +
-                    'you can check the form to see where your topic will be located and proceed to your designated table to prepare.{br}' +
+                    'Simply fill in the topic you want to discuss on {registrationForm} below. ' +
+                    'Before the Open Space session begins, ' +
+                    'you can check the form to see where your topic will be located and proceed to your designated table to prepare.{br}{br}' +
                     'You can also initiate an Open Space discussion at any time. ' +
                     'Pick up a small whiteboard at the service desk, write down your topic, ' +
                     'find an Open Space table, and start your discussion.',
@@ -62,14 +62,14 @@ export default genI18nMessages({
                     'Here are a few ideas for potential Open Space topics and activities:{br}',
                 examples: [
                     'Hackerspace (maker projects) that use Python (e.g. in Raspberry Pis, IoT, home automation, robots/drones/blimps autopiloted with Python)',
-                    'Hacking / networking / devops',
-                    'Data visualization / science',
+                    'Hacking/Networking/DevOps',
+                    'Data visualization/science',
                     'Natural language processing and generation (e.g. chatbots)',
                     'Quantified self',
                     'Diversity initiatives, for example a feminist hackerspace',
                     'A space for organizers of conferences, workshops, diversity initiatives (Django Girls, PyLadies, etc.)',
                     'Web frameworks, e.g. Django or Flask',
-                    'How to contribute to open source (e.g. helping/mentoring group for beginners',
+                    'How to contribute to open source (e.g. helping/mentoring group for beginners)',
                     'Git',
                     'Support: how to avoid burnout',
                     'Recruitment workshops',
@@ -93,7 +93,7 @@ export default genI18nMessages({
             participate: {
                 title: '如何參與',
                 description:
-                    '很簡單：人到場就好了 :){br}' +
+                    '很簡單！人到場就好了 :){br}' +
                     '你只需要找到有興趣的主題，友善的與主持人打個招呼，就可以坐下與大家一起參與了。',
             },
             location: {
@@ -116,7 +116,7 @@ export default genI18nMessages({
                     '開放空間有各種與會者想討論的主題。' +
                     '由於與會者非常多元化，開放空間也同樣非常多元化。' +
                     '開放空間的主題並沒有限制，可以是關於美甲、女性主義、瑜珈、電玩遊戲、甚至是 Chiikawa。' +
-                    '也可以是討論各種常見的技術議題，從資訊安全到你最喜歡的 Python 專案，到一些特定職位的討論，比如說 SRE。',
+                    '也可以是討論各種常見的技術議題，從資訊安全到你最喜歡的 Python 專案，甚至一些特定職位的討論，比如說 SRE。',
             },
             host: {
                 title: '如何舉辦',
@@ -128,17 +128,17 @@ export default genI18nMessages({
             ideas: {
                 title: '開放空間{br}好主意',
                 description:
-                    '以下有幾個可以辦成開放空間的點子，提供您參考：{br}{examples}',
+                    '以下有幾個可以作為開放空間的點子，提供您參考：{br}{examples}',
                 examples: [
-                    '用 Python 的 Maker 專案（例如樹莓派、IoT、居家自動化、機器人、四軸飛行器）',
-                    'Hacking / Networking / DevOps',
+                    '用 Python 的 Maker 專案（例如：樹莓派、IoT、居家自動化、機器人、四軸飛行器）',
+                    'Hacking/Networking/DevOps',
                     '資料視覺化、科學',
-                    '自然語言處理（例如聊天機器人）',
+                    '自然語言處理（例如：聊天機器人）',
                     '自我量化',
                     '女性主義',
                     '主辦人們的聚會：研討會、工作坊、在地社群的主辦人們',
-                    '網頁框架，例如 Django 或 Flask',
-                    '如何做開源貢獻：給初心者的協助、指導',
+                    '網頁框架，例如：Django 或 Flask',
+                    '如何做開源貢獻（例如：給初心者的協助、指導）',
                     'Git',
                     '如何避免職業倦怠',
                     '求職相關討論',

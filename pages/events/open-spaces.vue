@@ -20,6 +20,12 @@
                     </i18n>
                 </template>
                 <template #right-col>
+                    <img
+                        v-if="openSpace.tag === 'location'"
+                        :src="
+                            require(`~/static/img/events/overview/open-space-location.png`)
+                        "
+                    />
                     <i18n
                         :key="`openspace_descriptions_${openSpace.tag}`"
                         :path="`openSpaceInfo.${openSpace.tag}.description`"
@@ -62,12 +68,6 @@
                             <template #br><br /></template>
                         </i18n>
                     </div>
-                    <img
-                        v-if="openSpace.tag === 'location'"
-                        :src="
-                            require(`~/static/img/events/overview/open-space-location.png`)
-                        "
-                    />
                 </template>
             </two-col-wrapper>
         </div>
