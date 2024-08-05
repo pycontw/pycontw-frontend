@@ -22,7 +22,7 @@ export default genI18nMessages({
         panelDiscussion: 'Panel Discussion',
         events: 'Events',
         overview: 'Overview',
-        openSpaces: 'Open Spaces',
+        openSpaces: 'Open Space',
         sprints: 'Sprints',
         jobListings: 'Job Listings',
         registration: 'Tickets',
