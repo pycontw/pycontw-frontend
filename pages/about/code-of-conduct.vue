@@ -1,6 +1,6 @@
 <template>
     <div class="py-10 md:pb-24 lg:pb-24">
-        <banner>
+        <banner class="bg-center bg-no-repeat">
             <core-h1 :title="$t('title')"></core-h1>
             <p class="leading-6">
                 {{ $t('pageAbstract') }}
@@ -9,7 +9,7 @@
         <div class="mx-2 my-3 flex flex-wrap justify-center">
             <div v-for="(img, i) in introImgs" :key="`intro_img_${i}`">
                 <div
-                    class="mx-2 my-3 h-24 w-32 bg-contain bg-no-repeat md:mx-5 md:h-40 md:w-56"
+                    class="mx-2 my-3 h-24 w-32 rounded-lg bg-contain bg-cover bg-no-repeat md:mx-5 md:h-40 md:w-56"
                     :style="getImgStyle(img)"
                 ></div>
             </div>
@@ -176,13 +176,13 @@ import ExtLink from '@/components/core/links/ExtLink.vue'
 import IntroImg1 from '@/static/img/about/code-of-conduct/Intro-1.png'
 import IntroImg2 from '@/static/img/about/code-of-conduct/Intro-2.png'
 import IntroImg3 from '@/static/img/about/code-of-conduct/Intro-3.png'
-import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.png'
-import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.png'
-import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.png'
-import ProcedureZh from '@/static/img/about/code-of-conduct/procedure-zh.png'
-import ProcedureZhRwd from '@/static/img/about/code-of-conduct/procedure-zh-rwd.png'
-import ProcedureEn from '@/static/img/about/code-of-conduct/procedure-en.png'
-import ProcedureEnRwd from '@/static/img/about/code-of-conduct/procedure-en-rwd.png'
+import Icon1 from '@/static/img/about/code-of-conduct/Icon-1.svg'
+import Icon2 from '@/static/img/about/code-of-conduct/Icon-2.svg'
+import Icon3 from '@/static/img/about/code-of-conduct/Icon-3.svg'
+import ProcedureZh from '@/static/img/about/code-of-conduct/procedure-zh.svg'
+import ProcedureZhRwd from '@/static/img/about/code-of-conduct/procedure-zh-rwd.svg'
+import ProcedureEn from '@/static/img/about/code-of-conduct/procedure-en.svg'
+import ProcedureEnRwd from '@/static/img/about/code-of-conduct/procedure-en-rwd.svg'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 
 export default {
@@ -209,8 +209,6 @@ export default {
         bannerStyle() {
             return {
                 'background-image': `url(${this.aboutBanner})`,
-                'background-repeat': 'no-repeat',
-                'background-position': 'center',
             }
         },
         sub2Imgs() {
@@ -225,8 +223,6 @@ export default {
         getImgStyle(img) {
             return {
                 'background-image': `url(${img})`,
-                'border-radius': '5%',
-                'background-size': 'cover',
             }
         },
         getSub1Style(img) {
@@ -237,7 +233,6 @@ export default {
         getSub2Style(img) {
             return {
                 'background-image': `url(${img})`,
-                'background-position': 'center',
             }
         },
     },
@@ -298,7 +293,7 @@ export default {
 }
 
 .sub2_img {
-    @apply mx-2 my-2 hidden bg-no-repeat md:mx-5;
+    @apply mx-2 my-2 hidden bg-center bg-no-repeat md:mx-5;
     width: 30rem;
     height: 40rem;
 }
