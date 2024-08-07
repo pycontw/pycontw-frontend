@@ -36,7 +36,7 @@ export const ticketInfoConfig = [
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
-        statusI18nKey: ticketSellingStatus.ENDED,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixIndividual2024,
     },
     {
@@ -62,7 +62,7 @@ export const ticketInfoConfig = [
             'conferencePass',
             'earlyRegularStageTShirt',
         ],
-        statusI18nKey: ticketSellingStatus.ENDED,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixIndividual2024,
     },
     {
@@ -75,7 +75,7 @@ export const ticketInfoConfig = [
             'conferencePass',
             'tShirt',
         ],
-        statusI18nKey: ticketSellingStatus.ENDED,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixIndividual2024,
     },
     {
