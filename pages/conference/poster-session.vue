@@ -67,6 +67,7 @@
                     </div>
 
                     <div
+                        class="text-sm md:text-lg"
                         v-html="$md.render(selectedPoster.summary.trim())"
                     ></div>
                 </div>
