@@ -26,6 +26,15 @@
                             require(`~/static/img/events/overview/open-space-location.png`)
                         "
                     />
+                    <div v-if="openSpace.isEmphasis">
+                        <strong>
+                            <i18n
+                                :path="`openSpaceInfo.${openSpace.tag}.emphasis`"
+                            >
+                                <template #br><br /></template>
+                            </i18n>
+                        </strong>
+                    </div>
                     <i18n
                         :key="`openspace_descriptions_${openSpace.tag}`"
                         :path="`openSpaceInfo.${openSpace.tag}.description`"
@@ -57,7 +66,7 @@
                     </i18n>
                     <div v-if="openSpace.hasExamples">
                         <i18n
-                            v-for="(description, index) in $t(
+                            v-for="(_, index) in $t(
                                 `openSpaceInfo.${openSpace.tag}.examples`,
                             )"
                             :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
@@ -79,12 +88,12 @@
 </template>
 
 <script>
-import i18n from '@/i18n/events/open-spaces.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
-import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import ExtLink from '@/components/core/links/ExtLink.vue'
+import LocaleLink from '@/components/core/links/LocaleLink.vue'
+import CoreH1 from '@/components/core/titles/H1'
+import i18n from '@/i18n/events/open-spaces.i18n'
 
 export default {
     i18n,
@@ -109,6 +118,7 @@ export default {
                 {
                     tag: 'time',
                     isDescriptionList: true,
+                    isEmphasis: true,
                 },
                 {
                     tag: 'subjects',

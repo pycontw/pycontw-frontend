@@ -29,8 +29,8 @@ export default genI18nMessages({
             },
             time: {
                 title: 'Time',
+                emphasis: 'Main Session: Day 2, 14:40–15:40',
                 description:
-                    'Main Session: Day 2, 14:40–15:40{br}' +
                     'Feel free to visit the service desk at any time to obtain a whiteboard, ' +
                     'write down a topic, and initiate a discussion. ' +
                     'Enjoy ‌lively and engaging conversations in the open space!',
@@ -105,9 +105,9 @@ export default genI18nMessages({
             },
             time: {
                 title: '活動時間',
+                emphasis: '主要時段：第二天 14:40–15:40',
                 description:
-                    '主要時段：第二天 14:40–15:40 {br}' +
-                    '其餘時段也歡迎大家隨時到服務台拿取白板，填寫主題後便可以開啟討論。請盡情享受開放空間中自由熱情的交流和討論！',
+                    '{br}其餘時段也歡迎大家隨時到服務台拿取白板，填寫主題後便可以開啟討論。請盡情享受開放空間中自由熱情的交流和討論！',
             },
             subjects: {
                 title: '活動主題',
@@ -126,7 +126,7 @@ export default genI18nMessages({
                     '其他時段也可以隨時發起 Open Space，只要在服務台拿取小白板書寫題目，找個 Open Space 桌子就可以自己開始話題。',
             },
             ideas: {
-                title: '開放空間{br}好主意',
+                title: '開放空間好主意',
                 description:
                     '以下有幾個可以作為開放空間的點子，提供您參考：{br}{examples}',
                 examples: [
