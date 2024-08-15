@@ -1,7 +1,9 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
-        <i18n path="intro" tag="p" class="intro"></i18n>
+        <i18n path="intro" tag="p" class="intro">
+            <template #br><br /></template>
+        </i18n>
         <div
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
@@ -18,6 +20,21 @@
                     </i18n>
                 </template>
                 <template #right-col>
+                    <img
+                        v-if="openSpace.tag === 'location'"
+                        :src="
+                            require(`~/static/img/events/overview/open-space-location.png`)
+                        "
+                    />
+                    <div v-if="openSpace.isEmphasis">
+                        <strong>
+                            <i18n
+                                :path="`openSpaceInfo.${openSpace.tag}.emphasis`"
+                            >
+                                <template #br><br /></template>
+                            </i18n>
+                        </strong>
+                    </div>
                     <i18n
                         :key="`openspace_descriptions_${openSpace.tag}`"
                         :path="`openSpaceInfo.${openSpace.tag}.description`"
@@ -25,35 +42,58 @@
                         tag="p"
                     >
                         <template #br><br /></template>
-                        <template #examples>
-                            <ul>
-                                <i18n
-                                    v-for="(example, idx) in $t(
-                                        'openSpaceInfo.ideas.examples',
-                                    )"
-                                    :key="`openspace_example_${idx}`"
-                                    :path="`openSpaceInfo.ideas.examples.${idx}`"
-                                    class="ml-4 list-disc"
-                                    tag="li"
-                                ></i18n>
-                            </ul>
+                        <template
+                            v-for="link in openSpace.links"
+                            :slot="link.slot"
+                        >
+                            <ext-link
+                                v-if="link.isExternalLink"
+                                :key="`${link.textKey}.external`"
+                                :href="link.url"
+                                highlight
+                            >
+                                {{ $t(link.textKey) }}
+                            </ext-link>
+                            <locale-link
+                                v-else
+                                :key="`${link.textKey}.local`"
+                                :to="link.url"
+                                highlight
+                            >
+                                {{ $t(link.textKey) }}
+                            </locale-link>
                         </template>
                     </i18n>
+                    <div v-if="openSpace.hasExamples">
+                        <i18n
+                            v-for="(_, index) in $t(
+                                `openSpaceInfo.${openSpace.tag}.examples`,
+                            )"
+                            :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
+                            :path="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
+                            class="example"
+                            tag="li"
+                        >
+                            <template #br><br /></template>
+                        </i18n>
+                    </div>
                 </template>
             </two-col-wrapper>
         </div>
         <iframe
             class="hackmd"
-            src="https://hackmd.io/@pycontw/S1XFoGZhh"
+            src="https://hackmd.io/l4JCd4AeQWqunh4PThZbRA"
         ></iframe>
     </i18n-page-wrapper>
 </template>
 
 <script>
-import i18n from '@/i18n/events/open-spaces.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH1 from '@/components/core/titles/H1'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
+import ExtLink from '@/components/core/links/ExtLink.vue'
+import LocaleLink from '@/components/core/links/LocaleLink.vue'
+import CoreH1 from '@/components/core/titles/H1'
+import i18n from '@/i18n/events/open-spaces.i18n'
 
 export default {
     i18n,
@@ -62,6 +102,8 @@ export default {
         I18nPageWrapper,
         CoreH1,
         TwoColWrapper,
+        ExtLink,
+        LocaleLink,
     },
     data() {
         return {
@@ -71,18 +113,31 @@ export default {
                 },
                 {
                     tag: 'location',
+                    isDescriptionList: true,
                 },
                 {
                     tag: 'time',
+                    isDescriptionList: true,
+                    isEmphasis: true,
                 },
                 {
                     tag: 'subjects',
                 },
                 {
                     tag: 'host',
+                    isDescriptionList: false,
+                    links: [
+                        {
+                            slot: 'registrationForm',
+                            textKey: 'terms.registrationForm',
+                            url: 'https://hackmd.io/@pycontw/SyTf40eVA',
+                            isExternalLink: true,
+                        },
+                    ],
                 },
                 {
                     tag: 'ideas',
+                    hasExamples: true,
                 },
             ],
         }
