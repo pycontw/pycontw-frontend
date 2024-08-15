@@ -27,7 +27,7 @@ export const state = () => ({
         showVenuePage: true,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
         conferenceHideItems: ['panelDiscussion'], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
-        eventsHideItems: ['sprints', 'openSpaces'], // ['sprints', 'openSpaces', 'jobs']
+        eventsHideItems: ['sprints'], // ['sprints', 'openSpaces', 'jobs']
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: [], // ['venueInfo', 'accommodation']
     },
