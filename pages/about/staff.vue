@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH1 from '@/components/core/titles/H1'
-import i18n from '@/i18n/about/staff.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper';
+import CoreH1 from '@/components/core/titles/H1';
+import i18n from '@/i18n/about/staff.i18n';
 
 export default {
     layout(context) {
