@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'Sprints',
         intro:
-            'The Summer Sprint event will be held on 8/20 (Sun.) 10:00 ~ 17:00 (TST).\n\n' +
+            'The Sprint event will be held on 9/23 (Mon.) 10:00 ~ 17:00 (TST).\n\n' +
             'A sprint event gathers open source project owners, ' +
             'contributors, and people who want to contribute but are trying to find a place to start. ' +
             'During a sprint, project hosts bring their unresolved issues or new ' +
@@ -35,7 +35,7 @@ export default genI18nMessages({
     'zh-hant': {
         title: '衝刺開發 (Sprints)',
         intro:
-            'PyCon TW 2023 夏季衝刺開發的活動時間是 8/20 (日) 10:00 ~ 17:00。' +
+            'PyCon TW 2024 衝刺開發的活動時間是 9/23 (一) 10:00 ~ 17:00。' +
             '衝刺開發是一個聚集開源專案負責人、貢獻者、想貢獻但不知道從何開始的人的活動。' +
             '在活動中，將會有專案領導人帶著他們專案待解決的問題、待開發的功能來現場分享與解說。' +
             '你可以選擇加入自己喜歡的專案，或是帶著自己的專案和大家分享！' +

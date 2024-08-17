@@ -61,17 +61,17 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: 'Poster Session 稿件募集',
+        title: '如何投稿海報',
         intro: [
-            'Poster Session 是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者直接互動的一種展示形式。在 PyCon Taiwan 2024 我們初次嘗試 Poster Session 的活動，希望可以讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，然後與會者可與您直接互動。',
+            '海報環節是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者直接互動的一種展示形式。在 PyCon Taiwan 2024 我們初次嘗試海報募集的活動，希望可以讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，然後與會者可與您直接互動。',
         ],
         info: {
             importantDates: {
                 title: '重要日期',
                 description: [
                     '大會日期： 9/21 - 9/22',
-                    'Poster 開放徵稿：2024 年 05 月 01 日',
-                    'Poster 徵稿截止：2024 年 06 月 30 日 23:59:59 ({aoe})',
+                    '海報開放徵稿：2024 年 05 月 01 日',
+                    '海報徵稿截止：2024 年 06 月 30 日 23:59:59 ({aoe})',
                     '稿件錄取通知：2024 年 07 月 13 日',
                 ],
                 steps: [],
@@ -80,7 +80,7 @@ export default genI18nMessages({
             howToSubmit: {
                 title: '提交稿件',
                 description: [
-                    '請您前往 {posterForm} 進行投稿，提供 Poster 的主題、摘要、內容說明，以及填妥您的個人資訊。',
+                    '請您前往 {posterForm} 進行投稿，提供海報的主題、摘要、內容說明，以及填妥您的個人資訊。',
                     '背板尺寸 900mm x 1800mm，在上述尺寸內允許多張海報',
                 ],
                 steps: [],
@@ -111,12 +111,12 @@ export default genI18nMessages({
         terms: {
             aoe: 'AoE',
             coc: '行為準則',
-            posterForm: 'Poster Session 投稿表單',
+            posterForm: '海報投稿表單',
         },
 
         og: {
-            title: 'Poster Session 稿件募集',
-            description: '首先，謝謝您考慮投稿 Poster 至 PyCon Taiwan 2024。',
+            title: '海報稿件募集',
+            description: '首先，謝謝您考慮投稿海報至 PyCon Taiwan 2024。',
         },
     },
 })

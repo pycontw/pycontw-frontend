@@ -52,7 +52,7 @@ export default genI18nMessages({
                 description:
                     'The open space is a self-service, party-style activity. ' +
                     'It is planned by the attendees on the spot. ' +
-                    'Open spaces allow you to define and plan your gatherings ' +
+                    'Open Space allow you to define and plan your gatherings ' +
                     'in any way you like. ' +
                     'You can take other partners to participate and make friends!',
             },
@@ -136,7 +136,7 @@ export default genI18nMessages({
             openSpace: {
                 title: '開放空間',
                 description:
-                    '開放空間是自助式的聚會活動。是由與會者當場計畫的。你能用任何你喜歡的方式定義、' +
+                    '開放空間（Open Space）是自助式的聚會活動。是由與會者當場計畫的。你能用任何你喜歡的方式定義、' +
                     '組織、規劃你自己的小聚。歡迎你揪其他好夥伴一起來分享、交朋友！',
             },
             lightningTalk: {

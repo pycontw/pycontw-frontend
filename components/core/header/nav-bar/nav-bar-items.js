@@ -8,7 +8,7 @@ export default Object.freeze({
     ],
     speaking: [
         { i18nKey: 'cfp', value: '/speaking/cfp' },
-        { i18nKey: 'posterSession', value: '/speaking/poster-session' },
+        { i18nKey: 'cfpPoster', value: '/speaking/cfp-poster' },
         { i18nKey: 'talk', value: '/speaking/talk' },
         { i18nKey: 'tutorial', value: '/speaking/tutorial' },
         { i18nKey: 'recording', value: '/speaking/recording' },
@@ -18,6 +18,7 @@ export default Object.freeze({
         { i18nKey: 'talks', value: '/conference/talks' },
         { i18nKey: 'tutorials', value: '/conference/tutorials' },
         { i18nKey: 'panelDiscussion', value: '/conference/panel-discussion' },
+        { i18nKey: 'posterSession', value: '/conference/poster-session' },
     ],
     events: [
         { i18nKey: 'sprints', value: '/events/sprints' },

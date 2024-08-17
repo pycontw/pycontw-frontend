@@ -13,21 +13,21 @@ export const state = () => ({
         conferenceName: 'PyCon TW',
         conferenceYear: '2024',
         conferenceDate: '2024-09-21',
-        showSpeakingPage: true,
         showAboutStaffPage: true,
-        showSchedulePage: false,
-        showSponsorPage: true,
-        showRegistrationPage: true,
+        showConferencePage: true,
         showEventOverviewPage: true,
         showEventsPage: true,
-        showConferencePage: true,
-        showVenuePage: true,
-        showProposalSystemPage: true,
-        showIndexSponsorSection: true,
         showIndexSecondaryBtn: true,
+        showIndexSponsorSection: true,
+        showProposalSystemPage: true,
+        showRegistrationPage: true,
+        showSchedulePage: false,
+        showSpeakingPage: false,
+        showSponsorPage: true,
+        showVenuePage: true,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
-        eventsHideItems: ['sprints', 'openSpaces'], // ['sprints', 'openSpaces', 'jobs']
         conferenceHideItems: ['panelDiscussion'], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
+        eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: [], // ['venueInfo', 'accommodation']
     },
