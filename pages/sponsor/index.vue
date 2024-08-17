@@ -52,7 +52,7 @@
                     href="mailto:sponsorship@python.tw"
                     highlight
                     underline
-                    >{{ $t('terms.contact') }}</ext-link
+                    >sponsorship@python.tw</ext-link
                 >
             </template>
         </i18n>
