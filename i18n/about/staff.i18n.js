@@ -151,7 +151,7 @@ export default genI18nMessages({
             },
             {
                 key: 'photography',
-                teamName: '紀錄',
+                teamName: '記錄',
             },
             {
                 key: 'reviewer',
