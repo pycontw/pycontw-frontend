@@ -56,7 +56,7 @@ export default {
                 everywhere: [],
                 program: [],
                 pycast: [],
-                development_web: [],
+                development_web: [{ name: 'Benson', photo: 'web/Benson.jpg' }],
                 development_data: [],
                 development_infra: [],
                 venue: [],
