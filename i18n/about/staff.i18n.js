@@ -160,7 +160,7 @@ export default genI18nMessages({
         ],
         og: {
             title: '工作人員',
-            description: 'PyCon Taiwan 2023 工作人員',
+            description: 'PyCon Taiwan 2024 工作人員',
         },
     },
 })

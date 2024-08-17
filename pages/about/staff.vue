@@ -95,7 +95,7 @@ export default {
                 registration: [],
                 recruitment: [],
                 design: [],
-                finance: [],
+                finance: [{ name: 'Rock', photo: 'finance/Rock.jpg' }],
                 reviewer: [],
             },
         }
