@@ -22,7 +22,7 @@ export default genI18nMessages({
             },
             {
                 key: 'development_web',
-                teamName: 'Development (web)',
+                teamName: 'Development (web/infra)',
             },
             {
                 key: 'development_data',
@@ -30,7 +30,6 @@ export default genI18nMessages({
             },
             {
                 key: 'development_infra',
-                teamName: 'Development (infra)',
             },
             {
                 key: 'venue',
@@ -42,11 +41,7 @@ export default genI18nMessages({
             },
             {
                 key: 'marketing',
-                teamName: 'Marketing - Planning',
-            },
-            {
-                key: 'pr',
-                teamName: 'Marketing - Public Relations',
+                teamName: 'Marketing - Public Relations & Planning',
             },
             {
                 key: 'registration',
@@ -62,7 +57,6 @@ export default genI18nMessages({
             },
             {
                 key: 'uiux',
-                teamName: 'UI/UX',
             },
             {
                 key: 'finance',
@@ -74,12 +68,11 @@ export default genI18nMessages({
             },
             {
                 key: 'reviewer',
-                teamName: 'Review Committee',
             },
         ],
         og: {
             title: 'Staff',
-            description: 'Staff of PyCon Taiwan 2023',
+            description: 'Staff of PyCon Taiwan 2024',
         },
     },
     'zh-hant': {
@@ -103,7 +96,7 @@ export default genI18nMessages({
             },
             {
                 key: 'development_web',
-                teamName: '開發（網站）',
+                teamName: '開發（網站/基礎設施）',
             },
             {
                 key: 'development_data',
@@ -111,7 +104,6 @@ export default genI18nMessages({
             },
             {
                 key: 'development_infra',
-                teamName: '開發（基礎設施）',
             },
             {
                 key: 'venue',
@@ -123,11 +115,7 @@ export default genI18nMessages({
             },
             {
                 key: 'marketing',
-                teamName: '行銷企劃',
-            },
-            {
-                key: 'pr',
-                teamName: '社群媒體',
+                teamName: '公關&行銷',
             },
             {
                 key: 'registration',
@@ -143,7 +131,6 @@ export default genI18nMessages({
             },
             {
                 key: 'uiux',
-                teamName: '使用者介面/體驗',
             },
             {
                 key: 'finance',
@@ -155,7 +142,6 @@ export default genI18nMessages({
             },
             {
                 key: 'reviewer',
-                teamName: '審稿委員',
             },
         ],
         og: {
