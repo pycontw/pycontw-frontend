@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH1 from '@/components/core/titles/H1'
-import i18n from '@/i18n/about/staff.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper';
+import CoreH1 from '@/components/core/titles/H1';
+import i18n from '@/i18n/about/staff.i18n';
 
 export default {
     layout(context) {
@@ -107,9 +107,34 @@ export default {
                     { name: '甲魚', photo: 'web/甲魚.jpg' },
                     { name: 'LY', photo: 'web/LY.jpg' },
                 ],
-                development_data: [],
+                development_data: [
+                    { name: 'Xch1', photo: 'data/Xch1.jpg' },
+                    { name: 'Henry', photo: 'default.jpg' },
+                    { name: 'David Jr.', photo: 'data/David Jr.jpg' },
+                    { name: 'LY', photo: 'data/LY.jpg' },
+                    { name: 'Angus', photo: 'default.jpg' },
+                ],
                 development_infra: [],
-                venue: [],
+                venue: [
+                    { name: 'Derek', photo: 'venve/Derek.jpg' },
+                    { name: 'Fish', photo: 'venve/Fish.jpg' },
+                    { name: 'Ray', photo: 'venve/Ray.jpg' },
+                    { name: 'Mark', photo: 'default.jpg' },
+                    { name: 'Yoyo', photo: 'venve/Yoyo.jpg' },
+                    { name: 'TN', photo: 'venve/TN.jpg' },
+                    { name: 'CharisLai', photo: 'venve/CharisLai.jpg' },
+                    { name: 'Sunfish', photo: 'venve/Sunfish.jpg' },
+                    { name: 'Maggie', photo: 'venve/Maggie.jpg' },
+                    { name: 'Melissa', photo: 'default.jpg' },
+                    { name: 'Joe', photo: 'default.jpg' },
+                    { name: 'Stuart', photo: 'default.jpg' },
+                    { name: 'Wanye', photo: 'default.jpg' },
+                    { name: 'Steven', photo: 'default.jpg' },
+                    { name: 'Alice', photo: 'default.jpg' },
+                    { name: 'Fanfan', photo: 'venve/Fanfan.jpg' },
+                    { name: 'Yvonne', photo: 'default.jpg' },
+                    { name: '建霖', photo: 'venve/建霖.jpg' },
+                ],
                 sponsorship: [
                     { name: 'Pochun', photo: 'sponsorship/Pochun.jpg' },
                     { name: 'Allen', photo: 'sponsorship/Allen.jpg' },
@@ -141,7 +166,21 @@ export default {
                     { name: 'Wei', photo: 'marketing/Wei.JPG' },
                 ],
                 pr: [],
-                registration: [],
+                registration: [
+                    { name: 'Petertc', photo: 'registration/petertc.jpg' },
+                    { name: 'Derick', photo: 'default.jpg' },
+                    { name: 'Kuan', photo: 'registration/Kuan.jpg' },
+                    { name: 'LY', photo: 'registration/LY.jpg' },
+                    { name: 'Angela.chen', photo: 'default.jpg' },
+                    { name: 'jason19970210', photo: 'default.jpg' },
+                    { name: 'Ben (ChaiShi)', photo: 'default.jpg' },
+                    { name: 'Connie', photo: 'registration/Connie.jpg' },
+                    { name: 'Jean', photo: 'default.jpg' },
+                    { name: 'ally', photo: 'default.jpg' },
+                    { name: 'Lois', photo: 'registration/Lois.jpg' },
+                    { name: '小知', photo: 'default.jpg' },
+                    { name: 'Yvonne', photo: 'default.jpg' },
+                ],
                 recruitment: [
                     { name: 'RexWu', photo: 'recruitment/RexWu.jpg' },
                     { name: 'Leila', photo: 'default.jpg' },
