@@ -92,7 +92,6 @@ export default {
                     { name: '鈺馨', photo: 'pycast/鈺馨.jpg' },
                 ],
                 development_web: [
-                    { name: 'Josix', photo: 'default.jpg' },
                     { name: 'Sivan', photo: 'web/Sivan.jpg' },
                     { name: 'Benson', photo: 'web/Benson.jpg' },
                     { name: 'WinnieBear', photo: 'web/WinnieBear.jpg' },
@@ -110,6 +109,7 @@ export default {
                     { name: 'DerDer', photo: 'default.jpg' },
                     { name: 'Fox', photo: 'web/Fox.jpg' },
                     { name: '甲魚', photo: 'web/甲魚.jpg' },
+                    { name: 'Josix', photo: 'default.jpg' },
                 ],
                 development_data: [
                     { name: 'Xch1', photo: 'data/Xch1.jpg' },
