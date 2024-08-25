@@ -102,14 +102,13 @@ export default {
         return {
             isOpened: false,
             selectedPoster: {
-                id: '1',
-                name: 'KK',
-                type: '社群講',
-                community: '台灣數位遊牧者社群',
-                topics: ['社群經營', '人際溝通', '經驗分享'],
-                title: '第一次當總召的我，竟然想在第一屆就辦三百人的年會',
-                summary:
-                    '分享如何舉辦第一屆的三百人年會，包含志工招募、遇到問題與解決方式、大變動等等',
+                id: '',
+                name: '',
+                type: '',
+                community: '',
+                topics: [],
+                title: '',
+                summary: '',
             },
         }
     },
