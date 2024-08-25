@@ -8,9 +8,15 @@
             </i18n>
         </banner>
         <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
+            <core-h2 :title="$t('location.title')"></core-h2>
+            <i18n path="location.description" tag="p"> </i18n>
+            <core-h2 :title="$t('time.title')"></core-h2>
+            <i18n path="time.description.main" tag="p"> </i18n>
+            <i18n path="time.description.sub" tag="p"> </i18n>
+            <core-h2 :title="$t('posters.title')"></core-h2>
             <div class="poster-session__container">
                 <article
-                    v-for="poster in $t('posters')"
+                    v-for="poster in $t('posters.list')"
                     :id="poster.id"
                     :key="poster.id"
                     class="poster-session__card"
@@ -79,6 +85,7 @@ import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import i18n from '@/i18n/conference/poster-session.i18n'
 import Banner from '@/components/core/layout/Banner'
 import CoreH1 from '@/components/core/titles/H1'
+import CoreH2 from '@/components/core/titles/H2'
 import Modal from './_components/modal/Modal'
 
 export default {
@@ -87,6 +94,7 @@ export default {
     components: {
         Banner,
         CoreH1,
+        CoreH2,
         I18nPageWrapper,
         Modal,
     },
