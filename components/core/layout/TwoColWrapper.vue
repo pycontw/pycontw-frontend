@@ -19,7 +19,7 @@ export default {
 
 <style lang="postcss" scpoed>
 .two-col-layout {
-    @media (min-width: 1194px) {
+    @media (min-width: 1024px) {
         grid-template-columns: 1fr 5fr;
     }
 }

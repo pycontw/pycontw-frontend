@@ -7,7 +7,7 @@
                 <template #br><br /></template>
             </i18n>
         </banner>
-        <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
+        <i18n-page-wrapper class="px-2 sm:px-8 md:px-16" custom-x>
             <div class="poster-session__container">
                 <article
                     v-for="poster in $t('posters')"

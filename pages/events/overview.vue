@@ -170,6 +170,6 @@ export default {
 
 <style scoped>
 .pageWrapper {
-    @apply px-4 md:px-32;
+    @apply px-4 lg:px-32;
 }
 </style>
