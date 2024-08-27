@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
-import CoreH1 from '@/components/core/titles/H1'
-import i18n from '@/i18n/about/staff.i18n'
+import I18nPageWrapper from '@/components/core/i18n/PageWrapper';
+import CoreH1 from '@/components/core/titles/H1';
+import i18n from '@/i18n/about/staff.i18n';
 
 export default {
     layout(context) {
@@ -119,24 +119,24 @@ export default {
                     { name: 'Angus', photo: 'default.jpg' },
                 ],
                 venue: [
-                    { name: 'Derek', photo: 'venve/Derek.jpg' },
-                    { name: 'Fish', photo: 'venve/Fish.jpg' },
-                    { name: 'Ray', photo: 'venve/Ray.jpg' },
+                    { name: 'Derek', photo: 'venue/Derek.jpg' },
+                    { name: 'Fish', photo: 'venue/Fish.jpg' },
+                    { name: 'Ray', photo: 'venue/Ray.jpg' },
                     { name: 'Mark', photo: 'default.jpg' },
-                    { name: 'Yoyo', photo: 'venve/Yoyo.jpg' },
-                    { name: 'TN', photo: 'venve/TN.jpg' },
-                    { name: 'CharisLai', photo: 'venve/CharisLai.jpg' },
-                    { name: 'Sunfish', photo: 'venve/Sunfish.jpg' },
-                    { name: 'Maggie', photo: 'venve/Maggie.jpg' },
+                    { name: 'Yoyo', photo: 'venue/Yoyo.jpg' },
+                    { name: 'TN', photo: 'venue/TN.jpg' },
+                    { name: 'CharisLai', photo: 'venue/CharisLai.jpg' },
+                    { name: 'Sunfish', photo: 'venue/Sunfish.jpg' },
+                    { name: 'Maggie', photo: 'venue/Maggie.jpg' },
                     { name: 'Melissa', photo: 'default.jpg' },
                     { name: 'Joe', photo: 'default.jpg' },
                     { name: 'Stuart', photo: 'default.jpg' },
                     { name: 'Wanye', photo: 'default.jpg' },
                     { name: 'Steven', photo: 'default.jpg' },
                     { name: 'Alice', photo: 'default.jpg' },
-                    { name: 'Fanfan', photo: 'venve/Fanfan.jpg' },
+                    { name: 'Fanfan', photo: 'venue/Fanfan.jpg' },
                     { name: 'Yvonne', photo: 'default.jpg' },
-                    { name: '建霖', photo: 'venve/建霖.jpg' },
+                    { name: '建霖', photo: 'venue/建霖.jpg' },
                 ],
                 sponsorship: [
                     { name: 'Pochun', photo: 'sponsorship/Pochun.jpg' },
