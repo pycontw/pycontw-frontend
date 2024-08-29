@@ -77,7 +77,7 @@ export default {
                 },
             },
             locationMapping: {
-                '4-r0': 'R0',
+                '4-r0': 'PSF Hall',
                 '5-r1': 'R1',
                 '6-r2': 'R2',
                 '1-r3': 'R3',
