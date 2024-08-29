@@ -21,7 +21,7 @@ export const state = () => ({
         showIndexSponsorSection: true,
         showProposalSystemPage: true,
         showRegistrationPage: true,
-        showSchedulePage: false,
+        showSchedulePage: true,
         showSpeakingPage: false,
         showSponsorPage: true,
         showVenuePage: true,
