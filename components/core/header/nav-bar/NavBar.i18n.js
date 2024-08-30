@@ -69,6 +69,6 @@ export default genI18nMessages({
         proposalSystemUrl: '投稿系統',
         codeOfConduct: '行為準則',
         cfpPoster: '如何投稿海報',
-        posterSession: '海報環節',
+        posterSession: '海報交流',
     },
 })
