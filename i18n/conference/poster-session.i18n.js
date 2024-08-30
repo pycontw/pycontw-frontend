@@ -29,7 +29,7 @@ export default genI18nMessages({
         location: {
             title: 'Location',
             description:
-                'The Poster Session will be held on the 1st floor. Upon entering through the main entrance, the posters will be displayed on the right side facing R0.',
+                'The Poster Session will be held on the 1st floor. Upon entering through the main entrance, the posters will be displayed on the right side facing PSF Hall.',
         },
         time: {
             title: 'Time',
@@ -207,9 +207,9 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: '海報環節',
+        title: '海報交流',
         intro: `
-            海報環節（Poster Session）是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者直接互動的一種展示形式。
+            海報交流（Poster Session）是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者直接互動的一種展示形式。
             在 PyCon Taiwan 2024 我們初次嘗試 Poster Session 的活動，
             希望可以讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，
             屆時將以海報形式展出，然後與會者可與您直接互動。
@@ -217,7 +217,7 @@ export default genI18nMessages({
         location: {
             title: '活動地點',
             description:
-                '海報環節將在 1 樓舉行。從大門進入後，海報將擺放在面向 R0 的右側。',
+                '海報交流將在 1 樓舉行。從大門進入後，海報將擺放在面向 PSF Hall 的右側。',
         },
         time: {
             title: '活動時間',
