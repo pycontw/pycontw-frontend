@@ -43,7 +43,7 @@ export default genI18nMessages({
         summary:
             'If you are interested in the event, please leave contact information below, ' +
             'and we will provide the sponsorship packages detail to you. Or contact us ' +
-            'directly via sponsorship@python.tw to get any further information.',
+            'directly via {contact} to get any further information.',
         cta: {
             text: 'Application Form',
         },
@@ -93,7 +93,7 @@ export default genI18nMessages({
         ],
         summary:
             '若想了解 PyConTW 2024 完整的贊助方案，歡迎點擊下方按鈕填寫表單留下您的聯絡資料' +
-            '索取贊助書或是直接透過贊助組信箱 sponsorship@python.tw 聯絡我們，讓我們了解貴單位的需求！',
+            '索取贊助書或是直接透過贊助組信箱 {contact} 聯絡我們，讓我們了解貴單位的需求！',
         cta: {
             text: '索取贊助書',
         },
