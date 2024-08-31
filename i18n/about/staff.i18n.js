@@ -68,6 +68,7 @@ export default genI18nMessages({
             },
             {
                 key: 'reviewer',
+                teamName: 'Reviewer',
             },
         ],
         og: {
@@ -142,6 +143,7 @@ export default genI18nMessages({
             },
             {
                 key: 'reviewer',
+                teamName: '審稿',
             },
         ],
         og: {
