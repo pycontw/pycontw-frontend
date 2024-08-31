@@ -237,7 +237,13 @@ export default {
                 photography: [
                     { name: 'Andy', photo: 'photography/Andy.jpg' },
                     { name: 'Deimos', photo: 'photography/Deimos.jpg' },
-                    { name: '小光', photo: 'default.jpg' },
+                    { name: 'Charles', photo: 'photography/Charles.jpg' },
+                    { name: '孝玠', photo: 'photography/孝玠.jpg' },
+                    { name: '庭蓁', photo: 'photography/庭蓁.jpg' },
+                    {
+                        name: '戴維廷_Andy',
+                        photo: 'photography/戴維廷_Andy.jpg',
+                    },
                 ],
             },
         }
