@@ -2,7 +2,7 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'PyCon TW 2023 Discord Guideline',
+        title: 'PyCon TW 2024 Discord Guideline',
         invalidAttendee:
             'The token within the link is invalid. Please contact staff for further help.',
         registration: {
@@ -12,7 +12,7 @@ export default genI18nMessages({
                     'follow {setup} and setup your Discord first.{br}' +
                     '{br}' +
                     'After registration, a few new channels should show up in the left navigation bar, ' +
-                    'the category name is PYCON TW 2023 .{br}' +
+                    'the category name is PYCON TW 2024 .{br}' +
                     'You may also raise an issue by clicking any {manager} member ' +
                     'in member list on the right side and directly message one of them, ' +
                     'or please send a message to {general} channel and mention {mentionManager}.',
@@ -35,36 +35,7 @@ export default genI18nMessages({
                     'Any discussion about Talk can be done here.',
             ],
         },
-
-        roleListHeader: 'Roles list',
-        roleListDescription:
-            'Users can be assigned several different roles, each role would have their own permission to ' +
-            'enter some private channel.',
-        roleList: [
-            {
-                name: 'discord manager',
-                description: 'Target: Discoard managers',
-            },
-            {
-                name: '2023-session-chair',
-                description:
-                    'Target: PyCon TW 2023 session chairs and assistant chairs',
-            },
-            {
-                name: '2023-staff',
-                description: 'Target: PyCon TW 2023 Staff',
-            },
-            {
-                name: '2023-speaker',
-                description: 'Target: PyCon TW 2023 speakers',
-            },
-            {
-                name: '2023-attendee',
-                description:
-                    'Target: Attendee that who is neither staff nor speaker.',
-            },
-        ],
-        channelListHeader: 'PyCon TW 2023 Channels list',
+        channelListHeader: 'PyCon TW 2024 Channels list',
         role: 'Roles:',
         channelGroups: [
             {
@@ -77,7 +48,7 @@ export default genI18nMessages({
                             'The conference organizers have the power to take appropriate actions to redirect the behavior ' +
                             'of those who violate the Code of Conduct. Violators may be forced to leave the conference ' +
                             'without a refund at the sole discretion of the organizers.{br}{br}' +
-                            'This Code of Conduct is approved by the organizers of PyCon TW 2023 and the administrators of this server.',
+                            'This Code of Conduct is approved by the organizers of PyCon TW 2024 and the administrators of this server.',
                     },
                 ],
             },
@@ -133,7 +104,7 @@ export default genI18nMessages({
             },
         ],
         og: {
-            title: 'PyCon TW 2023 Discord 指南',
+            title: 'PyCon TW 2024 Discord 指南',
             description:
                 '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
         },
@@ -145,7 +116,7 @@ export default genI18nMessages({
         registration: {
             title: '1. 註冊',
             descriptions: [
-                '註冊成功後，您應該可以看到大會相關頻道出現於左側頻道列表，類別名稱為 PYCON TW 2023{br}。' +
+                '註冊成功後，您應該可以看到大會相關頻道出現於左側頻道列表，類別名稱為 PYCON TW 2024{br}。' +
                     '如果您持續無法看到大會相關頻道，請點選右方成員清單中身份組為 {manager} 的成員並直接傳訊息給他們，' +
                     '或是將您的問題在 {general} 頻道中提出並 mention {mentionManager}。',
             ],
@@ -165,35 +136,7 @@ export default genI18nMessages({
                 '各軌議程相關資訊頻道（共筆、slido），以及議程相關的討論也會在此進行。{br}',
             ],
         },
-
-        roleListHeader: '身份組清單',
-        roleListDescription:
-            '以下是 PyCon TW 2023 相關的 Discord 身份組。您可以點選使用者的大頭貼以確認該位使用者的身份。' +
-            '若您認為您沒有獲得相對應的身份組，請與我們聯繫。',
-        roleList: [
-            {
-                name: 'discord manager',
-                description: '對象：Discord 管理員',
-            },
-            {
-                name: '2023-session-chair',
-                description: '對象：PyCon TW 2023 的主持人',
-            },
-            {
-                name: '2023-staff',
-                description: '對象：PyCon TW 2023 的志工',
-            },
-            {
-                name: '2023-speaker',
-                description: '對象：PyCon TW 2023 的講者',
-            },
-            {
-                name: '2023-attendee',
-                description: '對象：PyCon TW 2023 的會眾',
-            },
-        ],
         channelListHeader: '頻道清單',
-        role: '身份組：',
         channelGroups: [
             {
                 type: '行為準則',
@@ -202,9 +145,9 @@ export default genI18nMessages({
                         tag: 'rules',
                         description:
                             '伺服器成員皆應遵守的行為準則，在您開始使用前請詳加閱讀。' +
-                            'PyCon TW 2023 籌備團隊和伺服器管理者有權調整任何違反此準則的行為。' +
+                            'PyCon TW 2024 籌備團隊和伺服器管理者有權調整任何違反此準則的行為。' +
                             '僅需根據籌備團隊的裁決，違反準則者可能必須離開會場，並不得要求退費。' +
-                            '本行為準則由 PyCon TW 2023 籌備團隊和伺服器管理者認可執行。',
+                            '本行為準則由 PyCon TW 2024 籌備團隊和伺服器管理者認可執行。',
                     },
                 ],
             },
@@ -258,7 +201,7 @@ export default genI18nMessages({
             },
         ],
         og: {
-            title: 'PyCon TW 2023 Discord 指南',
+            title: 'PyCon TW 2024 Discord 指南',
             description:
                 '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
         },

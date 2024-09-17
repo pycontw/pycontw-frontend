@@ -23,7 +23,7 @@
                     </template>
                     <template #br><br /></template>
                     <template #info>
-                        <span class="category">PYCON TW 2023</span>
+                        <span class="category">PYCON TW 2024</span>
                     </template>
                     <template #registrationDesk>
                         <span class="channel">⚠｜registration-desk</span>
@@ -92,20 +92,9 @@
                         <span class="channel">📝｜program-keynote</span>
                     </template>
                     <template #tracks>
-                        <span class="category">PYCON TW 2023</span>
+                        <span class="category">PYCON TW 2024</span>
                     </template>
                 </i18n>
-            </div>
-
-            <div class="section">
-                <core-h1 :title="$t('roleListHeader')"></core-h1>
-                <p class="paragraphContent">
-                    {{ $t('roleListDescription') }}
-                </p>
-                <div v-for="role in $t('roleList')" :key="role.name">
-                    <p class="paragraphTitle">{{ role.name }}</p>
-                    <p class="paragraphContent">{{ role.description }}</p>
-                </div>
             </div>
 
             <div class="section">
@@ -218,9 +207,6 @@ export default {
                 require('@/static/img/ext/discord-2.png'),
             ],
             channelInfo: {
-                rules: {
-                    name: 'rules',
-                },
                 'registration-desk': {
                     name: '⚠｜registration-desk',
                 },
@@ -240,7 +226,7 @@ export default {
                     name: '💪｜booth-game',
                 },
                 'r0-track': {
-                    name: '📝｜r0-track',
+                    name: '📝｜psf-hall-track',
                 },
                 'r1-track': {
                     name: '📝｜r1-track',
