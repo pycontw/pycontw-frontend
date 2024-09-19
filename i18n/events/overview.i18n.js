@@ -60,12 +60,10 @@ export default genI18nMessages({
                 title: 'Lightning Talk',
                 description:
                     'The Lightning Talk is held every afternoon ' +
-                    'before the end of the annual meeting. ' +
-                    'Each speech includes a five-minute stimulus activity that ' +
-                    'includes a slideshow. ' +
-                    'Please provide your topic and name at the registration counter, ' +
-                    'and we will draw out the list of ' +
-                    'winners of the day at noon every day.',
+                    'before the end of the annual meeting. Each speech includes ' +
+                    'a 3-minute stimulus activity that includes a slideshow. ' +
+                    'Please fill out the form with your topic and contact information, ' +
+                    'and we will draw out the list of winners of the day at noon every day.',
             },
             pynight: {
                 title: 'PyNight',
@@ -142,9 +140,9 @@ export default genI18nMessages({
             lightningTalk: {
                 title: '閃電秀',
                 description:
-                    '閃電秀在年會每天下午結束之前舉辦，是每個演講包含設置投影片僅限五分鐘的刺激活動。' +
-                    '如果要報名閃電秀，請在註冊櫃檯的「閃電秀」報名處提供你的講題與姓名，' +
-                    '我們會在每天中午抽出當日的中選名單。',
+                    '這是一個開放給所有人現場報名，且每個演講包含設置投影片僅限 3 分鐘的刺激活動。如果想報名閃電秀，' +
+                    '請在會期兩天填寫表單提供你的講題與聯絡方式，我們會在每天中午抽出當日的中選名單！' +
+                    '讓你盡情上台大鳴大放電爆所有人雙眼！',
             },
             pynight: {
                 title: 'PyNight',
