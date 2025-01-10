@@ -11,25 +11,32 @@ export const state = () => ({
     relatedData: [],
     configs: {
         conferenceName: 'PyCon TW',
-        conferenceYear: '2024',
+        conferenceYear: '2025',
         conferenceDate: '2024-09-21',
-        showAboutStaffPage: true,
-        showConferencePage: true,
-        showSchedulePage: true,
-        showEventOverviewPage: true,
-        showEventsPage: true,
+        showAboutStaffPage: false,
+        showConferencePage: false,
+        showSchedulePage: false,
+        showEventOverviewPage: false,
+        showEventsPage: false,
         showIndexSecondaryBtn: true,
-        showIndexSponsorSection: true,
-        showProposalSystemPage: true,
-        showRegistrationPage: true,
-        showSpeakingPage: false,
-        showSponsorPage: true,
-        showVenuePage: true,
-        aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
-        conferenceHideItems: ['panelDiscussion'], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
-        eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
-        registrationHideItems: [], // ['tickets', 'financialAid']
-        venueHideItems: [], // ['venueInfo', 'accommodation']
+        showIndexSponsorSection: false,
+        showProposalSystemPage: false,
+        showRegistrationPage: false,
+        showSpeakingPage: true,
+        showSponsorPage: false,
+        showVenuePage: false,
+        aboutHideItems: ['apacCommunity'],
+        // ['pycontw','apacCommunity', 'history', 'community', 'codeOfConduct'],
+        conferenceHideItems: [
+            'keynotes',
+            'talks',
+            'tutorials',
+            'panelDiscussion',
+        ],
+        // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
+        eventsHideItems: ['sprints', 'openSpaces', 'jobs'], // ['sprints', 'openSpaces', 'jobs'],
+        registrationHideItems: ['tickets', 'financialAid'], // ['tickets', 'financialAid'],
+        venueHideItems: ['venueInfo', 'accommodation'], // ['venueInfo', 'accommodation'],
     },
 })
 

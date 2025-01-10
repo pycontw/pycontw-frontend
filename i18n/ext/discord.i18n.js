@@ -2,7 +2,7 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'PyCon TW 2024 Discord Guideline',
+        title: 'PyCon TW 2025 Discord Guideline',
         invalidAttendee:
             'The token within the link is invalid. Please contact staff for further help.',
         registration: {
@@ -12,7 +12,7 @@ export default genI18nMessages({
                     'follow {setup} and setup your Discord first.{br}' +
                     '{br}' +
                     'After registration, a few new channels should show up in the left navigation bar, ' +
-                    'the category name is PYCON TW 2024 .{br}' +
+                    'the category name is PYCON TW 2025 .{br}' +
                     'You may also raise an issue by clicking any {manager} member ' +
                     'in member list on the right side and directly message one of them, ' +
                     'or please send a message to {general} channel and mention {mentionManager}.',
@@ -35,7 +35,7 @@ export default genI18nMessages({
                     'Any discussion about Talk can be done here.',
             ],
         },
-        channelListHeader: 'PyCon TW 2024 Channels list',
+        channelListHeader: 'PyCon TW 2025 Channels list',
         channelGroups: [
             {
                 type: 'Code of Conduct',
@@ -47,7 +47,7 @@ export default genI18nMessages({
                             'The conference organizers have the power to take appropriate actions to redirect the behavior ' +
                             'of those who violate the Code of Conduct. Violators may be forced to leave the conference ' +
                             'without a refund at the sole discretion of the organizers.{br}{br}' +
-                            'This Code of Conduct is approved by the organizers of PyCon TW 2024 and the administrators of this server.',
+                            'This Code of Conduct is approved by the organizers of PyCon TW 2025 and the administrators of this server.',
                     },
                 ],
             },
@@ -103,7 +103,7 @@ export default genI18nMessages({
             },
         ],
         og: {
-            title: 'PyCon TW 2024 Discord 指南',
+            title: 'PyCon TW 2025 Discord 指南',
             description:
                 '如果尚未安裝 Discord 並加入 Python Taiwan 的伺服器，請先閱讀 設定 Discord 與加入 Python Taiwan 伺服器',
         },
