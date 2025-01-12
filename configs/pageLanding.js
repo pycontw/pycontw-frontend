@@ -1,14 +1,14 @@
 export const landingButtonConfig = {
     PRIMARY_JOIN_US: {
         isExternalLink: true,
-        path: 'https://forms.gle/seaori7xF4vLSSUb7',
+        path: 'https://forms.gle/qurWMpgtuvX4WQjd9',
         textKey: 'joinUs',
         isPrimary: true,
         isLarge: true,
     },
     SECONDARY_JOIN_US: {
         isExternalLink: true,
-        path: 'https://forms.gle/seaori7xF4vLSSUb7',
+        path: 'https://forms.gle/qurWMpgtuvX4WQjd9',
         textKey: 'joinUs',
         isPrimary: false,
         isBordered: true,
@@ -20,7 +20,7 @@ export const landingButtonConfig = {
         textKey: 'callForProposals',
         isPrimary: true,
         isBordered: true,
-        isLarge: false,
+        isLarge: true,
     },
     CHECK_EVENTS: {
         isExternalLink: false,
@@ -129,6 +129,10 @@ export const landingFooterHistoryConfig = [
     {
         text: '2023',
         link: 'https://tw.pycon.org/2023/',
+    },
+    {
+        text: '2024',
+        link: 'https://tw.pycon.org/2024/',
     },
 ]
 

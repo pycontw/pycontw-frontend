@@ -5,7 +5,7 @@ export default genI18nMessages({
         milestone: [
             {
                 achievement: 'Hold',
-                achievementNumber: '12',
+                achievementNumber: '13',
                 achievementUnit: 'years',
             },
             {
@@ -26,11 +26,7 @@ export default genI18nMessages({
             ' of the Python programming language. It is held by enthusiasts and focuses on' +
             ' Python technology and its versatile applications. We welcome people who are' +
             ' interested in Python to join PyCon Taiwan to share knowledge, exchange ideas,' +
-            ' make connections and to help us grow our network.' +
-            ' Last year, PyCon Taiwan guided attendees back to physical conferences from the virtual world.' +
-            ' In PyCon Taiwan 2024, we are taking attendees to Kaohsiung!' +
-            ' With the theme of "Connection", we aim to foster an environment where attendees from diverse regions' +
-            ' can share and collaborate, bringing fresh and innovative ideas to the Python community.',
+            ' make connections and to help us grow our network.',
         whatIsPyCon: 'What is PyCon',
         whatIsPyConContent:
             'PyCon, also known as the Python Annual Conference, is the annual event of the global Python community.' +
@@ -41,7 +37,7 @@ export default genI18nMessages({
         milestone: [
             {
                 achievement: '持續舉辦',
-                achievementNumber: '12',
+                achievementNumber: '13',
                 achievementUnit: '年',
             },
             {
@@ -60,9 +56,7 @@ export default genI18nMessages({
         whatIsPyConTWContent:
             'PyCon Taiwan 為一年一度由愛好者舉辦、討論並提倡使用 Python 程式語言的會議，' +
             '聚焦在 Python 技術與其多樣的可能應用的交流。我們歡迎所有對 Python ' +
-            '有興趣的朋友一同加入 PyCon Taiwan 來分享所學、交換想法、並且認識更多同好。' +
-            '去年 PyCon Taiwan 帶會眾們從虛擬重返實體，今年 PyCon Taiwan 2024 將帶著會眾們前進高雄！' +
-            '今年在這個熱情的城市以「連結」為核心，希望來自各地的會眾分享交流為 Python 社群帶來更多創新想法。',
+            '有興趣的朋友一同加入 PyCon Taiwan 來分享所學、交換想法、並且認識更多同好。',
         whatIsPyCon: '何謂 PyCon',
         whatIsPyConContent:
             'PyCon，亦即 Python 年會，是全球 Python 社群的年度盛會。' +

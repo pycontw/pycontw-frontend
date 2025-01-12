@@ -2,14 +2,14 @@ import { genI18nMessages } from '@/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        pyconWelcome: 'Welcome to PyCon TW 2024',
+        pyconWelcome: 'Welcome to PyCon TW 2025',
         pyconIntro: 'PyCon Taiwan',
         achieveFirstStatLine: 'Hold',
         achieveFirstEndLine: 'years',
         achieveSecondStatLine: 'Every Year',
         achieveSecondEndLine: 'Speeches',
         achieveThirdStatLine: 'Audience',
-        achieveThirdEndLine: 'People',
+      achieveThirdEndLine: 'People',
         sponsor: 'Sponsor Us',
         sponsorList: 'Sponsors',
         sponsorUs: 'Be a Sponsor',
@@ -27,7 +27,7 @@ export default genI18nMessages({
             '"PyCon TW 2023 will definitely be held successfully!"',
     },
     'zh-hant': {
-        pyconWelcome: '歡迎來到 PyCon TW 2024',
+        pyconWelcome: '歡迎來到 PyCon TW 2025',
         pyconIntro: 'PyCon Taiwan',
         achieveFirstStatLine: '持續舉辦',
         achieveFirstEndLine: '年',
