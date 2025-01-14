@@ -9,7 +9,7 @@ export default genI18nMessages({
         achieveSecondStatLine: 'Every Year',
         achieveSecondEndLine: 'Speeches',
         achieveThirdStatLine: 'Audience',
-        achieveThirdEndLine: 'People',
+      achieveThirdEndLine: 'People',
         sponsor: 'Sponsor Us',
         sponsorList: 'Sponsors',
         sponsorUs: 'Be a Sponsor',
