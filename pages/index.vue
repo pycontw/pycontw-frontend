@@ -156,8 +156,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.BUY_TICKETS,
-            secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
+            primaryButton: landingButtonConfig.PRIMARY_JOIN_US,
+            secondaryButton: landingButtonConfig.CFP,
             selectedSponsor: {},
         }
     },
