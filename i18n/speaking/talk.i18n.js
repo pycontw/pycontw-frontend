@@ -28,8 +28,7 @@ export default genI18nMessages({
             {
                 title: 'Uundisclosed Fields',
                 content:
-                    'Some of the fields are for proposal reviewers only, so there is no need to worry about spoilers, ' +
-                    'including objectives, outline, and supplementary.',
+                    'Hmmm, that might seem a lot, but if you skip all optional fields, it will only take you about 500 letters to write your proposal. We would still like to encourage you to complete the entire form to help reviewers better understand your proposal. Some of the fields are for proposal reviewers only, so there is no need to worry about spoilers',
             },
             {
                 title: 'Good Ideas',
@@ -38,7 +37,12 @@ export default genI18nMessages({
                     'Who is the intended audience?{br}' +
                     'What should they know before the talk?{br}' +
                     'Is there any special domain knowledge required?{br}' +
-                    'What will they get after my talk?',
+                    'What will they get after my talk?{br}' +
+                    'The abstract and the content of the talk should be related to the title of the talk.{br}' +
+                    'Talk content must be original and not replicated from some other talks.{br}' +
+                    'Please let the reviewer understand which part of your talks contain original content developed by you.{br}{br}' +
+                    'Outline major sections of your talk along with the estimated time you will spend in each of these sections.{br}' +
+                    'If you feel that your topic will not be familiar to most Pythonistas, be sure to provide additional references such as links to wiki, source codes, or materials that will help them better understand your talk.',
             },
             {
                 title: 'Bad Ideas',
@@ -137,7 +141,7 @@ export default genI18nMessages({
             {
                 title: '不公開欄位',
                 content:
-                    '這些欄位中，有些只開放審查人員和議程組看得到，不會公開，因此不用在意會有破梗的問題。' +
+                    '這些欄位中，有些只開放讓審查人員和議程組看得到，不會公開，因此不用在意會有破梗的問題。' +
                     '這些不公開的欄位有：演講目標、大綱、補充連結。',
             },
             {
@@ -147,15 +151,20 @@ export default genI18nMessages({
                     '誰是你的目標聽眾？{br}' +
                     '演講之前是否需要什麼知識背景？{br}' +
                     '是否需要事先瞭解某些特定領域的專業知識（domain knowledge）？{br}' +
-                    '聽眾在演講之後會得到哪些收穫？',
+                    '聽眾在演講之後會得到哪些收穫？{br}{br}' +
+                    '雖然不盡然所有的講題都要採取破題法的方式，但建議題目與摘要需具備關聯性，在摘要時儘可能能夠清楚呼應到您的講題。{br}' +
+                    '內容應該具備原創性並能夠清楚的讓審查員與會眾瞭解您的原創內容屬於哪一部分。{br}' +
+                    '請在大綱中詳細列出此議程的各段綱要與預估所需要的時間。{br}' +
+                    '如果您的主題，對於 Python 使用者而言並不常見，請確保您能將相關介紹內容透過連結、部落格、維基、程式碼或者其他有於瞭解內容的資料中提供足夠的資訊。這能幫助審查者以及會眾了解您的演講。',
             },
             {
-                title: '投稿不推薦',
+                title: '投稿不推薦的主意',
                 content:
-                    '避免流於資訊型廣告（infomercials）。課程不該僅止於促銷您的產品或者是介紹如何使用您的產品。' +
-                    '我們仍然非常歡迎分享在您公司遭遇的問題與解決問題方法、貴公司維護的專案內容或是可以給予聽眾收穫的開源專案內容。{br}' +
-                    '請勿假設審稿人員都認識您。請務必提交完整以及足夠資訊的稿件。避免抄襲他人的成果與經驗。歡迎各種形式的分享，' +
-                    '但應該清楚說明哪部分屬於原創內容與參考內容。',
+                    '避免流於資訊型廣告（infomercials）。' +
+                    '課程不該僅止於促銷您的產品或者是介紹如何使用您的產品。' +
+                    '儘管如此，我們仍然非常歡迎分享在您公司遭遇的問題與解決問題方法、貴公司維護的專案內容或是可以給予聽眾收穫的開源專案內容。{br}' +
+                    '請勿假設審稿人員都認識您。請務必提交完整以及足夠資訊的稿件。{br}' +
+                    '避免抄襲他人的成果與經驗。歡迎各種形式的分享，但應該清楚說明哪部分屬於原創內容與參考內容。',
             },
             {
                 title: '難易度',
