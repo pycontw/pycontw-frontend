@@ -128,7 +128,7 @@ export default {
                         {
                             slot: 'aoe',
                             textKey: 'terms.aoe',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240409T115900&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250405T155900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                     ],
@@ -247,6 +247,10 @@ export default {
     computed: {
         previousConfLinks() {
             return [
+                [
+                    'PyCon Taiwan 2024',
+                    `https://tw.pycon.org/2024/zh-hant/conference/schedule`,
+                ],
                 [
                     'PyCon Taiwan 2023',
                     `https://tw.pycon.org/2023/zh-hant/conference/schedule`,
