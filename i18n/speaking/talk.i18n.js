@@ -28,7 +28,7 @@ export default genI18nMessages({
             {
                 title: 'Uundisclosed Fields',
                 content:
-                    'Hmmm, that might seem a lot, but if you skip all optional fields, it will only take you about 500 letters to write your proposal. We would still like to encourage you to complete the entire form to help reviewers better understand your proposal. Some of the fields are for proposal reviewers only, so there is no need to worry about spoilers',
+                    'Only some fields will public, including speaker information, title, category, duration, language, abstract, python level, The other fields are for proposal reviewers only, so there is no need to worry about spoilers.',
             },
             {
                 title: 'Good Ideas',
@@ -141,8 +141,8 @@ export default genI18nMessages({
             {
                 title: '不公開欄位',
                 content:
-                    '這些欄位中，有些只開放讓審查人員和議程組看得到，不會公開，因此不用在意會有破梗的問題。' +
-                    '這些不公開的欄位有：演講目標、大綱、補充連結。',
+                    '只會公開以下欄位給會眾：講者資訊、題目、分類、時間長度、語言、摘要、Python難易度，其餘欄位不公開，' +
+                    '只開放讓審查人員和議程組看得到，因此不用在意會有破梗的問題。',
             },
             {
                 title: '投稿好主意',
