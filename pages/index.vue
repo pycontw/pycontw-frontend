@@ -156,8 +156,8 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.PRIMARY_JOIN_US,
-            secondaryButton: landingButtonConfig.CFP,
+            primaryButton: landingButtonConfig.CFP,
+            secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
             selectedSponsor: {},
         }
     },

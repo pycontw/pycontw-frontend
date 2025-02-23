@@ -20,7 +20,7 @@ export const state = () => ({
         showEventsPage: false,
         showIndexSecondaryBtn: true,
         showIndexSponsorSection: false,
-        showProposalSystemPage: false,
+        showProposalSystemPage: true,
         showRegistrationPage: false,
         showSpeakingPage: true,
         showSponsorPage: false,
