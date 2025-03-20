@@ -16,6 +16,36 @@
                     <p>{{ field.content }}</p>
                 </template>
             </two-col-wrapper>
+            <two-col-wrapper
+                v-for="(field, i) in $t('plainTextFieldsTwo')"
+                :key="`financial_plain_text_field_${i}`"
+            >
+                <template #default>
+                    <p>{{ field.title }}</p>
+                </template>
+                <template #right-col>
+                    <ul class="list-disc">
+                        <li
+                            v-for="(item, i) in field.content"
+                            :key="`auxiliary_item_content_${i}`"
+                        >
+                            {{ item.title }}
+                            <ul class="list-disc">
+                                <li
+                                    v-for="(content, j) in item.content"
+                                    :key="`auxiliary_item_subcontent_${i}_${j}`"
+                                    class="ml-6"
+                                >
+                                    {{ content }}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p v-if="field.remark" class="list-disc">
+                        {{ field.remark }}
+                    </p>
+                </template>
+            </two-col-wrapper>
 
             <two-col-wrapper class="spacing">
                 <template #default>
@@ -51,7 +81,7 @@
                         <i18n path="fillFormProcess" tag="li">
                             <template #form>
                                 <ext-link
-                                    href="https://forms.gle/PBu5k6HHNanEkCd47"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfwCkM_N8KZeMeZCwGaFpQZyuXbI5J4mQ2UIgj4xTwqTjvW2Q/viewform"
                                     highlight
                                     underline
                                     >{{ $t('form') }}</ext-link
