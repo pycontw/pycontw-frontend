@@ -26,14 +26,14 @@
                 <template #right-col>
                     <ul class="list-disc">
                         <li
-                            v-for="(item, i) in field.content"
-                            :key="`auxiliary_item_content_${i}`"
+                            v-for="(item, j) in field.content"
+                            :key="`auxiliary_item_content_${j}`"
                         >
                             {{ item.title }}
                             <ul class="list-disc">
                                 <li
-                                    v-for="(content, j) in item.content"
-                                    :key="`auxiliary_item_subcontent_${i}_${j}`"
+                                    v-for="(content, k) in item.content"
+                                    :key="`auxiliary_item_subcontent_${j}_${k}`"
                                     class="ml-6"
                                 >
                                     {{ content }}
