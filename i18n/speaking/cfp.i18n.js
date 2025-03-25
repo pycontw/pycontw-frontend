@@ -9,7 +9,7 @@ export default genI18nMessages({
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'Conference dates: September 6th, September 7th, 2025',
+                    'Conference dates: September 5th, September 7th, 2025',
                     'Talks & Tutorial CFP Begins: February 23th, 2025',
                     'Talks & Tutorial CFP Ends: April 5th, 2025, 23:59:59 ({aoe})',
                     'Announcement of Acceptance: June 14th, 2025',
@@ -139,7 +139,7 @@ export default genI18nMessages({
             importantDates: {
                 title: '重要日期',
                 description: [
-                    '大會日期： 9/6 - 9/7',
+                    '大會日期： 9/5 - 9/7',
                     '議程、課程 開放徵稿：2025 年 02 月 23 日',
                     '議程、課程 投稿截止：2025 年 04 月 05 日 23:59:59 ({aoe})',
                     '稿件錄取通知：2025 年 06 月 14 日',
