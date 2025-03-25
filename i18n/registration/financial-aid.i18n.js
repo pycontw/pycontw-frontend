@@ -21,31 +21,52 @@ export default genI18nMessages({
                     'and speakers and aims to provide assistance to ' +
                     'those who otherwise might not be able to attend the conference.',
             },
+        ],
+        plainTextFieldsTwo: [
             {
                 title: 'Auxiliary Items',
-                content:
-                    'The financial aid auxiliary items encompass conference fees, ' +
-                    'travel grants, transit provisions including Taiwan High Speed Rail ' +
-                    'and Taiwan Railway passes, economy-class airfare to/from ' +
-                    'any Taiwanese airport, and accommodation expenses.',
+                content: [
+                    {
+                        title: 'Conference Fees',
+                        content: [],
+                    },
+                    {
+                        title: 'Travel Grants',
+                        content: [
+                            'Transit: Taiwan High Speed Rail, Taiwan Railway',
+                            'Airfare: Economy-class tickets for travel to/from any airport in Taiwan',
+                            'Lodging',
+                        ],
+                    },
+                ],
+                remark: '※ The amount of subsidy is determined based on the review results.',
             },
             {
                 title: 'Reimbursement',
-                content:
-                    'Once your financial aid application is accepted, you will receive a ' +
-                    'discount code via email for conference registration. After registering, ' +
-                    'you can seek reimbursement for approved travel expenses by submitting ' +
-                    'your receipt at the reception desk of the venue. We will process your ' +
-                    'reimbursement promptly, ensuring you are reimbursed for your ' +
-                    'approved travel costs.',
+                content: [
+                    {
+                        title: 'Conference Fees',
+                        content: [
+                            'PyCon TW will email you the discount code for registration if your application is accepted.',
+                        ],
+                    },
+                    {
+                        title: 'Travel Grant',
+                        content: [
+                            'Please be sure to submit a copy of your travel expenses receipt (either paper or electronic) to the reception desk at the venue.',
+                            'Based on the provided receipt, you will be reimbursed for the approved travel expenses.',
+                        ],
+                    },
+                ],
+                remark: '',
             },
         ],
         applicationDeadline: 'Timeline',
         DeadlineContent: [
-            '2024-03-24 23:59 (AoE) Financial aid application opens.',
-            '2024-06-17 23:59 (AoE) Financial aid application closes.',
-            '2024-06-23 23:59 (AoE) Financial aid application review results announcement.',
-            '2024-09-21 18:00 (AoE) Disbursement sessions at PyCon TW.',
+            '2025-04-01 23:50 (AoE) Financial aid application opens.',
+            '2025-06-20 23:50 (AoE) Financial aid application closes.',
+            '2025-07-01 23:50 (AoE) Financial aid application review results announcement.',
+            '2025-09-05 18:00 (Taipei Time) Disbursement sessions at PyCon TW.',
         ],
         applicationHowTo: 'Application Process',
         remarkTitle: 'Remarks',
@@ -60,9 +81,9 @@ export default genI18nMessages({
             'Describe what makes your situation unique. Say, you might represent a particular group that is not well-represented.',
             'Describe how other attendees would benefit from your presence. Say, you’ll share your experience, or can help raise awareness of an issue in the community, etc.',
         ],
-        form: 'the financial aid application form',
+        form: 'financial aid application form',
         fillFormProcess:
-            'Fill out {form}. Leave a brief description about yourself, and provide at least your full name.',
+            'Fill out the {form}. Leave a brief description about yourself, and provide at least your full name.',
         og: {
             title: 'Financial Aid',
             description:
@@ -84,27 +105,52 @@ export default genI18nMessages({
                 content:
                     '只要你有需要都可以申請，我們盡力協助讓更多人能藉由補助參與會議。',
             },
+        ],
+        plainTextFieldsTwo: [
             {
                 title: '補助項目',
-                content:
-                    '我們提供多項補助項目，包括大會門票交通補助（補助金額依審核結果決定）' +
-                    '交通補助涵蓋高鐵和台鐵費用，而機票費用則涵蓋經濟艙的飛機票。此外，' +
-                    '我們也提供住宿費用的補助。',
+                content: [
+                    {
+                        title: '大會門票',
+                        content: [],
+                    },
+                    {
+                        title: '差旅補助',
+                        content: [
+                            '境內交通：高鐵、台鐵',
+                            '機票費用：飛機 (經濟艙)',
+                            '住宿費用',
+                        ],
+                    },
+                ],
+                remark: '※ 補助金額依審核結果決定',
             },
             {
                 title: '領取方式',
-                content:
-                    '一旦您的 FA 申請被接受，我們會通過電子郵件給您發送會議註冊的折扣碼。註冊後，' +
-                    '您就有資格報銷已批准的差旅費用。只需將旅行費用收據副本提交到會場的接待處，' +
-                    '我們將根據您提供的收據為您進行報銷，確保您獲得已批准的旅行費用的退款。',
+                content: [
+                    {
+                        title: '大會門票',
+                        content: [
+                            '大會將寄送 KKTIX 優惠碼，請至 KKTIX 上使用優惠碼購票。',
+                        ],
+                    },
+                    {
+                        title: '差旅補助',
+                        content: [
+                            '請務必將差旅補助的收據副本（紙質或電子票據皆可）提交至會場的接待處。',
+                            '根據提供的收據，您將獲得報銷旅行費用的批准補助金額。',
+                        ],
+                    },
+                ],
+                remark: '',
             },
         ],
-        applicationDeadline: '財務補助時程',
+        applicationDeadline: '受理期限',
         DeadlineContent: [
-            '2024-03-24 23:59 (AoE) 開始接受財務補助',
-            '2024-06-17 23:59 (AoE) 財務補助申請截止',
-            '2024-06-23 23:59 (AoE) 財務補助審查結果通知',
-            '2024-09-21 18:00 (AoE) 大會當場支付',
+            '2025-04-01 23:50 (AoE) 開始接受財務補助',
+            '2025-06-20 23:50 (AoE) 財務補助申請截止',
+            '2025-07-01 23:50 (AoE) 財務補助審查結果通知',
+            '2025-09-05 18:00 (台北時間) 大會當場支付',
         ],
         applicationHowTo: '申請流程',
         remarkTitle: '備註',
