@@ -4,6 +4,7 @@ module.exports = {
     mode: 'jit',
     purge: [],
     darkMode: false, // or 'media' or 'class'
+    important: true,
     theme: {
         fontFamily: {
             sans: [
