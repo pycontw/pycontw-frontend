@@ -99,16 +99,16 @@
                                 :path="`features.${feature}`"
                                 tag="div"
                             >
-                                <template #groupBuyCorporateApplication>
+                                <template #corporateGroupApplication>
                                     <ext-link
                                         :href="
-                                            pageLinks.groupBuyCorporateTicketsForm
+                                            pageLinks.corporateGroupTicketsForm
                                         "
                                         highlight
                                         underline
                                         >{{
                                             $t(
-                                                'terms.groupBuyCorporateApplication',
+                                                'terms.corporateGroupApplication',
                                             )
                                         }}</ext-link
                                     >
@@ -210,16 +210,16 @@
                                         }}</ext-link
                                     >
                                 </template>
-                                <template #groupBuyCorporateTicketsForm>
+                                <template #corporateGroupTicketsForm>
                                     <ext-link
                                         :href="
-                                            pageLinks.groupBuyCorporateTicketsForm
+                                            pageLinks.corporateGroupTicketsForm
                                         "
                                         highlight
                                         underline
                                         >{{
                                             $t(
-                                                'terms.groupBuyCorporateTicketsForm',
+                                                'terms.corporateGroupTicketsForm',
                                             )
                                         }}</ext-link
                                     >
@@ -287,25 +287,23 @@
                                     }}</ext-link
                                 >
                             </template>
-                            <template #groupBuyCorporateTicketsForm>
+                            <template #corporateGroupTicketsForm>
                                 <ext-link
-                                    :href="
-                                        pageLinks.groupBuyCorporateTicketsForm
-                                    "
+                                    :href="pageLinks.corporateGroupTicketsForm"
                                     highlight
                                     underline
                                     >{{
-                                        $t('terms.groupBuyCorporateTicketsForm')
+                                        $t('terms.corporateGroupTicketsForm')
                                     }}</ext-link
                                 >
                             </template>
-                            <template #concessionTicket>
+                            <template #accessibilityTicket>
                                 <ext-link
                                     :href="pageLinks.kktixIndividual2024"
                                     underline
                                     highlight
                                     >{{
-                                        $t('tickets.concessionTicket')
+                                        $t('tickets.accessibilityTicket')
                                     }}</ext-link
                                 >
                             </template>
@@ -377,13 +375,13 @@
                                 class="leading-[30px]"
                                 tag="li"
                             >
-                                <template #concession>
+                                <template #accessibility>
                                     <ext-link
                                         :href="pageLinks.kktixIndividual2024"
                                         underline
                                         highlight
                                         >{{
-                                            $t('tickets.concession')
+                                            $t('tickets.accessibility')
                                         }}</ext-link
                                     >
                                 </template>
@@ -439,16 +437,16 @@
                                         }}</ext-link
                                     >
                                 </template>
-                                <template #groupBuyCorporateTicketsForm>
+                                <template #corporateGroupTicketsForm>
                                     <ext-link
                                         :href="
-                                            pageLinks.groupBuyCorporateTicketsForm
+                                            pageLinks.corporateGroupTicketsForm
                                         "
                                         highlight
                                         underline
                                         >{{
                                             $t(
-                                                'terms.groupBuyCorporateTicketsForm',
+                                                'terms.corporateGroupTicketsForm',
                                             )
                                         }}</ext-link
                                     >
@@ -462,13 +460,13 @@
                                         organizers@python.tw
                                     </ext-link>
                                 </template>
-                                <template #concessionTicket>
+                                <template #accessibilityTicket>
                                     <ext-link
                                         :href="pageLinks.kktixIndividual2024"
                                         underline
                                         highlight
                                         >{{
-                                            $t('tickets.concessionTicket')
+                                            $t('tickets.accessibilityTicket')
                                         }}</ext-link
                                     >
                                 </template>
