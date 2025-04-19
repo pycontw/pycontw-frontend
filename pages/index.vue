@@ -343,7 +343,7 @@ export default {
         background-image: url('~@/static/landing-background.png');
     }
     .landing__title {
-        background-image: url('~@/static/landing-title.png');
+        background-image: url('~@/static/landing-title-2025.png');
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: 2.5rem;
