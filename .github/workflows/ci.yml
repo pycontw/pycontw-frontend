@@ -16,7 +16,7 @@ jobs:
 
         strategy:
             matrix:
-                os: [ ubuntu-latest ]
+                os: [ ubuntu-22.04 ]
                 node: [ 14.21.3 ]
 
         steps:
