@@ -1,6 +1,7 @@
 export const ticketSellingStatus = {
     APPLY: 'apply',
     COMING_SOON: 'comingSoon',
+    CONTACT_US: 'contactUs',
     SELLING: 'selling',
     ENDED: 'ended',
     SOLD_OUT: 'soldOut',
@@ -103,7 +104,7 @@ export const ticketInfoConfig = [
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
-        statusI18nKey: ticketSellingStatus.SELLING,
+        statusI18nKey: ticketSellingStatus.CONTACT_US,
         link: pageLinks.financialAid,
     },
 ]

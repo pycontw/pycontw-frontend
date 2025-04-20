@@ -23,7 +23,7 @@ export default genI18nMessages({
                     title: 'Request reimbursement from your company? Please select the “Corporate Ticket”!',
                     description: [
                         'Please purchase a corporate ticket if you require an invoice.',
-                        'Notice! Non-corporate ticket types do not support any reimbursement requests',
+                        'Notice! Non-corporate ticket types do not support any reimbursement requests!',
                         'If you purchased a “non-corporate ticket” but later need to be reimbursed, Please fill out the {nonCorporateTicketsInvoicing}!',
                     ],
                 },
@@ -32,7 +32,7 @@ export default genI18nMessages({
                     description: [
                         'For purchasing 5 or more corporate tickets, please fill out the {corporateGroupTicketsForm} to discuss group discount offers.',
                         'Notice! Corporate group tickets are not refundable.',
-                        'Once your corporate group tickets are processed, we will send you invitation codes (corresponding to the number of ticketes purchased) for registration via KKTIX. Please be aware that each code has an expiration. Unused codes will automatically expire and cannot be refunded or exchanged.',
+                        'Once your corporate group tickets are processed, we will send you invitation codes (corresponding to the number of tickets purchased) for registration via KKTIX. Please be aware that each code has an expiration. Unused codes will automatically expire and cannot be refunded or exchanged.',
                     ],
                 },
             ],
@@ -62,7 +62,7 @@ export default genI18nMessages({
                 {
                     title: 'About Corporate Tickets (Corporate & Corporate Group)',
                     description: [
-                        'If you purchase a corporate ticket, we will issue an electronic invoice after the event to the email address you provide.',
+                        'If you purchase a corporate ticket, we will issue an electronic invoice after the event within one week to the email address you provide.',
                         'If you purchase a corporate group ticket, we will issue an electronic invoice after confirming your bank transfer to the email address you provide.',
                         'To apply for “Corporate Group Tickets”, please fill out the {corporateGroupTicketsForm}. Notice! This tickets are not refundable and exchangeable.',
                         'Notice! For a corporate group ticket, whether a t-shirt is included depends on the payment time instead of the registration time.',
@@ -116,16 +116,16 @@ export default genI18nMessages({
         },
         features: {
             conferencePass: 'PyCon TW 2025 pass',
-            includeSwag: '2025 swag',
-            excludeSwag: 'No 2025 swag',
+            includeSwag: '2025 t-shirt',
+            excludeSwag: 'No t-shirt',
             individualRecognition: 'Individual recognition',
             invitationOfSpeakerNight: 'Invitation to speakers’ night',
             lunchBoxAndDesserts: 'Lunch box & snacks',
             reimbursementReceipt:
                 'Reimbursement receipt within 1 week after the event',
             dedicatedService: 'Dedicated service contact',
-            corporateGroupTicketLimit: '**Purchase at least 5 tickets**',
-            accessibilityTicketLimit: '**For people with disabilities**',
+            corporateGroupTicketLimit: 'Purchase at least 5 tickets',
+            accessibilityTicketLimit: 'For people with disabilities',
         },
         sellingStage: {
             earlyStage: 'Early Stage',
@@ -135,6 +135,7 @@ export default genI18nMessages({
         sellingStatus: {
             apply: 'Free to Apply',
             comingSoon: 'Coming Soon',
+            contactUs: 'Contact Us',
             selling: 'On Sale Now',
             ended: 'Closed',
             soldOut: 'Sold Out',
@@ -224,7 +225,7 @@ export default genI18nMessages({
                 {
                     title: '關於「企業票種 (企業票與企業團體票)」',
                     description: [
-                        '如果你是購買「企業票」，我們將於「活動結束後」開立電子發票，並寄送至你提供的電子信箱。',
+                        '如果你是購買「企業票」，我們將於「活動結束後一週內」開立電子發票，並寄送至你提供的電子信箱。',
                         '如果你是購買「企業團體票」，我們將於「確認匯款後」開立電子發票，並寄送至你提供的電子信箱。',
                         '欲購買「企業團體票」請填寫 {corporateGroupTicketsForm} 洽談團購優惠。企業團體票一經售出，恕不退費或換票。',
                         '企業團體票一律以匯款時間為準決定是否有包含紀念衣服。',
@@ -284,8 +285,8 @@ export default genI18nMessages({
             lunchBoxAndDesserts: '午餐餐盒與茶點',
             reimbursementReceipt: '活動結束後一週提供企業報帳收據',
             dedicatedService: '專人服務接洽',
-            corporateGroupTicketLimit: '**一次購買五張(含)以上適用**',
-            accessibilityTicketLimit: '**符合身心障礙者身份**',
+            corporateGroupTicketLimit: '一次購買五張(含)以上適用',
+            accessibilityTicketLimit: '符合身心障礙者身份',
         },
         sellingStage: {
             earlyStage: '早鳥階段',
@@ -295,6 +296,7 @@ export default genI18nMessages({
         sellingStatus: {
             apply: '歡迎洽詢',
             comingSoon: '尚未開賣',
+            contactUs: '詳情洽詢',
             selling: '售票中',
             ended: '結束',
             soldOut: '票種售罄',
