@@ -9,24 +9,24 @@ export const ticketSellingStatus = {
 
 export const pageLinks = {
     codeOfConduct: '/about/code-of-conduct',
-    disabilityCertification: 'https://www.mohw.gov.tw/cp-88-235-1-45.html', // TODO: TBC
+    disabilityCertification: 'https://www.mohw.gov.tw/cp-88-235-1-45.html',
     everybodyContributesPrinciple:
-        'http://jessenoller.com/blog/2011/05/25/pycon-everybody-pays', // TODO: demand for updating the broken link
-    corporateGroupTicketsForm: 'https://forms.gle/HRBH3KfDpFm2Y4nK6', // TODO: TBC
+        'https://web.archive.org/web/20181224091906/http://jessenoller.com/2011/05/25/pycon-everybody-pays/',
+    corporateGroupTicketsForm: 'https://forms.gle/HRBH3KfDpFm2Y4nK6', 
     identityVerificationOfPeopleWithDisability:
-        'https://kktix.com/account/identities', // TODO: TBC
-    kktixCorporate2025: 'https://pycontw.kktix.cc/events/2025-corporate', // TODO: TBC
-    kktixPremium2025: 'https://pycontw.kktix.cc/events/2025-premium', // TODO: TBC
-    kktixIndividual2025: 'https://pycontw.kktix.cc/events/2025-individual', // TODO: TBC
-    kktixAccessible2025: 'https://pycontw.kktix.cc/events/2025-accessibility', // TODO: TBC
+        'https://kktix.com/account/identities', 
+    kktixCorporate2025: 'https://pycontw.kktix.cc/events/2025-corporate', 
+    kktixPremium2025: 'https://pycontw.kktix.cc/events/2025-individual', 
+    kktixIndividual2025: 'https://pycontw.kktix.cc/events/2025-individual', 
+    kktixAccessible2025: 'https://pycontw.kktix.cc/events/2025-accessibility', 
     kktixOnBehalf: 'https://support.kktix.com/knowledgebase/articles/356418',
-    nonCorporateTicketsInvoicing: 'https://forms.gle/neJhs8xKQ1gykQQB8', // TODO: outdated form
+    nonCorporateTicketsInvoicing: 'https://forms.gle/neJhs8xKQ1gykQQB8', 
     privacyPolicy: '/about/privacy-policy',
     organizerEmail: 'mailto:organizers@python.tw',
     officialWebsite: '/',
     financialAid: '/registration/financial-aid',
 }
-// TODO: adjust
+
 export const ticketInfoConfig = [
     {
         titleI18nKey: 'tickets.corporate',
