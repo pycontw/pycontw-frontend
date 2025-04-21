@@ -346,6 +346,10 @@ export default {
         background-image: url('~@/static/landing-title-2025.png');
         background-repeat: no-repeat;
         background-position-x: 0;
+
+
+
+
         background-position-y: 2.5rem;
         background-size: 100%;
         min-height: 280px;
