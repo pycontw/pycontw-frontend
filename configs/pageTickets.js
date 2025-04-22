@@ -30,7 +30,7 @@ export const pageLinks = {
 export const ticketInfoConfig = [
     {
         titleI18nKey: 'tickets.corporate',
-        price: 'NT$ 5800',
+        price: 'NT$ 5,800',
         image: require('~/static/img/registration/tickets/corporate.svg'),
         featuresI18nKey: [
             'includeSwag',
@@ -43,7 +43,7 @@ export const ticketInfoConfig = [
     },
     {
         titleI18nKey: 'tickets.corporateGroup',
-        price: 'NT$ 5500',
+        price: 'NT$ 5,500',
         image: require('~/static/img/registration/tickets/corporate.svg'),
         featuresI18nKey: [
             'includeSwag',
@@ -58,7 +58,7 @@ export const ticketInfoConfig = [
     },
     {
         titleI18nKey: 'tickets.premium',
-        price: 'NT$ 7777',
+        price: 'NT$ 7,777',
         image: require('~/static/img/registration/tickets/sponsor.svg'),
         featuresI18nKey: [
             'includeSwag',
@@ -72,7 +72,7 @@ export const ticketInfoConfig = [
     },
     {
         titleI18nKey: 'tickets.individual',
-        price: 'NT$ 3790',
+        price: 'NT$ 3,790',
         image: require('~/static/img/registration/tickets/regular.svg'),
         featuresI18nKey: [
             'includeSwag',
@@ -84,7 +84,7 @@ export const ticketInfoConfig = [
     },
     {
         titleI18nKey: 'tickets.accessibility',
-        price: 'NT$ 2690',
+        price: 'NT$ 2,690',
         image: require('~/static/img/registration/tickets/regular.svg'),
         featuresI18nKey: [
             'includeSwag',

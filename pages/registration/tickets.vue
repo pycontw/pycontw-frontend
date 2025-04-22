@@ -156,6 +156,8 @@
                                 ticket.statusI18nKey ===
                                     ticketSellingStatus.SELLING ||
                                 ticket.statusI18nKey ===
+                                    ticketSellingStatus.CONTACT_US ||
+                                ticket.statusI18nKey ===
                                     ticketSellingStatus.APPLY
                                     ? ticket.link
                                     : null

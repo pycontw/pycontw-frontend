@@ -8,7 +8,7 @@ export default genI18nMessages({
             'Bridging Tech & Business with Cross-Domain Integration & Industrial Experience{br}This is where you shine{br}',
         about: {
             title: 'Conference Information',
-            date: 'Dates: September 6 to 8, 2025 (GMT+8)',
+            date: 'Dates: September 5 to 7, 2025 (GMT+8)',
             place: 'Venue & Address: Songshan Cultural and Creative Park (6F) - 6F, No. 133, Guangfu S Rd, Xinyi Dist, Taipei City',
         },
         ticketsIntro: {
@@ -53,14 +53,14 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: 'For reimbursement purposes, please select “Corporate Ticket”.',
+                    title: 'For reimbursement purposes, please select “Corporate Ticket”',
                     description: [
                         'The corporate ticket form includes required fields (invoice title & VAT number) to comply with local tax regulations.',
                         'If you purchase a non-corporate ticket but later need an invoice for reimbursement, please fill out the {nonCorporateTicketsInvoicing}.',
                     ],
                 },
                 {
-                    title: 'About Corporate Tickets (Corporate & Corporate Group)',
+                    title: 'About “Corporate Tickets” (Corporate & Corporate Group)',
                     description: [
                         'If you purchase a corporate ticket, we will issue an electronic invoice after the event within one week to the email address you provide.',
                         'If you purchase a corporate group ticket, we will issue an electronic invoice after confirming your bank transfer to the email address you provide.',
@@ -89,7 +89,7 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: '{privacyPolicy}',
+                    title: '{privacyPolicy}.',
                     description: [],
                 },
                 {
@@ -171,7 +171,7 @@ export default genI18nMessages({
             '跨域整合 + 產業實戰經驗，打造技術與商業的橋樑。{br}在這裡你能找到屬於你的價值。{br}',
         about: {
             title: '大會資訊',
-            date: '日期與時間：2025 年 09 月 06 日 與 2025 年 09 月 08 日 (GMT+8)',
+            date: '日期與時間：2025 年 09 月 05 日 與 2025 年 09 月 07 日 (GMT+8)',
             place: '地點與地址：松山文創園區 6F - 台北市信義區光復南路 133 號 6F',
         },
         ticketsIntro: {
@@ -183,7 +183,7 @@ export default genI18nMessages({
             title: '購票前請留意',
             content: [
                 {
-                    title: '你有需要填寫統編向公司申請報帳嗎? 請至企業票購票頁！',
+                    title: '你有需要填寫統編向公司申請報帳嗎？請至企業票購票頁！',
                     description: [
                         '如果你有報帳需求，請至「企業票購票頁」購票，企業票購票表單有提供有報帳抬頭與統一編號的欄位。',
                         '非企業票種不支援任何報帳需求。',
@@ -216,7 +216,7 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: '如果你有報帳需求，請前往「企業票種購票頁」。',
+                    title: '如果你有報帳需求，請前往「企業票種購票頁」',
                     description: [
                         '企業票種購買頁將提供額外兩個必填欄位用於報帳：「發票抬頭」和「統一編號」，以滿足稅收法規。',
                         '如果你購買「非企業票種」後有報帳需求，請填寫 {nonCorporateTicketsInvoicing}。',
@@ -236,7 +236,7 @@ export default genI18nMessages({
                     description: [
                         '如果你是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
                         '如果你欲購買「愛心優待票」，請在購票前一日於 KKTIX 完成「{identityVerificationOfPeopleWithDisability}」。',
-                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票 (一般階段)」之票價差方可入場。',
+                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票」之票價差方可入場。',
                     ],
                 },
                 {
@@ -251,7 +251,7 @@ export default genI18nMessages({
                     description: [],
                 },
                 {
-                    title: '{privacyPolicy}',
+                    title: '{privacyPolicy}。',
                     description: [],
                 },
                 {
