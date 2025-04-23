@@ -72,7 +72,7 @@ export const ticketInfoConfig = [
     },
     {
         titleI18nKey: 'tickets.individual',
-        price: 'NT$ 3,790',
+        price: 'NT$ 3,490',
         image: require('~/static/img/registration/tickets/regular.svg'),
         featuresI18nKey: [
             'includeSwag',

@@ -72,7 +72,7 @@ export default genI18nMessages({
                     title: 'About “Accessibility Tickets”',
                     description: [
                         'For people with disabilities (holiding {disabilityCertification}), both you and one accompanying person can select accessibility tickets.',
-                        'Before purchasing, please complete the "{identityVerificationOfPeopleWithDisability}" on the KKTIX.',
+                        'Before purchasing, please complete the “{identityVerificationOfPeopleWithDisability}” on the KKTIX.',
                         'Notice! You and your acommpanying person must check in together and present your disability certificate upon entry. You must also carry it throughout the event for verification.',
                         'Notice! If you are not able to present your disability certificate, both you and your companion must pay the price difference between the accessibility ticket and individual ticket to enter.',
                     ],
@@ -171,7 +171,7 @@ export default genI18nMessages({
             '跨域整合 + 產業實戰經驗，打造技術與商業的橋樑。{br}在這裡你能找到屬於你的價值。{br}',
         about: {
             title: '大會資訊',
-            date: '日期與時間：2025 年 09 月 05 日 與 2025 年 09 月 07 日 (GMT+8)',
+            date: '日期與時間：2025 年 09 月 05 日 與 2025 年 09 月 07 日（GMT+8）',
             place: '地點與地址：松山文創園區 6F - 台北市信義區光復南路 133 號 6F',
         },
         ticketsIntro: {
@@ -193,7 +193,7 @@ export default genI18nMessages({
                 {
                     title: '你有需要企業團購優惠嗎？企業團體票有優惠！',
                     description: [
-                        '如果你想購買 5 張以上的企業票，歡迎填寫 {corporateGroupTicketsForm}洽談團購優惠。',
+                        '如果你想購買 5 張以上的企業票，歡迎填寫 {corporateGroupTicketsForm} 洽談團購優惠。',
                         '企業團體票一經售出，恕不退費或換票。',
                         '企業團體票售出後，我們將寄送「符合購買張數的邀請碼」用於 KKTIX 註冊「企業團體票」，每一組邀請碼皆有時效性，未在時限內於 KKTIX 完成註冊的邀請碼會自動失效，屆時視同放棄，恕不退費或換票。',
                     ],
@@ -204,7 +204,7 @@ export default genI18nMessages({
             title: '注意事項',
             content: [
                 {
-                    title: 'PyCon TW 2025 為公開售票活動。所有參與者 (包含講者與籌備人員)，均需透過對 PyCon TW 貢獻或付費參與。詳見 {everybodyContributesPrinciple}。',
+                    title: 'PyCon TW 2025 為公開售票活動。所有參與者（包含講者與籌備人員），均需透過對 PyCon TW 貢獻或付費參與。詳見 {everybodyContributesPrinciple}。',
                     description: [],
                 },
                 {
@@ -223,7 +223,7 @@ export default genI18nMessages({
                     ],
                 },
                 {
-                    title: '關於「企業票種 (企業票與企業團體票)」',
+                    title: '關於「企業票種（企業票與企業團體票）」',
                     description: [
                         '如果你是購買「企業票」，我們將於「活動結束後一週內」開立電子發票，並寄送至你提供的電子信箱。',
                         '如果你是購買「企業團體票」，我們將於「確認匯款後」開立電子發票，並寄送至你提供的電子信箱。',
@@ -234,20 +234,20 @@ export default genI18nMessages({
                 {
                     title: '關於「愛心優待票」',
                     description: [
-                        '如果你是身心障礙人士 (持有 {disabilityCertification} )，身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
+                        '如果你是身心障礙人士（持有{disabilityCertification}），身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
                         '如果你欲購買「愛心優待票」，請在購票前一日於 KKTIX 完成「{identityVerificationOfPeopleWithDisability}」。',
-                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示 {disabilityCertification} 並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票」之票價差方可入場。',
+                        '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示{disabilityCertification}並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票」之票價差方可入場。',
                     ],
                 },
                 {
                     title: '關於「紀念衣服與限定紀念品」',
                     description: [
-                        '如果你購買的票種有包含紀念衣服或限定紀念品，我們將於年會期間 (2025 年 09 月 05 日至 07 日) 於大會服務櫃檯兌換給你。',
+                        '如果你購買的票種有包含紀念衣服或限定紀念品，我們將於年會期間（2025 年 09 月 05 日至 07 日）於大會服務櫃檯兌換給你。',
                         '如果你購買的票種有包含紀念衣服，請務必填寫「正確的衣服尺寸」。紀念衣服售出後不提供衣服尺寸更換。',
                     ],
                 },
                 {
-                    title: '本活動委託 {kktixOnBehalf}。如果你欲透過 KKTIX 辦理退換票，請來信至 {contact}。如果你自行透過 KKTIX 退票，將酌收 10% 手續費且活動前十天內 (不含活動日) 不予退票。詳情請見 {kktixTicketExchangeRefundPolicy}。',
+                    title: '本活動委託 {kktixOnBehalf}。如果你欲透過 KKTIX 辦理退換票，請來信至 {contact}。如果你自行透過 KKTIX 退票，將酌收 10% 手續費且活動前十天內（不含活動日）不予退票。詳情請見 {kktixTicketExchangeRefundPolicy}。',
                     description: [],
                 },
                 {
@@ -285,7 +285,7 @@ export default genI18nMessages({
             lunchBoxAndDesserts: '午餐餐盒與茶點',
             reimbursementReceipt: '活動結束後一週提供企業報帳收據',
             dedicatedService: '專人服務接洽',
-            corporateGroupTicketLimit: '一次購買五張(含)以上適用',
+            corporateGroupTicketLimit: '一次購買五張（含）以上適用',
             accessibilityTicketLimit: '符合身心障礙者身份',
         },
         sellingStage: {
