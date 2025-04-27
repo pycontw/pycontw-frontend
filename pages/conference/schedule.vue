@@ -11,7 +11,7 @@
                 {{ day.label }}
             </schedule-day-tab>
         </schedule-day-tabs>
-        <schedule>
+        <div class="font-serif">
             <schedule-rooms class="lg:grid" :date-index="selectedDayIndex">
                 <schedule-block></schedule-block>
                 <schedule-room
@@ -62,7 +62,7 @@
                     </schedule-event>
                 </schedule-list-group>
             </schedule-list>
-        </schedule>
+        </div>
     </div>
 </template>
 
@@ -72,7 +72,6 @@ import { mapState } from 'vuex'
 import i18n from '@/i18n/conference/schedule.i18n'
 
 import CoreH1 from '@/components/core/titles/H1'
-import Schedule from '@/components/schedule/Schedule'
 import ScheduleBlock from '@/components/schedule/ScheduleBlock'
 import ScheduleDayTab from '@/components/schedule/ScheduleDayTab'
 import ScheduleDayTabs from '@/components/schedule/ScheduleDayTabs'
@@ -89,7 +88,6 @@ export default {
     name: 'PageConferenceSchedule',
     components: {
         CoreH1,
-        Schedule,
         ScheduleBlock,
         ScheduleDayTab,
         ScheduleDayTabs,
