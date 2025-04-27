@@ -24,7 +24,6 @@ export default genI18nMessages({
                     description: [
                         'Please purchase a corporate ticket if you require an invoice.',
                         'Notice! Non-corporate ticket types do not support any reimbursement requests!',
-                        'If you purchased a “non-corporate ticket” but later need to be reimbursed, Please fill out the {nonCorporateTicketsInvoicing}!',
                     ],
                 },
                 {
@@ -56,7 +55,6 @@ export default genI18nMessages({
                     title: 'For reimbursement purposes, please select “Corporate Ticket”',
                     description: [
                         'The corporate ticket form includes required fields (invoice title & VAT number) to comply with local tax regulations.',
-                        'If you purchase a non-corporate ticket but later need an invoice for reimbursement, please fill out the {nonCorporateTicketsInvoicing}.',
                     ],
                 },
                 {
@@ -71,10 +69,10 @@ export default genI18nMessages({
                 {
                     title: 'About “Accessibility Tickets”',
                     description: [
-                        'For people with disabilities (holiding {disabilityCertification}), both you and one accompanying person can select accessibility tickets.',
+                        'Individuals with disabilities (holding a {disabilityCertification}) can choose to have an accompanying person; both of you must select accessibility tickets.',
                         'Before purchasing, please complete the “{identityVerificationOfPeopleWithDisability}” on the KKTIX.',
                         'Notice! You and your acommpanying person must check in together and present your disability certificate upon entry. You must also carry it throughout the event for verification.',
-                        'Notice! If you are not able to present your disability certificate, both you and your companion must pay the price difference between the accessibility ticket and individual ticket to enter.',
+                        'Notice! If you are not able to present your disability certificate, both of you must pay the price difference between the accessibility ticket and individual ticket to enter.',
                     ],
                 },
                 {
@@ -121,8 +119,9 @@ export default genI18nMessages({
             individualRecognition: 'Individual recognition',
             invitationOfSpeakerNight: 'Invitation to speakers’ night',
             lunchBoxAndDesserts: 'Lunch box & snacks',
-            reimbursementReceipt:
-                'Reimbursement receipt within 1 week after the event',
+            corporateInvoice:
+                'Reimbursement invoice within 1 week after the event',
+            corporateGroupInvoice: 'Reimbursement invoice immediately',
             dedicatedService: 'Dedicated service contact',
             corporateGroupTicketLimit: 'Purchase at least 5 tickets',
             accessibilityTicketLimit: 'For people with disabilities',
@@ -151,8 +150,6 @@ export default genI18nMessages({
             kktixOnBehalf: 'KKTIX on behalf of the event organizer',
             kktixTicketExchangeRefundPolicy:
                 'KKTIX ticket exchange and refund policy',
-            nonCorporateTicketsInvoicing:
-                'PyCon TW 2025 Non-Corporate Invoice Request Form',
             privacyPolicy: 'PyCon TW 2025 Privacy Statement',
             viewPricePage: 'See on KKTIX',
             officialWebsite: 'PyCon TW 2025 official website',
@@ -187,7 +184,6 @@ export default genI18nMessages({
                     description: [
                         '如果你有報帳需求，請至「企業票購票頁」購票，企業票購票表單有提供有報帳抬頭與統一編號的欄位。',
                         '非企業票種不支援任何報帳需求。',
-                        '如果你購買「非企業票種」後有報帳需求，請填寫 {nonCorporateTicketsInvoicing}。',
                     ],
                 },
                 {
@@ -219,7 +215,6 @@ export default genI18nMessages({
                     title: '如果你有報帳需求，請前往「企業票種購票頁」',
                     description: [
                         '企業票種購買頁將提供額外兩個必填欄位用於報帳：「發票抬頭」和「統一編號」，以滿足稅收法規。',
-                        '如果你購買「非企業票種」後有報帳需求，請填寫 {nonCorporateTicketsInvoicing}。',
                     ],
                 },
                 {
@@ -234,7 +229,7 @@ export default genI18nMessages({
                 {
                     title: '關於「愛心優待票」',
                     description: [
-                        '如果你是身心障礙人士（持有{disabilityCertification}），身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
+                        '如果你是身心障礙人士（持有{disabilityCertification}），可自行決定是否需要陪同人員，身心障礙人士與一名陪同人員皆須購買「愛心優待票」。',
                         '如果你欲購買「愛心優待票」，請在購票前一日於 KKTIX 完成「{identityVerificationOfPeopleWithDisability}」。',
                         '身心障礙人士須與一名陪同人員一同報到，報到時請務必出示{disabilityCertification}並於活動期間隨身攜帶以備查驗。若無法出示身心障礙證明，身心障礙人士與陪同人員皆需補足與「個人票」之票價差方可入場。',
                     ],
@@ -274,7 +269,7 @@ export default genI18nMessages({
             corporateGroup: '企業團體票',
             individual: '個人票',
             premium: '個人贊助票',
-            financialAid: '財務補助',
+            financialAid: '財務補助票',
         },
         features: {
             conferencePass: '全程參與 PyCon TW 2025',
@@ -283,7 +278,8 @@ export default genI18nMessages({
             individualRecognition: '個人曝光',
             invitationOfSpeakerNight: '講者晚宴入場邀請',
             lunchBoxAndDesserts: '午餐餐盒與茶點',
-            reimbursementReceipt: '活動結束後一週提供企業報帳收據',
+            corporateInvoice: '活動結束後一週提供企業報帳發票',
+            corporateGroupInvoice: '立即提供企業報帳發票',
             dedicatedService: '專人服務接洽',
             corporateGroupTicketLimit: '一次購買五張（含）以上適用',
             accessibilityTicketLimit: '符合身心障礙者身份',
@@ -310,8 +306,6 @@ export default genI18nMessages({
             identityVerificationOfPeopleWithDisability: '身心障礙者身份認證',
             kktixOnBehalf: 'KKTIX 代理退票與退費',
             kktixTicketExchangeRefundPolicy: 'KKTIX 代理退換票辦法',
-            nonCorporateTicketsInvoicing:
-                'PyCon TW 2025 非企業票種開立發票申請',
             privacyPolicy: 'PyCon Taiwan 2025 個人資料保護聲明',
             viewPricePage: '詳見售票',
             officialWebsite: 'PyCon TW 2025 大會官方網站',

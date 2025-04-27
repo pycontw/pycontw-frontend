@@ -299,36 +299,16 @@
                                     }}</ext-link
                                 >
                             </template>
-                            <template #accessibilityTicket>
-                                <ext-link
-                                    :href="pageLinks.kktixIndividual2024"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('tickets.accessibilityTicket')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #financialAid>
-                                <locale-link
-                                    :to="pageLinks.financialAid"
-                                    underline
-                                    highlight
-                                    >{{ $t('terms.financialAid') }}</locale-link
-                                >
-                            </template>
                             <template #kktixOnBehalf>
-                                <locale-link
+                                <ext-link
                                     :href="pageLinks.kktixOnBehalf"
                                     underline
                                     highlight
-                                    >{{
-                                        $t('terms.kktixOnBehalf')
-                                    }}</locale-link
+                                    >{{ $t('terms.kktixOnBehalf') }}</ext-link
                                 >
                             </template>
                             <template #kktixTicketExchangeRefundPolicy>
-                                <locale-link
+                                <ext-link
                                     :href="pageLinks.kktixOnBehalf"
                                     underline
                                     highlight
@@ -336,7 +316,7 @@
                                         $t(
                                             'terms.kktixTicketExchangeRefundPolicy',
                                         )
-                                    }}</locale-link
+                                    }}</ext-link
                                 >
                             </template>
                             <template #privacyPolicy>
