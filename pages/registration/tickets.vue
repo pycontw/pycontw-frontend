@@ -286,6 +286,24 @@
                                     }}</ext-link
                                 >
                             </template>
+                            <template #accessibilityTicket>
+                                <ext-link
+                                    :href="pageLinks.kktixIndividual2024"
+                                    underline
+                                    highlight
+                                    >{{
+                                        $t('tickets.accessibilityTicket')
+                                    }}</ext-link
+                                >
+                            </template>
+                            <template #financialAid>
+                                <locale-link
+                                    :to="pageLinks.financialAid"
+                                    underline
+                                    highlight
+                                    >{{ $t('terms.financialAid') }}</locale-link
+                                >
+                            </template>
                             <template #kktixOnBehalf>
                                 <ext-link
                                     :href="pageLinks.kktixOnBehalf"
