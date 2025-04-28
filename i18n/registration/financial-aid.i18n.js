@@ -61,13 +61,6 @@ export default genI18nMessages({
                 remark: '',
             },
         ],
-        applicationDeadline: 'Timeline',
-        DeadlineContent: [
-            '2025-04-01 23:50 (AoE) Financial aid application opens.',
-            '2025-06-20 23:50 (AoE) Financial aid application closes.',
-            '2025-07-01 23:50 (AoE) Financial aid application review results announcement.',
-            '2025-09-05 18:00 (Taipei Time) Disbursement sessions at PyCon TW.',
-        ],
         applicationHowTo: 'Application Process',
         remarkTitle: 'Remarks',
         remarkContent: [
@@ -89,6 +82,23 @@ export default genI18nMessages({
             description:
                 'PyCon Taiwan has a financial aid program to help friends in the community,' +
                 'financially or otherwise, so more people are able to join us in the big event.',
+        },
+        info: {
+            applicationDeadline: {
+                title: 'Timeline',
+                description: [
+                    '2025-04-01 23:50 ({aoe0}) Financial aid application opens.',
+                    '2025-06-20 23:50 ({aoe1}) Financial aid application closes.',
+                    '2025-07-01 23:50 ({aoe2}) Financial aid application review results announcement.',
+                    '2025-09-05 18:00 ({taipeiTime}) Disbursement sessions at PyCon TW.',
+                ],
+            },
+        },
+        terms: {
+            aoe0: 'AoE',
+            aoe1: 'AoE',
+            aoe2: 'AoE',
+            taipeiTime: 'Taipei Time',
         },
     },
     'zh-hant': {
@@ -145,13 +155,6 @@ export default genI18nMessages({
                 remark: '',
             },
         ],
-        applicationDeadline: '受理期限',
-        DeadlineContent: [
-            '2025-04-01 23:50 (AoE) 開始接受財務補助',
-            '2025-06-20 23:50 (AoE) 財務補助申請截止',
-            '2025-07-01 23:50 (AoE) 財務補助審查結果通知',
-            '2025-09-05 18:00 (台北時間) 大會當場支付',
-        ],
         applicationHowTo: '申請流程',
         remarkTitle: '備註',
         remarkContent: [
@@ -172,6 +175,23 @@ export default genI18nMessages({
             title: '財務補助說明',
             description:
                 'PyCon TW 規劃了財務補助方案，希望協助對會議有興趣但由於成本而難以參加的朋友們也能參與這次會議。',
+        },
+        info: {
+            applicationDeadline: {
+                title: '受理期限',
+                description: [
+                    '2025-04-01 23:50 ({aoe0}) 開始接受財務補助',
+                    '2025-06-20 23:50 ({aoe1}) 財務補助申請截止',
+                    '2025-07-01 23:50 ({aoe2}) 財務補助審查結果通知',
+                    '2025-09-05 18:00 ({taipeiTime}) 大會當場支付',
+                ],
+            },
+        },
+        terms: {
+            aoe0: 'AoE',
+            aoe1: 'AoE',
+            aoe2: 'AoE',
+            taipeiTime: '台北時間',
         },
     },
 })
