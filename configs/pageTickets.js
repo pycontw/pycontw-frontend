@@ -12,15 +12,13 @@ export const pageLinks = {
     disabilityCertification: 'https://www.mohw.gov.tw/cp-88-235-1-45.html',
     everybodyContributesPrinciple:
         'https://web.archive.org/web/20181224091906/http://jessenoller.com/2011/05/25/pycon-everybody-pays/',
-    corporateGroupTicketsForm: 'https://forms.gle/HRBH3KfDpFm2Y4nK6',
+    corporateGroupTicketsForm: 'https://forms.gle/moVdPKhW2gVHdJTv9',
     identityVerificationOfPeopleWithDisability:
         'https://kktix.com/account/identities',
     kktixCorporate2025: 'https://pycontw.kktix.cc/events/2025-corporate',
     kktixPremium2025: 'https://pycontw.kktix.cc/events/2025-individual',
     kktixIndividual2025: 'https://pycontw.kktix.cc/events/2025-individual',
-    kktixAccessible2025: 'https://pycontw.kktix.cc/events/2025-accessibility',
-    kktixOnBehalf: 'https://support.kktix.com/knowledgebase/articles/356418',
-    nonCorporateTicketsInvoicing: 'https://forms.gle/neJhs8xKQ1gykQQB8',
+    kktixOnBehalf: 'https://support.kktix.com/hc/zh-tw/articles/22446025825561',
     privacyPolicy: '/about/privacy-policy',
     organizerEmail: 'mailto:organizers@python.tw',
     officialWebsite: '/',
@@ -30,26 +28,26 @@ export const pageLinks = {
 export const ticketInfoConfig = [
     {
         titleI18nKey: 'tickets.corporate',
-        price: 'NT$ 5,800',
+        price: 'NT$ 6,000',
         image: require('~/static/img/registration/tickets/corporate.svg'),
         featuresI18nKey: [
             'includeSwag',
             'lunchBoxAndDesserts',
             'conferencePass',
-            'reimbursementReceipt',
+            'corporateInvoice',
         ],
         statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixCorporate2025,
     },
     {
         titleI18nKey: 'tickets.corporateGroup',
-        price: 'NT$ 5,500',
+        price: 'NT$ 5,400',
         image: require('~/static/img/registration/tickets/corporate.svg'),
         featuresI18nKey: [
             'includeSwag',
             'lunchBoxAndDesserts',
             'conferencePass',
-            'reimbursementReceipt',
+            'corporateGroupInvoice',
             'dedicatedService',
             'corporateGroupTicketLimit',
         ],
@@ -84,7 +82,7 @@ export const ticketInfoConfig = [
     },
     {
         titleI18nKey: 'tickets.accessibility',
-        price: 'NT$ 2,690',
+        price: 'NT$ 1,990',
         image: require('~/static/img/registration/tickets/regular.svg'),
         featuresI18nKey: [
             'includeSwag',
@@ -93,7 +91,7 @@ export const ticketInfoConfig = [
             'accessibilityTicketLimit',
         ],
         statusI18nKey: ticketSellingStatus.SELLING,
-        link: pageLinks.kktixAccessible2025,
+        link: pageLinks.kktixIndividual2025,
     },
     {
         titleI18nKey: 'tickets.financialAid',

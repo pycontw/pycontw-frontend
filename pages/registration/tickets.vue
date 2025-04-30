@@ -151,22 +151,9 @@
                     <div
                         class="sellingStatusButton flex items-center justify-center xl:justify-end"
                     >
-                        <text-button
-                            :href="
-                                ticket.statusI18nKey ===
-                                    ticketSellingStatus.SELLING ||
-                                ticket.statusI18nKey ===
-                                    ticketSellingStatus.CONTACT_US ||
-                                ticket.statusI18nKey ===
-                                    ticketSellingStatus.APPLY
-                                    ? ticket.link
-                                    : null
-                            "
-                            small
-                            >{{
-                                $t(`sellingStatus.${ticket.statusI18nKey}`)
-                            }}</text-button
-                        >
+                        <text-button :href="computedTicketHref(ticket)" small>{{
+                            $t(`sellingStatus.${ticket.statusI18nKey}`)
+                        }}</text-button>
                     </div>
                 </div>
             </section>
@@ -318,17 +305,15 @@
                                 >
                             </template>
                             <template #kktixOnBehalf>
-                                <locale-link
+                                <ext-link
                                     :href="pageLinks.kktixOnBehalf"
                                     underline
                                     highlight
-                                    >{{
-                                        $t('terms.kktixOnBehalf')
-                                    }}</locale-link
+                                    >{{ $t('terms.kktixOnBehalf') }}</ext-link
                                 >
                             </template>
                             <template #kktixTicketExchangeRefundPolicy>
-                                <locale-link
+                                <ext-link
                                     :href="pageLinks.kktixOnBehalf"
                                     underline
                                     highlight
@@ -336,7 +321,7 @@
                                         $t(
                                             'terms.kktixTicketExchangeRefundPolicy',
                                         )
-                                    }}</locale-link
+                                    }}</ext-link
                                 >
                             </template>
                             <template #privacyPolicy>
@@ -539,6 +524,21 @@ export default {
     methods: {
         isStrikethrough(indicator) {
             return indicator ? { 'line-through': true } : {}
+        },
+        computedTicketHref(ticket) {
+            const i18Key = ticket.statusI18nKey
+            const sellingStatus = this.ticketSellingStatus
+
+            if (
+                i18Key === sellingStatus.SELLING ||
+                i18Key === sellingStatus.APPLY
+            ) {
+                return ticket.link
+            } else if (i18Key === sellingStatus.CONTACT_US) {
+                return `/${this.$i18n.locale}` + ticket.link
+            } else {
+                return null
+            }
         },
     },
     head() {
