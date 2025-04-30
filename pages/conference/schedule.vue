@@ -67,8 +67,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 import i18n from '@/i18n/conference/schedule.i18n'
 
 import CoreH1 from '@/components/core/titles/H1'
@@ -121,7 +119,6 @@ export default {
         }
     },
     computed: {
-        ...mapState(['schedulesData']),
         table() {
             return this.tables[this.selectedDayIndex] || this.defaultTable
         },
