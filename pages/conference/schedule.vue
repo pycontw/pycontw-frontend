@@ -1,16 +1,17 @@
 <template>
     <div class="px-4 pt-20 md:px-32">
         <core-h1 :title="$t('Schedule')"></core-h1>
-        <schedule-day-tabs v-model="selectedDayIndex">
+        <div class="scheduleDayTabs">
             <schedule-day-tab
                 v-for="(day, i) in days"
                 :key="$makeKey(i, 'schedule_day_tab')"
-                :date-index="day.date"
                 :index="i"
+                :active="selectedDayIndex === i"
+                @click.native="selectDayTab(i)"
             >
                 {{ day.label }}
             </schedule-day-tab>
-        </schedule-day-tabs>
+        </div>
         <div class="font-serif">
             <schedule-rooms class="lg:grid" :date-index="selectedDayIndex">
                 <span></span>
@@ -71,7 +72,6 @@ import i18n from '@/i18n/conference/schedule.i18n'
 
 import CoreH1 from '@/components/core/titles/H1'
 import ScheduleDayTab from '@/components/schedule/ScheduleDayTab'
-import ScheduleDayTabs from '@/components/schedule/ScheduleDayTabs'
 import ScheduleEvent from '@/components/schedule/ScheduleEvent'
 import ScheduleList from '@/components/schedule/ScheduleList'
 import ScheduleListGroup from '@/components/schedule/ScheduleListGroup'
@@ -86,7 +86,6 @@ export default {
     components: {
         CoreH1,
         ScheduleDayTab,
-        ScheduleDayTabs,
         ScheduleList,
         ScheduleListGroup,
         ScheduleRoom,
@@ -99,13 +98,19 @@ export default {
         if (payload) return { schedulesData: payload }
         await store.dispatch('$getSchedulesData')
         const schedulesData = store.state.schedulesData
-        return { schedulesData }
+        const days = schedulesData.map(({ date, name }) => {
+            const formattedDate = store.app.context.$datetimeToString(date, {
+                inputFormat: 'YYYY-MM-DD',
+                outputFormat: 'M/D',
+            })
+            return { label: `${name} (${formattedDate})`, date }
+        })
+        return { schedulesData, days }
     },
     data() {
         return {
             selectedDayIndex: 0,
             rooms: [],
-            days: [],
             tables: [],
             lists: [],
             defaultTable: {
@@ -148,22 +153,9 @@ export default {
     },
     methods: {
         processData() {
-            this.makeDays()
             this.makeRooms()
             this.makeTables()
             this.makeLists()
-        },
-        makeDays() {
-            this.days = this.schedulesData.map(({ date, name }) => {
-                const formattedDate = this.$datetimeToString(date, {
-                    inputFormat: 'YYYY-MM-DD',
-                    outputFormat: 'M/D',
-                })
-                return {
-                    label: `${name} (${formattedDate})`,
-                    date,
-                }
-            })
         },
         makeRooms() {
             this.rooms = ['4-r0', '5-r1', '6-r2', '1-r3']
@@ -236,6 +228,9 @@ export default {
                     events: slotsByBeginTime[beginTime],
                 }))
         },
+        selectDayTab(selectedIndex) {
+            this.selectedDayIndex = selectedIndex
+        },
     },
     head() {
         return {
@@ -265,5 +260,9 @@ export default {
 <style lang="postcss" scoped>
 .pageWrapper {
     @apply md:px-24;
+}
+
+.scheduleDayTabs {
+    @apply mb-8 flex w-full justify-center;
 }
 </style>
