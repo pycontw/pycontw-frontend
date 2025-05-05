@@ -56,21 +56,43 @@
                 </template>
             </two-col-wrapper>
 
-            <two-col-wrapper>
-                <template #default>
-                    <p>{{ $t('applicationDeadline') }}</p>
-                </template>
-                <template #right-col>
-                    <ul class="list-disc">
-                        <li
-                            v-for="(content, i) in $t('DeadlineContent')"
-                            :key="`application_deadline_content_${i}`"
+            <div v-for="(section, i) in info" :key="`cfp.${i}`">
+                <two-col-wrapper>
+                    <div slot="default">
+                        <i18n
+                            :key="`info.${section.tag}.title`"
+                            :path="`info.${section.tag}.title`"
+                            class="title"
+                            tag="p"
                         >
-                            {{ content }}
-                        </li>
-                    </ul>
-                </template>
-            </two-col-wrapper>
+                        </i18n>
+                    </div>
+                    <div slot="right-col">
+                        <i18n
+                            v-for="(description, index) in $t(
+                                `info.${section.tag}.description`,
+                            )"
+                            :key="`info.${section.tag}.description.${index}`"
+                            :path="`info.${section.tag}.description.${index}`"
+                            :tag="`${section.isDescriptionList ? 'li' : 'div'}`"
+                        >
+                            <template
+                                v-for="link in section.links"
+                                :slot="link.slot"
+                            >
+                                <ext-link
+                                    v-if="link.isExternalLink"
+                                    :key="`${link.textKey}.external`"
+                                    :href="link.url"
+                                    highlight
+                                >
+                                    {{ $t(link.textKey) }}
+                                </ext-link>
+                            </template>
+                        </i18n>
+                    </div>
+                </two-col-wrapper>
+            </div>
 
             <two-col-wrapper class="spacing">
                 <template #default>
@@ -140,6 +162,38 @@ export default {
         return {
             applicationHowToZH: ApplicationHowToZH,
             applicationHowToEN: ApplicationHowToEN,
+            info: [
+                {
+                    tag: 'applicationDeadline',
+                    isDescriptionList: true,
+                    links: [
+                        {
+                            slot: 'aoe0',
+                            textKey: 'terms.aoe0',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250401T235000&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'aoe1',
+                            textKey: 'terms.aoe1',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250620T235000&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'aoe2',
+                            textKey: 'terms.aoe2',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250701T235000&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                        {
+                            slot: 'taipeiTime',
+                            textKey: 'terms.taipeiTime',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250905T180000&p1=tz_aoe&p2=241&p3=1440',
+                            isExternalLink: true,
+                        },
+                    ],
+                },
+            ],
         }
     },
     computed: {
