@@ -9,7 +9,7 @@ export default genI18nMessages({
         about: {
             title: 'Conference Information',
             date: 'Dates: September 5 to 7, 2025 (GMT+8)',
-            place: 'Venue & Address: Songshan Cultural and Creative Park (6F) - 6F, No. 133, Guangfu S Rd, Xinyi Dist, Taipei City',
+            place: 'Venue & Address: Taipei New Horizon (6F) - 6F, No. 88, Yanchang Rd, Xinyi Dist, Taipei City',
         },
         ticketsIntro: {
             title: 'Tickets',
@@ -168,8 +168,8 @@ export default genI18nMessages({
             '跨域整合 + 產業實戰經驗，打造技術與商業的橋樑。{br}在這裡你能找到屬於你的價值。{br}',
         about: {
             title: '大會資訊',
-            date: '日期與時間：2025 年 09 月 05 日 與 2025 年 09 月 07 日（GMT+8）',
-            place: '地點與地址：松山文創園區 6F - 台北市信義區光復南路 133 號 6F',
+            date: '日期與時間：2025 年 09 月 05 日 到 2025 年 09 月 07 日（GMT+8）',
+            place: '地點與地址：台北文創 6 樓 - ​台北市信義區菸廠路 88 號 6 樓',
         },
         ticketsIntro: {
             title: '購票方案',
