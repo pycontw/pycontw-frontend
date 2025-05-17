@@ -1,6 +1,6 @@
 <template>
     <div class="hidden lg:block">
-        <div class="scheduleRooms sticky grid">
+        <div class="scheduleRooms sticky grid" :class="`day${day}`">
             <span></span>
             <schedule-room
                 v-for="(room, i) in rooms"
@@ -8,7 +8,7 @@
                 :value="room"
             ></schedule-room>
         </div>
-        <div class="scheduleTable grid w-full">
+        <div class="scheduleTable grid w-full" :class="`day${day}`">
             <schedule-tick
                 v-for="(tick, i) in ticks"
                 :key="$makeKey(i, 'schedule_tick')"
@@ -45,6 +45,7 @@ export default {
         ScheduleTick,
     },
     props: {
+        day: { type: Number, default: 1 },
         schedule: { type: Object, default: () => {} },
     },
     computed: {
@@ -55,7 +56,31 @@ export default {
             return this.getTicks(this.schedule)
         },
         rooms() {
-            return ['4-r0', '5-r1', '6-r2', '1-r3']
+            switch (this.day) {
+                case 2:
+                    return [
+                        '4-r0',
+                        '4-r0-1',
+                        '5-r1',
+                        '5-r1-1',
+                        '6-r2',
+                        '6-r2-1',
+                        '1-r3',
+                    ]
+                case 1:
+                default:
+                    return [
+                        '4-r0',
+                        '4-r0-1',
+                        '4-r0-2',
+                        '5-r1',
+                        '5-r1-1',
+                        '5-r1-2',
+                        '6-r2',
+                        '6-r2-1',
+                        '1-r3',
+                    ]
+            }
         },
         timeline() {
             return this.schedule.timeline
@@ -94,18 +119,6 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.scheduleRooms,
-.scheduleTable {
-    grid-gap: 12px;
-    grid-template-columns:
-        [timeline] 1fr
-        [room-4-r0-start] 2fr
-        [room-4-r0-end room-5-r1-start] 2fr
-        [room-5-r1-end room-6-r2-start] 2fr
-        [room-6-r2-end room-1-r3-start] 2fr
-        [room-1-r3-end];
-}
-
 .scheduleRooms {
     top: 64px;
     z-index: 3;
@@ -117,27 +130,115 @@ export default {
     justify-self: center;
 }
 
-.scheduleTable .scheduleEvent.room-3-r012 {
-    grid-column: room-4-r0-start / room-6-r2-end;
+.day1.scheduleRooms,
+.day1.scheduleTable {
+    grid-gap: 12px;
+    grid-template-columns:
+        [timeline] minmax(120px, 1fr)
+        [room-4-r0] minmax(200px, 2fr)
+        [room-4-r0-1] minmax(200px, 2fr)
+        [room-4-r0-2] minmax(200px, 2fr)
+        [room-5-r1] minmax(200px, 2fr)
+        [room-5-r1-1] minmax(200px, 2fr)
+        [room-5-r1-2] minmax(200px, 2fr)
+        [room-6-r2] minmax(200px, 2fr)
+        [room-6-r2-1] minmax(200px, 2fr)
+        [room-1-r3] minmax(200px, 2fr)
+        [];
 }
 
-.scheduleTable .scheduleEvent.room-4-r0 {
-    grid-column: room-4-r0-start / room-4-r0-end;
+.day1.scheduleTable .scheduleEvent.room-3-r012 {
+    grid-column: room-4-r0 / span 8;
 }
 
-.scheduleTable .scheduleEvent.room-5-r1 {
-    grid-column: room-5-r1-start / room-5-r1-end;
+.day1.scheduleTable .scheduleEvent.room-4-r0 {
+    grid-column: room-4-r0 / span 1;
 }
 
-.scheduleTable .scheduleEvent.room-6-r2 {
-    grid-column: room-6-r2-start / room-6-r2-end;
+.day1.scheduleTable .scheduleEvent.room-4-r0-1 {
+    grid-column: room-4-r0-1 / span 1;
 }
 
-.scheduleTable .scheduleEvent.room-1-r3 {
-    grid-column: room-1-r3-start / room-1-r3-end;
+.day1.scheduleTable .scheduleEvent.room-4-r0-2 {
+    grid-column: room-4-r0-2 / span 1;
 }
 
-.scheduleTable .scheduleEvent.room-2-all {
-    grid-column: room-4-r0-start / room-1-r3-end;
+.day1.scheduleTable .scheduleEvent.room-5-r1 {
+    grid-column: room-5-r1 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-5-r1-1 {
+    grid-column: room-5-r1-1 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-5-r1-2 {
+    grid-column: room-5-r1-2 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-6-r2 {
+    grid-column: room-6-r2 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-6-r2-1 {
+    grid-column: room-6-r2-1 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-1-r3 {
+    grid-column: room-1-r3 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-2-all {
+    grid-column: room-4-r0 / -1;
+}
+
+.day2.scheduleRooms,
+.day2.scheduleTable {
+    grid-gap: 12px;
+    grid-template-columns:
+        [timeline] minmax(120px, 1fr)
+        [room-4-r0] minmax(200px, 2fr)
+        [room-4-r0-1] minmax(200px, 2fr)
+        [room-5-r1] minmax(200px, 2fr)
+        [room-5-r1-1] minmax(200px, 2fr)
+        [room-6-r2] minmax(200px, 2fr)
+        [room-6-r2-1] minmax(200px, 2fr)
+        [room-1-r3] minmax(200px, 2fr)
+        [];
+}
+
+.day2.scheduleTable .scheduleEvent.room-3-r012 {
+    grid-column: room-4-r0 / span 6;
+}
+
+.day2.scheduleTable .scheduleEvent.room-4-r0 {
+    grid-column: room-4-r0 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-4-r0-1 {
+    grid-column: room-4-r0-1 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-5-r1 {
+    grid-column: room-5-r1 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-5-r1-1 {
+    grid-column: room-5-r1-1 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-6-r2 {
+    grid-column: room-6-r2 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-6-r2-1 {
+    grid-column: room-6-r2-1 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-1-r3 {
+    grid-column: room-1-r3 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-2-all {
+    grid-column: room-4-r0 / -1;
 }
 </style>
