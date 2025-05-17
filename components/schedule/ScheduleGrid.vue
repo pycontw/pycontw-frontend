@@ -123,6 +123,8 @@ export default {
     top: 64px;
     z-index: 3;
     background-color: rgba(18, 16, 35, 0.6);
+    min-width: 100%;
+    width: fit-content;
 }
 
 .scheduleTable .scheduleTick {
