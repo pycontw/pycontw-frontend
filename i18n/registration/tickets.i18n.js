@@ -7,9 +7,14 @@ export default genI18nMessages({
         pageAbstract:
             'Bridging Tech & Business with Cross-Domain Integration & Industrial Experience{br}This is where you shine{br}',
         about: {
-            title: 'Conference Information',
-            date: 'Dates: September 5 to 7, 2025 (GMT+8)',
-            place: 'Venue & Address: Taipei New Horizon (6F) - 6F, No. 88, Yanchang Rd, Xinyi Dist, Taipei City',
+            conf_info: 'Conference Information',
+            main_title: 'Main Conference',
+            main_date: 'Dates: September 6 - 7, 2025',
+            main_place:
+                'Venue: Taipei New Horizon (6F) - 6F, No. 88, Yanchang Rd, Xinyi Dist, Taipei City',
+            sprint_title: 'Sprint',
+            sprint_date: 'Dates: September 5, 2025',
+            sprint_place: 'Venue: TBD',
         },
         ticketsIntro: {
             title: 'Tickets',
@@ -167,9 +172,13 @@ export default genI18nMessages({
         pageAbstract:
             '跨域整合 + 產業實戰經驗，打造技術與商業的橋樑。{br}在這裡你能找到屬於你的價值。{br}',
         about: {
-            title: '大會資訊',
-            date: '日期與時間：2025 年 09 月 05 日 到 2025 年 09 月 07 日（GMT+8）',
-            place: '地點與地址：台北文創 6 樓 - ​台北市信義區菸廠路 88 號 6 樓',
+            conf_info: '大會資訊',
+            main_title: ' 主議程',
+            main_date: '日期：2025 年 09 月 06 日 到 2025 年 09 月 07 日',
+            main_place: '地點：台北文創 6 樓 - ​台北市信義區菸廠路 88 號 6 樓',
+            sprint_title: '衝刺開發',
+            sprint_date: '日期：2025 年 09 月 05 日',
+            sprint_place: '地點：TBD',
         },
         ticketsIntro: {
             title: '購票方案',

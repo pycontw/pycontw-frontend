@@ -30,22 +30,25 @@
             <!-- 大會資訊 -->
             <div class="mt-10 pb-8 md:mt-0">
                 <h2 class="mt-[-40px] text-[32px]">
-                    {{ $t('about.title') }}
+                    {{ $t('about.conf_info') }}
                 </h2>
                 <ul class="ul-p-0 list-disc text-[18px]">
-                    <i18n class="p-0 leading-[30px]" path="about.date" tag="li">
-                        <template #br><br /></template>
-                    </i18n>
-                    <i18n
-                        class="p-0 leading-[30px]"
-                        path="about.place"
-                        tag="li"
-                    >
-                        <template #br><br /></template>
-                    </i18n>
+                    <li class="p-0 leading-[30px]">
+                        {{ $t('about.sprint_title') }}
+                        <ul class="list-disc pl-5">
+                            <li>{{ $t('about.sprint_date') }}</li>
+                            <li>{{ $t('about.sprint_place') }}</li>
+                        </ul>
+                    </li>
+                    <li class="p-0 leading-[30px]">
+                        {{ $t('about.main_title') }}
+                        <ul class="list-disc pl-5">
+                            <li>{{ $t('about.main_date') }}</li>
+                            <li>{{ $t('about.main_place') }}</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-
             <!-- 購票方案 -->
             <div class="mb-12">
                 <h2 class="text-[32px]">{{ $t('ticketsIntro.title') }}</h2>
