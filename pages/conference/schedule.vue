@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 pt-20 md:px-32">
+    <div class="px-4 pt-20">
         <core-h1 :title="$t('Schedule')"></core-h1>
         <div class="scheduleDayTabs">
             <schedule-day-tab
@@ -13,8 +13,10 @@
             </schedule-day-tab>
         </div>
         <div class="font-serif">
-            <schedule-grid :schedule="schedulesData[selectedDayIndex]">
-            </schedule-grid>
+            <schedule-grid
+                :schedule="schedulesData[selectedDayIndex]"
+                :day="selectedDayIndex + 1"
+            ></schedule-grid>
             <schedule-list :schedule="schedulesData[selectedDayIndex]">
             </schedule-list>
         </div>
