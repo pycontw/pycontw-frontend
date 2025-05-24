@@ -384,7 +384,7 @@ export default {
 }
 @media (min-width: 1600px) {
     .landing__title {
-        min-height: 330px;
+        min-height: 350px;
         min-width: 864px;
     }
 }
