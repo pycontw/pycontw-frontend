@@ -30,8 +30,14 @@
                         )"
                         :key="`info.${section.tag}.description.${index}`"
                         :path="`info.${section.tag}.description.${index}`"
-                        :tag="`${section.isDescriptionList ? 'li' : 'div'}`"
+                        :tag="`${
+                            section.tag === 'topics' &&
+                            (index === 1 || index === 2)
+                                ? 'li'
+                                : 'div'
+                        }`"
                     >
+                        <!-- :tag="`${section.isDescriptionList ? 'li' : 'div'}`" -->
                         <template #br><br /></template>
                         <template
                             v-for="link in section.links"
@@ -89,7 +95,7 @@ export default {
                         {
                             slot: 'aoe',
                             textKey: 'terms.aoe',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20240701T115900&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250630T235900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
@@ -107,13 +113,17 @@ export default {
                         {
                             slot: 'posterForm',
                             textKey: 'terms.posterForm',
-                            url: `https://bit.ly/web-cfp-2024`,
+                            url: `https://forms.gle/dzbP6i2UW179jFSy9`,
                             isExternalLink: true,
                         },
                     ],
                 },
                 {
                     tag: 'topics',
+                    isDescriptionList: false,
+                },
+                {
+                    tag: 'presentation',
                     isDescriptionList: false,
                 },
                 {
