@@ -33,9 +33,7 @@ export default genI18nMessages({
                 description: [
                     'We segment the Poster Session into two parts, a professional topic and a community topic. All topics will be displayed as a poster, and audiences can interact with you directly.{br}{br}',
                     'In professional topics: you can submit a poster on any Python-related topic, such as AI, Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc.. We also welcome talks on advanced topics!',
-                    'In community topics:  you can share any soft topics, such as community connection, communication, mental health, or any of your experiences, whether innovation, co-creation, success, or failure are all commendable. We welcome fellow community members to share and promote their events with others during the session as well.{br}{br}',
-                    'We accept a broad range of Python-related proposals from academic research to case studies, open-source projects, or soft topics such as running a community, making good communication, mental health, etc. So basically, if you are reading this, just submit your proposal!',
-                    'We encourage speakers to talk about their own Python package or application, their experience of learning Python, or hosting a Python community, etc. Talks on advanced topics are highly welcome as well. For your inspiration, our committee has suggested that they’d love to see talks on the following topics: A.I., Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc.',
+                    'In community topics:  you can share any soft topics, such as community connection, communication, mental health, or any of your experiences, whether innovation, co-creation, success, or failure are all commendable. We welcome fellow community members to share and promote their events with others during the session as well.',
                 ],
             },
 
@@ -95,7 +93,6 @@ export default genI18nMessages({
                 title: '投稿主題',
                 description: [
                     'Poster Session  分為「專業講」與「社群講」兩種面向，都將以海報形式展出，讓您和與會者能直接互動創造火花！{br}{br}',
-                    '若您在人工智慧（AI）、機器學習（Machine Learning）、資料分析（Data Analysis）、金融科技（FinTech）、醫療（Medical Care）、半導體（Semiconductor）、製造業（Manufacturing）、公民科技（Civic Technology）',
                     '專業講：您可以投稿任何跟 Python 有關的主題，包括但不限於：人工智慧、機器學習、資料分析、金融科技、醫療、半導體、製造業、公民科技等多元專業領域。我們也非常歡迎適合進階者內容的投稿，例如探討 Python 內部運作等。另外，如果您的海報內容是關於特定的 Python 套件，請確保它已被廣泛使用，或者您可以考慮將重點放在相關的最佳實踐上，這類主題會有更多的受眾。',
                     '社群講：您可以分享任何軟性議題，如：社群經營、溝通、心理健康，或任何您的自身經驗，無論是創新、共創、成功或失敗，都值得讚揚。同時也歡迎其他社群夥伴來此宣傳您的社群活動。',
                 ],
