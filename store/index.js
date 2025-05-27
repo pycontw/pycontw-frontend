@@ -14,7 +14,7 @@ export const state = () => ({
         conferenceYear: '2025',
         conferenceDate: '2024-09-21',
         showAboutStaffPage: false,
-        showConferencePage: false,
+        showConferencePage: true,
         showSchedulePage: false,
         showEventOverviewPage: true,
         showEventsPage: false,
@@ -27,7 +27,7 @@ export const state = () => ({
         showVenuePage: false,
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
         conferenceHideItems: [
-            'keynotes',
+            // 'keynotes',
             'talks',
             'tutorials',
             'panelDiscussion',
