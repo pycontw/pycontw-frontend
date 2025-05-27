@@ -218,6 +218,7 @@ export default {
 
 .keynote__photo img {
     @apply rounded-full object-cover;
+    aspect-ratio: 1 / 1;
     height: 100%;
 }
 
