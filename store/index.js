@@ -15,7 +15,7 @@ export const state = () => ({
         conferenceDate: '2024-09-21',
         showAboutStaffPage: false,
         showConferencePage: false,
-        showSchedulePage: false,
+        showSchedulePage: true,
         showEventOverviewPage: true,
         showEventsPage: false,
         showIndexSecondaryBtn: true,

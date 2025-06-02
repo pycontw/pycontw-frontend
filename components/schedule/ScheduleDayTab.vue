@@ -4,7 +4,6 @@
         padding-x="px-4 sm:px-8"
         class="m-0 whitespace-nowrap font-bold lg:m-2"
         tab-header
-        @click="onClick"
     >
         <slot></slot>
     </schedule-block>
@@ -19,19 +18,7 @@ export default {
         ScheduleBlock,
     },
     props: {
-        date: { type: String, default: '' },
-        index: { type: Number, default: -1 },
-    },
-    data() {
-        return {
-            day: this.$parseDate(this.date, 'YYYY-MM-DD').get('date'),
-            active: false,
-        }
-    },
-    methods: {
-        onClick() {
-            this.$parent.selectTab(this.index)
-        },
+        active: { type: Boolean, default: false },
     },
 }
 </script>
