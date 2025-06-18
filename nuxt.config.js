@@ -244,6 +244,9 @@ export default {
     },
 
     publicRuntimeConfig: {
+        http: {
+            browserBaseURL: process.env.BASE_URL || DEFAULT_BASE_URL,
+        },
         gtm: {
             id: process.env.GOOGLE_TAG_MANAGER_ID,
         },
