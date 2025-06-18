@@ -4,7 +4,7 @@ export default genI18nMessages({
     'en-us': {
         title: 'Keynote Speech',
         intro:
-            'PyCon TW 2024 invites two speakers to give keynote speeches during the ' +
+            'PyCon TW 2025 invites two speakers to give keynote speeches during the ' +
             'two-day conference. ' +
             'Each keynote speaker is considered one of the most important figures ' +
             'in their respective fields. ' +
