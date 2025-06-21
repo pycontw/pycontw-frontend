@@ -14,7 +14,11 @@
                 @click="openModal(member)"
             >
                 <div class="reviewerPhoto">
-                    <img :src="member.photo_url || '/img/staff/default.jpg'" />
+                    <img
+                        :src="
+                            member.photo_url || '@/static/img/staff/default.jpg'
+                        "
+                    />
                 </div>
                 <div class="reviewerName">
                     {{ member.full_name }}
@@ -53,7 +57,7 @@
                         class="selectedReviewerPhoto"
                         :src="
                             selectedReviewer.photo_url ||
-                            '/img/staff/default.jpg'
+                            '@/static/img/staff/default.jpg'
                         "
                         alt="photo"
                     />
