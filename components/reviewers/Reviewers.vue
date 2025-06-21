@@ -6,40 +6,40 @@
             class="intro-h2"
         />
 
-        <div class="staffGroup">
+        <div class="reviewerGroup">
             <div
                 v-for="(member, i) in staffsData"
-                :key="`staff_member_${i}`"
-                class="staff"
+                :key="`reviewer_${i}`"
+                class="reviewer"
                 @click="openModal(member)"
             >
-                <div class="staffPhoto">
+                <div class="reviewerPhoto">
                     <img :src="member.photo_url" />
                 </div>
-                <div class="staffName">
+                <div class="reviewerName">
                     {{ member.full_name }}
                 </div>
             </div>
         </div>
 
         <!-- 彈出視窗 -->
-        <div v-if="selectedStaff" class="modal" @click.self="closeModal">
+        <div v-if="selectedReviewer" class="modal" @click.self="closeModal">
             <div class="modal-content">
                 <img
-                    src="/img/staff/clip.png"
-                    class="absolute -left-8 top-[108px] rotate-90"
+                    src="/img/reviewer/clip.png"
+                    class="absolute left-0 top-[108px] rotate-0"
                 />
                 <img
-                    src="/img/staff/clip.png"
-                    class="absolute -right-8 top-[232px] -rotate-90"
+                    src="/img/reviewer/clip.png"
+                    class="absolute right-0 top-[232px] rotate-180"
                 />
                 <img
-                    src="/img/staff/clip.png"
-                    class="absolute right-[120px] top-0 rotate-180"
+                    src="/img/reviewer/clip.png"
+                    class="absolute -top-6 right-[120px] rotate-90"
                 />
                 <img
-                    src="/img/staff/clip.png"
-                    class="absolute bottom-0 left-[129px] rotate-0"
+                    src="/img/reviewer/clip.png"
+                    class="absolute -bottom-6 left-[129px] -rotate-90"
                 />
                 <button
                     class="modal-close-button"
@@ -50,44 +50,48 @@
                 </button>
                 <div class="modal-content-header">
                     <img
-                        class="selectedStaffPhoto"
-                        :src="selectedStaff.photo_url"
+                        class="selectedReviewerPhoto"
+                        :src="selectedReviewer.photo_url"
                         alt="photo"
                     />
-                    <p class="selectedStaffName">
-                        {{ selectedStaff.full_name }}
+                    <p class="selectedReviewerName">
+                        {{ selectedReviewer.full_name }}
                     </p>
-                    <div class="staffProfile">
+                    <div class="reviewerProfile">
                         <div
-                            v-if="!!selectedStaff.facebook_profile_url"
-                            class="selectedStaffExtLink"
+                            v-if="!!selectedReviewer.facebook_profile_url"
+                            class="selectedReviewerExtLink"
                         >
                             <ext-link
-                                :href="selectedStaff.facebook_profile_url"
+                                :href="selectedReviewer.facebook_profile_url"
                             >
                                 <facebook-icon />
                             </ext-link>
                         </div>
                         <div
-                            v-if="!!selectedStaff.github_profile_url"
-                            class="selectedStaffExtLink"
+                            v-if="!!selectedReviewer.github_profile_url"
+                            class="selectedReviewerExtLink"
                         >
-                            <ext-link :href="selectedStaff.github_profile_url">
+                            <ext-link
+                                :href="selectedReviewer.github_profile_url"
+                            >
                                 <github-icon />
                             </ext-link>
                         </div>
                         <div
-                            v-if="!!selectedStaff.twitter_profile_url"
-                            class="selectedStaffExtLink"
+                            v-if="!!selectedReviewer.twitter_profile_url"
+                            class="selectedReviewerExtLink"
                         >
-                            <ext-link :href="selectedStaff.twitter_profile_url">
+                            <ext-link
+                                :href="selectedReviewer.twitter_profile_url"
+                            >
                                 <twitter-icon />
                             </ext-link>
                         </div>
                     </div>
                 </div>
                 <div class="modal-content-body">
-                    <p>{{ selectedStaff.bio }}</p>
+                    <p>{{ selectedReviewer.bio }}</p>
                 </div>
             </div>
         </div>
@@ -119,7 +123,7 @@ export default {
         },
     },
     data() {
-        return { selectedStaff: null }
+        return { selectedReviewer: null }
     },
     computed: {
         staffsData() {
@@ -128,40 +132,32 @@ export default {
     },
     methods: {
         openModal(staff) {
-            this.selectedStaff = staff
+            this.selectedReviewer = staff
         },
         closeModal() {
-            this.selectedStaff = null
+            this.selectedReviewer = null
         },
     },
 }
 </script>
 
 <style lang="postcss" scoped>
-.team {
-    @apply mb-12;
-}
-
-.teamName {
-    @apply mb-10 font-serif text-base font-bold text-primary-500 sm:text-[24px];
-}
-
-.staffGroup {
+.reviewerGroup {
     @apply grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4;
     @apply lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8;
     @apply gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-4;
     @apply ml-0.5 lg:ml-14;
 }
 
-.staffPhoto {
+.reviewerPhoto {
     @apply aspect-w-1 aspect-h-1 mb-3 w-full;
 }
 
-.staffPhoto img {
+.reviewerPhoto img {
     @apply rounded-full object-cover;
 }
 
-.staffName {
+.reviewerName {
     @apply font-serif text-xs text-white md:text-sm;
     @apply p-0.5 text-center;
 }
@@ -184,7 +180,7 @@ export default {
     @apply h-[678px] max-h-[90vh] shadow-xl;
     @apply flex flex-col items-center justify-center;
 
-    background-image: url('/img/staff/background-decorate.png');
+    background-image: url('/img/reviewer/background-decorate.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -195,7 +191,7 @@ export default {
     @apply relative flex flex-col items-center justify-between;
 }
 
-.modal-content-header .selectedStaffPhoto {
+.modal-content-header .selectedReviewerPhoto {
     @apply mx-auto h-[143px] w-[143px] rounded-[50%] object-cover;
 }
 
@@ -203,23 +199,23 @@ export default {
     @apply mt-[62px] px-[57px];
 }
 
-.selectedStaffName {
+.selectedReviewerName {
     @apply my-3 text-center font-serif font-black;
 }
 
-.staffProfile {
+.reviewerProfile {
     @apply flex justify-center;
 }
 
-.selectedStaffExtLink {
+.selectedReviewerExtLink {
     @apply mx-2 font-bold text-pink-700;
 }
 
-.selectedStaffExtLink:hover {
+.selectedReviewerExtLink:hover {
     @apply text-primary-500;
 }
 
-.selectedStaffExtLink svg {
+.selectedReviewerExtLink svg {
     @apply fill-primary-300;
 }
 </style>
