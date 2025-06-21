@@ -103,6 +103,9 @@
                 </sponsor-card-collection>
             </div>
         </I18nPageWrapper>
+        <I18nPageWrapper>
+            <Reviewers :is-bulleted="isBulleted" />
+        </I18nPageWrapper>
         <transition name="fade">
             <modal
                 v-if="isOpened"
@@ -129,7 +132,8 @@ import SponsorCard from '@/components/sponsors/SponsorCard'
 import Modal from '@/components/core/modal/Modal'
 import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 import Intro from '@/components/intro/Intro'
-import swal from 'sweetalert2'
+import Reviewers from '@/components/reviewers/Reviewers'
+import Swal from 'sweetalert2'
 import 'sweetalert2/dist/sweetalert2.css'
 
 export default {
@@ -144,10 +148,31 @@ export default {
         SponsorCardCollection,
         I18nPageWrapper,
         Intro,
+        Reviewers,
     },
     async asyncData({ store, payload }) {
-        if (payload) return { sponsorsData: payload }
-        await store.dispatch('$getSponsorsData')
+        if (payload) {
+            return {
+                sponsorsData: payload.sponsorsData || [],
+                staffsData: payload.staffsData || [],
+            }
+        }
+
+        await Promise.all([
+            store.dispatch('$getSponsorsData'),
+            store.dispatch('$getStaffsData'),
+        ])
+
+        const sponsorsData = store.state.sponsorsData
+        const staffsData = store.state.staffsData
+
+        return {
+            sponsorsData,
+            staffsData,
+        }
+        // if (payload) return { sponsorsData: payload }
+        // await store.dispatch('$getSponsorsData')
+
         // const sponsorsData = store.state.sponsorsData
         // return {
         //     sponsorsData,
@@ -187,6 +212,7 @@ export default {
     },
     created() {
         this.$store.dispatch('$getSponsorsData')
+        this.$store.dispatch('$getStaffsData')
     },
     methods: {
         showModal(sponsor) {
@@ -199,7 +225,8 @@ export default {
             return data[attributeName]
         },
         showSwal() {
-            return new swal({  // eslint-disable-line
+            return new Swal({
+                // eslint-disable-line
                 title: this.$i18n.t('typhoonInfoTitle'),
                 html: this.$i18n
                     .t('typhoonInfo')
