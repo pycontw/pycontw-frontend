@@ -30,19 +30,19 @@
         <div v-if="selectedReviewer" class="modal" @click.self="closeModal">
             <div class="modal-content">
                 <img
-                    src="/img/reviewer/clip.png"
+                    src="@/static/img/reviewer/clip.png"
                     class="absolute left-0 top-[108px] rotate-0"
                 />
                 <img
-                    src="/img/reviewer/clip.png"
+                    src="@/static/img/reviewer/clip.png"
                     class="absolute right-0 top-[232px] rotate-180"
                 />
                 <img
-                    src="/img/reviewer/clip.png"
+                    src="@/static/img/reviewer/clip.png"
                     class="absolute -top-6 right-[120px] rotate-90"
                 />
                 <img
-                    src="/img/reviewer/clip.png"
+                    src="@/static/img/reviewer/clip.png"
                     class="absolute -bottom-6 left-[129px] -rotate-90"
                 />
                 <button
@@ -187,7 +187,7 @@ export default {
     @apply h-[678px] max-h-[90vh] shadow-xl;
     @apply flex flex-col items-center justify-center;
 
-    background-image: url('/img/reviewer/background-decorate.png');
+    background-image: url('@/static/img/reviewer/background-decorate.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
