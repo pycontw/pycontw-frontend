@@ -6,5 +6,5 @@
     "/api/events/speeches/category/:category": "/speeches/?category=:category",
     "/api/events/speeches/:event_type/:id": "/speeches/?event_type=:event_type&id=:id&singular=1",
     "/api/events/schedule": "/schedules",
-    "/api/users": "/reviewers"
+    "/accounts/api/users": "/reviewers"
 }

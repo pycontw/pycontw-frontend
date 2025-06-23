@@ -100,7 +100,9 @@ export const actions = {
         commit('setRelatedData', relatedList)
     },
     async $getStaffsData({ commit }) {
-        const reviewerList = await this.$http.$get('/api/users/')
+        const reviewerList = await this.$http.$get(
+            '/accounts/api/users?role=Reviewer',
+        )
         commit('setStaffsData', reviewerList)
     },
 }
