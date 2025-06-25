@@ -82,7 +82,7 @@
         </div>
         <iframe
             class="hackmd"
-            src="https://hackmd.io/l4JCd4AeQWqunh4PThZbRA"
+            src="https://hackmd.io/taiCZprhTQG3uTD2g5aRwQ?view"
         ></iframe>
     </i18n-page-wrapper>
 </template>
@@ -130,7 +130,7 @@ export default {
                         {
                             slot: 'registrationForm',
                             textKey: 'terms.registrationForm',
-                            url: 'https://hackmd.io/@pycontw/SyTf40eVA',
+                            url: 'https://hackmd.io/taiCZprhTQG3uTD2g5aRwQ?view',
                             isExternalLink: true,
                         },
                     ],
