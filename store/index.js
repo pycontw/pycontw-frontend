@@ -9,7 +9,6 @@ export const state = () => ({
     speechesData: [],
     speechData: {},
     relatedData: [],
-    staffsData: [],
     configs: {
         conferenceName: 'PyCon TW',
         conferenceYear: '2025',
@@ -48,7 +47,6 @@ export const mutations = {
     setSpeechesData: set('speechesData'),
     setSpeechData: set('speechData'),
     setRelatedData: set('relatedData'),
-    setStaffsData: set('staffsData'),
 }
 
 export const actions = {
@@ -98,11 +96,5 @@ export const actions = {
         const endpoint = `/api/events/speeches/category/${category}`
         const relatedList = await this.$http.$get(endpoint)
         commit('setRelatedData', relatedList)
-    },
-    async $getStaffsData({ commit }) {
-        const reviewerList = await this.$http.$get(
-            '/accounts/api/users?role=Reviewer',
-        )
-        commit('setStaffsData', reviewerList)
     },
 }
