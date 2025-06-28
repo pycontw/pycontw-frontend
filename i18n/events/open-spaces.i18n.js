@@ -27,9 +27,10 @@ export default genI18nMessages({
             },
             time: {
                 title: 'Schedule',
-                emphasis: 'Main Session: Day 1: 12:00–13:20 (Lunch time),Day 2: 14:45–15:45',
+                emphasis:
+                'Main Session: Day 1: 12:00–13:20 (Lunch time),Day 2: 14:45–15:45',
                 description:
-                    "You're also welcome to propose and host discussions at any other time—just visit the info desk to add your topic. " +
+                    "You're also welcome to propose and host discussions at any other time—just visit the info desk to add your topic " +
                     'Enjoy this free-flowing time of energetic exchange! ' ,
             },
             subjects: {
@@ -38,7 +39,7 @@ export default genI18nMessages({
                     'All topics are decided by you and other attendees,' +
                     "so we can't predict what will emerge! " +
                     'Open Space topics are diverse—from technical discussions (like infosec, Python projects, or SRE roles) ' +
-                    'to personal interests (like nail art, feminism, yoga, gaming, or even Chiikawa). ' ,
+                    'to personal interests (like nail art, feminism, yoga, gaming, or even Chiikawa)' ,
             },
             host: {
                 title: 'How to host',
@@ -98,7 +99,8 @@ export default genI18nMessages({
             },
             time: {
                 title: '活動時間',
-                emphasis: '主要時段：第一天 12:00-13:20 (用餐時段)，第二天 14:45–15:45',
+                emphasis:
+                '主要時段：第一天 12:00-13:20 (用餐時段)，第二天 14:45–15:45',
                 description:
                     '{br}其餘時段亦歡迎隨時到服務台填寫主題，即可開始討論。請盡情享受這段自由熱情的交流時間！',
             },
