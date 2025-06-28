@@ -39,7 +39,7 @@ export default genI18nMessages({
                     'All topics are decided by you and other attendees,' +
                     "so we can't predict what will emerge! " +
                     'Open Space topics are diverse—from technical discussions (like infosec, Python projects, or SRE roles) ' +
-                    'to personal interests (like nail art, feminism, yoga, gaming, or even Chiikawa)'   ,
+                    'to personal interests (like nail art, feminism, yoga, gaming, or even Chiikawa)',
             },
             host: {
                 title: 'How to host',
@@ -119,7 +119,7 @@ export default genI18nMessages({
             },
             ideas: {
                 title: '開放空間好主意',
-                description:'以下是一些點子，提供你參考：{br}{examples}',
+                description: '以下是一些點子，提供你參考：{br}{examples}',
                 examples: [
                     '使用 Python 的 Maker 專案（例如樹莓派、IoT、居家自動化、機器人、四軸飛行器）',
                     'Hacking/Networking/DevOps',
