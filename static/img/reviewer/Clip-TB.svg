@@ -1,0 +1,18 @@
+<svg width="173" height="85" viewBox="0 0 173 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_114_549" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-6" width="173" height="91">
+<path d="M172.643 -6H0V84.1969H172.643V-6Z" fill="white"/>
+<path d="M172.144 -5.5V83.6973H0.5V-5.5H172.144Z" stroke="white"/>
+</mask>
+<g mask="url(#mask0_114_549)">
+<path d="M85.6152 -87.5163L4.09473 -5.99585L85.6152 75.5246L167.136 -5.99583L85.6152 -87.5163Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6154 -82.1511L9.45996 -5.99573L85.6151 70.1594L161.771 -5.99596L85.6154 -82.1511Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6153 -76.7858L14.8252 -5.99564L85.6153 64.7945L156.405 -5.99564L85.6153 -76.7858Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6153 -71.4207L20.1902 -5.99561L85.6153 59.4295L151.04 -5.99563L85.6153 -71.4207Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.614 -66.0564L25.5542 -5.99661L85.6138 54.063L145.674 -5.99685L85.614 -66.0564Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6152 -60.6904L30.9207 -5.99585L85.6152 48.6987L140.31 -5.99585L85.6152 -60.6904Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6152 -55.3251L36.2859 -5.99585L85.6152 43.3334L134.944 -5.99584L85.6152 -55.3251Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6156 -49.9597L41.6514 -5.99548L85.6154 37.9685L129.58 -5.99572L85.6156 -49.9597Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6136 -44.5961L47.0146 -5.9971L85.6134 32.6016L124.212 -5.99733L85.6136 -44.5961Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M85.6153 -39.2295L52.3816 -5.99585L85.6153 27.2378L118.849 -5.99585L85.6153 -39.2295Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+</g>
+</svg>

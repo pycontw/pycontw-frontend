@@ -1,0 +1,18 @@
+<svg width="61" height="117" viewBox="0 0 61 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_114_563" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="61" height="117">
+<path d="M60.8515 0H0V116.474H60.8515V0Z" fill="white"/>
+<path d="M60.3516 0.5V115.974H0.5V0.5H60.3516Z" stroke="white"/>
+</mask>
+<g mask="url(#mask0_114_563)">
+<path d="M-54.9971 58.7118L0.000976562 113.71L54.999 58.7118L0.000976562 3.71369L-54.9971 58.7118Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-51.378 58.712L0.000488281 110.09L51.3789 58.712L0.000488281 7.33354L-51.378 58.712Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-47.7581 58.712L0.000488281 106.471L47.7591 58.712L0.000488281 10.9534L-47.7581 58.712Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-44.138 58.7118L0.000976562 102.851L44.14 58.7118L0.000981957 14.5728L-44.138 58.7118Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-40.5189 58.712L0.000488281 99.2313L40.5199 58.712L0.000488281 18.1926L-40.5189 58.712Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-36.8988 58.712L0.000976562 95.6117L36.901 58.7117L0.00119505 21.812L-36.8988 58.712Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-33.2789 58.7119L0.000976562 91.9919L33.2811 58.7117L0.00120584 25.4318L-33.2789 58.7119Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-29.6593 58.7116L0.0012207 88.3721L29.6617 58.7116L0.0012207 29.0511L-29.6593 58.7116Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-26.0394 58.7118L0.0012207 84.7525L26.0421 58.7116L0.00144998 32.6709L-26.0394 58.7118Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M-22.4203 58.7122L0.000732422 81.1332L22.4218 58.7122L0.00072433 36.2911L-22.4203 58.7122Z" stroke="#B470FF" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+</g>
+</svg>
