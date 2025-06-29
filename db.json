@@ -2187,5 +2187,39 @@
             "location": "6-r2",
             "event_type": "talk"
         }
+    ],
+    "reviewers": [
+        {
+            "full_name": "蘇文鈺",
+            "bio": "在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。 \r\n\r\n標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。",
+            "photo_url": "",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        },
+        {
+            "full_name": "馬誼郎",
+            "bio": "出生於南非的美國企業家 \r\n\r\n出生於南非的美國企業家出生於南非的美國企業家出生於南非的美國企業家",
+            "photo_url": "",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        },
+        {
+            "full_name": "GTB",
+            "bio": "GTB is a security researcher and open-source enthusiast from Taiwan. A paranoid Pythonista and CPython contributor who now focuses on Android reverse engineering and malware analysis. And as a member of the PyCon Taiwan Program Committee, previously presented at Black Hat, DEFCON, HITB, ROOTCON, GrayHat, PyCon Europe/TW/KR/MY/IN. He’s the co-founder of Quark-Engine and the Quark package maintainer on Kali Linux, leading Quark to participate in the GSoC under the Honeynet Project since 2021.",
+            "photo_url": "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/xiAfNVQ.jpeg",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        },
+        {
+            "full_name": "Yucheng",
+            "bio": "I'm a successful business man. Better than Mark.",
+            "photo_url": "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/xiAfNVQ.jpeg",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        }
     ]
 }
