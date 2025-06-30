@@ -1,6 +1,11 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
+        <img
+            class="mb-4 w-full"
+            src="~@/static/img/events/sprints/sprints-photo.jpg"
+            alt="Photo of PyCon Taiwan Sprints"
+        />
         <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
         <two-col-wrapper class="spacing">
             <template #default>
