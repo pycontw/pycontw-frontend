@@ -19,22 +19,24 @@
                     tag="p"
                 >
                     <template #kktix>
-                        <ext-link
+                        <!-- <ext-link
                             href="https://pycontw.kktix.cc/events/2024-sprints"
                             highlight
                             >KKTIX</ext-link
-                        >
+                        > -->
+                        KKTIX
                     </template>
                     <template #hackmd>
-                        <ext-link
+                        <!-- <ext-link
                             href="https://hackmd.io/LKLr7XyOR9mK1AEEnvnCuQ"
                             highlight
                             >HackMD</ext-link
-                        >
+                        > -->
+                        HackMD
                     </template>
                     <template #form>
                         <ext-link
-                            href="https://forms.gle/qMDXfjAzdBC4m1us5"
+                            href="https://forms.gle/LcPV4zn2HFky1SsMA"
                             highlight
                             >{{ $t('form') }}</ext-link
                         >
@@ -42,10 +44,10 @@
                 </i18n>
             </template>
         </two-col-wrapper>
-        <iframe
+        <!-- <iframe
             class="hackmd"
             src="https://hackmd.io/LKLr7XyOR9mK1AEEnvnCuQ"
-        ></iframe>
+        ></iframe> -->
     </i18n-page-wrapper>
 </template>
 
