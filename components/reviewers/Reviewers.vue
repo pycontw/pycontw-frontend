@@ -168,7 +168,7 @@ export default {
 }
 
 .reviewerPhoto {
-    @apply aspect-w-1 aspect-h-1 mb-3 w-full;
+    @apply aspect-w-1 aspect-h-1 mb-3 w-full cursor-pointer;
 }
 
 .reviewerPhoto img {
