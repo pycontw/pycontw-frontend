@@ -135,12 +135,14 @@
                 <iframe
                     class="speech__slido"
                     :src="data.slido_embed_link"
+                    loading="lazy"
                 ></iframe>
             </tab>
             <tab v-if="!!data.hackmd_embed_link" :title="$t('terms.note')">
                 <iframe
                     class="speech__hackmd"
                     :src="data.hackmd_embed_link"
+                    loading="lazy"
                 ></iframe>
             </tab>
         </tabs>

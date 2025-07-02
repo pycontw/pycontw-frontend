@@ -95,6 +95,7 @@
                         <iframe
                             class="keynote__slido"
                             :src="keynote.slido"
+                            loading="lazy"
                         ></iframe>
                     </tab>
                     <tab
@@ -104,6 +105,7 @@
                         <iframe
                             class="keynote__hackmd"
                             :src="keynote.hackmd_embed_link"
+                            loading="lazy"
                         ></iframe>
                     </tab>
                 </tabs>
