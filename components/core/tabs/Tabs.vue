@@ -67,7 +67,7 @@ export default {
 }
 
 .tab {
-    @apply inline-block w-full bg-opacity-0 p-4 text-xs text-black-200 md:text-sm;
+    @apply inline-block w-full break-all bg-opacity-0 p-4 text-xs text-black-200 md:text-sm;
     @apply border-t-2 border-solid border-pink-700;
     line-height: 29px;
     font-size: 16px;
