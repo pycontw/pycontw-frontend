@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 pt-20">
+    <div class="pb-4 pt-20">
         <core-h1 :title="$t('Schedule')"></core-h1>
         <div class="scheduleDayTabs">
             <schedule-day-tab

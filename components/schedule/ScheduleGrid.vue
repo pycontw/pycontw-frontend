@@ -1,21 +1,13 @@
 <template>
     <div class="hidden lg:block">
-        <div class="scheduleRooms sticky grid" :class="`day${day}`">
-            <span></span>
+        <div class="scheduleRooms sticky grid px-4" :class="`day${day}`">
             <schedule-room
                 v-for="(room, i) in rooms"
                 :key="$makeKey(i, 'schedule_room')"
                 :value="room"
             ></schedule-room>
         </div>
-        <div class="scheduleTable grid w-full" :class="`day${day}`">
-            <schedule-tick
-                v-for="(tick, i) in ticks"
-                :key="$makeKey(i, 'schedule_tick')"
-                :style="tick.style"
-            >
-                {{ tick.label }}
-            </schedule-tick>
+        <div class="scheduleTable grid w-full px-4" :class="`day${day}`">
             <schedule-event
                 v-for="event in events"
                 :key="
@@ -35,14 +27,12 @@
 <script>
 import ScheduleEvent from '@/components/schedule/ScheduleEvent'
 import ScheduleRoom from '@/components/schedule/ScheduleRoom'
-import ScheduleTick from '@/components/schedule/ScheduleTick'
 
 export default {
     name: 'ScheduleGrid',
     components: {
         ScheduleEvent,
         ScheduleRoom,
-        ScheduleTick,
     },
     props: {
         day: { type: Number, default: 1 },
@@ -51,9 +41,6 @@ export default {
     computed: {
         events() {
             return this.getEvents(this.schedule)
-        },
-        ticks() {
-            return this.getTicks(this.schedule)
         },
         rooms() {
             switch (this.day) {
@@ -96,24 +83,6 @@ export default {
                 return [...events, ...slots]
             }, [])
         },
-        getTicks(schedule) {
-            const { timeline } = schedule
-            const start = this.$parseDate(timeline.begin)
-            const end = this.$parseDate(timeline.end)
-            const diff = end.diff(start, 'minute')
-            const unitInMinutes = 30
-            const unitPerGridColumn = 6
-            const tickCount = parseInt(`${diff / unitInMinutes}`, 10) + 1
-            return Array.from({ length: tickCount }).map((val, i) => {
-                const gridRowStart = unitPerGridColumn * i + 1
-                const gridRowEnd = unitPerGridColumn * i + unitPerGridColumn
-                const label = start
-                    .add(i * unitInMinutes, 'minute')
-                    .format('HH:mm')
-                const style = { gridRowStart, gridRowEnd }
-                return { label, style }
-            })
-        },
     },
 }
 </script>
@@ -127,16 +96,10 @@ export default {
     width: fit-content;
 }
 
-.scheduleTable .scheduleTick {
-    grid-column: timeline;
-    justify-self: center;
-}
-
 .day1.scheduleRooms,
 .day1.scheduleTable {
     grid-gap: 12px;
     grid-template-columns:
-        [timeline] minmax(120px, 1fr)
         [room-4-r0] minmax(200px, 2fr)
         [room-4-r0-1] minmax(200px, 2fr)
         [room-4-r0-2] minmax(200px, 2fr)
@@ -197,7 +160,6 @@ export default {
 .day2.scheduleTable {
     grid-gap: 12px;
     grid-template-columns:
-        [timeline] minmax(120px, 1fr)
         [room-4-r0] minmax(200px, 2fr)
         [room-4-r0-1] minmax(200px, 2fr)
         [room-5-r1] minmax(200px, 2fr)

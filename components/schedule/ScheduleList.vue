@@ -1,5 +1,5 @@
 <template>
-    <div class="scheduleList flex w-full flex-col lg:hidden">
+    <div class="scheduleList flex w-full flex-col px-4 lg:hidden">
         <div
             v-for="(group, i) in groups"
             :key="$makeKey(i, 'schedule_list_group')"
