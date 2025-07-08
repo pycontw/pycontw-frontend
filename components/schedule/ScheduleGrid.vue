@@ -43,31 +43,16 @@ export default {
             return this.getEvents(this.schedule)
         },
         rooms() {
-            switch (this.day) {
-                case 2:
-                    return [
-                        '4-r0',
-                        '4-r0-1',
-                        '5-r1',
-                        '5-r1-1',
-                        '6-r2',
-                        '6-r2-1',
-                        '1-r3',
-                    ]
-                case 1:
-                default:
-                    return [
-                        '4-r0',
-                        '4-r0-1',
-                        '4-r0-2',
-                        '5-r1',
-                        '5-r1-1',
-                        '5-r1-2',
-                        '6-r2',
-                        '6-r2-1',
-                        '1-r3',
-                    ]
-            }
+            return [
+                '4-r0',
+                '5-r1',
+                '6-r2',
+                '1-r3',
+                '7-r4',
+                '81-spt-os',
+                '82-tutorial',
+                '83-yi-ps',
+            ]
         },
         timeline() {
             return this.schedule.timeline
@@ -100,109 +85,93 @@ export default {
 .day1.scheduleTable {
     grid-gap: 12px;
     grid-template-columns:
-        [room-4-r0] minmax(200px, 2fr)
-        [room-4-r0-1] minmax(200px, 2fr)
-        [room-4-r0-2] minmax(200px, 2fr)
-        [room-5-r1] minmax(200px, 2fr)
-        [room-5-r1-1] minmax(200px, 2fr)
-        [room-5-r1-2] minmax(200px, 2fr)
-        [room-6-r2] minmax(200px, 2fr)
-        [room-6-r2-1] minmax(200px, 2fr)
-        [room-1-r3] minmax(200px, 2fr)
+        [room-4-r0] minmax(250px, 2fr)
+        [room-5-r1] minmax(250px, 2fr)
+        [room-6-r2] minmax(250px, 2fr)
+        [room-1-r3] minmax(250px, 2fr)
+        [room-7-r4] minmax(250px, 2fr)
+        [room-81-spt-os] minmax(250px, 2fr)
+        [room-82-tutorial] minmax(250px, 2fr)
+        [room-83-yi-ps] minmax(250px, 2fr)
         [];
-}
-
-.day1.scheduleTable .scheduleEvent.room-3-r012 {
-    grid-column: room-4-r0 / span 8;
 }
 
 .day1.scheduleTable .scheduleEvent.room-4-r0 {
     grid-column: room-4-r0 / span 1;
 }
 
-.day1.scheduleTable .scheduleEvent.room-4-r0-1 {
-    grid-column: room-4-r0-1 / span 1;
-}
-
-.day1.scheduleTable .scheduleEvent.room-4-r0-2 {
-    grid-column: room-4-r0-2 / span 1;
-}
-
 .day1.scheduleTable .scheduleEvent.room-5-r1 {
     grid-column: room-5-r1 / span 1;
-}
-
-.day1.scheduleTable .scheduleEvent.room-5-r1-1 {
-    grid-column: room-5-r1-1 / span 1;
-}
-
-.day1.scheduleTable .scheduleEvent.room-5-r1-2 {
-    grid-column: room-5-r1-2 / span 1;
 }
 
 .day1.scheduleTable .scheduleEvent.room-6-r2 {
     grid-column: room-6-r2 / span 1;
 }
 
-.day1.scheduleTable .scheduleEvent.room-6-r2-1 {
-    grid-column: room-6-r2-1 / span 1;
-}
-
 .day1.scheduleTable .scheduleEvent.room-1-r3 {
     grid-column: room-1-r3 / span 1;
 }
 
-.day1.scheduleTable .scheduleEvent.room-2-all {
-    grid-column: room-4-r0 / -1;
+.day1.scheduleTable .scheduleEvent.room-7-r4 {
+    grid-column: room-7-r4 / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-81-spt-os {
+    grid-column: room-81-spt-os / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-82-tutorial {
+    grid-column: room-82-tutorial / span 1;
+}
+
+.day1.scheduleTable .scheduleEvent.room-83-yi-ps {
+    grid-column: room-83-yi-ps / span 1;
 }
 
 .day2.scheduleRooms,
 .day2.scheduleTable {
     grid-gap: 12px;
     grid-template-columns:
-        [room-4-r0] minmax(200px, 2fr)
-        [room-4-r0-1] minmax(200px, 2fr)
-        [room-5-r1] minmax(200px, 2fr)
-        [room-5-r1-1] minmax(200px, 2fr)
-        [room-6-r2] minmax(200px, 2fr)
-        [room-6-r2-1] minmax(200px, 2fr)
-        [room-1-r3] minmax(200px, 2fr)
+        [room-4-r0] minmax(250px, 2fr)
+        [room-5-r1] minmax(250px, 2fr)
+        [room-6-r2] minmax(250px, 2fr)
+        [room-1-r3] minmax(250px, 2fr)
+        [room-7-r4] minmax(250px, 2fr)
+        [room-81-spt-os] minmax(250px, 2fr)
+        [room-82-tutorial] minmax(250px, 2fr)
+        [room-83-yi-ps] minmax(250px, 2fr)
         [];
-}
-
-.day2.scheduleTable .scheduleEvent.room-3-r012 {
-    grid-column: room-4-r0 / span 6;
 }
 
 .day2.scheduleTable .scheduleEvent.room-4-r0 {
     grid-column: room-4-r0 / span 1;
 }
 
-.day2.scheduleTable .scheduleEvent.room-4-r0-1 {
-    grid-column: room-4-r0-1 / span 1;
-}
-
 .day2.scheduleTable .scheduleEvent.room-5-r1 {
     grid-column: room-5-r1 / span 1;
-}
-
-.day2.scheduleTable .scheduleEvent.room-5-r1-1 {
-    grid-column: room-5-r1-1 / span 1;
 }
 
 .day2.scheduleTable .scheduleEvent.room-6-r2 {
     grid-column: room-6-r2 / span 1;
 }
 
-.day2.scheduleTable .scheduleEvent.room-6-r2-1 {
-    grid-column: room-6-r2-1 / span 1;
-}
-
 .day2.scheduleTable .scheduleEvent.room-1-r3 {
     grid-column: room-1-r3 / span 1;
 }
 
-.day2.scheduleTable .scheduleEvent.room-2-all {
-    grid-column: room-4-r0 / -1;
+.day2.scheduleTable .scheduleEvent.room-7-r4 {
+    grid-column: room-7-r4 / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-81-spt-os {
+    grid-column: room-81-spt-os / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-82-tutorial {
+    grid-column: room-82-tutorial / span 1;
+}
+
+.day2.scheduleTable .scheduleEvent.room-83-yi-ps {
+    grid-column: room-83-yi-ps / span 1;
 }
 </style>
