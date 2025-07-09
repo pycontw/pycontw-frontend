@@ -20,12 +20,11 @@
                     tag="p"
                 >
                     <template #kktix>
-                        <!-- <ext-link
-                            href="https://pycontw.kktix.cc/events/2024-sprints"
+                        <ext-link
+                            href="https://pycontw.kktix.cc/events/2025-sprints"
                             highlight
                             >KKTIX</ext-link
-                        > -->
-                        KKTIX
+                        >
                     </template>
                     <template #hackmd>
                         <!-- <ext-link
