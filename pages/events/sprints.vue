@@ -3,7 +3,7 @@
         <core-h1 :title="$t('title')"></core-h1>
         <div class="sprints_image">
             <img
-                src="~@/static/img/events/sprints/sprints-photo.jpg"
+                src="~@/static/img/events/sprints/sprints-photo.webp"
                 alt="Photo of PyCon Taiwan Sprints"
             />
         </div>
@@ -94,7 +94,7 @@ export default {
 
 <style lang="postcss" scoped>
 .sprints_image {
-    @apply my-4 flex h-32 w-full items-center justify-between overflow-hidden md:h-64;
+    @apply my-4 flex h-32 w-full items-center justify-between overflow-hidden md:h-80;
     @apply rounded-lg ring-2 ring-pink-700;
 }
 .sprints_image__img {
