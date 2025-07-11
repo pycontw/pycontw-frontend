@@ -8,7 +8,13 @@
             <schedule-tick> {{ group.tick }}</schedule-tick>
             <schedule-event
                 v-for="event in group.events"
-                :key="$makeKey(event.event_id, 'schedule_list_event')"
+                :key="
+                    $makeKey(
+                        event.event_id,
+                        'schedule_list_event',
+                        event.event_type,
+                    )
+                "
                 :value="event"
                 in-list
             >
