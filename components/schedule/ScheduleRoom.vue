@@ -25,12 +25,14 @@ export default {
     computed: {
         name() {
             return {
-                '4-r0': 'PSF Hall',
+                '4-r0': 'R0',
                 '5-r1': 'R1',
                 '6-r2': 'R2',
                 '1-r3': 'R3',
-                '2-all': 'All',
-                '3-r012': 'R0, R1, R2',
+                '7-r4': 'R4',
+                '81-spt-os': 'Sprint / OST',
+                '82-tutorial': 'Tutorial',
+                '83-yi-ps': 'Young / Post',
             }[this.value]
         },
         paddingX() {

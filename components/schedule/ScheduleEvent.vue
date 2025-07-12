@@ -3,8 +3,8 @@
         :class="classes"
         :style="styles"
         :text-align-center="textAlignCenter"
-        :primary="!isCustomEvent"
-        :secondary="isCustomEvent"
+        :primary="!isBreakEvent"
+        :secondary="isBreakEvent"
         :to="eventPagePath"
         active
     >
@@ -15,7 +15,7 @@
             <div class="scheduleEvent__title">
                 {{ getValueByLocale(value.title) }}
             </div>
-            <br v-if="!isCustomEvent" />
+            <br v-if="!isBreakEvent" />
             <div v-if="byLine" class="text-sm font-medium">by {{ byLine }}</div>
             <div class="scheduleEvent__icon">
                 <img :src="icon.level[value.python_level]" />
@@ -52,6 +52,8 @@ export default {
                 python_level: '',
                 begin_time: '',
                 end_time: '',
+                custom_event: false,
+                custom_event_path: '',
             }),
         },
         timelineBegin: { type: String, default: '08:30' },
@@ -83,8 +85,8 @@ export default {
         }
     },
     computed: {
-        isCustomEvent() {
-            return this.value.event_type === 'custom'
+        isBreakEvent() {
+            return this.value.break_event
         },
         textAlignCenter() {
             return ['custom', 'keynote'].includes(this.value.event_type)
@@ -129,6 +131,7 @@ export default {
                 event_type: eventType,
                 event_id: eventId,
                 speakers,
+                custom_event_path: customEventPath,
             } = this.value
             if (
                 eventType === 'keynote' &&
@@ -141,6 +144,8 @@ export default {
                 return `/conference/keynotes#${keynoteSpeakerId}`
             } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
                 return `/conference/${eventType}/${eventId}/`
+            } else if (eventType === 'custom') {
+                return customEventPath
             }
             return ''
         },
