@@ -26,12 +26,10 @@
                             require(`~/static/img/events/overview/open-space-location.png`)
                         "
                     />
-		    <img
-			v-if="openSpace.tag === 'location'"
-  			:src="
-			    require('~/static/img/events/overview/open-space-extra.png')
-			"
-		    />
+                    <img
+                         v-if="openSpace.tag === 'location'"
+                        :src="    require('~/static/img/events/overview/open-space-extra.png')"
+                        />
                     <div v-if="openSpace.isEmphasis">
                         <strong>
                             <i18n
@@ -128,7 +126,7 @@ export default {
                 },
                 {
                     tag: 'subjects',
-		    links: [
+                    links: [
                         {
                             slot: 'conductPage',
                             textKey: 'terms.registrationForm',
