@@ -27,12 +27,11 @@
                         >
                     </template>
                     <template #hackmd>
-                        <!-- <ext-link
-                            href="https://hackmd.io/LKLr7XyOR9mK1AEEnvnCuQ"
+                        <ext-link
+                            href="https://hackmd.io/@pycontw/ry31NKlIgg"
                             highlight
                             >HackMD</ext-link
-                        > -->
-                        HackMD
+                        >
                     </template>
                     <template #form>
                         <ext-link
@@ -44,10 +43,10 @@
                 </i18n>
             </template>
         </two-col-wrapper>
-        <!-- <iframe
+        <iframe
             class="hackmd"
-            src="https://hackmd.io/LKLr7XyOR9mK1AEEnvnCuQ"
-        ></iframe> -->
+            src="https://hackmd.io/@pycontw/ry31NKlIgg"
+        ></iframe>
     </i18n-page-wrapper>
 </template>
 
