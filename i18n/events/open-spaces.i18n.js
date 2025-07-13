@@ -18,7 +18,7 @@ export default genI18nMessages({
                 title: 'How to participate',
                 description:
                     "It's easy—just show up!{br}" +
-                    "Everyone can be a host or a participant.{br}" +
+                    'Everyone can be a host or a participant.{br}' +
                     'As a host, you can bring up any topic you’d like to discuss.' +
                     'Simply write your topic on a small whiteboard and place it on a table to start your session.' +
                     'From there, you just need to help guide the conversation and keep the discussion going—no strict format required.{br}' +
@@ -47,7 +47,7 @@ export default genI18nMessages({
                     'All topics are decided by you and other attendees,' +
                     "so we can't predict what will emerge! " +
                     'Open Space topics are diverse—from technical discussions (like infosec, Python projects, or SRE roles) ' +
-                    'to personal interests (like nail art, yoga, gaming, or even Chiikawa). '+
+                    'to personal interests (like nail art, yoga, gaming, or even Chiikawa). ' +
                     "There're no limitations on talk topics, you're only required to obey {conductPage}",
             },
             host: {
@@ -55,8 +55,8 @@ export default genI18nMessages({
                 description:
                     '1.Pre-register: ' +
                     'Fill out your topic in the {registrationForm}. ' +
-                    'Before the session begins, check your table number and head there to prepare.{br}' +
-                    '2.Spontaneous Hosting: ' +
+                    'Before the session begins, check your table number and head there to prepare. {br}' +
+                    '2.Spontaneous Hosting:' +
                     'You can also start a session at any time—just grab a small whiteboard at the info desk,  ' +
                     'write your topic, and find an Open Space table to begin. ',
             },
@@ -131,14 +131,14 @@ export default genI18nMessages({
                 title: '如何舉辦',
                 description:
                     '1.事先登記：於{registrationForm}填寫你想討論的主題。Open Space 時段開始前，' +
-                    '確認你的主題與桌號，再到指定桌子準備。{br}' +
-                    '2.隨時發起：也可以在其他時段自行發起，只要至服務台拿小白板寫題目，並找個 Open Space 桌開始即成。' ,
+                    '確認你的主題與桌號，再到指定桌子準備。 {br}' +
+                    '2.隨時發起：也可以在其他時段自行發起，只要至服務台拿小白板寫題目，並找個 Open Space 桌開始即成。',
             },
             ideas: {
                 title: '開放空間好主意',
-                description: '以下是一些點子，提供你參考：{br}{examples}' ,
+                description: '以下是一些點子，提供你參考：{br}{examples}',
                 examples: [
-                    '使用 Python 的 Maker 專案（例如樹莓派、IoT、居家自動化、機器人、四軸飛行器）' ,
+                    '使用 Python 的 Maker 專案（例如樹莓派、IoT、居家自動化、機器人、四軸飛行器）',
                     'Hacking/Networking/DevOps',
                     '資料視覺化、科學',
                     '自然語言處理（如聊天機器人）',
@@ -155,9 +155,9 @@ export default genI18nMessages({
                 ],
             },
         },
-        terms: { 
+        terms: {
             registrationForm: '主題登記表',
-            conductPage:'CoC原則',
+            conductPage: 'CoC原則',
         },
     },
 })
