@@ -4,24 +4,32 @@ export default genI18nMessages({
     'en-us': {
         title: 'Open Space',
         intro:
-            'Open Space is a self-organized, meetup-style activity that runs concurrently with the main conference schedule. ' +
-            'The topics are created on the spot by participants, allowing you to define, ' +
-            'organize, and host your own mini-gatherings in any way you like. ' +
-            'Feel free to invite others to join, share, chat, and make friends. {br}{br}' +
-            'For those familiar with PyCon Taiwan or other conferences, ' +
-            'Open Space might feel similar to BoF (Birds of a Feather).  ' +
-            'However, we use the more intuitive name "Open Space" to make it easier for newcomers to understand and join. ',
+            'Open Space is a participant-driven gathering that takes place alongside the main conference schedule.' +
+            'Unlike pre-arranged talks, Open Space sessions are created and led on the spot by attendees.' +
+            'You can share a topic of interest (not limited to technical subjects), start a discussion, have casual chats, or simply hang out and connect with others—the format and content are entirely up to you.{br}' +
+            'If you’ve attended PyCon Taiwan or other conferences before, you may be familiar with BoF (Birds of a Feather) sessions.' +
+            'We use the term “Open Space” to make the concept more intuitive, especially for first-time attendees.' +
+            'It’s an open, flexible time for free-form conversations and spontaneous connections.{br} ' +
+            'No preparation needed—just bring your ideas and enthusiasm!'+
+            'Anyone can host or join an Open Space session.'+
+            'Come with curiosity, invite a friend, and help spark fun and meaningful conversations throughout the event.',
         openSpaceInfo: {
             participate: {
                 title: 'How to participate',
                 description:
                     "It's easy—just show up!{br}" +
-                    "Simply find a topic you're interested in, greet the host, and join the discussion.",
+                    "Everyone can be a host or a participant.{br}"+
+                    'As a host, you can bring up any topic you’d like to discuss.'+
+                    'Simply write your topic on a small whiteboard and place it on a table to start your session.'+
+                    'From there, you just need to help guide the conversation and keep the discussion going—no strict format required.{br}'+
+                    'As a participant, just look for a topic that interests you.'+
+                    'ay a friendly hello to the host, take a seat, and join the conversation.'+
+                    'No sign-up needed, no limit on group size—everyone is welcome to jump in and take part.',
             },
             location: {
                 title: 'Location',
                 description:
-                    'Rooms 603 & 604, each with several tables labeled by topic using whiteboards. ' +
+                    'Rooms 603 & 604, each with several tables labeled by topic using whiteboards.' +
                     'If a topic interests you, feel free to leave thoughts or feedback on sticky notes.' +
                     'If your desired topic isn’t listed yet, you can grab a whiteboard from the info desk and start your own discussion. {br}',
             },
@@ -39,7 +47,8 @@ export default genI18nMessages({
                     'All topics are decided by you and other attendees,' +
                     "so we can't predict what will emerge! " +
                     'Open Space topics are diverse—from technical discussions (like infosec, Python projects, or SRE roles) ' +
-                    'to personal interests (like nail art, feminism, yoga, gaming, or even Chiikawa)',
+                    'to personal interests (like nail art, yoga, gaming, or even Chiikawa). '+
+                    "There're no limitations on talk topics, you're only required to obey {conductPage}",
             },
             host: {
                 title: 'How to host',
@@ -73,22 +82,28 @@ export default genI18nMessages({
         },
         terms: {
             registrationForm: 'Open Space topic form',
+            conductPage: 'Code of Conduct',
         },
     },
     'zh-hant': {
         title: '開放空間',
         intro:
             '開放空間（Open Space）是自助式、聚會形式的活動，與大會議程同時進行。' +
-            '開放空間的主題是由與會者「當場」計畫打造，讓你能以任何你喜歡的方式定義、組織、規劃自己的小聚，' +
-            '也歡迎你揪其他好夥伴一起來參與、分享、聊天、交朋友。 {br}' +
-            '對於曾參加過 PyCon Taiwan 或其他研討會的朋友來說，開放空間的概念可能與 BoF（Birds of a Feather）相似，' +
-            '但「開放空間（Open Space）」這個名稱對於初次參加活動的會眾而言更加直觀易懂。',
+            '活動的主題不事先安排，而是由會眾在現場自由規劃與參與。' +
+            '你可以選擇分享某個主題（不限於技術主題）、發起一場討論、找人聊天交流，甚至只是和其他參與者一起放鬆小聚，形式與內容都由你決定。 {br}' +
+            '若你曾參加過 PyCon Taiwan 或其他研討會，可能對「BoF（Birds of a Feather）」這種社群小聚不陌生；' +
+            '而我們使用「開放空間（Open Space）」這個名稱，是希望讓更多首次參與的朋友也能輕鬆理解，這是一個開放且彈性的自由交流時段。{br}'+
+            '無需事前準備，只要你有想法、有熱情，任何人都可以成為開放空間的發起者與參與者。'+
+            '歡迎你帶著好奇心與夥伴一起參與，讓更多有趣的對話在這裡發生！',
         openSpaceInfo: {
             participate: {
                 title: '如何參與',
                 description:
-                    '很簡單！人到場就好了 :){br}' +
-                    '只需找到感興趣的主題，友善地與主持人打招呼，便可以坐下來與大家一起參與討論。',
+                    '很簡單，只要人到場就可以參加！' +
+                    '每個人都可以是發起者，也可以是參與者。 {br}'+
+                    '作為「發起者」，你可以提出任何想討論的主題，在桌子上擺上小白板並寫上題目，並協助引導對話、維持討論熱度即可，形式不拘。 {br}'+
+                    '作為「參與者」，只需找到你有興趣的主題，友善地向發起者打聲招呼，就能加入討論、一起分享想法與交流觀點。'+
+                    '不需預約、不限人數，任何人都能自由參與。',
             },
             location: {
                 title: '活動地點',
@@ -108,7 +123,7 @@ export default genI18nMessages({
                 title: '活動主題',
                 description:
                     '由你與其他與會者共同決定，我們也無法預測會有哪些主題出現。' +
-                    '開放空間的主題多元，涵蓋從技術議題（如資訊安全、Python 專案、SRE 職位）到個人興趣（如美甲、女性主義、瑜珈、電玩，甚至是 Chiikawa）。',
+                    '開放空間的主題多元，涵蓋從技術議題（如資訊安全、Python 專案、SRE 職位）到個人興趣（如美甲、瑜珈、電玩，甚至是 Chiikawa）。只要不違反大會 {conductPage} 都可以！',
             },
             host: {
                 title: '如何舉辦',
@@ -126,18 +141,21 @@ export default genI18nMessages({
                     '資料視覺化、科學',
                     '自然語言處理（如聊天機器人）',
                     '自我量化',
-                    '女性主義',
                     '主辦人聚會：研討會、工作坊、在地社群主辦者',
                     '網頁框架（如 Django、Flask）',
                     '如何做開源貢獻（特別是給初心者的協助與指導）',
                     'Git',
                     '如何避免職業倦怠',
                     '求職相關討論',
+                    '美食',
+                    'Switch 2 / PlayStation2 / Video games',
+                    '(或其他非技術相關類型的主題也可以)',
                 ],
             },
         },
         terms: {
             registrationForm: '主題登記表',
+            conductPage:'CoC原則',
         },
     },
 })

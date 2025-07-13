@@ -26,6 +26,12 @@
                             require(`~/static/img/events/overview/open-space-location.png`)
                         "
                     />
+		    <img
+			v-if="openSpace.tag === 'location'"
+  			:src="
+			    require('~/static/img/events/overview/open-space-extra.png')
+			"
+		    />
                     <div v-if="openSpace.isEmphasis">
                         <strong>
                             <i18n
@@ -122,6 +128,14 @@ export default {
                 },
                 {
                     tag: 'subjects',
+		    links: [
+                        {
+                            slot: 'conductPage',
+                            textKey: 'terms.registrationForm',
+                            url: 'https://tw.pycon.org/2025/zh-hant/about/code-of-conduct',
+                            isExternalLink: true,
+                        },
+                    ],
                 },
                 {
                     tag: 'host',
