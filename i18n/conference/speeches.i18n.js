@@ -5,13 +5,10 @@ export default genI18nMessages({
         talks: {
             title: 'Talks',
             intro:
-                'The two conference days are packed with talks about Python by speakers' +
-                ' from Taiwan and around the world. The talks will be either 15, 30,' +
-                ' or 45 minutes long. All tracks of talks will be delivered simultaneously,' +
-                ' all with different topics and difficulties. We suggest you make a schedule' +
-                ' beforehand, and choose what you want to listen based on your interests.' +
-                ' Many people take notes on the program schedule before the meeting so they don’t' +
-                ' run to the wrong places.',
+                'Talks are the core part of the conference, where speakers from Taiwan and around the world share their experiences and insights in Python-related fields.' +
+                'Each talk is scheduled with different lengths and formats depending on the depth and nature of the topic.{br}' +
+                'Start planning your schedule and mark down the sessions you are excited about!{br}' +
+                'Session details may be adjusted throughout the event. We will keep this page up to date, so feel free to check back anytime for the latest info.',
             categoryFilter: 'Category',
         },
         tutorials: {
@@ -82,10 +79,10 @@ export default genI18nMessages({
         talks: {
             title: '一般演講',
             intro:
-                '演講為會期兩天最主要的活動，屆時將會有來自台灣各地與全球的講者分享他們在 Python 相關的發現。' +
-                '演講有 15、30、45 分鐘三種長度，配合各個演講的難易度與類型，' +
-                '選擇自己有興趣的主題聆聽。許多人都會事先筆記想聽的議程，才不會跑錯地點。' +
-                '議程可能隨時更改，請頻繁確認本頁資訊，以獲得最新訊息。',
+                '一般議程是大會中最主要的活動形式，來自台灣及世界各地的講者將分享他們在 Python 相關領域的經驗與洞見。' +
+                '每場演講會根據主題的深度與類型，安排不同的長度與形式。{br}' +
+                '快打開行事曆，把想聽的議程筆記起來吧！{br}' +
+                '議程資訊將隨活動調整即時更新，我們會盡可能提供最新內容，也歡迎不時回來查看，掌握第一手消息。',
             categoryFilter: '演講類別',
         },
         tutorials: {
