@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/zh-hant/conference/tutorials", {data:[{eventType:"tutorials",speechesData:[]}],fetch:{},mutations:[]});

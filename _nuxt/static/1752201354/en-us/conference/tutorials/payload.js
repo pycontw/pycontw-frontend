@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-us/conference/tutorials", {data:[{eventType:"tutorials",speechesData:[]}],fetch:{},mutations:[]});
