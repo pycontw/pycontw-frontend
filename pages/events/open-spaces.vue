@@ -34,11 +34,17 @@
                     />
                     <div v-if="openSpace.isEmphasis">
                         <strong>
-                            <i18n
-                                :path="`openSpaceInfo.${openSpace.tag}.emphasis`"
-                            >
-                                <template #br><br /></template>
-                            </i18n>
+                            <ul class="emphasis-list">
+                                <li
+                                    v-for="(item, index) in $t(
+                                        `openSpaceInfo.${openSpace.tag}.emphasis`,
+                                    )"
+                                    :key="`emphasis-${index}`"
+                                    :class="{ 'sub-item': index > 0 }"
+                                >
+                                    {{ item }}
+                                </li>
+                            </ul>
                         </strong>
                     </div>
                     <i18n
@@ -131,7 +137,7 @@ export default {
                     links: [
                         {
                             slot: 'conductPage',
-                            textKey: 'terms.registrationForm',
+                            textKey: 'terms.conductPage',
                             url: 'https://tw.pycon.org/2025/zh-hant/about/code-of-conduct',
                             isExternalLink: true,
                         },
@@ -195,5 +201,17 @@ export default {
 .hackmd {
     @apply w-full;
     height: 800px;
+}
+
+.emphasis-list {
+    @apply mt-2 list-disc pl-5;
+}
+
+.emphasis-list li {
+    @apply mb-1;
+}
+
+.emphasis-list li.sub-item {
+    @apply ml-4;
 }
 </style>
