@@ -26,8 +26,8 @@
                             require(`~/static/img/events/overview/open-space-location.png`)
                         "
                     />
-                    <br>
-                    <br>
+                    <br />
+                    <br />
                     <img
                         v-if="openSpace.tag === 'location'"
                         :src="
