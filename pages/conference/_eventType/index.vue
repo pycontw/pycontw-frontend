@@ -2,9 +2,9 @@
     <div class="py-10 md:py-24">
         <banner>
             <core-h1 :title="title"></core-h1>
-            <p class="leading-6">
-                {{ intro }}
-            </p>
+            <i18n tag="p" class="leading-6" :path="intro">
+                <template #br><br /><br /></template>
+            </i18n>
         </banner>
         <i18n-page-wrapper class="px-2 sm:px-8 md:px-16 lg:px-32" custom-x>
             <div v-if="eventType === 'talks'">
@@ -108,7 +108,7 @@ export default {
             return this.$i18n.t(`${this.$route.params.eventType}.title`)
         },
         intro() {
-            return this.$i18n.t(`${this.$route.params.eventType}.intro`)
+            return `${this.$route.params.eventType}.intro`
         },
         speechCategories() {
             const speechCategories = this.speechesData.map(

@@ -54,7 +54,7 @@ export default {
             eventInfos: [
                 {
                     tag: 'sprint',
-                    eventTag: 'post_event',
+                    eventTag: 'warmup',
                     tagColor: 'orange',
                     imgUrl: require('~/static/img/events/overview/sprint.png'),
                     imgAlt: 'Sprint',

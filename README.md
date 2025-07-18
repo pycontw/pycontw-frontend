@@ -75,6 +75,8 @@ npm run start
 npm run serve
 ```
 
+**Note:** Make sure the `.env` file has the correct `API_URL_BROWSER` value when building for different environments (e.g., staging and production).
+
 ## Generate static project
 
 ```bash

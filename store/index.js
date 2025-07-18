@@ -9,15 +9,16 @@ export const state = () => ({
     speechesData: [],
     speechData: {},
     relatedData: [],
+    reviewerData: [],
     configs: {
         conferenceName: 'PyCon TW',
         conferenceYear: '2025',
         conferenceDate: '2024-09-21',
         showAboutStaffPage: false,
         showConferencePage: true,
-        showSchedulePage: false,
+        showSchedulePage: true,
         showEventOverviewPage: true,
-        showEventsPage: false,
+        showEventsPage: true,
         showIndexSecondaryBtn: true,
         showIndexSponsorSection: false,
         showProposalSystemPage: true,
@@ -28,11 +29,11 @@ export const state = () => ({
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
         conferenceHideItems: [
             // 'keynotes',
-            'talks',
-            'tutorials',
+            // 'talks',
+            // 'tutorials',
             'panelDiscussion',
         ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
-        eventsHideItems: ['sprints', 'jobs'], // ['sprints', 'openSpaces', 'jobs']
+        eventsHideItems: ['jobs'], // ['sprints', 'openSpaces', 'jobs']
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: ['venueInfo', 'accommodation'], // ['venueInfo', 'accommodation']
     },
@@ -47,6 +48,7 @@ export const mutations = {
     setSpeechesData: set('speechesData'),
     setSpeechData: set('speechData'),
     setRelatedData: set('relatedData'),
+    setReviewerData: set('reviewerData'),
 }
 
 export const actions = {
@@ -96,5 +98,9 @@ export const actions = {
         const endpoint = `/api/events/speeches/category/${category}`
         const relatedList = await this.$http.$get(endpoint)
         commit('setRelatedData', relatedList)
+    },
+    async $getReviewerData({ commit }) {
+        const reviewerData = await this.$http.$get('/api/users?role=Reviewer')
+        commit('setReviewerData', reviewerData)
     },
 }

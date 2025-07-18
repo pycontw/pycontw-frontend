@@ -95,6 +95,7 @@
                         <iframe
                             class="keynote__slido"
                             :src="keynote.slido"
+                            loading="lazy"
                         ></iframe>
                     </tab>
                     <tab
@@ -104,6 +105,7 @@
                         <iframe
                             class="keynote__hackmd"
                             :src="keynote.hackmd_embed_link"
+                            loading="lazy"
                         ></iframe>
                     </tab>
                 </tabs>
@@ -218,6 +220,7 @@ export default {
 
 .keynote__photo img {
     @apply rounded-full object-cover;
+    aspect-ratio: 1 / 1;
     height: 100%;
 }
 

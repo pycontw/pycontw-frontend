@@ -4,41 +4,44 @@ export default genI18nMessages({
     'en-us': {
         title: 'Open Space',
         intro:
-            'Open Space is a participant-driven gathering that takes place alongside the main conference schedule.' +
-            'Unlike pre-arranged talks, Open Space sessions are created and led on the spot by attendees.' +
-            'You can share a topic of interest (not limited to technical subjects), start a discussion, have casual chats, or simply hang out and connect with others—the format and content are entirely up to you.{br}' +
-            'If you’ve attended PyCon Taiwan or other conferences before, you may be familiar with BoF (Birds of a Feather) sessions.' +
-            'We use the term “Open Space” to make the concept more intuitive, especially for first-time attendees.' +
-            'It’s an open, flexible time for free-form conversations and spontaneous connections.{br} ' +
+            'Open Space is a participant-driven gathering that takes place alongside the main conference schedule. ' +
+            'Unlike pre-arranged talks, Open Space sessions are created and led on the spot by attendees. ' +
+            'You can share a topic of interest (not limited to technical subjects), start a discussion, have casual chats, or simply hang out and connect with others—the format and content are entirely up to you.{br}{br}' +
+            'If you’ve attended PyCon Taiwan or other conferences before, you may be familiar with BoF (Birds of a Feather) sessions. ' +
+            'We use the term “Open Space” to make the concept more intuitive, especially for first-time attendees. ' +
+            'It’s an open, flexible time for free-form conversations and spontaneous connections.{br}{br}' +
             'No preparation needed—just bring your ideas and enthusiasm!' +
-            'Anyone can host or join an Open Space session.' +
+            'Anyone can host or join an Open Space session. ' +
             'Come with curiosity, invite a friend, and help spark fun and meaningful conversations throughout the event.',
         openSpaceInfo: {
             participate: {
                 title: 'How to participate',
                 description:
-                    "It's easy—just show up!{br}" +
-                    'Everyone can be a host or a participant.{br}' +
-                    'As a host, you can bring up any topic you’d like to discuss.' +
-                    'Simply write your topic on a small whiteboard and place it on a table to start your session.' +
-                    'From there, you just need to help guide the conversation and keep the discussion going—no strict format required.{br}' +
-                    'As a participant, just look for a topic that interests you.' +
-                    'ay a friendly hello to the host, take a seat, and join the conversation.' +
+                    "It's easy—just show up!{br}{br}" +
+                    'Everyone can be a host or a participant.{br}{br}' +
+                    'As a host, you can bring up any topic you’d like to discuss. ' +
+                    'Simply write your topic on a small whiteboard and place it on a table to start your session. ' +
+                    'From there, you just need to help guide the conversation and keep the discussion going—no strict format required.{br}{br}' +
+                    'As a participant, just look for a topic that interests you. ' +
+                    'Say a friendly hello to the host, take a seat, and join the conversation. ' +
                     'No sign-up needed, no limit on group size—everyone is welcome to jump in and take part.',
             },
             location: {
                 title: 'Location',
                 description:
-                    'Rooms 603 & 604, each with several tables labeled by topic using whiteboards.' +
-                    'If a topic interests you, feel free to leave thoughts or feedback on sticky notes.' +
-                    'If your desired topic isn’t listed yet, you can grab a whiteboard from the info desk and start your own discussion. {br}',
+                    'Rooms 603 & 604, each with several tables labeled by topic using whiteboards.{br}' +
+                    'If a topic interests you, feel free to leave thoughts or feedback on sticky notes. ' +
+                    'If your desired topic isn’t listed yet, you can grab a whiteboard from the info desk and start your own discussion.',
             },
             time: {
                 title: 'Schedule',
-                emphasis:
-                    'Main Session: Day 1: 12:00–13:20 (Lunch time),Day 2: 14:45–15:45',
+                emphasis: [
+                    'Main Sessions:',
+                    'Day 1: 12:00–13:20 (Lunch time)',
+                    'Day 2: 14:45–15:45',
+                ],
                 description:
-                    "You're also welcome to propose and host discussions at any other time—just visit the info desk to add your topic " +
+                    "You're also welcome to propose and host discussions at any other time—just visit the info desk to add your topic.  " +
                     'Enjoy this free-flowing time of energetic exchange! ',
             },
             subjects: {
@@ -48,15 +51,15 @@ export default genI18nMessages({
                     "so we can't predict what will emerge! " +
                     'Open Space topics are diverse—from technical discussions (like infosec, Python projects, or SRE roles) ' +
                     'to personal interests (like nail art, yoga, gaming, or even Chiikawa). ' +
-                    "There're no limitations on talk topics, you're only required to obey {conductPage}",
+                    "There're no limitations on talk topics, you're only required to obey {conductPage}.",
             },
             host: {
                 title: 'How to host',
                 description:
-                    '1.Pre-register: ' +
+                    '1. Pre-register: ' +
                     'Fill out your topic in the {registrationForm}. ' +
                     'Before the session begins, check your table number and head there to prepare. {br}' +
-                    '2.Spontaneous Hosting:' +
+                    '2. Spontaneous Hosting:' +
                     'You can also start a session at any time—just grab a small whiteboard at the info desk,  ' +
                     'write your topic, and find an Open Space table to begin. ',
             },
@@ -92,18 +95,18 @@ export default genI18nMessages({
         intro:
             '開放空間（Open Space）是自助式、聚會形式的活動，與大會議程同時進行。' +
             '活動的主題不事先安排，而是由會眾在現場自由規劃與參與。' +
-            '你可以選擇分享某個主題（不限於技術主題）、發起一場討論、找人聊天交流，甚至只是和其他參與者一起放鬆小聚，形式與內容都由你決定。 {br}' +
+            '你可以選擇分享某個主題（不限於技術主題）、發起一場討論、找人聊天交流，甚至只是和其他參與者一起放鬆小聚，形式與內容都由你決定。{br}{br}' +
             '若你曾參加過 PyCon Taiwan 或其他研討會，可能對「BoF（Birds of a Feather）」這種社群小聚不陌生；' +
-            '而我們使用「開放空間（Open Space）」這個名稱，是希望讓更多首次參與的朋友也能輕鬆理解，這是一個開放且彈性的自由交流時段。{br}' +
+            '而我們使用「開放空間（Open Space）」這個名稱，是希望讓更多首次參與的朋友也能輕鬆理解，這是一個開放且彈性的自由交流時段。{br}{br}' +
             '無需事前準備，只要你有想法、有熱情，任何人都可以成為開放空間的發起者與參與者。' +
             '歡迎你帶著好奇心與夥伴一起參與，讓更多有趣的對話在這裡發生！',
         openSpaceInfo: {
             participate: {
                 title: '如何參與',
                 description:
-                    '很簡單，只要人到場就可以參加！' +
-                    '每個人都可以是發起者，也可以是參與者。 {br}' +
-                    '作為「發起者」，你可以提出任何想討論的主題，在桌子上擺上小白板並寫上題目，並協助引導對話、維持討論熱度即可，形式不拘。 {br}' +
+                    '很簡單，只要人到場就可以參加！{br}' +
+                    '每個人都可以是發起者，也可以是參與者。 {br}{br}' +
+                    '作為「發起者」，你可以提出任何想討論的主題，在桌子上擺上小白板並寫上題目，並協助引導對話、維持討論熱度即可，形式不拘。{br}{br}' +
                     '作為「參與者」，只需找到你有興趣的主題，友善地向發起者打聲招呼，就能加入討論、一起分享想法與交流觀點。' +
                     '不需預約、不限人數，任何人都能自由參與。',
             },
@@ -116,10 +119,13 @@ export default genI18nMessages({
             },
             time: {
                 title: '活動時間',
-                emphasis:
-                    '主要時段：第一天 12:00-13:20 (用餐時段)，第二天 14:45–15:45',
+                emphasis: [
+                    '主要時段：',
+                    '第一天 12:00-13:20 (用餐時段)',
+                    '第二天 14:45–15:45',
+                ],
                 description:
-                    '{br}其餘時段亦歡迎隨時到服務台填寫主題，即可開始討論。請盡情享受這段自由熱情的交流時間！',
+                    '其餘時段亦歡迎隨時到服務台填寫主題，即可開始討論。請盡情享受這段自由熱情的交流時間！',
             },
             subjects: {
                 title: '活動主題',

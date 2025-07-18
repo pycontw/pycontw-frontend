@@ -103,6 +103,9 @@
                 </sponsor-card-collection>
             </div>
         </I18nPageWrapper>
+        <I18nPageWrapper>
+            <Reviewers :is-bulleted="isBulleted" />
+        </I18nPageWrapper>
         <transition name="fade">
             <modal
                 v-if="isOpened"
@@ -118,7 +121,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 import i18n from '@/i18n/index.i18n'
 import { landingButtonConfig } from '@/configs/pageLanding'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
@@ -129,8 +132,9 @@ import SponsorCard from '@/components/sponsors/SponsorCard'
 import Modal from '@/components/core/modal/Modal'
 import SponsorCardCollection from '@/components/sponsors/SponsorCardCollection'
 import Intro from '@/components/intro/Intro'
-import swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 import 'sweetalert2/dist/sweetalert2.css'
+import Reviewers from '@/components/reviewers/Reviewers'
 
 export default {
     i18n,
@@ -144,14 +148,25 @@ export default {
         SponsorCardCollection,
         I18nPageWrapper,
         Intro,
+        Reviewers,
     },
     async asyncData({ store, payload }) {
-        if (payload) return { sponsorsData: payload }
-        await store.dispatch('$getSponsorsData')
-        // const sponsorsData = store.state.sponsorsData
-        // return {
-        //     sponsorsData,
-        // }
+        if (payload) {
+            return {
+                sponsorsData: payload.sponsorsData || [],
+                staffsData: payload.staffsData || [],
+            }
+        }
+        await Promise.all([
+            store.dispatch('$getSponsorsData'),
+            store.dispatch('$getReviewerData'),
+        ])
+        const sponsorsData = store.state.sponsorsData
+        const staffsData = store.state.staffsData
+        return {
+            sponsorsData,
+            staffsData,
+        }
     },
     data() {
         return {
@@ -162,7 +177,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(['sponsorsData']),
+        // ...mapState(['sponsorsData']),
         isBulleted() {
             if (process.client) {
                 const width = window.innerWidth
@@ -187,6 +202,7 @@ export default {
     },
     created() {
         this.$store.dispatch('$getSponsorsData')
+        this.$store.dispatch('$getReviewerData')
     },
     methods: {
         showModal(sponsor) {
@@ -199,7 +215,7 @@ export default {
             return data[attributeName]
         },
         showSwal() {
-            return new swal({  // eslint-disable-line
+            return new Swal({
                 title: this.$i18n.t('typhoonInfoTitle'),
                 html: this.$i18n
                     .t('typhoonInfo')

@@ -299,14 +299,11 @@
                             "speakers": [],
                             "begin_time": "2022-09-03T00:30:00Z",
                             "end_time": "2022-09-03T00:50:00Z",
-                            "is_remote": false,
-                            "recording_policy": true,
-                            "language": "",
-                            "python_level": "",
-                            "break_event": true
-                        },
-                        {
-                            "event_id": 175,
+                            "is_remote": false, "recording_policy": true, "language": "", "python_level": "",
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
+                        }, { "event_id": 175,
                             "event_type": "custom",
                             "title": "Opening",
                             "speakers": [],
@@ -316,7 +313,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 23,
@@ -337,7 +336,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 176,
@@ -350,7 +351,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 179,
@@ -363,7 +366,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 182,
@@ -376,7 +381,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 24,
@@ -397,7 +404,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 183,
@@ -410,7 +419,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 184,
@@ -423,7 +434,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 185,
@@ -436,7 +449,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 186,
@@ -449,7 +464,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 187,
@@ -462,7 +479,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": true,
+                            "custom_event_path": "/events/open-spaces"
                         }
                     ],
                     "5-r1": [
@@ -477,7 +496,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 266,
@@ -490,7 +511,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "EXPERIENCED",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 241,
@@ -503,7 +526,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "EXPERIENCED",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 228,
@@ -516,7 +541,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 264,
@@ -529,7 +556,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 255,
@@ -542,7 +571,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 224,
@@ -555,7 +586,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "1-r3": [
@@ -570,7 +603,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 12,
@@ -583,7 +618,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "4-r0-2": [
@@ -598,7 +635,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 271,
@@ -611,7 +650,9 @@
                             "recording_policy": false,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 13,
@@ -624,7 +665,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 12,
@@ -637,7 +680,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 259,
@@ -650,7 +695,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "4-r0": [
@@ -665,7 +712,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 262,
@@ -678,7 +727,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 260,
@@ -691,7 +742,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 258,
@@ -704,7 +757,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 261,
@@ -717,7 +772,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "EXPERIENCED",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 227,
@@ -730,7 +787,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "6-r2": [
@@ -745,7 +804,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 243,
@@ -758,7 +819,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 223,
@@ -771,7 +834,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 249,
@@ -784,7 +849,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 233,
@@ -797,7 +864,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 254,
@@ -810,7 +879,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "4-r0-1": [
@@ -825,7 +896,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 236,
@@ -838,7 +911,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 257,
@@ -851,7 +926,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 248,
@@ -864,7 +941,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 244,
@@ -877,7 +956,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 231,
@@ -890,7 +971,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "3-r012": [
@@ -905,7 +988,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 178,
@@ -918,7 +1003,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 180,
@@ -931,7 +1018,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 181,
@@ -944,7 +1033,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "5-r1-1": [
@@ -959,7 +1050,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 229,
@@ -972,7 +1065,9 @@
                             "recording_policy": true,
                             "language": "JPEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 267,
@@ -985,7 +1080,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "5-r1-2": [
@@ -1000,7 +1097,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "6-r2-1": [
@@ -1015,7 +1114,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 232,
@@ -1028,7 +1129,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 238,
@@ -1041,7 +1144,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ]
                 },
@@ -1077,7 +1182,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 189,
@@ -1090,7 +1197,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 25,
@@ -1111,7 +1220,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 190,
@@ -1124,7 +1235,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 192,
@@ -1137,7 +1250,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 195,
@@ -1150,7 +1265,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 196,
@@ -1163,7 +1280,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 201,
@@ -1176,7 +1295,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": true,
+                            "custom_event_path": "/events/open-spaces"
                         },
                         {
                             "event_id": 197,
@@ -1189,7 +1310,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 198,
@@ -1202,7 +1325,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 199,
@@ -1215,7 +1340,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 200,
@@ -1228,7 +1355,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": false
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "1-r3": [
@@ -1243,7 +1372,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 11,
@@ -1256,7 +1387,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "5-r1-1": [
@@ -1271,7 +1404,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 253,
@@ -1284,7 +1419,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "5-r1": [
@@ -1299,7 +1436,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 225,
@@ -1312,7 +1451,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 252,
@@ -1325,7 +1466,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "6-r2-1": [
@@ -1340,7 +1483,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 269,
@@ -1353,7 +1498,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "6-r2": [
@@ -1368,7 +1515,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 226,
@@ -1381,7 +1530,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 256,
@@ -1394,7 +1545,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 268,
@@ -1407,7 +1560,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "3-r012": [
@@ -1422,7 +1577,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 193,
@@ -1435,7 +1592,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 194,
@@ -1448,7 +1607,9 @@
                             "recording_policy": true,
                             "language": "",
                             "python_level": "",
-                            "break_event": true
+                            "break_event": true,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "4-r0": [
@@ -1463,7 +1624,9 @@
                             "recording_policy": true,
                             "language": "ENEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 237,
@@ -1479,7 +1642,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         },
                         {
                             "event_id": 242,
@@ -1492,7 +1657,9 @@
                             "recording_policy": false,
                             "language": "ZHEN",
                             "python_level": "INTERMEDIATE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ],
                     "4-r0-1": [
@@ -1507,7 +1674,9 @@
                             "recording_policy": true,
                             "language": "ZHEN",
                             "python_level": "NOVICE",
-                            "break_event": false
+                            "break_event": false,
+                            "custom_event": false,
+                            "custom_event_path": ""
                         }
                     ]
                 },
@@ -2186,6 +2355,40 @@
             "is_remote": false,
             "location": "6-r2",
             "event_type": "talk"
+        }
+    ],
+    "reviewers": [
+        {
+            "full_name": "蘇文鈺",
+            "bio": "在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。 \r\n\r\n標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。",
+            "photo_url": "",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        },
+        {
+            "full_name": "馬誼郎",
+            "bio": "出生於南非的美國企業家 \r\n\r\n出生於南非的美國企業家出生於南非的美國企業家出生於南非的美國企業家",
+            "photo_url": "",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        },
+        {
+            "full_name": "GTB",
+            "bio": "GTB is a security researcher and open-source enthusiast from Taiwan. A paranoid Pythonista and CPython contributor who now focuses on Android reverse engineering and malware analysis. And as a member of the PyCon Taiwan Program Committee, previously presented at Black Hat, DEFCON, HITB, ROOTCON, GrayHat, PyCon Europe/TW/KR/MY/IN. He’s the co-founder of Quark-Engine and the Quark package maintainer on Kali Linux, leading Quark to participate in the GSoC under the Honeynet Project since 2021.",
+            "photo_url": "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/xiAfNVQ.jpeg",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
+        },
+        {
+            "full_name": "Yucheng",
+            "bio": "I'm a successful business man. Better than Mark.",
+            "photo_url": "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/xiAfNVQ.jpeg",
+            "facebook_profile_url": "https://google.com",
+            "twitter_profile_url": "https://google.com",
+            "github_profile_url": "https://google.com"
         }
     ]
 }
