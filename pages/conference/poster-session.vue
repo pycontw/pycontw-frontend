@@ -11,7 +11,9 @@
             <core-h2 :title="$t('location.title')"></core-h2>
             <i18n path="location.description" tag="p"> </i18n>
             <core-h2 :title="$t('time.title')"></core-h2>
-            <i18n path="time.description.main" tag="p"> </i18n>
+            <i18n path="time.description.main" tag="p">
+                <template #br><br /></template>
+            </i18n>
             <i18n path="time.description.sub" tag="p"> </i18n>
             <core-h2 :title="$t('posters.title')"></core-h2>
             <div class="poster-session__container">
@@ -56,6 +58,23 @@
                     </div>
                 </article>
             </div>
+            <br />
+            <core-h2 :title="$t('announcement.title')"></core-h2>
+            <i18n path="announcement.description" tag="p">
+                <template #link>
+                    <a
+                        href="/about/code-of-conduct"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-primary-500 underline"
+                    >
+                        {{
+                            $t('announcement.codeOfConduct') ||
+                            'code of conduct'
+                        }}
+                    </a>
+                </template>
+            </i18n>
         </i18n-page-wrapper>
         <transition name="fade">
             <modal v-if="isOpened" v-model="isOpened">
