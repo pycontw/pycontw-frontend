@@ -5,6 +5,8 @@
         </div>
         <div class="default-layout__body">
             <Nuxt keep-alive :keep-alive-props="{ include: includeArr }" />
+        </div>
+        <div class="default-layout__footer">
             <core-footer />
         </div>
     </div>
@@ -132,7 +134,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 html {
     @apply bg-black-900 font-sans text-primary-100;
     font-size: 20px;
@@ -149,6 +151,16 @@ html {
 *::after {
     box-sizing: border-box;
     margin: 0;
+}
+
+.default-layout:has(.scheduleHeader) {
+    width: fit-content;
+
+    .default-layout__footer,
+    .scheduleHeader {
+        @apply sticky left-0;
+        width: 100vw;
+    }
 }
 
 .default-layout__header {
