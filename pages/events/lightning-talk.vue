@@ -25,12 +25,6 @@
                     </i18n>
                 </template>
                 <template #right-col>
-                    <img
-                        v-if="openSpace.tag === 'location'"
-                        :src="
-                            require(`~/static/img/events/overview/open-space-location.png`)
-                        "
-                    />
                     <div v-if="openSpace.isEmphasis">
                         <strong>
                             <i18n
@@ -186,11 +180,9 @@ export default {
                 },
                 {
                     tag: 'FAQ',
-                    isDescriptionList: true,
                 },
                 {
                     tag: 'notes',
-                    isDescriptionList: true,
                     links: [
                         {
                             slot: 'codeOfConduct',
