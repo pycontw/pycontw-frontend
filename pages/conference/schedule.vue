@@ -1,16 +1,18 @@
 <template>
     <div class="pb-4 pt-20">
-        <core-h1 :title="$t('Schedule')"></core-h1>
-        <div class="scheduleDayTabs">
-            <schedule-day-tab
-                v-for="(day, i) in days"
-                :key="$makeKey(i, 'schedule_day_tab')"
-                :index="i"
-                :active="selectedDayIndex === i"
-                @click.native="selectDayTab(i)"
-            >
-                {{ day.label }}
-            </schedule-day-tab>
+        <div class="scheduleHeader">
+            <core-h1 :title="$t('Schedule')"></core-h1>
+            <div class="scheduleDayTabs">
+                <schedule-day-tab
+                    v-for="(day, i) in days"
+                    :key="$makeKey(i, 'schedule_day_tab')"
+                    :index="i"
+                    :active="selectedDayIndex === i"
+                    @click.native="selectDayTab(i)"
+                >
+                    {{ day.label }}
+                </schedule-day-tab>
+            </div>
         </div>
         <div class="font-serif">
             <schedule-grid
