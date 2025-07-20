@@ -69,6 +69,14 @@
                                         :path="`contents.${i}.subtitle.${subtitleIndex}.descriptions.${subtitleDescriptionIndex}`"
                                         tag="p"
                                     >
+                                        <template #reportingEmail>
+                                            <ext-link
+                                                href="mailto:report@python.tw"
+                                                highlight
+                                            >
+                                                report@python.tw
+                                            </ext-link>
+                                        </template>
                                         <template #process>
                                             <ext-link
                                                 href="https://github.com/python/pycon-code-of-conduct/blob/master/Attendee%20Procedure%20for%20incident%20handling.md"
@@ -119,6 +127,7 @@
                                         ) in subtitle.endings"
                                         :key="`coc.${i}.subtitle.${subtitleIndex}.endings.${subtitleEndingIndex}`"
                                         :path="`contents.${i}.subtitle.${subtitleIndex}.endings.${subtitleEndingIndex}`"
+                                        class="pt-2"
                                         tag="p"
                                     >
                                     </i18n>

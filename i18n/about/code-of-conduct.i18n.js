@@ -54,21 +54,69 @@ export default genI18nMessages({
             {
                 title: 'Violation and Reporting',
                 descriptions: [
-                    'Conference organizers will take appropriate actions on behaviors violating the Code of Conduct. Violators may be required to leave the conference without a refund at the sole discretion of the organizers. This Code of Conduct is applicable to both physical and online events approved by the organizers of PyCon Taiwan.',
+                    'The organizing team reserves the right to take action on any behavior that violates this Code of Conduct. Based solely on the judgment of the organizing team, individuals who violate the Code may be required to leave the venue (including digital spaces) without a refund. A full list of possible consequences for violations is outlined in the “Response Procedures” document.',
                 ],
                 subtitle: [
                     {
                         title: 'Requirements',
                         descriptions: [
-                            'If you believe someone is in danger, including from themselves, the most important thing is to find help. If you feel your safety is in jeopardy, please immediately contact law enforcement in Taiwan (dialing 110 in Taiwan). Ask an organizing staff if you do not have a cell phone. If you believe the Code of Conduct has been violated, please report the incident to a staff member right away. If you are unsure whether it is a violation, or whether the space where it has happened is covered by this Code of Conduct, we encourage you to still report it.',
+                            'PyCon Taiwan is committed to the safety and respect of every participant, and strives to provide a safe and inclusive environment for all.',
+                        ],
+                    },
+                    {
+                        title: 'Immediate Response to Emergencies',
+                        descriptions: [
+                            'If you or someone else is in a situation that poses an immediate threat to personal safety, please take the following actions:',
+                        ],
+                        list: [
+                            'Leave the area as quickly as possible to ensure your own safety.',
+                            'If the situation allows, you may verbally stop the inappropriate behavior and inform the other party that you will begin recording (audio or video) to protect yourself.',
+                            'If there is a personal threat involved, please dial 110 to contact the Taiwan police immediately.',
+                            'If you need on-site assistance, please look for staff members wearing PyCon Taiwan identification clothing or go to the information desk for support.',
+                        ],
+                        endings: [
+                            'Regardless of whether you are directly involved in an incident, any participant may help report or intervene in inappropriate behavior. Everyone is encouraged to contribute to maintaining a safe and welcoming community with a proactive and respectful attitude.',
+                        ],
+                    },
+                    {
+                        title: 'Principles and Recommendations for Reporting Incidents',
+                        descriptions: [
+                            'Even if you are unsure whether an incident constitutes a violation of the Code of Conduct or whether it occurred within the scope of the Code, we still encourage you to file a report. Your report can help us clarify the facts and ensure the matter is handled appropriately.',
+                            'You are not required to determine whether the incident qualifies as a violation, nor are you responsible for making any judgments or decisions that follow. Even if you were only a bystander, you are equally entitled to report the incident.',
+                        ],
+                    },
+                    {
+                        title: 'Reporting Methods and Flexible Handling',
+                        descriptions: [
+                            'We offer a variety of flexible reporting options to respect the privacy and preferences of the reporter:',
+                        ],
+                        list: [
+                            'You may choose to report anonymously, under your name, or provide partial information only',
+                            'You may choose whether or not to receive follow-up responses.',
+                            'Reporting channels include: online forms, email, or referral through on-site staff.',
+                        ],
+                        endings: [
+                            'If you experience or witness any behavior or speech during the event or preparation period that makes you feel uncomfortable—regardless of whether the incident is clear or severe—we welcome you to reach out to us.',
+                            'We believe that every report is an act of care and contribution to the community environment.',
                         ],
                     },
                     {
                         title: 'How to Report',
                         descriptions: [
-                            'In the event of a conflict of interest, feel free to contact the official lead incident responders directly:',
-                            'Committee of Incident Response, PyCon Taiwan (report@python.tw)',
+                            'Primary official incident response reporting email: {reportingEmail}',
+                            'This email address is managed by the PyCon Taiwan Incident Response Committee. The responsible members are:',
                         ],
+                        list: ['Rex Wu', 'Andy'],
+                        endings: [
+                            'We encourage you to report any conflicts or uncomfortable situations as soon as possible via email. You may choose to report with your name or anonymously, and the content of the report may include only partial information. The committee will handle each report with respect and confidentiality.',
+                        ],
+                    },
+                    {
+                        title: 'Conflict of Interest Handling',
+                        descriptions: [
+                            'If the incident you are reporting involves any of the above committee members, or if you feel uncomfortable communicating with the individuals responsible for the official email address, you may also report directly to the following alternative official incident responders:',
+                        ],
+                        list: ['Rex Wu', 'Andy', 'Rock'],
                     },
                     {
                         title: 'Report Data',
@@ -89,22 +137,49 @@ export default genI18nMessages({
                     {
                         title: 'Procedure',
                         descriptions: [
-                            'When you make a report to an incident responder, they will gather information about the incident according to the Procedure For Incident Response. After an incident responder takes the report, they will immediately consult with the PyCon Taiwan staff, unless there is a conflict of interest (involved directly with one of the PyCon Taiwan staff), in which case any non-interested parties will be contacted.',
-                            'If the incident is ongoing and needs to be immediately addressed, any lead incident responder may take appropriate action to ensure the safety of everyone involved. If the situation requires it, this may take the form of a referral to an appropriate non-PyCon agency, including the law enforcement in Taiwan.',
-                            'If the incident is less urgent, the report will be discussed by the event staff, who will meet to determine an appropriate response.',
+                            'When you report an incident to the incident responders, the incident responders will collect relevant information and coordinate with conference staff on how to handle the situation. If the reported content involves conference staff themselves or presents a conflict of interest, the incident responders will instead consult with parties who have no conflict of interest to handle the matter.',
+                            'If an incident is ongoing and requires immediate action, incident responders can take immediate action to ensure the safety of everyone on site. For non-emergency incidents, relevant personnel will convene a meeting to discuss appropriate response measures.',
+                            'Within approximately one week after the report, incident responders or the primary responsible person will proactively contact the reporter and provide a contact window. Subsequent contact content may include:',
+                        ],
+                        list: [
+                            'Confirmation that the incident has been accepted and discussed',
+                            'Whether the reported content involves violations of the code of conduct',
+                            'Measures that have been taken (if any)',
+                            'Further inquiries needed to clarify facts',
+                        ],
+                        endings: [
+                            'If circumstances are special or investigation needs to be delayed, the reporter will be proactively informed of the reason for delay and estimated timeline. We commit to ensuring that reporters receive necessary information and support while respecting the principle of confidentiality.',
+                        ],
+                    },
+                    {
+                        title: 'Response Measures',
+                        descriptions: [
+                            'Conference staff will formulate specific response measures. The following are examples of response measures that may occur after an incident is reported. This list includes but is not limited to the following, and the conference reserves the right to take any countermeasures deemed necessary:',
+                        ],
+                        list: [
+                            'If the behavior is determined by the conference discussion to not violate the code of conduct, no action is required.',
+                            'Depending on the severity, moral persuasion, warning, removal from the event venue, or reporting to police for judicial handling.',
+                            "Temporarily or permanently canceling or restricting the reported person's eligibility to participate in PyCon TW related activities.",
+                            'Relevant incident handling documents will be recorded in the PyCon TW Code of Conduct Committee database after appropriate de-identification, accessible to committees of each year, and actually implemented in operations according to CoC provisions.',
+                            'The conference will announce the reported incident and handling content.',
+                            "The conference will protect the reporter's personal information and make every effort to provide relevant resources to assist the subject of the behavior in proper handling.",
                         ],
                     },
                     {
                         title: 'Confidentiality',
                         descriptions: [
-                            'All reports are confidential. When we discuss incidents with people who are reported, we will anonymize details as much as we can to protect the reporter’s privacy. However, the reported person may be able to guess who made the report in certain situations, even with details anonymized. If you have concerns about retaliation or your personal safety, please note those in your report. We still encourage you to report, so that we can support you while keeping our conference attendees safe. In some cases, we can compile several anonymized reports into a pattern of behavior, and take action based on these reports.',
-                            'In certain cases, we may determine that a public statement needs to be made. In such cases, the identities of all victims and reporters will remain confidential unless the individuals involved instruct us otherwise.',
+                            "All reported content will be kept confidential. When we discuss reported incidents with the reported person, we will anonymize the incident details as much as possible to protect the reporter's privacy.",
+                            'However, some incidents occur in one-on-one interactions, and even if we anonymize the incident details, the reported person may still be able to guess who reported them. If you are concerned about retaliation or personal safety, please note this in your report. In some cases, we will translate multiple anonymous reports into a behavioral pattern and take action against that behavior.',
+                            'In some circumstances, we may need to issue a public statement, but we will still hide your personal information to protect your privacy.',
                         ],
                     },
                     {
                         title: 'Notes',
                         descriptions: [
-                            'This procedure has been adapted from the {process}',
+                            'This procedure has been adapted from',
+                            '{process}',
+                            '{cococo}',
+                            '{pyconUsCoc}',
                         ],
                     },
                 ],
@@ -123,6 +198,8 @@ export default genI18nMessages({
         },
         terms: {
             process: 'PyCon Procedure for Incident Handling',
+            cococo: 'CoCoCo - COSCUP Code of Conduct',
+            pyconUsCoc: 'PyCon US Code of Conduct',
             license: 'Attribution-ShareAlike 3.0 Taiwan',
         },
     },
@@ -223,10 +300,10 @@ export default genI18nMessages({
                     {
                         title: '如何通報',
                         descriptions: [
-                            '主要官方通報應變者通報信箱：report@python.tw',
+                            '主要官方通報應變者通報信箱：{reportingEmail}',
                             '此信箱由 PyCon Taiwan 事件通報應變委員會負責管理，負責人員為：',
                         ],
-                        list: ['陳中中', '林小小', '.......'],
+                        list: ['Rex Wu', 'Andy'],
                         endings: [
                             '我們鼓勵您在遇到衝突或不適情境時，儘快透過電子郵件通報。您可以選擇具名或匿名通報，通報內容亦可僅提供部分資訊，委員會將以尊重與保密原則處理每一件回報。',
                         ],
@@ -236,11 +313,7 @@ export default genI18nMessages({
                         descriptions: [
                             '若您通報的事件涉及上述委員會成員，或您認為無法安心與信箱負責人員溝通，您也可以直接聯繫下列其他官方通報應變者進行通報：',
                         ],
-                        list: [
-                            '本年度主席：XXX xxx@xxx.com',
-                            '陳中中（男）電子郵件：xxxx@xxxx.com',
-                            '林小小（女）電子郵件：xxxx@xxxx.com',
-                        ],
+                        list: ['Rex Wu', 'Andy', 'Rock'],
                         endings: [
                             '我們致力於提供一個多元、安全、開放的環境，所有通報都將嚴格遵守保密與尊重原則進行處理。如您有任何疑問，亦歡迎事前諮詢我們的志工或相關負責人。',
                         ],
