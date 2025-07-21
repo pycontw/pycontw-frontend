@@ -33,7 +33,8 @@ export const state = () => ({
             // 'tutorials',
             'panelDiscussion',
         ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
-        eventsHideItems: ['openSpaces', 'jobs'], // ['sprints', 'openSpaces', 'jobs', 'lightningTalk']
+
+        eventsHideItems: ['jobs'], // ['sprints', 'openSpaces', 'jobs']
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: ['venueInfo', 'accommodation'], // ['venueInfo', 'accommodation']
     },
