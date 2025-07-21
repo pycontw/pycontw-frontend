@@ -12,7 +12,7 @@
             <slot name="prepend"></slot>
         </div>
         <div class="scheduleEvent__context">
-            <div class="scheduleEvent__title">
+            <div :lang="getTitleLang(value)" class="scheduleEvent__title">
                 {{ getValueByLocale(value.title) }}
             </div>
             <br v-if="!isBreakEvent" />
@@ -166,6 +166,12 @@ export default {
             }
             return data
         },
+        getTitleLang(data) {
+            if (data.language.includes('EN')) {
+                return 'en'
+            }
+            return ''
+        },
     },
 }
 </script>
@@ -177,6 +183,8 @@ export default {
 
 .scheduleEvent__title {
     @apply font-bold;
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .scheduleEvent__icon > img {
