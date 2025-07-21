@@ -31,10 +31,11 @@ export const state = () => ({
             // 'keynotes',
             // 'talks',
             // 'tutorials',
-            // 'panelDiscussion',
-        ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion']
-
+            'panelDiscussion',
+            // 'posterSession',
+        ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion', 'posterSession']
         eventsHideItems: ['jobs'], // ['sprints', 'openSpaces', 'jobs']
+
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: ['venueInfo', 'accommodation'], // ['venueInfo', 'accommodation']
     },
