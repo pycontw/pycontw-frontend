@@ -13,7 +13,7 @@ export const state = () => ({
     configs: {
         conferenceName: 'PyCon TW',
         conferenceYear: '2025',
-        conferenceDate: '2024-09-21',
+        conferenceDate: '2025-09-06',
         showAboutStaffPage: false,
         showConferencePage: true,
         showSchedulePage: true,
@@ -34,7 +34,8 @@ export const state = () => ({
             'panelDiscussion',
             // 'posterSession',
         ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion', 'posterSession']
-        eventsHideItems: ['openSpaces', 'jobs'], // ['sprints', 'openSpaces', 'jobs']
+        eventsHideItems: ['jobs'], // ['sprints', 'openSpaces', 'jobs']
+
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: ['venueInfo', 'accommodation'], // ['venueInfo', 'accommodation']
     },

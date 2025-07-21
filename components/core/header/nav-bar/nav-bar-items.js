@@ -24,6 +24,7 @@ export default Object.freeze({
         { i18nKey: 'sprints', value: '/events/sprints' },
         { i18nKey: 'openSpaces', value: '/events/open-spaces' },
         { i18nKey: 'jobs', value: '/events/jobs' },
+        { i18nKey: 'lightningTalk', value: '/events/lightning-talk' },
     ],
     registration: [
         { i18nKey: 'tickets', value: '/registration/tickets' },
