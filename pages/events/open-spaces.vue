@@ -34,6 +34,7 @@
                             require('~/static/img/events/overview/open-space-extra.png')
                         "
                     />
+                    <br v-if="openSpace.tag === 'location'" />
                     <div v-if="openSpace.isEmphasis">
                         <strong>
                             <ul class="emphasis-list">
