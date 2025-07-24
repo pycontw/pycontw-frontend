@@ -299,11 +299,16 @@
                             "speakers": [],
                             "begin_time": "2022-09-03T00:30:00Z",
                             "end_time": "2022-09-03T00:50:00Z",
-                            "is_remote": false, "recording_policy": true, "language": "", "python_level": "",
+                            "is_remote": false,
+                            "recording_policy": true,
+                            "language": "",
+                            "python_level": "",
                             "break_event": true,
                             "custom_event": false,
                             "custom_event_path": ""
-                        }, { "event_id": 175,
+                        },
+                        {
+                            "event_id": 175,
                             "event_type": "custom",
                             "title": "Opening",
                             "speakers": [],
@@ -2359,36 +2364,396 @@
     ],
     "reviewers": [
         {
-            "full_name": "蘇文鈺",
-            "bio": "在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。 \r\n\r\n標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。",
-            "photo_url": "",
-            "facebook_profile_url": "https://google.com",
-            "twitter_profile_url": "https://google.com",
-            "github_profile_url": "https://google.com"
+            "full_name": "柯維然",
+            "bio": "穿上制服是個菜鳥警官，忙於勤務與警政工作；脫下制服是個熱愛用數據與程式解決問題的資料戰警；目前服務於新竹市警察局，並於交通大學資訊工程研究所攻讀博士班，主要研究方向為深度生成模型、機率模型等\r\n\r\n技術部落格：https://odie2630463.github.io",
+            "photo_url": "/prs/media/cache/55/6a/556a545ec8e13308227429fdb6de85d1.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/odie2630463"
         },
         {
-            "full_name": "馬誼郎",
-            "bio": "出生於南非的美國企業家 \r\n\r\n出生於南非的美國企業家出生於南非的美國企業家出生於南非的美國企業家",
-            "photo_url": "",
-            "facebook_profile_url": "https://google.com",
-            "twitter_profile_url": "https://google.com",
-            "github_profile_url": "https://google.com"
+            "full_name": "Zong-han, Xie",
+            "bio": "Sr. Data Scientist in a semiconductor manufacturing company. I build and enhance data pipelines / systems for data collection, data search(5 billion records) and automatic data mining. I also build up machine learning algorithms to automatically cluster wafers with similar failure signatures or search wafers with signatures in large volume of data.",
+            "photo_url": "/prs/media/cache/1e/72/1e72ad3d63324be74c450102accfbadd.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/zonghantw",
+            "github_profile_url": "https://github.com/xingularity"
         },
         {
-            "full_name": "GTB",
-            "bio": "GTB is a security researcher and open-source enthusiast from Taiwan. A paranoid Pythonista and CPython contributor who now focuses on Android reverse engineering and malware analysis. And as a member of the PyCon Taiwan Program Committee, previously presented at Black Hat, DEFCON, HITB, ROOTCON, GrayHat, PyCon Europe/TW/KR/MY/IN. He’s the co-founder of Quark-Engine and the Quark package maintainer on Kali Linux, leading Quark to participate in the GSoC under the Honeynet Project since 2021.",
-            "photo_url": "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/xiAfNVQ.jpeg",
-            "facebook_profile_url": "https://google.com",
-            "twitter_profile_url": "https://google.com",
-            "github_profile_url": "https://google.com"
+            "full_name": "Ying-Jer Kao",
+            "bio": "Professor, Department of Physics, National Taiwan University\r\n\r\nResearch interests: computational physics, Monte Carlo simulations, GPU computing",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/yingjer.kao",
+            "twitter_profile_url": "https://twitter.com/spinon",
+            "github_profile_url": "https://github.com/yingjerkao"
         },
         {
-            "full_name": "Yucheng",
-            "bio": "I'm a successful business man. Better than Mark.",
-            "photo_url": "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/xiAfNVQ.jpeg",
-            "facebook_profile_url": "https://google.com",
-            "twitter_profile_url": "https://google.com",
-            "github_profile_url": "https://google.com"
+            "full_name": "Willy Kuo",
+            "bio": "I was a Data Scientist and Web Developer. I'm now the Chef Architect of Linker Networks Inc. and currently soaked in Docker and Cluster management things.",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/waitingkuo",
+            "github_profile_url": "https://github.com/waitingkuo"
+        },
+        {
+            "full_name": "Kilik Kuo",
+            "bio": "改變自己先, 影響世界後.\r\n\r\nhttps://www.linkedin.com/in/kilik-kuo-3923a454/",
+            "photo_url": "/prs/media/cache/4d/44/4d44f605f1b5bfe6d32e3c276bcb7755.jpg",
+            "facebook_profile_url": "https://www.facebook.com/kilik.kuo",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/kilikkuo"
+        },
+        {
+            "full_name": "Jimmy Lai",
+            "bio": "Jimmy Lai is a Software Engineer in Instagram Infrastructure. His recent interest is Python efficiency, including profiling, optimization and asyncio. He has been sharing his experiences in PyCon Taiwan since 2012. This year, he plan to share his automated refactoring experience on large scale Python codebase.",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/jimmylai"
+        },
+        {
+            "full_name": "petertc",
+            "bio": "http://hrchu.github.io/",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/okwapA700",
+            "github_profile_url": "https://github.com/hrchu"
+        },
+        {
+            "full_name": "Yung-Yu Chen",
+            "bio": "HPC software developer.",
+            "photo_url": "/prs/media/cache/05/12/051212ee9240243a869c8641f497bec2.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/yungyuc",
+            "github_profile_url": "https://github.com/yungyuc"
+        },
+        {
+            "full_name": "陳皓遠",
+            "bio": "熱愛利用數據、程式、演算法來解決問題的 Python Developer。\r\n\r\n目前任職於中國信託商業銀行數據暨科技研發處，協助金融機構面對數位轉型下的挑戰。",
+            "photo_url": "/prs/media/cache/ad/dc/addc34058d76b46d2aad7b79fc7efa3d.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "David Chen",
+            "bio": "GliaCloud founder and coorganizer of GCPUG. Gliacloud is a startup focus on AI and data analysis.\r\n\r\nI like coding, ramen. and skiing. Most of time, I involve in python coding in Google Cloud Platform for big data processing and cloud architect designing. It is my pleasure to join pycon with lots of passion community members.",
+            "photo_url": "/prs/media/cache/9c/e6/9ce63472904b6beb98ad6f4de380c8fb.jpg",
+            "facebook_profile_url": "https://www.facebook.com/lucemia",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/lucemia"
+        },
+        {
+            "full_name": "Shuen-Huei Guan",
+            "bio": "This is Drake. I started Python journey, fortunately, from computer animation industry, which is rare in Taiwan. I enjoyed the language, the ecosystem and the community a lot, which led me to PyCon Taiwan.\r\n\r\nPython developer, evangelist, lecturer, PyCon TW/APAC committee member, and movie lover, those are what roles I've been playing with.\r\n\r\nOh, and I love Python :)",
+            "photo_url": "/prs/media/cache/5b/81/5b816cddee2d20b507d57779bce7e155.jpg",
+            "facebook_profile_url": "https://www.facebook.com/drake.guan",
+            "twitter_profile_url": "https://twitter.com/drakeguan",
+            "github_profile_url": "https://github.com/drakeguan"
+        },
+        {
+            "full_name": "蔡信邦",
+            "bio": "就是議程組的Derick。目前是全端工程師，對工作羽球排球電動以及吃吃吃有興趣",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/derick0823"
+        },
+        {
+            "full_name": "徐愷",
+            "bio": "喜歡科技的小小工程師",
+            "photo_url": "/prs/media/cache/43/76/4376632506bf7f3da524150187e7afe6.jpg",
+            "facebook_profile_url": "https://www.facebook.com/kkshyu",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/kkshyu"
+        },
+        {
+            "full_name": "Kuo-tung Kao",
+            "bio": "活躍於 python 社群，也經常在各個 conference 演講。演講過 OpenStack, Ceph,Docker, Python source code 等相關主題。",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/kjelly"
+        },
+        {
+            "full_name": "Rex Tsai",
+            "bio": "http://about.me/chihchun",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/chihchun",
+            "twitter_profile_url": "https://twitter.com/chihchun",
+            "github_profile_url": "https://github.com/chihchun"
+        },
+        {
+            "full_name": "Wei Lin",
+            "bio": "策略規劃 是專長，寫程式 是興趣，對知識的渴望 與 領悟的喜悅 是我永恆的動力。",
+            "photo_url": "/prs/media/cache/d5/c6/d5c618cb28c46d3c4cccf9e3be84f6b4.jpg",
+            "facebook_profile_url": "https://www.facebook.com/wei.lin.921025",
+            "twitter_profile_url": "https://twitter.com/Wei_1144",
+            "github_profile_url": "https://github.com/Wei1234c"
+        },
+        {
+            "full_name": "阿哲",
+            "bio": "對於推廣資訊領域有相當熱忱的高中資訊老師，也喜歡和大家交流",
+            "photo_url": "/prs/media/cache/a0/fb/a0fb6009b687d20587c4cf2a333edeb8.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/scott987"
+        },
+        {
+            "full_name": "陳俊嘉",
+            "bio": "ccc",
+            "photo_url": "/prs/media/cache/6b/74/6b74082216bfcbcb7e83e23a93d96cf2.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "曾君宇",
+            "bio": "Joe (就是那個最近一直沒有好好辦台南拍的傢伙 QQ)",
+            "photo_url": "/prs/media/cache/82/d2/82d23fd0d510ffd9e682b2efc95fb9e0.jpg",
+            "facebook_profile_url": "https://www.facebook.com/excusemejoe",
+            "twitter_profile_url": "https://twitter.com/excusemejoe",
+            "github_profile_url": "https://github.com/devjoe"
+        },
+        {
+            "full_name": "JunWei Song",
+            "bio": "JunWei is a malware researcher at Recorded Future Triage Sandbox. With a passion for malware analysis, reverse engineering, and threat intelligence. Also, I’ve been very involved in open-source projects, used to be the lead developer of Quark-Engine, mentor of the GSoC Honeynet project, and package maintainer of Kali Linux.\r\n\r\nAlso, as a volunteer for the PyCon APAC/TW Program Chair, I helped organize the PyCon Taiwan conference. I also gave talks at security conferences like Black Hat, DEFCON, HITB, and ROOTCON.",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/JunWei__Song",
+            "github_profile_url": "https://github.com/krnick"
+        },
+        {
+            "full_name": "廖偉涵 Adrian Liaw",
+            "bio": "高中三年都在家自學還可以延畢的高三自學生，用行動證明就連缺乏教育的屁孩也可以學會寫 Python，常常被嘴說現在的小朋友都怎樣怎樣的。\r\n\r\nAdrian is a guy who doesn't really know what he's doing and seriously needs some life advises. He's currently a high school student but not actually in a physical high school because of the lack of school that accepts him. Oh by the way he does Python.",
+            "photo_url": "/prs/media/cache/c2/2c/c22c2e10e811a593462dda8c54eb193e.jpg",
+            "facebook_profile_url": "http://fb.me/adrianliaw2000",
+            "twitter_profile_url": "https://twitter.com/adrianliaw2000",
+            "github_profile_url": "https://github.com/adrianliaw"
+        },
+        {
+            "full_name": "Ing Wei Tang",
+            "bio": "Ing Wei is the chair for PyCon MY 2019, the co-chair of PyCon MY 2018, and vice president of MyPOP. He has spoken in various PyCons, particularly in PyCon APAC 2018, as well as involving in PyCon communities actively in Malaysia.\r\n\r\nHe uses python a lot in his daily work, especially coding the automation process and flow. During his past time, he likes to experience and perform hacking different things on operating system level.\r\n\r\nApart from programming language, he can also speak 5 different types of languages concurrently in one sentence. Please ask for demo if time permits.",
+            "photo_url": "/prs/media/cache/95/89/9589ea26a4817aa4056611105f9ca927.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/tangingw"
+        },
+        {
+            "full_name": "Yu-Chen Shu",
+            "bio": "I am an associate professor in department of Mathematics, \r\nNational Cheng Kung University. I study in applied mathematics, interface problems, computational partial differential equations, and medical imaging. For the programming languages, I like C, python and matlab. Now I am working on parallel computing and data analysis. However, every subjects related to mathematics are welcome.",
+            "photo_url": "/prs/media/cache/ff/bd/ffbdd9584f96627aab1edb729531fa5e.jpg",
+            "facebook_profile_url": "https://www.facebook.com/yuchen.shu",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "Malo",
+            "bio": "由機構工程師轉職的韌體工程師，對IoT的議題感到很有興趣，平時工作因為大多接觸的是較低階的硬體，因此主要使用C語言，近二年開始接觸Python語言後，開始逐步把工作上的需求轉用Python來完成，希望在社群和更多同好一起開心的探索工業控制和IoT的領域。",
+            "photo_url": "/prs/media/cache/70/fe/70fefd47a4139e718a8938202337b1f5.jpg",
+            "facebook_profile_url": "https://www.facebook.com/yang.malo.5#_",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/maloyang"
+        },
+        {
+            "full_name": "趙元 (Yuan CHAO)",
+            "bio": "從事高能物理研究的自由軟體愛好者\r\nHigh energy physics researcher, OSS lover",
+            "photo_url": "/prs/media/cache/33/ca/33cae1ec12c9fa3a44a108271202f9f1.jpg",
+            "facebook_profile_url": "https://www.facebook.com/yuanchao",
+            "twitter_profile_url": "https://twitter.com/yuanchao",
+            "github_profile_url": "https://github.com/yuanchao"
+        },
+        {
+            "full_name": "Cheng-Lung Sung (宋政隆)",
+            "bio": "An Open Source developer and user for 10+ years.",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/clsung",
+            "github_profile_url": "https://github.com/clsung"
+        },
+        {
+            "full_name": "PeterWolf",
+            "bio": "Droidtown Linguistic Tech. Co. (卓騰語言科技) 創辦人兼核心開發者。\r\n\r\n平常開發基於語言學理論的中文斷詞(NLP)、中文語意處理(NLU)、自動語音處理、語音辨識、自然語言文本解析及資料探勘的演算法及前端應用。\r\n\r\n創業第一天就決心要做「百年企業」的那個男人！",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/pita.woof",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/Droidtown"
+        },
+        {
+            "full_name": "PeterWolf",
+            "bio": "Strong AI advocater, designer and practitioners.(TW: 強人工智慧倡議者、設計者與實作者。)",
+            "photo_url": "/prs/media/cache/c2/44/c244dd2fb4f2493f17d547c0cb59a1e1.jpg",
+            "facebook_profile_url": "https://www.facebook.com/pita.woof",
+            "twitter_profile_url": "https://twitter.com/PeterWolfTW",
+            "github_profile_url": "https://github.com/Droidtown"
+        },
+        {
+            "full_name": "Cicilia Chia-ying Lee",
+            "bio": "Pythoner, data scientist, NLP engineer.\r\n小西，李佳穎，一個喜歡自然語言處理的碼農。不喜歡蟒蛇，但寫python寫得蠻開心的。",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/aacs0130"
+        },
+        {
+            "full_name": "candy02058912",
+            "bio": "BIO",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "古宣佑 Hsuanyu",
+            "bio": "目前於Soocii任職後端工程師，對機器學習演算法有興趣，工作之餘，會拿工作上面臨的問題，當作練習的題目。\r\n之前曾經接觸過時間序列預測的模型開發，在學時期則是專注於自然語言處理(Sentiment Analysis)的相關研究。",
+            "photo_url": "/prs/media/cache/b2/75/b27538691bdd6969701170c901aded1f.jpg",
+            "facebook_profile_url": "https://www.facebook.com/matrix0415",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/matrix0415"
+        },
+        {
+            "full_name": "Rayyyyy",
+            "bio": "我是Ray",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "蘇羿豪",
+            "bio": "「開放天文 拉近群眾與星空的距離」\r\n透過創作故事、遊戲等有趣體驗來推動開放科學的公民天文學家/Astrohackers in Taiwan社群的共同創辦人/承接網站開發及資料科學相關案子的遠距工作者\r\nhttps://astrobackhacker.tw",
+            "photo_url": "/prs/media/cache/33/62/3362414ac150126cef422d032defd70a.jpg",
+            "facebook_profile_url": "https://www.facebook.com/elantievs",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/YihaoSu"
+        },
+        {
+            "full_name": "Justin",
+            "bio": "Hello world!",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "柯彣樺",
+            "bio": "擅長Django打造網頁",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/winniepopu",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/winniepopu"
+        },
+        {
+            "full_name": "Stanley Huang",
+            "bio": "PyConTW Volunteer",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "黃坤賢",
+            "bio": "台灣大學物理所博士後研究員",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "Max Lai",
+            "bio": "- Taichung.py 組織者\r\n\r\n- 在中部醫療機構擔任智慧醫療應用系統研發團隊之 Tech Lead\r\n\r\n- 研究領域是電腦視覺, 機器學習, Web程式開發, DDD 與敏捷軟體開發方法論",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/max.cc.lai",
+            "twitter_profile_url": "https://twitter.com/cclai999",
+            "github_profile_url": "https://github.com/cclai999"
+        },
+        {
+            "full_name": "Louie Lu",
+            "bio": "Greeting, I'm Louie Lu, from Taiwan.\r\n\r\nLouie Lu (Shao-Jung Lu) is a Software Engineer Intern at KKBOX, and was a Software Engineer at HopeBay Tech, where he does automation test for UI and API, with 3rd-party API development.\r\n\r\nHe has the experiment and interesting in IoT kernel development and system programmings, such as F9 microkernel and BitSec Hypervisor.\r\n\r\nAnd he is now trying to understand the internals of CPython, to see how CPython magically bring us Python to the world.\r\n\r\n\r\nYou can find me at: https://louie.lu\r\nAlso, the bpo-mergerate: https://bpo-mergerate.louie.lu",
+            "photo_url": "/prs/media/cache/c4/88/c48861247401609518973800224fd5d1.jpg",
+            "facebook_profile_url": "https://fb.me/louie.lu.180",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/mlouielu"
+        },
+        {
+            "full_name": "Jack Pan",
+            "bio": "喜歡用Python開發的工程師。有三年以上的機器學習經驗，特別是將其運用到金融相關的問題上。",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "Daisuke Saito",
+            "bio": "Daisuke Saito is a assistant professor of the School of Fundamental Science and Engineering, Waseda University in Japan. He acquired a Doctor of Engineering degree from Waseda University in Japan. His research interests include programming education and digital game-based learning.",
+            "photo_url": "/prs/media/cache/07/24/0724f2bc064177b8f3ff086526fef799.jpg",
+            "facebook_profile_url": "https://www.facebook.com/ds110.sai",
+            "twitter_profile_url": "https://twitter.com/_ds110",
+            "github_profile_url": "https://github.com/ds110"
+        },
+        {
+            "full_name": "Keith Yang",
+            "bio": "Keith 是台灣最大的 Python 使用者群組 Taipei.py 的共同創辦人、主辦人，也曾是 PyCon APAC 2015 的主席。從 2006 起，他的工作主要專注在 web／後端／雲端服務上。寫程式、爬山、旅行、打電動曾是他一半的生活，現在帶領團隊成為他 2023 的探索。滑板或圍巾是他的隨身配備。假如圍巾沒出現的話，有人會問我說今天 Keith 沒來喔？ \r\n●●● \r\nKeith is the co-founder and co-organizer of Taipei.py, the largest Python user group in Taiwan. He is a Lead Backend Engineer at iCHEF and served as Chairperson of PyCon APAC 2015. Since 2006, his work has mostly focused on web, backend, and cloud services. Coding, hiking, traveling, and video games were half of his life; now, team leading is his 2023 quest. A skateboard or a scarf are essential items in his life. If the scarf isn't present, someone could ask, \"Is Keith absent today?\"",
+            "photo_url": "/prs/media/cache/0e/f7/0ef73766d8c3fcb0619c82119e72b9bb.jpg",
+            "facebook_profile_url": "https://www.facebook.com/keith.vs.yang",
+            "twitter_profile_url": "https://twitter.com/keitheis",
+            "github_profile_url": "https://github.com/keitheis"
+        },
+        {
+            "full_name": "Shuhsi Lin",
+            "bio": "Experienced professional with a proven track record in designing scalable and robust data architectures and fostering a strong engineering culture. \r\n\r\nSkilled in leading high-performance teams to deliver effective data solutions using DataOps principles. Currently focused on enhancing developer experience.",
+            "photo_url": "/prs/media/cache/0e/b7/0eb74e292a2bcb6be9519c8d76faae30.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/ShuhsiLin",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "Michelle Leu",
+            "bio": "Django Girls Taipei Organizer，致力於讓更多女孩愛上寫程式這件事。\r\n目前在 GliaCloud 當個小小工程師和不專業泡茶師。",
+            "photo_url": "/prs/media/cache/32/43/324300a30d3db9e32a9d89a9846ad520.jpg",
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/flywindy",
+            "github_profile_url": "https://github.com/flywindy"
+        },
+        {
+            "full_name": "李唯 (Wei Lee)",
+            "bio": "Wei Lee is an open-source ethicist. He is currently an Apache Airflow committer, a maintainer of commitizen-tools, and a PyCon Taiwan volunteer. As a lazy engineer, Wei is passionate about automating tasks using Python. When he is not working, Wei enjoys exploring the world through travel. Attending PyCon events gives him the perfect opportunity to do so. Wei has already attended PyCon TW 🇹🇼, PyCon US 🇺🇸, PyCon JP 🇯🇵, PyCon CA 🇨🇦, Euro Python 🇪🇺 (remotely 🥲) and Remote Python Pizza 🍕 (remotely 🥲).\r\n\r\nPersonal Website: https://wei-lee.me/\r\nTwitter: @clleew",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "https://twitter.com/clleew",
+            "github_profile_url": "https://github.com/Lee-W"
+        },
+        {
+            "full_name": "Jian-Ming Huang",
+            "bio": "Jian-Ming Huang",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": ""
+        },
+        {
+            "full_name": "Tzu-ping Chung",
+            "bio": "TP builds his career around open source software, and enjoys committing his efforts to help make the world better. He builds all kinds of software for a living, from embedded system to single-page web applications, and contributes to the community when he can.\r\n\r\nHe mainly works on Apache Airflow for Astronomer.io, and spends most offtime improving Python’s packaging landscape, organising PyCon Taiwan, and building software with Python and other modern technologies. He loves (human) languages, and knows probably too much about linguistics and phonetics to make him welcome in parties.\r\n\r\nTP 的職業生涯建立在開源軟體上，而喜歡花自己的精力讓這個世界更好。為了生活而寫過各式各樣的軟體，從嵌入式系統到 SPA 都是狩獵範圍，且只要有能力，就會盡量回饋社群。目前的主職是在 Astronomer.io 開發 Apache Airflow，空閒時間大多花在對 Python packaging 的改善、籌辦 PyCon Taiwan、以及使用 Python 與現代前端技術開發軟體和應用程式。他有點太喜歡（人類）語言，常常扯到太多語言學和語音學，讓聊天內容變得無聊。",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/uranusjr",
+            "twitter_profile_url": "https://twitter.com/uranusjr",
+            "github_profile_url": "https://github.com/uranusjr"
+        },
+        {
+            "full_name": "Maurice Ling",
+            "bio": "Research bioinformaticist with experiences in computer science, statistics and molecular biology. My work over the last decade spans across experimental biology, computer science and bioinformatics. My career goal in the long-term is to lead R&D teams in a large organization where there is a strong emphasis on collaborative research. I have a number of experiences in presenting my work and general science bilingually (English and Mandarin) to a variety of people, including undergraduate students, scientists and non-scientists. My portfolio is at https://mauriceling.github.io",
+            "photo_url": null,
+            "facebook_profile_url": "",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/mauriceling"
+        },
+        {
+            "full_name": "游騰林",
+            "bio": "I'm Teng-Lin Yu, a data scientist from Cathay Financial Holdings. I have over eight years of hands-on experience in data analysis and machine/deep learning models, having worked in the telecommunications and financial industries. I enjoy applying data science techniques to solve real-world problems rather than theoretical research. I also share my practical experience at technology conferences in my spare time. My ideal work style is to be a consultant, helping businesses improve operational performance by sharing my data science project experience and techniques. If you are interested in data science applications, please feel free to connect with me.",
+            "photo_url": null,
+            "facebook_profile_url": "https://www.facebook.com/tlyu0419",
+            "twitter_profile_url": "",
+            "github_profile_url": "https://github.com/tlyu0419"
         }
     ]
 }

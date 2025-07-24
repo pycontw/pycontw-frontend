@@ -33,9 +33,15 @@ export default genI18nMessages({
             title: 'Time',
             description: {
                 main:
-                    'Poster Presentation Dates: Sep. 6th - 7th, 2025' +
+                    'Poster Presentation Dates: ' +
+                    '{br}' +
+                    'Sep. 6th - 7th, 2025' +
                     '{br}{br}' +
-                    'Main Session Hour: 14:45－15:45 on Sep. 7th, 2025 (Day 2)',
+                    'Main Session Hour: ' +
+                    '{br}' +
+                    'Sep. 6th (Day 1): 12:00－13:20' +
+                    '{br}' +
+                    'Sep. 7th (Day 2): 14:45－15:45',
                 sub: 'Posters will be on exhibit throughout the conference, and attendees are welcome to visit at any time. During the main session hour, poster presenters will be present to explain their work and interact with attendees. If presenters are present outside the main session hour, feel free to engage in discussion.  Sticky notes will be available for leaving messages for the presenters.',
             },
         },
@@ -91,16 +97,16 @@ export default genI18nMessages({
                     summary:
                         '我們將宣傳開發者 Buffet 社群的月會和南部社群相關的開發者活動，志在建立開發者的閒聊交換資訊的線下聚會網路，我們認為面對面與小群體的聚會互動有助於幫助工程師們放鬆、交換新知和找到合作夥伴。',
                 },
-                {
-                    id: '6',
-                    name: 'Ricarido M. Saturay, Jr.',
-                    type: TypeTranslationEn[professional],
-                    community: '開發者 Buffet',
-                    topics: ['Machine Learning'],
-                    title: 'From topography to process: A Python toolkit for landscape evolution analysis',
-                    summary:
-                        'Python toolkit solves geomorphology inverse problem. It infers landscape-forming processes from topography using Landlab, NumPy, SciPy, NetworkX and, Scikit-learn',
-                },
+                // {
+                //     id: '6',
+                //     name: 'Ricarido M. Saturay, Jr.',
+                //     type: TypeTranslationEn[professional],
+                //     community: '開發者 Buffet',
+                //     topics: ['Machine Learning'],
+                //     title: 'From topography to process: A Python toolkit for landscape evolution analysis',
+                //     summary:
+                //         'Python toolkit solves geomorphology inverse problem. It infers landscape-forming processes from topography using Landlab, NumPy, SciPy, NetworkX and, Scikit-learn',
+                // },
                 {
                     id: '7',
                     name: 'John Lu',
@@ -142,7 +148,7 @@ export default genI18nMessages({
     },
     'zh-hant': {
         title: '海報展',
-        intro: 'Poster Session（海報展） 是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者現場互動的一種展示形式。在PyCon Taiwan 2024 我們初次嘗試 Poster Session 的活動，獲得廣大迴響，今年將繼續舉辦Poster Session，希望可以提供讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，並至Poster Session 活動現場共襄盛舉，讓與會者可與您直接交流。',
+        intro: 'Poster Session（海報展） 是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者現場互動的一種展示形式。在 PyCon Taiwan 2024 我們初次嘗試 Poster Session 的活動，獲得廣大迴響，今年將繼續舉辦 Poster Session，希望可以提供讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，並至 Poster Session 活動現場共襄盛舉，讓與會者可與您直接交流。',
         location: {
             title: '活動地點',
             description: '海報展將在臺北文創 6 樓 608 室舉行',
@@ -151,9 +157,15 @@ export default genI18nMessages({
             title: '活動時間',
             description: {
                 main:
-                    '海報展示日期：2025 年 09 月 06 日 - 09 月 07 日' +
+                    '- 海報展示日期：' +
+                    '{br}' +
+                    '2025 年 09 月 06 日 - 09 月 07 日' +
                     '{br}{br}' +
-                    '海報作者現場解說時段：2025 年 09 月 07 日(第二天) 14:45－15:45',
+                    '- 海報作者現場解說時段：' +
+                    '{br}' +
+                    '2025 年 09 月 06 日(第一天) 12:00－13:20' +
+                    '{br}' +
+                    '2025 年 09 月 07 日(第二天) 14:45－15:45',
                 sub: '海報將全天展示，歡迎與會者隨時參觀，亦可使用現場提供的便條紙留言給海報作者。現場解說時段中，海報作者將在場進行解說並和與會者互動；其他時段如遇作者在場，也歡迎與會者主動交流討論。',
             },
         },
@@ -209,16 +221,16 @@ export default genI18nMessages({
                     summary:
                         '我們將宣傳開發者 Buffet 社群的月會和南部社群相關的開發者活動，志在建立開發者的閒聊交換資訊的線下聚會網路，我們認為面對面與小群體的聚會互動有助於幫助工程師們放鬆、交換新知和找到合作夥伴。',
                 },
-                {
-                    id: '6',
-                    name: 'Ricarido M. Saturay, Jr.',
-                    type: TypeTranslationZhHant[professional],
-                    community: '開發者 Buffet',
-                    topics: ['機器學習'],
-                    title: 'From topography to process: A Python toolkit for landscape evolution analysis',
-                    summary:
-                        'Python toolkit solves geomorphology inverse problem. It infers landscape-forming processes from topography using Landlab, NumPy, SciPy, NetworkX and, Scikit-learn',
-                },
+                // {
+                //     id: '6',
+                //     name: 'Ricarido M. Saturay, Jr.',
+                //     type: TypeTranslationZhHant[professional],
+                //     community: '開發者 Buffet',
+                //     topics: ['機器學習'],
+                //     title: 'From topography to process: A Python toolkit for landscape evolution analysis',
+                //     summary:
+                //         'Python toolkit solves geomorphology inverse problem. It infers landscape-forming processes from topography using Landlab, NumPy, SciPy, NetworkX and, Scikit-learn',
+                // },
                 {
                     id: '7',
                     name: 'John Lu',

@@ -24,43 +24,48 @@
 
         <!-- 彈出視窗 -->
         <div v-if="selectedReviewer" class="modal" @click.self="closeModal">
-            <div class="modal-content">
+            <div class="modal-content relative z-10 flex flex-col">
+                <!-- 背景裝飾圖片 -->
                 <img
                     src="~@/static/img/reviewer/Clip-LR.svg"
-                    class="absolute left-0 top-[108px] rotate-0"
+                    class="absolute left-0 top-[108px] z-0 rotate-0"
                 />
                 <img
                     src="~@/static/img/reviewer/Clip-LR.svg"
-                    class="absolute right-0 top-[232px] rotate-180"
+                    class="absolute right-0 top-[232px] z-0 rotate-180"
                 />
                 <img
                     src="~@/static/img/reviewer/Clip-TB.svg"
-                    class="absolute right-[120px] top-0 rotate-0"
+                    class="absolute right-[120px] top-0 z-0 rotate-0"
                 />
                 <img
                     src="~@/static/img/reviewer/Clip-TB.svg"
-                    class="absolute bottom-0 left-[129px] rotate-180"
+                    class="absolute bottom-0 left-[129px] z-0 rotate-180"
                 />
                 <img
                     src="~@/static/img/reviewer/DE-01.svg"
-                    class="absolute left-[495px] top-[571px]"
+                    class="absolute left-[495px] top-[571px] z-0"
                 />
                 <img
                     src="~@/static/img/reviewer/DE-02.svg"
-                    class="absolute left-[514px] top-[105px]"
+                    class="absolute left-[514px] top-[105px] z-0"
                 />
                 <img
                     src="~@/static/img/reviewer/DE-03.svg"
-                    class="absolute left-[96px] top-[194px]"
+                    class="absolute left-[96px] top-[194px] z-0"
                 />
+
+                <!-- 關閉按鈕 -->
                 <button
-                    class="modal-close-button"
+                    class="modal-close-button z-20"
                     aria-label="關閉"
                     @click="closeModal"
                 >
                     ×
                 </button>
-                <div class="modal-content-header">
+
+                <!-- Reviewer 資訊 header -->
+                <div class="modal-content-header z-20 flex-shrink-0">
                     <img
                         class="selectedReviewerPhoto"
                         :src="getPhotoUrl(selectedReviewer)"
@@ -102,7 +107,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-content-body">
+
+                <!-- Reviewer 自我介紹 -->
+                <div
+                    class="modal-content-body relative z-20 max-h-[200px] min-h-0 flex-1 overflow-auto [-ms-overflow-style:none] [scrollbar-width:none]"
+                >
                     <p>{{ selectedReviewer.bio }}</p>
                 </div>
             </div>
@@ -208,7 +217,7 @@ export default {
 }
 
 .modal-content-body {
-    @apply mt-[62px] px-[57px];
+    @apply mt-[55px] px-[57px];
 }
 
 .selectedReviewerName {
@@ -229,5 +238,9 @@ export default {
 
 .selectedReviewerExtLink svg {
     @apply fill-primary-300;
+}
+
+.modal-content-body::-webkit-scrollbar {
+    display: none;
 }
 </style>

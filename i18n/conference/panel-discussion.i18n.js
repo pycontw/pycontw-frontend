@@ -36,7 +36,7 @@ export default genI18nMessages({
         },
         participants: {
             DongheeNa: {
-                name: 'Donghee',
+                name: 'Donghee Na',
                 description: [
                     "Donghee Na is a CPython Core Developer and a 2025 Python Steering Council member. He contributes to improving CPython's performance, maintenance, and internal implementations. He pursues shaping Python’s future by ensuring its efficiency, stability, and long-term growth. He is also passionate about fostering CPython activities in the APAC region, organizing local Core Sprints, and encouraging developer engagement in open-source contributions.",
                 ],
@@ -103,7 +103,7 @@ export default genI18nMessages({
         },
         participants: {
             DongheeNa: {
-                name: 'Donghee',
+                name: 'Donghee Na',
                 description: [
                     "Donghee Na is a CPython Core Developer and a 2025 Python Steering Council member. He contributes to improving CPython's performance, maintenance, and internal implementations. He pursues shaping Python’s future by ensuring its efficiency, stability, and long-term growth. He is also passionate about fostering CPython activities in the APAC region, organizing local Core Sprints, and encouraging developer engagement in open-source contributions.",
                 ],
