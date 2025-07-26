@@ -31,7 +31,7 @@ export default genI18nMessages({
                 description:
                     'Rooms 603 & 604, each with several tables labeled by topic using whiteboards.{br}' +
                     'If a topic interests you, feel free to leave thoughts or feedback on sticky notes. ' +
-                    'If your desired topic isn’t listed yet, you can grab a whiteboard from the info desk and start your own discussion.',
+                    'If your desired topic isn’t listed yet, you can grab a whiteboard from the info desk and start your own discussion. ',
             },
             time: {
                 title: 'Schedule',
@@ -136,9 +136,9 @@ export default genI18nMessages({
             host: {
                 title: '如何舉辦',
                 description:
-                    '1.事先登記：於{registrationForm}填寫你想討論的主題。Open Space 時段開始前，' +
+                    '1. 事先登記：於{registrationForm}填寫你想討論的主題。Open Space 時段開始前，' +
                     '確認你的主題與桌號，再到指定桌子準備。 {br}' +
-                    '2.隨時發起：也可以在其他時段自行發起，只要至服務台拿小白板寫題目，並找個 Open Space 桌開始即成。',
+                    '2. 隨時發起：也可以在其他時段自行發起，只要至服務台拿小白板寫題目，並找個 Open Space 桌開始。',
             },
             ideas: {
                 title: '開放空間好主意',
