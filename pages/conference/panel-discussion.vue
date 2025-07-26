@@ -44,9 +44,9 @@
                             class="participant__avatar"
                             :src="participant.avatar"
                         />
-                        <span class="participant__name">{{
-                            participant.name
-                        }}</span>
+                        <span class="participant__name">
+                            {{ participant.name }}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -92,14 +92,14 @@
                                 <text-button
                                     :href="speech.note_link"
                                     :secondary="true"
-                                    class="linkButton"
+                                    class="linkButton hidden"
                                 >
                                     {{ $t('terms.note') }}
                                 </text-button>
                                 <text-button
                                     :href="speech.slido_link"
                                     :secondary="true"
-                                    class="linkButton"
+                                    class="linkButton hidden"
                                 >
                                     {{ $t('terms.slido') }}
                                 </text-button>
