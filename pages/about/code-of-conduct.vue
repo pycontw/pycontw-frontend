@@ -69,14 +69,37 @@
                                         :path="`contents.${i}.subtitle.${subtitleIndex}.descriptions.${subtitleDescriptionIndex}`"
                                         tag="p"
                                     >
+                                        <template #reportingEmail>
+                                            <ext-link
+                                                href="mailto:report@python.tw"
+                                                highlight
+                                            >
+                                                report@python.tw
+                                            </ext-link>
+                                        </template>
                                         <template #process>
                                             <ext-link
                                                 href="https://github.com/python/pycon-code-of-conduct/blob/master/Attendee%20Procedure%20for%20incident%20handling.md"
                                                 highlight
-                                                >{{
-                                                    $t('terms.process')
-                                                }}</ext-link
                                             >
+                                                {{ $t('terms.process') }}
+                                            </ext-link>
+                                        </template>
+                                        <template #cococo>
+                                            <ext-link
+                                                href="https://volunteer.coscup.org/coc"
+                                                highlight
+                                            >
+                                                {{ $t('terms.cococo') }}
+                                            </ext-link>
+                                        </template>
+                                        <template #pyconUsCoc>
+                                            <ext-link
+                                                href="https://policies.python.org/us.pycon.org/code-of-conduct/"
+                                                highlight
+                                            >
+                                                {{ $t('terms.pyconUsCoc') }}
+                                            </ext-link>
                                         </template>
                                     </i18n>
                                     <ol
@@ -98,13 +121,23 @@
                                             {{ li }}
                                         </li>
                                     </ol>
+                                    <i18n
+                                        v-for="(
+                                            _, subtitleEndingIndex
+                                        ) in subtitle.endings"
+                                        :key="`coc.${i}.subtitle.${subtitleIndex}.endings.${subtitleEndingIndex}`"
+                                        :path="`contents.${i}.subtitle.${subtitleIndex}.endings.${subtitleEndingIndex}`"
+                                        class="pt-2"
+                                        tag="p"
+                                    >
+                                    </i18n>
                                 </template>
                             </two-col-wrapper>
                             <!-- 處理流程圖片 -->
                             <!-- 如果是`處理流程`或是`Procedure`，才會引入圖片，避免重複引入圖片 -->
                             <div
                                 v-if="
-                                    [`處理流程`, `Procedure`].includes(
+                                    [`處置方案`, `Procedure`].includes(
                                         subtitle.title,
                                     )
                                 "
