@@ -37,7 +37,6 @@ export default genI18nMessages({
                 title: 'Schedule',
                 emphasis: [
                     'Main Sessions:',
-                    'Day 2: 14:45–15:45',
                     '9/6 Day 1: 12:00–13:20 (Lunch time)',
                     '9/7 Day 2: 14:45–15:45',
                 ],
