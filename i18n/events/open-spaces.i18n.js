@@ -37,8 +37,9 @@ export default genI18nMessages({
                 title: 'Schedule',
                 emphasis: [
                     'Main Sessions:',
-                    'Day 1: 12:00–13:20 (Lunch time)',
                     'Day 2: 14:45–15:45',
+                    '9/6 Day 1: 12:00–13:20 (Lunch time)',
+                    '9/7 Day 2: 14:45–15:45',
                 ],
                 description:
                     "You're also welcome to propose and host discussions at any other time—just visit the info desk to add your topic.  " +
@@ -121,8 +122,8 @@ export default genI18nMessages({
                 title: '活動時間',
                 emphasis: [
                     '主要時段：',
-                    '第一天 12:00-13:20 (用餐時段)',
-                    '第二天 14:45–15:45',
+                    '9/6 第一天 12:00-13:20 (用餐時段)',
+                    '9/7 第二天 14:45–15:45',
                 ],
                 description:
                     '其餘時段亦歡迎隨時到服務台填寫主題，即可開始討論。請盡情享受這段自由熱情的交流時間！',

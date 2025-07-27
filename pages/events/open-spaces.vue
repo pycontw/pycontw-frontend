@@ -218,3 +218,14 @@ export default {
     @apply ml-4;
 }
 </style>
+
+.emphasis-list {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-position: inside; /* 可選 */
+}
+
+.emphasis-list li {
+  padding-left: 0;
+  margin-left: 0;
+}
