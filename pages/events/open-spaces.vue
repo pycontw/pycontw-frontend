@@ -221,4 +221,3 @@ export default {
     @apply ml-4;
 }
 </style>
-
