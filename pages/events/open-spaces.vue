@@ -213,6 +213,8 @@ export default {
 
 .emphasis-list li {
     @apply mb-1;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .emphasis-list li.sub-item {
@@ -220,7 +222,3 @@ export default {
 }
 </style>
 
-.emphasis-list li {
-  padding-left: 0;
-  margin-left: 0;
-}
