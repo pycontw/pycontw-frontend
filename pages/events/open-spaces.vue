@@ -222,6 +222,6 @@ export default {
 }
 
 .emphasis-list li.sub-item {
-    @apply ml-4;
+    @apply ml-4 list-disc;
 }
 </style>
