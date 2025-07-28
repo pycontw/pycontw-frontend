@@ -208,6 +208,7 @@ export default {
 
 .emphasis-list {
     @apply mt-2 list-disc pl-5;
+    list-style: none;
 }
 
 .emphasis-list ul {
