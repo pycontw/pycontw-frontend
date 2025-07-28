@@ -207,11 +207,10 @@ export default {
 }
 
 .emphasis-list {
-    @apply mt-2 list-none pl-5;
-    list-style: none;
+    @apply mt-2 pl-5;
 }
 
-.emphasis-list ul {
+.emphasis-list > ul {
     list-style: none;
 }
 
