@@ -210,7 +210,7 @@ export default {
     @apply mt-2 list-disc pl-5;
 }
 
-.emphasis-list ul{
+.emphasis-list ul {
     list-style: none;
 }
 
