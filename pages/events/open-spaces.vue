@@ -215,7 +215,7 @@ export default {
 }
 
 .emphasis-list li.sub-item {
-    @apply list-disc;
+    @apply ml-4 list-disc;
     list-style-type: disc;
 }
 </style>
