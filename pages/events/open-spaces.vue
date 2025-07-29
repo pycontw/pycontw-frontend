@@ -206,22 +206,17 @@ export default {
     height: 800px;
 }
 
-.emphasis-list {
-    @apply mt-2 pl-5;
-}
-
 .emphasis-list > ul {
     list-style: none;
 }
 
 .emphasis-list li {
-    @apply mb-1;
     padding-left: 0;
     margin-left: 0;
 }
 
 .emphasis-list li.sub-item {
-    @apply ml-4 list-disc;
+    @apply list-disc;
     list-style-type: disc;
 }
 </style>
