@@ -211,8 +211,7 @@ export default {
 }
 
 .emphasis-list li {
-    padding-left: 0;
-    margin-left: 0;
+    @apply mb-1;
 }
 
 .emphasis-list li.sub-item {
