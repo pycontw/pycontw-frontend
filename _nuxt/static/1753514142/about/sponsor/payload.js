@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/about/sponsor", (function(a){return {data:[{sponsorsData:a}],fetch:{},mutations:[["setSponsorsData",a]]}}(Array(0))));

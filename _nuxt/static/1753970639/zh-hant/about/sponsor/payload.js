@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/zh-hant/about/sponsor", (function(a){a[0]={level_name:"platinum",sponsors:[]};a[1]={level_name:"silver",sponsors:[]};a[2]={level_name:"bronze",sponsors:[]};return {data:[{sponsorsData:a}],fetch:{},mutations:[["setSponsorsData",a]]}}(Array(3))));
