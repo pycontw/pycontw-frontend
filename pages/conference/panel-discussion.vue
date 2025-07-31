@@ -189,7 +189,7 @@ export default {
                 },
                 {
                     name: this.$i18n.t('participants.SebastiánRamírez.name'),
-                    avatar: require('~/static/img/panel-discussion/SebastiánRamírez.jpg'),
+                    avatar: require('~/static/img/panel-discussion/SebastiánRamírez.jpeg'),
                     description: this.$i18n.t(
                         'participants.SebastiánRamírez.description',
                         {

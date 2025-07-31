@@ -27,10 +27,8 @@ export default genI18nMessages({
                 name: 'Kir Chou',
                 avatar: '/img/panel-discussion/Kir.jpg',
                 description: [
-                    "This is Kir's 8th year presence in PyCon TW.",
-                    "💼Kir's works: Geo and Search systems to solve i18n and l10n user experience",
-                    "💕Kir's hobby: 🍷🍶🍺🏂🧗⛰️🧑‍🌾🏃 ",
-                    "See Kir's past PyCon talks in https://note35.github.io/about/talks",
+                    "Kir has been a dedicated participant at PyCon events worldwide since 2016, contributing as a speaker, proposal reviewer, and onsite volunteer. This year, Kir is focusing on AI's impact on people and communities.",
+                    'More: https://note35.github.io/about/talks',
                 ],
             },
         },
@@ -94,10 +92,8 @@ export default genI18nMessages({
             Kir: {
                 name: 'Kir Chou',
                 description: [
-                    "This is Kir's 8th year presence in PyCon TW.",
-                    "💼Kir's works: Geo and Search systems to solve i18n and l10n user experience",
-                    "💕Kir's hobby: 🍷🍶🍺🏂🧗⛰️🧑‍🌾🏃 ",
-                    "See Kir's past PyCon talks in https://note35.github.io/about/talks",
+                    "Kir has been a dedicated participant at PyCon events worldwide since 2016, contributing as a speaker, proposal reviewer, and onsite volunteer. This year, Kir is focusing on AI's impact on people and communities.",
+                    'More: https://note35.github.io/about/talks',
                 ],
             },
         },
@@ -125,7 +121,8 @@ export default genI18nMessages({
                     'Tica熱愛運動與設計，曾於臺大創立電機系女籃，帶領團隊勇奪全國大電盃亞軍。憑藉對籃球與數據設計的熱情，她成為NBA費城76人隊首位台灣籍數據UX設計師，在2017-18賽季協助球隊重建並重返季後賽，推動當代籃球數據分析實務。其後出版專書《我在76人的日子》，分享自身於籃球與科技交會點上的實務經驗與洞察。',
                     '2024 年，Tica 共同創辦運動科技新創 Athleo.ai，聚焦於以數據視覺化推動運動影片的分析與創作，致力於讓 AI 與互動科技普及至更多運動愛好者與教練手中。她始終相信，科技能放大運動的熱情與影響力，並透過創新研究與跨域整合，讓更多人因運動而彼此連結、拓展專業，並勇於追夢、發揮創造力。',
                     '-------------------------------------',
-                    'Personal website: https://ticalin.com/ Facebook: https://www.facebook.com/SportsXR',
+                    'Personal website: https://ticalin.com/',
+                    'Facebook: https://www.facebook.com/SportsXR',
                 ],
             },
             YCChen: {
