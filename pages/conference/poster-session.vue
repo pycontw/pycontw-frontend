@@ -18,17 +18,15 @@
             <core-h2 :title="$t('announcement.title')"></core-h2>
             <i18n path="announcement.description" tag="p">
                 <template #link>
-                    <a
-                        href="/about/code-of-conduct"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <nuxt-link
+                        to="/about/code-of-conduct"
                         class="text-primary-500 underline"
                     >
                         {{
                             $t('announcement.codeOfConduct') ||
                             'code of conduct'
                         }}
-                    </a>
+                    </nuxt-link>
                 </template>
             </i18n>
             <core-h2 :title="$t('posters.title')"></core-h2>
@@ -141,10 +139,6 @@ export default {
 </script>
 
 <style lang="postcss">
-.intro {
-    @apply font-sans;
-}
-
 p.description {
     text-align: unset;
 }
