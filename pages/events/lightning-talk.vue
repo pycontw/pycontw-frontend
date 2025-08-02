@@ -20,6 +20,28 @@
                     </i18n>
                 </template>
                 <template #right-col>
+                    <div v-if="openSpace.tag === 'flow'">
+                        <table class="table-flow">
+                            <thead>
+                                <tr>
+                                    <th>時間</th>
+                                    <th>活動內容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    v-for="row in $t(
+                                        'openSpaceInfo.flow.table',
+                                        $i18n.locale,
+                                    )"
+                                    :key="row.time"
+                                >
+                                    <td>{{ row.time }}</td>
+                                    <td>{{ row.content }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div v-if="openSpace.isEmphasis">
                         <strong>
                             <i18n
@@ -135,7 +157,6 @@ export default {
                 },
                 {
                     tag: 'flow',
-                    hasExamples: true,
                 },
                 {
                     tag: 'rules',
@@ -230,5 +251,16 @@ export default {
 .hackmd {
     @apply w-full;
     height: 800px;
+}
+
+.table-flow {
+    @apply w-full border border-white;
+    border-radius: 10px;
+}
+.table-flow th {
+    @apply border border-white p-1 pl-2 text-left;
+}
+.table-flow td {
+    @apply border border-white p-1 pl-2;
 }
 </style>

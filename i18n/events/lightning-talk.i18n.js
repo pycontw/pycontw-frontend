@@ -18,14 +18,34 @@ export default genI18nMessages({
             },
             flow: {
                 title: 'Day-of Flow',
-                description: 'Time Event：{br}{examples}',
-                examples: [
-                    '08:00  Lightning Talk Registration Opens',
-                    '13:00  Registration Closes',
-                    '13:30  Selected Speaker List Announced',
-                    '14:30  Selected Speakers Confirmation Deadline',
-                    '14:50  Speaker Briefing & Tech Check (Outside R0 Main Hall)',
-                    '17:10 (Day 1) / 16:50 (Day 2)  Lightning Talk Session',
+                description: '',
+                table: [
+                    {
+                        time: '08:00',
+                        content: 'Lightning Talk Registration Opens',
+                    },
+                    {
+                        time: '13:00',
+                        content: 'Registration Closes',
+                    },
+                    {
+                        time: '13:30',
+                        content: 'Selected Speaker List Announced',
+                    },
+                    {
+                        time: '14:30',
+                        content: 'Selected Speakers Confirmation Deadline',
+                    },
+                    {
+                        time: '16:00 - 16:30',
+                        content:
+                            'Speaker Briefing & Tech Check ' +
+                            '(Outside R0 Main Hall)',
+                    },
+                    {
+                        time: '17:10 (Day 1) / 16:50 (Day 2)',
+                        content: 'Lightning Talk Session',
+                    },
                 ],
             },
             rules: {
@@ -82,7 +102,7 @@ export default genI18nMessages({
         title: '閃電秀',
         intro:
             '閃電秀是 PyCon Taiwan 最緊湊精彩的演講環節！' +
-            '無論你是想聽故事還是自己發聲，我們都邀請你一起參與！' +
+            '無論你是想聽故事還是自己發聲，我們都邀請你一起參與！{br}' +
             '現場將由多位講者接力上台，在 3 分鐘內分享獨特的想法、專案或經驗。' +
             '有想法想分享嗎？快來報名成為其中一員！ {br}',
         openSpaceInfo: {
@@ -95,14 +115,20 @@ export default genI18nMessages({
             },
             flow: {
                 title: '當天流程',
-                description: '時間 活動內容：{br}{examples}',
-                examples: [
-                    '08:00  閃電秀報名開放',
-                    '13:00  報名截止',
-                    '13:30  公布中選講者名單',
-                    '14:30  中選講者回覆確認截止',
-                    '14:50  講者集合與技術準備 (R0 議程廳門外)',
-                    '17:10 (Day 1) / 16:50 (Day 2)  閃電秀時間',
+                description: '',
+                table: [
+                    { time: '08:00', content: '閃電秀報名開放' },
+                    { time: '13:00', content: '報名截止' },
+                    { time: '13:30', content: '公布中選講者名單' },
+                    { time: '14:30', content: '中選講者回覆確認截止' },
+                    {
+                        time: '16:00 - 16:30',
+                        content: '講者集合與技術準備（R0 議程廳門外）',
+                    },
+                    {
+                        time: '17:10 (Day 1) / 16:50 (Day 2)',
+                        content: '閃電秀時間',
+                    },
                 ],
             },
             rules: {
