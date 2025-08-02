@@ -8,12 +8,7 @@
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
         >
-            <iframe
-                v-if="openSpace.tag === 'iframe_placeholder'"
-                class="hackmd"
-                src="https://hackmd.io/@pycontw/lightningtalk2025"
-            ></iframe>
-            <two-col-wrapper v-else>
+            <two-col-wrapper>
                 <template #default>
                     <i18n
                         :key="`openSpaceInfo.${openSpace.tag}.title`"
@@ -107,6 +102,10 @@
                 </template>
             </two-col-wrapper>
         </div>
+        <iframe
+            class="hackmd"
+            src="https://hackmd.io/@pycontw/lightningtalk2025"
+        ></iframe>
     </i18n-page-wrapper>
 </template>
 
@@ -174,9 +173,6 @@ export default {
                 {
                     tag: 'register',
                     hasExamples: true,
-                },
-                {
-                    tag: 'iframe_placeholder',
                 },
                 {
                     tag: 'FAQ',
