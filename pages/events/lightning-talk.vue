@@ -51,7 +51,19 @@
                             </i18n>
                         </strong>
                     </div>
+                    <div
+                        v-if="openSpace.tag === 'FAQ'"
+                        class="intro"
+                        v-html="
+                            renderBold(
+                                $t(
+                                    `openSpaceInfo.${openSpace.tag}.description`,
+                                ),
+                            )
+                        "
+                    ></div>
                     <i18n
+                        v-else
                         :key="`openspace_descriptions_${openSpace.tag}`"
                         :path="`openSpaceInfo.${openSpace.tag}.description`"
                         class="intro"
@@ -137,6 +149,7 @@ import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import CoreH1 from '@/components/core/titles/H1'
+
 import i18n from '@/i18n/events/lightning-talk.i18n'
 
 export default {
@@ -217,6 +230,16 @@ export default {
                 },
             ],
         }
+    },
+    methods: {
+        renderBold(text) {
+            return text
+                .replace(
+                    /{bold}(.+?){\/bold}/g,
+                    '<strong class="font-bold">$1</strong>',
+                )
+                .replace(/{br}/g, '<br>')
+        },
     },
     head() {
         return {

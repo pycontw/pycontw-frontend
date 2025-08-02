@@ -73,18 +73,18 @@ export default genI18nMessages({
             FAQ: {
                 title: 'FAQ',
                 description:
-                    'What is Lightning Talk?{br}' +
+                    '{bold}What is Lightning Talk?{/bold}{br}' +
                     "Lightning Talk is PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
-                    'What can I share?{br}' +
+                    '{bold}What can I share?{/bold}{br}' +
                     '● Latest projects or discoveries{br}' +
                     '● Learning insights and practical tips{br}' +
                     '● Condensed version of unselected main talk proposals{br}' +
                     '● Any interesting Python-related topics{br}{br}' +
-                    'Is my topic too simple?{br}' +
+                    '{bold}Is my topic too simple?{/bold}{br}' +
                     'No! Your unique insights can always bring new inspiration to audiences from different backgrounds.{br}{br}' +
-                    "Can I share if I'm not an expert?{br}" +
+                    '{bold}Can I share if I am not an expert?{/bold}{br}' +
                     "Absolutely! As long as you're passionate about a topic, learning insights or initial findings are worth sharing.{br}{br}" +
-                    'What if I get nervous speaking? {br}' +
+                    '{bold}What if I get nervous speaking?{/bold}{br}' +
                     "That's perfectly normal! The PyCon Taiwan community is incredibly friendly, and the sense of accomplishment after presenting will make it all worthwhile.",
             },
             notes: {
@@ -155,18 +155,18 @@ export default genI18nMessages({
             FAQ: {
                 title: '常見問題',
                 description:
-                    '什麼是閃電秀？{br}' +
+                    '{bold}什麼是閃電秀？{/bold}{br}' +
                     '閃電秀是 PyCon Taiwan 最具創意的 3 分鐘演講環節！無論你是資深開發者還是新手，只要有想分享的熱情都歡迎參加。{br}{br}' +
-                    '我可以分享什麼？{br}' +
+                    '{bold}我可以分享什麼？{/bold}{br}' +
                     '● 最新專案或發現{br}' +
                     '● 學習心得與實用技巧{br}' +
                     '● 主議程未入選的內容精華版{br}' +
                     '● 任何與 Python 相關的有趣話題{br}{br}' +
-                    '我的主題會不會太簡單？{br}' +
+                    '{bold}我的主題會不會太簡單？{/bold}{br}' +
                     '不會！你的獨特見解總能帶給不同背景的聽眾新啟發。{br}{br}' +
-                    '我不是專家可以分享嗎？{br}' +
+                    '{bold}我不是專家可以分享嗎？{/bold}{br}' +
                     '當然可以！只要你對某個議題充滿熱情，學習心得或初探成果都值得分享。{br}{br}' +
-                    '演講會很緊張怎麼辦？ {br}' +
+                    '{bold}演講會很緊張怎麼辦？{/bold}{br}' +
                     '這很正常！PyCon Taiwan 社群非常友善，完成分享後的成就感會讓一切都值得。',
             },
             notes: {
