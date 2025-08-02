@@ -207,6 +207,12 @@ export default {
                             url: `https://tw.pycon.org/2025/${this.$i18n.locale}/about/code-of-conduct`,
                             isExternalLink: true,
                         },
+                        {
+                            slot: 'programEmail',
+                            textKey: 'terms.programEmail',
+                            url: 'mailto:program@python.tw',
+                            isExternalLink: true,
+                        },
                     ],
                 },
             ],
