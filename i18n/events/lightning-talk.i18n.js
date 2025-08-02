@@ -76,10 +76,12 @@ export default genI18nMessages({
                     '{bold}What is Lightning Talk?{/bold}{br}' +
                     "Lightning Talk is PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
                     '{bold}What can I share?{/bold}{br}' +
-                    '● Latest projects or discoveries{br}' +
-                    '● Learning insights and practical tips{br}' +
-                    '● Condensed version of unselected main talk proposals{br}' +
-                    '● Any interesting Python-related topics{br}{br}' +
+                    '{ul}' +
+                    '{li}Latest projects or discoveries{/li}' +
+                    '{li}Learning insights and practical tips{/li}' +
+                    '{li}Condensed version of unselected main talk proposals{/li}' +
+                    '{li}Any interesting Python-related topics{/li}' +
+                    '{/ul}{br}' +
                     '{bold}Is my topic too simple?{/bold}{br}' +
                     'No! Your unique insights can always bring new inspiration to audiences from different backgrounds.{br}{br}' +
                     '{bold}Can I share if I am not an expert?{/bold}{br}' +
@@ -158,10 +160,12 @@ export default genI18nMessages({
                     '{bold}什麼是閃電秀？{/bold}{br}' +
                     '閃電秀是 PyCon Taiwan 最具創意的 3 分鐘演講環節！無論你是資深開發者還是新手，只要有想分享的熱情都歡迎參加。{br}{br}' +
                     '{bold}我可以分享什麼？{/bold}{br}' +
-                    '● 最新專案或發現{br}' +
-                    '● 學習心得與實用技巧{br}' +
-                    '● 主議程未入選的內容精華版{br}' +
-                    '● 任何與 Python 相關的有趣話題{br}{br}' +
+                    '{ul}' +
+                    '{li}最新專案或發現{/li}' +
+                    '{li}學習心得與實用技巧{/li}' +
+                    '{li}主議程未入選的內容精華版{/li}' +
+                    '{li}任何與 Python 相關的有趣話題{/li}' +
+                    '{/ul}{br}' +
                     '{bold}我的主題會不會太簡單？{/bold}{br}' +
                     '不會！你的獨特見解總能帶給不同背景的聽眾新啟發。{br}{br}' +
                     '{bold}我不是專家可以分享嗎？{/bold}{br}' +

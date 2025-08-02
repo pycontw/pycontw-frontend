@@ -238,6 +238,9 @@ export default {
                     /{bold}(.+?){\/bold}/g,
                     '<strong class="font-bold">$1</strong>',
                 )
+                .replace(/{ul}/g, '<ul class="list-disc pl-6">')
+                .replace(/{\/ul}/g, '</ul>')
+                .replace(/{li}(.+?){\/li}/g, '<li>$1</li>')
                 .replace(/{br}/g, '<br>')
         },
     },
