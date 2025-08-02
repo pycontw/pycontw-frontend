@@ -99,6 +99,10 @@ export default genI18nMessages({
         terms: {
             codeOfConduct: 'PyCon Taiwan Code of Conduct',
         },
+        table: {
+            time: 'Time',
+            content: 'Content',
+        },
     },
     'zh-hant': {
         title: '閃電秀',
@@ -138,10 +142,10 @@ export default genI18nMessages({
                 description: '',
                 list: [
                     '閃電秀主題需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，Python 相關主題尤其歡迎！',
-                    '閃電秀的呈現內容必須{bold}遵守{/bold}{codeOfConduct}，避免造成聽眾不適的內容。',
+                    '閃電秀的呈現內容必須遵守{bold}{codeOfConduct}，避免造成聽眾不適的內容。',
                     '每位參與者以一個講題為限。僅接受現場參與者上台，不開放遠端演講。',
                     '每位中選者有 {bold}3 分鐘{/bold} 的時間進行演講，時間到會強制中斷。',
-                    '中選與通知： 每日 13:30 將中選名單透過 email 和 Discord 通知投稿者於 14:30 前回覆確認。若未於時限內回覆，名額將由候補者遞補。',
+                    '{bold}中選與通知{/bold}： 每日 13:30 將{bold}中選名單{/bold}透過 email 和 Discord 通知投稿者於 14:30 前回覆確認。若未於時限內回覆，名額將由候補者遞補。',
                 ],
             },
             register: {
@@ -183,6 +187,10 @@ export default genI18nMessages({
         terms: {
             codeOfConduct: 'PyCon Taiwan 行為準則',
             programEmail: 'program@python.tw',
+        },
+        table: {
+            time: '時間',
+            content: '活動內容',
         },
     },
 })

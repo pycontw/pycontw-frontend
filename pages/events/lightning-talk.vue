@@ -24,8 +24,8 @@
                         <table class="table-flow">
                             <thead>
                                 <tr>
-                                    <th>時間</th>
-                                    <th>活動內容</th>
+                                    <th>{{ $t('table.time') }}</th>
+                                    <th>{{ $t('table.content') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
