@@ -121,17 +121,22 @@
                         </i18n>
                     </div>
                     <div v-if="openSpace.hasExamples">
-                        <i18n
-                            v-for="(_, index) in $t(
-                                `openSpaceInfo.${openSpace.tag}.examples`,
-                            )"
-                            :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
-                            :path="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
-                            class="example"
-                            tag="li"
-                        >
-                            <template #br><br /></template>
-                        </i18n>
+                        <ul class="list-disc pl-6">
+                            <li
+                                v-for="(_, index) in $t(
+                                    `openSpaceInfo.${openSpace.tag}.examples`,
+                                )"
+                                :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
+                                class="example"
+                                v-html="
+                                    renderBold(
+                                        $t(
+                                            `openSpaceInfo.${openSpace.tag}.examples.${index}`,
+                                        ),
+                                    )
+                                "
+                            ></li>
+                        </ul>
                     </div>
                 </template>
             </two-col-wrapper>
