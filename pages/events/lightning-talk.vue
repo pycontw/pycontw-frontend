@@ -92,33 +92,17 @@
                             </locale-link>
                         </template>
                     </i18n>
-                    <div v-if="openSpace.hasLinkList" class="list-disc">
-                        <i18n
-                            v-for="(item, index) in openSpace.listWithLinks"
-                            :key="`openSpaceInfo.${openSpace.tag}.list.${index}`"
-                            :path="item.textKey"
-                            class="example"
-                            tag="li"
-                        >
-                            <template v-for="link in item.links" #[link.slot]>
-                                <ext-link
-                                    v-if="link.isExternalLink"
-                                    :key="`${link.textKey}.external`"
-                                    :href="link.url"
-                                    highlight
-                                >
-                                    {{ $t(link.textKey) }}
-                                </ext-link>
-                                <locale-link
-                                    v-else
-                                    :key="`${link.textKey}.local`"
-                                    :to="link.url"
-                                    highlight
-                                >
-                                    {{ $t(link.textKey) }}
-                                </locale-link>
-                            </template>
-                        </i18n>
+                    <div v-if="openSpace.hasLinkList">
+                        <ul class="list-disc pl-6">
+                            <rich-text-renderer
+                                v-for="(item, index) in openSpace.listWithLinks"
+                                :key="`openSpaceInfo.${openSpace.tag}.list.${index}`"
+                                :path="item.textKey"
+                                :links="item.links"
+                                tag="li"
+                                class="example"
+                            />
+                        </ul>
                     </div>
                     <div v-if="openSpace.hasExamples">
                         <ul class="list-disc pl-6">
@@ -152,6 +136,7 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
+import RichTextRenderer from '@/components/lightning/RichTextRenderer.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import CoreH1 from '@/components/core/titles/H1'
 
@@ -165,6 +150,7 @@ export default {
         CoreH1,
         TwoColWrapper,
         ExtLink,
+        RichTextRenderer,
         LocaleLink,
     },
     data() {
