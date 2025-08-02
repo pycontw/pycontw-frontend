@@ -126,7 +126,7 @@ export default {
     transform: translateX(0px);
 }
 .lightBox__photo > img {
-    @apply absolute object-contain;
+    @apply absolute rounded-full object-contain;
     width: calc(100% - 10px);
 }
 .img__bg {

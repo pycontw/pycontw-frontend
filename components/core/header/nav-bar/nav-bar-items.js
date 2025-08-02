@@ -18,12 +18,13 @@ export default Object.freeze({
         { i18nKey: 'talks', value: '/conference/talks' },
         { i18nKey: 'tutorials', value: '/conference/tutorials' },
         { i18nKey: 'panelDiscussion', value: '/conference/panel-discussion' },
-        // { i18nKey: 'posterSession', value: '/conference/poster-session' },
+        { i18nKey: 'posterSession', value: '/conference/poster-session' },
     ],
     events: [
         { i18nKey: 'sprints', value: '/events/sprints' },
         { i18nKey: 'openSpaces', value: '/events/open-spaces' },
         { i18nKey: 'jobs', value: '/events/jobs' },
+        { i18nKey: 'lightningTalk', value: '/events/lightning-talk' },
     ],
     registration: [
         { i18nKey: 'tickets', value: '/registration/tickets' },

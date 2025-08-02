@@ -1,6 +1,12 @@
 <template>
     <i18n-page-wrapper>
         <core-h1 :title="$t('title')"></core-h1>
+        <div class="sprints_image">
+            <img
+                src="~@/static/img/events/sprints/sprints-photo.webp"
+                alt="Photo of PyCon Taiwan Sprints"
+            />
+        </div>
         <i18n path="intro" tag="p" class="intro whitespace-pre-line"></i18n>
         <two-col-wrapper class="spacing">
             <template #default>
@@ -15,21 +21,21 @@
                 >
                     <template #kktix>
                         <ext-link
-                            href="https://pycontw.kktix.cc/events/2024-sprints"
+                            href="https://pycontw.kktix.cc/events/2025-sprints"
                             highlight
                             >KKTIX</ext-link
                         >
                     </template>
                     <template #hackmd>
                         <ext-link
-                            href="https://hackmd.io/LKLr7XyOR9mK1AEEnvnCuQ"
+                            href="https://hackmd.io/@pycontw/ry31NKlIgg"
                             highlight
                             >HackMD</ext-link
                         >
                     </template>
                     <template #form>
                         <ext-link
-                            href="https://forms.gle/qMDXfjAzdBC4m1us5"
+                            href="https://forms.gle/LcPV4zn2HFky1SsMA"
                             highlight
                             >{{ $t('form') }}</ext-link
                         >
@@ -39,7 +45,7 @@
         </two-col-wrapper>
         <iframe
             class="hackmd"
-            src="https://hackmd.io/LKLr7XyOR9mK1AEEnvnCuQ"
+            src="https://hackmd.io/@pycontw/ry31NKlIgg"
         ></iframe>
     </i18n-page-wrapper>
 </template>
@@ -86,6 +92,13 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.sprints_image {
+    @apply my-4 flex h-32 w-full items-center justify-between overflow-hidden md:h-80;
+    @apply rounded-lg ring-2 ring-pink-700;
+}
+.sprints_image__img {
+    @apply min-h-full object-cover;
+}
 .intro {
     font-size: 16px;
     @media (min-width: 1024px) {

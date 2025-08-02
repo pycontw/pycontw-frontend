@@ -18,8 +18,13 @@
                         v-for="(host, j) in hosts"
                         :key="`host-${j}`"
                         class="host"
+                        @click="showModal(host)"
                     >
-                        <img class="host__avatar" :src="host.avatar" />
+                        <img
+                            class="host__avatar"
+                            :src="host.avatar"
+                            :alt="host.name"
+                        />
                         <span class="host__name">{{ host.name }}</span>
                     </div>
                 </div>
@@ -39,9 +44,9 @@
                             class="participant__avatar"
                             :src="participant.avatar"
                         />
-                        <span class="participant__name">{{
-                            participant.name
-                        }}</span>
+                        <span class="participant__name">
+                            {{ participant.name }}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -80,26 +85,21 @@
                                     {{ speech.title }}
                                 </p>
                                 <div class="speechBox__description">
-                                    <p
-                                        v-for="(
-                                            desc, desc_idx
-                                        ) in speech.full_description"
-                                        :key="`speech_info_${speechIdx}_desc_${desc_idx}`"
-                                    >
-                                        {{ desc }}
-                                    </p>
+                                    <i18n path="speechDescription" tag="p">
+                                        <template #br><br /></template>
+                                    </i18n>
                                 </div>
                                 <text-button
                                     :href="speech.note_link"
                                     :secondary="true"
-                                    class="linkButton"
+                                    class="linkButton hidden"
                                 >
                                     {{ $t('terms.note') }}
                                 </text-button>
                                 <text-button
                                     :href="speech.slido_link"
                                     :secondary="true"
-                                    class="linkButton"
+                                    class="linkButton hidden"
                                 >
                                     {{ $t('terms.slido') }}
                                 </text-button>
@@ -126,7 +126,7 @@ import i18n from '@/i18n/conference/panel-discussion.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
-import Modal from '~/components/core/modal/Modal'
+import Modal from '@/components/core/modal/Modal'
 
 export default {
     i18n,
@@ -142,54 +142,16 @@ export default {
             isOpened: false,
             selectedItem: {},
             tagToLangIcon: {
-                speech1: require('~/static/img/icons/lang/ZHZH.svg'),
+                speech1: require('~/static/img/icons/lang/ENEN.svg'),
             },
-            hosts: [
-                {
-                    name: 'Yung-Yu Chen',
-                    avatar: require('~/static/img/panel-discussion/YungYuChen.jpeg'),
-                },
-            ],
-            participants: [
-                {
-                    avatar: require('~/static/img/panel-discussion/蔡炎龍.jpeg'),
-                    name: '蔡炎龍',
-                    description: [
-                        '蔡炎龍教授為美國爾灣加州大學的數學博士，現任國立政治大學應用數學系副教授兼任學務處學務長。' +
-                            '蔡教授長期致力於Python的推廣教育，並於2020年與2022年分別出版《少年Py的大冒險：成為Python數據分析達人的第一門課》' +
-                            '與《少年Py的大冒險－成為Python AI深度學習達人的第一門課》兩本書，在推廣Python教育方面取得了卓越成果。' +
-                            '此外，蔡教授亦擔任擔任政治大學數理資訊學程的召集人和政大 PyDay 的創辦人。',
-                    ],
-                },
-                {
-                    avatar: require('~/static/img/panel-discussion/柯維然.jpeg'),
-                    name: '柯維然',
-                    description: [
-                        '努力在政府部門中點燃數位與技術的火苗；' +
-                            '曾是熱愛用數據與程式解決問題的資料戰警，目前服務於數位發展部部長室，' +
-                            '負責協助各單位專案與部內資訊架構服務建置，導入與改善政府數位服務流程，' +
-                            '同時於交通大學資訊工程研究所攻讀博士班，主要研究方向為深度生成模型、電腦視覺。',
-                        '',
-                    ],
-                },
-                {
-                    avatar: require('~/static/img/panel-discussion/PeterWolf.jpeg'),
-                    name: 'Peter Wolf',
-                    description: [
-                        '語言科學專家、卓騰語言科技創辦人及核心開發工程師。探究人類語言與認知之間的關係，' +
-                            '主張自然語言處理需考慮語言的本質，而非直接套用現成的工具處理表面現象。' +
-                            '正在執行的任務是透過打造自然語言理解的基礎建設，促成「具人類思維方式」的機器心智。',
-                    ],
-                },
-            ],
             speechInfos: [
                 {
-                    date: '3',
+                    date: '6',
                     month: 'Sep',
                     speeches: [
                         {
                             tag: 'speech1',
-                            speechtime: '15:40-16:40 (GMT+8)',
+                            speechtime: '16:00 ~ 17:00 (GMT+8)',
                             title: this.$t('speechTitle'),
                             full_description: [this.$t('speechDescription')],
                             note_link: 'https://hackmd.io/@pycontw/H1PtLsmph',
@@ -200,6 +162,63 @@ export default {
                 },
             ],
         }
+    },
+    computed: {
+        hosts() {
+            return [
+                {
+                    name: this.$i18n.t('hosts.Kir.name'),
+                    avatar: require('~/static/img/panel-discussion/Kir.jpg'),
+                    description: this.$i18n.t('hosts.Kir.description', {
+                        returnObjects: true,
+                    }),
+                },
+            ]
+        },
+        participants() {
+            return [
+                {
+                    name: this.$i18n.t('participants.DongheeNa.name'),
+                    avatar: require('~/static/img/panel-discussion/DongheeNa.jpeg'),
+                    description: this.$i18n.t(
+                        'participants.DongheeNa.description',
+                        {
+                            returnObjects: true,
+                        },
+                    ),
+                },
+                {
+                    name: this.$i18n.t('participants.SebastiánRamírez.name'),
+                    avatar: require('~/static/img/panel-discussion/SebastiánRamírez.jpeg'),
+                    description: this.$i18n.t(
+                        'participants.SebastiánRamírez.description',
+                        {
+                            returnObjects: true,
+                        },
+                    ),
+                },
+                {
+                    name: this.$i18n.t('participants.TicaLin.name'),
+                    avatar: require('~/static/img/panel-discussion/TicaLin.png'),
+                    description: this.$i18n.t(
+                        'participants.TicaLin.description',
+                        {
+                            returnObjects: true,
+                        },
+                    ),
+                },
+                {
+                    name: this.$i18n.t('participants.YCChen.name'),
+                    avatar: require('~/static/img/panel-discussion/YCChen.jpg'),
+                    description: this.$i18n.t(
+                        'participants.YCChen.description',
+                        {
+                            returnObjects: true,
+                        },
+                    ),
+                },
+            ]
+        },
     },
     methods: {
         showModal(item) {
@@ -354,7 +373,8 @@ export default {
 .host {
     @apply mr-5 flex flex-col md:mr-14;
 }
-.participant:hover {
+.participant:hover,
+.host:hover {
     @apply cursor-pointer text-primary-500;
 }
 

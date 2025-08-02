@@ -8,7 +8,12 @@
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
         >
-            <two-col-wrapper>
+            <iframe
+                v-if="openSpace.tag === 'iframe_placeholder'"
+                class="hackmd"
+                src="https://hackmd.io/@pycontw/lightningtalk2025"
+            ></iframe>
+            <two-col-wrapper v-else>
                 <template #default>
                     <i18n
                         :key="`openSpaceInfo.${openSpace.tag}.title`"
@@ -20,34 +25,13 @@
                     </i18n>
                 </template>
                 <template #right-col>
-                    <img
-                        v-if="openSpace.tag === 'location'"
-                        :src="
-                            require(`~/static/img/events/overview/open-space-location.png`)
-                        "
-                    />
-                    <br v-if="openSpace.tag === 'location'" />
-                    <br v-if="openSpace.tag === 'location'" />
-                    <img
-                        v-if="openSpace.tag === 'location'"
-                        :src="
-                            require('~/static/img/events/overview/open-space-extra.png')
-                        "
-                    />
-                    <br v-if="openSpace.tag === 'location'" />
                     <div v-if="openSpace.isEmphasis">
                         <strong>
-                            <ul class="emphasis-list">
-                                <li
-                                    v-for="(item, index) in $t(
-                                        `openSpaceInfo.${openSpace.tag}.emphasis`,
-                                    )"
-                                    :key="`emphasis-${index}`"
-                                    :class="{ 'sub-item': index > 0 }"
-                                >
-                                    {{ item }}
-                                </li>
-                            </ul>
+                            <i18n
+                                :path="`openSpaceInfo.${openSpace.tag}.emphasis`"
+                            >
+                                <template #br><br /></template>
+                            </i18n>
                         </strong>
                     </div>
                     <i18n
@@ -79,6 +63,34 @@
                             </locale-link>
                         </template>
                     </i18n>
+                    <div v-if="openSpace.hasLinkList" class="list-disc">
+                        <i18n
+                            v-for="(item, index) in openSpace.listWithLinks"
+                            :key="`openSpaceInfo.${openSpace.tag}.list.${index}`"
+                            :path="item.textKey"
+                            class="example"
+                            tag="li"
+                        >
+                            <template v-for="link in item.links" #[link.slot]>
+                                <ext-link
+                                    v-if="link.isExternalLink"
+                                    :key="`${link.textKey}.external`"
+                                    :href="link.url"
+                                    highlight
+                                >
+                                    {{ $t(link.textKey) }}
+                                </ext-link>
+                                <locale-link
+                                    v-else
+                                    :key="`${link.textKey}.local`"
+                                    :to="link.url"
+                                    highlight
+                                >
+                                    {{ $t(link.textKey) }}
+                                </locale-link>
+                            </template>
+                        </i18n>
+                    </div>
                     <div v-if="openSpace.hasExamples">
                         <i18n
                             v-for="(_, index) in $t(
@@ -95,10 +107,6 @@
                 </template>
             </two-col-wrapper>
         </div>
-        <iframe
-            class="hackmd"
-            src="https://hackmd.io/vB_wxgipRyKBcVEAoIyGoQ?view="
-        ></iframe>
     </i18n-page-wrapper>
 </template>
 
@@ -108,11 +116,11 @@ import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import CoreH1 from '@/components/core/titles/H1'
-import i18n from '@/i18n/events/open-spaces.i18n'
+import i18n from '@/i18n/events/lightning-talk.i18n'
 
 export default {
     i18n,
-    name: 'PageEventsOpenSpaces',
+    name: 'PageEventsLightningTalk',
     components: {
         I18nPageWrapper,
         CoreH1,
@@ -127,40 +135,62 @@ export default {
                     tag: 'participate',
                 },
                 {
-                    tag: 'location',
-                    isDescriptionList: true,
-                },
-                {
-                    tag: 'time',
-                    isDescriptionList: true,
-                    isEmphasis: true,
-                },
-                {
-                    tag: 'subjects',
-                    links: [
-                        {
-                            slot: 'conductPage',
-                            textKey: 'terms.conductPage',
-                            url: 'https://tw.pycon.org/2025/zh-hant/about/code-of-conduct',
-                            isExternalLink: true,
-                        },
-                    ],
-                },
-                {
-                    tag: 'host',
-                    isDescriptionList: false,
-                    links: [
-                        {
-                            slot: 'registrationForm',
-                            textKey: 'terms.registrationForm',
-                            url: 'https://hackmd.io/vB_wxgipRyKBcVEAoIyGoQ?view=',
-                            isExternalLink: true,
-                        },
-                    ],
-                },
-                {
-                    tag: 'ideas',
+                    tag: 'flow',
                     hasExamples: true,
+                },
+                {
+                    tag: 'rules',
+                    hasLinkList: true,
+                    listWithLinks: [
+                        {
+                            textKey: 'openSpaceInfo.rules.list.0',
+                            links: [],
+                        },
+                        {
+                            textKey: 'openSpaceInfo.rules.list.1',
+                            links: [
+                                {
+                                    slot: 'codeOfConduct',
+                                    textKey: 'terms.codeOfConduct',
+                                    url: `https://tw.pycon.org/2025/${this.$i18n.locale}/about/code-of-conduct`,
+                                    isExternalLink: true,
+                                },
+                            ],
+                        },
+                        {
+                            textKey: 'openSpaceInfo.rules.list.2',
+                            links: [],
+                        },
+                        {
+                            textKey: 'openSpaceInfo.rules.list.3',
+                            links: [],
+                        },
+                        {
+                            textKey: 'openSpaceInfo.rules.list.4',
+                            links: [],
+                        },
+                    ],
+                },
+                {
+                    tag: 'register',
+                    hasExamples: true,
+                },
+                {
+                    tag: 'iframe_placeholder',
+                },
+                {
+                    tag: 'FAQ',
+                },
+                {
+                    tag: 'notes',
+                    links: [
+                        {
+                            slot: 'codeOfConduct',
+                            textKey: 'terms.codeOfConduct',
+                            url: `https://tw.pycon.org/2025/${this.$i18n.locale}/about/code-of-conduct`,
+                            isExternalLink: true,
+                        },
+                    ],
                 },
             ],
         }
@@ -204,18 +234,5 @@ export default {
 .hackmd {
     @apply w-full;
     height: 800px;
-}
-
-.emphasis-list > ul {
-    list-style: none;
-}
-
-.emphasis-list li {
-    @apply mb-1;
-}
-
-.emphasis-list li.sub-item {
-    @apply ml-4 list-disc;
-    list-style-type: disc;
 }
 </style>

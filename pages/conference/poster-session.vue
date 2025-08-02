@@ -11,8 +11,24 @@
             <core-h2 :title="$t('location.title')"></core-h2>
             <i18n path="location.description" tag="p"> </i18n>
             <core-h2 :title="$t('time.title')"></core-h2>
-            <i18n path="time.description.main" tag="p"> </i18n>
+            <i18n path="time.description.main" tag="p">
+                <template #br><br /></template>
+            </i18n>
             <i18n path="time.description.sub" tag="p"> </i18n>
+            <core-h2 :title="$t('announcement.title')"></core-h2>
+            <i18n path="announcement.description" tag="p">
+                <template #link>
+                    <nuxt-link
+                        to="/about/code-of-conduct"
+                        class="text-primary-500 underline"
+                    >
+                        {{
+                            $t('announcement.codeOfConduct') ||
+                            'code of conduct'
+                        }}
+                    </nuxt-link>
+                </template>
+            </i18n>
             <core-h2 :title="$t('posters.title')"></core-h2>
             <div class="poster-session__container">
                 <article

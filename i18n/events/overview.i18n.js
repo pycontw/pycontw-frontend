@@ -36,7 +36,7 @@ export default genI18nMessages({
                 description:
                     'Lectures are the most important activities during the two-day session. ' +
                     'The talks will be either 15-, 30-, or 45-minute long. ' +
-                    'Three tracks of talks will be delivered simultaneously. ' +
+                    'All tracks of talks will be delivered simultaneously. ' +
                     'You can choose the topics from different difficulties and types of speech you are interested in listening to.',
             },
             tutorial: {
@@ -122,8 +122,8 @@ export default genI18nMessages({
             talk: {
                 title: '一般演講',
                 description:
-                    '演講為會期兩天最主要的活動，Talk 有 30 分鐘與 15 分鐘兩種長度，' +
-                    '每天都將有三軌議程同步進行，配合各個演講的難易度與類型，你可以選擇自己有興趣的主題聆聽。',
+                    '演講為會期兩天最主要的活動，Talk 有 15、30、45 分鐘三種長度，' +
+                    '配合各個演講的難易度與類型，你可以選擇自己有興趣的主題聆聽。',
             },
             tutorial: {
                 title: '專業課程',
