@@ -4,9 +4,9 @@ export default genI18nMessages({
     'en-us': {
         title: 'Lightning Talk',
         intro:
-            "Lightning Talk is PyCon Taiwan's most dynamic and exciting speaking session!" +
-            'Whether you want to listen or share, we invite you to join us!' +
-            'Speakers will take the stage for 3 minutes each, sharing unique ideas, projects, and experiences.' +
+            "Lightning Talk is PyCon Taiwan's most dynamic and exciting speaking session! " +
+            'Whether you want to listen or share, we invite you to join us!{br}' +
+            'Speakers will take the stage for 3 minutes each, sharing unique ideas, projects, and experiences. ' +
             'Have something to share? Sign up and join the lineup! {br}',
         openSpaceInfo: {
             participate: {
@@ -56,7 +56,7 @@ export default genI18nMessages({
                     'All Lightning Talk content must {bold}comply{/bold} with the {codeOfConduct} and avoid content that may cause discomfort to the audience.',
                     'Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.',
                     'Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.',
-                    '{bold}Selection and Notification{/bold}: At 13:30 daily, {bold}selected applicants{/bold} will be notified via email and Discord to confirm their participation by 14:30. If no response is received within the time limit, the slot will be filled by an alternate.',
+                    '{bold}Selection and Notification{/bold}: At 13:30 daily, {bold}selected applicants{/bold} will be notified via Email and Discord to confirm their participation by 14:30. If no response is received within the time limit, the slot will be filled by an alternate.',
                 ],
             },
             register: {
@@ -93,11 +93,12 @@ export default genI18nMessages({
                 title: 'Important Notes',
                 description:
                     'Please follow the {codeOfConduct} and help us create a respectful and welcoming environment for everyone.{br}' +
-                    'If you have any questions or need assistance regarding the Lightning Talk, feel free to contact us at {programEmail}.',
+                    'If you have any questions or need assistance regarding the Lightning Talk, feel free to contact us at {Email}.',
             },
         },
         terms: {
             codeOfConduct: 'PyCon Taiwan Code of Conduct',
+            Email: 'program@python.tw',
         },
         table: {
             time: 'Time',
@@ -145,7 +146,7 @@ export default genI18nMessages({
                     '閃電秀的呈現內容{bold}必須遵守{/bold} {codeOfConduct}，避免造成聽眾不適的內容。',
                     '每位參與者以一個講題為限。{bold}僅接受現場參與者上台{/bold}，不開放遠端演講。',
                     '每位中選者有 {bold}3 分鐘{/bold} 的時間進行演講，時間到會強制中斷。',
-                    '{bold}中選與通知{/bold}： 每日 13:30 將{bold}中選名單{/bold}透過 email 和 Discord 通知投稿者於 14:30 前回覆確認。若未於時限內回覆，名額將由候補者遞補。',
+                    '{bold}中選與通知{/bold}： 每日 13:30 將{bold}中選名單{/bold}透過 Email 和 Discord 通知投稿者於 14:30 前回覆確認。若未於時限內回覆，名額將由候補者遞補。',
                 ],
             },
             register: {
@@ -181,12 +182,12 @@ export default genI18nMessages({
                 title: '注意事項',
                 description:
                     '請遵守{codeOfConduct}，尊重彼此，讓活動更友善。{br}' +
-                    '有任何關於 Lightning Talk 的問題或需要協助，歡迎透過 {programEmail} 聯繫我們。',
+                    '有任何關於 Lightning Talk 的問題或需要協助，歡迎透過 {Email} 聯繫我們。',
             },
         },
         terms: {
             codeOfConduct: 'PyCon Taiwan 行為準則',
-            programEmail: 'program@python.tw',
+            Email: 'program@python.tw',
         },
         table: {
             time: '時間',
