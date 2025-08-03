@@ -95,10 +95,12 @@
                     <div v-if="openSpace.hasLinkList">
                         <ul class="list-disc pl-6">
                             <rich-text-renderer
-                                v-for="(item, index) in openSpace.listWithLinks"
+                                v-for="(item, index) in $t(
+                                    `openSpaceInfo.${openSpace.tag}.list`,
+                                )"
                                 :key="`openSpaceInfo.${openSpace.tag}.list.${index}`"
-                                :path="item.textKey"
-                                :links="item.links"
+                                :path="`openSpaceInfo.${openSpace.tag}.list.${index}`"
+                                :links="getLinksForItem(openSpace, index)"
                                 tag="li"
                                 class="example"
                             />
@@ -212,8 +214,8 @@ export default {
                             isExternalLink: true,
                         },
                         {
-                            slot: 'programEmail',
-                            textKey: 'terms.programEmail',
+                            slot: 'Email',
+                            textKey: 'terms.Email',
                             url: 'mailto:program@python.tw',
                             isExternalLink: true,
                         },
@@ -223,6 +225,14 @@ export default {
         }
     },
     methods: {
+        getLinksForItem(openSpace, index) {
+            const foundItem = openSpace.listWithLinks.find(
+                (x) =>
+                    x.textKey ===
+                    `openSpaceInfo.${openSpace.tag}.list.${index}`,
+            )
+            return foundItem ? foundItem.links : null
+        },
         renderBold(text) {
             return text
                 .replace(
