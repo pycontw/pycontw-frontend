@@ -20,7 +20,7 @@ export const state = () => ({
         showEventOverviewPage: true,
         showEventsPage: true,
         showIndexSecondaryBtn: true,
-        showIndexSponsorSection: false,
+        showIndexSponsorSection: true,
         showProposalSystemPage: true,
         showRegistrationPage: true,
         showSpeakingPage: true,
@@ -34,7 +34,7 @@ export const state = () => ({
             // 'panelDiscussion',
             // 'posterSession',
         ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion', 'posterSession']
-        eventsHideItems: ['jobs'], // ['sprints', 'openSpaces', 'jobs']
+        eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
 
         registrationHideItems: [], // ['tickets', 'financialAid']
         venueHideItems: ['venueInfo', 'accommodation'], // ['venueInfo', 'accommodation']
