@@ -8,12 +8,7 @@
             v-for="(openSpace, i) in openSpaceInfos"
             :key="`openSpaceInfo_${i}`"
         >
-            <iframe
-                v-if="openSpace.tag === 'iframe_placeholder'"
-                class="hackmd"
-                src="https://hackmd.io/@pycontw/lightningtalk2025"
-            ></iframe>
-            <two-col-wrapper v-else>
+            <two-col-wrapper>
                 <template #default>
                     <i18n
                         :key="`openSpaceInfo.${openSpace.tag}.title`"
@@ -25,6 +20,28 @@
                     </i18n>
                 </template>
                 <template #right-col>
+                    <div v-if="openSpace.tag === 'flow'">
+                        <table class="table-flow">
+                            <thead>
+                                <tr>
+                                    <th>{{ $t('table.time') }}</th>
+                                    <th>{{ $t('table.content') }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    v-for="row in $t(
+                                        'openSpaceInfo.flow.table',
+                                        $i18n.locale,
+                                    )"
+                                    :key="row.time"
+                                >
+                                    <td>{{ row.time }}</td>
+                                    <td>{{ row.content }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div v-if="openSpace.isEmphasis">
                         <strong>
                             <i18n
@@ -34,7 +51,19 @@
                             </i18n>
                         </strong>
                     </div>
+                    <div
+                        v-if="openSpace.tag === 'FAQ'"
+                        class="intro"
+                        v-html="
+                            renderBold(
+                                $t(
+                                    `openSpaceInfo.${openSpace.tag}.description`,
+                                ),
+                            )
+                        "
+                    ></div>
                     <i18n
+                        v-else
                         :key="`openspace_descriptions_${openSpace.tag}`"
                         :path="`openSpaceInfo.${openSpace.tag}.description`"
                         class="intro"
@@ -63,50 +92,45 @@
                             </locale-link>
                         </template>
                     </i18n>
-                    <div v-if="openSpace.hasLinkList" class="list-disc">
-                        <i18n
-                            v-for="(item, index) in openSpace.listWithLinks"
-                            :key="`openSpaceInfo.${openSpace.tag}.list.${index}`"
-                            :path="item.textKey"
-                            class="example"
-                            tag="li"
-                        >
-                            <template v-for="link in item.links" #[link.slot]>
-                                <ext-link
-                                    v-if="link.isExternalLink"
-                                    :key="`${link.textKey}.external`"
-                                    :href="link.url"
-                                    highlight
-                                >
-                                    {{ $t(link.textKey) }}
-                                </ext-link>
-                                <locale-link
-                                    v-else
-                                    :key="`${link.textKey}.local`"
-                                    :to="link.url"
-                                    highlight
-                                >
-                                    {{ $t(link.textKey) }}
-                                </locale-link>
-                            </template>
-                        </i18n>
+                    <div v-if="openSpace.hasLinkList">
+                        <ul class="list-disc pl-6">
+                            <rich-text-renderer
+                                v-for="(item, index) in $t(
+                                    `openSpaceInfo.${openSpace.tag}.list`,
+                                )"
+                                :key="`openSpaceInfo.${openSpace.tag}.list.${index}`"
+                                :path="`openSpaceInfo.${openSpace.tag}.list.${index}`"
+                                :links="getLinksForItem(openSpace, index)"
+                                tag="li"
+                                class="example"
+                            />
+                        </ul>
                     </div>
                     <div v-if="openSpace.hasExamples">
-                        <i18n
-                            v-for="(_, index) in $t(
-                                `openSpaceInfo.${openSpace.tag}.examples`,
-                            )"
-                            :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
-                            :path="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
-                            class="example"
-                            tag="li"
-                        >
-                            <template #br><br /></template>
-                        </i18n>
+                        <ul class="list-disc pl-6">
+                            <li
+                                v-for="(_, index) in $t(
+                                    `openSpaceInfo.${openSpace.tag}.examples`,
+                                )"
+                                :key="`openSpaceInfo.${openSpace.tag}.examples.${index}`"
+                                class="example"
+                                v-html="
+                                    renderBold(
+                                        $t(
+                                            `openSpaceInfo.${openSpace.tag}.examples.${index}`,
+                                        ),
+                                    )
+                                "
+                            ></li>
+                        </ul>
                     </div>
                 </template>
             </two-col-wrapper>
         </div>
+        <iframe
+            class="hackmd"
+            src="https://hackmd.io/@pycontw/lightningtalk2025"
+        ></iframe>
     </i18n-page-wrapper>
 </template>
 
@@ -114,8 +138,10 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import TwoColWrapper from '@/components/core/layout/TwoColWrapper'
 import ExtLink from '@/components/core/links/ExtLink.vue'
+import RichTextRenderer from '@/components/lightning/RichTextRenderer.vue'
 import LocaleLink from '@/components/core/links/LocaleLink.vue'
 import CoreH1 from '@/components/core/titles/H1'
+
 import i18n from '@/i18n/events/lightning-talk.i18n'
 
 export default {
@@ -126,6 +152,7 @@ export default {
         CoreH1,
         TwoColWrapper,
         ExtLink,
+        RichTextRenderer,
         LocaleLink,
     },
     data() {
@@ -136,7 +163,6 @@ export default {
                 },
                 {
                     tag: 'flow',
-                    hasExamples: true,
                 },
                 {
                     tag: 'rules',
@@ -176,9 +202,6 @@ export default {
                     hasExamples: true,
                 },
                 {
-                    tag: 'iframe_placeholder',
-                },
-                {
                     tag: 'FAQ',
                 },
                 {
@@ -190,10 +213,37 @@ export default {
                             url: `https://tw.pycon.org/2025/${this.$i18n.locale}/about/code-of-conduct`,
                             isExternalLink: true,
                         },
+                        {
+                            slot: 'Email',
+                            textKey: 'terms.Email',
+                            url: 'mailto:program@python.tw',
+                            isExternalLink: true,
+                        },
                     ],
                 },
             ],
         }
+    },
+    methods: {
+        getLinksForItem(openSpace, index) {
+            const foundItem = openSpace.listWithLinks.find(
+                (x) =>
+                    x.textKey ===
+                    `openSpaceInfo.${openSpace.tag}.list.${index}`,
+            )
+            return foundItem ? foundItem.links : null
+        },
+        renderBold(text) {
+            return text
+                .replace(
+                    /{bold}(.+?){\/bold}/g,
+                    '<strong class="font-bold">$1</strong>',
+                )
+                .replace(/{ul}/g, '<ul class="list-disc pl-6">')
+                .replace(/{\/ul}/g, '</ul>')
+                .replace(/{li}(.+?){\/li}/g, '<li>$1</li>')
+                .replace(/{br}/g, '<br>')
+        },
     },
     head() {
         return {
@@ -234,5 +284,16 @@ export default {
 .hackmd {
     @apply w-full;
     height: 800px;
+}
+
+.table-flow {
+    @apply w-full border border-white;
+    border-radius: 10px;
+}
+.table-flow th {
+    @apply border border-white p-1 pl-2 text-left;
+}
+.table-flow td {
+    @apply border border-white p-1 pl-2;
 }
 </style>
