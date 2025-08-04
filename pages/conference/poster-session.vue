@@ -18,7 +18,7 @@
             <core-h2 :title="$t('announcement.title')"></core-h2>
             <i18n path="announcement.description" tag="p">
                 <template #link>
-                    <nuxt-link
+                    <locale-link
                         to="/about/code-of-conduct"
                         class="text-primary-500 underline"
                     >
@@ -26,7 +26,7 @@
                             $t('announcement.codeOfConduct') ||
                             'code of conduct'
                         }}
-                    </nuxt-link>
+                    </locale-link>
                 </template>
             </i18n>
             <core-h2 :title="$t('posters.title')"></core-h2>
@@ -103,6 +103,7 @@ import i18n from '@/i18n/conference/poster-session.i18n'
 import Banner from '@/components/core/layout/Banner'
 import CoreH1 from '@/components/core/titles/H1'
 import CoreH2 from '@/components/core/titles/H2'
+import LocaleLink from '@/components/core/links/LocaleLink'
 import Modal from './_components/modal/Modal'
 
 export default {
@@ -113,6 +114,7 @@ export default {
         CoreH1,
         CoreH2,
         I18nPageWrapper,
+        LocaleLink,
         Modal,
     },
     data() {
