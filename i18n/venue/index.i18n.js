@@ -8,11 +8,36 @@ export default genI18nMessages({
                 'PyCon Taiwan 2024 will be held at the National Science and Technology Museum (South Complex), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'National Science and Technology Museum\n (South Complex)',
-            address: '797 Jiuru 1st Rd. Sanmin District, Kaohsiung City',
+            name: 'Main Conference Venue (09/06-09/07)\nTaipei New Horizon 6F',
+            address:
+                'Address: 6F, No. 88, Yanchang Rd, Xinyi District, Taipei City, Taiwan',
+        },
+        sprintsVenueInfo: {
+            name: 'Sprints Venue (09/05)',
+            address: 'Address: TBD',
         },
         venueMap: {
             title: 'Venue Map',
+        },
+        howToGetThere: {
+            title: 'How to Get There',
+        },
+        transportation: {
+            mrt: '🚇 By MRT (Taipei Metro)',
+            bus: '🚌 By Bus',
+            mrtStation1:
+                'Sun Yat-Sen Memorial Hall Station (Blue Line, Exit 5)',
+            mrtDetail1:
+                "Take Exit 5, turn right onto Guangfu South Road, then turn right onto Yanchang Road. It's about a 500-meter walk (approx. 7 minutes).",
+            mrtStation2: 'Taipei City Hall Station (Blue Line, Exit 1)',
+            mrtDetail2:
+                "Take Exit 1 and walk straight along Songgao Road toward Guangfu South Road. It's about a 400-meter walk (approx. 5 minutes).",
+            busStation1: 'Sun Yat-Sen Memorial Hall Station (Guangfu Stop)',
+            busRoutes1:
+                'Bus routes: 204, 278, 278 Shuttle, 282, 288, 672, Chengde Main Line',
+            busStation2: 'United Daily News Stop',
+            busRoutes2:
+                "Bus routes: 202, 212, 212 Night Bus, 212 Express, 232 Express, 240 Express, 270, 299, 600, Ren'ai Main Line, Zhongxiao Main Line",
         },
         transMode: {
             car: 'By Car',
@@ -121,11 +146,33 @@ export default genI18nMessages({
                 'PyCon Taiwan 2024 將在國立科學工藝博物館南館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
-            name: '國立科學工藝博物館\n南館',
-            address: '高雄市三民區九如一路 797 號',
+            name: '主要研討會場地 (09/06-09/07)\n台北文創六樓',
+            address: '地址: 台北市信義區菸廠路 88 號 6 樓（誠品生活松菸店內）',
+        },
+        sprintsVenueInfo: {
+            name: 'Sprints 場地 (09/05)',
+            address: '地址: TBD',
         },
         venueMap: {
             title: '會場地圖',
+        },
+        howToGetThere: {
+            title: '交通指引',
+        },
+        transportation: {
+            mrt: '🚇 捷運 | By MRT (Taipei Metro)',
+            bus: '🚌 公車 | By Bus',
+            mrtStation1: '捷運國父紀念館站（板南線，5號出口）',
+            mrtDetail1:
+                '從 5 號出口出站後，右轉光復南路，再右轉菸廠路，步行約 500 公尺，約 7 分鐘。',
+            mrtStation2: '捷運市政府站（板南線，1號出口）',
+            mrtDetail2:
+                '從 1 號出口出站後，沿松高路直行，步行約 400 公尺，約 5 分鐘即可抵達。',
+            busStation1: '國父紀念館站（光復南路）',
+            busRoutes1: '公車路線：204、278、278區、282、288、672、承德幹線',
+            busStation2: '聯合報站',
+            busRoutes2:
+                '公車路線：202、212、212夜、212直、232快、240直、270、299、600、仁愛幹線、忠孝幹線',
         },
         transMode: {
             car: '自行開車',
