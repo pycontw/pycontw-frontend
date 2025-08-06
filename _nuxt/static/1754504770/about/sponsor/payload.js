@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/about/sponsor", (function(a){a[0]={level_name:"platinum",sponsors:[]};a[1]={level_name:"silver",sponsors:[]};a[2]={level_name:"bronze",sponsors:[]};a[3]={level_name:"special",sponsors:[]};return {data:[{sponsorsData:a}],fetch:{},mutations:[["setSponsorsData",a]]}}(Array(4))));
