@@ -6,7 +6,7 @@ export default genI18nMessages({
         intro:
             "Lightning Talk is PyCon Taiwan's most dynamic and exciting speaking session! " +
             'Whether you want to listen or share, we invite you to join us!{br}' +
-            'Speakers will take the stage for 3 minutes each, sharing unique ideas, projects, and experiences. ' +
+            'Speakers will take the stage for {bold}3 minutes{/bold} each, sharing unique ideas, projects, and experiences. ' +
             'Have something to share? Sign up and join the lineup! {br}',
         openSpaceInfo: {
             participate: {
@@ -52,8 +52,8 @@ export default genI18nMessages({
                 title: 'Lightning Talk Rules',
                 description: '',
                 list: [
-                    'Lightning Talk {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python{/bold}-related topics especially welcome!',
-                    'All Lightning Talk content must {bold}comply{/bold} with the {codeOfConduct} and avoid content that may cause discomfort to the audience.',
+                    '{bold}Lightning Talk topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python{/bold}-related topics especially welcome!',
+                    'All Lightning Talk content {bold}must comply with the{/bold} {codeOfConduct} and avoid content that may cause discomfort to the audience.',
                     'Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.',
                     'Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.',
                     '{bold}Selection and Notification{/bold}: At 13:30 daily, {bold}selected applicants{/bold} will be notified via Email and Discord to confirm their participation by 14:30. If no response is received within the time limit, the slot will be filled by an alternate.',
@@ -64,10 +64,10 @@ export default genI18nMessages({
                 description:
                     'Lightning Talk registration is on the day of the event.{br}{examples}',
                 examples: [
-                    'How to Register: Please scan the QR code at the venue and fill out the Google Form to register.',
-                    'Form Details: You will need to provide your nickname, contact information, and Lightning Talk topic.',
-                    'Registration Time: 08:00 - 13:00 daily (late sign-ups will not be accepted)',
-                    "Result Announcement: The results will be announced in the afternoon - please stay tuned for on-site announcements or the emcee's instructions.",
+                    '{bold}How to Register{/bold}: Please scan the QR code at the venue and fill out the Google Form to register.',
+                    '{bold}Form Details{/bold}: You will need to provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.',
+                    '{bold}Registration Time{/bold}: {bold}08:00 - 13:00{/bold} daily (late sign-ups will not be accepted)',
+                    "{bold}Result Announcement{/bold}: The results will be announced in the afternoon - please stay tuned for on-site announcements or the emcee's instructions.",
                 ],
             },
             FAQ: {
@@ -110,7 +110,7 @@ export default genI18nMessages({
         intro:
             '閃電秀是 PyCon Taiwan 最緊湊精彩的演講環節！' +
             '無論你是想聽故事還是自己發聲，我們都邀請你一起參與！{br}' +
-            '現場將由多位講者接力上台，在 3 分鐘內分享獨特的想法、專案或經驗。' +
+            '現場將由多位講者接力上台，在 {bold}3 分鐘{/bold}內分享獨特的想法、專案或經驗。' +
             '有想法想分享嗎？快來報名成為其中一員！ {br}',
         openSpaceInfo: {
             participate: {
@@ -142,7 +142,7 @@ export default genI18nMessages({
                 title: '閃電秀規則',
                 description: '',
                 list: [
-                    '閃電秀主題需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，{bold}Python{/bold}相關主題尤其歡迎！',
+                    '閃電秀{bold}主題{/bold}需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，{bold}Python{/bold}相關主題尤其歡迎！',
                     '閃電秀的呈現內容{bold}必須遵守{/bold} {codeOfConduct}，避免造成聽眾不適的內容。',
                     '每位參與者以一個講題為限。{bold}僅接受現場參與者上台{/bold}，不開放遠端演講。',
                     '每位中選者有 {bold}3 分鐘{/bold} 的時間進行演講，時間到會強制中斷。',
