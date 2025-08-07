@@ -272,10 +272,7 @@ export default {
 
 <style lang="postcss" scoped>
 .intro {
-    font-size: 16px;
-    @media (min-width: 1024px) {
-        font-size: 18px;
-    }
+    font-size: 18px;
 }
 .spacing {
     @apply py-2 lg:py-5;
