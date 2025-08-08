@@ -129,8 +129,8 @@ export default genI18nMessages({
                 },
                 {
                     id: '9',
-                    name: 'Chieh-Hung Cheng',
-                    type: TypeTranslationEn[community],
+                    name: 'Larry Kuo',
+                    type: TypeTranslationEn[professional],
                     community: '',
                     topics: ['Community connection', 'Your experiences', 'AI'],
                     title: '從零開始打造一個教初學者寫 Python 的社群：KangaCode 的教育願景',
@@ -253,8 +253,8 @@ export default genI18nMessages({
                 },
                 {
                     id: '9',
-                    name: '鄭傑鴻',
-                    type: TypeTranslationZhHant[community],
+                    name: '郭睿驛',
+                    type: TypeTranslationZhHant[professional],
                     community: '',
                     topics: ['社群經營', '經驗分享', '人工智慧'],
                     title: '從零開始打造一個教初學者寫 Python 的社群：KangaCode 的教育願景',
