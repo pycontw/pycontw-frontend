@@ -11,7 +11,7 @@ export default genI18nMessages({
         form: 'The Panel Discussion will be guided by a moderator and feature multiple invited speakers. Throughout the session, the moderator will pose questions based on the central theme, encouraging speakers to share their perspectives and experiences. The discussion will also engage the audience in exploring the core issues together. The session will conclude with a 10-minute Q&A segment, providing an opportunity for the audience to interact directly with the speakers.',
         hostHeaderTitle: 'Host',
         participantHeaderTitle: 'Participants',
-        speechTitle: 'How Will AI Replace Us? – Experts on Coexisting with AI',
+        speechTitle: 'Coexisting with AI: Will Experts Adapt or Lead?',
         speechDescription:
             'As generative AI and large language models rapidly sweep across industries, professionals are facing unprecedented challenges and transformations. From software development to content creation, from design thinking to data analysis, AI is reshaping our understanding of what “expertise” means. While some worry about being replaced, others have begun learning how to collaborate with AI—harnessing its potential to find new breakthroughs amid uncertainty.' +
             '{br}{br}' +
@@ -77,7 +77,7 @@ export default genI18nMessages({
         form: 'Panel Discussion 將由一位主持人帶領，邀請多位講者共同參與討論。活動過程中，主持人將圍繞主題提出提問，引導講者分享不同的觀點與經驗，並在過程中與現場觀眾一同深入探索議題核心。活動最後將保留約 10 分鐘的 Q&A 時間，開放觀眾與講者進行交流與提問。',
         hostHeaderTitle: '主持人',
         participantHeaderTitle: '與會人',
-        speechTitle: 'AI 如何取代我們？ – 專家們如何與 AI 共生',
+        speechTitle: '專家們如何與 AI 共存',
         speechDescription:
             '當生成式 AI 和大型語言模型迅速席捲各行各業，專業工作者也迎來前所未有的挑戰與轉變。從程式開發到文字創作、從設計思維到資料分析，AI 正重新定義我們對「專業能力」的想像。面對這波技術浪潮，有人焦慮於「會不會被取代」，也有人已經開始學會如何與 AI 合作、甚至借力使力，在變動中找到突破口。' +
             '{br}{br}' +
