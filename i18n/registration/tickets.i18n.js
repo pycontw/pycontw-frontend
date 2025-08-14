@@ -162,7 +162,7 @@ export default genI18nMessages({
         og: {
             title: 'Ticket Info',
             description:
-                'The spark between technology and humanity will ignite your inspiration at PyCon TW 2025!{br}' +
+                'The spark between technology and humanity will ignite your inspiration at PyCon TW 2025! ' +
                 'More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         },
     },

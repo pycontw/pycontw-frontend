@@ -51,7 +51,7 @@ export default genI18nMessages({
             title: 'Sponsorship',
             description:
                 'Your generous support is the motivation to help us move forward. ' +
-                'PyConTW 2024 calls for your sponsorship to enlarge our community.',
+                'PyConTW 2025 calls for your sponsorship to enlarge our community.',
         },
     },
     'zh-hant': {

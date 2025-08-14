@@ -556,12 +556,12 @@ export default {
                 {
                     hid: 'og:description',
                     property: 'og:description',
-                    content: this.$i18n.t('pageAbstract'),
+                    content: this.$i18n.t('og.description'),
                 },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: this.$i18n.t('pageAbstract'),
+                    content: this.$i18n.t('og.description'),
                 },
             ],
         }

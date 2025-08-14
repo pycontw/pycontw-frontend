@@ -9,9 +9,9 @@
             class="recording__intro"
         >
             <template #pyvideo>
-                <ext-link href="https://pyvideo.org" highlight
-                    >pyvideo.org</ext-link
-                >
+                <ext-link href="https://pyvideo.org" highlight>
+                    pyvideo.org
+                </ext-link>
             </template>
         </i18n>
 
@@ -68,12 +68,16 @@ export default {
                 {
                     hid: 'og:description',
                     property: 'og:description',
-                    content: this.$i18n.t('og.description'),
+                    content: this.$i18n.t('og.description', {
+                        pyvideo: 'pyvideo.org',
+                    }),
                 },
                 {
                     hid: 'description',
                     name: 'description',
-                    content: this.$i18n.t('og.description'),
+                    content: this.$i18n.t('og.description', {
+                        pyvideo: 'pyvideo.org',
+                    }),
                 },
             ],
         }
