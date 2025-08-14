@@ -19,9 +19,6 @@
                     tag="div"
                 >
                     <template #br><br /></template>
-                    <template v-if="shouldBreak" #conditionalBr>
-                        <br />
-                    </template>
                 </i18n>
             </div>
         </banner>
@@ -56,16 +53,7 @@
                     path="ticketsIntro.description"
                     tag="p"
                     class="text-[18px] leading-[30px]"
-                >
-                    <template #financialAid>
-                        <locale-link
-                            :to="pageLinks.financialAid"
-                            underline
-                            highlight
-                            >{{ $t('terms.financialAid') }}</locale-link
-                        >
-                    </template>
-                </i18n>
+                />
             </div>
             <section class="mb-[50px] flex w-full flex-col gap-20">
                 <div
@@ -101,22 +89,7 @@
                                 class="inline-block"
                                 :path="`features.${feature}`"
                                 tag="div"
-                            >
-                                <template #corporateGroupApplication>
-                                    <ext-link
-                                        :href="
-                                            pageLinks.corporateGroupTicketsForm
-                                        "
-                                        highlight
-                                        underline
-                                        >{{
-                                            $t(
-                                                'terms.corporateGroupApplication',
-                                            )
-                                        }}</ext-link
-                                    >
-                                </template>
-                            </i18n>
+                            />
                         </li>
                     </ul>
 
@@ -188,20 +161,6 @@
                                 :path="`beforeBuyingTickets.content.${i}.description.${index}`"
                                 tag="li"
                             >
-                                <template #nonCorporateTicketsInvoicing>
-                                    <ext-link
-                                        :href="
-                                            pageLinks.nonCorporateTicketsInvoicing
-                                        "
-                                        highlight
-                                        underline
-                                        >{{
-                                            $t(
-                                                'terms.nonCorporateTicketsInvoicing',
-                                            )
-                                        }}</ext-link
-                                    >
-                                </template>
                                 <template #corporateGroupTicketsForm>
                                     <ext-link
                                         :href="
@@ -232,7 +191,6 @@
                         class="li-mt-0 li-mb-44 leading-[30px]"
                     >
                         <i18n :path="`notice.content.${i}.title`" tag="div">
-                            <template #br><br /></template>
                             <template #codeOfConduct>
                                 <locale-link
                                     :to="pageLinks.codeOfConduct"
@@ -255,56 +213,6 @@
                                             'terms.everybodyContributesPrinciple',
                                         )
                                     }}</ext-link
-                                >
-                            </template>
-                            <template #nonCorporateTicketsInvoicing>
-                                <ext-link
-                                    :href="
-                                        pageLinks.nonCorporateTicketsInvoicing
-                                    "
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.nonCorporateTicketsInvoicing')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #corporateTickets>
-                                <ext-link
-                                    :href="pageLinks.kktixCorporate2024"
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.corporateTickets')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #corporateGroupTicketsForm>
-                                <ext-link
-                                    :href="pageLinks.corporateGroupTicketsForm"
-                                    highlight
-                                    underline
-                                    >{{
-                                        $t('terms.corporateGroupTicketsForm')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #accessibilityTicket>
-                                <ext-link
-                                    :href="pageLinks.kktixIndividual2024"
-                                    underline
-                                    highlight
-                                    >{{
-                                        $t('tickets.accessibilityTicket')
-                                    }}</ext-link
-                                >
-                            </template>
-                            <template #financialAid>
-                                <locale-link
-                                    :to="pageLinks.financialAid"
-                                    underline
-                                    highlight
-                                    >{{ $t('terms.financialAid') }}</locale-link
                                 >
                             </template>
                             <template #kktixOnBehalf>
@@ -365,16 +273,6 @@
                                 class="leading-[30px]"
                                 tag="li"
                             >
-                                <template #accessibility>
-                                    <ext-link
-                                        :href="pageLinks.kktixIndividual2024"
-                                        underline
-                                        highlight
-                                        >{{
-                                            $t('tickets.accessibility')
-                                        }}</ext-link
-                                    >
-                                </template>
                                 <template
                                     #identityVerificationOfPeopleWithDisability
                                 >
@@ -403,30 +301,6 @@
                                         }}</ext-link
                                     >
                                 </template>
-                                <template #individualRegular>
-                                    <ext-link
-                                        :href="pageLinks.kktixIndividual2024"
-                                        underline
-                                        highlight
-                                        >{{
-                                            $t('tickets.individualRegular')
-                                        }}</ext-link
-                                    >
-                                </template>
-                                <template #nonCorporateTicketsInvoicing>
-                                    <ext-link
-                                        :href="
-                                            pageLinks.nonCorporateTicketsInvoicing
-                                        "
-                                        highlight
-                                        underline
-                                        >{{
-                                            $t(
-                                                'terms.nonCorporateTicketsInvoicing',
-                                            )
-                                        }}</ext-link
-                                    >
-                                </template>
                                 <template #corporateGroupTicketsForm>
                                     <ext-link
                                         :href="
@@ -438,25 +312,6 @@
                                             $t(
                                                 'terms.corporateGroupTicketsForm',
                                             )
-                                        }}</ext-link
-                                    >
-                                </template>
-                                <template #contact>
-                                    <ext-link
-                                        :href="pageLinks.organizerEmail"
-                                        highlight
-                                        underline
-                                    >
-                                        organizers@python.tw
-                                    </ext-link>
-                                </template>
-                                <template #accessibilityTicket>
-                                    <ext-link
-                                        :href="pageLinks.kktixIndividual2024"
-                                        underline
-                                        highlight
-                                        >{{
-                                            $t('tickets.accessibilityTicket')
                                         }}</ext-link
                                     >
                                 </template>
@@ -513,15 +368,6 @@ export default {
             return {
                 'font-size': this.$i18n.locale === 'en-us' ? '22px' : '32px',
             }
-        },
-        shouldBreak() {
-            if (process.client) {
-                const width = window.innerWidth
-                if (width < 768) {
-                    return true
-                }
-            }
-            return false
         },
     },
     methods: {
