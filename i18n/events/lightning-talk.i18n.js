@@ -2,9 +2,9 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'Lightning Talk',
+        title: 'Lightning Talks',
         intro:
-            "Lightning Talk is PyCon Taiwan's most dynamic and exciting speaking session! " +
+            "Lightning Talks are PyCon Taiwan's most dynamic and exciting speaking session! " +
             'Whether you want to listen or share, we invite you to join us!{br}' +
             'Speakers will take the stage for {bold}3 minutes{/bold} each, sharing unique ideas, projects, and experiences. ' +
             'Have something to share? Sign up and join the lineup! {br}',
@@ -37,7 +37,7 @@ export default genI18nMessages({
                         content: 'Selected Speakers Confirmation Deadline',
                     },
                     {
-                        time: '16:00 - 16:30',
+                        time: '14:50',
                         content:
                             'Speaker Briefing & Tech Check ' +
                             '(Outside R0 Main Hall)',
@@ -49,11 +49,11 @@ export default genI18nMessages({
                 ],
             },
             rules: {
-                title: 'Lightning Talk Rules',
+                title: 'Lightning Talks Rules',
                 description: '',
                 list: [
-                    '{bold}Lightning Talk topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python{/bold}-related topics especially welcome!',
-                    'All Lightning Talk content {bold}must comply with the{/bold} {codeOfConduct} and avoid content that may cause discomfort to the audience.',
+                    'Lightning Talks {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python-related{/bold} topics especially welcome!',
+                    'All Lightning Talks content must {bold}comply{/bold} with the {codeOfConduct} and avoid content that may cause discomfort to the audience.',
                     'Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.',
                     'Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.',
                     '{bold}Selection and Notification{/bold}: At 13:30 daily, {bold}selected applicants{/bold} will be notified via Email and Discord to confirm their participation by 14:30. If no response is received within the time limit, the slot will be filled by an alternate.',
@@ -62,7 +62,7 @@ export default genI18nMessages({
             register: {
                 title: 'How to Register',
                 description:
-                    'Lightning Talk registration is on the day of the event.{br}{examples}',
+                    '{bold}Lightning Talk registration is on the day of the event.{/bold}{br}{examples}',
                 examples: [
                     '{bold}How to Register{/bold}: Please scan the QR code at the venue and fill out the Google Form to register.',
                     '{bold}Form Details{/bold}: You will need to provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.',
@@ -73,8 +73,8 @@ export default genI18nMessages({
             FAQ: {
                 title: 'FAQ',
                 description:
-                    '{bold}What is Lightning Talk?{/bold}{br}' +
-                    "Lightning Talk is PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
+                    '{bold}What is a Lightning Talk?{/bold}{br}' +
+                    "Lightning Talks are PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
                     '{bold}What can I share?{/bold}{br}' +
                     '{ul}' +
                     '{li}Latest projects or discoveries{/li}' +
@@ -93,7 +93,7 @@ export default genI18nMessages({
                 title: 'Important Notes',
                 description:
                     'Please follow the {codeOfConduct} and help us create a respectful and welcoming environment for everyone.{br}' +
-                    'If you have any questions or need assistance regarding the Lightning Talk, feel free to contact us at {Email}.',
+                    'If you have any questions or need assistance regarding the Lightning Talks, feel free to contact us at {Email}.',
             },
         },
         terms: {
@@ -129,7 +129,7 @@ export default genI18nMessages({
                     { time: '13:30', content: '公布中選講者名單' },
                     { time: '14:30', content: '中選講者回覆確認截止' },
                     {
-                        time: '16:00 - 16:30',
+                        time: '14:50',
                         content: '講者集合與技術準備（R0 議程廳門外）',
                     },
                     {
@@ -142,7 +142,7 @@ export default genI18nMessages({
                 title: '閃電秀規則',
                 description: '',
                 list: [
-                    '閃電秀{bold}主題{/bold}需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，{bold}Python{/bold}相關主題尤其歡迎！',
+                    '閃電秀{bold}主題{/bold}需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，{bold}Python{/bold} 相關主題尤其歡迎！',
                     '閃電秀的呈現內容{bold}必須遵守{/bold} {codeOfConduct}，避免造成聽眾不適的內容。',
                     '每位參與者以一個講題為限。{bold}僅接受現場參與者上台{/bold}，不開放遠端演講。',
                     '每位中選者有 {bold}3 分鐘{/bold} 的時間進行演講，時間到會強制中斷。',
@@ -151,7 +151,7 @@ export default genI18nMessages({
             },
             register: {
                 title: '報名方式',
-                description: '閃電秀採當日報名制。{br}{examples}',
+                description: '{bold}閃電秀採當日報名制。{/bold}{br}{examples}',
                 examples: [
                     '{bold}報名方式{/bold}： 請於活動會場掃描 QR Code，填寫 Google 表單完成報名。',
                     '{bold}表單內容{/bold}： 需填寫您的{bold}暱稱{/bold}、{bold}聯繫方式{/bold}、以及{bold}閃電秀講題{/bold}。',
