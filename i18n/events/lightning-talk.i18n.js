@@ -64,10 +64,10 @@ export default genI18nMessages({
                 description:
                     '{bold}Lightning Talk registration is on the day of the event.{/bold}{br}{examples}',
                 examples: [
-                    '{bold}How to Register{/bold}: Please scan the QR code at the venue and fill out the Google Form to register.',
-                    '{bold}Form Details{/bold}: You will need to provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.',
+                    '{bold}How to Register{/bold}: Scan the QR code at the venue and fill out the Google Form.',
+                    '{bold}Form Details{/bold}: Provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.',
                     '{bold}Registration Time{/bold}: {bold}08:00 - 13:00{/bold} daily (late sign-ups will not be accepted)',
-                    "{bold}Result Announcement{/bold}: The results will be announced in the afternoon - please stay tuned for on-site announcements or the emcee's instructions.",
+                    "{bold}Result Announcement{/bold}: Results will be announced in the afternoon - please stay tuned for on-site announcements or the emcee's instructions.",
                 ],
             },
             FAQ: {
