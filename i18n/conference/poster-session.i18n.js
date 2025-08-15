@@ -50,7 +50,7 @@ export default genI18nMessages({
             list: [
                 {
                     id: '1',
-                    name: 'Freilla Mae Espinola',
+                    name: 'KwonHan Bae',
                     type: TypeTranslationEn[community],
                     community: 'Python Asia Organization',
                     topics: ['Community connection'],
@@ -174,7 +174,7 @@ export default genI18nMessages({
             list: [
                 {
                     id: '1',
-                    name: 'Freilla Mae Espinola',
+                    name: 'KwonHan Bae',
                     type: TypeTranslationZhHant[community],
                     community: 'Python Asia Organization',
                     topics: ['社群經營'],
