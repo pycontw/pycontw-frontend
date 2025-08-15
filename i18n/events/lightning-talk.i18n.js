@@ -10,7 +10,7 @@ export default genI18nMessages({
             'Have something to share? Sign up and join the lineup! {br}',
         openSpaceInfo: {
             participate: {
-                title: 'Event Schedule',
+                title: 'Lightning Talk Schedule',
                 description:
                     'September 6 (Sat), 17:10 - 17:40 | Room R0{br}' +
                     'September 7 (Sun), 16:50 - 17:20 | Room R0{br}' +
