@@ -10,7 +10,7 @@ export default genI18nMessages({
             'Have something to share? Sign up and join the lineup! {br}',
         openSpaceInfo: {
             participate: {
-                title: 'Event Schedule',
+                title: 'Lightning Talk Schedule Schedule',
                 description:
                     'September 6 (Sat), 17:10 - 17:40 | Room R0{br}' +
                     'September 7 (Sun), 16:50 - 17:20 | Room R0{br}' +
@@ -22,37 +22,37 @@ export default genI18nMessages({
                 table: [
                     {
                         time: '08:00',
-                        content: 'Lightning Talk Registration Opens',
+                        content: 'Lightning Talk registration opens',
                     },
                     {
                         time: '13:00',
-                        content: 'Registration Closes',
+                        content: 'Registration closes',
                     },
                     {
                         time: '13:30',
-                        content: 'Selected Speaker List Announced',
+                        content: 'Selected speaker list announced',
                     },
                     {
                         time: '14:30',
-                        content: 'Selected Speakers Confirmation Deadline',
+                        content: 'Selected speakers confirmation deadline',
                     },
                     {
                         time: '14:50',
                         content:
-                            'Speaker Briefing & Tech Check ' +
+                            'Speaker briefing & tech check ' +
                             '(Outside R0 Main Hall)',
                     },
                     {
                         time: '17:10 (Day 1) / 16:50 (Day 2)',
-                        content: 'Lightning Talk Session',
+                        content: 'Lightning Talk session',
                     },
                 ],
             },
             rules: {
-                title: 'Lightning Talks Rules',
+                title: 'Lightning Talk Rules',
                 description: '',
                 list: [
-                    'Lightning Talks {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python-related{/bold} topics especially welcome!',
+                    'Lightning Talk {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python-related{/bold} topics especially welcome!',
                     'All Lightning Talks content must {bold}comply{/bold} with the {codeOfConduct} and avoid content that may cause discomfort to the audience.',
                     'Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.',
                     'Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.',
