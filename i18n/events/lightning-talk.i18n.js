@@ -10,7 +10,7 @@ export default genI18nMessages({
             'Have something to share? Sign up and join the lineup! {br}',
         openSpaceInfo: {
             participate: {
-                title: 'Lightning Talk Schedule Schedule',
+                title: 'Event Schedule',
                 description:
                     'September 6 (Sat), 17:10 - 17:40 | Room R0{br}' +
                     'September 7 (Sun), 16:50 - 17:20 | Room R0{br}' +
@@ -155,7 +155,7 @@ export default genI18nMessages({
                 examples: [
                     '{bold}報名方式{/bold}： 請於活動會場掃描 QR Code，填寫 Google 表單完成報名。',
                     '{bold}表單內容{/bold}： 需填寫您的{bold}暱稱{/bold}、{bold}聯繫方式{/bold}、以及{bold}閃電秀講題{/bold}。',
-                    '{bold}報名時間{/bold}： 每日 08:00 - 13:00 (逾時恕不受理)',
+                    '{bold}報名時間{/bold}： 每日 {bold}08:00 - 13:00{/bold} (逾時恕不受理)',
                     '{bold}結果公布{/bold}： 中選結果將於當天下午公布，請留意現場公告或主持人說明。',
                 ],
             },
