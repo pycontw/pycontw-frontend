@@ -5,7 +5,7 @@ export default genI18nMessages({
         title: 'Call for Poster Session',
         intro: [
             "Welcome to PyCon TW's Poster Session!",
-            'The Poster Session offers a format where speakers present their work through posters and interact directly with attendees. At PyCon Taiwan 2024, we held our very first Poster Session and received an enthusiastic response. This year, we are excited to bring it back—creating the chance for more people to introduce their work,  experience, or issues of concern. You are welcome to submit anything related to Python. Accepted submissions will be showcased in poster format during the Poster Session, where you can have real-time interactions with conference attendees.',
+            'The Poster Session offers a format where speakers present their work through posters and interact directly with attendees. At PyCon Taiwan 2025, we held our very first Poster Session and received an enthusiastic response. This year, we are excited to bring it back—creating the chance for more people to introduce their work,  experience, or issues of concern. You are welcome to submit anything related to Python. Accepted submissions will be showcased in poster format during the Poster Session, where you can have real-time interactions with conference attendees.',
         ],
 
         info: {
@@ -66,7 +66,7 @@ export default genI18nMessages({
     'zh-hant': {
         title: 'Poster Session 稿件募集',
         intro: [
-            'Poster Session（海報展） 是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者現場互動的一種展示形式。在 PyCon Taiwan 2024 我們初次嘗試 Poster Session 的活動，獲得廣大迴響。今年將繼續舉辦 Poster Session，希望可以提供讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，並至 Poster Session 活動現場共襄盛舉，讓與會者可與您直接交流。',
+            'Poster Session（海報展） 是一個讓投稿者可以透過海報展示其分享內容，並與個別與會者現場互動的一種展示形式。在 PyCon Taiwan 2025 我們初次嘗試 Poster Session 的活動，獲得廣大迴響。今年將繼續舉辦 Poster Session，希望可以提供讓更多人介紹自己的成果或是關注的議題。您可以投稿任何跟 Python 有關的主題，屆時將以海報形式展出，並至 Poster Session 活動現場共襄盛舉，讓與會者可與您直接交流。',
         ],
         info: {
             importantDates: {

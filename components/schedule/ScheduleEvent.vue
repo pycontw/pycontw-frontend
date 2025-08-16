@@ -139,8 +139,6 @@ export default {
                 speakers[0].en_us
             ) {
                 const keynoteSpeakerId = speakers[0].en_us
-                    .replaceAll(' ', '_')
-                    .replaceAll('.', '')
                 return `/conference/keynotes#${keynoteSpeakerId}`
             } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
                 return `/conference/${eventType}/${eventId}/`

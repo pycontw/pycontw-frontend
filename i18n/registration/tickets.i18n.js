@@ -156,13 +156,12 @@ export default genI18nMessages({
             kktixTicketExchangeRefundPolicy:
                 'KKTIX ticket exchange and refund policy',
             privacyPolicy: 'PyCon TW 2025 Privacy Statement',
-            viewPricePage: 'See on KKTIX',
             officialWebsite: 'PyCon TW 2025 official website',
         },
         og: {
             title: 'Ticket Info',
             description:
-                'The spark between technology and humanity will ignite your inspiration at PyCon TW 2025!{br}' +
+                'The spark between technology and humanity will ignite your inspiration at PyCon TW 2025! ' +
                 'More with multiple ticket types to choose from. Engage with experts and learn from peers.',
         },
     },
@@ -311,7 +310,6 @@ export default genI18nMessages({
             disabilityCertification: '身心障礙證明',
             everybodyContributesPrinciple: 'Everybody Contributes 原則',
             corporateGroupTicketsForm: 'PyCon TW 2025 企業團體票申請',
-            corporateGroupApplication: '企業團體票申請',
             identityVerificationOfPeopleWithDisability: '身心障礙者身份認證',
             kktixOnBehalf: 'KKTIX 代理退票與退費',
             kktixTicketExchangeRefundPolicy: 'KKTIX 代理退換票辦法',

@@ -92,7 +92,7 @@ export default {
 
             const findEl = (hash, x = 0) => {
                 return (
-                    document.querySelector(hash) ||
+                    document.querySelector('#' + CSS.escape(hash.slice(1))) ||
                     new Promise((resolve) => {
                         if (x > 50) {
                             return resolve(document.querySelector('#app'))
@@ -108,7 +108,7 @@ export default {
                 const el = await findEl(to.hash)
                 if ('scrollBehavior' in document.documentElement.style) {
                     return window.scrollTo({
-                        top: el.offsetTop,
+                        top: el.offsetTop - 96,
                         behavior: 'smooth',
                     })
                 } else {

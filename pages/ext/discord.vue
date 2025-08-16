@@ -22,18 +22,6 @@
                         </span>
                     </template>
                     <template #br><br /></template>
-                    <template #info>
-                        <span class="category">PYCON TW 2024</span>
-                    </template>
-                    <template #registrationDesk>
-                        <span class="channel">⚠｜registration-desk</span>
-                    </template>
-                    <template #registrationCommand>
-                        <code v-if="!isValidAttendee" class="code"
-                            >!register [TOKEN]</code
-                        >
-                        <span v-else class="code">!register {{ token }}</span>
-                    </template>
                     <template #general>
                         <span class="channel">#general</span>
                     </template>
@@ -88,11 +76,8 @@
                             </li>
                         </ul>
                     </template>
-                    <template #keynote>
-                        <span class="channel">📝｜program-keynote</span>
-                    </template>
                     <template #tracks>
-                        <span class="category">PYCON TW 2024</span>
+                        <span class="category">PYCON TW 2025</span>
                     </template>
                 </i18n>
             </div>
