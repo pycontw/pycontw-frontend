@@ -60,7 +60,20 @@
                                             />
                                         </div>
                                         <div class="speechBox__title">
-                                            {{ speech.title }}
+                                            <span class="text-lg text-pink-700">
+                                                {{ speech.title }}
+                                            </span>
+                                            <span
+                                                class="flex inline-flex flex-nowrap gap-1"
+                                            >
+                                                <span
+                                                    v-for="tag in speech.hashtags"
+                                                    :key="`speech_hashtag_${tag}`"
+                                                    class="speechBox__hashtag"
+                                                >
+                                                    {{ tag }}
+                                                </span>
+                                            </span>
                                         </div>
                                         <div class="flex gap-4">
                                             <span
@@ -198,6 +211,7 @@ export default {
                             speechdate: 'Sep 6',
                             speechtime: '12:00-12:30 (GMT+8)',
                             title: '當科技女力遇上教育缺口 — 高雄女中生自辦 Python 營隊的故事',
+                            hashtags: ['程式教育'],
                             speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker1-1.png'),
@@ -238,6 +252,7 @@ export default {
                             speechdate: 'Sep 6',
                             speechtime: '12:40-13:10 (GMT+8)',
                             title: '20 歲登上 AI 頂尖會議 ACL 第一作者的秘訣 — 年輕研究員的成長之路',
+                            hashtags: ['學術研究'],
                             speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker2.jpg'),
@@ -278,6 +293,7 @@ export default {
                             speechdate: 'Sep 7',
                             speechtime: '12:00-13:00 (GMT+8)',
                             title: '開源之路與年輕開發者的力量 — Apache Airflow 貢獻與產業經驗分享',
+                            hashtags: ['開源貢獻', '業界經驗'],
                             speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker3-1.jpg'),
@@ -420,10 +436,12 @@ export default {
 }
 
 .speechBox__title {
-    @apply flex flex-row;
     @apply font-sans font-normal;
-    @apply text-lg;
-    @apply mb-2 mt-1 text-pink-700;
+    @apply mb-1;
+}
+.speechBox__hashtag {
+    @apply rounded-md bg-white/10 px-2 py-1 text-xs;
+    color: #e0a8e7;
 }
 
 .speechBox__speaker {
