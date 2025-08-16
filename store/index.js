@@ -33,7 +33,8 @@ export const state = () => ({
             // 'tutorials',
             // 'panelDiscussion',
             // 'posterSession',
-        ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion', 'posterSession']
+            // 'youngInspirers',
+        ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion', 'posterSession', 'youngInspirers']
         eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
 
         registrationHideItems: [], // ['tickets', 'financialAid']

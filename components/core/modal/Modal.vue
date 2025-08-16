@@ -22,10 +22,8 @@
             </div>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ intro }}</p>
-                <div v-for="item in description" :key="item.id">
-                    <p v-for="line in item" :key="line.id" class="text-sm">
-                        {{ line }}
-                    </p>
+                <div v-for="(item, i) in description" :key="i" class="text-sm">
+                    {{ item }}
                 </div>
             </div>
             <div v-if="websiteUrl" class="lightBox__buttons">
@@ -33,8 +31,9 @@
                     :href="websiteUrl"
                     :secondary="true"
                     :primary="false"
-                    >{{ $t('website') }}</text-button
                 >
+                    {{ $t('website') }}
+                </text-button>
             </div>
         </div>
     </div>
@@ -144,7 +143,7 @@ export default {
 
 .lightBox__intro {
     @apply mt-3.5 flex flex-col overflow-y-auto font-sans text-base font-normal;
-    @apply max-h-40 whitespace-pre-line md:mt-4 md:text-lg;
+    @apply whitespace-pre-line md:mt-4 md:text-lg;
 }
 
 .lightBox__buttons {

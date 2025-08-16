@@ -80,14 +80,14 @@ export default {
                 '--is-link': this.isLink,
                 '--uppercase': this.uppercase,
                 '--bulletin': this.bulletin,
-                '--largeEn': this.getLocale === 'en-us',
+                '--large-en': this.getLocale === 'en-us',
             }
         },
         medium() {
             return !this.large && !this.small
         },
         isLink() {
-            return this.href || this.to
+            return Boolean(this.href || this.to)
         },
     },
 }
@@ -146,7 +146,7 @@ export default {
         min-width: 128px;
     }
 
-    &.--largeEn > a {
+    &.--large-en > a {
         min-width: 323px;
     }
 
@@ -164,7 +164,7 @@ export default {
         @apply h-12 text-base font-semibold;
         padding: 10px 22px;
         min-width: 80px;
-        height: 60px;
+        height: 42px;
         font-size: 20px;
     }
 }
@@ -216,7 +216,7 @@ export default {
         min-width: 128px;
     }
 
-    &.--largeEn > a {
+    &.--large-en > a {
         min-width: 323px;
     }
 
@@ -234,7 +234,7 @@ export default {
         @apply h-12 text-base font-semibold;
         padding: 10px 22px;
         min-width: 80px;
-        height: 60px;
+        height: 42px;
         font-size: 20px;
     }
 }

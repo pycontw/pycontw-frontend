@@ -232,7 +232,7 @@ export default {
             return participant.name
         },
         getSpeakerDescription(participant) {
-            return [participant.description]
+            return participant.description
         },
     },
     head() {
