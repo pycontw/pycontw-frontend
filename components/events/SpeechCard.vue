@@ -47,6 +47,7 @@
 <script>
 import i18n from './SpeechCard.i18n'
 import { LocaleLink } from '~/components/core/links'
+import { langIcons } from '~/utils/icons.utils.js'
 
 export default {
     i18n,
@@ -69,12 +70,7 @@ export default {
     data() {
         return {
             icon: {
-                lang: {
-                    ENEN: require('~/static/img/icons/lang/ENEN.svg'),
-                    ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
-                    JPEN: require('~/static/img/icons/lang/JPEN.svg'), // added for PyCon APAC 2022
-                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'), // not used in PyCon APAC 2022
-                },
+                lang: langIcons,
             },
             locationMapping: {
                 '4-r0': 'R0',

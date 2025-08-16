@@ -30,6 +30,7 @@
 
 <script>
 import ScheduleBlock from '@/components/schedule/ScheduleBlock'
+import { langIcons, levelIcons } from '~/utils/icons.utils.js'
 
 export default {
     name: 'ScheduleEvent',
@@ -70,17 +71,8 @@ export default {
             timezoneOptions: { outputFormat: timezoneFormat },
             startPoint: this.$parseDate(this.timelineBegin),
             icon: {
-                lang: {
-                    ENEN: require('~/static/img/icons/lang/ENEN.svg'),
-                    ZHEN: require('~/static/img/icons/lang/ZHEN.svg'),
-                    JPEN: require('~/static/img/icons/lang/JPEN.svg'), // added for PyCon APAC 2022
-                    ZHZH: require('~/static/img/icons/lang/ZHZH.svg'), // not used in PyCon APAC 2022
-                },
-                level: {
-                    NOVICE: require('~/static/img/icons/level/novice.svg'),
-                    INTERMEDIATE: require('~/static/img/icons/level/intermediate.svg'),
-                    EXPERIENCED: require('~/static/img/icons/level/experienced.svg'),
-                },
+                lang: langIcons,
+                level: levelIcons,
             },
         }
     },

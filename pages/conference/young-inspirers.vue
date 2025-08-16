@@ -56,7 +56,7 @@
                                             {{ speech.speechtime }}
                                             <img
                                                 class="inline-block"
-                                                :src="tagToLangIcon[speech.tag]"
+                                                :src="langIcons[speech.lang]"
                                             />
                                         </div>
                                         <div class="speechBox__title">
@@ -67,9 +67,9 @@
                                                 class="flex inline-flex flex-nowrap gap-1"
                                             >
                                                 <span
-                                                    v-for="tag in speech.hashtags"
-                                                    :key="`speech_hashtag_${tag}`"
-                                                    class="speechBox__hashtag"
+                                                    v-for="tag in speech.tags"
+                                                    :key="`speech_tag_${tag}`"
+                                                    class="speechBox__tag"
                                                 >
                                                     {{ tag }}
                                                 </span>
@@ -92,15 +92,13 @@
                                         <div
                                             v-for="(
                                                 speakerAvatar, i
-                                            ) in tagToPhoto[speech.tag]"
+                                            ) in getSpeakerPhoto(speech)"
                                             :key="`speech_info_${speechIdx}_photo_${i}`"
                                             class="speechBox__avatar"
                                         >
                                             <img
                                                 :src="speakerAvatar"
-                                                :alt="
-                                                    tagToSpeaker[speech.tag][i]
-                                                "
+                                                :alt="getSpeakerName(speech)"
                                             />
                                         </div>
                                     </div>
@@ -156,6 +154,7 @@ import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
 import Modal from '~/components/core/modal/Modal'
+import { langIcons } from '~/utils/icons.utils.js'
 
 export default {
     i18n,
@@ -170,27 +169,6 @@ export default {
         return {
             isOpened: false,
             selectedItem: {},
-            tagToPhoto: {
-                speech1: [
-                    require('~/static/img/young-inspirers/speaker1-1.png'),
-                    require('~/static/img/young-inspirers/speaker1-2.png'),
-                ],
-                speech2: [require('~/static/img/young-inspirers/speaker2.jpg')],
-                speech3: [
-                    require('~/static/img/young-inspirers/speaker3-1.jpg'),
-                    require('~/static/img/young-inspirers/speaker3-2.png'),
-                ],
-            },
-            tagToSpeaker: {
-                speech1: ['周芊蓁', '郭昱'],
-                speech2: ['許新翎 Justin Hsu'],
-                speech3: ['劉哲佑 Jason', '邱冠銘'],
-            },
-            tagToLangIcon: {
-                speech1: require('~/static/img/icons/lang/ZHZH.svg'),
-                speech2: require('~/static/img/icons/lang/ZHZH.svg'),
-                speech3: require('~/static/img/icons/lang/ZHZH.svg'),
-            },
             hosts: [
                 {
                     name: 'Lee Wei',
@@ -207,11 +185,11 @@ export default {
                     month: 'Sep',
                     speeches: [
                         {
-                            tag: 'speech1',
                             speechdate: 'Sep 6',
                             speechtime: '12:00-12:30 (GMT+8)',
                             title: '當科技女力遇上教育缺口 — 高雄女中生自辦 Python 營隊的故事',
-                            hashtags: ['程式教育'],
+                            tags: ['程式教育'],
+                            lang: 'ZHZH',
                             speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker1-1.png'),
@@ -248,11 +226,11 @@ export default {
                             live_link: '',
                         },
                         {
-                            tag: 'speech2',
                             speechdate: 'Sep 6',
                             speechtime: '12:40-13:10 (GMT+8)',
                             title: '20 歲登上 AI 頂尖會議 ACL 第一作者的秘訣 — 年輕研究員的成長之路',
-                            hashtags: ['學術研究'],
+                            tags: ['學術研究'],
+                            lang: 'ZHZH',
                             speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker2.jpg'),
@@ -289,11 +267,11 @@ export default {
                     month: 'Sep',
                     speeches: [
                         {
-                            tag: 'speech3',
                             speechdate: 'Sep 7',
                             speechtime: '12:00-13:00 (GMT+8)',
                             title: '開源之路與年輕開發者的力量 — Apache Airflow 貢獻與產業經驗分享',
-                            hashtags: ['開源貢獻', '業界經驗'],
+                            tags: ['開源貢獻', '業界經驗'],
+                            lang: 'ZHZH',
                             speakers: [
                                 {
                                     photo: require('~/static/img/young-inspirers/speaker3-1.jpg'),
@@ -330,12 +308,19 @@ export default {
                     ],
                 },
             ],
+            langIcons,
         }
     },
     methods: {
         showModal(speaker) {
             this.isOpened = true
             this.selectedSpeaker = speaker
+        },
+        getSpeakerPhoto(speech) {
+            return speech.speakers.map((speaker) => speaker.photo)
+        },
+        getSpeakerName(speech) {
+            return speech.speakers.map((speaker) => speaker.name)
         },
     },
     head() {
@@ -439,7 +424,7 @@ export default {
     @apply font-sans font-normal;
     @apply mb-1;
 }
-.speechBox__hashtag {
+.speechBox__tag {
     @apply rounded-md bg-white/10 px-2 py-1 text-xs;
     color: #e0a8e7;
 }
