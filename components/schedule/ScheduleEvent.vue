@@ -131,6 +131,8 @@ export default {
                 speakers[0].en_us
             ) {
                 const keynoteSpeakerId = speakers[0].en_us
+                    .replace(/ /g, '_')
+                    .replace(/\./g, '')
                 return `/conference/keynotes#${keynoteSpeakerId}`
             } else if (['talk', 'tutorial', 'sponsored'].includes(eventType)) {
                 return `/conference/${eventType}/${eventId}/`
@@ -167,6 +169,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+div.scheduleEvent {
+    @apply px-2 py-3.5 !important;
+}
+
 .scheduleEvent__context {
     @apply sticky top-36;
 }
