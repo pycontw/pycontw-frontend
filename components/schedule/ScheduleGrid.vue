@@ -132,6 +132,10 @@ export default {
     grid-column: room-4-r0 / room-81-spt-os;
 }
 
+.day1.scheduleTable .scheduleEvent.room-3-r0-all {
+    grid-column: room-4-r0 / room-81-spt-os;
+}
+
 .day2.scheduleRooms,
 .day2.scheduleTable {
     grid-gap: 12px;
@@ -180,6 +184,10 @@ export default {
 }
 
 .day2.scheduleTable .scheduleEvent.room-2-all {
+    grid-column: room-4-r0 / room-81-spt-os;
+}
+
+.day2.scheduleTable .scheduleEvent.room-3-r0-all {
     grid-column: room-4-r0 / room-81-spt-os;
 }
 </style>
