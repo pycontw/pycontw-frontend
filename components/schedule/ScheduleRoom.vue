@@ -25,6 +25,8 @@ export default {
     computed: {
         name() {
             return {
+                '2-all': '',
+                '3-r0-all': 'All Rooms',
                 '4-r0': 'R0',
                 '5-r1': 'R1',
                 '6-r2': 'R2',
