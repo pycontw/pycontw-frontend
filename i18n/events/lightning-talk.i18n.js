@@ -2,15 +2,15 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 
 export default genI18nMessages({
     'en-us': {
-        title: 'Lightning Talk',
+        title: 'Lightning Talks',
         intro:
-            "Lightning Talk is PyCon Taiwan's most dynamic and exciting speaking session! " +
+            "Lightning Talks are PyCon Taiwan's most dynamic and exciting speaking session! " +
             'Whether you want to listen or share, we invite you to join us!{br}' +
             'Speakers will take the stage for {bold}3 minutes{/bold} each, sharing unique ideas, projects, and experiences. ' +
             'Have something to share? Sign up and join the lineup! {br}',
         openSpaceInfo: {
             participate: {
-                title: 'Event Schedule',
+                title: 'Schedule',
                 description:
                     'September 6 (Sat), 17:10 - 17:40 | Room R0{br}' +
                     'September 7 (Sun), 16:50 - 17:20 | Room R0{br}' +
@@ -22,59 +22,58 @@ export default genI18nMessages({
                 table: [
                     {
                         time: '08:00',
-                        content: 'Lightning Talk Registration Opens',
+                        content: 'Lightning Talk registration opens',
                     },
                     {
                         time: '13:00',
-                        content: 'Registration Closes',
+                        content: 'Lightning Talk registration closes',
                     },
                     {
                         time: '13:30',
-                        content: 'Selected Speaker List Announced',
+                        content: 'Selected speakers announced',
                     },
                     {
                         time: '14:30',
-                        content: 'Selected Speakers Confirmation Deadline',
+                        content: 'Confirmation with selected speakers',
                     },
                     {
-                        time: '16:00 - 16:30',
+                        time: '14:50',
                         content:
-                            'Speaker Briefing & Tech Check ' +
-                            '(Outside R0 Main Hall)',
+                            'Speaker tech check (meet outside R0 Session Hall)',
                     },
                     {
                         time: '17:10 (Day 1) / 16:50 (Day 2)',
-                        content: 'Lightning Talk Session',
+                        content: 'Lightning Talk session',
                     },
                 ],
             },
             rules: {
                 title: 'Lightning Talk Rules',
-                description: '',
-                list: [
-                    '{bold}Lightning Talk topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python{/bold}-related topics especially welcome!',
-                    'All Lightning Talk content {bold}must comply with the{/bold} {codeOfConduct} and avoid content that may cause discomfort to the audience.',
-                    'Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.',
-                    'Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.',
-                    '{bold}Selection and Notification{/bold}: At 13:30 daily, {bold}selected applicants{/bold} will be notified via Email and Discord to confirm their participation by 14:30. If no response is received within the time limit, the slot will be filled by an alternate.',
-                ],
+                description:
+                    '{ul}' +
+                    '{li}Lightning Talk {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python-related{/bold} topics especially welcome!{/li}' +
+                    '{li}All Lightning Talks content {bold}must comply with the {codeOfConduct} {/bold} and avoid content that may cause discomfort to the audience.{/li}' +
+                    '{li}Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.{/li}' +
+                    '{li}Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.{/li}' +
+                    '{li}{bold}Selection and Notification{/bold}: At 13:30 daily, {bold}selected applicants{/bold} will be notified via Email and Discord to confirm their participation by 14:30. If no response is received within the time limit, the slot will be filled by an alternate.{/li}' +
+                    '{/ul}',
             },
             register: {
                 title: 'How to Register',
                 description:
-                    'Lightning Talk registration is on the day of the event.{br}{examples}',
-                examples: [
-                    '{bold}How to Register{/bold}: Please scan the QR code at the venue and fill out the Google Form to register.',
-                    '{bold}Form Details{/bold}: You will need to provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.',
-                    '{bold}Registration Time{/bold}: {bold}08:00 - 13:00{/bold} daily (late sign-ups will not be accepted)',
-                    "{bold}Result Announcement{/bold}: The results will be announced in the afternoon - please stay tuned for on-site announcements or the emcee's instructions.",
-                ],
+                    '{bold}Lightning Talk registration is on the day of the event.{/bold}{br}' +
+                    '{ul}' +
+                    '{li}{bold}How to Register{/bold}: Scan the QR code at the venue and fill out the Google Form.{/li}' +
+                    '{li}{bold}Form Details{/bold}: Provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.{/li}' +
+                    '{li}{bold}Registration Time{/bold}: {bold}08:00 - 13:00{/bold} daily (late sign-ups will not be accepted){/li}' +
+                    "{li}{bold}Result Announcement{/bold}: Results will be announced in the afternoon - please stay tuned for on-site announcements or the emcee's instructions.{/li}" +
+                    '{/ul}',
             },
             FAQ: {
                 title: 'FAQ',
                 description:
-                    '{bold}What is Lightning Talk?{/bold}{br}' +
-                    "Lightning Talk is PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
+                    '{bold}What is a Lightning Talk?{/bold}{br}' +
+                    "Lightning Talks are PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
                     '{bold}What can I share?{/bold}{br}' +
                     '{ul}' +
                     '{li}Latest projects or discoveries{/li}' +
@@ -93,7 +92,7 @@ export default genI18nMessages({
                 title: 'Important Notes',
                 description:
                     'Please follow the {codeOfConduct} and help us create a respectful and welcoming environment for everyone.{br}' +
-                    'If you have any questions or need assistance regarding the Lightning Talk, feel free to contact us at {Email}.',
+                    'If you have any questions or need assistance regarding the Lightning Talks, feel free to contact us at {Email}.',
             },
         },
         terms: {
@@ -129,7 +128,7 @@ export default genI18nMessages({
                     { time: '13:30', content: '公布中選講者名單' },
                     { time: '14:30', content: '中選講者回覆確認截止' },
                     {
-                        time: '16:00 - 16:30',
+                        time: '14:50',
                         content: '講者集合與技術準備（R0 議程廳門外）',
                     },
                     {
@@ -140,24 +139,25 @@ export default genI18nMessages({
             },
             rules: {
                 title: '閃電秀規則',
-                description: '',
-                list: [
-                    '閃電秀{bold}主題{/bold}需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，{bold}Python{/bold}相關主題尤其歡迎！',
-                    '閃電秀的呈現內容{bold}必須遵守{/bold} {codeOfConduct}，避免造成聽眾不適的內容。',
-                    '每位參與者以一個講題為限。{bold}僅接受現場參與者上台{/bold}，不開放遠端演講。',
-                    '每位中選者有 {bold}3 分鐘{/bold} 的時間進行演講，時間到會強制中斷。',
-                    '{bold}中選與通知{/bold}： 每日 13:30 將{bold}中選名單{/bold}透過 Email 和 Discord 通知投稿者於 14:30 前回覆確認。若未於時限內回覆，名額將由候補者遞補。',
-                ],
+                description:
+                    '{ul}' +
+                    '{li}閃電秀{bold}主題{/bold}需與{bold}技術{/bold}、{bold}技術社群{/bold}相關，{bold}Python{/bold} 相關主題尤其歡迎！{/li}' +
+                    '{li}閃電秀的呈現內容{bold}必須遵守 {codeOfConduct} {/bold}，避免造成聽眾不適的內容。{/li}' +
+                    '{li}每位參與者以一個講題為限。{bold}僅接受現場參與者上台{/bold}，不開放遠端演講。{/li}' +
+                    '{li}每位中選者有 {bold}3 分鐘{/bold} 的時間進行演講，時間到會強制中斷。{/li}' +
+                    '{li}{bold}中選與通知{/bold}： 每日 13:30 將{bold}中選名單{/bold}透過 Email 和 Discord 通知投稿者於 14:30 前回覆確認。若未於時限內回覆，名額將由候補者遞補。{/li}' +
+                    '{/ul}',
             },
             register: {
                 title: '報名方式',
-                description: '閃電秀採當日報名制。{br}{examples}',
-                examples: [
-                    '{bold}報名方式{/bold}： 請於活動會場掃描 QR Code，填寫 Google 表單完成報名。',
-                    '{bold}表單內容{/bold}： 需填寫您的{bold}暱稱{/bold}、{bold}聯繫方式{/bold}、以及{bold}閃電秀講題{/bold}。',
-                    '{bold}報名時間{/bold}： 每日 08:00 - 13:00 (逾時恕不受理)',
-                    '{bold}結果公布{/bold}： 中選結果將於當天下午公布，請留意現場公告或主持人說明。',
-                ],
+                description:
+                    '{bold}閃電秀採當日報名制。{/bold}{br}' +
+                    '{ul}' +
+                    '{li}{bold}報名方式{/bold}： 請於活動會場掃描 QR Code，填寫 Google 表單完成報名。{/li}' +
+                    '{li}{bold}表單內容{/bold}： 需填寫您的{bold}暱稱{/bold}、{bold}聯繫方式{/bold}、以及{bold}閃電秀講題{/bold}。{/li}' +
+                    '{li}{bold}報名時間{/bold}： 每日 {bold}08:00 - 13:00{/bold} (逾時恕不受理){/li}' +
+                    '{li}{bold}結果公布{/bold}： 中選結果將於當天下午公布，請留意現場公告或主持人說明。{/li}' +
+                    '{/ul}',
             },
             FAQ: {
                 title: '常見問題',

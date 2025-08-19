@@ -25,7 +25,7 @@ export default genI18nMessages({
         overview: 'Overview',
         openSpaces: 'Open Space',
         sprints: 'Sprints',
-        lightningTalk: 'Lightning Talk',
+        lightningTalk: 'Lightning Talks',
         jobListings: 'Job Listings',
         registration: 'Tickets',
         tickets: 'Ticket Info',
