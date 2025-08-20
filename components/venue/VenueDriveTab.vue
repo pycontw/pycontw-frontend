@@ -57,20 +57,6 @@
                     tag="p"
                     class="whitespace-pre-line"
                 >
-                    <a
-                        :href="parkingPlaceCarLink"
-                        class="text-pink-500 underline"
-                        target="_blank"
-                    >
-                        {{ $t('parkingInfo.car.parkingPlace') }}
-                    </a>
-                    <a
-                        :href="parkingPlaceCar2Link"
-                        class="text-pink-500 underline"
-                        target="_blank"
-                    >
-                        {{ $t('parkingInfo.car.parkingPlace2') }}
-                    </a>
                 </i18n>
             </div>
             <div class="md:flex-1">
@@ -80,25 +66,11 @@
                         {{ $t('parkingInfo.motor.title') }}
                     </h5>
                 </div>
-                <i18n path="parkingInfo.motor.description" tag="p">
-                    <a
-                        :href="parkingPlaceMotorLink[0]"
-                        class="text-pink-500 underline"
-                        target="_blank"
-                        >{{ $t('parkingInfo.motor.descriptionLinkTitle1') }}</a
-                    >
-                    <a
-                        :href="parkingPlaceMotorLink[1]"
-                        class="text-pink-500 underline"
-                        target="_blank"
-                        >{{ $t('parkingInfo.motor.descriptionLinkTitle2') }}</a
-                    >
-                    <a
-                        :href="parkingPlaceMotorLink[2]"
-                        class="text-pink-500 underline"
-                        target="_blank"
-                        >{{ $t('parkingInfo.motor.descriptionLinkTitle3') }}</a
-                    >
+                <i18n
+                    path="parkingInfo.motor.description"
+                    tag="p"
+                    class="whitespace-pre-line"
+                >
                 </i18n>
             </div>
         </div>
@@ -123,7 +95,7 @@ export default {
     components: { VenueDivision },
     data() {
         return {
-            carDestinationLink: 'https://maps.app.goo.gl/hrRwqEmNmLBpZUHx6',
+            carDestinationLink: 'https://maps.app.goo.gl/zA5erbUWEHxjJwwc9',
             parkingPlaceCarLink: 'https://maps.app.goo.gl/vYTZGnDHgTViKsL47',
             parkingPlaceCar2Link: 'https://maps.app.goo.gl/BFgMmi6MqgjY3FbZA',
             parkingPlaceMotorLink: [
@@ -131,9 +103,7 @@ export default {
                 'https://maps.app.goo.gl/kxGrgPbr9EXTvqiQ6',
                 'https://maps.app.goo.gl/SzU75zJ1c9wrrUug9',
             ],
-            parkingMoreInfoLink: [
-                'https://www.nstm.gov.tw/Reference/VisitorInformation/TrafficInfo.htm',
-            ],
+            parkingMoreInfoLink: ['https://www.songshanculturalpark.org/visit'],
         }
     },
     computed: {
