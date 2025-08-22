@@ -11,10 +11,10 @@
                 <picture>
                     <source
                         media="(max-width: 768px)"
-                        :srcset="venueMapIcon.venueMapMd"
+                        :srcset="venueMapIcon.venueMap"
                     />
                     <img
-                        :src="venueMapIcon.venueMap"
+                        :src="venueMapIcon.venueMapMd"
                         :alt="$t('venueMap.title')"
                         class="h-auto max-w-full rounded-lg shadow-lg"
                     />
