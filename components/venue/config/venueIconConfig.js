@@ -21,26 +21,18 @@ export const venueDriveIconConfig = {
 
 export const venuePublicTransportIconConfig = {
     'en-us': {
-        carWhite: require('~/static/img/venue/car-white.svg'),
-        busWhite: require('~/static/img/venue/bus-white.svg'),
+        busNew: require('~/static/img/venue/bus-new.svg'),
+        mrt: require('~/static/img/venue/mrt.svg'),
         publicTransporterGuide: require('~/static/img/venue/en-us/publicTransporterGuide.png'),
         publicTransporterGuideMd: require('~/static/img/venue/en-us/publicTransporterGuide-md.png'),
-        taxiWhite: require('~/static/img/venue/taxi-white.svg'),
-        transporterWhite: require('~/static/img/venue/transporter-white.svg'),
         uBike: require('~/static/img/venue/uBike.svg'),
-        parking: require('~/static/img/venue/parking.svg'),
-        airplane: require('~/static/img/venue/airplane.svg'),
     },
     'zh-hant': {
-        carWhite: require('~/static/img/venue/car-white.svg'),
-        busWhite: require('~/static/img/venue/bus-white.svg'),
+        busNew: require('~/static/img/venue/bus-new.svg'),
+        mrt: require('~/static/img/venue/mrt.svg'),
         publicTransporterGuide: require('~/static/img/venue/publicTransporterGuide.png'),
         publicTransporterGuideMd: require('~/static/img/venue/publicTransporterGuide-md.png'),
-        taxiWhite: require('~/static/img/venue/taxi-white.svg'),
-        transporterWhite: require('~/static/img/venue/transporter-white.svg'),
         uBike: require('~/static/img/venue/uBike.svg'),
-        parking: require('~/static/img/venue/parking.svg'),
-        airplane: require('~/static/img/venue/airplane.svg'),
     },
 }
 
@@ -61,11 +53,11 @@ export const venueShuttleServiceIconConfig = {
 
 export const venueMapIconConfig = {
     'en-us': {
-        venueMap: require('~/static/img/venue/en-us/venueMap-md.jpg'),
-        venueMapMd: require('~/static/img/venue/en-us/venueMap.jpg'),
+        venueMap: require('~/static/img/venue/en-us/venueMap.jpg'),
+        venueMapMd: require('~/static/img/venue/en-us/venueMap-md.jpg'),
     },
     'zh-hant': {
-        venueMap: require('~/static/img/venue/venueMap-md.jpg'),
-        venueMapMd: require('~/static/img/venue/venueMap.jpg'),
+        venueMap: require('~/static/img/venue/venueMap.jpg'),
+        venueMapMd: require('~/static/img/venue/venueMap-md.jpg'),
     },
 }

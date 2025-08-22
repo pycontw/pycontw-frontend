@@ -10,7 +10,7 @@
         >
             <div class="md:flex md:flex-col">
                 <div class="flex items-center pb-3 pt-6">
-                    <img :src="icon.transporterWhite" />
+                    <img :src="icon.mrt" />
                     <h5 class="whitespace-nowrap pl-2">
                         {{ $t('publicTransport.mrt.title') }}
                     </h5>
@@ -21,12 +21,12 @@
             </div>
             <div class="md:flex md:flex-col">
                 <div class="flex items-center pb-3 pt-6">
-                    <img :src="icon.busWhite" />
+                    <img :src="icon.busNew" />
                     <h5 class="whitespace-nowrap pl-2">
                         {{ $t('publicTransport.bus.title') }}
                     </h5>
                 </div>
-                <p style="white-space: pre-line">
+                <p>
                     {{ $t('publicTransport.bus.description') }}
                 </p>
             </div>
