@@ -6,9 +6,38 @@
             center
         >
         </core-h1>
-        <h3 class="venue-address">
-            {{ $t('venueInfo.address') }}
-        </h3>
+        <div class="venue-map-section">
+            <div class="venue-map-image flex justify-center py-8">
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        :srcset="venueMapIcon.venueMap"
+                    />
+                    <img
+                        :src="venueMapIcon.venueMapMd"
+                        :alt="$t('venueMap.title')"
+                        class="h-auto max-w-full rounded-lg shadow-lg"
+                    />
+                </picture>
+            </div>
+        </div>
+        <div class="transportsModesTabs mb-8 flex w-full justify-center">
+            <VenueTabs v-model="selectedTransModeIndex">
+                <VenueTab
+                    v-for="(transMode, index) in transModes"
+                    :key="transMode.value"
+                    :index="index"
+                >
+                    {{ transMode.label }}
+                </VenueTab>
+            </VenueTabs>
+        </div>
+        <div class="detailWrapper">
+            <VenueDriveTab v-if="selectedTransModeIndex === 0"></VenueDriveTab>
+            <VenuePublicTransporterTab
+                v-if="selectedTransModeIndex === 1"
+            ></VenuePublicTransporterTab>
+        </div>
         <client-only v-if="showVenueMap">
             <core-h1
                 class="venue-title whitespace-pre-line pt-20 text-center"
@@ -18,83 +47,6 @@
             </core-h1>
             <VenueMap class=""></VenueMap>
         </client-only>
-        <core-h1
-            class="venue-title whitespace-pre-line pt-6 text-center"
-            :title="$t('howToGetThere.title')"
-            center
-        >
-        </core-h1>
-        <div class="how-to-get-there-content mx-auto max-w-4xl px-4 text-left">
-            <div class="transportation-info">
-                <div class="mb-8">
-                    <h3 class="mb-2 text-2xl font-bold">
-                        {{ $t('transportation.mrt') }}
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="ml-4">
-                            <div
-                                class="mb-2 text-lg font-semibold text-gray-200"
-                            >
-                                <span class="text-sm">•</span>
-                                {{ $t('transportation.mrtStation1') }}
-                            </div>
-                            <div class="ml-8 text-base text-gray-200">
-                                {{ $t('transportation.mrtDetail1') }}
-                            </div>
-                        </div>
-                        <div class="ml-4">
-                            <div
-                                class="mb-2 text-lg font-semibold text-gray-200"
-                            >
-                                <span class="text-sm">•</span>
-                                {{ $t('transportation.mrtStation2') }}
-                            </div>
-                            <div class="ml-8 text-base text-gray-200">
-                                {{ $t('transportation.mrtDetail2') }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="mb-2 text-2xl font-bold">
-                        {{ $t('transportation.bus') }}
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="ml-4">
-                            <div
-                                class="mb-2 text-lg font-semibold text-gray-200"
-                            >
-                                <span class="text-sm">•</span>
-                                {{ $t('transportation.busStation1') }}
-                            </div>
-                            <div class="ml-8 text-base text-gray-200">
-                                {{ $t('transportation.busRoutes1') }}
-                            </div>
-                        </div>
-                        <div class="ml-4">
-                            <div
-                                class="mb-2 text-lg font-semibold text-gray-200"
-                            >
-                                <span class="text-sm">•</span>
-                                {{ $t('transportation.busStation2') }}
-                            </div>
-                            <div class="ml-8 text-base text-gray-200">
-                                {{ $t('transportation.busRoutes2') }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <core-h1
-            class="venue-title whitespace-pre-line pt-20 text-center"
-            :title="$t('sprintsVenueInfo.name')"
-            center
-        >
-        </core-h1>
-        <h3 class="venue-address">
-            {{ $t('sprintsVenueInfo.address') }}
-        </h3>
     </i18n-page-wrapper>
 </template>
 
@@ -102,6 +54,11 @@
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import i18n from '@/i18n/venue/index.i18n'
+import VenueTabs from '@/components/venue/VenueTabs.vue'
+import VenueTab from '@/components/venue/VenueTab.vue'
+import VenuePublicTransporterTab from '@/components/venue/VenuePublicTransporterTab.vue'
+import VenueDriveTab from '@/components/venue/VenueDriveTab.vue'
+import { venueMapIconConfig } from '@/components/venue/config/venueIconConfig'
 // import VenueMap from '@/components/venue/VenueMap.vue'
 export default {
     i18n,
@@ -109,12 +66,32 @@ export default {
     components: {
         I18nPageWrapper,
         CoreH1,
+        VenueTabs,
+        VenueTab,
+        VenuePublicTransporterTab,
+        VenueDriveTab,
         VenueMap: () => import('@/components/venue/VenueMap.vue'),
     },
     data() {
         return {
-            showVenueMap: true,
+            selectedTransModeIndex: 0,
+            showVenueMap: false,
+            transModes: [
+                {
+                    label: this.$t('transMode.car'),
+                    value: 'car',
+                },
+                {
+                    label: this.$t('transMode.publicTransport'),
+                    value: 'publicTransport',
+                },
+            ],
         }
+    },
+    computed: {
+        venueMapIcon() {
+            return venueMapIconConfig[this.$i18n.locale]
+        },
     },
     head() {
         return {
@@ -140,12 +117,3 @@ export default {
     },
 }
 </script>
-
-<style lang="postcss" scoped>
-/*
-css priority for h3
-*/
-.venue-address {
-    @apply m-0 pt-6 text-center text-lg font-normal;
-}
-</style>

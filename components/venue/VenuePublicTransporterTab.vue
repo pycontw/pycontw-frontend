@@ -10,18 +10,18 @@
         >
             <div class="md:flex md:flex-col">
                 <div class="flex items-center pb-3 pt-6">
-                    <img :src="icon.taxiWhite" />
+                    <img :src="icon.mrt" />
                     <h5 class="whitespace-nowrap pl-2">
-                        {{ $t('publicTransport.taxi.title') }}
+                        {{ $t('publicTransport.mrt.title') }}
                     </h5>
                 </div>
                 <p>
-                    {{ $t('publicTransport.taxi.description') }}
+                    {{ $t('publicTransport.mrt.description') }}
                 </p>
             </div>
             <div class="md:flex md:flex-col">
                 <div class="flex items-center pb-3 pt-6">
-                    <img :src="icon.busWhite" />
+                    <img :src="icon.busNew" />
                     <h5 class="whitespace-nowrap pl-2">
                         {{ $t('publicTransport.bus.title') }}
                     </h5>
@@ -66,37 +66,6 @@
             </div>
         </div>
 
-        <VenueDivision>
-            <h3>
-                <img class="mr-1" :src="icon.airplane" />
-                {{ $t('publicTransport.title') }}
-            </h3>
-        </VenueDivision>
-
-        <div>
-            <div class="flex items-center pb-3 pt-6 md:pb-4">
-                <img :src="icon.transporterWhite" />
-                <h5 class="pl-2">
-                    {{ $t('publicTransportInfo.title') }}
-                </h5>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-10">
-                <div>
-                    <ul class="ml-[19px] list-outside list-disc pb-3 md:pb-0">
-                        <li>
-                            {{ $t('publicTransportInfo.description1') }}
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="ml-[19px] list-outside list-disc pb-3 md:pb-0">
-                        <li>
-                            {{ $t('publicTransportInfo.description2') }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         <i18n class="pt-10" path="publicTransportInfo.moreInfo.title" tag="p">
             <a
                 :href="publicTransportMoreInfoLink[0]"
@@ -110,48 +79,39 @@
 
 <script>
 import i18n from '@/i18n/venue/index.i18n'
-import VenueDivision from './VenueDivision.vue'
 import { venuePublicTransportIconConfig } from './config/venueIconConfig'
 
 export default {
     i18n,
     name: 'VenuePublicTransporterTab',
-    components: { VenueDivision },
     data() {
         return {
             publicTransportUBikeLink: [
                 'https://www.youbike.com.tw/region/taipei/stations/',
             ],
             publicTransportMoreInfoLink: [
-                'https://www.nstm.gov.tw/Reference/VisitorInformation/TrafficInfo.htm',
+                'https://www.songshanculturalpark.org/visit',
             ],
             uBikeParkInfo: [
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park1',
-                    link: 'https://maps.app.goo.gl/dVtGS7SicBGKs8Uw9',
+                    link: 'https://maps.app.goo.gl/uhwigQMmMT3GhGJ48',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park1',
                     ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park2',
-                    link: 'https://maps.app.goo.gl/qdDmHFTVtVxadus76',
+                    link: 'https://maps.app.goo.gl/7bLdCeGecVSgXzMg8',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park2',
                     ),
                 },
                 {
                     i18nPath: 'publicTransport.uBikePark.parkingInfo.park3',
-                    link: 'https://maps.app.goo.gl/xFjq5akYqWq5jpnf6',
+                    link: 'https://maps.app.goo.gl/Nug1cQkSuAEQYwyr5',
                     i18nLinkPath: this.$t(
                         'publicTransport.uBikePark.parkPlace.park3',
-                    ),
-                },
-                {
-                    i18nPath: 'publicTransport.uBikePark.parkingInfo.park4',
-                    link: 'https://maps.app.goo.gl/szJsnmgTjk5yR1Y98',
-                    i18nLinkPath: this.$t(
-                        'publicTransport.uBikePark.parkPlace.park4',
                     ),
                 },
             ],
