@@ -174,7 +174,7 @@ export default {
     methods: {
         getKeynoteId(keynote) {
             if (keynote.speaker.name_en_us) {
-                return keynote.speaker.name_en_us
+                return keynote.speaker.name_en_us.replace(/\s+/g, '_')
             }
         },
         getAttributeByLocale(data, attr) {
