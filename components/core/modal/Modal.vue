@@ -22,8 +22,19 @@
             </div>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ intro }}</p>
-                <div v-for="(item, i) in description" :key="i" class="text-sm">
-                    {{ item }}
+                <div
+                    v-if="descriptionIsHtml"
+                    class="text-sm"
+                    v-html="description[0]"
+                ></div>
+                <div v-else>
+                    <div
+                        v-for="(item, i) in description"
+                        :key="i"
+                        class="text-sm"
+                    >
+                        {{ item }}
+                    </div>
                 </div>
             </div>
             <div v-if="websiteUrl" class="lightBox__buttons">
@@ -57,6 +68,7 @@ export default {
         intro: { type: String, default: '' },
         websiteUrl: { type: String, default: '' },
         description: { type: Array, default: () => [] },
+        descriptionIsHtml: { type: Boolean, default: false },
     },
     data() {
         return {
