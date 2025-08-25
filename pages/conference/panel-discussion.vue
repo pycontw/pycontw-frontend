@@ -113,6 +113,7 @@
                             :img-urls="getSpeakerPhoto(selectedItem)"
                             :name="getSpeakerName(selectedItem)"
                             :description="getSpeakerDescription(selectedItem)"
+                            :description-is-html="true"
                         />
                     </transition>
                 </div>
@@ -127,6 +128,7 @@ import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
 import Modal from '@/components/core/modal/Modal'
+import DOMPurify from 'dompurify'
 
 export default {
     i18n,
@@ -232,7 +234,13 @@ export default {
             return participant.name
         },
         getSpeakerDescription(participant) {
-            return participant.description
+            if (!participant || !participant.description) {
+                return ''
+            }
+            const markdownText = Array.isArray(participant.description)
+                ? participant.description.join('\n\n')
+                : participant.description
+            return [DOMPurify.sanitize(this.$md.render(markdownText))]
         },
     },
     head() {

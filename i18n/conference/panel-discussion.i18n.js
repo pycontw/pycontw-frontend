@@ -28,7 +28,8 @@ export default genI18nMessages({
                 avatar: '/img/panel-discussion/Kir.jpg',
                 description: [
                     "Kir has been a dedicated participant at PyCon events worldwide since 2016, contributing as a speaker, proposal reviewer, and onsite volunteer. This year, Kir is focusing on AI's impact on people and communities.",
-                    'More: https://note35.github.io/about/talks',
+                    '-------------------------------------',
+                    'Personal website: https://note35.github.io/about',
                 ],
             },
         },
@@ -92,8 +93,9 @@ export default genI18nMessages({
             Kir: {
                 name: 'Kir Chou',
                 description: [
-                    "Kir has been a dedicated participant at PyCon events worldwide since 2016, contributing as a speaker, proposal reviewer, and onsite volunteer. This year, Kir is focusing on AI's impact on people and communities.",
-                    'More: https://note35.github.io/about/talks',
+                    '(由 Gemini 2.5 Pro 翻譯) 自 2016 年起，Kir 便積極參與世界各地的 PyCon 活動，曾擔任過講者、提案審稿人與現場志工等多重角色。今年，Kir 將專注於人工智慧對個人與社群所帶來的影響。',
+                    '-------------------------------------',
+                    'Personal website: https://note35.github.io/about',
                 ],
             },
         },
@@ -101,14 +103,16 @@ export default genI18nMessages({
             DongheeNa: {
                 name: 'Donghee Na',
                 description: [
-                    "Donghee Na is a CPython Core Developer and a 2025 Python Steering Council member. He contributes to improving CPython's performance, maintenance, and internal implementations. He pursues shaping Python’s future by ensuring its efficiency, stability, and long-term growth. He is also passionate about fostering CPython activities in the APAC region, organizing local Core Sprints, and encouraging developer engagement in open-source contributions.",
+                    '(由 Gemini 2.5 Pro 翻譯) Donghee Na 是一位 CPython 核心開發者，同時也是 2025 年度的 Python 指導委員會成員。他致力於提升 CPython 的效能、維護與內部實作，並透過確保 Python 的效率、穩定性及長期發展來塑造其未來。',
+                    '此外，他也熱衷於在亞太地區推廣 CPython 活動、組織本地的核心開發衝刺（Core Sprints），並鼓勵更多開發者投入開源貢獻。',
                 ],
             },
             SebastiánRamírez: {
                 name: 'Sebastián Ramírez (tiangolo)',
                 description: [
-                    "Hey! 👋 I'm Sebastián Ramírez (tiangolo), the creator of FastAPI, Typer, SQLModel, Asyncer, and other open source tools.",
-                    "I've worked with companies and teams across the world, from Latin America to the Middle East, going through Europe and the USA. Always building different types of products and custom solutions involving APIs, data processing, distributed systems, and Machine Learning. And now I've been working full time on FastAPI and friends. 🤓",
+                    '(由 Gemini 2.5 Pro 翻譯) 大家好！👋 我是 Sebastián Ramírez (tiangolo)，FastAPI、Typer、SQLModel、Asyncer 等知名開源工具的創造者。',
+                    '我曾與世界各地的公司及團隊合作，足跡遍佈拉丁美洲、中東、歐洲與美國。我的工作始終致力於打造各類產品與客製化解決方案，專精領域涵蓋 API、資料處理、分散式系統及機器學習。',
+                    '而目前，我正全職投入 FastAPI 及其相關專案的開發工作。🤓',
                     '-------------------------------------',
                     'Personal website: https://tiangolo.com/',
                 ],
