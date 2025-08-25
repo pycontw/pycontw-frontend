@@ -222,7 +222,7 @@ export default {
                                     '活動起源、課程設計理念、籌辦過程的挑戰與轉折，以及她們對公益教育與資訊普及的看法' +
                                     '，期望啟發更多年輕人將專業轉化為社會影響力。',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/r1WJA3uKex',
                             live_link: '',
                         },
                         {
@@ -257,7 +257,7 @@ export default {
                                     '實到實務應用。內容聚焦於研究起點、方法選擇、研究設計與實驗驗證、論文發表經驗，以' +
                                     '及面對挑戰的心路歷程，啟發更多青年勇於追求研究與創新的目標。',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/SyX1Cn_Keg',
                             live_link: '',
                         },
                     ],
@@ -302,7 +302,7 @@ export default {
                                     '享他們從初學者到成為開源專案核心貢獻者的歷程。內容涵蓋開源起點、技術挑戰、代表性' +
                                     '貢獻與業界實習經驗，並探討如何將開源精神帶入產業，啟發更多年輕人投入國際開源社群。',
                             ],
-                            note_link: '',
+                            note_link: 'https://hackmd.io/@pycontw/HJkQC3dFxe',
                             live_link: '',
                         },
                     ],
