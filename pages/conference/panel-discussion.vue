@@ -92,14 +92,14 @@
                                 <text-button
                                     :href="speech.note_link"
                                     :secondary="true"
-                                    class="linkButton hidden"
+                                    class="linkButton"
                                 >
                                     {{ $t('terms.note') }}
                                 </text-button>
                                 <text-button
                                     :href="speech.slido_link"
                                     :secondary="true"
-                                    class="linkButton hidden"
+                                    class="linkButton"
                                 >
                                     {{ $t('terms.slido') }}
                                 </text-button>
@@ -154,9 +154,9 @@ export default {
                             speechtime: '16:00 ~ 17:00 (GMT+8)',
                             title: this.$t('speechTitle'),
                             full_description: [this.$t('speechDescription')],
-                            note_link: 'https://hackmd.io/@pycontw/H1PtLsmph',
+                            note_link: 'https://hackmd.io/@pycontw/ryEpASYYlg',
                             slido_link:
-                                'https://app.sli.do/event/eXMeazdzUYv1pv2LePFnfc',
+                                'https://app.sli.do/event/6B426wRdnipCGfgPBX3rUz',
                         },
                     ],
                 },
