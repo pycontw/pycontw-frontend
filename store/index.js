@@ -14,7 +14,7 @@ export const state = () => ({
         conferenceName: 'PyCon TW',
         conferenceYear: '2025',
         conferenceDate: '2025-09-06',
-        showAboutStaffPage: false,
+        showAboutStaffPage: true,
         showConferencePage: true,
         showSchedulePage: true,
         showEventOverviewPage: true,

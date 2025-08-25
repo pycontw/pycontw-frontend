@@ -66,14 +66,10 @@ export default genI18nMessages({
                 key: 'photography',
                 teamName: 'Photography',
             },
-            {
-                key: 'reviewer',
-                teamName: 'Reviewer',
-            },
         ],
         og: {
             title: 'Staff',
-            description: 'Staff of PyCon Taiwan 2024',
+            description: 'Staff of PyCon Taiwan 2025',
         },
     },
     'zh-hant': {
@@ -141,14 +137,10 @@ export default genI18nMessages({
                 key: 'photography',
                 teamName: '記錄',
             },
-            {
-                key: 'reviewer',
-                teamName: '審稿',
-            },
         ],
         og: {
             title: '工作人員',
-            description: 'PyCon Taiwan 2024 工作人員',
+            description: 'PyCon Taiwan 2025 工作人員',
         },
     },
 })
