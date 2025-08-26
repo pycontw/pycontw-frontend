@@ -5,97 +5,137 @@ export default genI18nMessages({
         og: {
             title: 'Venue Information',
             description:
-                'PyCon Taiwan 2025 will be held at Taipei New Horizon (Songshan Cultural and Creative Park), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
+                'PyCon Taiwan 2025 will be held at Taipei New Horizon 6F, with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'Taipei New Horizon\n(Songshan Cultural and Creative Park)',
+            name: 'Main Conference Venue (09/06-09/07)\nTaipei New Horizon 6F',
             address:
-                '6F, No. 88, Yanchang Rd., Xinyi Dist., Taipei City 110, Taiwan',
+                'Address: 6F, No. 88, Yanchang Rd, Xinyi District, Taipei City, Taiwan',
+        },
+        sprintsVenueInfo: {
+            name: 'Sprints Venue (09/05)',
+            address: 'Address: TBD',
         },
         venueMap: {
             title: 'Venue Map',
         },
+        howToGetThere: {
+            title: 'How to Get There',
+        },
+        transportation: {
+            mrt: '🚇 By MRT (Taipei Metro)',
+            bus: '🚌 By Bus',
+            mrtStation1:
+                'Sun Yat-Sen Memorial Hall Station (Blue Line, Exit 5)',
+            mrtDetail1:
+                "Take Exit 5, turn right onto Guangfu South Road, then turn right onto Yanchang Road. It's about a 500-meter walk (approx. 7 minutes).",
+            mrtStation2: 'Taipei City Hall Station (Blue Line, Exit 1)',
+            mrtDetail2:
+                "Take Exit 1 and walk straight along Songgao Road toward Guangfu South Road. It's about a 400-meter walk (approx. 5 minutes).",
+            busStation1: 'Sun Yat-Sen Memorial Hall Station (Guangfu Stop)',
+            busRoutes1:
+                'Bus routes: 204, 278, 278 Shuttle, 282, 288, 672, Chengde Main Line',
+            busStation2: 'United Daily News Stop',
+            busRoutes2:
+                "Bus routes: 202, 212, 212 Night Bus, 212 Express, 232 Express, 240 Express, 270, 299, 600, Ren'ai Main Line, Zhongxiao Main Line",
+        },
         transMode: {
             car: 'By Car',
             publicTransport: 'By Public Transport',
+            shuttleService: 'Shuttle Service',
         },
         carInstructions: {
             title: 'Driving',
             footerTitle: 'Parking',
             description: 'Navigate to {0}.',
-            destination: 'Taipei New Horizon',
+            destination: 'National Science and Technology Museum',
         },
         parkingInfo: {
             title: 'Parking Info',
             car: {
                 title: 'Car',
-                parkingPlace: 'Taipei New Horizon Building',
-                parkingPlace2: 'Nearby Public Parking',
+                parkingPlace: 'North Complex',
+                parkingPlace2: 'South Complex',
                 description:
-                    'Traffic is heavy on holidays, so please make use of public transportation whenever possible!\nVehicles should enter via Yanchang Road (located at the intersection of Guangfu South Road and Civic Boulevard). Lane 553, Zhongxiao East Road does not connect to Yanchang Road.\n\n• The building has an underground paid parking lot: approximately 500 car spaces\n\n• Car parking: Weekdays NT$20 / 30 minutes; Holidays NT$30 / 30 minutes\n\n',
+                    'Paid parking lots are available near the National Science and Technology Museum: {0} Underground parking lot, accessible from the north side of Pingdeng Rd. The parking fee is 25 NTD per half hour on Fridays to Sundays and consecutive holidays, with a maximum of 250 NTD daily. {1} Outdoor parking lot, accessible from the south side of Pingdeng Rd. The parking fee is 25 NTD per half hour on Fridays to Sundays and consecutive holidays, with a maximum of 250 NTD daily.',
             },
             motor: {
-                title: 'Scooter',
+                title: 'Motorcycle',
                 description:
-                    'Traffic is heavy on holidays, so please make use of public transportation whenever possible!\nVehicles should enter via Yanchang Road (located at the intersection of Guangfu South Road and Civic Boulevard). Lane 553, Zhongxiao East Road does not connect to Yanchang Road.\n\n• The building has an underground paid parking lot: approximately 1,000 scooter spaces\n\n• Scooter parking: NT$20 per entry',
-                descriptionLinkTitle1: 'the venue',
-                descriptionLinkTitle2: 'Cultural Park',
-                descriptionLinkTitle3: 'surrounding area',
+                    'North Complex Two paid parking lots located at {0}. and {1}. The fee is 20 NTD per entry, additional charges apply for re-entry or overnight parking. {2} One paid parking lot, accessible from the south side of Pingdeng Rd. The fee is 20 NTD per entry, additional charges apply for re-entry or overnight parking.',
+                descriptionLinkTitle1: 'Liming Rd',
+                descriptionLinkTitle2: 'Juemin Rd',
+                descriptionLinkTitle3: 'South Complex',
             },
             moreInfo:
                 '※ For detailed information regarding parking, please refer to {0}',
             moreInfoLinkTitle:
-                'the parking information of Songshan Cultural and Creative Park.',
+                'the parking information of National Science and Technology Museum.',
         },
         publicTransport: {
-            title: 'MRT and Bus Information',
+            title: 'Taiwan Kaohsiung International Airport',
             taxi: {
-                title: 'Taxi',
+                title: 'Taxis',
                 description:
-                    'You can take a taxi directly to Taipei New Horizon or Songshan Cultural and Creative Park. Taxi stands are numerous and transportation is convenient.',
+                    'Taxis can also be taken instead of buses. Based on past experience, many people choose this option, so sharing a taxi from the Railway station or Light Rail station is a good idea.',
             },
             bus: {
-                title: 'Bus',
+                title: 'Passenger bus',
                 description:
-                    '• Direct Bus + Walking\nMany bus options available. Take the following bus routes and get off at Sun Yat-Sen Memorial Hall Station or nearby stops: Sun Yat-Sen Memorial Hall Station (Guangfu South Road): 204, 278, 278A, 282, 288, 672, Chengde Line. United Daily News Stop (Zhongxiao East Road): 202, 212, 212 Night, 212 Express, 232 Express, 240 Express, 270, 299, 600, Renai Line, Zhongxiao Line. Walk to the Cultural and Creative Park after getting off.',
-            },
-            mrt: {
-                title: 'MRT',
-                description:
-                    '• MRT Line + Walking (Sun Yat-Sen Memorial Hall Station)\nTake the MRT Bannan Line to Sun Yat-Sen Memorial Hall Station. Exit from Exit 5, walk along Guangfu South Road, turn into Yanchang Road to enter the park. This route is close to multiple bus lines, and bus stops such as Sun Yat-Sen Memorial Hall Station Guangfu Road Intersection can also be reached by bus.',
+                    'Red28 (Extend), Red28, 60 Jyuemin Main Line, 60 Jyuemin Main Line (Interval), 73, 37,  76, 77, 81, 168W Main Line, 168E Main Line, 8503',
             },
             uBike: {
                 link: {
                     description1: 'official YouBike website',
-                    description2: 'OpenCycleMap',
                 },
                 description1:
-                    '• There are several YouBike rental stations near Taipei New Horizon and Songshan Cultural and Creative Park. For more information about YouBike routes, visit {0}. It is recommended to check available docking stations on the app before returning the bike.',
+                    'There are several YouBike rental stations near the National Science and Technology Museum. For more information about the YouBike routes in the vicinity, you can visit the {0}. It is recommended to check the available docking stations on the app to return the bike. Cycling time from Taiwan Railway-Science and Technology Museum Station or Light Rail-C30 Science and Technology Museum to the National Science and Technology Museum (South Complex） is approximately 5-10 minutes.',
             },
             uBikePark: {
                 parkPlace: {
-                    park1: 'YouBike 2.0: Taipei New Horizon (Yanchang Road)',
-                    park2: 'YouBike 2.0: Songshan Cultural and Creative Park (Warehouse No. 1)',
-                    park3: 'YouBike 2.0: Sun Yat-Sen Memorial Hall Station (Exit 2)',
+                    park1: 'YouBike 2.0: Science and Technology Museum',
+                    park2: 'YouBike 2.0: National Science and Technology Museum',
+                    park3: 'YouBike 2.0: Tiedao 1st St.  and Ln. 138, Xianzheng Rd. Intersection',
+                    park4: 'YouBike 2.0: PingdengJiouru 1st Rd. Intersection',
                 },
                 parkingInfo: {
                     park1: '{0}',
                     park2: '{0}',
-                    park3: '{0}',
+                    park3: '{0} —  Approximately a 10-minute walk.',
+                    park4: '{0} —  Approximately a 10-minute walk.',
                 },
-                title: 'YouBike Nearby Rental Stations',
+                title: 'Youbike Nearby rental stations',
             },
         },
         publicTransportInfo: {
-            title: 'Public Transportation',
+            title: 'Public transportation',
             description1:
-                'Take MRT Blue Line to Sun Yat-Sen Memorial Hall Station (about 5 minutes ride, 5 minutes walk), then walk about 7 minutes to the venue. Or take MRT Blue Line to City Hall Station (about 4 minutes ride, 4 minutes walk), then walk about 5 minutes to the venue. MRT fare: approximately NT$20-30.',
+                'Take the MRT Red Line from Kaohsiung International Airport (R4) to Kaohsiung Main Station (R11) and then take the train to Science and Technology Museum Station.  Walk approximately 15 min to arrive at the museum.',
             description2:
-                'Multiple bus transfers available. During rush hours, take Exit 3 to the venue (about 7 minutes), transfer to Orange Line to Exit 6 (about 12 minutes walk), walk about 2-3 minutes, transfer to Orange Line (22 minutes). Bus fare: NT$15.',
+                'Take the MRT Red Line from Kaohsiung International Airport (R4) to Kaohsiung Main Station (R11) and then take Bus Red 28 to the National Science and Technology Museum.。',
             moreInfo: {
-                title: '※ For more information, please refer to {0}.',
-                info1: 'Songshan Cultural and Creative Park traffic information.',
+                title: '※ For more information, please refer to {0}。',
+                info1: 'the traffic information of National Science and Technology Museum.',
             },
+        },
+        shuttleService: {
+            shuttleTime: {
+                day2: {
+                    to: 'Return | HSSB → Nangang 17:30-18:30 (the last bus at 18:10)',
+                    from: 'Departure | Nangang → HSSB 08:30-09:30 (the last bus at 09:10)',
+                    title: '2023-09-03 (Day 2)',
+                },
+                title: 'Schedule',
+                day1: {
+                    title: '2023-09-02 (Day 1)',
+                    from: 'Departure | Nangang → HSSB 09:15-10:15 (the last bus at 10:00)',
+                    to: 'Return | HSSB → Nangang 18:00-21:00 (the last bus at 20:40)',
+                },
+            },
+            title: 'Shuttle Service',
+            description:
+                'Shuttle buses will be provided between {0} and HSSB during the two-day event. Attendees are welcome to use this service.',
+            descriptionLink: 'Nangang Station (BL22, Exit 1)',
         },
     },
     'zh-hant': {
@@ -103,61 +143,79 @@ export default genI18nMessages({
         og: {
             title: '會場資訊',
             description:
-                'PyCon Taiwan 2025 將在國立科學工藝博物館南館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
+                'PyCon Taiwan 2025 將在台北文創六樓舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
-            name: '台北文創\n（松山文創園區）',
-            address: '台北市信義區菸廠路88號6樓',
+            name: '主要研討會場地 (09/06-09/07)\n台北文創六樓',
+            address: '地址: 台北市信義區菸廠路 88 號 6 樓（誠品生活松菸店內）',
+        },
+        sprintsVenueInfo: {
+            name: 'Sprints 場地 (09/05)',
+            address: '地址: TBD',
         },
         venueMap: {
             title: '會場地圖',
         },
+        howToGetThere: {
+            title: '交通指引',
+        },
+        transportation: {
+            mrt: '🚇 捷運 | By MRT (Taipei Metro)',
+            bus: '🚌 公車 | By Bus',
+            mrtStation1: '捷運國父紀念館站（板南線，5號出口）',
+            mrtDetail1:
+                '從 5 號出口出站後，右轉光復南路，再右轉菸廠路，步行約 500 公尺，約 7 分鐘。',
+            mrtStation2: '捷運市政府站（板南線，1號出口）',
+            mrtDetail2:
+                '從 1 號出口出站後，沿松高路直行，步行約 400 公尺，約 5 分鐘即可抵達。',
+            busStation1: '國父紀念館站（光復南路）',
+            busRoutes1: '公車路線：204、278、278區、282、288、672、承德幹線',
+            busStation2: '聯合報站',
+            busRoutes2:
+                '公車路線：202、212、212夜、212直、232快、240直、270、299、600、仁愛幹線、忠孝幹線',
+        },
         transMode: {
             car: '自行開車',
-            publicTransport: '大眾運輸',
+            publicTransport: '大眾運輸工具',
+            shuttleService: '大會接駁車',
         },
         carInstructions: {
             title: '開車',
             footerTitle: '停車',
             description: '導航至{0}',
-            destination: '台北文創',
+            destination: '科工館南館',
         },
         parkingInfo: {
             title: '停車資訊',
             car: {
                 title: '汽車',
-                parkingPlace: '台北文創大樓',
-                parkingPlace2: '週邊公有停車場',
+                parkingPlace: '北館',
+                parkingPlace2: '南館',
                 description:
-                    '假日車流多，請多利用大眾交通工具！\n車輛請由「菸廠路」駛入（位於光復南路與市民大道交叉口），忠孝東路553巷無法通往菸廠路。\n\n• 大樓設有地下收費停車場：汽車約500格\n\n• 汽車收費：平日＄20元/半小時；假日＄30元/半小時\n\n',
+                    '科工館週邊設有付費停車場：{0}設有地下停車場，由平等路北側（7-11 對面）進入。週五至週日及連續假日每半小時收費 25 元，每日最高上限 250 元。{1} 設有戶外停車場，由平等路南側進入。週五至週日及連續假日每半小時收費 25 元，每日最高上限 250 元。',
             },
             motor: {
                 title: '機車',
                 description:
-                    '假日車流多，請多利用大眾交通工具！\n車輛請由「菸廠路」駛入（位於光復南路與市民大道交叉口），忠孝東路553巷無法通往菸廠路。\n\n• 大樓設有地下收費停車場：機車約1000格\n\n• 機車收費：每次＄20元',
-                descriptionLinkTitle1: '會場',
-                descriptionLinkTitle2: '文創園區',
-                descriptionLinkTitle3: '周邊區域',
+                    '北館 設有 {0} 與 {1} 兩處停車場。每次收費 20 元，離場再停車或跨日則另計次收費。{2} 設有付費機車停車場乙處，由平等路南側進入。每次收費 20 元，離場再停車或跨日則另計次收費。',
+                descriptionLinkTitle1: '禮明路',
+                descriptionLinkTitle2: '覺民路',
+                descriptionLinkTitle3: '南館',
             },
             moreInfo: '※ 停車相關資訊詳細說明請見 {0}。',
-            moreInfoLinkTitle: '松山文創園區交通資訊',
+            moreInfoLinkTitle: '國立科學工藝博物館交通資訊',
         },
         publicTransport: {
-            title: '捷運公車資訊',
+            title: '高雄國際機場交通資訊',
             taxi: {
                 title: '計程車',
                 description:
-                    '可直接搭乘計程車前往台北文創或松山文創園區。計程車招呼站眾多，交通便利。',
+                    '可以搭計程車代替公車。根據過去的經驗，屆時將會有不少人採取此方式，不妨採取計程車共乘由火車站、輕軌站前往。',
             },
             bus: {
                 title: '公車',
                 description:
-                    '• 公車直達＋步行\n公車選擇多，搭乘以下公車路線在捷運國父紀念館站或附近站點下車：國父紀念館站(光復南路)公車：204、278、278區、282、288、672、承德幹線 聯合報站（忠孝東路）公車：202、212、212夜、212直、232快、240直、270、299、600、仁愛幹線、忠孝幹線下車後步行至文創園區。',
-            },
-            mrt: {
-                title: '捷運',
-                description:
-                    '• 捷運路線＋步行（國父紀念館站）\n搭乘捷運板南線至國父紀念館站 從 5 號出口出站，沿光復南路步行，轉入菸廠路進入園區。此路線靠近多條公車路線，公車站點如國父紀念館站光復路口也可搭乘公車抵達。',
+                    '紅 28 繞中都濕地公園、紅 28、紅 28 公車式小黃、60 覺民幹線、60 覺民幹線區間車、73、37、 76、77、81、168 環西幹線、168 環西幹線區間車、168 環東幹線、168 環東幹線區間車、8503',
             },
             uBike: {
                 link: {
@@ -165,31 +223,33 @@ export default genI18nMessages({
                     description2: 'OpenCycleMap',
                 },
                 description1:
-                    '• 台北文創及松山文創園區週邊有多處 YouBike 租借站。更多 YouBike 路線資訊請見 {0}，建議還車前先透過 APP 確認站點可停車數量。',
+                    '科工館週邊亦有不少 YouBike 的租借站。更多 YouBike 附近路線的資訊，可以見 {0}，建議還車前留意 APP 上站點可停。由台鐵科工館站或輕軌科工館出發騎乘時間約 5-10 分鐘。',
             },
             uBikePark: {
                 parkPlace: {
-                    park1: 'YouBike 2.0：台北文創大樓（菸廠路）',
-                    park2: 'YouBike 2.0：松山文創園區（一號倉庫）',
-                    park3: 'YouBike 2.0：捷運國父紀念館站（2號出口）',
+                    park1: 'YouBike 2.0：科工館',
+                    park2: 'YouBike 2.0：平等九如一路口',
+                    park3: 'YouBike 2.0：鐵道憲政 139 巷口',
+                    park4: 'YouBike 2.0：國立科學工藝博物館',
                 },
                 parkingInfo: {
                     park1: '{0}',
                     park2: '{0}',
-                    park3: '{0}',
+                    park3: '{0} — 步行約 10 分鐘',
+                    park4: '{0} — 步行約 10 分鐘',
                 },
-                title: 'YouBike 附近租賃站點',
+                title: 'Youbike 附近租賃站點',
             },
         },
         publicTransportInfo: {
             title: '乘車方式',
             description1:
-                '搭乘捷運藍線至國父紀念館站（搭乘約5分鐘、步行約5分鐘），走路約7分鐘到會場。或搭乘捷運藍線至市政府站（搭乘約4分鐘、步行約4分鐘），走路約5分鐘到會場。捷運票價約$20-30。',
+                '高雄捷運紅線「高雄國際機場站 (R4)」搭乘至「高雄車站 (R11)」，轉乘台鐵至「科工館車站」下車，步行約 10 分鐘至本館。',
             description2:
-                '公車轉乘很多。通勤尖峰時段，搭乘捷運3號出口到會場約7分鐘，轉乘捷運橘線到6號出口步行約12分鐘，步行約2-3分鐘，轉乘橘線到22分鐘。公車票價：$15。',
+                '搭乘高雄捷運紅線至「高雄車站 (R11)」，轉搭 60 號公車（覺民幹線）至科工館站即可抵達。',
             moreInfo: {
                 title: '※ 更多詳細資訊請參考 {0}。',
-                info1: '松山文創園區交通資訊',
+                info1: '國立科學工藝博物館交通資訊',
             },
         },
         shuttleService: {
