@@ -78,6 +78,9 @@ export default {
                 '6-r2': 'R2',
                 '1-r3': 'R3',
                 '7-r4': 'R4',
+                '81-spt-os': 'Sprint / OST',
+                '82-tutorial': 'Tutorial',
+                '83-yi-ps': 'Young / Post',
             },
             levelBgColorMapping: {
                 EXPERIENCED: '#ca7795',
