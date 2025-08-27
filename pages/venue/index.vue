@@ -75,7 +75,7 @@ export default {
     data() {
         return {
             selectedTransModeIndex: 0,
-            showVenueMap: false,
+            showVenueMap: true,
             transModes: [
                 {
                     label: this.$t('transMode.car'),
