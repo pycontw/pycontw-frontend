@@ -103,7 +103,7 @@ export default genI18nMessages({
         og: {
             title: '會場資訊',
             description:
-                'PyCon Taiwan 2025 將在國立科學工藝博物館南館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
+                'PyCon Taiwan 2025 將在台北文創舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
             name: '台北文創',
