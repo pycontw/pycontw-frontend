@@ -2,7 +2,7 @@
     <div class="py-10 md:py-24">
         <banner>
             <core-h1 :title="title"></core-h1>
-            <i18n tag="p" class="leading-6" :path="intro">
+            <i18n tag="p" class="leading-6" :path="`${this.eventType}.intro`">
                 <template #br><br /><br /></template>
             </i18n>
         </banner>
@@ -105,10 +105,10 @@ export default {
             }
         },
         title() {
-            return this.$i18n.t(`${this.$route.params.eventType}.title`)
+            return this.$i18n.t(`${this.eventType}.title`)
         },
         intro() {
-            return `${this.$route.params.eventType}.intro`
+            return this.$i18n.t(`${this.eventType}.intro`, { br: '' })
         },
         speechCategories() {
             const speechCategories = this.speechesData.map(
