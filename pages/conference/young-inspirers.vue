@@ -115,12 +115,12 @@
                                 </div>
                                 <div class="flex flex-row">
                                     <text-button
-                                        :href="speech.live_link"
+                                        :href="speech.slido_link"
                                         :primary="true"
                                         small
                                         class="linkButton"
                                     >
-                                        {{ $t('terms.youtube') }}
+                                        {{ $t('terms.slido') }}
                                     </text-button>
                                     <text-button
                                         :href="speech.note_link"
@@ -223,7 +223,8 @@ export default {
                                     '，期望啟發更多年輕人將專業轉化為社會影響力。',
                             ],
                             note_link: 'https://hackmd.io/@pycontw/r1WJA3uKex',
-                            live_link: '',
+                            slido_link:
+                                'https://app.sli.do/event/q2xKZFD2jnutHXaoNnrYdJ',
                         },
                         {
                             speechdate: 'Sep 6',
@@ -258,7 +259,8 @@ export default {
                                     '及面對挑戰的心路歷程，啟發更多青年勇於追求研究與創新的目標。',
                             ],
                             note_link: 'https://hackmd.io/@pycontw/SyX1Cn_Keg',
-                            live_link: '',
+                            slido_link:
+                                'https://app.sli.do/event/uANcMEb5jdgCL7QC2gu5ud',
                         },
                     ],
                 },
@@ -303,7 +305,8 @@ export default {
                                     '貢獻與業界實習經驗，並探討如何將開源精神帶入產業，啟發更多年輕人投入國際開源社群。',
                             ],
                             note_link: 'https://hackmd.io/@pycontw/HJkQC3dFxe',
-                            live_link: '',
+                            slido_link:
+                                'https://app.sli.do/event/iUxbYS8zpbknd7G7Mm1imP',
                         },
                     ],
                 },

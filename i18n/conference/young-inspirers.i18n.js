@@ -8,7 +8,7 @@ export default genI18nMessages({
         form: 'This year’s Young Inspires event will differ from previous editions and, for the first time, will be conducted in a live interview format. The event will take place over two days. On Saturday, there will be two sessions, each lasting 30 minutes, including a 25-minute themed interview and a 5-minute live Q&A. On Sunday, there will be one 60-minute session consisting of a 50-minute themed interview and a 10-minute live Q&A. During the themed interviews, a PyCon Taiwan host and the speaker will discuss the speaker’s personal journey, followed by an interactive Q&A between the audience and the speaker.',
         hostHeaderTitle: 'Host',
         terms: {
-            youtube: 'Live Stream',
+            slido: 'slido',
             note: 'Speech Note',
         },
     },
@@ -19,7 +19,7 @@ export default genI18nMessages({
         form: '今年的 Young Inspires 活動形式與以往不同，將首次採取現場訪談的方式進行。活動共分兩天舉行。週六安排兩場活動，每場 30 分鐘，其中包含 25 分鐘的主題訪談與 5 分鐘的現場問答。週日則有一場活動，時間為 60 分鐘，包含 50 分鐘的主題訪談與 10 分鐘的現場問答。主題訪談由 PyCon Taiwan 主持人與講者共同進行主題訪談，以了解各講者的心路歷程，最後安排現場觀眾與講者問答互動。',
         hostHeaderTitle: '主持人',
         terms: {
-            youtube: '觀看直播',
+            slido: 'slido',
             note: '前往共筆',
         },
     },
