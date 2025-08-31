@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/conference/young-inspires", {data:[{}],fetch:{},mutations:[]});
