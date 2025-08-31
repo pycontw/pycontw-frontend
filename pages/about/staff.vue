@@ -180,7 +180,7 @@ export default {
                     { name: '阿特', photo: 'photography/Atlas.jpg' },
                     { name: 'Bubble' },
                     { name: '葉子YOKO', photo: 'photography/YOKO.jpeg' },
-                    { name: 'Ray', photo: 'everywhere/Ray.jpg' },
+                    { name: 'Ray', photo: 'photography/Ray.jpg' },
                     { name: 'Ricky' },
                     { name: '小傑', photo: 'photography/小傑.jpg' },
                     { name: 'Rong' },
