@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en-us/events/lightning-talk", {data:[{}],fetch:{},mutations:[]});
