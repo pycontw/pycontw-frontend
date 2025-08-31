@@ -64,7 +64,7 @@
                                                 {{ speech.title }}
                                             </span>
                                             <span
-                                                class="flex inline-flex flex-nowrap gap-1"
+                                                class="inline-flex flex-nowrap gap-1"
                                             >
                                                 <span
                                                     v-for="tag in speech.tags"
@@ -149,7 +149,7 @@
 </template>
 
 <script>
-import i18n from '@/i18n/conference/young-inspirers.i18n'
+import i18n from '@/i18n/conference/young-inspires.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
@@ -172,11 +172,11 @@ export default {
             hosts: [
                 {
                     name: 'Lee Wei',
-                    avatar: require('~/static/img/young-inspirers/host1.jpg'),
+                    avatar: require('~/static/img/young-inspires/host1.jpg'),
                 },
                 {
                     name: 'Benson',
-                    avatar: require('~/static/img/young-inspirers/host2.jpg'),
+                    avatar: require('~/static/img/young-inspires/host2.jpg'),
                 },
             ],
             speechInfos: [
@@ -192,7 +192,7 @@ export default {
                             lang: 'ZHZH',
                             speakers: [
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker1-1.png'),
+                                    photo: require('~/static/img/young-inspires/speaker1-1.png'),
                                     name: '周芊蓁',
                                     description: [
                                         '周芊蓁，高雄女中電資班高二學生，從去年十一月開始籌備「斑碼小學堂—程式探' +
@@ -205,7 +205,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker1-2.png'),
+                                    photo: require('~/static/img/young-inspires/speaker1-2.png'),
                                     name: '郭昱',
                                     description: [
                                         '郭昱，高雄女中電資班學生。2025 年擔任「斑碼小學堂」Python 夏' +
@@ -234,7 +234,7 @@ export default {
                             lang: 'ZHZH',
                             speakers: [
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker2.jpg'),
+                                    photo: require('~/static/img/young-inspires/speaker2.jpg'),
                                     name: '許新翎 Justin Hsu',
                                     description: [
                                         '我是許新翎，目前就讀政治大學三年級，雙主修資訊管理(MIS)與資訊科學(' +
@@ -276,7 +276,7 @@ export default {
                             lang: 'ZHZH',
                             speakers: [
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker3-1.jpg'),
+                                    photo: require('~/static/img/young-inspires/speaker3-1.jpg'),
                                     name: '劉哲佑 Jason',
                                     description: [
                                         "Apache Airflow Committer, LFX'25 CNC" +
@@ -286,7 +286,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker3-2.png'),
+                                    photo: require('~/static/img/young-inspires/speaker3-2.png'),
                                     name: '邱冠銘',
                                     description: [
                                         '邱冠銘，剛從台大資管畢業，對前後端開發很有興趣。目前在 Apache A' +
