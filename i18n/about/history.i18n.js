@@ -102,7 +102,7 @@ export default genI18nMessages({
             content:
                 'This year is the 10th anniversary of PyCon Taiwan. ' +
                 'Besides passing on the experience in communities, we are also introducing brand new activities, ' +
-                'like PyCasts and Young Inspirers, to facilitate and encourage discussions among different groups. ' +
+                'like PyCasts and Young Inspires, to facilitate and encourage discussions among different groups. ' +
                 'Let’s get together and make PyCon Taiwan more professional, accessible, and energetic than ever.',
         },
         pycon2022: {
@@ -111,7 +111,7 @@ export default genI18nMessages({
                 'PyCon Taiwan will once again be hosting PyCon APAC for the third time. ' +
                 'PyCon APAC 2022 will be a fully remote conference. ' +
                 'We will be incorporating events from the past decade in PyCon Taiwan into PyCon APAC this year, ' +
-                'such as: Open Space, Young Inspirers, PyCast, and more. ' +
+                'such as: Open Space, Young Inspires, PyCast, and more. ' +
                 '“Awesome Python Awesome Community” is our view of the “APAC” in PyCon APAC for 2022. ' +
                 'The Python community is not established overnight.We look forward to meeting with all the Python developers in APAC.',
         },
@@ -219,7 +219,7 @@ export default genI18nMessages({
             title: '2022 Awesome Python Awesome Community',
             content:
                 'PyCon Taiwan 第三次主辦 PyCon APAC，以「全線上年會」的形式呈現 。' +
-                '今年融入過去十年在 PyCon Taiwan 的活動，如：開放空間、Young Inspirers、PyCast 等。' +
+                '今年融入過去十年在 PyCon Taiwan 的活動，如：開放空間、Young Inspires、PyCast 等。' +
                 '「Awesome Python Awesome Community」是我們給 PyCon APAC 2022 的註解，Python 社群能有今天的規模並非一朝一夕，' +
                 '期待與 APAC 的 Python 開發者產生火花。',
         },

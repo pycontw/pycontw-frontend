@@ -64,7 +64,7 @@
                                                 {{ speech.title }}
                                             </span>
                                             <span
-                                                class="flex inline-flex flex-nowrap gap-1"
+                                                class="inline-flex flex-nowrap gap-1"
                                             >
                                                 <span
                                                     v-for="tag in speech.tags"
@@ -115,12 +115,12 @@
                                 </div>
                                 <div class="flex flex-row">
                                     <text-button
-                                        :href="speech.live_link"
+                                        :href="speech.slido_link"
                                         :primary="true"
                                         small
                                         class="linkButton"
                                     >
-                                        {{ $t('terms.youtube') }}
+                                        {{ $t('terms.slido') }}
                                     </text-button>
                                     <text-button
                                         :href="speech.note_link"
@@ -149,7 +149,7 @@
 </template>
 
 <script>
-import i18n from '@/i18n/conference/young-inspirers.i18n'
+import i18n from '@/i18n/conference/young-inspires.i18n'
 import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
@@ -172,11 +172,11 @@ export default {
             hosts: [
                 {
                     name: 'Lee Wei',
-                    avatar: require('~/static/img/young-inspirers/host1.jpg'),
+                    avatar: require('~/static/img/young-inspires/host1.jpg'),
                 },
                 {
                     name: 'Benson',
-                    avatar: require('~/static/img/young-inspirers/host2.jpg'),
+                    avatar: require('~/static/img/young-inspires/host2.jpg'),
                 },
             ],
             speechInfos: [
@@ -192,7 +192,7 @@ export default {
                             lang: 'ZHZH',
                             speakers: [
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker1-1.png'),
+                                    photo: require('~/static/img/young-inspires/speaker1-1.png'),
                                     name: '周芊蓁',
                                     description: [
                                         '周芊蓁，高雄女中電資班高二學生，從去年十一月開始籌備「斑碼小學堂—程式探' +
@@ -205,7 +205,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker1-2.png'),
+                                    photo: require('~/static/img/young-inspires/speaker1-2.png'),
                                     name: '郭昱',
                                     description: [
                                         '郭昱，高雄女中電資班學生。2025 年擔任「斑碼小學堂」Python 夏' +
@@ -223,7 +223,8 @@ export default {
                                     '，期望啟發更多年輕人將專業轉化為社會影響力。',
                             ],
                             note_link: 'https://hackmd.io/@pycontw/r1WJA3uKex',
-                            live_link: '',
+                            slido_link:
+                                'https://app.sli.do/event/q2xKZFD2jnutHXaoNnrYdJ',
                         },
                         {
                             speechdate: 'Sep 6',
@@ -233,7 +234,7 @@ export default {
                             lang: 'ZHZH',
                             speakers: [
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker2.jpg'),
+                                    photo: require('~/static/img/young-inspires/speaker2.jpg'),
                                     name: '許新翎 Justin Hsu',
                                     description: [
                                         '我是許新翎，目前就讀政治大學三年級，雙主修資訊管理(MIS)與資訊科學(' +
@@ -258,7 +259,8 @@ export default {
                                     '及面對挑戰的心路歷程，啟發更多青年勇於追求研究與創新的目標。',
                             ],
                             note_link: 'https://hackmd.io/@pycontw/SyX1Cn_Keg',
-                            live_link: '',
+                            slido_link:
+                                'https://app.sli.do/event/uANcMEb5jdgCL7QC2gu5ud',
                         },
                     ],
                 },
@@ -274,7 +276,7 @@ export default {
                             lang: 'ZHZH',
                             speakers: [
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker3-1.jpg'),
+                                    photo: require('~/static/img/young-inspires/speaker3-1.jpg'),
                                     name: '劉哲佑 Jason',
                                     description: [
                                         "Apache Airflow Committer, LFX'25 CNC" +
@@ -284,7 +286,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    photo: require('~/static/img/young-inspirers/speaker3-2.png'),
+                                    photo: require('~/static/img/young-inspires/speaker3-2.png'),
                                     name: '邱冠銘',
                                     description: [
                                         '邱冠銘，剛從台大資管畢業，對前後端開發很有興趣。目前在 Apache A' +
@@ -303,7 +305,8 @@ export default {
                                     '貢獻與業界實習經驗，並探討如何將開源精神帶入產業，啟發更多年輕人投入國際開源社群。',
                             ],
                             note_link: 'https://hackmd.io/@pycontw/HJkQC3dFxe',
-                            live_link: '',
+                            slido_link:
+                                'https://app.sli.do/event/iUxbYS8zpbknd7G7Mm1imP',
                         },
                     ],
                 },

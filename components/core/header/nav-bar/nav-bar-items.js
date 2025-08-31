@@ -19,7 +19,7 @@ export default Object.freeze({
         { i18nKey: 'tutorials', value: '/conference/tutorials' },
         { i18nKey: 'panelDiscussion', value: '/conference/panel-discussion' },
         { i18nKey: 'posterSession', value: '/conference/poster-session' },
-        { i18nKey: 'youngInspirers', value: '/conference/young-inspirers' },
+        { i18nKey: 'youngInspirers', value: '/conference/young-inspires' },
     ],
     events: [
         { i18nKey: 'sprints', value: '/events/sprints' },
