@@ -90,7 +90,7 @@ export default {
                 'https://www.youbike.com.tw/region/taipei/stations/',
             ],
             publicTransportMoreInfoLink: [
-                'https://www.songshanculturalpark.org/visit',
+                'https://www.taipeinewhorizon.com.tw/transportation',
             ],
             uBikeParkInfo: [
                 {

@@ -96,14 +96,9 @@ export default {
     data() {
         return {
             carDestinationLink: 'https://maps.app.goo.gl/zA5erbUWEHxjJwwc9',
-            parkingPlaceCarLink: 'https://maps.app.goo.gl/vYTZGnDHgTViKsL47',
-            parkingPlaceCar2Link: 'https://maps.app.goo.gl/BFgMmi6MqgjY3FbZA',
-            parkingPlaceMotorLink: [
-                'https://maps.app.goo.gl/PpmgUFNRgFi3Cm3Y9',
-                'https://maps.app.goo.gl/kxGrgPbr9EXTvqiQ6',
-                'https://maps.app.goo.gl/SzU75zJ1c9wrrUug9',
+            parkingMoreInfoLink: [
+                'https://www.taipeinewhorizon.com.tw/transportation',
             ],
-            parkingMoreInfoLink: ['https://www.songshanculturalpark.org/visit'],
         }
     },
     computed: {
