@@ -26,7 +26,7 @@
             <div class="sprint-map-section mb-8">
                 <core-h1
                     class="venue-title whitespace-pre-line text-center"
-                    title="Sprint 地點"
+                    :title="$t('sprintInfo.title')"
                     center
                 >
                 </core-h1>
@@ -98,7 +98,7 @@ export default {
     data() {
         return {
             selectedTransModeIndex: 0,
-            showVenueMap: true,
+            showVenueMap: false,
             transModes: [
                 {
                     label: this.$t('transMode.car'),

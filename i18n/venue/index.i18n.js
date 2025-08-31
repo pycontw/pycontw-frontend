@@ -8,9 +8,12 @@ export default genI18nMessages({
                 'PyCon Taiwan 2025 will be held at Taipei New Horizon (Songshan Cultural and Creative Park), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'Taipei New Horizon\n(Songshan Cultural and Creative Park)',
+            name: 'Taipei New Horizon',
             address:
                 '6F, No. 88, Yanchang Rd., Xinyi Dist., Taipei City 110, Taiwan',
+        },
+        sprintInfo: {
+            title: 'Sprint Location',
         },
         venueMap: {
             title: 'Venue Map',
@@ -108,6 +111,9 @@ export default genI18nMessages({
         venueInfo: {
             name: '台北文創',
             address: '台北市信義區菸廠路88號6樓',
+        },
+        sprintInfo: {
+            title: 'Sprint 地點',
         },
         venueMap: {
             title: '會場地圖',
