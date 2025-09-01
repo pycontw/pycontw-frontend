@@ -13,7 +13,7 @@ export default genI18nMessages({
                 '6F, No. 88, Yanchang Rd., Xinyi Dist., Taipei City 110, Taiwan',
         },
         sprintInfo: {
-            title: 'Sprint Location',
+            title: 'Sprints Location',
         },
         venueMap: {
             title: 'Venue Map',
@@ -35,7 +35,7 @@ export default genI18nMessages({
                 parkingPlace: 'Taipei New Horizon Building',
                 parkingPlace2: 'Nearby Public Parking',
                 description:
-                    'Traffic is heavy on holidays, so please make use of public transportation whenever possible!\nVehicles should enter via Yanchang Road (located at the intersection of Guangfu South Road and Civic Boulevard). Lane 553, Zhongxiao East Road does not connect to Yanchang Road.\n\n• The building has an underground paid parking lot: approximately 500 car spaces\n\n• Car parking: Weekdays NT$20 / 30 minutes; Holidays NT$30 / 30 minutes\n\n',
+                    'Traffic is heavy on holidays, so please make use of public transportation whenever possible!\nVehicles should enter via Yanchang Road (located at the intersection of Guangfu South Road and Civic Boulevard). Lane 553, Zhongxiao East Road does not connect to Yanchang Road.\n\n• The building has an underground paid parking lot: approximately 500 car spaces\n\n• Car parking: Weekdays NT$50 / 30 minutes; Holidays NT$70 / 30 minutes\n\n',
             },
             motor: {
                 title: 'Scooter',
@@ -113,7 +113,7 @@ export default genI18nMessages({
             address: '台北市信義區菸廠路88號6樓',
         },
         sprintInfo: {
-            title: 'Sprint 地點',
+            title: 'Sprints 地點',
         },
         venueMap: {
             title: '會場地圖',
@@ -135,7 +135,7 @@ export default genI18nMessages({
                 parkingPlace: '台北文創大樓',
                 parkingPlace2: '週邊公有停車場',
                 description:
-                    '假日車流多，請多利用大眾交通工具！\n車輛請由「菸廠路」駛入（位於光復南路與市民大道交叉口），忠孝東路553巷無法通往菸廠路。\n\n• 大樓設有地下收費停車場：汽車約500格\n\n• 汽車收費：平日＄20元/半小時；假日＄30元/半小時\n\n',
+                    '假日車流多，請多利用大眾交通工具！\n車輛請由「菸廠路」駛入（位於光復南路與市民大道交叉口），忠孝東路553巷無法通往菸廠路。\n\n• 大樓設有地下收費停車場：汽車約500格\n\n• 汽車收費：平日＄50元/半小時；假日＄70元/半小時\n\n',
             },
             motor: {
                 title: '機車',
