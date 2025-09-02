@@ -10,7 +10,7 @@ export default genI18nMessages({
         venueInfo: {
             name: 'Taipei New Horizon',
             address:
-                '6F, No. 88, Yanchang Rd., Xinyi Dist., Taipei City 110, Taiwan',
+                '6F, No. 88, Yanchang Rd, Xinyi District, Taipei City, Taiwan (Taipei New Horizon, 6F)',
         },
         sprintInfo: {
             title: 'Sprints Location',
@@ -110,7 +110,7 @@ export default genI18nMessages({
         },
         venueInfo: {
             name: '台北文創',
-            address: '台北市信義區菸廠路88號6樓',
+            address: '台北市信義區菸廠路 88 號（臺北文創大樓 6F）',
         },
         sprintInfo: {
             title: 'Sprints 地點',
