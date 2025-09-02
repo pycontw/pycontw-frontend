@@ -270,7 +270,7 @@ export default {
                     speeches: [
                         {
                             speechdate: 'Sep 7',
-                            speechtime: '12:00-13:00 (GMT+8)',
+                            speechtime: '12:30-13:20 (GMT+8)',
                             title: '開源之路與年輕開發者的力量 — Apache Airflow 貢獻與產業經驗分享',
                             tags: ['開源貢獻', '業界經驗'],
                             lang: 'ZHZH',
