@@ -1,5 +1,6 @@
 <template>
     <schedule-block
+        v-if="name"
         class="scheduleRoom whitespace-nowrap font-semibold"
         :mini="inline"
         :padding-x="paddingX"
