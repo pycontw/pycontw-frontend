@@ -110,7 +110,7 @@ export default genI18nMessages({
         },
         venueInfo: {
             name: '台北文創 6F',
-            address: '台北市信義區菸廠路 88 號',
+            address: '台北市信義區菸廠路 88 號 6 樓',
         },
         sprintInfo: {
             title: 'Sprints 地點',
