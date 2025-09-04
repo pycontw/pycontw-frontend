@@ -6,6 +6,9 @@
             center
         >
         </core-h1>
+        <h3 class="venue-address text-center">
+            {{ $t('venueInfo.address') }}
+        </h3>
         <div class="venue-map-section">
             <div class="venue-map-image flex justify-center py-8">
                 <picture>
