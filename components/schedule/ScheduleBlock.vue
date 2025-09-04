@@ -4,6 +4,7 @@
             v-if="!!to"
             :to="to"
             customized
+            class="block h-full w-full"
             @mouseenter="setHoveringState"
             @mouseleave="removeHoveringState"
         >
