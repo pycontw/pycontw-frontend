@@ -36,7 +36,7 @@ export const ticketInfoConfig = [
             'conferencePass',
             'corporateInvoice',
         ],
-        statusI18nKey: ticketSellingStatus.ENDED,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixCorporate2025,
     },
     {
@@ -77,7 +77,7 @@ export const ticketInfoConfig = [
             'lunchBoxAndDesserts',
             'conferencePass',
         ],
-        statusI18nKey: ticketSellingStatus.ENDED,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixIndividual2025,
     },
     {
@@ -90,7 +90,7 @@ export const ticketInfoConfig = [
             'conferencePass',
             'accessibilityTicketLimit',
         ],
-        statusI18nKey: ticketSellingStatus.ENDED,
+        statusI18nKey: ticketSellingStatus.SELLING,
         link: pageLinks.kktixIndividual2025,
     },
     {
