@@ -113,7 +113,6 @@
                             :img-urls="getSpeakerPhoto(selectedItem)"
                             :name="getSpeakerName(selectedItem)"
                             :description="getSpeakerDescription(selectedItem)"
-                            :description-is-html="true"
                         />
                     </transition>
                 </div>

@@ -69,7 +69,7 @@ export default {
         name: { type: String, default: '' },
         intro: { type: String, default: '' },
         websiteUrl: { type: String, default: '' },
-        description: { type: Array, default: () => [] },
+        description: { type: [Array, String], default: () => [] },
     },
     data() {
         return {
