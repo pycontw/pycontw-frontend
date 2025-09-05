@@ -128,7 +128,6 @@ import I18nPageWrapper from '@/components/core/i18n/PageWrapper'
 import CoreH1 from '@/components/core/titles/H1'
 import TextButton from '@/components/core/buttons/TextButton'
 import Modal from '@/components/core/modal/Modal'
-import DOMPurify from 'dompurify'
 
 export default {
     i18n,
@@ -240,7 +239,7 @@ export default {
             const markdownText = Array.isArray(participant.description)
                 ? participant.description.join('\n\n')
                 : participant.description
-            return [DOMPurify.sanitize(this.$md.render(markdownText))]
+            return markdownText
         },
     },
     head() {

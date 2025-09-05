@@ -22,12 +22,7 @@
             </div>
             <div class="lightBox__intro">
                 <p class="text-sm">{{ intro }}</p>
-                <div
-                    v-if="descriptionIsHtml"
-                    class="text-sm"
-                    v-html="description[0]"
-                ></div>
-                <div v-else>
+                <div v-if="Array.isArray(description)">
                     <div
                         v-for="(item, i) in description"
                         :key="i"
@@ -36,6 +31,11 @@
                         {{ item }}
                     </div>
                 </div>
+                <MarkdownRenderer
+                    v-else-if="typeof description === 'string'"
+                    class="text-sm"
+                    :markdown="description"
+                />
             </div>
             <div v-if="websiteUrl" class="lightBox__buttons">
                 <text-button
@@ -52,12 +52,14 @@
 
 <script>
 import i18n from '../../core/modal/Modal.i18n'
+import MarkdownRenderer from '~/components/core/markdown/MarkdownRenderer'
 import TextButton from '~/components/core/buttons/TextButton'
 
 export default {
     i18n,
     name: 'Modal',
     components: {
+        MarkdownRenderer,
         TextButton,
     },
     props: {
@@ -68,7 +70,6 @@ export default {
         intro: { type: String, default: '' },
         websiteUrl: { type: String, default: '' },
         description: { type: Array, default: () => [] },
-        descriptionIsHtml: { type: Boolean, default: false },
     },
     data() {
         return {
