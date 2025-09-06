@@ -159,7 +159,7 @@ export default {
                     { name: 'William' },
                     { name: 'Rudolf' },
                     { name: 'Irene' },
-                    { name: 'Serko' },
+                    { name: 'SerKo', photo: 'registration/SerKo.png' },
                     { name: 'Yucheng', photo: 'registration/Yucheng.jpeg' },
                     { name: 'Tumi', photo: 'registration/tumi.jpg' },
                 ],
