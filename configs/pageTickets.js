@@ -65,7 +65,7 @@ export const ticketInfoConfig = [
             'invitationOfSpeakerNight',
             'individualRecognition',
         ],
-        statusI18nKey: ticketSellingStatus.SELLING,
+        statusI18nKey: ticketSellingStatus.ENDED,
         link: pageLinks.kktixPremium2025,
     },
     {

@@ -8,9 +8,12 @@ export default genI18nMessages({
                 'PyCon Taiwan 2025 will be held at Taipei New Horizon (Songshan Cultural and Creative Park), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
-            name: 'Taipei New Horizon\n(Songshan Cultural and Creative Park)',
+            name: 'Taipei New Horizon, 6F',
             address:
-                '6F, No. 88, Yanchang Rd., Xinyi Dist., Taipei City 110, Taiwan',
+                '6F, No. 88, Yanchang Rd, Xinyi District, Taipei City, Taiwan',
+        },
+        sprintInfo: {
+            title: 'Sprints Location',
         },
         venueMap: {
             title: 'Venue Map',
@@ -32,7 +35,7 @@ export default genI18nMessages({
                 parkingPlace: 'Taipei New Horizon Building',
                 parkingPlace2: 'Nearby Public Parking',
                 description:
-                    'Traffic is heavy on holidays, so please make use of public transportation whenever possible!\nVehicles should enter via Yanchang Road (located at the intersection of Guangfu South Road and Civic Boulevard). Lane 553, Zhongxiao East Road does not connect to Yanchang Road.\n\n• The building has an underground paid parking lot: approximately 500 car spaces\n\n• Car parking: Weekdays NT$20 / 30 minutes; Holidays NT$30 / 30 minutes\n\n',
+                    'Traffic is heavy on holidays, so please make use of public transportation whenever possible!\nVehicles should enter via Yanchang Road (located at the intersection of Guangfu South Road and Civic Boulevard). Lane 553, Zhongxiao East Road does not connect to Yanchang Road.\n\n• The building has an underground paid parking lot: approximately 500 car spaces\n\n• Car parking: Weekdays NT$50 / 30 minutes; Holidays NT$70 / 30 minutes\n\n',
             },
             motor: {
                 title: 'Scooter',
@@ -103,11 +106,14 @@ export default genI18nMessages({
         og: {
             title: '會場資訊',
             description:
-                'PyCon Taiwan 2025 將在國立科學工藝博物館南館舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
+                'PyCon Taiwan 2025 將在台北文創舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
-            name: '台北文創\n（松山文創園區）',
-            address: '台北市信義區菸廠路88號6樓',
+            name: '台北文創 6F',
+            address: '台北市信義區菸廠路 88 號 6 樓',
+        },
+        sprintInfo: {
+            title: 'Sprints 地點',
         },
         venueMap: {
             title: '會場地圖',
@@ -129,7 +135,7 @@ export default genI18nMessages({
                 parkingPlace: '台北文創大樓',
                 parkingPlace2: '週邊公有停車場',
                 description:
-                    '假日車流多，請多利用大眾交通工具！\n車輛請由「菸廠路」駛入（位於光復南路與市民大道交叉口），忠孝東路553巷無法通往菸廠路。\n\n• 大樓設有地下收費停車場：汽車約500格\n\n• 汽車收費：平日＄20元/半小時；假日＄30元/半小時\n\n',
+                    '假日車流多，請多利用大眾交通工具！\n車輛請由「菸廠路」駛入（位於光復南路與市民大道交叉口），忠孝東路553巷無法通往菸廠路。\n\n• 大樓設有地下收費停車場：汽車約500格\n\n• 汽車收費：平日＄50元/半小時；假日＄70元/半小時\n\n',
             },
             motor: {
                 title: '機車',
@@ -140,14 +146,14 @@ export default genI18nMessages({
                 descriptionLinkTitle3: '周邊區域',
             },
             moreInfo: '※ 停車相關資訊詳細說明請見 {0}。',
-            moreInfoLinkTitle: '松山文創園區交通資訊',
+            moreInfoLinkTitle: '台北文創交通資訊',
         },
         publicTransport: {
             title: '捷運公車資訊',
             taxi: {
                 title: '計程車',
                 description:
-                    '可直接搭乘計程車前往台北文創或松山文創園區。計程車招呼站眾多，交通便利。',
+                    '可直接搭乘計程車前往台北文創或台北文創。計程車招呼站眾多，交通便利。',
             },
             bus: {
                 title: '公車',
@@ -165,12 +171,12 @@ export default genI18nMessages({
                     description2: 'OpenCycleMap',
                 },
                 description1:
-                    '• 台北文創及松山文創園區週邊有多處 YouBike 租借站。更多 YouBike 路線資訊請見 {0}，建議還車前先透過 APP 確認站點可停車數量。',
+                    '• 台北文創及台北文創週邊有多處 YouBike 租借站。更多 YouBike 路線資訊請見 {0}，建議還車前先透過 APP 確認站點可停車數量。',
             },
             uBikePark: {
                 parkPlace: {
                     park1: 'YouBike 2.0：台北文創大樓（菸廠路）',
-                    park2: 'YouBike 2.0：松山文創園區（一號倉庫）',
+                    park2: 'YouBike 2.0：台北文創（一號倉庫）',
                     park3: 'YouBike 2.0：捷運國父紀念館站（2號出口）',
                 },
                 parkingInfo: {
@@ -189,7 +195,7 @@ export default genI18nMessages({
                 '公車轉乘很多。通勤尖峰時段，搭乘捷運3號出口到會場約7分鐘，轉乘捷運橘線到6號出口步行約12分鐘，步行約2-3分鐘，轉乘橘線到22分鐘。公車票價：$15。',
             moreInfo: {
                 title: '※ 更多詳細資訊請參考 {0}。',
-                info1: '松山文創園區交通資訊',
+                info1: '台北文創交通資訊',
             },
         },
         shuttleService: {

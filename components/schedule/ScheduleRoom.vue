@@ -1,5 +1,6 @@
 <template>
     <schedule-block
+        v-if="name"
         class="scheduleRoom whitespace-nowrap font-semibold"
         :mini="inline"
         :padding-x="paddingX"
@@ -34,7 +35,7 @@ export default {
                 '7-r4': 'R4',
                 '81-spt-os': 'Sprint / OST',
                 '82-tutorial': 'Tutorial',
-                '83-yi-ps': 'Young / Post',
+                '83-yi-ps': 'Young / Poster',
             }[this.value]
         },
         paddingX() {

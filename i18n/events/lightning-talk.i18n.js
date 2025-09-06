@@ -14,7 +14,7 @@ export default genI18nMessages({
                 description:
                     'September 6 (Sat), 17:10 - 17:40 | Room R0{br}' +
                     'September 7 (Sun), 16:50 - 17:20 | Room R0{br}' +
-                    '👉 Join us for a Lightning Talk session each day - be sure to attend!',
+                    '👉 Join us for a Lightning Talks session each day - be sure to attend!',
             },
             flow: {
                 title: 'Day-of Flow',
@@ -22,11 +22,11 @@ export default genI18nMessages({
                 table: [
                     {
                         time: '08:00',
-                        content: 'Lightning Talk registration opens',
+                        content: 'Lightning Talks registration opens',
                     },
                     {
                         time: '13:00',
-                        content: 'Lightning Talk registration closes',
+                        content: 'Lightning Talks registration closes',
                     },
                     {
                         time: '13:30',
@@ -43,15 +43,15 @@ export default genI18nMessages({
                     },
                     {
                         time: '17:10 (Day 1) / 16:50 (Day 2)',
-                        content: 'Lightning Talk session',
+                        content: 'Lightning Talks session',
                     },
                 ],
             },
             rules: {
-                title: 'Lightning Talk Rules',
+                title: 'Lightning Talks Rules',
                 description:
                     '{ul}' +
-                    '{li}Lightning Talk {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python-related{/bold} topics especially welcome!{/li}' +
+                    '{li}Lightning Talks {bold}topics{/bold} should be related to {bold}technology{/bold} or {bold}tech communities{/bold}, with {bold}Python-related{/bold} topics especially welcome!{/li}' +
                     '{li}All Lightning Talks content {bold}must comply with the {codeOfConduct} {/bold} and avoid content that may cause discomfort to the audience.{/li}' +
                     '{li}Each participant is limited to one talk. {bold}Only on-site participants may present{/bold}, remote presentations are not accepted.{/li}' +
                     '{li}Each selected speaker has {bold}3 minutes{/bold} to present and will be stopped when time is up.{/li}' +
@@ -61,7 +61,7 @@ export default genI18nMessages({
             register: {
                 title: 'How to Register',
                 description:
-                    '{bold}Lightning Talk registration is on the day of the event.{/bold}{br}' +
+                    '{bold}Lightning Talks registration is on the day of the event.{/bold}{br}' +
                     '{ul}' +
                     '{li}{bold}How to Register{/bold}: Scan the QR code at the venue and fill out the Google Form.{/li}' +
                     '{li}{bold}Form Details{/bold}: Provide your {bold}nickname{/bold}, {bold}contact information{/bold}, and {bold}Lightning Talk topic{/bold}.{/li}' +
@@ -72,7 +72,7 @@ export default genI18nMessages({
             FAQ: {
                 title: 'FAQ',
                 description:
-                    '{bold}What is a Lightning Talk?{/bold}{br}' +
+                    '{bold}What is a Lightning Talks?{/bold}{br}' +
                     "Lightning Talks are PyCon Taiwan's most creative 3-minute speaking session! Whether you're a seasoned developer or newcomer, if you have passion to share, you're welcome to join.{br}{br}" +
                     '{bold}What can I share?{/bold}{br}' +
                     '{ul}' +
@@ -182,7 +182,7 @@ export default genI18nMessages({
                 title: '注意事項',
                 description:
                     '請遵守{codeOfConduct}，尊重彼此，讓活動更友善。{br}' +
-                    '有任何關於 Lightning Talk 的問題或需要協助，歡迎透過 {Email} 聯繫我們。',
+                    '有任何關於 Lightning Talks 的問題或需要協助，歡迎透過 {Email} 聯繫我們。',
             },
         },
         terms: {
