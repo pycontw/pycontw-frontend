@@ -232,7 +232,13 @@ export default {
             return participant.name
         },
         getSpeakerDescription(participant) {
-            return participant.description
+            if (!participant || !participant.description) {
+                return ''
+            }
+            const markdownText = Array.isArray(participant.description)
+                ? participant.description.join('\n\n')
+                : participant.description
+            return markdownText
         },
     },
     head() {
