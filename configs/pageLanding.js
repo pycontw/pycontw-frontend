@@ -1,14 +1,14 @@
 export const landingButtonConfig = {
     PRIMARY_JOIN_US: {
         isExternalLink: true,
-        path: 'https://forms.gle/qurWMpgtuvX4WQjd9',
+        path: 'https://forms.gle/UJjJGvbnhki9uryR8',
         textKey: 'joinUs',
         isPrimary: true,
         isLarge: true,
     },
     SECONDARY_JOIN_US: {
         isExternalLink: true,
-        path: 'https://forms.gle/qurWMpgtuvX4WQjd9',
+        path: 'https://forms.gle/UJjJGvbnhki9uryR8',
         textKey: 'joinUs',
         isPrimary: false,
         isBordered: true,
