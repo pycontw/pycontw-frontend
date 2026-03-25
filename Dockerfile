@@ -20,8 +20,8 @@ COPY store ./store
 COPY utils ./utils
 COPY nuxt.config.js tailwind.config.js .babelrc .env ./
 
-ENV ROUTER_BASE /2025/
-ENV BASE_URL http://pycontw-2025:8000
+ENV ROUTER_BASE /2026/
+ENV BASE_URL http://pycontw-2026:8000
 ENV BUILD_TARGET server
 ENV HOST 0.0.0.0
 

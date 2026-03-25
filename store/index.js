@@ -12,7 +12,7 @@ export const state = () => ({
     reviewerData: [],
     configs: {
         conferenceName: 'PyCon TW',
-        conferenceYear: '2025',
+        conferenceYear: '2026',
         conferenceDate: '2025-09-06',
         showAboutStaffPage: true,
         showConferencePage: true,
