@@ -341,7 +341,7 @@ export default {
 
 .landing__title {
     @apply relative top-20 min-w-full bg-contain bg-no-repeat opacity-0;
-    background-image: url('~@/static/landing-title-rwd-2025.png');
+    background-image: url('~@/static/landing-title.png');
     min-height: 50vh;
     animation: title-fade-in 0.5s 1s linear forwards;
 }
@@ -359,7 +359,7 @@ export default {
         background-image: url('~@/static/landing-background.png');
     }
     .landing__title {
-        background-image: url('~@/static/landing-title-2025.png');
+        background-image: url('~@/static/landing-title.png');
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: 2.5rem;
