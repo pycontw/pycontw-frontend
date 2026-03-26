@@ -15,10 +15,10 @@ export const state = () => ({
         conferenceYear: '2026',
         conferenceDate: '2025-09-06',
         showIndexSecondaryBtn: true, // 首頁：hero 右邊按鈕
-        showIndexSponsorSection: true, // 首頁：贊助夥伴
+        showIndexSponsorSection: false, // 首頁：贊助夥伴
 
         // footer
-        showAboutStaffPage: true, // 工作人員
+        showAboutStaffPage: false, // 工作人員
 
         // nav-bar
         showConferencePage: false, // 議程

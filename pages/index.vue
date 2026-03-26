@@ -171,7 +171,7 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.BUY_TICKETS,
+            primaryButton: landingButtonConfig.CFP,
             secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
             selectedSponsor: {},
         }
