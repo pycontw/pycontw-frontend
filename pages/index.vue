@@ -103,7 +103,7 @@
                 </sponsor-card-collection>
             </div>
         </I18nPageWrapper>
-        <I18nPageWrapper>
+        <I18nPageWrapper v-if="showIndexReviewersSection">
             <Reviewers :is-bulleted="isBulleted" />
         </I18nPageWrapper>
         <transition name="fade">
@@ -198,6 +198,9 @@ export default {
         },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
+        },
+        showIndexReviewersSection() {
+            return this.$store.state.configs.showIndexReviewersSection
         },
     },
     created() {

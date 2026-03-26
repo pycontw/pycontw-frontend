@@ -16,6 +16,7 @@ export const state = () => ({
         conferenceDate: '2025-09-06',
         showIndexSecondaryBtn: true, // 首頁：hero 右邊按鈕
         showIndexSponsorSection: false, // 首頁：贊助夥伴
+        showIndexReviewersSection: false, // 首頁：審稿人員
 
         // footer
         showAboutStaffPage: false, // 工作人員
