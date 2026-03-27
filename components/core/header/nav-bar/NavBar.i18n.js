@@ -59,7 +59,7 @@ export default genI18nMessages({
         panelDiscussion: 'Panel Discussion',
         youngInspirers: 'Young Inspires',
         events: '活動',
-        overview: '議程總覽',
+        overview: '活動總覽',
         openSpaces: '開放空間',
         sprints: '衝刺開發',
         lightningTalk: '閃電秀',

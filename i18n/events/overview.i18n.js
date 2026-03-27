@@ -93,7 +93,7 @@ export default genI18nMessages({
         },
     },
     'zh-hant': {
-        title: '議程總覽',
+        title: '活動總覽',
         intro:
             '年會總共有 3 種形式的演講與 6 種不同性質的交流活動。' +
             '可以說是非常多元有趣，讓你可以從演講中吸取知識的同時，' +

@@ -72,7 +72,7 @@ export default genI18nMessages({
             '交流活動包括：衝刺開發、開放空間、閃電秀、海報環節、JobFair、PyNight',
         ],
         moreInfo:
-            '若想要深入了解各活動或是想要報名以上活動，歡迎到議程總覽頁面觀看。',
+            '若想要深入了解各活動或是想要報名以上活動，歡迎到活動總覽頁面觀看。',
         og: {
             title: '關於 PyCon Taiwan',
             description: '關於 PyCon Taiwan',
