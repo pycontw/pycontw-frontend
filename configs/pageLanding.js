@@ -12,7 +12,7 @@ export const landingButtonConfig = {
         textKey: 'joinUs',
         isPrimary: false,
         isBordered: true,
-        isLarge: false,
+        isLarge: true,
     },
     CFP: {
         isExternalLink: false,
