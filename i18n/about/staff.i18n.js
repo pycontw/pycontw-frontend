@@ -69,7 +69,7 @@ export default genI18nMessages({
         ],
         og: {
             title: 'Staff',
-            description: 'Staff of PyCon Taiwan 2025',
+            description: 'Staff of PyCon Taiwan 2026',
         },
     },
     'zh-hant': {
@@ -140,7 +140,7 @@ export default genI18nMessages({
         ],
         og: {
             title: '工作人員',
-            description: 'PyCon Taiwan 2025 工作人員',
+            description: 'PyCon Taiwan 2026 工作人員',
         },
     },
 })

@@ -134,6 +134,10 @@ export const landingFooterHistoryConfig = [
         text: '2024',
         link: 'https://tw.pycon.org/2024/',
     },
+    {
+        text: '2025',
+        link: 'https://tw.pycon.org/2025/',
+    },
 ]
 
 export const landingFooterSocialConfig = [

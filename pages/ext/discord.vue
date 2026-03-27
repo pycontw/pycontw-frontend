@@ -77,7 +77,7 @@
                         </ul>
                     </template>
                     <template #tracks>
-                        <span class="category">PYCON TW 2025</span>
+                        <span class="category">PYCON TW 2026</span>
                     </template>
                 </i18n>
             </div>

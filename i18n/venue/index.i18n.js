@@ -5,7 +5,7 @@ export default genI18nMessages({
         og: {
             title: 'Venue Information',
             description:
-                'PyCon Taiwan 2025 will be held at Taipei New Horizon (Songshan Cultural and Creative Park), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
+                'PyCon Taiwan 2026 will be held at Taipei New Horizon (Songshan Cultural and Creative Park), with a focus on the latest technology and best practices in Python. The open-source community will bring high-quality speeches and workshops, providing valuable learning and networking opportunities for both novice and experienced Python developers.',
         },
         venueInfo: {
             name: 'Taipei New Horizon, 6F',
@@ -106,7 +106,7 @@ export default genI18nMessages({
         og: {
             title: '會場資訊',
             description:
-                'PyCon Taiwan 2025 將在台北文創舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
+                'PyCon Taiwan 2026 將在台北文創舉辦，聚焦於 Python 的最新技術和最佳實踐，讓開源社群帶來高品質的演講和工作坊，無論您是 Python 的新手還是資深開發人員，都能在這裡找到有價值的學習和交流機會。',
         },
         venueInfo: {
             name: '台北文創 6F',

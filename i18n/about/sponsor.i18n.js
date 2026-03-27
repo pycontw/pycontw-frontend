@@ -5,14 +5,14 @@ export default genI18nMessages({
         title: 'Sponsor',
         og: {
             title: 'Sponsor',
-            description: 'Sponsor of PyCon Taiwan 2025',
+            description: 'Sponsor of PyCon Taiwan 2026',
         },
     },
     'zh-hant': {
         title: '贊助夥伴',
         og: {
             title: '贊助夥伴',
-            description: 'PyCon Taiwan 2025 贊助夥伴',
+            description: 'PyCon Taiwan 2026 贊助夥伴',
         },
     },
 })

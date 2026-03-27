@@ -141,7 +141,7 @@ export default {
                         {
                             slot: 'conductPage',
                             textKey: 'terms.conductPage',
-                            url: 'https://tw.pycon.org/2025/zh-hant/about/code-of-conduct',
+                            url: 'https://tw.pycon.org/2026/zh-hant/about/code-of-conduct',
                             isExternalLink: true,
                         },
                     ],
