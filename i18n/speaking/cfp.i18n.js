@@ -3,16 +3,16 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Call for Proposals',
-        intro: 'The Call for Proposals is now open. PyCon Taiwan 2025 is accepting talks and tutorials! Talks will be lasting either 45 minutes, 30 minutes, or 15 minutes, depending on you, you’ll measure and decide how much time you need. Note that the length of a talk includes setup and Q&A session. If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
+        intro: 'The Call for Proposals is now open. PyCon Taiwan 2026 is accepting talks and tutorials! Talks will be lasting either 45 minutes, 30 minutes, or 15 minutes, depending on you, you’ll measure and decide how much time you need. Note that the length of a talk includes setup and Q&A session. If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
 
         info: {
             importantDates: {
                 title: 'Important Dates',
                 description: [
-                    'Conference dates: September 5th, September 7th, 2025',
-                    'Talks & Tutorial CFP Begins: February 23th, 2025',
-                    'Talks & Tutorial CFP Ends: April 5th, 2025, 23:59:59 ({aoe})',
-                    'Announcement of Acceptance: June 14th, 2025',
+                    'Conference dates: Joining you in Taipei – Date coming soon!',
+                    'Talks & Tutorial CFP Begins: February 23th, 2026',
+                    'Talks & Tutorial CFP Ends: April 5th, 2026, 23:59:59 ({aoe})',
+                    'Announcement of Acceptance: June 14th, 2026',
                 ],
                 steps: [],
             },
@@ -29,7 +29,7 @@ export default genI18nMessages({
             reviewProcess: {
                 title: 'Proposals Review Process',
                 description: [
-                    'After the Call for Proposals ends, and before the announcement of acceptance, the PyCon Taiwan 2025 Proposals Review Committee is going to review the proposals and give scores and provide feedback. The process consists of three phases:',
+                    'After the Call for Proposals ends, and before the announcement of acceptance, the PyCon Taiwan 2026 Proposals Review Committee is going to review the proposals and give scores and provide feedback. The process consists of three phases:',
                 ],
                 steps: [
                     {
@@ -129,20 +129,20 @@ export default genI18nMessages({
         og: {
             title: 'Call for Proposals',
             description:
-                'The Call for Proposals is now open. PyCon Taiwan 2025 is accepting talks and tutorials!',
+                'The Call for Proposals is now open. PyCon Taiwan 2026 is accepting talks and tutorials!',
         },
     },
     'zh-hant': {
         title: '稿件募集',
-        intro: 'PyCon Taiwan 2025 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！您可以投稿長度為 15 分鐘、30 分鐘或 45 分鐘的演講，根據您自己評估所需的時間而決定。需要注意的是，議程的時間長度將會包含開場與 Q&A 的時間。若您是第一次投稿 PyCon Taiwan，請您參考「{talk}」一文，以了解更多相關規範以及協助您組織投稿的想法。',
+        intro: 'PyCon Taiwan 2026 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！您可以投稿長度為 15 分鐘、30 分鐘或 45 分鐘的演講，根據您自己評估所需的時間而決定。需要注意的是，議程的時間長度將會包含開場與 Q&A 的時間。若您是第一次投稿 PyCon Taiwan，請您參考「{talk}」一文，以了解更多相關規範以及協助您組織投稿的想法。',
         info: {
             importantDates: {
                 title: '重要日期',
                 description: [
-                    '大會日期： 9/5 - 9/7',
-                    '議程、課程 開放徵稿：2025 年 02 月 23 日',
-                    '議程、課程 投稿截止：2025 年 04 月 05 日 23:59:59 ({aoe})',
-                    '稿件錄取通知：2025 年 06 月 14 日',
+                    '大會日期：Joining you in Taipei – Date coming soon!',
+                    '議程、課程 開放徵稿：2026 年 4 月 13 日',
+                    '議程、課程 投稿截止：2026 年 5 月 18 日 23:59:59 ({aoe})',
+                    '稿件錄取通知：2026 年 7 月 27 日',
                 ],
                 steps: [],
             },
@@ -159,7 +159,7 @@ export default genI18nMessages({
             reviewProcess: {
                 title: '審稿流程',
                 description: [
-                    '在投稿截止與稿件錄取通知之間是審稿的時段，每篇演講和專業課程的稿件將會由 PyCon Taiwan 2025 的審稿委員會進行評分與評論。審稿分成三個階段：',
+                    '在投稿截止與稿件錄取通知之間是審稿的時段，每篇演講和專業課程的稿件將會由 PyCon Taiwan 2026 的審稿委員會進行評分與評論。審稿分成三個階段：',
                 ],
                 steps: [
                     {
@@ -212,7 +212,7 @@ export default genI18nMessages({
             tutorialsDuration: {
                 title: '專業課程規範',
                 description: [
-                    '同演講，我們對專業課程的主題並不做任何限制。專業課程為 1.5 小時的活動，不額外收費，將與 PyCon Taiwan 2025 大會同時進行。投稿課程的方針基於演講，所以請先閱讀「{talk}」一文，除了該文中的事項外，我們對課程投稿本身有額外的規範，請參見「{tutorial}」一文。',
+                    '同演講，我們對專業課程的主題並不做任何限制。專業課程為 1.5 小時的活動，不額外收費，將與 PyCon Taiwan 2026 大會同時進行。投稿課程的方針基於演講，所以請先閱讀「{talk}」一文，除了該文中的事項外，我們對課程投稿本身有額外的規範，請參見「{tutorial}」一文。',
                 ],
                 steps: [],
             },
@@ -259,7 +259,7 @@ export default genI18nMessages({
         og: {
             title: '稿件募集',
             description:
-                'PyCon Taiwan 2025 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！',
+                'PyCon Taiwan 2026 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！',
         },
     },
 })

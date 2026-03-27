@@ -103,7 +103,7 @@
                 </sponsor-card-collection>
             </div>
         </I18nPageWrapper>
-        <I18nPageWrapper>
+        <I18nPageWrapper v-if="showIndexReviewersSection">
             <Reviewers :is-bulleted="isBulleted" />
         </I18nPageWrapper>
         <transition name="fade">
@@ -171,7 +171,7 @@ export default {
     data() {
         return {
             isOpened: false,
-            primaryButton: landingButtonConfig.BUY_TICKETS,
+            primaryButton: landingButtonConfig.CFP,
             secondaryButton: landingButtonConfig.SECONDARY_JOIN_US,
             selectedSponsor: {},
         }
@@ -198,6 +198,9 @@ export default {
         },
         showIndexSponsorSection() {
             return this.$store.state.configs.showIndexSponsorSection
+        },
+        showIndexReviewersSection() {
+            return this.$store.state.configs.showIndexReviewersSection
         },
     },
     created() {
@@ -341,7 +344,7 @@ export default {
 
 .landing__title {
     @apply relative top-20 min-w-full bg-contain bg-no-repeat opacity-0;
-    background-image: url('~@/static/landing-title-rwd-2025.png');
+    background-image: url('~@/static/landing-title.png');
     min-height: 50vh;
     animation: title-fade-in 0.5s 1s linear forwards;
 }
@@ -359,7 +362,7 @@ export default {
         background-image: url('~@/static/landing-background.png');
     }
     .landing__title {
-        background-image: url('~@/static/landing-title-2025.png');
+        background-image: url('~@/static/landing-title.png');
         background-repeat: no-repeat;
         background-position-x: 0;
         background-position-y: 2.5rem;

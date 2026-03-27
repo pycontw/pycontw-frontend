@@ -14,18 +14,24 @@ export const state = () => ({
         conferenceName: 'PyCon TW',
         conferenceYear: '2026',
         conferenceDate: '2025-09-06',
-        showAboutStaffPage: true,
-        showConferencePage: true,
-        showSchedulePage: true,
-        showEventOverviewPage: true,
-        showEventsPage: true,
-        showIndexSecondaryBtn: true,
-        showIndexSponsorSection: true,
-        showProposalSystemPage: true,
-        showRegistrationPage: true,
-        showSpeakingPage: false,
-        showSponsorPage: true,
-        showVenuePage: true,
+        showIndexSecondaryBtn: true, // 首頁：hero 右邊按鈕
+        showIndexSponsorSection: false, // 首頁：贊助夥伴
+        showIndexReviewersSection: false, // 首頁：審稿人員
+
+        // footer
+        showAboutStaffPage: false, // 工作人員
+
+        // nav-bar
+        showConferencePage: false, // 議程
+        showSchedulePage: false, // 時間表
+        showEventOverviewPage: true, // 議程總覽
+        showEventsPage: false, // 活動
+        showProposalSystemPage: true, // 投稿系統
+        showRegistrationPage: false, // 購票
+        showSpeakingPage: true, // 投稿
+        showSponsorPage: true, // 贊助
+        showVenuePage: false, // 會場
+
         aboutHideItems: ['apacCommunity'], // ['pycontw', 'apacCommunity', 'history', 'community', 'codeOfConduct']
         conferenceHideItems: [
             // 'keynotes',
