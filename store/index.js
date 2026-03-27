@@ -24,7 +24,7 @@ export const state = () => ({
         // nav-bar
         showConferencePage: false, // 議程
         showSchedulePage: false, // 時間表
-        showEventOverviewPage: true, // 議程總覽
+        showEventOverviewPage: true, // 活動總覽
         showEventsPage: false, // 活動
         showProposalSystemPage: true, // 投稿系統
         showRegistrationPage: false, // 購票
