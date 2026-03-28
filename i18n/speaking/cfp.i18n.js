@@ -10,9 +10,9 @@ export default genI18nMessages({
                 title: 'Important Dates',
                 description: [
                     'Conference dates: Joining you in Taipei – Date coming soon!',
-                    'Talks & Tutorial CFP Begins: February 23th, 2026',
-                    'Talks & Tutorial CFP Ends: April 5th, 2026, 23:59:59 ({aoe})',
-                    'Announcement of Acceptance: June 14th, 2026',
+                    'Talks & Tutorial CFP Begins: April 13th, 2026',
+                    'Talks & Tutorial CFP Ends: May 18th, 2026, 23:59:59 ({aoe})',
+                    'Announcement of Acceptance: July 27th, 2026',
                 ],
                 steps: [],
             },
