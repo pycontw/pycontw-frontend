@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/conference/talks", {data:[{eventType:"talks",speechesData:[]}],fetch:{},mutations:[]});
