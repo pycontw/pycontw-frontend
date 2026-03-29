@@ -59,6 +59,8 @@ export default {
             const detailTutorials = await getAllDetailTutorials()
 
             const routes = [
+                { route: '/conference/talks' },
+                { route: '/conference/tutorials' },
                 ...detailTalks.map((talk) => ({
                     route: `/conference/${talk.event_type}/${talk.id}`,
                     payload: talk,
@@ -200,7 +202,7 @@ export default {
         fallbackLocale: 'en-us',
         locales: ['en-us', 'zh-hant'],
         detectBrowserLanguage: {
-            redirectOn: 'root',
+            redirectOn: 'all',
         },
     },
 
