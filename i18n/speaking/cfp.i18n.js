@@ -11,8 +11,8 @@ export default genI18nMessages({
                 description: [
                     'Conference dates: Joining you in Taipei – Date coming soon!',
                     'Talks & Tutorial CFP Begins: April 13th, 2026',
-                    'Talks & Tutorial CFP Ends: May 18th, 2026, 23:59:59 ({aoe})',
-                    'Announcement of Acceptance: July 27th, 2026',
+                    'Talks & Tutorial CFP Ends: Jun 1st, 2026, 23:59:59 ({aoe})',
+                    'Announcement of Acceptance: Aug 2nd, 2026',
                 ],
                 steps: [],
             },
@@ -141,8 +141,8 @@ export default genI18nMessages({
                 description: [
                     '大會日期：Joining you in Taipei – Date coming soon!',
                     '議程、課程 開放徵稿：2026 年 4 月 13 日',
-                    '議程、課程 投稿截止：2026 年 5 月 18 日 23:59:59 ({aoe})',
-                    '稿件錄取通知：2026 年 7 月 27 日',
+                    '議程、課程 投稿截止：2026 年 6 月 1 日 23:59:59 ({aoe})',
+                    '稿件錄取通知：2026 年 8 月 2 日',
                 ],
                 steps: [],
             },
