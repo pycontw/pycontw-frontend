@@ -87,10 +87,10 @@ export default genI18nMessages({
             applicationDeadline: {
                 title: 'Timeline',
                 description: [
-                    '2025-04-01 23:50 ({aoe0}) Financial aid application opens.',
-                    '2025-06-20 23:50 ({aoe1}) Financial aid application closes.',
-                    '2025-07-01 23:50 ({aoe2}) Financial aid application review results announcement.',
-                    '2025-09-05 18:00 ({taipeiTime}) Disbursement sessions at PyCon TW.',
+                    '2026-05-25 23:50 ({aoe0}) Financial aid application opens.',
+                    '2026-07-20 23:50 ({aoe1}) Financial aid application closes.',
+                    '2026-07-25 23:50 ({aoe2}) Financial aid application review results announcement.',
+                    '2026-10-18 18:00 ({taipeiTime}) Disbursement sessions at PyCon TW.',
                 ],
             },
         },
@@ -180,10 +180,10 @@ export default genI18nMessages({
             applicationDeadline: {
                 title: '受理期限',
                 description: [
-                    '2025-04-01 23:50 ({aoe0}) 開始接受財務補助',
-                    '2025-06-20 23:50 ({aoe1}) 財務補助申請截止',
-                    '2025-07-01 23:50 ({aoe2}) 財務補助審查結果通知',
-                    '2025-09-05 18:00 ({taipeiTime}) 大會當場支付',
+                    '2026-05-25 23:50 ({aoe0}) 開始接受財務補助',
+                    '2026-07-20 23:50 ({aoe1}) 財務補助申請截止',
+                    '2026-07-25 23:50 ({aoe2}) 財務補助審查結果通知',
+                    '2026-10-18 18:00 ({taipeiTime}) 大會當場支付',
                 ],
             },
         },
