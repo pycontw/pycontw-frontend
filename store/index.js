@@ -27,7 +27,7 @@ export const state = () => ({
         showEventOverviewPage: true, // 活動總覽
         showEventsPage: false, // 活動
         showProposalSystemPage: true, // 投稿系統
-        showRegistrationPage: false, // 購票
+        showRegistrationPage: true, // 購票
         showSpeakingPage: true, // 投稿
         showSponsorPage: true, // 贊助
         showVenuePage: false, // 會場
@@ -43,7 +43,7 @@ export const state = () => ({
         ], // ['keynotes', 'talks', 'tutorials', 'panelDiscussion', 'posterSession', 'youngInspirers']
         eventsHideItems: [], // ['sprints', 'openSpaces', 'jobs']
 
-        registrationHideItems: [], // ['tickets', 'financialAid']
+        registrationHideItems: ['tickets'], // ['tickets', 'financialAid']
         venueHideItems: ['accommodation'],
         // ['venueInfo', 'accommodation']
     },

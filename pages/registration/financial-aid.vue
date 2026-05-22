@@ -103,7 +103,7 @@
                         <i18n path="fillFormProcess" tag="li">
                             <template #form>
                                 <ext-link
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfwCkM_N8KZeMeZCwGaFpQZyuXbI5J4mQ2UIgj4xTwqTjvW2Q/viewform"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSf0m1fEL5U8nacvXF4Q-m66KWexl3FmB-25yQarckYsYoeYxQ/viewform"
                                     highlight
                                     underline
                                     >{{ $t('form') }}</ext-link
@@ -170,25 +170,25 @@ export default {
                         {
                             slot: 'aoe0',
                             textKey: 'terms.aoe0',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250401T235000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260525T120000&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
                             slot: 'aoe1',
                             textKey: 'terms.aoe1',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250620T235000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260720T235900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
                             slot: 'aoe2',
                             textKey: 'terms.aoe2',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250701T235000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260727T235900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
                             slot: 'taipeiTime',
                             textKey: 'terms.taipeiTime',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20250905T180000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20261018T100000&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                     ],
