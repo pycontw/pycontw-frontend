@@ -170,19 +170,19 @@ export default {
                         {
                             slot: 'aoe0',
                             textKey: 'terms.aoe0',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260525T235000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260525T120000&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
                             slot: 'aoe1',
                             textKey: 'terms.aoe1',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260720T235000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260720T235900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
                             slot: 'aoe2',
                             textKey: 'terms.aoe2',
-                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260725T235000&p1=tz_aoe&p2=241&p3=1440',
+                            url: 'https://www.timeanddate.com/worldclock/converter.html?iso=20260727T235900&p1=tz_aoe&p2=241&p3=1440',
                             isExternalLink: true,
                         },
                         {
