@@ -2,7 +2,7 @@
     <div>
         <banner>
             <core-h1 :title="`${conferenceYear} ${$t('title')}`"></core-h1>
-            <i18n path="pageAbstract" tag="p" class="pageAbstract">
+            <i18n path="pageAbstract" tag="p" class="text-xs md:text-base">
                 <template #br><br /></template>
             </i18n>
         </banner>
@@ -15,10 +15,10 @@
                 <i18n
                     :path="contents.title"
                     tag="h2"
-                    class="paragraphTitle"
+                    class="mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-left md:text-xl"
                 ></i18n>
                 <i18n
-                    v-for="(content, j) in contents.description"
+                    v-for="(_, j) in contents.description"
                     :key="`privacy_policy_description_${j}`"
                     :path="`contents.${i}.description.${j}`"
                     class="paragraphDescription"
@@ -31,7 +31,7 @@
 
                 <ol class="list-decimal pl-8">
                     <i18n
-                        v-for="(content, j) in contents.items"
+                        v-for="(_, j) in contents.items"
                         :key="`privacy_policy_items_${j}`"
                         :path="`contents.${i}.items.${j}`"
                         class="paragraphDescription"
@@ -39,7 +39,7 @@
                     ></i18n>
                 </ol>
                 <i18n
-                    v-for="(content, j) in contents.summary"
+                    v-for="(_, j) in contents.summary"
                     :key="`privacy_policy_summary_${j}`"
                     :path="`contents.${i}.summary.${j}`"
                     class="paragraphDescription"
@@ -47,7 +47,7 @@
                 />
             </div>
             <div class="pt-8">
-                <i18n path="question" tag="p" class="question">
+                <i18n path="question" tag="p" class="text-center text-xs">
                     <template #contact>
                         <ext-link href="mailto:organizers@python.tw" highlight>
                             organizers@python.tw.
@@ -55,12 +55,12 @@
                     </template>
                 </i18n>
             </div>
-            <div class="authorization pb-5">
+            <div class="pb-5 text-center">
                 <div>
                     <i18n
                         path="authorization.title"
                         tag="h2"
-                        class="authorizationTitle"
+                        class="mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-xl"
                     >
                         <template v-slot:licenseTitle>
                             (CC BY-SA 3.0 TW)
@@ -71,7 +71,7 @@
                     <i18n
                         path="authorization.description"
                         tag="p"
-                        class="authorizationDescription"
+                        class="text-center text-xs md:text-sm"
                     >
                         <template #br><br /></template>
                         <template #license>
@@ -84,12 +84,12 @@
                     </i18n>
                 </div>
                 <div>
-                    <img :src="authorizationIcon" class="authorizationLabel" />
+                    <img :src="authorizationIcon" class="m-auto w-64 md:w-80" />
                 </div>
                 <i18n
                     path="authorization.content"
                     tag="p"
-                    class="authorizationContent"
+                    class="text-center text-xs md:text-sm"
                 >
                     <template #br><br /></template>
                 </i18n>
@@ -150,34 +150,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.paragraphTitle {
-    @apply mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-left md:text-xl;
-}
-
 .paragraphDescription {
     @apply text-xs md:text-sm;
-}
-
-.pageAbstract {
-    @apply text-xs md:text-base;
-}
-.authorization {
-    @apply text-center;
-}
-.authorizationTitle {
-    @apply mt-9 text-center font-serif text-base font-bold text-pink-700 md:mt-20 md:text-left md:text-xl;
-    @apply text-center;
-}
-.authorizationDescription {
-    @apply text-center text-xs md:text-sm;
-}
-.authorizationLabel {
-    @apply m-auto w-64 md:w-80;
-}
-.authorizationContent {
-    @apply text-center text-xs md:text-sm;
-}
-.question {
-    @apply text-center text-xs;
 }
 </style>
