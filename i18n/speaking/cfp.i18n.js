@@ -3,7 +3,7 @@ import { genI18nMessages } from '~/utils/i18n.utils'
 export default genI18nMessages({
     'en-us': {
         title: 'Call for Proposals',
-        intro: 'The Call for Proposals is now open. PyCon Taiwan 2026 is accepting talks and tutorials! Talks will be lasting either 45 minutes, 30 minutes, or 15 minutes, depending on you, you’ll measure and decide how much time you need. Note that the length of a talk includes setup and Q&A session. If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
+        intro: 'PyCon Taiwan 2026 welcomes proposals for talks and tutorials! Talks will be lasting either 45 minutes, 30 minutes, or 15 minutes, depending on you, you’ll measure and decide how much time you need. Note that the length of a talk includes setup and Q&A session. If it’s your first time to propose a talk at PyCon Taiwan or a conference in general, please have a look at “{talk}” to learn more about conventions, and it might help you organize your thoughts on your proposal.',
 
         info: {
             importantDates: {
@@ -129,12 +129,12 @@ export default genI18nMessages({
         og: {
             title: 'Call for Proposals',
             description:
-                'The Call for Proposals is now open. PyCon Taiwan 2026 is accepting talks and tutorials!',
+                'PyCon Taiwan 2026 welcomes proposals for talks and tutorials!',
         },
     },
     'zh-hant': {
         title: '稿件募集',
-        intro: 'PyCon Taiwan 2026 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！您可以投稿長度為 15 分鐘、30 分鐘或 45 分鐘的演講，根據您自己評估所需的時間而決定。需要注意的是，議程的時間長度將會包含開場與 Q&A 的時間。若您是第一次投稿 PyCon Taiwan，請您參考「{talk}」一文，以了解更多相關規範以及協助您組織投稿的想法。',
+        intro: 'PyCon Taiwan 2026 接受包括議程（Talks）與課程（Tutorials）的稿件！您可以投稿長度為 15 分鐘、30 分鐘或 45 分鐘的演講，根據您自己評估所需的時間而決定。需要注意的是，議程的時間長度將會包含開場與 Q&A 的時間。若您是第一次投稿 PyCon Taiwan，請您參考「{talk}」一文，以了解更多相關規範以及協助您組織投稿的想法。',
         info: {
             importantDates: {
                 title: '重要日期',
@@ -259,7 +259,7 @@ export default genI18nMessages({
         og: {
             title: '稿件募集',
             description:
-                'PyCon Taiwan 2026 正式開始徵稿，接受包括議程（Talks）與課程（Tutorials）的稿件！',
+                'PyCon Taiwan 2026 接受包括議程（Talks）與課程（Tutorials）的稿件！',
         },
     },
 })
