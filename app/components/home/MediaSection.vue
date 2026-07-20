@@ -2,7 +2,7 @@
 const { t } = useI18n({ useScope: 'local' })
 
 const datas = computed<[title: string, icon: string, description: string, url: string][]>(() => [
-  [t('blog'), 'i-simple-icons:blogger', t('blog_description'), 'https://blog.pycontw.org'],
+  [t('blog'), 'i-simple-icons:blogger', t('blog_description'), 'https://conf.python.tw/'],
   ['PyCast', 'i-lucide:podcast', t('pycast_description'), 'https://podcasts.apple.com/us/podcast/pycon-taiwan/id1559843325'],
   ['YouTube', 'i-simple-icons:youtube', t('youtube_description'), 'https://www.youtube.com/channel/UCHLnNgRnfGYDzPCCH8qGbQw'],
 ])
