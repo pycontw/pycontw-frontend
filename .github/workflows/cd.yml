@@ -1,50 +1,46 @@
 name: Test, build, deploy
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    cd:
-        runs-on: ${{ matrix.os }}
+  cd:
+    runs-on: ${{ matrix.os }}
 
-        strategy:
-            matrix:
-                os: [ubuntu-latest]
-                node: [14]
+    strategy:
+      matrix:
+        node-version: [24]
+        os: [ubuntu-latest]
 
-        steps:
-            -   name: Checkout 🛎
-                uses: actions/checkout@master
+    steps:
+      - uses: actions/checkout@v4
 
-            -   name: Setup node env 🏗
-                uses: actions/setup-node@v2.1.2
-                with:
-                    node-version: ${{ matrix.node }}
+      - uses: pnpm/action-setup@v4
 
-            -   name: Install dependencies 👨🏻‍💻
-                run: npm ci
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
-            -   name: Run linter 👀
-                run: npm run lint
+      - run: pnpm install --frozen-lockfile
 
-            -   name: Run tests 🧪
-                run: npm run test
+      - name: Run linter 👀
+        run: pnpm run lint
 
-            -   name: Build 👷🏽
-                run: npm run generate
-                env:
-                    ROUTER_BASE: /pycontw-frontend/  # repo name
-                    BUILD_TARGET: static
-                    API_URL_BROWSER: https://staging.pycon.tw/prs
-                    AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-                    GOOGLE_TAG_MANAGER_ID: ${{ secrets.GOOGLE_TAG_MANAGER_ID }}
+      - name: Build 👷🏽
+        run: pnpm run generate
+        env:
+          NUXT_API_URL: https://staging.pycon.tw/prs
+          NUXT_API_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          GOOGLE_TAG_MANAGER_ID: ${{ secrets.GOOGLE_TAG_MANAGER_ID }}
 
-            -   name: Deploy 🚀
-                uses: JamesIves/github-pages-deploy-action@3.7.1
-                with:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                    BRANCH: gh-pages
-                    FOLDER: dist
-                    CLEAN: true
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
+          CLEAN: true

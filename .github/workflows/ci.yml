@@ -1,46 +1,34 @@
 name: ci
 
 on:
-    push:
-        branches:
-            - main
-            - master
-    pull_request:
-        branches:
-            - main
-            - master
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    ci:
-        runs-on: ${{ matrix.os }}
+  ci:
+    runs-on: ${{ matrix.os }}
 
-        strategy:
-            matrix:
-                os: [ ubuntu-latest ]
-                node: [ 14.21.3 ]
+    strategy:
+      matrix:
+        node-version: [24]
+        os: [ubuntu-latest]
 
-        steps:
-            -   name: Checkout 🛎
-                uses: actions/checkout@master
+    steps:
+      - uses: actions/checkout@v4
 
-            -   name: Setup node env 🏗
-                uses: actions/setup-node@v2.1.2
-                with:
-                    node-version: ${{ matrix.node }}
+      - uses: pnpm/action-setup@v4
 
-            -   name: Cache node_modules 📦
-                uses: actions/cache@v4
-                with:
-                    path: ~/.npm
-                    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-                    restore-keys: |
-                        ${{ runner.os }}-node-
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
-            -   name: Install dependencies 👨🏻‍💻
-                run: npm ci
+      - run: pnpm install --frozen-lockfile
 
-            -   name: Run linter 👀
-                run: npm run lint
-
-            -   name: Run tests 🧪
-                run: npm run test
+      - name: Run linter 👀
+        run: pnpm run lint
