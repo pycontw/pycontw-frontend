@@ -53,6 +53,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     '@vueuse/nuxt',
+    '@nuxt/scripts',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -112,6 +113,17 @@ export default defineNuxtConfig({
       },
     },
     baseURL: '/2026/',
+  },
+
+  $production: {
+    scripts: {
+      registry: {
+        metaPixel: {
+          id: '164677453055289',
+          trigger: 'onNuxtReady',
+        },
+      },
+    },
   },
 
   icon: {
