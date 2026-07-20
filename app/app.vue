@@ -5,6 +5,9 @@ useHead({
   titleTemplate: (title) => {
     return title ? `${title} | PyCon TW ${year}` : `PyCon TW ${year}`
   },
+  link: [
+    { rel: 'icon', type: 'image/x-icon', sizes: '48x48', href: $public('/favicon.ico') },
+  ],
 })
 </script>
 
