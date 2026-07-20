@@ -9,7 +9,8 @@ RUN pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm build
+# 2048 + 256 = 2304
+RUN NODE_OPTIONS=--max-old-space-size=2304 pnpm build
 
 
 FROM node:24-alpine AS runtime
