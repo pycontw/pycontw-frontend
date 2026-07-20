@@ -11,7 +11,7 @@ const items = computed(() => [
 <template>
   <div class="flex justify-around">
     <div v-for="value in items" :key="value.title" class="flex flex-col items-center space-y-3">
-      <img :src="value.src" :alt="value.title" class="w-16 md:w-24">
+      <img :src="$public(value.src)" :alt="value.title" class="w-16 md:w-24">
       <p>{{ value.title }}</p>
     </div>
   </div>

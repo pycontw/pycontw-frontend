@@ -24,7 +24,7 @@ const introImages = computed(() => [
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-8">
     <div v-for="image in introImages" :key="image.title" class="relative w-full h-32 md:h-44">
-      <img :src="image.src" class="w-full h-full object-cover rounded-lg">
+      <img :src="$public(image.src)" class="w-full h-full object-cover rounded-lg">
       <div class="absolute inset-0 flex items-center justify-center">
         <h2 class="text-xl font-bold text-highlighted bg-opacity-50 px-4 py-2 rounded">
           {{ image.title }}

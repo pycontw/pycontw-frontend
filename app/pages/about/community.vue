@@ -61,7 +61,7 @@ useHead({ title: $t('about.community') })
             </div>
             <img
               class="w-32 h-32 object-cover rounded-lg"
-              :src="`/images/about/community/${community.id}.png`"
+              :src="$public(`/images/about/community/${community.id}.png`)"
               :alt="community[localKey.name]"
             >
           </div>
@@ -78,7 +78,7 @@ useHead({ title: $t('about.community') })
         <div v-if="openedCommunity" class="6 w-full">
           <img
             class="w-full rounded-lg"
-            :src="`/images/about/community/${openedCommunity.id}.png`"
+            :src="$public(`/images/about/community/${openedCommunity.id}.png`)"
             :alt="openedCommunity[localKey.name]"
           >
           <p class="my-4">

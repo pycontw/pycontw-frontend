@@ -80,7 +80,7 @@ useHead({ title: $t('introduce.overview') })
             :to="pycon.eventsReady && event.link ? event.link.url : undefined"
             class="group"
           >
-            <img :src="event.img" :alt="t(`events.${key}.title`)" class="w-full h-auto object-cover rounded-lg aspect-video">
+            <img :src="$public(event.img)" :alt="t(`events.${key}.title`)" class="w-full h-auto object-cover rounded-lg aspect-video">
 
             <template #title>
               <div class="flex justify-between mb-2">

@@ -10,7 +10,7 @@ const [DefineHeroButtons, ReuseHeroButtons] = createReusableTemplate()
 onMounted(() => {
   if (canvas.value) {
     const app = new Application(canvas.value)
-    app.load('/scene.splinecode')
+    app.load($public('/scene.splinecode'))
     app.addEventListener('start', () => {
       started.value = true
     })

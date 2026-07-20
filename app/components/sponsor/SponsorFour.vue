@@ -12,7 +12,7 @@ const items = computed(() => ([
 <template>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-12">
     <div v-for="value in items" :key="value.title" class="flex flex-col items-center space-y-4 md:space-y-6">
-      <img :src="value.src" :alt="value.title" class="w-16 md:w-30">
+      <img :src="$public(value.src)" :alt="value.title" class="w-16 md:w-30">
       <p class="text-lg md:text-xl">
         {{ value.title }}
       </p>

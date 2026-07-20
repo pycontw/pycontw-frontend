@@ -22,7 +22,7 @@ const tickets = computed(() => [
   <div class="grid sm:grid-cols-2 gap-4 sm:gap-8">
     <NuxtLink v-for="(ticket, index) in tickets" :key="index" :to="ticket.link" target="_blank">
       <UiBorderContainer class="flex sm:flex-col items-center rounded-xl sm:rounded-3xl max-sm:space-x-6 p-5 sm:p-12 sm:space-y-8 bg-default/20 hover:bg-default/50">
-        <img :src="ticket.image" class="w-16 sm:w-full max-w-64">
+        <img :src="$public(ticket.image)" class="w-16 sm:w-full max-w-64">
         <div class="sm:text-center lg:space-y-1">
           <div>
             <span class="sm:text-xl lg:text-2xl font-semibold">{{ ticket.title }}</span>

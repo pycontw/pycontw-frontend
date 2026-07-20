@@ -16,7 +16,7 @@ const images = [
 <template>
   <div class="flex flex-col justify-between">
     <div v-for="(image, index) in images" :key="index" class="w-full h-auto">
-      <img :src="image" class="w-45 h-45 object-cover rounded-lg">
+      <img :src="$public(image)" class="w-45 h-45 object-cover rounded-lg">
     </div>
   </div>
 </template>

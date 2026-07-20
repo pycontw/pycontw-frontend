@@ -9,7 +9,7 @@ const items = [
 <template>
   <div class="grid gap-6 md:gap-12 sm:grid-cols-3">
     <div v-for="value in items" :key="value" class="flex justify-center">
-      <img :src="value" class="w-full h-auto rounded-xl">
+      <img :src="$public(value)" class="w-full h-auto rounded-xl">
     </div>
   </div>
 </template>
