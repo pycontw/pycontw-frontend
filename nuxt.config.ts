@@ -118,6 +118,10 @@ export default defineNuxtConfig({
   $production: {
     scripts: {
       registry: {
+        googleTagManager: {
+          id: 'GTM-TNZ39PD',
+          trigger: 'onNuxtReady',
+        },
         metaPixel: {
           id: '164677453055289',
           trigger: 'onNuxtReady',
