@@ -3,11 +3,16 @@ const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const isSupportHover = useMediaQuery('(hover: hover)')
 const open = ref(false)
+const el = useTemplateRef('el')
+
+onClickOutside(el, () => {
+  open.value = false
+})
 </script>
 
 <template>
   <UPopover v-model:open="open" :mode="isSupportHover ? 'hover' : 'click'" arrow :content="{ hideWhenDetached: true }">
-    <UButton color="neutral" variant="ghost" icon="i-lucide:languages" />
+    <UButton ref="el" color="neutral" variant="ghost" icon="i-lucide:languages" />
 
     <template #content>
       <div class="flex flex-col p-1">
