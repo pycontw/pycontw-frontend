@@ -4,7 +4,7 @@
 .output
 .data
 node_modules
-mock
+mock/node_modules
 dist
 coverage
 

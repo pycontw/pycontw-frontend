@@ -1,0 +1,15 @@
+FROM node:24-alpine
+
+WORKDIR /app
+
+RUN corepack enable
+
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY mock/package.json ./mock/package.json
+
+RUN pnpm install --frozen-lockfile
+
+ENV NUXT_HOST=0.0.0.0 \
+    NUXT_PORT=3030
+
+EXPOSE 3030
