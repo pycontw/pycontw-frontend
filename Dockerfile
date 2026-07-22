@@ -1,30 +1,29 @@
-FROM node:14.21.3-buster-slim
+FROM node:24-alpine AS build
 
-WORKDIR /usr/local
+WORKDIR /app
 
-COPY package-lock.json package-lock.json
-COPY package.json package.json
+RUN corepack enable
 
-RUN npm ci
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 
-COPY assets ./assets
-COPY components ./components
-COPY i18n ./i18n
-COPY layouts ./layouts
-COPY middleware ./middleware
-COPY pages ./pages
-COPY configs ./configs
-COPY plugins ./plugins
-COPY static ./static
-COPY store ./store
-COPY utils ./utils
-COPY nuxt.config.js tailwind.config.js .babelrc .env ./
+COPY . .
 
-ENV ROUTER_BASE /2026/
-ENV BASE_URL http://pycontw-2026:8000
-ENV BUILD_TARGET server
-ENV HOST 0.0.0.0
+RUN NODE_OPTIONS=--max-old-space-size=2560 pnpm build
 
-RUN npm run build
 
-CMD ["npm", "start"]
+FROM node:24-alpine AS runtime
+
+WORKDIR /app
+
+ENV NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=3000
+
+COPY --from=build --chown=node:node /app/.output ./.output
+
+USER node
+
+EXPOSE 3000
+
+CMD ["node", ".output/server/index.mjs"]

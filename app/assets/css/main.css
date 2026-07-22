@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@source "../../../content/**/*";
+
+@utility bg-gradient-neutral {
+  @apply bg-linear-to-br from-black to-neutral-900;
+}
+
+@utility text-gradient-neutral {
+  @apply bg-linear-to-b bg-clip-text text-transparent from-neutral-200 from-33% to-neutral-800;
+}
+
+@utility text-gradient-primary {
+  @apply bg-linear-to-b bg-clip-text text-transparent from-primary-500 from-33% to-primary-950;
+}
+
+@utility text-pop {
+  @apply text-5xl md:text-7xl;
+}
+
+@theme {
+  --color-spotlight: var(--color-neutral-400);
+}
+
+:root {
+    --ui-container: 1080px;
+}
+
+.dark {
+  --ui-bg: #000;
+  --ui-text: var(--color-neutral-400);
+  --ui-text-muted: var(--color-neutral-500);
+  --ui-text-dimmed: var(--color-neutral-600);
+  --ui-primary: var(--color-sky-500); /* #0284C7 */
+  --ui-secondary: var(--color-yellow-400); /* #FACC15 */
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-content {
+  h1.prose {
+    @apply text-4xl;
+  }
+  h2.prose {
+    @apply text-3xl;
+  }
+  h3.prose {
+    @apply text-2xl;
+  }
+  h4.prose {
+    @apply text-[1.375rem];
+  }
+  h1.prose, h2.prose, h3.prose, h4.prose {
+    @apply text-neutral-50;
+  }
+  p.prose {
+    @apply text-xl leading-9 text-wrap;
+  }
+  li.prose {
+    @apply text-xl leading-9;
+  }
+}

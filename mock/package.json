@@ -1,0 +1,10 @@
+{
+  "name": "pycontw-mock-server",
+  "private": true,
+  "scripts": {
+    "json-server": "json-server --watch db_2025.json --routes routes.json --port 9876 --middlewares json-server-middlewares.js"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

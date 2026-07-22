@@ -1,34 +1,39 @@
 name: Generate dist artifact
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-    generate-dist:
-        runs-on: ubuntu-latest
+  generate-dist:
+    runs-on: ${{ matrix.os }}
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+    strategy:
+      matrix:
+        node-version: [24]
+        os: [ubuntu-latest]
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 14.21.3
-                  cache: npm
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Install dependencies
-              run: npm i
+      - uses: pnpm/action-setup@v4
 
-            - name: Generate static site
-              run: npm run generate
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
-            - name: Archive dist folder
-              run: zip -r dist.zip ./dist
+      - run: pnpm install --frozen-lockfile
 
-            - name: Upload dist artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: dist-zip
-                  path: dist.zip
-                  if-no-files-found: error
+      - name: Generate static site
+        run: pnpm run generate
+
+      - name: Archive dist folder
+        run: zip -r dist.zip ./dist
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-zip
+          path: dist.zip
+          if-no-files-found: error
