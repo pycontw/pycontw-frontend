@@ -1,41 +1,43 @@
-# Nuxt Minimal Starter
+![pycontw-frontend ci](https://github.com/pycontw/pycontw-frontend/actions/workflows/ci.yml/badge.svg)
+![pycontw-frontend cd](https://github.com/pycontw/pycontw-frontend/actions/workflows/cd.yml/badge.svg)
+![nuxt](https://img.shields.io/badge/Framework-Nuxt.js-04C58E.svg)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# pycontw-frontend
 
-## Setup
+Frontend of PyCon TW official website.
 
-Make sure to install dependencies:
+## Development
+
+### Requirements
+
+- node `v22` or later (recommended using LTS)
+- pnpm `v11` or later
+
+Please create a `.env` file from `.env.example` and fill in the required environment variables.
+
+## Develop on your local machine
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+# install dependencies
+pnpm i
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
 ```bash
-# npm
-npm run dev
-
-# pnpm
+# option 1: start development server
 pnpm dev
 
-# yarn
-yarn dev
+# option 2: start development server with mock data
+pnpm dev:mock
+```
 
-# bun
-bun run dev
+## Develop with Docker
+
+```bash
+# default with mock data
+docker compose -f docker-compose.dev.yml up --build
+
+# stop the container
+docker compose -f docker-compose.dev.yml down
 ```
 
 ## Production
@@ -43,33 +45,17 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Test
+
+```bash
+pnpm run lint
+```
