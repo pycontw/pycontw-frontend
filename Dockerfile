@@ -9,6 +9,9 @@ RUN pnpm install --frozen-lockfile
 
 COPY . .
 
+# make sure .env exists so that the build doesn't fail if it is missing
+RUN touch .env
+
 RUN NODE_OPTIONS=--max-old-space-size=2560 pnpm build
 
 
@@ -27,4 +30,4 @@ USER node
 
 EXPOSE 3000
 
-CMD ["node", "--env-file=.env", ".output/server/index.mjs"]
+CMD ["node", "--env-file-if-exists=.env", ".output/server/index.mjs"]
