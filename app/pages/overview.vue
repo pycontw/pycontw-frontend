@@ -94,7 +94,7 @@ useHead({ title: $t('introduce.overview') })
             <template v-if="pycon.eventsReady && event.link" #footer>
               <div class="text-sm text-neutral-600 group-hover:text-neutral-500 transition-colors flex items-center gap-1">
                 {{ event.link.title }}
-                <UIcon name="mdi:arrow-right" class="group-hover:translate-x-0.5 transition-transform" />
+                <UIcon name="i-lucide-arrow-right" class="group-hover:translate-x-0.5 transition-transform" />
               </div>
             </template>
           </UPageCard>
