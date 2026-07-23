@@ -13,15 +13,18 @@ const items = computed<NavigationMenuItem[]>(() => [
     label: $t('sponsor.title'),
     to: localePath('/sponsor'),
   },
-  ...(pycon.eventsReady
+  ...pycon.scheduleReady
     ? [
         { label: $t('conference.schedule'), to: localePath('/conference/schedule') },
-        { label: $t('events.title'), slot: 'events' },
+      ]
+    : [],
+  ...pycon.eventsReady
+    ? [
+        { label: $t('events.title'), slot: 'events', to: localePath('/overview') },
       ]
     : [
         { label: $t('events.overview'), to: localePath('/overview') },
-      ]
-  ),
+      ],
   {
     label: $t('speaking.title'),
     active: route.path.startsWith(localePath('/speaking')),
