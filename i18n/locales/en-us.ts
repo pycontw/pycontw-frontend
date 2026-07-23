@@ -37,7 +37,7 @@ export default {
   speaking: {
     title: 'Proposal',
     cfp: 'Call for Proposals',
-    cfp_poster: 'Propose a Poster',
+    cfp_poster: 'Propose a Poster Session',
     talk: 'Propose a Talk',
     tutorial: 'Propose a Tutorial',
     recording: 'Recording Release',

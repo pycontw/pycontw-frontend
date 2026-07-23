@@ -37,7 +37,7 @@ export default {
   speaking: {
     title: '投稿',
     cfp: '投稿募集',
-    cfp_poster: '如何投稿海報',
+    cfp_poster: '如何投稿海報展',
     talk: '如何投稿演講',
     tutorial: '如何投稿專業課程',
     recording: '錄影釋出',
