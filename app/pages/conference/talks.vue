@@ -17,12 +17,14 @@ definePageMeta({
     <ContentHeader :title="$t('conference.talks')" :description="t('description')" />
     <UPageBody>
       <ConferenceSpeechList v-if="data" :speeches="data" />
+      <ConferenceNoticeCard v-else :content="t('more_notice')" icon="i-lucide:megaphone" />
     </UPageBody>
   </UPage>
 </template>
 
 <i18n lang="yaml">
 en-us:
+  more_notice: "More exciting talks will be announced soon, stay tuned!"
   description: |
     Talks are the core part of the conference, where speakers from Taiwan and around the world share their experiences and insights in Python-related fields.Each talk is scheduled with different lengths and formats depending on the depth and nature of the topic.
 
@@ -31,6 +33,7 @@ en-us:
     Session details may be adjusted throughout the event. We will keep this page up to date, so feel free to check back anytime for the latest info.
 
 zh-hant:
+  more_notice: 更多精彩演講將陸續公布，敬請期待！
   description: |
     一般議程是大會中最主要的活動形式，來自台灣及世界各地的講者將分享他們在 Python 相關領域的經驗與洞見。每場演講會根據主題的深度與類型，安排不同的長度與形式。
 
