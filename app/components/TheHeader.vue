@@ -72,6 +72,7 @@ const menuChildLinkUi = 'text-lg'
   <UHeader :to="localePath('/')">
     <UNavigationMenu
       :ui="{
+        viewportWrapper: 'w-max',
         content: 'sm:min-w-60 sm:w-auto',
         link: 'text-lg',
         childLink: menuChildLinkUi,
