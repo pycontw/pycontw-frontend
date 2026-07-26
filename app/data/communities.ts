@@ -85,7 +85,7 @@ export const communities: PythonTaiwanCommunity[] = [
     name_zh: 'PyLadies Kaohsiung',
     name_en: 'PyLadies Kaohsiung',
     description_zh: 'PyLadies Kaohsiung 是 PyLadies 國際組織的一員，以高雄為基地推動女性技術社群的發展， 致力於打造讓女性能安心、自信地學習、交流與成長的環境。我們舉辦各種工作坊、經驗分享等交流活動，讓大家能透過 Python 提升技術、拓展人脈與視野， 進而在科技領域中成為主動的參與者與領導者。',
-    description_en: 'PyLadies Kaohsiung is part of the international PyLadies organization, promoting the development of a women's tech community based in Kaohsiung. We're committed to creating an environment where women can learn, connect, and grow with confidence and security. We host workshops, experience-sharing sessions, and other events where can build technical skills, expand their networks, and broaden their perspectives through Python — becoming active participants and leaders in the tech field.',
+    description_en: 'PyLadies Kaohsiung is part of the international PyLadies organization, promoting the development of a womens tech community based in Kaohsiung. We are committed to creating an environment where women can learn, connect, and grow with confidence and security. We host workshops, experience-sharing sessions, and other events where can build technical skills, expand their networks, and broaden their perspectives through Python — becoming active participants and leaders in the tech field.',
     url: 'https://kaohsiung.pyladies.com/',
   },
 ]
