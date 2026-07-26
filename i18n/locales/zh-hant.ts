@@ -48,6 +48,7 @@ export default {
   },
   registration: {
     buy_ticket: '購票',
+    get_tickets: '立即購票',
     financial_aid: '財務補助',
   },
   volunteer: {

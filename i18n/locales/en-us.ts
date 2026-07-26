@@ -48,6 +48,7 @@ export default {
   },
   registration: {
     buy_ticket: 'Tickets',
+    get_tickets: 'Get Tickets',
     financial_aid: 'Financial Aid',
   },
   volunteer: {
