@@ -6,4 +6,4 @@ title: Panel Discussion
 
 無論您是新手，還是經驗豐富的開發者，Panel Discussion 都將是激發靈感、擴展視野與連結社群的最佳活動。誠摯邀請您一同加入這場思想激盪的對話，共同探索技術背後更深層的價值與可能性！
 
-:conference-notice-card{content="更多活動詳情，敬請期待！" icon="i-lucide:megaphone"}
+:conference-stay-tuned-notice

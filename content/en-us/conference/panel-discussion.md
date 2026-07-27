@@ -6,4 +6,4 @@ Since 2023, Panel Discussion has become a key part of PyCon Taiwan's annual prog
 
 Whether you're just starting out or are a seasoned developer, the Panel Discussion offers an ideal space to spark inspiration, expand your perspective, and connect with the community. We warmly invite you to join us for this thought-provoking dialogue and explore the deeper values and possibilities behind technology.
 
-:conference-notice-card{content="Stay tuned for more event details!" icon="i-lucide:megaphone"}
+:conference-stay-tuned-notice

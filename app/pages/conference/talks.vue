@@ -14,10 +14,11 @@ definePageMeta({
 
 <template>
   <UPage>
-    <ContentHeader :title="$t('conference.talks')" :description="t('description')" />
+    <ContentHeader :title="$t('conference.talks')" />
     <UPageBody>
+      <MDC class="custom-content mb-8" :value="t('description')" />
       <ConferenceSpeechList v-if="data" :speeches="data" />
-      <ConferenceNoticeCard v-else :content="t('more_notice')" icon="i-lucide:megaphone" />
+      <ConferenceStayTunedNotice v-else :content="t('more_notice')" />
     </UPageBody>
   </UPage>
 </template>

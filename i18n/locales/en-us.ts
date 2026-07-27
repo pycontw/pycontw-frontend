@@ -7,6 +7,7 @@ export default {
     day_title: ' Day {number}',
     time: 'Time',
     sort: 'Sort by: {criteria}',
+    stay_tuned: 'Stay tuned for more event details!',
   },
   about: {
     title: 'About',

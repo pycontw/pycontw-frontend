@@ -8,7 +8,7 @@
 }
 
 @utility text-gradient-neutral {
-  @apply bg-linear-to-b bg-clip-text text-transparent from-neutral-200 from-33% to-neutral-800;
+  @apply bg-linear-to-b bg-clip-text text-transparent from-neutral-50 from-33% to-neutral-800;
 }
 
 @utility text-gradient-primary {
@@ -29,9 +29,9 @@
 
 .dark {
   --ui-bg: #000;
-  --ui-text: var(--color-neutral-400);
-  --ui-text-muted: var(--color-neutral-500);
-  --ui-text-dimmed: var(--color-neutral-600);
+  --ui-text: var(--color-neutral-300);
+  --ui-text-muted: var(--color-neutral-400);
+  --ui-text-dimmed: var(--color-neutral-500);
   --ui-primary: var(--color-sky-500); /* #0284C7 */
   --ui-secondary: var(--color-yellow-400); /* #FACC15 */
 }

@@ -16,14 +16,16 @@ definePageMeta({
 
 <template>
   <UPage>
-    <ContentHeader :title="$t('conference.keynotes')" :description="t('description')" />
+    <ContentHeader :title="$t('conference.keynotes')" />
     <UPageBody>
-      <ConferenceKeynoteCard v-for="keynote in data" :key="keynote.id" :keynote="keynote" />
-      <ConferenceNoticeCard
-        v-if="(data?.length ?? 0) < EXPECTED_MIN_KEYNOTE_COUNT"
-        :content="t('more_notice')"
-        icon="i-lucide:megaphone"
-      />
+      <MDC class="custom-content mb-8" :value="t('description')" />
+      <div class="space-y-5">
+        <ConferenceKeynoteCard v-for="keynote in data" :key="keynote.id" :keynote="keynote" />
+        <ConferenceStayTunedNotice
+          v-if="(data?.length ?? 0) < EXPECTED_MIN_KEYNOTE_COUNT"
+          :content="t('more_notice')"
+        />
+      </div>
     </UPageBody>
   </UPage>
 </template>
