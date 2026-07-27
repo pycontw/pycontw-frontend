@@ -1,5 +1,5 @@
 ---
-title: How to Propose a Poster?
+title: How to Propose a Poster Session?
 ---
 
 Welcome to the PyCon Taiwan Poster Session!

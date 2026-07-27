@@ -22,13 +22,13 @@ onMounted(() => {
   <!-- eslint-disable vue/no-multiple-template-root -->
   <DefineHeroButtons>
     <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 justify-center">
-      <NuxtLink :href="localePath('/speaking/cfp')">
+      <NuxtLink :href="localePath('/registration/tickets')">
         <FancyButton
           class="py-2.5 px-13 sm:py-4 sm:px-14 font-semibold text-lg sm:text-xl"
           border-radius="16px"
           border-width="2px"
         >
-          {{ $t('speaking.cfp') }}
+          {{ $t('registration.get_tickets') }}
         </FancyButton>
       </NuxtLink>
       <UButton
