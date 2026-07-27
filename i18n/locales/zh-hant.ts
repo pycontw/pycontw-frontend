@@ -7,6 +7,7 @@ export default {
     day_title: '第 {number} 天',
     time: '時間',
     sort: '排序：{criteria}',
+    stay_tuned: '敬請期待！',
   },
   about: {
     title: '關於',

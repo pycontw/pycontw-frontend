@@ -6,4 +6,4 @@ Young Inspirers 是 PyCon Taiwan 在 2021 年首次推出的全新活動，專�
 
 在 PyCon Taiwan 2025，我們首次邀請年輕講者親臨現場，聚焦在程式教育、學術研究、開源貢獻三大領域，透過訪談形式呈現專案的發想、設計與實作過程，培養多元思維、跨族群合作及系統整合的能力，並促進不同世代之間的資訊交流與對話。
 
-:conference-notice-card{content="更多活動詳情，敬請期待！" icon="i-lucide:megaphone"}
+:conference-stay-tuned-notice

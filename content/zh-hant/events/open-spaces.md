@@ -8,4 +8,4 @@ title: 開放空間
 
 無需事前準備，只要你有想法、有熱情，任何人都可以成為開放空間的發起者與參與者。歡迎你帶著好奇心與夥伴一起參與，讓更多有趣的對話在這裡發生！
 
-:conference-notice-card{content="更多活動詳情，敬請期待！" icon="i-lucide:megaphone"}
+:conference-stay-tuned-notice

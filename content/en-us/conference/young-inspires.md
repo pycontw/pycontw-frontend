@@ -6,4 +6,4 @@ Young Inspirers was first introduced by PyCon Taiwan in 2021 as a brand-new prog
 
 At PyCon Taiwan 2025, we’re inviting young speakers on-site for the first time ever, with a focus on three key areas: programming education, academic research, and open-source contribution. Through a live interview format, they will present their project ideation, design, and implementation process — cultivating diverse thinking, cross-group collaboration, and system-integration skills, while fostering dialogue and information exchange across generations.
 
-:conference-notice-card{content="Stay tuned for more event details!" icon="i-lucide:megaphone"}
+:conference-stay-tuned-notice

@@ -8,4 +8,4 @@ If you’ve attended PyCon Taiwan or other conferences before, you may be famili
 
 No preparation needed—just bring your ideas and enthusiasm!Anyone can host or join an Open Space session. Come with curiosity, invite a friend, and help spark fun and meaningful conversations throughout the event.
 
-:conference-notice-card{content="Stay tuned for more event details!" icon="i-lucide:megaphone"}
+:conference-stay-tuned-notice
