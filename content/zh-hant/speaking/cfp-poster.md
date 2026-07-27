@@ -1,5 +1,5 @@
 ---
-title: 如何投稿海報？
+title: 如何投稿海報展？
 ---
 
 歡迎參與 PyCon Taiwan Poster Session！

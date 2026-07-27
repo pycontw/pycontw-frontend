@@ -19,7 +19,7 @@ const localized = computed(() => {
 </script>
 
 <template>
-  <div class="p-4 md:p-6 border border-default rounded-lg md:rounded-2xl">
+  <UiBorderContainer class="p-4 md:p-6 rounded-lg md:rounded-2xl">
     <div class="flex items-center space-x-5 mb-6">
       <div class="shrink-0">
         <img :src="keynote.speaker.photo" alt="Speaker Photo" class="w-18 h-18 rounded-full object-cover">
@@ -97,7 +97,7 @@ const localized = computed(() => {
     <div class="whitespace-pre-line text-muted">
       {{ localized.speakerBio }}
     </div>
-  </div>
+  </UiBorderContainer>
 </template>
 
 <i18n lang="yaml">

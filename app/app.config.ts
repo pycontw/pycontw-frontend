@@ -35,6 +35,7 @@ export default defineAppConfig({
   pycon: {
     year: 2026,
     startDate: '2025-09-06',
+    scheduleReady: false,
     eventsReady: false,
 
     individualTicketUrl: 'https://pycontw.kktix.cc/events/2026-individual',
