@@ -71,7 +71,7 @@ const mobileItems = computed(() => {
     if (item.slot === 'events') {
       return { label: item.label, children: [{
         slot: 'events',
-        ui: { linkLabel: 'w-full', link: 'px-0' },
+        ui: { linkLabel: 'w-full', link: 'px-0 hover:before:bg-transparent' },
       }] }
     }
     return item
