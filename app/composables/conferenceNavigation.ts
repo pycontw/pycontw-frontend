@@ -34,14 +34,14 @@ export function useConferenceNavigation() {
         label: t('conference.lightning_talks'),
         to: localePath('/conference/lightning-talks'),
       },
-      {
-        label: 'Panel Discussion',
-        to: localePath('/conference/panel-discussion'),
-      },
-      {
-        label: 'Young Inspires',
-        to: localePath('/conference/young-inspires'),
-      },
+      // {
+      //   label: 'Panel Discussion',
+      //   to: localePath('/conference/panel-discussion'),
+      // },
+      // {
+      //   label: 'Young Inspires',
+      //   to: localePath('/conference/young-inspires'),
+      // },
     ],
   }))
 
