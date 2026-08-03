@@ -31,11 +31,11 @@ const EVENTS = computed<Record<string, {
     tag: 'speech',
     ...(pycon.eventsReady && { link: { title: t('linkLabel.tutorials'), url: localePath('/conference/tutorials') } }),
   },
-  panelDiscussion: {
-    img: '/images/overview/panel-discussion.jpg',
-    tag: 'speech',
-    // ...(pycon.eventsReady && { link: { title: t('linkLabel.talks'), url: localePath('/conference/panel-discussion') } }),
-  },
+  // panelDiscussion: {
+  //   img: '/images/overview/panel-discussion.jpg',
+  //   tag: 'speech',
+  //   ...(pycon.eventsReady && { link: { title: t('linkLabel.talks'), url: localePath('/conference/panel-discussion') } }),
+  // },
   posterSession: {
     img: '/images/overview/poster-session.jpg',
     tag: 'activity',
@@ -47,11 +47,11 @@ const EVENTS = computed<Record<string, {
     tag: 'speech',
     ...(pycon.eventsReady && { link: { title: t('linkLabel.details'), url: localePath('/conference/lightning-talks') } }),
   },
-  youngInspires: {
-    img: '/images/overview/young-inspires.jpg',
-    tag: 'speech',
-    // ...(pycon.eventsReady && { link: { title: t('linkLabel.talks'), url: localePath('/conference/young-inspires') } }),
-  },
+  // youngInspires: {
+  //   img: '/images/overview/young-inspires.jpg',
+  //   tag: 'speech',
+  //   ...(pycon.eventsReady && { link: { title: t('linkLabel.talks'), url: localePath('/conference/young-inspires') } }),
+  // },
   openSpace: {
     img: '/images/overview/open-space.jpg',
     tag: 'activity',
