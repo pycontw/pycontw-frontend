@@ -7,6 +7,7 @@ const localePath = useLocalePath()
 const { conferenceNavigation, eventNavigation } = useConferenceNavigation()
 const { pycon } = useAppConfig()
 const { proposalSystemUrl } = usePyCon()
+const [DefineEventsItems, ReuseEventsItems] = createReusableTemplate()
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -65,10 +66,67 @@ const overviewItem = computed<NavigationMenuItem>(() => ({
   to: localePath('/overview'),
 }))
 
-const menuChildLinkUi = 'text-lg'
+const mobileItems = computed(() => {
+  return items.value.map((item) => {
+    if (item.slot === 'events') {
+      return { label: item.label, children: [{
+        slot: 'events',
+        ui: { linkLabel: 'w-full', link: 'px-0 hover:before:bg-transparent' },
+      }] }
+    }
+    return item
+  })
+})
+
+const menuChildLinkUi = 'text-lg max-lg:py-1.5'
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-multiple-template-root -->
+  <DefineEventsItems>
+    <div class="lg:w-90 text-left">
+      <div class="lg:p-2 max-lg:mb-2">
+        <div class="px-3 py-1 text-dimmed max-lg:text-base">
+          {{ conferenceNavigation.label }}
+        </div>
+        <ul class="grid gap-0.5 lg:gap-1 lg:grid-cols-2">
+          <template v-for="(child, index) in conferenceNavigation.children" :key="index">
+            <li>
+              <NavigationLink :child="child" :ui="{ childLink: menuChildLinkUi }" />
+            </li>
+          </template>
+        </ul>
+
+        <div class="px-3 py-1 text-dimmed mt-1 max-lg:text-base">
+          {{ eventNavigation.label }}
+        </div>
+        <ul class="grid gap-0.5 lg:gap-1 lg:grid-cols-2">
+          <template v-for="(child, index) in eventNavigation.children" :key="index">
+            <li>
+              <NavigationLink :child="child" :ui="{ childLink: menuChildLinkUi }" />
+            </li>
+          </template>
+        </ul>
+      </div>
+
+      <NavigationMenuLink as-child>
+        <div class="max-lg:px-3">
+          <UButton
+            block
+            size="xl"
+            :to="overviewItem.to"
+            color="neutral"
+            variant="soft"
+            trailing-icon="i-lucide-arrow-right"
+            :ui="{ base: 'lg:rounded-none py-3 bg-neutral-900 text-lg hover:text-highlighted', trailingIcon: 'ms-0 size-5' }"
+          >
+            {{ overviewItem.label }}
+          </UButton>
+        </div>
+      </NavigationMenuLink>
+    </div>
+  </DefineEventsItems>
+
   <UHeader :to="localePath('/')">
     <UNavigationMenu
       :ui="{
@@ -85,45 +143,7 @@ const menuChildLinkUi = 'text-lg'
       color="neutral"
     >
       <template #events-content>
-        <div class="lg:w-90">
-          <div class="p-2">
-            <div class="px-3 py-1 text-dimmed">
-              {{ conferenceNavigation.label }}
-            </div>
-            <ul class="grid gap-1 lg:grid-cols-2">
-              <template v-for="(child, index) in conferenceNavigation.children" :key="index">
-                <li>
-                  <NavigationLink :child="child" :ui="{ childLink: menuChildLinkUi }" />
-                </li>
-              </template>
-            </ul>
-
-            <div class="px-3 py-1 text-dimmed mt-1">
-              {{ eventNavigation.label }}
-            </div>
-            <ul class="grid gap-1 lg:grid-cols-2">
-              <template v-for="(child, index) in eventNavigation.children" :key="index">
-                <li>
-                  <NavigationLink :child="child" :ui="{ childLink: menuChildLinkUi }" />
-                </li>
-              </template>
-            </ul>
-          </div>
-
-          <NavigationMenuLink as-child>
-            <UButton
-              block
-              size="xl"
-              :to="overviewItem.to"
-              color="neutral"
-              variant="soft"
-              trailing-icon="i-lucide-arrow-right"
-              :ui="{ base: 'rounded-none py-3 bg-neutral-900 text-lg hover:text-highlighted', trailingIcon: 'ms-0 size-5' }"
-            >
-              {{ overviewItem.label }}
-            </UButton>
-          </NavigationMenuLink>
-        </div>
+        <ReuseEventsItems />
       </template>
     </UNavigationMenu>
 
@@ -141,14 +161,18 @@ const menuChildLinkUi = 'text-lg'
 
     <template #body>
       <UNavigationMenu
-        :items="items"
+        :items="mobileItems"
         orientation="vertical"
         :ui="{
           link: 'text-xl py-2 px-3.5',
         }"
         class="-mx-1.5"
         color="neutral"
-      />
+      >
+        <template #events-label>
+          <ReuseEventsItems />
+        </template>
+      </UNavigationMenu>
     </template>
   </UHeader>
 </template>
