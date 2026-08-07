@@ -74,6 +74,7 @@ const EVENTS = computed<Record<string, {
   pycast: {
     img: '/images/overview/pycast.jpg',
     tag: 'podcast',
+    ...(pycon.eventsReady && { link: { title: t('linkLabel.podcasts'), url: 'https://pycast.firstory.io/episodes' } }),
   },
 }))
 
@@ -134,6 +135,7 @@ en-us:
     talks: Talk List
     tutorials: Tutorial List
     jobs: Job List
+    podcasts: Podcast List
   events:
     sprint:
       title: Sprint
@@ -210,6 +212,7 @@ zh-hant:
     talks: 演講主題
     tutorials: 瀏覽課程
     jobs: 徵才資訊
+    podcasts: 節目列表
   events:
     sprint:
       title: 衝刺開發
