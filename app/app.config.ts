@@ -34,7 +34,7 @@ export default defineAppConfig({
 
   pycon: {
     year: 2026,
-    startDate: '2025-09-06',
+    startDate: '2026-10-17',
     scheduleReady: false,
     eventsReady: true,
 
