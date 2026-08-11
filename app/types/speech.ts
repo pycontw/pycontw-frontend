@@ -10,6 +10,11 @@ export const SPEECH_CATEGORIES = ['APPL', 'PRAC', 'COM', 'DB', 'DATA', 'EDU', 'E
 export type ConferenceSpeechCategory = typeof SPEECH_CATEGORIES[number]
 
 export interface ConferenceSpeechSpeaker {
+  /**
+   * NOTE: thumbnail_url will response full URL including host from API, by the request header "Host"
+   * so if the request url is the Docker internal host, the url will be the internal host too,
+   * which is not accessible from the browser.
+   */
   thumbnail_url: string
   name: string
   github_profile_url: string
