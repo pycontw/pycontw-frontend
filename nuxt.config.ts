@@ -54,6 +54,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxt/scripts',
+    'nuxt-pages-plus',
   ],
 
   css: ['~/assets/css/main.css'],
