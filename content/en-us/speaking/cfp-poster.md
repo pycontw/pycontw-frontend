@@ -17,7 +17,7 @@ This year, we're excited to bring it back to provide even more opportunities for
 
 ::prose-two-col{title="How to Submit Your Poster"}
 - Please go to the [Poster Session submission](https://forms.gle/wyHX153ZmT7p6zuv5) form to submit, provide the Poster topic, abstract, content description, and your personal information.
-- Poster Size: Full-size Poster (78.7 × 109.1 cm)
+- Poster Size: Further confirmation and notification will follow. Thank you for your patience.
 - Poster Preparation: Accepted presenters are responsible for printing and bringing their own poster to the conference. PyCon Taiwan will provide poster boards for display.
 ::
 
