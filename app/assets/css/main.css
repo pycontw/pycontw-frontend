@@ -19,6 +19,10 @@
   @apply text-5xl md:text-7xl;
 }
 
+@utility autospace-normal {
+  text-autospace: normal;
+}
+
 @theme {
   --color-spotlight: var(--color-neutral-400);
 }

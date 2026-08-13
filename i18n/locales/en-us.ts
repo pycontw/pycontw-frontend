@@ -46,6 +46,7 @@ export default {
   },
   sponsor: {
     title: 'Sponsor',
+    list: 'Sponsors',
   },
   registration: {
     buy_ticket: 'Tickets',
