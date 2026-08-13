@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import type { SponsorApiEnvelope } from '~/types/sponsor'
 import { Application } from '@splinetool/runtime'
+
+const { data: sponsorsData } = await useApiFetch<SponsorApiEnvelope>('/sponsors/')
 
 const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
@@ -68,7 +71,7 @@ onMounted(() => {
 
     <ReuseHeroButtons class="sm:hidden py-6" />
 
-    <UContainer>
+    <UContainer class="pb-12">
       <MDC class="custom-content" :value="t('main')" />
 
       <HomeDataSection class="my-12" />
@@ -76,7 +79,14 @@ onMounted(() => {
       <h2 class="my-6 text-3xl font-bold text-highlighted">
         {{ t('recent_updates') }}
       </h2>
-      <HomeMediaSection class="mb-24" />
+      <HomeMediaSection class="mb-12" />
+
+      <template v-if="sponsorsData?.data?.length">
+        <h2 class="my-8 text-3xl font-bold text-highlighted">
+          {{ t('sponsor.list') }}
+        </h2>
+        <HomeSponsorsSection :sponsor-groups="sponsorsData.data" class="mb-12" />
+      </template>
     </UContainer>
   </div>
 </template>
