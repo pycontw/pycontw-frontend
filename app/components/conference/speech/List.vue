@@ -12,6 +12,8 @@ interface FilterItem {
   value: string
 }
 
+const localePath = useLocalePath()
+
 const catagoryFilters = ref<FilterItem[]>([])
 const allCategories = computed<FilterItem[]>(() => {
   const categories = new Set<string>(speeches.map(speech => speech.category) ?? [])
@@ -140,7 +142,10 @@ const sortedData = computed(() => {
       <USelect v-model="sortBy" :items="sorts" icon="i-lucide:arrow-down-up" size="xl" />
     </div>
     <div class="grid sm:grid-cols-2 gap-4">
-      <ConferenceSpeechCard v-for="speech in sortedData" :key="speech.id" :speech="speech" />
+      <PlusModalLink v-for="speech in sortedData" :key="speech.id" :to="localePath(`/conference/talk/${speech.id}`)">
+        <ConferenceSpeechCard :speech="speech" />
+      </PlusModalLink>
     </div>
+    <PlusModalPage name="modal" />
   </div>
 </template>

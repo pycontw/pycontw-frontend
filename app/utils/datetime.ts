@@ -44,3 +44,18 @@ export function getMinuteOfDay(isoDateTime: string) {
   const utcDate = new Date(isoDateTime)
   return utcDate.getUTCHours() * 60 + utcDate.getUTCMinutes() + TAIPEI_OFFSET_MINUTES
 }
+
+/**
+ * @param isoDateTime
+ * @return {"zh-hant": "1月1日週一", "en-us": "Mon, JUN 1"}
+ */
+export function getLocalizedDate(isoDateTime: string): { 'zh-hant': string, 'en-us': string } {
+  const date = new Date(isoDateTime)
+  const optionsZh = { month: 'short', day: 'numeric', weekday: 'short' } as const
+  const optionsEn = { month: 'short', day: 'numeric', weekday: 'short' } as const
+
+  return {
+    'zh-hant': date.toLocaleDateString('zh-Hant', optionsZh),
+    'en-us': date.toLocaleDateString('en-US', optionsEn),
+  }
+}

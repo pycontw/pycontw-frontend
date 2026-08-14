@@ -100,5 +100,9 @@ export default {
       zh: 'Chinese',
       tai: 'Taiwanese Hokkien',
     },
+    slides_language: {
+      en: 'English',
+      zh: 'Chinese',
+    },
   },
 } satisfies typeof zh

@@ -1,4 +1,4 @@
-import type { ConferenceSpeechCategory, ConferenceSpeechPythonLevel, ConferenceSpeechSpeakLanguage } from '~/types/speech'
+import type { ConferenceSpeechCategory, ConferenceSpeechPythonLevel, ConferenceSpeechSlidesLanguage, ConferenceSpeechSpeakLanguage } from '~/types/speech'
 
 export default {
   welcome: '你好',
@@ -100,5 +100,9 @@ export default {
       zh: '中文',
       tai: '台語',
     } satisfies Record<ConferenceSpeechSpeakLanguage, string>,
+    slides_language: {
+      en: '英文',
+      zh: '中文',
+    } satisfies Record<ConferenceSpeechSlidesLanguage, string>,
   },
 }

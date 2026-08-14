@@ -23,6 +23,9 @@ export interface ConferenceSpeechSpeaker {
   bio: string
 }
 
+/**
+ * @server TutorialListSerializer, TalkListSerializer
+ */
 export interface ConferenceSpeech {
   id: number
   location: string
@@ -36,7 +39,32 @@ export interface ConferenceSpeech {
 }
 
 /**
+ * @server TalkDetailSerializer
+ */
+export interface ConferenceTalkDetail extends ConferenceSpeech {
+  recording_policy: boolean
+  abstract: string
+  detailed_description: string
+  slide_link: string
+  slido_embed_link: string
+  hackmd_embed_link: string
+  end_time: string
+  is_remote: boolean
+  youtube_id: string
+}
+
+/**
+ * @server TutorialDetailSerializer
+ */
+export interface ConferenceTutorialDetail extends ConferenceTalkDetail {
+  registration_link: string
+}
+
+/**
  * Web-only types
  */
 export const SPEECH_TALK_LANGUAGES = ['en', 'zh', 'tai'] as const
 export type ConferenceSpeechSpeakLanguage = typeof SPEECH_TALK_LANGUAGES[number]
+
+export const SLIDES_TALK_LANGUAGES = ['en', 'zh'] as const
+export type ConferenceSpeechSlidesLanguage = typeof SLIDES_TALK_LANGUAGES[number]

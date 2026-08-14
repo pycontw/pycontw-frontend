@@ -28,17 +28,11 @@ const localized = computed(() => {
         <div class="font-semibold text-xl">
           {{ localized.speakerName }}
         </div>
-        <div class="flex text-muted space-x-2">
-          <ULink v-if="keynote.social_item.github" :to="keynote.social_item.github">
-            <UIcon name="i-simple-icons:github" />
-          </ULink>
-          <ULink v-if="keynote.social_item.twitter" :to="keynote.social_item.twitter">
-            <UIcon name="i-simple-icons:x" />
-          </ULink>
-          <ULink v-if="keynote.social_item.linkedin" :to="keynote.social_item.linkedin">
-            <UIcon name="i-simple-icons:linkedin" />
-          </ULink>
-        </div>
+        <ConferenceSpeechSpeakerSocialLinks
+          :github="keynote.social_item.github"
+          :x="keynote.social_item.twitter"
+          :linkedin="keynote.social_item.linkedin"
+        />
       </div>
     </div>
 
@@ -46,44 +40,12 @@ const localized = computed(() => {
       {{ localized.sessionTitle }}
     </h2>
 
-    <div class="space-x-2">
-      <UButton
-        v-if="keynote.session.slides"
-        :to="keynote.session.slides"
-        variant="subtle"
-        color="neutral"
-        icon="i-lucide:presentation"
-      >
-        {{ t('slides') }}
-      </UButton>
-      <UButton
-        v-if="keynote.slido"
-        :to="keynote.slido"
-        variant="subtle"
-        color="neutral"
-        icon="i-lucide:message-square-more"
-      >
-        Slido
-      </UButton>
-      <UButton
-        v-if="keynote.hackmd_embed_link"
-        :to="keynote.hackmd_embed_link"
-        variant="subtle"
-        color="neutral"
-        icon="i-lucide:file-pen"
-      >
-        {{ t('note') }}
-      </UButton>
-      <UButton
-        v-if="keynote.youtube_id"
-        :to="`https://www.youtube.com/watch?v=${keynote.youtube_id}`"
-        variant="subtle"
-        color="error"
-        icon="i-simple-icons:youtube"
-      >
-        {{ t('playback') }}
-      </UButton>
-    </div>
+    <ConferenceSpeechExternalLinks
+      :slide-link="keynote.session.slides"
+      :slido-embed-link="keynote.slido"
+      :hackmd-embed-link="keynote.hackmd_embed_link"
+      :youtube-id="keynote.youtube_id"
+    />
 
     <AutoShrink overflow class="my-4" :more-text="t('read_more')">
       <div class="whitespace-pre-line text-base sm:text-lg sm:leading-8 mb-8">
@@ -99,18 +61,3 @@ const localized = computed(() => {
     </div>
   </UiBorderContainer>
 </template>
-
-<i18n lang="yaml">
-en-us:
-  about_speaker: About the Speaker
-  read_more: Read More
-  note: Shared Notes
-  slides: Slides
-  playback: Playback
-zh-hant:
-  about_speaker: 關於講者
-  read_more: 查看更多
-  note: 共筆
-  slides: 簡報
-  playback: 重播
-</i18n>
