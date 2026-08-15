@@ -83,7 +83,7 @@ const comp = computed(() => {
     </p>
 
     <div class="mt-1.5 font-semibold leading-snug text-highlighted line-wrap">
-      {{ title }} {{ session.event_type }}
+      {{ title }}
     </div>
 
     <p v-if="speakers" class="mt-2 text-sm leading-5 text-muted">
