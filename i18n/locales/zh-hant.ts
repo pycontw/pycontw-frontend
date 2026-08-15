@@ -46,6 +46,7 @@ export default {
   },
   sponsor: {
     title: '贊助',
+    list: '贊助夥伴',
   },
   registration: {
     buy_ticket: '購票',

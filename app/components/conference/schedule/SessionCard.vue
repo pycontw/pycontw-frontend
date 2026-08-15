@@ -93,7 +93,7 @@ const comp = computed(() => {
 </template>
 
 <style scoped>
-@reference "../../../assets/css/main.css";
+@reference "~/assets/css/main.css";
 
 .line-wrap {
   @apply wrap-break-word hyphens-auto;
