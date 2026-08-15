@@ -7,16 +7,18 @@ defineProps<{
 }>()
 
 const { t } = useI18n({ useScope: 'local' })
+const uiBase = 'max-sm:px-3 max-sm:py-2.5 max-sm:text-base max-sm:gap-2'
 </script>
 
 <template>
-  <div class="space-x-2">
+  <div class="max-sm:grid max-sm:grid-cols-1 max-sm:gap-3 sm:space-x-2">
     <UButton
       v-if="slideLink"
       :to="slideLink"
       variant="subtle"
       color="neutral"
       icon="i-lucide:presentation"
+      :ui="{ base: uiBase }"
     >
       {{ t('slides') }}
     </UButton>
@@ -26,6 +28,7 @@ const { t } = useI18n({ useScope: 'local' })
       variant="subtle"
       color="neutral"
       icon="i-lucide:message-square-more"
+      :ui="{ base: uiBase }"
     >
       Slido
     </UButton>
@@ -35,6 +38,7 @@ const { t } = useI18n({ useScope: 'local' })
       variant="subtle"
       color="neutral"
       icon="i-lucide:file-pen"
+      :ui="{ base: uiBase }"
     >
       {{ t('note') }}
     </UButton>
@@ -44,6 +48,7 @@ const { t } = useI18n({ useScope: 'local' })
       variant="subtle"
       color="error"
       icon="i-simple-icons:youtube"
+      :ui="{ base: uiBase }"
     >
       {{ t('playback') }}
     </UButton>
@@ -52,14 +57,10 @@ const { t } = useI18n({ useScope: 'local' })
 
 <i18n lang="yaml">
 en-us:
-  about_speaker: About the Speaker
-  read_more: Read More
   note: Shared Notes
   slides: Slides
   playback: Playback
 zh-hant:
-  about_speaker: 關於講者
-  read_more: 查看更多
   note: 共筆
   slides: 簡報
   playback: 重播

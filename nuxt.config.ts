@@ -191,4 +191,7 @@ export default defineNuxtConfig({
       },
     ],
   },
+  pagesPlus: {
+    namedViewsAsParallelRoutes: true,
+  },
 })

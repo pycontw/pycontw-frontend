@@ -16,11 +16,7 @@ useHead({
     <NuxtLoadingIndicator color="var(--ui-text-highlighted)" :height="2" />
 
     <TheHeader />
-    <PlusModalNuxtPage v-slot="{ route, layout }">
-      <NuxtLayout :name="(layout as any)">
-        <NuxtPage :route="route" />
-      </NuxtLayout>
-    </PlusModalNuxtPage>
+    <PlusModalApp />
     <TheFooter />
   </UApp>
 </template>

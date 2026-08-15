@@ -146,7 +146,7 @@ const sortedData = computed(() => {
       <USelect v-model="sortBy" :items="sorts" icon="i-lucide:arrow-down-up" size="xl" />
     </div>
     <div class="grid sm:grid-cols-2 gap-4">
-      <PlusModalLink v-for="speech in sortedData" :key="speech.id" :to="localePath(`/conference/talk/${speech.id}`)">
+      <PlusModalLink v-for="speech in sortedData" :key="speech.id" :to="localePath(`/conference/${speech.event_type}/${speech.id}`)">
         <ConferenceSpeechCard :speech="speech" />
       </PlusModalLink>
     </div>

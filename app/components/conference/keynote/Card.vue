@@ -61,3 +61,12 @@ const localized = computed(() => {
     </div>
   </UiBorderContainer>
 </template>
+
+<i18n lang="yaml">
+en-us:
+  about_speaker: About the Speaker
+  read_more: Read More
+zh-hant:
+  about_speaker: 關於講者
+  read_more: 查看更多
+</i18n>
