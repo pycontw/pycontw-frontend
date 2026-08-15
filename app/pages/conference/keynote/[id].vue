@@ -23,11 +23,6 @@ const title = computed(() => {
 useHead({
   title,
 })
-
-definePageMeta({
-  // fix for scroll up when modal route popup
-  scrollToTop: false,
-})
 </script>
 
 <template>

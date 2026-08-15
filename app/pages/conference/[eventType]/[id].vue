@@ -11,8 +11,6 @@ useHead({
 })
 
 definePageMeta({
-  // fix for scroll up when modal route popup
-  scrollToTop: false,
   validate: validateConferenceRoute,
 })
 </script>
