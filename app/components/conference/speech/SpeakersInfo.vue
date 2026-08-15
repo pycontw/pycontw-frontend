@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { ConferenceSpeechSpeaker } from '~/types/speech'
-
 const { speakers } = defineProps<{
-  speakers: ConferenceSpeechSpeaker[]
+  speakers: {
+    name: string
+    thumbnail_url: string
+  }[]
 }>()
 
 const speakerNames = computed(() => speakers.map(({ name }) => name).join(', '))

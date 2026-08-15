@@ -19,6 +19,7 @@ useHead({ title: $t('conference.schedule') })
         <ConferenceScheduleDayTabs v-model="activeDate" :days="dayDates" class="mt-10" />
       </div>
       <ConferenceScheduleGrid v-if="activeDay" :day="activeDay" class="mt-8" />
+      <PlusModalPage name="modal" />
     </template>
   </div>
 </template>

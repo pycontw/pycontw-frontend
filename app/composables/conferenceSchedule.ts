@@ -5,11 +5,8 @@ const ROOMS: Record<string, RoomMeta> = {
   '5-r1': { label: 'R1', col: 2 },
   '6-r2': { label: 'R2', col: 3 },
   '1-r3': { label: 'R3', col: 4 },
-  '7-r4': { label: 'R4', col: 5 },
-  '81-spt-os': { label: 'Sprint / OST', col: 6 },
-  '82-tutorial': { label: 'Tutorial', col: 7 },
-  '83-yi-ps': { label: 'Young / Poster', col: 8 },
-  '2-all': { col: { start: 1, span: 5 } },
+  '3-r0-all': { col: { start: 1, span: 4 } },
+  '2-all': { col: { start: 1, span: 4 } },
 }
 
 interface Column { start: number, span: number }
