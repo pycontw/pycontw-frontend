@@ -17,7 +17,7 @@ const locationLabel = computed(() => resolveRoomLabel(speech.location))
 const timeLabel = computed(() => getSessionTimeLabel(speech.begin_time))
 
 const languageLabel = computed(() => {
-  return $t(`speech.talk_language.${getSpeechTalkLanguage(speech.language)}`)
+  return $t(`speech.language_label.${speech.language}`)
 })
 
 const levelLabel = computed<{ text: string, color: 'success' | 'info' | 'error' | 'neutral' }>(() => {

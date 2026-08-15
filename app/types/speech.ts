@@ -1,7 +1,8 @@
 /**
  * API types
  */
-export type ConferenceSpeechLanguage = 'ENEN' | 'ZHEN' | 'ZHZH' | 'TAI'
+export const SPEECH_LANGUAGES = ['ENEN', 'ZHZH', 'ZHEN', 'TAI'] as const
+export type ConferenceSpeechLanguage = typeof SPEECH_LANGUAGES[number]
 
 export const SPEECH_PYTHON_LEVELS = ['NOVICE', 'INTERMEDIATE', 'EXPERIENCED'] as const
 export type ConferenceSpeechPythonLevel = typeof SPEECH_PYTHON_LEVELS[number]
@@ -59,12 +60,3 @@ export interface ConferenceTalkDetail extends ConferenceSpeech {
 export interface ConferenceTutorialDetail extends ConferenceTalkDetail {
   registration_link: string
 }
-
-/**
- * Web-only types
- */
-export const SPEECH_TALK_LANGUAGES = ['en', 'zh', 'tai'] as const
-export type ConferenceSpeechSpeakLanguage = typeof SPEECH_TALK_LANGUAGES[number]
-
-export const SLIDES_TALK_LANGUAGES = ['en', 'zh'] as const
-export type ConferenceSpeechSlidesLanguage = typeof SLIDES_TALK_LANGUAGES[number]

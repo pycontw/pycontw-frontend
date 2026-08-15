@@ -94,15 +94,12 @@ export default {
       INTERMEDIATE: 'Medium',
       EXPERIENCED: 'Expert',
     },
-    talk_language_title: 'Speak Language',
-    talk_language: {
-      en: 'English',
-      zh: 'Chinese',
-      tai: 'Taiwanese Hokkien',
-    },
-    slides_language: {
-      en: 'English',
-      zh: 'Chinese',
+    language: 'Language',
+    language_label: {
+      ENEN: 'English',
+      ZHEN: 'Chinese (English slides)',
+      ZHZH: 'Chinese',
+      TAI: 'Taiwanese Hokkien',
     },
   },
 } satisfies typeof zh

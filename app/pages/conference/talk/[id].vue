@@ -24,16 +24,14 @@ function getDisplayInfo(speech: ConferenceTalkDetail) {
   const location = resolveRoomLabel(speech.location)
   const localizedBeginTime = getLocalizedDate(speech.begin_time)
   const date = locale.value === 'zh-hant' ? localizedBeginTime['zh-hant'] : localizedBeginTime['en-us']
-  const talkLanguage = $t(`speech.talk_language.${getSpeechTalkLanguage(speech.language)}`)
-  const slidesLanguage = $t(`speech.slides_language.${getSpeechSlidesLanguage(speech.language)}`)
+  const languageLabel = $t(`speech.language_label.${speech.language}`)
 
   return {
     date,
     location,
     beginTime: getSessionTimeLabel(speech.begin_time),
     endTime: getSessionTimeLabel(speech.end_time),
-    talkLanguage,
-    slidesLanguage,
+    languageLabel,
   }
 }
 
@@ -70,11 +68,7 @@ definePageMeta({
 
               <div class="flex items-center gap-2">
                 <UIcon name="translate" class="h-5 w-5 shrink-0" />
-                <span class="text-sm text-highlighted">{{ info.talkLanguage }}</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <UIcon name="translate" class="h-5 w-5 shrink-0" />
-                <span class="text-sm text-highlighted">{{ info.slidesLanguage }}</span>
+                <span class="text-sm text-highlighted">{{ info.languageLabel }}</span>
               </div>
             </div>
           </div>
