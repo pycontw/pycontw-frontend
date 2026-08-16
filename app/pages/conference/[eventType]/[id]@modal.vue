@@ -14,13 +14,12 @@ definePageMeta({
 </script>
 
 <template>
-  <UModal
+  <UiResponsiveModal
     v-model:open="open"
-    :ui="{ content: 'max-w-5xl' }"
-    @after:leave="$modalRouter.close()"
+    @closed="$modalRouter.close()"
   >
     <template #body>
       <ConferenceSpeechDetailView v-if="speech" :speech="speech" :related-speeches="relatedSpeeches" modal />
     </template>
-  </UModal>
+  </UiResponsiveModal>
 </template>

@@ -28,13 +28,12 @@ const open = ref(true)
 </script>
 
 <template>
-  <UModal
+  <UiResponsiveModal
     v-model:open="open"
-    :ui="{ content: 'max-w-5xl' }"
-    @after:leave="$modalRouter.close()"
+    @closed="$modalRouter.close()"
   >
     <template #body>
       <ConferenceKeynoteDetailView v-if="keynote" :keynote="keynote" modal />
     </template>
-  </UModal>
+  </UiResponsiveModal>
 </template>
