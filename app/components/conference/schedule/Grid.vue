@@ -39,7 +39,10 @@ const bodyGridStyle = computed(() => {
 })
 
 function getRoomHeaderStyle(room: ScheduleRoomView) {
-  return { gridColumn: `${room.gridColumnStart + COLUMN_START_OFFSET}`, gridRow: '1' }
+  return {
+    gridColumn: `${room.gridColumnStart + COLUMN_START_OFFSET} / span ${room.gridColumnSpan}`,
+    gridRow: '1',
+  }
 }
 
 function getTimePointStyle(point: ScheduleTimePoint) {
@@ -65,7 +68,7 @@ function getSessionStyle(session: ScheduleSessionView) {
         class="grid min-w-max gap-1"
         :style="headerGridStyle"
       >
-        <template v-for="room in props.day.rooms" :key="room.id">
+        <template v-for="room in props.day.rooms" :key="room.placementId">
           <div
             v-if="room.label"
             class="rounded-xl border px-3 py-4 backdrop-blur border-default bg-neutral-950"
