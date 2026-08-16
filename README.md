@@ -15,6 +15,12 @@ Frontend of PyCon TW official website.
 
 Please create a `.env` file from `.env.example` and fill in the required environment variables.
 
+To generate `NUXT_API_AUTH_TOKEN` for an existing Django user, run the following command from the `pycon.tw` backend repository:
+
+```bash
+python manage.py drf_create_token <username>
+```
+
 ## Develop on your local machine
 
 ```bash
