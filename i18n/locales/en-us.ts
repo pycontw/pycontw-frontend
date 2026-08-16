@@ -98,8 +98,8 @@ export default {
     language: 'Language',
     language_label: {
       ENEN: 'English',
-      ZHEN: 'Chinese (English slides)',
-      ZHZH: 'Chinese',
+      ZHEN: 'Mandarin (English slides)',
+      ZHZH: 'Mandarin',
       TAI: 'Taiwanese Hokkien',
     },
   },
