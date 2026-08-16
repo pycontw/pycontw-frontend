@@ -13,7 +13,7 @@ interface Column { start: number, span: number }
 
 interface RoomMeta {
   label?: string
-  col: number | Column
+  col: number | Column | (number | Column)[]
 }
 
 interface BaseScheduleSession extends ScheduleApiSlot {
@@ -33,6 +33,7 @@ export interface ScheduleSessionView extends BaseScheduleSession {
 
 export interface ScheduleRoomView {
   id: string
+  placementId: string
   gridColumnStart: number
   gridColumnSpan: number
   label?: string
@@ -56,7 +57,7 @@ function toBaseSession(slot: ScheduleApiSlot, room: ScheduleRoomView): BaseSched
 
   return {
     ...slot,
-    id: `${room.id}-${slot.event_id}-${slot.begin_time}`,
+    id: `${room.placementId}-${slot.event_id}-${slot.begin_time}`,
     roomId: room.id,
     timeLabel: startMinutes === endMinutes ? formatMinute(startMinutes) : `${formatMinute(startMinutes)} - ${formatMinute(endMinutes)}`,
     startMinutes,
@@ -66,8 +67,9 @@ function toBaseSession(slot: ScheduleApiSlot, room: ScheduleRoomView): BaseSched
   }
 }
 
-function normalizeColumn(cols: number | Column): Column {
-  return (typeof cols === 'number') ? { start: cols, span: 1 } : cols
+function normalizeColumns(cols: RoomMeta['col']): Column[] {
+  return (Array.isArray(cols) ? cols : [cols])
+    .map(col => (typeof col === 'number') ? { start: col, span: 1 } : col)
 }
 
 export function resolveRoomLabel(roomId: string) {
@@ -75,26 +77,26 @@ export function resolveRoomLabel(roomId: string) {
 }
 
 export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDayView {
-  const rooms: ScheduleRoomView[] = Object.entries(ROOMS).map(([roomId, roomMeta]) => {
-    const { start, span } = normalizeColumn(roomMeta.col)
+  const roomGroups = Object.entries(ROOMS).map(([roomId, roomMeta]) => {
+    const columns = normalizeColumns(roomMeta.col)
     return {
-      id: roomId,
-      gridColumnStart: start,
-      gridColumnSpan: span,
-      label: roomMeta.label,
+      roomId,
+      rooms: columns.map(({ start, span }, columnIndex): ScheduleRoomView => ({
+        id: roomId,
+        placementId: columns.length === 1 ? roomId : `${roomId}:${columnIndex}`,
+        gridColumnStart: start,
+        gridColumnSpan: span,
+        label: roomMeta.label,
+      })),
     }
   })
 
-  const roomColumnMap = new Map(rooms.map(room => [room.id, room]))
+  const rooms = roomGroups.flatMap(roomGroup => roomGroup.rooms)
 
-  const baseSessions = Object.keys(ROOMS).flatMap(roomId =>
-    (day.slots[roomId] ?? []).reduce((curr, slot) => {
-      const room = roomColumnMap.get(roomId)
-      if (room) {
-        curr.push(toBaseSession(slot, room))
-      }
-      return curr
-    }, [] as BaseScheduleSession[]),
+  const baseSessions = roomGroups.flatMap(({ roomId, rooms }) =>
+    (day.slots[roomId] ?? []).flatMap(slot =>
+      rooms.map(room => toBaseSession(slot, room)),
+    ),
   )
 
   const boundaryMinutes = [...new Set(baseSessions.flatMap(session => [session.startMinutes, session.endMinutes]))]
