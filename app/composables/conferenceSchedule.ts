@@ -1,24 +1,26 @@
 import type { ScheduleApiDay, ScheduleApiSlot } from '~/types/schedule'
 
-const ROOMS: Record<string, RoomMeta> = {
-  '4-r0': { label: 'R0', col: 1 },
-  '5-r1': { label: 'R1', col: 2 },
-  '6-r2': { label: 'R2', col: 3 },
-  '1-r3': { label: 'R3', col: 4 },
-  '3-r0-all': { col: { start: 1, span: 4 } },
-  '2-all': { col: { start: 1, span: 4 } },
-}
+const PHYSICAL_ROOMS = [
+  { id: '4-r0', label: 'R0' },
+  { id: '5-r1', label: 'R1' },
+  { id: '6-r2', label: 'R2' },
+  { id: '1-r3', label: 'R3' },
+  { id: '7-r4', label: 'R4' },
+] as const
 
-interface Column { start: number, span: number }
+const SHARED_ROOM_IDS = new Set(['2-all', '3-r0-all'])
+const PHYSICAL_ROOM_LABELS = new Map<string, string>(PHYSICAL_ROOMS.map(room => [room.id, room.label]))
 
-interface RoomMeta {
-  label?: string
-  col: number | Column
+interface ColumnSpan {
+  start: number
+  span: number
+  roomIds: string[]
 }
 
 interface BaseScheduleSession extends ScheduleApiSlot {
   id: string
-  roomId: string
+  roomIds: string[]
+  fragmentRoomIds: string[]
   timeLabel: string
   startMinutes: number
   endMinutes: number
@@ -50,52 +52,92 @@ export interface ScheduleDayView {
   timePoints: ScheduleTimePoint[]
 }
 
-function toBaseSession(slot: ScheduleApiSlot, room: ScheduleRoomView): BaseScheduleSession {
+function toBaseSession(
+  slot: ScheduleApiSlot,
+  roomKey: string,
+  roomIds: string[],
+  fragment: ColumnSpan,
+  fragmentIndex: number,
+): BaseScheduleSession {
   const startMinutes = getMinuteOfDay(slot.begin_time)
   const endMinutes = getMinuteOfDay(slot.end_time)
 
   return {
     ...slot,
-    id: `${room.id}-${slot.event_id}-${slot.begin_time}`,
-    roomId: room.id,
+    id: `${roomKey}-${slot.event_id}-${slot.begin_time}-${fragmentIndex}`,
+    roomIds,
+    fragmentRoomIds: fragment.roomIds,
     timeLabel: startMinutes === endMinutes ? formatMinute(startMinutes) : `${formatMinute(startMinutes)} - ${formatMinute(endMinutes)}`,
     startMinutes,
     endMinutes,
-    gridColumnStart: room.gridColumnStart,
-    gridColumnSpan: room.gridColumnSpan,
+    gridColumnStart: fragment.start,
+    gridColumnSpan: fragment.span,
   }
 }
 
-function normalizeColumn(cols: number | Column): Column {
-  return (typeof cols === 'number') ? { start: cols, span: 1 } : cols
+function parseRoomIds(roomKey: string): string[] {
+  return roomKey.split(',').map(roomId => roomId.trim()).filter(Boolean)
+}
+
+function resolveRoomIds(roomKey: string, activeRoomIds: string[]): string[] {
+  if (SHARED_ROOM_IDS.has(roomKey)) {
+    return [...activeRoomIds]
+  }
+
+  const activeRoomIdSet = new Set(activeRoomIds)
+  return [...new Set(parseRoomIds(roomKey).filter(roomId => activeRoomIdSet.has(roomId)))]
+}
+
+function getContiguousColumnSpans(
+  roomIds: string[],
+  roomColumnMap: Map<string, ScheduleRoomView>,
+): ColumnSpan[] {
+  const selectedRooms = roomIds
+    .map(roomId => roomColumnMap.get(roomId))
+    .filter((room): room is ScheduleRoomView => Boolean(room))
+    .sort((left, right) => left.gridColumnStart - right.gridColumnStart)
+
+  return selectedRooms.reduce((spans, room) => {
+    const previousSpan = spans.at(-1)
+    if (previousSpan && previousSpan.start + previousSpan.span === room.gridColumnStart) {
+      previousSpan.span += 1
+      previousSpan.roomIds.push(room.id)
+    } else {
+      spans.push({ start: room.gridColumnStart, span: 1, roomIds: [room.id] })
+    }
+    return spans
+  }, [] as ColumnSpan[])
 }
 
 export function resolveRoomLabel(roomId: string) {
-  return ROOMS[roomId]?.label ?? roomId
+  return parseRoomIds(roomId)
+    .map(id => PHYSICAL_ROOM_LABELS.get(id) ?? id)
+    .join(', ')
 }
 
 export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDayView {
-  const rooms: ScheduleRoomView[] = Object.entries(ROOMS).map(([roomId, roomMeta]) => {
-    const { start, span } = normalizeColumn(roomMeta.col)
-    return {
-      id: roomId,
-      gridColumnStart: start,
-      gridColumnSpan: span,
-      label: roomMeta.label,
-    }
-  })
+  const scheduledRoomIds = Object.keys(day.slots).flatMap(parseRoomIds)
+  const availableRoomIdSet = new Set([...day.rooms, ...scheduledRoomIds])
+  const activePhysicalRooms = PHYSICAL_ROOMS.filter(room => availableRoomIdSet.has(room.id))
+  const activeRoomIds = activePhysicalRooms.map(room => room.id)
+
+  const rooms: ScheduleRoomView[] = activePhysicalRooms.map((room, roomIndex) => ({
+    id: room.id,
+    gridColumnStart: roomIndex + 1,
+    gridColumnSpan: 1,
+    label: room.label,
+  }))
 
   const roomColumnMap = new Map(rooms.map(room => [room.id, room]))
 
-  const baseSessions = Object.keys(ROOMS).flatMap(roomId =>
-    (day.slots[roomId] ?? []).reduce((curr, slot) => {
-      const room = roomColumnMap.get(roomId)
-      if (room) {
-        curr.push(toBaseSession(slot, room))
-      }
-      return curr
-    }, [] as BaseScheduleSession[]),
-  )
+  const baseSessions = Object.entries(day.slots).flatMap(([roomKey, slots]) => {
+    const roomIds = resolveRoomIds(roomKey, activeRoomIds)
+    const fragments = getContiguousColumnSpans(roomIds, roomColumnMap)
+
+    return slots.flatMap(slot => fragments.map((fragment, fragmentIndex) =>
+      toBaseSession(slot, roomKey, roomIds, fragment, fragmentIndex),
+    ))
+  })
 
   const boundaryMinutes = [...new Set(baseSessions.flatMap(session => [session.startMinutes, session.endMinutes]))]
     .sort((left, right) => left - right)
