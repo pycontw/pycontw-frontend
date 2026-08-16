@@ -9,6 +9,9 @@ const ROOMS: Record<string, RoomMeta> = {
   '83-yi-ps': { label: { en_us: 'Poster Session', zh_hant: '海報展' }, col: 6 },
   '3-r0-all': { col: { start: 1, span: 4 } },
   '2-all': { col: { start: 1, span: 4 } },
+
+  // custom locations
+  'r0,r1,r2': { col: { start: 1, span: 3 } },
 }
 
 interface Column { start: number, span: number }
