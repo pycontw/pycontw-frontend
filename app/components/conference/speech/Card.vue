@@ -13,7 +13,8 @@ const cardClass = computed(() => {
   return 'border-default bg-default/50 shadow-lg shadow-primary-950/10'
 })
 
-const locationLabel = computed(() => resolveRoomLabel(speech.location))
+const { locale } = useI18n()
+const locationLabel = computed(() => resolveLocalizedText(resolveRoomLabel(speech.location), locale.value))
 const timeLabel = computed(() => getSessionTimeLabel(speech.begin_time))
 
 const languageLabel = computed(() => {

@@ -11,7 +11,7 @@ const { t, locale } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
 
 function getDisplayInfo(speech: ConferenceTalkDetail) {
-  const location = resolveRoomLabel(speech.location)
+  const location = resolveLocalizedText(resolveRoomLabel(speech.location), locale.value)
   const localizedBeginTime = getLocalizedDate(speech.begin_time)
   const date = locale.value === 'zh-hant' ? localizedBeginTime['zh-hant'] : localizedBeginTime['en-us']
   const languageLabel = $t(`speech.language_label.${speech.language}`)
