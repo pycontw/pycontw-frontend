@@ -22,23 +22,27 @@ const items = computed<NavigationMenuItem[]>(() => [
   pycon.eventsReady
     ? { label: $t('events.title'), slot: 'events' }
     : { label: $t('events.overview'), to: localePath('/overview') },
-  {
-    label: $t('speaking.title'),
-    active: route.path.startsWith(localePath('/speaking')),
-    children: [
-      { label: $t('speaking.cfp'), to: localePath('/speaking/cfp') },
-      { label: $t('speaking.cfp_poster'), to: localePath('/speaking/cfp-poster') },
-      { label: $t('speaking.talk'), to: localePath('/speaking/talk') },
-      { label: $t('speaking.tutorial'), to: localePath('/speaking/tutorial') },
-      { label: $t('speaking.recording'), to: localePath('/speaking/recording') },
-      {
-        label: $t('speaking.system'),
-        to: proposalSystemUrl.value,
-        class: 'bg-linear-to-tl from-neutral-950/10 to-neutral-500/80 rounded text-highlighted [&_[data-slot="childLinkLabelExternalIcon"]]:text-neutral-400 [&_[data-slot="childLinkLabelExternalIcon"]]:size-4',
-        target: '_blank',
-      },
-    ],
-  },
+  ...pycon.cfpReady
+    ? [
+        {
+          label: $t('speaking.title'),
+          active: route.path.startsWith(localePath('/speaking')),
+          children: [
+            { label: $t('speaking.cfp'), to: localePath('/speaking/cfp') },
+            { label: $t('speaking.cfp_poster'), to: localePath('/speaking/cfp-poster') },
+            { label: $t('speaking.talk'), to: localePath('/speaking/talk') },
+            { label: $t('speaking.tutorial'), to: localePath('/speaking/tutorial') },
+            { label: $t('speaking.recording'), to: localePath('/speaking/recording') },
+            {
+              label: $t('speaking.system'),
+              to: proposalSystemUrl.value,
+              class: 'bg-linear-to-tl from-neutral-950/10 to-neutral-500/80 rounded text-highlighted [&_[data-slot="childLinkLabelExternalIcon"]]:text-neutral-400 [&_[data-slot="childLinkLabelExternalIcon"]]:size-4',
+              target: '_blank',
+            },
+          ],
+        },
+      ]
+    : [],
   {
     label: $t('registration.buy_ticket'),
     to: localePath('/registration/tickets'),
@@ -55,6 +59,14 @@ const items = computed<NavigationMenuItem[]>(() => [
       { label: $t('about.code_of_conduct'), to: localePath('/about/code-of-conduct') },
     ],
   },
+  ...!pycon.cfpReady
+    ? [
+        {
+          label: $t('speaking.system'),
+          to: proposalSystemUrl.value,
+        },
+      ]
+    : [],
 ])
 
 const overviewItem = computed<NavigationMenuItem>(() => ({
