@@ -20,7 +20,7 @@ const model = defineModel<string>()
       @click="model = day"
     >
       <div class="text-xs sm:text-sm autospace-normal" :class="day === model ? 'opacity-75' : 'text-muted'">
-        {{ getLocalizedDate(day)[locale] }}
+        {{ getLocalizedDate(toTaipeiIsoTime(day))[locale] }}
       </div>
       <h2 class="text-lg sm:text-xl font-bold">
         {{ $t('common.day_title', { number: i + 1 }) }}

@@ -1,9 +1,17 @@
 const TAIPEI_OFFSET_MINUTES = 8 * 60
 
+/**
+ * @param date YYYY-MM-DD
+ * @returns iso string in GMT+8, e.g. "2025-09-06T00:00:00+08:00"
+ */
+export function toTaipeiIsoTime(date: string) {
+  return `${date}T00:00:00+08:00`
+}
+
 export function getConferenceDateNumber(date: string) {
   const appConfig = useAppConfig()
 
-  const conferenceStartDate = new Date(`${appConfig.pycon.startDate}T00:00:00+08:00`)
+  const conferenceStartDate = new Date(toTaipeiIsoTime(appConfig.pycon.startDate))
 
   const inputDate = new Date(date)
 
