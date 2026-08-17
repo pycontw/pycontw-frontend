@@ -8,6 +8,7 @@ export default {
     time: 'Time',
     sort: 'Sort by: {criteria}',
     stay_tuned: 'Stay tuned for more event details!',
+    your_time_zone: 'Your time zone',
   },
   about: {
     title: 'About',

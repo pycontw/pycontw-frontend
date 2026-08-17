@@ -8,6 +8,7 @@ export default {
     time: '時間',
     sort: '排序：{criteria}',
     stay_tuned: '更多活動細節，敬請期待！',
+    your_time_zone: '你的時區',
   },
   about: {
     title: '關於',
