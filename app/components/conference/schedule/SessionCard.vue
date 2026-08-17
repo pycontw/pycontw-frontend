@@ -9,13 +9,6 @@ const { session } = defineProps<{
 const { locale } = useI18n()
 const localePath = useLocalePath()
 
-const cardClass = computed(() => {
-  if (session.custom_event || session.event_type === 'custom' || session.break_event) {
-    return 'border-default'
-  }
-  return 'border-default bg-accented/30'
-})
-
 const wideSession = computed(() => session.gridColumnSpan > 1)
 const title = computed(() => resolveLocalizedText(session.title, locale.value))
 const speakers = computed(() => session.speakers.map(speaker => resolveLocalizedText(speaker, locale.value)).join(', '))
@@ -56,6 +49,13 @@ const comp = computed(() => {
     }
   }
   return 'article'
+})
+
+const cardClass = computed(() => {
+  if (session.custom_event || session.event_type === 'custom' || session.break_event) {
+    return 'border-default'
+  }
+  return `border-default bg-accented/40${eventPagePath.value ? ' hover:bg-accented/60 transition-all' : ''}`
 })
 </script>
 
