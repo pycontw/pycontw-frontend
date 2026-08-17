@@ -9,8 +9,10 @@ const ROOMS: Record<string, RoomMeta> = {
   '5-r1': { expId: 'r1', label: 'R1', col: 2 },
   '6-r2': { expId: 'r2', label: 'R2', col: 3 },
   '1-r3': { expId: 'r3', label: 'R3', col: 4 },
-  '81-spt-os': { label: { en_us: 'Open Space', zh_hant: '開放空間' }, col: 5 },
-  '83-yi-ps': { label: { en_us: 'Poster Session', zh_hant: '海報展' }, col: 6 },
+  '81-spt-os': { expId: 'os', label: { en_us: 'Open Space', zh_hant: '開放空間' }, col: 5 },
+  '83-yi-ps': { expId: 'ps', label: { en_us: 'Poster Session', zh_hant: '海報展' }, col: 6 },
+
+  // server pre-defined group
   '3-r0-all': { col: { start: 1, span: 4 } },
   '2-all': { col: { start: 1, span: 4 } },
 }
