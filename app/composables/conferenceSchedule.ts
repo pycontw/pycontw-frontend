@@ -13,12 +13,6 @@ const ROOMS: Record<string, RoomMeta> = {
   '83-yi-ps': { label: { en_us: 'Poster Session', zh_hant: '海報展' }, col: 6 },
   '3-r0-all': { col: { start: 1, span: 4 } },
   '2-all': { col: { start: 1, span: 4 } },
-  // '=custom': { col: [{ start: 1, span: 2 }, 3] },
-
-  // room expressions examples:
-  // '=r0~r2': { col: { start: 1, span: 3 } },
-  // '=r1,r2': { col: [2, 3] },
-  // '=r1,r2~r3': { col: [2, { start: 3, span: 2 }] },
 }
 
 interface RoomMeta extends ExpressionRoomMeta {
