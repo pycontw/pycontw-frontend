@@ -104,7 +104,7 @@ onMounted(() => {
               <span class="font-semibold text-highlighted">{{ timeZone.label }}</span>
               <span class="text-xs text-muted">{{ timeZone.offset }}</span>
             </dt>
-            <dd class="mt-0.5 whitespace-nowrap text-default">
+            <dd class="mt-0.5 whitespace-nowrap text-default autospace-normal">
               {{ timeZone.value }}
             </dd>
           </div>
@@ -116,7 +116,7 @@ onMounted(() => {
                 {{ userTimeZoneRow.offset }}
               </span>
             </dt>
-            <dd class="mt-0.5 whitespace-nowrap text-default">
+            <dd class="mt-0.5 whitespace-nowrap text-default autospace-normal">
               {{ userTimeZoneRow.value }}
             </dd>
           </div>
