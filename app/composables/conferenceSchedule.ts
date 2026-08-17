@@ -1,24 +1,22 @@
+import type { ExpressionRoomMeta } from '../utils/conferenceScheduleRooms.ts'
+import type { MaybeLocalizedText } from '../utils/locale.ts'
 import type { ScheduleApiDay, ScheduleApiSlot } from '~/types/schedule'
+import { resolveRoomColumns } from '../utils/conferenceScheduleRooms.ts'
+import { formatMinute, getMinuteOfDay } from '../utils/datetime.ts'
 
 const ROOMS: Record<string, RoomMeta> = {
-  '4-r0': { label: 'R0', col: 1 },
-  '5-r1': { label: 'R1', col: 2 },
-  '6-r2': { label: 'R2', col: 3 },
-  '1-r3': { label: 'R3', col: 4 },
+  '4-r0': { expId: 'r0', label: 'R0', col: 1 },
+  '5-r1': { expId: 'r1', label: 'R1', col: 2 },
+  '6-r2': { expId: 'r2', label: 'R2', col: 3 },
+  '1-r3': { expId: 'r3', label: 'R3', col: 4 },
   '81-spt-os': { label: { en_us: 'Open Space', zh_hant: '開放空間' }, col: 5 },
   '83-yi-ps': { label: { en_us: 'Poster Session', zh_hant: '海報展' }, col: 6 },
   '3-r0-all': { col: { start: 1, span: 4 } },
   '2-all': { col: { start: 1, span: 4 } },
-
-  // custom locations
-  'r0,r1,r2': { col: { start: 1, span: 3 } },
 }
 
-interface Column { start: number, span: number }
-
-interface RoomMeta {
+interface RoomMeta extends ExpressionRoomMeta {
   label?: MaybeLocalizedText
-  col: number | Column | (number | Column)[]
 }
 
 interface BaseScheduleSession extends ScheduleApiSlot {
@@ -72,18 +70,21 @@ function toBaseSession(slot: ScheduleApiSlot, room: ScheduleRoomView): BaseSched
   }
 }
 
-function normalizeColumns(cols: RoomMeta['col']): Column[] {
-  return (Array.isArray(cols) ? cols : [cols])
-    .map(col => (typeof col === 'number') ? { start: col, span: 1 } : col)
-}
-
-export function resolveRoomLabel(roomId: string) {
+export function resolveRoomLabel(roomId: string): MaybeLocalizedText {
   return ROOMS[roomId]?.label ?? roomId
 }
 
 export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDayView {
-  const roomGroups = Object.entries(ROOMS).map(([roomId, roomMeta]) => {
-    const columns = normalizeColumns(roomMeta.col)
+  const roomIds = new Set([...Object.keys(ROOMS), ...day.rooms, ...Object.keys(day.slots)])
+  const roomGroups = [...roomIds].flatMap((roomId) => {
+    const columns = resolveRoomColumns(roomId, ROOMS)
+
+    if (!columns) {
+      return []
+    }
+
+    const roomMeta = ROOMS[roomId]
+
     return {
       roomId,
       rooms: columns.map(({ start, span }, columnIndex): ScheduleRoomView => ({
@@ -91,7 +92,7 @@ export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDa
         placementId: columns.length === 1 ? roomId : `${roomId}:${columnIndex}`,
         gridColumnStart: start,
         gridColumnSpan: span,
-        label: roomMeta.label,
+        label: roomMeta?.label,
       })),
     }
   })
