@@ -1,4 +1,8 @@
+import type { ExpressionRoomMeta } from '../utils/conferenceScheduleRooms.ts'
+import type { MaybeLocalizedText } from '../utils/locale.ts'
 import type { ScheduleApiDay, ScheduleApiSlot } from '~/types/schedule'
+import { resolveRoomColumns } from '../utils/conferenceScheduleRooms.ts'
+import { formatMinute, getMinuteOfDay } from '../utils/datetime.ts'
 
 const ROOMS: Record<string, RoomMeta> = {
   '4-r0': { expId: 'r0', label: 'R0', col: 1 },
@@ -17,12 +21,8 @@ const ROOMS: Record<string, RoomMeta> = {
   // '=r1,r2~r3': { col: [2, { start: 3, span: 2 }] },
 }
 
-interface Column { start: number, span: number }
-
-interface RoomMeta {
-  expId?: string
+interface RoomMeta extends ExpressionRoomMeta {
   label?: MaybeLocalizedText
-  col: number | Column | (number | Column)[]
 }
 
 interface BaseScheduleSession extends ScheduleApiSlot {
@@ -76,18 +76,21 @@ function toBaseSession(slot: ScheduleApiSlot, room: ScheduleRoomView): BaseSched
   }
 }
 
-function normalizeColumns(cols: RoomMeta['col']): Column[] {
-  return (Array.isArray(cols) ? cols : [cols])
-    .map(col => (typeof col === 'number') ? { start: col, span: 1 } : col)
-}
-
-export function resolveRoomLabel(roomId: string) {
+export function resolveRoomLabel(roomId: string): MaybeLocalizedText {
   return ROOMS[roomId]?.label ?? roomId
 }
 
 export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDayView {
-  const roomGroups = Object.entries(ROOMS).map(([roomId, roomMeta]) => {
-    const columns = normalizeColumns(roomMeta.col)
+  const roomIds = new Set([...Object.keys(ROOMS), ...day.rooms, ...Object.keys(day.slots)])
+  const roomGroups = [...roomIds].flatMap((roomId) => {
+    const columns = resolveRoomColumns(roomId, ROOMS)
+
+    if (!columns) {
+      return []
+    }
+
+    const roomMeta = ROOMS[roomId]
+
     return {
       roomId,
       rooms: columns.map(({ start, span }, columnIndex): ScheduleRoomView => ({
@@ -95,7 +98,7 @@ export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDa
         placementId: columns.length === 1 ? roomId : `${roomId}:${columnIndex}`,
         gridColumnStart: start,
         gridColumnSpan: span,
-        label: roomMeta.label,
+        label: roomMeta?.label,
       })),
     }
   })
