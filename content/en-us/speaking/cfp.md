@@ -7,7 +7,7 @@ PyCon Taiwan :prose-year welcomes proposals for talks and tutorials! Talks will 
 ::prose-two-col{title="Important Dates"}
 - Conference dates: Oct 17th to 18th, 2026
 - Talks & Tutorial CFP Begins: April 13th, 2026
-- Talks & Tutorial CFP Ends: Jun 1st, 2026, 23:59:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260602T115959&p1=tz_aoe&p2=241&p3=1440))
+- Talks & Tutorial CFP Ends: Jun 1st, 2026, 23:59:59 (:prose-time-zones{iso="2026-06-01T23:59:59-12:00"}[AoE])
 - Announcement of Acceptance: Aug 2nd, 2026
 ::
 

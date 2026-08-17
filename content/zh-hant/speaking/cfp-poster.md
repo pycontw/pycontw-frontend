@@ -11,7 +11,7 @@ Poster Session（海報展）是一種透過海報展示內容，並與與會者
 ::prose-two-col{title="重要日期"}
 - Poster 展示日期：2026 年 10 月 17 日 - 10 月 18 日
 - Poster 開放徵稿：2026 年 7 月 21 日
-- Poster 徵稿截止：2026 年 8 月 20 日 23:59:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260821T115900&p1=tz_aoe&p2=241&p3=1440))
+- Poster 徵稿截止：2026 年 8 月 20 日 23:59:59 (:prose-time-zones{iso="2026-08-20T23:59:59-12:00"}[AoE])
 - 稿件錄取通知：2026 年 8 月 31 日
 ::
 

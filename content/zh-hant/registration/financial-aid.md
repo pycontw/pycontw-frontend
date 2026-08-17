@@ -30,10 +30,10 @@ title: 財務補助說明
 ::
 
 ::prose-two-col{title="受理期限"}
-- 2026-05-25 00:00 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260525T120000&p1=tz_aoe&p2=241&p3=1440)) 開始接受財務補助
-- 2026-07-20 23:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260720T235900&p1=tz_aoe&p2=241&p3=1440)) 財務補助申請截止
-- 2026-07-27 23:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260727T235900&p1=tz_aoe&p2=241&p3=1440)) 財務補助審查結果通知知
-- 2026-10-18 18:00 ([台北時間](https://www.timeanddate.com/worldclock/converter.html?iso=20261018T100000&p1=tz_aoe&p2=241&p3=1440)) 大會當場支付
+- 2026-05-25 00:00 (:prose-time-zones{iso="2026-05-25T00:00:00-12:00"}[AoE]) 開始接受財務補助
+- 2026-07-20 23:59 (:prose-time-zones{iso="2026-07-20T23:59:59-12:00"}[AoE]) 財務補助申請截止
+- 2026-07-27 23:59 (:prose-time-zones{iso="2026-07-27T23:59:59-12:00"}[AoE]) 財務補助審查結果通知知
+- 2026-10-18 18:00 (:prose-time-zones{iso="2026-10-18T18:00:00+08:00"}[台北時間]) 大會當場支付
 ::
 
 ::prose-two-col{title="備註"}

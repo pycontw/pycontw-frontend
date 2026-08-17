@@ -7,7 +7,7 @@ PyCon Taiwan :prose-year 正式開始徵稿，接受包括議程（Talks）與�
 ::prose-two-col{title="重要日期"}
 - 大會日期：2026 年 10 月 17 至 18 日
 - 議程、課程 開放徵稿：2026 年 4 月 13 日
-- 議程、課程 投稿截止：2026 年 6 月 1 日 23:59:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260602T115959&p1=tz_aoe&p2=241&p3=1440))
+- 議程、課程 投稿截止：2026 年 6 月 1 日 23:59:59 (:prose-time-zones{iso="2026-06-01T23:59:59-12:00"}[AoE])
 - 稿件錄取通知：2026 年 8 月 2 日
 ::
 

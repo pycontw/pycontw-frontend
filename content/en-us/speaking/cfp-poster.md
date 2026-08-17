@@ -11,7 +11,7 @@ This year, we're excited to bring it back to provide even more opportunities for
 ::prose-two-col{title="Important Dates"}
 - Poster Presentation dates: Oct 17–18, 2026 
 - Call for Poster Begins: Jul 21, 2026
-- Call for Poster Ends: Aug 20, 2026, at 23:59:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260821T115900&p1=tz_aoe&p2=241&p3=1440)) 
+- Call for Poster Ends: Aug 20, 2026, at 23:59:59 (:prose-time-zones{iso="2026-08-20T23:59:59-12:00"}[AoE]) 
 - Announcement of Acceptance: Aug 31, 2026
 ::
 

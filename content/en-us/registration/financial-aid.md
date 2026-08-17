@@ -30,10 +30,10 @@ The financial aid program is open to all contributors, attendees, students, and 
 ::
 
 ::prose-two-col{title="Timeline"}
-- 2026-05-25 00:00 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260525T120000&p1=tz_aoe&p2=241&p3=1440)) Financial aid application opens.
-- 2026-07-20 23:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260720T235900&p1=tz_aoe&p2=241&p3=1440)) Financial aid application closes.
-- 2026-07-27 23:59 ([AoE](https://www.timeanddate.com/worldclock/converter.html?iso=20260727T235900&p1=tz_aoe&p2=241&p3=1440)) Financial aid application review results announcement.
-- 2026-10-18 18:00 ([Taipei Time](https://www.timeanddate.com/worldclock/converter.html?iso=20261018T100000&p1=tz_aoe&p2=241&p3=1440)) Disbursement sessions at PyCon TW.
+- 2026-05-25 00:00 (:prose-time-zones{iso="2026-05-25T00:00:00-12:00"}[AoE]) Financial aid application opens.
+- 2026-07-20 23:59 (:prose-time-zones{iso="2026-07-20T23:59:59-12:00"}[AoE]) Financial aid application closes.
+- 2026-07-27 23:59 (:prose-time-zones{iso="2026-07-27T23:59:59-12:00"}[AoE]) Financial aid application review results announcement.
+- 2026-10-18 18:00 (:prose-time-zones{iso="2026-10-18T18:00:00+08:00"}[Taipei Time]) Disbursement sessions at PyCon TW.
 ::
 
 ::prose-two-col{title="Remarks"}
