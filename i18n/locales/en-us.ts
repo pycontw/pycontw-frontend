@@ -17,8 +17,10 @@ export default {
   },
   conference: {
     title: 'Conference',
+    keynote: 'Keynote',
     keynotes: 'Keynotes',
     talks: 'Talks',
+    tutorial: 'Tutorial',
     tutorials: 'Tutorials',
     lightning_talks: 'Lightning Talks',
     schedule: 'Schedule',
@@ -98,7 +100,7 @@ export default {
     language: 'Language',
     language_label: {
       ENEN: 'English',
-      ZHEN: 'Mandarin (English slides)',
+      ZHEN: 'Mandarin (Eng. slides)',
       ZHZH: 'Mandarin',
       TAI: 'Taiwanese Hokkien',
     },

@@ -17,8 +17,10 @@ export default {
   },
   conference: {
     title: '議程',
+    keynote: '主題演講',
     keynotes: '主題演講',
     talks: '一般演講',
+    tutorial: '專業課程',
     tutorials: '專業課程',
     lightning_talks: '閃電秀',
     schedule: '議程表',

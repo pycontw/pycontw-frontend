@@ -21,18 +21,7 @@ const languageLabel = computed(() => {
   return $t(`speech.language_label.${speech.language}`)
 })
 
-const levelLabel = computed<{ text: string, color: 'success' | 'info' | 'error' | 'neutral' }>(() => {
-  switch (speech.python_level) {
-    case 'NOVICE':
-      return { text: $t('speech.python_level.NOVICE'), color: 'success' }
-    case 'INTERMEDIATE':
-      return { text: $t('speech.python_level.INTERMEDIATE'), color: 'info' }
-    case 'EXPERIENCED':
-      return { text: $t('speech.python_level.EXPERIENCED'), color: 'error' }
-    default:
-      return { text: speech.python_level, color: 'neutral' }
-  }
-})
+const levelLabel = computed(() => resolvePythonLevelLabel(speech.python_level))
 </script>
 
 <template>

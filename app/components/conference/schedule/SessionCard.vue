@@ -10,29 +10,17 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const cardClass = computed(() => {
-  if (session.break_event) {
+  if (session.custom_event || session.event_type === 'custom' || session.break_event) {
     return 'border-default'
   }
-
-  switch (session.event_type) {
-    case 'keynote':
-      return 'border-primary-300/45 bg-primary-400/20 shadow-lg shadow-primary-950/20'
-    case 'tutorial':
-      return 'border-emerald-300/30 bg-emerald-400/14'
-    case 'sponsored':
-      return 'border-amber-300/30 bg-amber-400/14'
-    default: {
-      if (session.custom_event || session.event_type === 'custom') {
-        return 'border-sky-300/30 bg-sky-400/12'
-      }
-      return 'border-default'
-    }
-  }
+  return 'border-default bg-accented/30'
 })
 
 const wideSession = computed(() => session.gridColumnSpan > 1)
 const title = computed(() => resolveLocalizedText(session.title, locale.value))
 const speakers = computed(() => session.speakers.map(speaker => resolveLocalizedText(speaker, locale.value)).join(', '))
+const levelLabel = computed(() => resolvePythonLevelLabel(session.python_level))
+const languageLabel = computed(() => session.language ? $t(`speech.language_label.${session.language}`) : null)
 
 function isFullUrl(value: string): boolean {
   try {
@@ -74,19 +62,37 @@ const comp = computed(() => {
 <template>
   <component
     :is="comp"
-    class="h-full overflow-hidden rounded-xl border backdrop-blur-smx p-3"
+    class="h-full overflow-hidden rounded-xl border backdrop-blur-smx p-3 lg:p-3.5"
     :class="[cardClass, wideSession ? 'flex flex-col items-center justify-center text-center' : '']"
     :to="eventPagePath?.to"
   >
-    <p class="text-xs font-medium uppercase tracking-wide text-muted">
+    <p class="text-xs lg:text-sm font-medium uppercase tracking-wide text-muted">
       {{ session.timeLabel }}
     </p>
 
-    <div class="mt-1.5 font-semibold leading-snug text-highlighted line-wrap">
-      {{ title }}
+    <div class="mt-2 space-y-2">
+      <UBadge v-if="session.event_type === 'keynote'" variant="outline" color="neutral" class="rounded-full">
+        {{ $t('conference.keynote') }}
+      </UBadge>
+      <UBadge v-else-if="session.event_type === 'tutorial'" variant="outline" color="neutral" class="rounded-full">
+        {{ $t('conference.tutorial') }}
+      </UBadge>
+
+      <div class="lg:text-lg font-semibold leading-snug text-highlighted line-wrap">
+        {{ title }}
+      </div>
+
+      <div class="space-x-0.75 space-y-0.5">
+        <UBadge v-if="levelLabel.text" variant="outline" color="neutral" class="rounded-full">
+          {{ levelLabel.text }}
+        </UBadge>
+        <UBadge v-if="languageLabel" variant="outline" color="neutral" class="rounded-full">
+          {{ languageLabel }}
+        </UBadge>
+      </div>
     </div>
 
-    <p v-if="speakers" class="mt-2 text-sm leading-5 text-muted">
+    <p v-if="speakers" class="mt-2 text-sm lg:text-base leading-5 text-muted">
       {{ speakers }}
     </p>
   </component>
