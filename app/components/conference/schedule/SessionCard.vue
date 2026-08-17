@@ -52,10 +52,10 @@ const comp = computed(() => {
 })
 
 const cardClass = computed(() => {
-  if (session.custom_event || session.event_type === 'custom' || session.break_event) {
+  if (eventPagePath.value)
+    return 'border-default bg-accented/40 hover:bg-accented/60 transition-all'
+  else
     return 'border-default'
-  }
-  return `border-default bg-accented/40${eventPagePath.value ? ' hover:bg-accented/60 transition-all' : ''}`
 })
 </script>
 
