@@ -27,7 +27,7 @@ function getExpressionRooms<T extends ExpressionRoomMeta>(rooms: Readonly<Record
   return expressionRooms
 }
 
-function resolveRangeColumns(from: ExpressionRoomMeta, to: ExpressionRoomMeta): ScheduleColumn | undefined {
+function resolveRangeColumns(from: ExpressionRoomMeta, to: ExpressionRoomMeta): ScheduleColumn[] | undefined {
   const fromColumns = normalizeColumns(from.col)
   const toColumns = normalizeColumns(to.col)
 
@@ -35,11 +35,33 @@ function resolveRangeColumns(from: ExpressionRoomMeta, to: ExpressionRoomMeta): 
     return undefined
   }
 
-  const boundaryColumns = [...fromColumns, ...toColumns]
-  const start = Math.min(...boundaryColumns.map(column => column.start))
-  const end = Math.max(...boundaryColumns.map(column => column.start + column.span))
+  const columns: ScheduleColumn[] = []
+  const columnCount = Math.max(fromColumns.length, toColumns.length)
 
-  return { start, span: end - start }
+  for (let columnIndex = 0; columnIndex < columnCount; columnIndex++) {
+    const fromColumn = fromColumns[columnIndex]
+    const toColumn = toColumns[columnIndex]
+
+    if (!fromColumn) {
+      if (toColumn) {
+        columns.push(toColumn)
+      }
+
+      continue
+    }
+
+    if (!toColumn) {
+      columns.push(fromColumn)
+      continue
+    }
+
+    const start = Math.min(fromColumn.start, toColumn.start)
+    const end = Math.max(fromColumn.start + fromColumn.span, toColumn.start + toColumn.span)
+
+    columns.push({ start, span: end - start })
+  }
+
+  return columns
 }
 
 export function resolveRoomColumns<T extends ExpressionRoomMeta>(
@@ -90,13 +112,13 @@ export function resolveRoomColumns<T extends ExpressionRoomMeta>(
       return undefined
     }
 
-    const rangeColumn = resolveRangeColumns(from, to)
+    const rangeColumns = resolveRangeColumns(from, to)
 
-    if (!rangeColumn) {
+    if (!rangeColumns) {
       return undefined
     }
 
-    columns.push(rangeColumn)
+    columns.push(...rangeColumns)
   }
 
   return columns.length > 0 ? columns : undefined

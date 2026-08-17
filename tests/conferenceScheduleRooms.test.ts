@@ -9,6 +9,8 @@ const rooms = {
   'room-r1': { expId: 'r1', col: 2 },
   'room-r2': { expId: 'r2', col: 3 },
   'room-r3': { expId: 'r3', col: 4 },
+  'room-r3r5': { expId: 'r3r5', col: [4, 6] },
+  'room-r4r6': { expId: 'r4r6', col: [5, 7] },
   'room-without-exp-id': { col: 5 },
   'room-foo': { expId: 'foo', col: 6 },
   'empty-room': { expId: 'empty', col: [] },
@@ -49,6 +51,22 @@ describe('resolveRoomColumns', () => {
     expect(resolveRoomColumns('=r1,r2~r3', rooms)).toEqual([
       { start: 2, span: 1 },
       { start: 3, span: 2 },
+    ])
+  })
+
+  it('resolves expressions whose rooms have multiple columns', () => {
+    expect(resolveRoomColumns('=r0,r3r5', rooms)).toEqual([
+      { start: 1, span: 1 },
+      { start: 4, span: 1 },
+      { start: 6, span: 1 },
+    ])
+    expect(resolveRoomColumns('=r0~r3r5', rooms)).toEqual([
+      { start: 1, span: 4 },
+      { start: 6, span: 1 },
+    ])
+    expect(resolveRoomColumns('=r3r5~r4r6', rooms)).toEqual([
+      { start: 4, span: 2 },
+      { start: 6, span: 2 },
     ])
   })
 
