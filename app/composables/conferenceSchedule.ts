@@ -1,22 +1,26 @@
 import type { ScheduleApiDay, ScheduleApiSlot } from '~/types/schedule'
 
 const ROOMS: Record<string, RoomMeta> = {
-  '4-r0': { label: 'R0', col: 1 },
-  '5-r1': { label: 'R1', col: 2 },
-  '6-r2': { label: 'R2', col: 3 },
-  '1-r3': { label: 'R3', col: 4 },
+  '4-r0': { expId: 'r0', label: 'R0', col: 1 },
+  '5-r1': { expId: 'r1', label: 'R1', col: 2 },
+  '6-r2': { expId: 'r2', label: 'R2', col: 3 },
+  '1-r3': { expId: 'r3', label: 'R3', col: 4 },
   '81-spt-os': { label: { en_us: 'Open Space', zh_hant: '開放空間' }, col: 5 },
   '83-yi-ps': { label: { en_us: 'Poster Session', zh_hant: '海報展' }, col: 6 },
   '3-r0-all': { col: { start: 1, span: 4 } },
   '2-all': { col: { start: 1, span: 4 } },
+  // '=custom': { col: [{ start: 1, span: 2 }, 3] },
 
-  // custom locations
-  'r0,r1,r2': { col: { start: 1, span: 3 } },
+  // room expressions examples:
+  // '=r0~r2': { col: { start: 1, span: 3 } },
+  // '=r1,r2': { col: [2, 3] },
+  // '=r1,r2~r3': { col: [2, { start: 3, span: 2 }] },
 }
 
 interface Column { start: number, span: number }
 
 interface RoomMeta {
+  expId?: string
   label?: MaybeLocalizedText
   col: number | Column | (number | Column)[]
 }
