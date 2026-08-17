@@ -15,11 +15,15 @@ useHead({ title: $t('conference.schedule') })
 <template>
   <div class="w-full max-w-max mx-auto pb-20 pt-8 md:pt-12">
     <template v-if="days.length">
-      <div class="flex justify-center">
-        <ConferenceScheduleDayTabs v-model="activeDate" :days="dayDates" class="mt-10" />
+      <div class="hidden sm:flex justify-center">
+        <ConferenceScheduleDayTabs v-model="activeDate" :days="dayDates" class="w-120 mb-8" />
       </div>
-      <ConferenceScheduleGrid v-if="activeDay" :day="activeDay" class="mt-8" />
-      <PlusModalPage name="modal" />
+      <ConferenceScheduleGrid v-if="activeDay" :day="activeDay" />
+
+      <div class="sm:hidden sticky bottom-0 p-4 z-20 w-full flex items-center justify-center bg-linear-to-t from-black to-transparent">
+        <ConferenceScheduleDayTabs v-model="activeDate" :days="dayDates" class="w-full" />
+      </div>
     </template>
+    <PlusModalPage name="modal" />
   </div>
 </template>
