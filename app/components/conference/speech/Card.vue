@@ -13,32 +13,15 @@ const cardClass = computed(() => {
   return 'border-default bg-default/50 shadow-lg shadow-primary-950/10'
 })
 
-const locationLabel = computed(() => {
-  return resolveRoomLabel(speech.location)
-})
-
-const timeLabel = computed(() => {
-  return getSessionTimeLabel(speech.begin_time)
-})
-
-const speakerNames = computed(() => speech.speakers.map(({ name }) => name).join(', '))
+const { locale } = useI18n()
+const locationLabel = computed(() => resolveLocalizedText(resolveRoomLabel(speech.location), locale.value))
+const timeLabel = computed(() => getSessionTimeLabel(speech.begin_time))
 
 const languageLabel = computed(() => {
-  return $t(`speech.talk_language.${getSpeechTalkLanguage(speech.language)}`)
+  return $t(`speech.language_label.${speech.language}`)
 })
 
-const levelLabel = computed<{ text: string, color: 'success' | 'info' | 'error' | 'neutral' }>(() => {
-  switch (speech.python_level) {
-    case 'NOVICE':
-      return { text: $t('speech.python_level.NOVICE'), color: 'success' }
-    case 'INTERMEDIATE':
-      return { text: $t('speech.python_level.INTERMEDIATE'), color: 'info' }
-    case 'EXPERIENCED':
-      return { text: $t('speech.python_level.EXPERIENCED'), color: 'error' }
-    default:
-      return { text: speech.python_level, color: 'neutral' }
-  }
-})
+const levelLabel = computed(() => resolvePythonLevelLabel(speech.python_level))
 </script>
 
 <template>
@@ -79,23 +62,7 @@ const levelLabel = computed<{ text: string, color: 'success' | 'info' | 'error' 
     </div>
 
     <div class="mt-5 flex flex-1 flex-col justify-end">
-      <div class="flex items-center gap-3">
-        <div class="flex shrink-0 -space-x-3">
-          <img
-            v-for="speaker in speech.speakers"
-            :key="speaker.name"
-            :src="speaker.thumbnail_url"
-            :alt="speaker.name"
-            class="h-10 w-10 rounded-full border-2 border-default object-cover"
-          >
-        </div>
-
-        <div class="min-w-0 flex-1">
-          <p class="text-sm font-semibold text-highlighted">
-            {{ speakerNames }}
-          </p>
-        </div>
-      </div>
+      <ConferenceSpeechSpeakersInfo :speakers="speech.speakers" />
     </div>
   </article>
 </template>

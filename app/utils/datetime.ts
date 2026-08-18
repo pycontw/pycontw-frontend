@@ -1,9 +1,17 @@
 const TAIPEI_OFFSET_MINUTES = 8 * 60
 
+/**
+ * @param date YYYY-MM-DD
+ * @returns iso string in GMT+8, e.g. "2025-09-06T00:00:00+08:00"
+ */
+export function toTaipeiIsoTime(date: string) {
+  return `${date}T00:00:00+08:00`
+}
+
 export function getConferenceDateNumber(date: string) {
   const appConfig = useAppConfig()
 
-  const conferenceStartDate = new Date(`${appConfig.pycon.startDate}T00:00:00+08:00`)
+  const conferenceStartDate = new Date(toTaipeiIsoTime(appConfig.pycon.startDate))
 
   const inputDate = new Date(date)
 
@@ -43,4 +51,19 @@ export function formatMinute(minute: number) {
 export function getMinuteOfDay(isoDateTime: string) {
   const utcDate = new Date(isoDateTime)
   return utcDate.getUTCHours() * 60 + utcDate.getUTCMinutes() + TAIPEI_OFFSET_MINUTES
+}
+
+/**
+ * @param isoDateTime
+ * @return {"zh-hant": "1月1日週一", "en-us": "Mon, JUN 1"}
+ */
+export function getLocalizedDate(isoDateTime: string): { 'zh-hant': string, 'en-us': string } {
+  const date = new Date(isoDateTime)
+  const optionsZh = { month: 'short', day: 'numeric', weekday: 'short' } as const
+  const optionsEn = { month: 'short', day: 'numeric', weekday: 'short' } as const
+
+  return {
+    'zh-hant': date.toLocaleDateString('zh-Hant', optionsZh),
+    'en-us': date.toLocaleDateString('en-US', optionsEn),
+  }
 }

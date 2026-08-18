@@ -1,4 +1,4 @@
-import type { ConferenceSpeechCategory, ConferenceSpeechPythonLevel, ConferenceSpeechSpeakLanguage } from '~/types/speech'
+import type { ConferenceSpeechCategory, ConferenceSpeechLanguage, ConferenceSpeechPythonLevel } from '~/types/speech'
 
 export default {
   welcome: '你好',
@@ -8,6 +8,7 @@ export default {
     time: '時間',
     sort: '排序：{criteria}',
     stay_tuned: '更多活動細節，敬請期待！',
+    your_time_zone: '你的時區',
   },
   about: {
     title: '關於',
@@ -17,8 +18,10 @@ export default {
   },
   conference: {
     title: '議程',
+    keynote: '主題演講',
     keynotes: '主題演講',
     talks: '一般演講',
+    tutorial: '專業課程',
     tutorials: '專業課程',
     lightning_talks: '閃電秀',
     schedule: '議程表',
@@ -95,11 +98,12 @@ export default {
       INTERMEDIATE: '中階',
       EXPERIENCED: '進階',
     } satisfies Record<ConferenceSpeechPythonLevel, string>,
-    talk_language_title: '演講語言',
-    talk_language: {
-      en: '英文',
-      zh: '中文',
-      tai: '台語',
-    } satisfies Record<ConferenceSpeechSpeakLanguage, string>,
+    language: '語言',
+    language_label: {
+      ENEN: '英文',
+      ZHEN: '中文（英文簡報）',
+      ZHZH: '中文',
+      TAI: '台語',
+    } satisfies Record<ConferenceSpeechLanguage, string>,
   },
 }

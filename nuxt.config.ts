@@ -54,6 +54,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxt/scripts',
+    'nuxt-pages-plus',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -189,5 +190,8 @@ export default defineNuxtConfig({
         dir: './app/assets/icons',
       },
     ],
+  },
+  pagesPlus: {
+    namedViewsAsParallelRoutes: true,
   },
 })

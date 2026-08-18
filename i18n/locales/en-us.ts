@@ -8,6 +8,7 @@ export default {
     time: 'Time',
     sort: 'Sort by: {criteria}',
     stay_tuned: 'Stay tuned for more event details!',
+    your_time_zone: 'Your time zone',
   },
   about: {
     title: 'About',
@@ -17,8 +18,10 @@ export default {
   },
   conference: {
     title: 'Conference',
+    keynote: 'Keynote',
     keynotes: 'Keynotes',
     talks: 'Talks',
+    tutorial: 'Tutorial',
     tutorials: 'Tutorials',
     lightning_talks: 'Lightning Talks',
     schedule: 'Schedule',
@@ -95,11 +98,12 @@ export default {
       INTERMEDIATE: 'Medium',
       EXPERIENCED: 'Expert',
     },
-    talk_language_title: 'Speak Language',
-    talk_language: {
-      en: 'English',
-      zh: 'Chinese',
-      tai: 'Taiwanese Hokkien',
+    language: 'Language',
+    language_label: {
+      ENEN: 'English',
+      ZHEN: 'Mandarin (Eng. slides)',
+      ZHZH: 'Mandarin',
+      TAI: 'Taiwanese Hokkien',
     },
   },
 } satisfies typeof zh

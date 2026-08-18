@@ -11,6 +11,7 @@ const COLUMN_WIDTH = 220
 const COLUMN_START_OFFSET = 1
 const ROW_START_OFFSET = 0
 
+const { locale } = useI18n()
 const bodyScroller = useTemplateRef<HTMLDivElement>('bodyScroller')
 const headerScroller = useTemplateRef<HTMLDivElement>('headerScroller')
 const sharedClass = 'px-2 md:px-4'
@@ -75,7 +76,7 @@ function getSessionStyle(session: ScheduleSessionView) {
             :style="getRoomHeaderStyle(room)"
           >
             <p class="text-sm font-semibold text-highlighted md:text-base">
-              {{ room.label }}
+              {{ resolveLocalizedText(room.label, locale) }}
             </p>
           </div>
         </template>

@@ -16,9 +16,7 @@ useHead({
     <NuxtLoadingIndicator color="var(--ui-text-highlighted)" :height="2" />
 
     <TheHeader />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <PlusModalApp />
     <TheFooter />
   </UApp>
 </template>

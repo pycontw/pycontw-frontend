@@ -1,12 +1,13 @@
-import type { ConferenceSpeechLanguage, ConferenceSpeechSpeakLanguage } from '~/types/speech'
-
-const SPEECH_TALK_LANGUAGE_MAP: Record<ConferenceSpeechLanguage, ConferenceSpeechSpeakLanguage> = {
-  ENEN: 'en',
-  ZHEN: 'zh',
-  ZHZH: 'zh',
-  TAI: 'tai',
-}
-
-export function getSpeechTalkLanguage(speechLanguage: ConferenceSpeechLanguage): ConferenceSpeechSpeakLanguage {
-  return SPEECH_TALK_LANGUAGE_MAP[speechLanguage]
+export function resolvePythonLevelLabel(level: string): { text: string, color: 'success' | 'info' | 'error' | 'neutral' } {
+  const { t } = useI18n()
+  switch (level) {
+    case 'NOVICE':
+      return { text: t('speech.python_level.NOVICE'), color: 'success' }
+    case 'INTERMEDIATE':
+      return { text: t('speech.python_level.INTERMEDIATE'), color: 'info' }
+    case 'EXPERIENCED':
+      return { text: t('speech.python_level.EXPERIENCED'), color: 'error' }
+    default:
+      return { text: level, color: 'neutral' }
+  }
 }

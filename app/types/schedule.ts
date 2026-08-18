@@ -1,6 +1,6 @@
 export interface ScheduleApiSlot {
   event_id: number
-  event_type: string
+  event_type: 'talk' | 'keynote' | 'tutorial' | 'sponsored' | 'custom'
   title: MaybeLocalizedText
   speakers: MaybeLocalizedText[]
   begin_time: string

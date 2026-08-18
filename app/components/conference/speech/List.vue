@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ConferenceSpeech, ConferenceSpeechPythonLevel } from '~/types/speech'
-import { SPEECH_PYTHON_LEVELS } from '~/types/speech'
+import { SPEECH_LANGUAGES, SPEECH_PYTHON_LEVELS } from '~/types/speech'
 
 const { speeches, hideFilters } = defineProps<{
   speeches: ConferenceSpeech[]
@@ -11,6 +11,8 @@ interface FilterItem {
   label: string
   value: string
 }
+
+const localePath = useLocalePath()
 
 const catagoryFilters = ref<FilterItem[]>([])
 const allCategories = computed<FilterItem[]>(() => {
@@ -32,9 +34,9 @@ const allPythonLevels = computed<FilterItem[]>(() => {
 
 const talkLanguageFilters = ref<FilterItem[]>([])
 const allTalkLanguages = computed<FilterItem[]>(() => {
-  const talkLanguages = new Set<string>(speeches.map(speech => getSpeechTalkLanguage(speech.language)) ?? [])
-  return Array.from(talkLanguages).map(language => ({
-    label: $t(`speech.talk_language.${language}`),
+  const talkLanguages = new Set<string>(speeches.map(speech => speech.language) ?? [])
+  return sortByCustomOrder(Array.from(talkLanguages), SPEECH_LANGUAGES).map(language => ({
+    label: $t(`speech.language_label.${language}`),
     value: language,
   }))
 })
@@ -62,7 +64,7 @@ const filteredData = computed<ConferenceSpeech[]>(() => {
     const matchesPythonLevel = !hasPythonLevelFilters
       || pythonLevelFilters.value.some(filter => filter.value === speech.python_level)
     const matchesTalkLanguage = !hasTalkLanguageFilters
-      || talkLanguageFilters.value.some(filter => filter.value === getSpeechTalkLanguage(speech.language))
+      || talkLanguageFilters.value.some(filter => filter.value === speech.language)
 
     return matchesCategory && matchesPythonLevel && matchesTalkLanguage
   }) ?? []
@@ -96,6 +98,8 @@ const sortedData = computed(() => {
         :search-input="{
           placeholder: `${$t('common.search')}...`,
         }"
+        :ui="{ content: 'min-w-min' }"
+        :content="{ align: 'start' }"
       >
         <div v-if="catagoryFilters.length" class="flex space-x-2 items-center">
           <div>{{ $t('speech.category_title') }}</div>
@@ -127,11 +131,13 @@ const sortedData = computed(() => {
         icon="i-lucide:globe"
         multiple
         size="xl"
-        :placeholder="`${$t('speech.talk_language_title')}...`"
+        :placeholder="`${$t('speech.language')}...`"
         :search-input="false"
+        :ui="{ content: 'min-w-min' }"
+        :content="{ align: 'start' }"
       >
         <div v-if="talkLanguageFilters.length" class="flex space-x-2 items-center">
-          <div>{{ $t('speech.talk_language_title') }}</div>
+          <div>{{ $t('speech.language') }}</div>
           <div class="min-w-4.5 h-4.5 px-1.25 bg-primary rounded-full flex items-center justify-center text-xs text-primary-950">
             {{ talkLanguageFilters.length }}
           </div>
@@ -140,7 +146,10 @@ const sortedData = computed(() => {
       <USelect v-model="sortBy" :items="sorts" icon="i-lucide:arrow-down-up" size="xl" />
     </div>
     <div class="grid sm:grid-cols-2 gap-4">
-      <ConferenceSpeechCard v-for="speech in sortedData" :key="speech.id" :speech="speech" />
+      <PlusModalLink v-for="speech in sortedData" :key="speech.id" :to="localePath(`/conference/${speech.event_type}/${speech.id}`)">
+        <ConferenceSpeechCard :speech="speech" />
+      </PlusModalLink>
     </div>
+    <PlusModalPage name="modal" />
   </div>
 </template>
