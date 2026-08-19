@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Sponsor, SponsorGroup } from '~/types/sponsor'
 
-defineProps<{
+const { sponsorGroups } = defineProps<{
   sponsorGroups: SponsorGroup[]
 }>()
 
@@ -14,11 +14,15 @@ function openSponsorModal(sponsor: Sponsor) {
   openedSponsor.value = sponsor
   openedModal.value = true
 }
+
+const filteredSponsorGroups = computed(() => {
+  return sponsorGroups.filter(group => group.sponsors.length > 0)
+})
 </script>
 
 <template>
   <div>
-    <div v-for="sponsorGroup in sponsorGroups" :key="sponsorGroup.level_name" class="mb-8">
+    <div v-for="sponsorGroup in filteredSponsorGroups" :key="sponsorGroup.level_name" class="mb-8">
       <h3 class="text-2xl font-bold text-muted mb-6">
         {{ t(sponsorGroup.level_name) }}
       </h3>
