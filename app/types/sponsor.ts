@@ -9,8 +9,10 @@ export interface Sponsor {
   logo_url: string
 }
 
+export type SponsorLevel = 'diamond' | 'platinum' | 'gold' | 'silver' | 'bronze' | 'special' | 'special-thanks' | 'co-organizer' | 'organizer' | 'sprint-coorganizer'
+
 export interface SponsorGroup {
-  level_name: string
+  level_name: SponsorLevel
   sponsors: Sponsor[]
 }
 

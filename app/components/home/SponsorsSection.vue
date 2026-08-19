@@ -1,12 +1,18 @@
 <script setup lang="ts">
-import type { Sponsor, SponsorGroup } from '~/types/sponsor'
+import type { Sponsor, SponsorGroup, SponsorLevel } from '~/types/sponsor'
 
 const { sponsorGroups } = defineProps<{
   sponsorGroups: SponsorGroup[]
 }>()
 
-const { t, locale } = useI18n({ useScope: 'local' })
+// show "Become a Sponsor" button in the end of the sponsor level
+const SHOW_BECOME_SPONSOR: SponsorLevel[] = ['diamond', 'platinum', 'gold', 'silver', 'bronze']
 
+// force show these levels even if there is no sponsor in the level
+const TOP_SHOW_LEVELS: SponsorLevel[] = SHOW_BECOME_SPONSOR
+
+const { t, locale } = useI18n({ useScope: 'local' })
+const localePath = useLocalePath()
 const openedModal = ref(false)
 const openedSponsor = shallowRef<Sponsor | null>(null)
 
@@ -16,7 +22,12 @@ function openSponsorModal(sponsor: Sponsor) {
 }
 
 const filteredSponsorGroups = computed(() => {
-  return sponsorGroups.filter(group => group.sponsors.length > 0)
+  const topGroups = TOP_SHOW_LEVELS.map<SponsorGroup>((level) => {
+    const group = sponsorGroups.find(group => group.level_name === level)
+    return group || { level_name: level, sponsors: [] }
+  })
+  const restGroups = sponsorGroups.filter(group => !TOP_SHOW_LEVELS.includes(group.level_name))
+  return [...topGroups, ...restGroups]
 })
 </script>
 
@@ -24,7 +35,7 @@ const filteredSponsorGroups = computed(() => {
   <div>
     <div v-for="sponsorGroup in filteredSponsorGroups" :key="sponsorGroup.level_name" class="mb-8">
       <h3 class="text-2xl font-bold text-muted mb-6">
-        {{ t(sponsorGroup.level_name) }}
+        {{ t(`level.${sponsorGroup.level_name}`) }}
       </h3>
       <div class="grid grid-cols-2 min-[425px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
         <div
@@ -43,6 +54,14 @@ const filteredSponsorGroups = computed(() => {
             </div>
           </div>
         </div>
+        <NuxtLink
+          v-if="SHOW_BECOME_SPONSOR.includes(sponsorGroup.level_name)"
+          class="w-full aspect-square rounded-xl border-dashed border-2 border-muted flex flex-col items-center justify-center text-dimmed"
+          :to="localePath('/sponsor')"
+        >
+          <UIcon name="i-lucide:plus" class="size-6 lg:size-6 mb-1" />
+          {{ t('become-sponsor') }}
+        </NuxtLink>
       </div>
     </div>
 
@@ -85,30 +104,33 @@ const filteredSponsorGroups = computed(() => {
 </style>
 
 <i18n lang="yaml">
-'en-us': {
-  diamond: 'Diamond',
-  platinum: 'Platinum',
-  gold: 'Gold',
-  silver: 'Silver',
-  bronze: 'Bronze',
-  special: 'Special Sponsorship',
-  special-thanks: 'Special Thanks to',
-  co-organizer: 'Co-organizer',
-  organizer: 'Organizer',
-  sprint-coorganizer: 'Sprints Co-organizer',
-  website: 'Website',
-}
-'zh-hant': {
-  diamond: '鑽石級贊助',
-  platinum: '白金級贊助',
-  gold: '金級贊助',
-  silver: '銀級贊助',
-  bronze: '銅級贊助',
-  special: '特別贊助',
-  special-thanks: '特別感謝',
-  co-organizer: '協辦單位',
-  organizer: '主辦單位',
-  sprint-coorganizer: '衝刺開發協辦單位',
-  website: '官方網站',
-}
+en-us:
+  website: 'Website'
+  become-sponsor: 'Sponsor'
+  level:
+    diamond: 'Diamond'
+    platinum: 'Platinum'
+    gold: 'Gold'
+    silver: 'Silver'
+    bronze: 'Bronze'
+    special: 'Special Sponsorship'
+    special-thanks: 'Special Thanks to'
+    co-organizer: 'Co-organizer'
+    organizer: 'Organizer'
+    sprint-coorganizer: 'Sprints Co-organizer'
+
+zh-hant:
+  website: '官方網站'
+  become-sponsor: '成為贊助'
+  level:
+    diamond: '鑽石級贊助'
+    platinum: '白金級贊助'
+    gold: '金級贊助'
+    silver: '銀級贊助'
+    bronze: '銅級贊助'
+    special: '特別贊助'
+    special-thanks: '特別感謝'
+    co-organizer: '協辦單位'
+    organizer: '主辦單位'
+    sprint-coorganizer: '衝刺開發協辦單位'
 </i18n>
