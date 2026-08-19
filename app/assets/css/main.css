@@ -71,4 +71,7 @@
   li.prose {
     @apply text-xl leading-9;
   }
+  th, td {
+    @apply text-lg;
+  }
 }
