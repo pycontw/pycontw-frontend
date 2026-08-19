@@ -59,8 +59,12 @@ onMounted(() => {
         <div />
         <img src="/images/hero-title.svg" alt="PyCon Taiwan" class="px-8 h-auto">
         <div class="text-center flex flex-col">
-          <div class="text-lg md:text-2xl font-semibold py-4 md:py-10">
-            {{ t('sub_title') }}
+          <div class="text-lg sm:text-2xl font-semibold py-4 md:py-10 sm:flex sm:items-center sm:justify-center">
+            <div>{{ t('hero.date') }}</div>
+            <div class="hidden sm:inline mx-1.5">
+              ·
+            </div>
+            <div>{{ t('hero.location') }}</div>
           </div>
           <div class="h-full flex items-center justify-center">
             <ReuseHeroButtons class="max-sm:hidden" />
@@ -121,7 +125,9 @@ onMounted(() => {
 
 <i18n lang="yaml">
 en-us:
-  sub_title: Oct 17 - 18, 2026 in Taipei
+  hero:
+    date: Oct 17 - 18, 2026
+    location: Taipei Medical University
   recent_updates: Recent Updates
   main: |
     ## About PyCon
@@ -132,7 +138,9 @@ en-us:
 
     PyCon Taiwan is an annual convention in Taiwan for the discussion and promotion of the Python programming language. It is held by enthusiasts and focuses on Python technology and its versatile applications. We welcome people who are interested in Python to join PyCon Taiwan to share knowledge, exchange ideas, make connections and to help us grow our network.
 zh-hant:
-  sub_title: 2026 年 10 月 17 - 18 日．臺北
+  hero:
+    date: 2026 年 10 月 17 - 18 日
+    location: 臺北醫學大學
   recent_updates: 最新動向
   main: |
     ## 關於 PyCon
