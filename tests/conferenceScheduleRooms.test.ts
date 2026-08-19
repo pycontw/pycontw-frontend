@@ -131,4 +131,34 @@ describe('normalizeConferenceScheduleDays', () => {
     ])
     expect(new Set(result.sessions.map(session => session.id)).size).toBe(2)
   })
+
+  it('keeps the duration between adjacent schedule boundaries', () => {
+    const fiveMinutesLater = {
+      ...slot,
+      event_id: 2,
+      begin_time: '2026-08-17T01:05:00Z',
+      end_time: '2026-08-17T02:05:00Z',
+    } satisfies ScheduleApiSlot
+    const day = {
+      date: '2026-08-17',
+      name: 'Day 1',
+      rooms: ['4-r0', '5-r1'],
+      slots: {
+        '4-r0': [slot],
+        '5-r1': [fiveMinutesLater],
+      },
+    } satisfies ScheduleApiDay
+
+    const result = normalizeConferenceScheduleDays(day)
+
+    expect(result.timePoints.map(point => ({
+      label: point.label,
+      minutesToNextPoint: point.minutesToNextPoint,
+    }))).toEqual([
+      { label: '09:00', minutesToNextPoint: 5 },
+      { label: '09:05', minutesToNextPoint: 55 },
+      { label: '10:00', minutesToNextPoint: 5 },
+      { label: '10:05', minutesToNextPoint: 0 },
+    ])
+  })
 })

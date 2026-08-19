@@ -47,6 +47,7 @@ export interface ScheduleRoomView {
 export interface ScheduleTimePoint {
   gridRowStart: number
   label: string
+  minutesToNextPoint: number
 }
 
 export interface ScheduleDayView {
@@ -139,8 +140,8 @@ export function normalizeConferenceScheduleDays(day: ScheduleApiDay): ScheduleDa
     rooms,
     timePoints: boundaryMinutes.map((minute, minuteIndex) => ({
       gridRowStart: minuteIndex + 1,
-      isTerminal: minuteIndex === boundaryMinutes.length - 1,
       label: formatMinute(minute),
+      minutesToNextPoint: Math.max((boundaryMinutes[minuteIndex + 1] ?? minute) - minute, 0),
     })),
   }
 }
