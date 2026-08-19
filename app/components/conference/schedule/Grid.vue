@@ -5,7 +5,8 @@ const props = defineProps<{
   day: ScheduleDayView
 }>()
 
-const SLOT_MIN_HEIGHT = 20
+const SLOT_MIN_HEIGHT = 28
+const FIXED_ROW_MAX_DURATION_MINUTES = 5
 const TIME_AXIS_WIDTH = 88
 const COLUMN_WIDTH = 220
 const COLUMN_START_OFFSET = 1
@@ -35,9 +36,16 @@ const headerGridStyle = computed(() => {
 const bodyGridStyle = computed(() => {
   return {
     gridTemplateColumns: gridTemplateColumns.value,
-    gridTemplateRows: `repeat(${props.day.timePoints.length}, minmax(${SLOT_MIN_HEIGHT}px, auto))`,
+    gridTemplateRows: props.day.timePoints.map(getTimePointRowSize).join(' '),
   }
 })
+
+function getTimePointRowSize(point: ScheduleTimePoint) {
+  // fix #750: a short offset must not grow when a long title spans across it.
+  return point.minutesToNextPoint <= FIXED_ROW_MAX_DURATION_MINUTES
+    ? `${SLOT_MIN_HEIGHT}px`
+    : `minmax(${SLOT_MIN_HEIGHT}px, auto)`
+}
 
 function getRoomHeaderStyle(room: ScheduleRoomView) {
   return {
