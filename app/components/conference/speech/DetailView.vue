@@ -11,11 +11,11 @@ const { t, locale } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
 
 function getDisplayInfo(speech: ConferenceTalkDetail) {
-  const location = resolveLocalizedText(resolveRoomLabel(speech.location), locale.value)
-  const localizedBeginTime = getLocalizedDate(speech.begin_time)
+  const location = speech.location ? resolveLocalizedText(resolveRoomLabel(speech.location), locale.value) : ''
+  const localizedBeginTime = speech.begin_time ? getLocalizedDate(speech.begin_time) : { 'zh-hant': '', 'en-us': '' }
   const date = locale.value === 'zh-hant' ? localizedBeginTime['zh-hant'] : localizedBeginTime['en-us']
   const languageLabel = $t(`speech.language_label.${speech.language}`)
-  const dateNumberLabel = $t('common.day_title', { number: getConferenceDateNumber(speech.begin_time) })
+  const dateNumberLabel = speech.begin_time ? $t('common.day_title', { number: getConferenceDateNumber(speech.begin_time) }) : ''
   const categoryLabel = $t(`speech.category.${speech.category}`)
   const levelLabel = $t(`speech.python_level.${speech.python_level}`)
 
@@ -23,7 +23,7 @@ function getDisplayInfo(speech: ConferenceTalkDetail) {
     date,
     dateNumberLabel,
     location,
-    beginTime: getSessionTimeLabel(speech.begin_time),
+    beginTime: speech.begin_time ? getSessionTimeLabel(speech.begin_time) : '',
     endTime: getSessionTimeLabel(speech.end_time),
     languageLabel,
     categoryLabel,

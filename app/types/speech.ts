@@ -29,14 +29,14 @@ export interface ConferenceSpeechSpeaker {
  */
 export interface ConferenceSpeech {
   id: number
-  location: string
-  begin_time: string
   title: string
   category: ConferenceSpeechCategory
   language: ConferenceSpeechLanguage
   python_level: ConferenceSpeechPythonLevel
   speakers: ConferenceSpeechSpeaker[]
   event_type: string
+  location?: string
+  begin_time?: string
 }
 
 /**
