@@ -72,12 +72,18 @@ const filteredData = computed<ConferenceSpeech[]>(() => {
 
 const sortedData = computed(() => {
   const filtered = [...filteredData.value]
+  const getBeginTime = (speech: ConferenceSpeech) => speech.begin_time ? new Date(speech.begin_time).getTime() : Number.POSITIVE_INFINITY
   const sorted = sortBy.value === 'time'
-    ? filtered.sort((a, b) => new Date(a.begin_time).getTime() - new Date(b.begin_time).getTime())
+    ? filtered.sort((a, b) => getBeginTime(a) - getBeginTime(b))
     : filtered.sort((a, b) => {
       // first sort: level, second sort: time
+        const aBeginTime = getBeginTime(a)
+        const bBeginTime = getBeginTime(b)
+        if (aBeginTime === Number.POSITIVE_INFINITY || bBeginTime === Number.POSITIVE_INFINITY) {
+          return aBeginTime - bBeginTime
+        }
         if (a.python_level === b.python_level) {
-          return new Date(a.begin_time).getTime() - new Date(b.begin_time).getTime()
+          return aBeginTime - bBeginTime
         }
         return SPEECH_PYTHON_LEVELS.indexOf(a.python_level) - SPEECH_PYTHON_LEVELS.indexOf(b.python_level)
       })
