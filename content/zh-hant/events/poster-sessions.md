@@ -1,37 +1,54 @@
 ---
-title: 海報展
+title: 海報展資訊
 ---
 
-歡迎參與 PyCon Taiwan Poster Session！
+::prose-two-col{title="活動資訊"}
+**海報展示時間：** 2026.10.17 ~ 2026.10.18
 
-Poster Session（海報展）是一種透過海報展示內容，並與與會者進行面對面交流的分享形式。自 2024 年首次於 PyCon Taiwan 舉辦以來，Poster Session 獲得了社群熱烈的迴響。
+**發表者指定到場時間：**
 
-今年，我們將再次舉辦 Poster Session，希望提供更多分享與交流的機會，讓大家能介紹自己的專案、經驗、研究成果或關注的議題。我們歡迎所有與 Python 相關的投稿主題。通過審核的作品將於大會期間以海報形式展出，投稿者也將於 Poster Session 現場與與會者直接交流，分享想法並互相學習。
+- 第一天｜10/17（六）12:15–13:20
+- 第二天｜10/18（日）14:45–15:45
+- 也歡迎隨時到海報展來場驚喜巧遇 !
 
-::prose-two-col{title="重要日期"}
-- Poster 展示日期：2026 年 10 月 17 日 - 10 月 18 日
-- Poster 開放徵稿：2026 年 7 月 21 日
-- Poster 徵稿截止：2026 年 8 月 20 日 23:59:59 (:prose-time-zones{iso="2026-08-20T23:59:59-12:00"}[AoE])
-- 稿件錄取通知：2026 年 8 月 31 日
+**活動地點：** 台北醫學大學 2F / 臺北市信義區雙和里吳興街250號
 ::
 
-::prose-two-col{title="提交稿件"}
-- 請您前往 [Poster Session 投稿表單](https://forms.gle/udBziBVNBnSnHiTP9) 進行投稿，提供 Poster 的主題、摘要、內容說明，以及填妥您的個人資訊。
-- 海報尺寸：後續將另行確認並通知，感謝您的耐心等待。
-- 海報準備： 入選者須自行印製並攜帶海報至會場，大會將提供展示用海報板。
-::
+::prose-two-col{title="講者名單"}
+### 社群講
 
-::prose-two-col{title="投稿主題"}
-Poster Session  分為「專業講」與「社群講」兩種面向，都將以海報形式展出，讓您和與會者能直接互動創造火花！
+1. **Luna (Soojin Yoon)** <br />
+   From Connection to Contribution: Growing Together with PyLadies Seoul
+2. **Sofia Cunanan & Renz Carlo Caritativo** <br />
+   From Local Roots to Regional Reach: The Growth of PyCon PH, 2023–2026
+3. **Yeonguk Choo** <br />
+   From Users to Contributors: Building the Apache Airflow Community in Korea
+4. **PyLadies Taiwan** <br />
+   Not Just Python: How PyLadies Taiwan Keeps Evolving
+5. **Freilla Mae Espinola** <br />
+   Python Asia Organization: One Region, Many Communities, One Python Community
+6. **Novelle Estrella** <br />
+   She Codes, She Leads: PyLadies Manila
+7. **李松霖** <br />
+   在台灣當數位遊牧者：城市、資源與政策全攻略 <br />
+   移動中的社群：台灣數位遊牧者協會如何把散落各地的人連起來
 
-- 專業講：您可以投稿任何跟 Python 有關的主題，包括但不限於：人工智慧、機器學習、資料分析、金融科技、醫療、半導體、製造業、公民科技等多元專業領域。我們也非常歡迎適合進階者內容的投稿，例如探討 Python 內部運作等。另外，如果您的海報內容是關於特定的 Python 套件，請確保它已被廣泛使用，或者您可以考慮將重點放在相關的最佳實踐上，這類主題會有更多的受眾。
-- 社群講：您可以分享任何軟性議題，如：社群經營、溝通、心理健康，或任何您的自身經驗，無論是創新、共創、成功或失敗，都值得讚揚。同時也歡迎其他社群夥伴來此宣傳您的社群活動。
-::
+### 專業講
 
-::prose-two-col{title="現場發表"}
-正式的實體海報將在 10 月 17 日至 10 月 18 日，展示於 PyCon Taiwan :prose-year 大會的海報展專區，我們會在兩天的大會議程中安排特定時段，邀請您至海報展現場向與會者說明海報內容。同時，也歡迎您在指定時段以外的時間自由選擇在海報展專區介紹海報或參與其他議程活動。
-::
-
-::prose-two-col{title="不適當的言語或圖像"}
-請注意，PyCon Taiwan 的會眾來自不同文化背景，某些團體認為有趣的笑話對於其他團體來說可能是無禮的。如果您想在演講過程加入一些幽默的圖像或用詞，請再三檢視是否會有冒犯的可能，並請參考我們的[:prose-locale-link{href="/about/code-of-conduct"}[行為準則]]。
+8. **Milo Chen** <br />
+   Agentic App Store
+9. **Anna Liang** <br />
+   How Do LLMs Read Your Python? From Transformer Circuits Perspective to Hands-On Tracing of Open-Source Models
+10. **Carl John Vinas** <br />
+    How Python Powers Self-Hosting & OSS: A Look Inside My Homelab Automations
+11. **John Lu** <br />
+    RL Fine-Tuning a Multimodal Nutrition Agent with JAX
+12. **Yuichiro Tachibana** <br />
+    Streamlit-WebRTC: Real-Time Video and Audio Web Apps in ~20 Lines of Python
+13. **Charlie Lin** <br />
+    Tying Up Loose Threads: Making Your Project No-GIL Ready
+14. **林嵩哲** <br />
+    資料不跟著畢業：用 STAC 與 AI Agent 打造長期維護的資料目錄
+15. **Mac Taylor** <br />
+    關於 DevBuffet 小聚以及聚會趨勢成果分析與洞察
 ::
