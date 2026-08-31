@@ -1,37 +1,68 @@
 ---
-title: Poster Session
+title: Poster Session Information
 ---
 
-Welcome to the PyCon Taiwan Poster Session!
+::prose-two-col{title="Event Information"}
+**Poster Exhibition Time:** 2026.10.17 ~ 2026.10.18
 
-The Poster Session provides an interactive format where presenters showcase their work through posters and engage in one-on-one discussions with conference attendees. Since its debut at PyCon Taiwan 2024, the Poster Session has received an enthusiastic response from the community.
+**Main Session Hour：**
 
-This year, we're excited to bring it back to provide even more opportunities for people to share their projects, experiences, research, and ideas. We welcome submissions on any topic related to Python. Accepted proposals will be presented as posters during the conference, giving presenters the opportunity to exchange ideas and connect directly with attendees throughout the Poster Session.
+- Day 1｜10/17（Sat.）12:15–13:20
+- Day 2｜10/18（Sun.）14:45–15:45
+- Come by the poster session anytime for a fun surprise!
 
-::prose-two-col{title="Important Dates"}
-- Poster Presentation dates: Oct 17–18, 2026 
-- Call for Poster Begins: Jul 21, 2026
-- Call for Poster Ends: Aug 20, 2026, at 23:59:59 (:prose-time-zones{iso="2026-08-20T23:59:59-12:00"}[AoE]) 
-- Announcement of Acceptance: Aug 31, 2026
+**Session Venue：** Taipei Medical University (Reserve), 2F / 臺北市信義區雙和里吳興街250號
 ::
 
-::prose-two-col{title="How to Submit Your Poster"}
-- Please go to the [Poster Session submission](https://forms.gle/wyHX153ZmT7p6zuv5) form to submit, provide the Poster topic, abstract, content description, and your personal information.
-- Poster Size: Further confirmation and notification will follow. Thank you for your patience.
-- Poster Preparation: Accepted presenters are responsible for printing and bringing their own poster to the conference. PyCon Taiwan will provide poster boards for display.
-::
+::prose-two-col{title="Posters List"}
+### Community Topics
 
-::prose-two-col{title="Topics"}
-We segment the Poster Session into two parts, a professional topic and a community topic. All topics will be displayed as a poster, and audiences can interact with you directly.
+P01. **Luna (Soojin Yoon)** <br />
+From Connection to Contribution: Growing Together with PyLadies Seoul
 
-- In professional topics: you can submit a poster on any Python-related topic, such as AI, Machine Learning, Data Analysis, FinTech, Medical Care, Semiconductor, Manufacturing, Civic Technology, etc. We also welcome talks on advanced topics!
-- In community topics:  you can share any community topics, such as community connection, communication, mental health, or any of your experiences, whether innovation, co-creation, success, or failure are all commendable. We welcome fellow community members to share and promote their events with others during the session as well.
-::
+P02. **Sofia Cunanan & Renz Carlo Caritativo** <br />
+From Local Roots to Regional Reach: The Growth of PyCon PH, 2023–2026
 
-::prose-two-col{title="Presentation"}
-The printed posters will be exhibited in the poster area at PyCon Taiwan :prose-year on October 17–18. We will schedule dedicated time slots during the two-day conference for you to present the poster and engage with attendees. Outside of these time slots, you are also welcome to visit the poster area at your convenience to share your work or explore other sessions.
-::
+P03. **Yeonguk Choo** <br />
+From Users to Contributors: Building the Apache Airflow Community in Korea
 
-::prose-two-col{title="Inappropriate Words or Images"}
-Please note that PyCon Taiwan is a conference where the audience comes from different cultural backgrounds. Some jokes may be rude to others. If you want to add some humorous images or words to your speech, please double-check if there is any possibility of offense, and refer to our [Code of Conduct](https://tw.pycon.org/2026/en-us/about/code-of-conduct).
+P04. **PyLadies Taiwan** <br />
+Not Just Python: How PyLadies Taiwan Keeps Evolving
+
+P05. **Freilla Mae Espinola** <br />
+Python Asia Organization: One Region, Many Communities, One Python Community
+
+P06. **Novelle Estrella** <br />
+She Codes, She Leads: PyLadies Manila
+
+P07. **李松霖** <br />
+在台灣當數位遊牧者：城市、資源與政策全攻略 <br />
+移動中的社群：台灣數位遊牧者協會如何把散落各地的人連起來
+
+P08. **Mac Taylor** <br />
+關於 DevBuffet 小聚以及聚會趨勢成果分析與洞察
+
+### Professional Topics
+
+
+P09. **Milo Chen** <br />
+Agentic App Store
+
+P10. **Anna Liang** <br />
+How Do LLMs Read Your Python? From Transformer Circuits Perspective to Hands-On Tracing of Open-Source Models
+
+P11. **Carl John Vinas** <br />
+How Python Powers Self-Hosting & OSS: A Look Inside My Homelab Automations
+
+P12. **John Lu** <br />
+RL Fine-Tuning a Multimodal Nutrition Agent with JAX
+
+P13. **Yuichiro Tachibana** <br />
+Streamlit-WebRTC: Real-Time Video and Audio Web Apps in ~20 Lines of Python
+
+P14. **Charlie Lin** <br />
+Tying Up Loose Threads: Making Your Project No-GIL Ready
+
+P15. **林嵩哲** <br />
+資料不跟著畢業：用 STAC 與 AI Agent 打造長期維護的資料目錄
 ::
