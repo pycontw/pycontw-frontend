@@ -1,4 +1,5 @@
 const TAIPEI_OFFSET_MINUTES = 8 * 60
+const TAIPEI_TIME_ZONE = 'Asia/Taipei'
 
 /**
  * @param date YYYY-MM-DD
@@ -32,7 +33,7 @@ export function getSessionTimeLabel(isoString: string) {
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,
-    timeZone: 'Asia/Taipei', // GMT+8
+    timeZone: TAIPEI_TIME_ZONE,
   }).format(date)
 }
 
@@ -59,11 +60,15 @@ export function getMinuteOfDay(isoDateTime: string) {
  */
 export function getLocalizedDate(isoDateTime: string): { 'zh-hant': string, 'en-us': string } {
   const date = new Date(isoDateTime)
-  const optionsZh = { month: 'short', day: 'numeric', weekday: 'short' } as const
-  const optionsEn = { month: 'short', day: 'numeric', weekday: 'short' } as const
+  const options = {
+    month: 'short',
+    day: 'numeric',
+    weekday: 'short',
+    timeZone: TAIPEI_TIME_ZONE,
+  } as const
 
   return {
-    'zh-hant': date.toLocaleDateString('zh-Hant', optionsZh),
-    'en-us': date.toLocaleDateString('en-US', optionsEn),
+    'zh-hant': date.toLocaleDateString('zh-Hant', options),
+    'en-us': date.toLocaleDateString('en-US', options),
   }
 }
