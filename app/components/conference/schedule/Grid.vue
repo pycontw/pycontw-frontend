@@ -44,7 +44,7 @@ const bodyGridStyle = computed(() => {
 
 function getTimePointRowSize(point: ScheduleTimePoint) {
   // fix #750: a short offset must not grow when a long title spans across it.
-  return point.minutesToNextPoint <= FIXED_ROW_MAX_DURATION_MINUTES
+  return point.minutesToNextPoint > 0 && point.minutesToNextPoint <= FIXED_ROW_MAX_DURATION_MINUTES
     ? `${SLOT_MIN_HEIGHT}px`
     : `minmax(${SLOT_MIN_HEIGHT}px, auto)`
 }
