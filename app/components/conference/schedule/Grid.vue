@@ -124,9 +124,12 @@ function getSessionStyle(session: ScheduleSessionView) {
 
 <style scoped>
 @media (hover: hover) and (pointer: fine) {
-  .schedule-scrollable,
-  .schedule-scrollable :deep(*) {
+  .schedule-scrollable {
     cursor: grab;
+  }
+
+  .schedule-scrollable:active {
+    cursor: grabbing;
   }
 }
 
