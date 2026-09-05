@@ -80,10 +80,4 @@ onMounted(() => {
     transform: translateY(var(--footer-year-scroll-distance));
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .footer-year-list--animated {
-    animation: none;
-  }
-}
 </style>
