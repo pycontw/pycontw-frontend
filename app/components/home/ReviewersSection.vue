@@ -23,7 +23,7 @@ function openReviewerModal(reviewer: Reviewer, event: MouseEvent) {
       {{ t('title') }}
     </h2>
 
-    <ul class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-6 lg:gap-8">
+    <ul class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-3 sm:gap-6 lg:gap-8">
       <li v-for="(reviewer, index) in reviewers" :key="`${reviewer.full_name}-${index}`" class="min-w-0">
         <button
           type="button"
@@ -34,9 +34,9 @@ function openReviewerModal(reviewer: Reviewer, event: MouseEvent) {
         >
           <ReviewerAvatar
             :reviewer="reviewer"
-            class="size-16 sm:size-24 border-2 border-default transition-colors group-hover:border-primary"
+            class="size-17 sm:size-23 border-2 border-default transition-colors group-hover:border-primary"
           />
-          <span class="w-full wrap-anywhere text-sm sm:text-base font-semibold text-highlighted">
+          <span class="w-full wrap-anywhere text-sm sm:text-sm font-semibold text-highlighted">
             {{ reviewer.full_name }}
           </span>
         </button>
