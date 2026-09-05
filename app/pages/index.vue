@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import type { Reviewer } from '~/types/reviewer'
 import type { SponsorApiEnvelope } from '~/types/sponsor'
 import { Application } from '@splinetool/runtime'
 
-const { data: sponsorsData } = await useApiFetch<SponsorApiEnvelope>('/sponsors/')
+const [{ data: sponsorsData }, { data: reviewers }] = await Promise.all([
+  useApiFetch<SponsorApiEnvelope>('/sponsors/'),
+  useApiFetch<Reviewer[]>('/users?role=Reviewer'),
+])
 
 const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
@@ -91,6 +95,8 @@ onMounted(() => {
         </h2>
         <HomeSponsorsSection :sponsor-groups="sponsorsData.data" class="mb-12" />
       </template>
+
+      <HomeReviewersSection v-if="reviewers?.length" :reviewers="reviewers" class="mb-12" />
     </UContainer>
   </div>
 </template>
