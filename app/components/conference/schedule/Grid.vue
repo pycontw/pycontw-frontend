@@ -14,10 +14,12 @@ const ROW_START_OFFSET = 0
 
 const { locale } = useI18n()
 const bodyScroller = useTemplateRef<HTMLDivElement>('bodyScroller')
+const bodyGrid = useTemplateRef<HTMLDivElement>('bodyGrid')
 const headerScroller = useTemplateRef<HTMLDivElement>('headerScroller')
 const sharedClass = 'px-2 md:px-4'
 
 useSyncScroll(bodyScroller, headerScroller)
+const { hasOverflow, isDragging } = useDragScroll(bodyScroller, bodyGrid)
 
 const totalColumns = computed(() => {
   return props.day.rooms.reduce((max, room) => Math.max(max, room.gridColumnStart + room.gridColumnSpan - 1), 0)
@@ -42,7 +44,7 @@ const bodyGridStyle = computed(() => {
 
 function getTimePointRowSize(point: ScheduleTimePoint) {
   // fix #750: a short offset must not grow when a long title spans across it.
-  return point.minutesToNextPoint <= FIXED_ROW_MAX_DURATION_MINUTES
+  return point.minutesToNextPoint > 0 && point.minutesToNextPoint <= FIXED_ROW_MAX_DURATION_MINUTES
     ? `${SLOT_MIN_HEIGHT}px`
     : `minmax(${SLOT_MIN_HEIGHT}px, auto)`
 }
@@ -94,9 +96,9 @@ function getSessionStyle(session: ScheduleSessionView) {
     <div
       ref="bodyScroller"
       class="overflow-x-auto pt-4"
-      :class="sharedClass"
+      :class="[sharedClass, { 'schedule-scrollable': hasOverflow, 'schedule-dragging': isDragging }]"
     >
-      <div class="grid min-w-max gap-1" :style="bodyGridStyle">
+      <div ref="bodyGrid" class="grid min-w-max gap-1" :style="bodyGridStyle">
         <div
           v-for="point in props.day.timePoints"
           :key="`${point.label}-${point.gridRowStart}`"
@@ -119,3 +121,21 @@ function getSessionStyle(session: ScheduleSessionView) {
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (hover: hover) and (pointer: fine) {
+  .schedule-scrollable {
+    cursor: grab;
+  }
+
+  .schedule-scrollable:active {
+    cursor: grabbing;
+  }
+}
+
+.schedule-dragging,
+.schedule-dragging :deep(*) {
+  cursor: grabbing;
+  user-select: none;
+}
+</style>
