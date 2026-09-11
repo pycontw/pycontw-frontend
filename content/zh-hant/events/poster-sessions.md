@@ -33,7 +33,7 @@ P05. **Freilla Mae Espinola** <br />
 Python Asia Organization: One Region, Many Communities, One Python Community
 
 P06. **Novelle Estrella** <br />
-She Codes, She Leads: PyLadies Manila
+Coffee. Code. Community.
 
 P07. **李松霖** <br />
 在台灣當數位遊牧者：城市、資源與政策全攻略 <br />
