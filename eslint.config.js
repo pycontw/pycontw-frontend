@@ -2,7 +2,7 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu(
   {
-    ignores: ['content/**'],
+    ignores: ['content/**', 'logo/index.{js,ts,d.ts}'],
   },
   {
     files: ['**/*.vue'],

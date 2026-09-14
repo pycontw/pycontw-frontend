@@ -1,0 +1,27 @@
+{
+  "name": "python-logo-motion",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-contained Python logo animation with embedded settings.",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./placeholder.png": "./placeholder.png"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "README.md",
+    "index.d.ts",
+    "index.js",
+    "placeholder.png"
+  ],
+  "dependencies": {
+    "three": "0.186.0"
+  }
+}
