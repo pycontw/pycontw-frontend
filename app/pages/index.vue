@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { Reviewer } from '~/types/reviewer'
 import type { SponsorApiEnvelope } from '~/types/sponsor'
-import { Application } from '@splinetool/runtime'
 
 const [{ data: sponsorsData }, { data: reviewers }] = await Promise.all([
   useApiFetch<SponsorApiEnvelope>('/sponsors/'),
@@ -10,74 +9,52 @@ const [{ data: sponsorsData }, { data: reviewers }] = await Promise.all([
 
 const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
-const canvas = useTemplateRef('canvas')
-const started = ref(false)
-const [DefineHeroButtons, ReuseHeroButtons] = createReusableTemplate()
-
-onMounted(() => {
-  if (canvas.value) {
-    const app = new Application(canvas.value)
-    app.load($public('/scene.splinecode'))
-    app.addEventListener('start', () => {
-      started.value = true
-    })
-  }
-})
 </script>
 
 <template>
-  <!-- eslint-disable vue/no-multiple-template-root -->
-  <DefineHeroButtons>
-    <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 justify-center">
-      <NuxtLink :href="localePath('/registration/tickets')">
-        <FancyButton
-          class="py-2.5 px-13 sm:py-4 sm:px-14 font-semibold text-lg sm:text-xl"
-          border-radius="16px"
-          border-width="2px"
-        >
-          {{ $t('registration.get_tickets') }}
-        </FancyButton>
-      </NuxtLink>
-      <UButton
-        class="py-2.5 px-13 sm:py-4 sm:px-14 font-semibold text-lg sm:text-xl rounded-2xl border-2 border-default ring-0"
-        block
-        color="neutral"
-        variant="outline"
-        to="https://forms.gle/UJjJGvbnhki9uryR8"
-        target="_blank"
-      >
-        {{ $t('volunteer.join') }}
-      </UButton>
-    </div>
-  </DefineHeroButtons>
-
   <div>
-    <div class="relative flex flex-col justify-center items-center sm:h-[calc(100vh-var(--ui-header-height))] max-sm:py-20 overflow-hidden">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-video sm:h-full max-sm:h-[150%]">
-        <canvas ref="canvas" :class="started && 'animate-fade-in'" />
-        <div class="hero-stars-mask z-[-1] absolute top-0 left-1/2 -translate-x-1/2 h-screen w-full max-w-[2000px]">
-          <LazyStarsBg color="var(--ui-text)" :star-count="400" />
-        </div>
-      </div>
-      <div class="z-1 grid grid-rows-[1fr_auto_1fr] h-full py-8">
-        <div />
-        <img src="/images/hero-title.svg" alt="PyCon Taiwan" class="px-8 h-auto">
-        <div class="text-center flex flex-col">
-          <div class="text-lg sm:text-2xl font-semibold py-4 md:py-10 sm:flex sm:items-center sm:justify-center">
-            <div>{{ t('hero.date') }}</div>
-            <div class="hidden sm:inline mx-1.5">
-              ·
-            </div>
-            <div>{{ t('hero.location') }}</div>
-          </div>
-          <div class="h-full flex items-center justify-center">
-            <ReuseHeroButtons class="max-sm:hidden" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="hero-fold flex flex-col">
+      <HomeMotionLogo class="hero-section flex-1" />
 
-    <ReuseHeroButtons class="sm:hidden py-6" />
+      <UContainer class="shrink-0">
+        <div class="flex flex-col justify-center">
+          <img src="/images/hero-title-slogan.svg" alt="PyCon Taiwan" class="self-center px-8 w-5/6 sm:w-5/9 h-auto">
+
+          <div class="text-center flex flex-col mt-2 md:mt-10">
+            <div class="text-lg sm:text-2xl font-semibold py-6 md:pb-6 md:pt-6 sm:flex sm:items-center sm:justify-center">
+              <div>{{ t('hero.date') }}</div>
+              <div class="hidden sm:inline mx-1.5">
+                ·
+              </div>
+              <div>{{ t('hero.location') }}</div>
+            </div>
+            <div class="flex items-center justify-center">
+              <div class="grid sm:grid-cols-2 gap-4 sm:gap-8 justify-center">
+                <NuxtLink :href="localePath('/registration/tickets')">
+                  <FancyButton
+                    class="py-2.5 px-13 sm:py-4 sm:px-14 font-semibold text-lg sm:text-xl"
+                    border-radius="16px"
+                    border-width="2px"
+                  >
+                    {{ $t('registration.get_tickets') }}
+                  </FancyButton>
+                </NuxtLink>
+                <UButton
+                  class="py-2.5 px-13 sm:py-4 sm:px-14 font-semibold text-lg sm:text-xl rounded-2xl border-2 border-default ring-0"
+                  block
+                  color="neutral"
+                  variant="outline"
+                  to="https://forms.gle/UJjJGvbnhki9uryR8"
+                  target="_blank"
+                >
+                  {{ $t('volunteer.join') }}
+                </UButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </UContainer>
+    </div>
 
     <UContainer class="pb-12">
       <MDC class="custom-content" :value="t('main')" />
@@ -102,18 +79,36 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.animate-fade-in {
-  animation: fade-in 0.4s ease-out;
+@reference "~/assets/css/main.css";
+
+/* Motion logo size */
+.hero-fold {
+  height: calc(100svh - var(--ui-header-height));
+  min-height: min-content;
+  max-height: 37.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.hero-stars-mask {
-  mask-image: radial-gradient(
-    ellipse clamp(18rem, 42vw, 46rem) clamp(12rem, 28vw, 30rem) at 50% 50%,
-    transparent 0%,
-    transparent 45%,
-    rgba(0, 0, 0, 0.15) 80%,
-    #000 90%
-  );
+.hero-section {
+  --motion-visual-ratio: 10 / 7;
+  --motion-logo-width: min(100%, calc(100cqw / 1.35));
+  --motion-offset-x: 0px;
+  --motion-offset-y: 0px;
+  --motion-mask-radius: min(24cqw, 44cqh, 22rem);
+  --motion-mask-clear: 75%;
+
+  @apply min-h-32 sm:min-h-80 lg:py-6;
+}
+
+@media (width >= theme(--breakpoint-sm)) {
+  .hero-fold {
+    height: calc(90svh - var(--ui-header-height));
+    max-height: none;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
 }
 
 @keyframes fade-in {

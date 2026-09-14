@@ -77,7 +77,7 @@ const starLayers = computed(() => [
           :key="starIndex"
           class="star absolute rounded-full"
           :style="{
-            left: `${star.x}px`,
+            left: `${star.x / 15}%`,
             top: `${star.y}px`,
             width: `${star.size}px`,
             height: `${star.size}px`,

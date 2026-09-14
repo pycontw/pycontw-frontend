@@ -10,6 +10,7 @@ trustPolicyExclude:
   - semver@6.3.1
 
 packages:
+  - logo
   - mock
 
 onlyBuiltDependencies:
