@@ -14,3 +14,13 @@ PyCon TW 2026 衝刺開發的活動時間是 10/11 (日) 10:00 ~ 17:00。衝刺�
 專案列表可參考 [HackMD](https://hackmd.io/@pycontw/r1At0RiPfx)。
 
 :conference-stay-tuned-notice
+
+::prose-community-card
+## 還沒 Sprint 夠嗎？來參加 After-Sprint！
+
+PyCon Taiwan 結束後，還想繼續和 Python 社群一起寫 code、交流，或參與開源專案嗎？
+
+台灣在地 Python 社群 **Taipei.py** 將於會後自主舉辦 **After-Sprint**，延續 Sprints 的交流與協作精神。無論你想繼續手上的專案、認識其他開發者，或一起參與開源貢獻，都歡迎加入！
+
+[查看 Taipei.py After-Sprint 活動資訊 →](https://www.meetup.com/taipei_py/events/316510887/)
+::
