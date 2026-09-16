@@ -19,3 +19,13 @@ Please visit [KKTIX](https://pycontw.kktix.cc/events/2026-sprints) if you'd like
 You can find the project list on [HackMD](https://hackmd.io/@pycontw/r1At0RiPfx).
 
 :conference-stay-tuned-notice
+
+::prose-community-card
+## Can’t Get Enough of Sprints? Join the After-Sprint!
+
+Want to keep coding, connecting with the Python community, or contributing to open source even after PyCon Taiwan is over?
+
+Local Python community **Taipei.py** will independently host an **After-Sprint** following the conference, carrying on the spirit of collaboration and community from the Sprints. Whether you’d like to keep working on your project, meet other developers, or contribute to open source together, everyone is welcome to join!
+
+[Check out the Taipei.py After-Sprint event →](https://www.meetup.com/taipei_py/events/316510887/)
+::
