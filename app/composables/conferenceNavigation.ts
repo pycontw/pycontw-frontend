@@ -34,6 +34,10 @@ export function useConferenceNavigation() {
         label: t('conference.lightning_talks'),
         to: localePath('/conference/lightning-talks'),
       },
+      {
+        label: t('conference.unconference'),
+        to: localePath('/conference/unconference'),
+      },
       // {
       //   label: 'Panel Discussion',
       //   to: localePath('/conference/panel-discussion'),

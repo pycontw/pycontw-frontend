@@ -25,6 +25,7 @@ export default {
     tutorials: 'Tutorials',
     lightning_talks: 'Lightning Talks',
     schedule: 'Schedule',
+    unconference: 'Unconference',
   },
   events: {
     overview: 'Events',

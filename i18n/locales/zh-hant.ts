@@ -24,6 +24,7 @@ export default {
     tutorial: '專業課程',
     tutorials: '專業課程',
     lightning_talks: '閃電秀',
+    unconference: 'Unconference',
     schedule: '議程表',
   },
   events: {
