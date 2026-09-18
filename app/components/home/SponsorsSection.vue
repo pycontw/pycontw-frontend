@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Sponsor, SponsorGroup, SponsorLevel } from '~/types/sponsor'
+import { lo } from '@nuxt/ui/runtime/locale/index.js'
 
 const { sponsorGroups } = defineProps<{
   sponsorGroups: SponsorGroup[]
@@ -29,6 +30,10 @@ const filteredSponsorGroups = computed(() => {
   const restGroups = sponsorGroups.filter(group => !TOP_SHOW_LEVELS.includes(group.level_name))
   return [...topGroups, ...restGroups]
 })
+
+function isIndividual(sponsor: Sponsor) {
+  return sponsor.intro_en_us === 'Individual Sponsor'
+}
 </script>
 
 <template>
@@ -44,11 +49,14 @@ const filteredSponsorGroups = computed(() => {
           class="relative w-full aspect-square sponsor-logo cursor-pointer opacity-90 hover:opacity-100 hover:scale-105 transition-all"
           @click="openSponsorModal(sponsor)"
         >
-          <img :src="sponsor.logo_url" class="logo-img">
+          <div v-if="isIndividual(sponsor)" class="absolute inset-0 flex items-center justify-center text-black text-center text-xl">
+            {{ locale === 'en-us' ? sponsor.name_en_us : sponsor.name_zh_hant }}
+          </div>
+          <img v-else :src="sponsor.logo_url" class="logo-img">
           <div v-if="sponsor.subtitle_en_us || sponsor.subtitle_zh_hant" class="absolute bottom-0 left-0 w-full p-0.5">
             <div class="rounded-b-[10px] rounded-t-xs bg-pink-500/15 py-1 font-semibold flex items-center justify-center">
-              <UIcon name="i-lucide:heart-handshake" class="size-4 lg:size-4.5 mr-1 text-pink-500" />
-              <div class="text-pink-500 text-xs lg:text-sm autospace-normal">
+              <UIcon name="i-lucide:heart-handshake" class="size-4 mr-1 text-pink-500" />
+              <div class="text-pink-500 text-xs autospace-normal">
                 {{ locale === 'en-us' ? sponsor.subtitle_en_us : sponsor.subtitle_zh_hant }}
               </div>
             </div>
@@ -68,8 +76,11 @@ const filteredSponsorGroups = computed(() => {
     <UModal v-model:open="openedModal" :title="t('sponsor.list')" :ui="{ content: 'max-w-2xl' }">
       <template #body>
         <div v-if="openedSponsor" class="w-full flex flex-col items-center p-4">
-          <div class="size-32 sponsor-logo">
-            <img class="logo-img" :src="openedSponsor.logo_url">
+          <div class="size-32 sponsor-logo relative">
+            <div v-if="isIndividual(openedSponsor)" class="absolute inset-0 flex items-center justify-center text-black text-center text-xl">
+              {{ locale === 'en-us' ? openedSponsor.name_en_us : openedSponsor.name_zh_hant }}
+            </div>
+            <img v-else class="logo-img" :src="openedSponsor.logo_url">
           </div>
           <div class="mt-4 font-semibold text-lg text-highlighted">
             {{ locale === 'en-us' ? openedSponsor.name_en_us : openedSponsor.name_zh_hant }}
@@ -78,6 +89,7 @@ const filteredSponsorGroups = computed(() => {
             {{ locale === 'en-us' ? openedSponsor.intro_en_us : openedSponsor.intro_zh_hant }}
           </div>
           <UButton
+            v-if="openedSponsor.website_url"
             :to="openedSponsor.website_url"
             target="_blank"
             variant="outline"
