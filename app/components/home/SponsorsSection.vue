@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Sponsor, SponsorGroup, SponsorLevel } from '~/types/sponsor'
-import { lo } from '@nuxt/ui/runtime/locale/index.js'
 
 const { sponsorGroups } = defineProps<{
   sponsorGroups: SponsorGroup[]
