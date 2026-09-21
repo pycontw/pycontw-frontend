@@ -59,9 +59,6 @@ RL Fine-Tuning a Multimodal Nutrition Agent with JAX
 P13. **Yuichiro Tachibana** <br />
 Streamlit-WebRTC: Real-Time Video and Audio Web Apps in ~20 Lines of Python
 
-P14. **Charlie Lin** <br />
-Tying Up Loose Threads: Making Your Project No-GIL Ready
-
 P15. **林嵩哲** <br />
 資料不跟著畢業：用 STAC 與 AI Agent 打造長期維護的資料目錄
 ::
