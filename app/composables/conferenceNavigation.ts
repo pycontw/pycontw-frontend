@@ -38,10 +38,10 @@ export function useConferenceNavigation() {
         label: t('conference.unconference'),
         to: localePath('/conference/unconference'),
       },
-      // {
-      //   label: 'Panel Discussion',
-      //   to: localePath('/conference/panel-discussion'),
-      // },
+      {
+        label: 'Panel',
+        to: localePath('/conference/panel-discussion'),
+      },
       // {
       //   label: 'Young Inspires',
       //   to: localePath('/conference/young-inspires'),

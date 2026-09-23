@@ -7,31 +7,9 @@ const { speech, relatedSpeeches } = defineProps<{
   relatedSpeeches?: ConferenceSpeech[]
 }>()
 
-const { t, locale } = useI18n({ useScope: 'local' })
+const { t } = useI18n({ useScope: 'local' })
 const localePath = useLocalePath()
 
-function getDisplayInfo(speech: ConferenceTalkDetail) {
-  const location = speech.location ? resolveLocalizedText(resolveRoomLabel(speech.location), locale.value) : ''
-  const localizedBeginTime = speech.begin_time ? getLocalizedDate(speech.begin_time) : { 'zh-hant': '', 'en-us': '' }
-  const date = locale.value === 'zh-hant' ? localizedBeginTime['zh-hant'] : localizedBeginTime['en-us']
-  const languageLabel = $t(`speech.language_label.${speech.language}`)
-  const dateNumberLabel = speech.begin_time ? $t('common.day_title', { number: getConferenceDateNumber(speech.begin_time) }) : ''
-  const categoryLabel = $t(`speech.category.${speech.category}`)
-  const levelLabel = $t(`speech.python_level.${speech.python_level}`)
-
-  return {
-    date,
-    dateNumberLabel,
-    location,
-    beginTime: speech.begin_time ? getSessionTimeLabel(speech.begin_time) : '',
-    endTime: getSessionTimeLabel(speech.end_time),
-    languageLabel,
-    categoryLabel,
-    levelLabel,
-  }
-}
-
-const info = computed(() => getDisplayInfo(speech))
 const filteredRelatedSpeeches = computed(() => {
   return relatedSpeeches?.filter(relatedSpeech => relatedSpeech.id !== speech.id) ?? []
 })
@@ -45,50 +23,14 @@ const filteredRelatedSpeeches = computed(() => {
 
     <ConferenceSpeechSpeakersInfo :speakers="speech.speakers" />
 
-    <!-- time, place, lang -->
-    <UiBorderContainer class="my-6 p-4 rounded-xl">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="info-item">
-          <div data-label>
-            <UIcon name="i-lucide:clock-3" class="size-4 text-dimmed" />
-            <span class="autospace-normal">{{ info.dateNumberLabel }} • {{ info.date }}</span>
-          </div>
-          <div data-value>
-            {{ info.beginTime }} - {{ info.endTime }}
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div data-label>
-            <UIcon name="i-lucide:map-pin" class="size-4 text-dimmed" />
-            <span class="autospace-normal">{{ t('location') }}</span>
-          </div>
-          <div data-value>
-            {{ info.location }}
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div data-label>
-            <UIcon name="i-lucide:languages" class="size-4 text-dimmed" />
-            <span class="autospace-normal">{{ t('speech.language') }}</span>
-          </div>
-          <div data-value>
-            {{ info.languageLabel }}
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div data-label>
-            <UIcon name="i-lucide:shapes" class="size-4 text-dimmed" />
-            <span class="autospace-normal">{{ t('speech.category_title') }} • {{ t('speech.python_level_title') }}</span>
-          </div>
-          <div data-value>
-            {{ info.categoryLabel }} • {{ info.levelLabel }}
-          </div>
-        </div>
-      </div>
-    </UiBorderContainer>
+    <ConferenceSessionInfo
+      :begin-time="speech.begin_time"
+      :end-time="speech.end_time"
+      :location="speech.location"
+      :language="speech.language"
+      :category="speech.category"
+      :python-level="speech.python_level"
+    />
 
     <ConferenceSpeechExternalLinks
       :slide-link="speech.slide_link"
@@ -127,26 +69,11 @@ const filteredRelatedSpeeches = computed(() => {
   </div>
 </template>
 
-<style scoped>
-@reference "~/assets/css/main.css";
-
-.info-item {
-  [data-label] {
-    @apply inline-flex items-center gap-1.5 text-muted text-sm;
-  }
-  [data-value] {
-    @apply font-bold sm:text-lg;
-  }
-}
-</style>
-
 <i18n lang="yaml">
 en-us:
   detailed_description: "Description"
   related_speeches: "Related Speeches"
-  location: "Location"
 zh-hant:
   detailed_description: "說明"
   related_speeches: "相關演講"
-  location: "地點"
 </i18n>

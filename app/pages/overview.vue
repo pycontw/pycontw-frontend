@@ -31,11 +31,11 @@ const EVENTS = computed<Record<string, {
     tag: 'speech',
     ...(pycon.eventsReady && { link: { title: t('linkLabel.tutorials'), url: localePath('/conference/tutorials') } }),
   },
-  // panelDiscussion: {
-  //   img: '/images/overview/panel-discussion.jpg',
-  //   tag: 'speech',
-  //   ...(pycon.eventsReady && { link: { title: t('linkLabel.talks'), url: localePath('/conference/panel-discussion') } }),
-  // },
+  panelDiscussion: {
+    img: '/images/overview/panel-discussion.jpg',
+    tag: 'speech',
+    ...(pycon.eventsReady && { link: { title: t('linkLabel.talks'), url: localePath('/conference/panel-discussion') } }),
+  },
   posterSession: {
     img: '/images/overview/poster-session.jpg',
     tag: 'activity',
@@ -183,7 +183,7 @@ en-us:
         Job Fair connects attendees with companies looking for engineering talent. Meet company representatives, learn about their technology, culture, and career opportunities, and explore new possibilities for your professional journey.
 
     panelDiscussion:
-      title: Panel Discussion
+      title: Panel
       description: >
         Panel Discussions bring together speakers from diverse backgrounds to share perspectives through engaging conversations. Explore technology, industry, and community topics from multiple viewpoints while discovering new ideas and fresh perspectives.
 
@@ -242,7 +242,7 @@ zh-hant:
       title: Job Fair
       description: Job Fair 提供與企業交流及探索職涯機會的平台。您可以了解各家企業的技術文化、產品與人才需求，並與現場團隊交流，分享經驗、投遞履歷，開啟更多職涯發展的可能。
     panelDiscussion:
-      title: Panel Discussion
+      title: Panel
       description: Panel Discussion 邀請不同背景的講者，以對談形式分享觀點，透過多元交流與討論，共同探索技術、產業及社群議題，激發更多思考與新的視角。
     posterSession:
       title: 海報展
