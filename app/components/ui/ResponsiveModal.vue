@@ -13,6 +13,7 @@ defineEmits<{
   closed: []
 }>()
 const [DefineBodyTemplate, ReuseBodyTemplate] = createReusableTemplate()
+const [DefineFooterTemplate, ReuseFooterTemplate] = createReusableTemplate()
 const open = defineModel('open', { type: Boolean, default: false })
 </script>
 
@@ -21,6 +22,9 @@ const open = defineModel('open', { type: Boolean, default: false })
   <DefineBodyTemplate>
     <slot name="body" />
   </DefineBodyTemplate>
+  <DefineFooterTemplate>
+    <slot name="footer" />
+  </DefineFooterTemplate>
 
   <UiDrawer
     v-if="isMobileScreen"
@@ -32,22 +36,29 @@ const open = defineModel('open', { type: Boolean, default: false })
     </template>
     <template #body>
       <div class="relative min-h-0 p-4 overflow-y-auto">
-        <div v-if="title || $slots.title || description || $slots.description" class="mb-6 border-b border-default pb-6 pr-8">
-          <DrawerTitle v-if="title || $slots.title" class="text-xl font-semibold leading-snug text-highlighted">
-            <slot name="title">
-              {{ title }}
-            </slot>
-          </DrawerTitle>
+        <div v-if="title || $slots.title || description || $slots.description" class="mb-6 border-b border-default pb-6">
+          <div class="flex items-start gap-3 text-lg leading-snug">
+            <DrawerTitle v-if="title || $slots.title" class="min-w-0 flex-1 font-semibold text-highlighted">
+              <slot name="title">
+                {{ title }}
+              </slot>
+            </DrawerTitle>
+            <div v-if="$slots.close" class="flex h-[1lh] shrink-0 items-center">
+              <DrawerClose as-child class="static! shrink-0">
+                <slot name="close" />
+              </DrawerClose>
+            </div>
+          </div>
           <DrawerDescription v-if="description || $slots.description" class="mt-4 text-base text-muted">
             <slot name="description">
               {{ description }}
             </slot>
           </DrawerDescription>
         </div>
-        <DrawerClose v-if="$slots.close" as-child>
-          <slot name="close" />
-        </DrawerClose>
         <ReuseBodyTemplate />
+      </div>
+      <div v-if="$slots.footer" class="shrink-0 border-t border-default bg-default">
+        <ReuseFooterTemplate />
       </div>
     </template>
   </UiDrawer>
@@ -74,6 +85,9 @@ const open = defineModel('open', { type: Boolean, default: false })
     </template>
     <template #body>
       <ReuseBodyTemplate />
+    </template>
+    <template v-if="$slots.footer" #footer>
+      <ReuseFooterTemplate />
     </template>
   </UModal>
 </template>

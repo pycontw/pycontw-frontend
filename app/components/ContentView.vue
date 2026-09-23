@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
+import type { PageCollections } from '@nuxt/content'
 import { withLeadingSlash } from 'ufo'
 
 const props = defineProps<{
@@ -21,7 +21,7 @@ const routeLocale = computed(() => {
 })
 
 const { data: page } = await useAsyncData(`page-${routeLocale.value}-${slug.value}`, async () => {
-  const collection = (`content_${routeLocale.value.replace('-', '_')}`) as keyof Collections
+  const collection = (`content_${routeLocale.value.replace('-', '_')}`) as keyof PageCollections
 
   const content = await queryCollection(collection).path(slug.value).first()
 
