@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n({ useScope: 'local' })
+const localePath = useLocalePath()
 const { data: jobs, error, status, refresh } = await useAsyncData('jobs', () => {
   return queryCollection('jobs').order('stem', 'ASC').all()
 })
@@ -95,6 +96,14 @@ const { data: jobs, error, status, refresh } = await useAsyncData('jobs', () => 
       </li>
     </ul>
     <ConferenceStayTunedNotice v-else />
+    <NuxtLink
+      :to="localePath('/sponsor')"
+      class="mt-4 flex w-full flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-muted px-5 py-6 text-center text-dimmed transition-colors hover:border-accented hover:bg-elevated/50 hover:text-highlighted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+    >
+      <UIcon name="i-lucide-plus" class="size-6" />
+      <span class="text-lg font-semibold">{{ t('post_job') }}</span>
+      <span class="text-sm">{{ t('become_sponsor') }}</span>
+    </NuxtLink>
   </div>
 </template>
 
@@ -116,9 +125,13 @@ en-us:
   close: Close
   load_error: Unable to load job openings. Please try again.
   retry: Try again
+  post_job: Post a job opening
+  become_sponsor: Become a PyCon TW sponsor
 zh-hant:
   apply: 立即應徵
   close: 關閉
   load_error: 無法載入職缺，請稍後再試。
   retry: 重新載入
+  post_job: 刊登徵才資訊
+  become_sponsor: 成為 PyCon TW 贊助夥伴
 </i18n>
