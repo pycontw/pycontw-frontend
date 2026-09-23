@@ -1,0 +1,162 @@
+[
+  {
+    "id": "P01",
+    "presenter": "Luna (Soojin Yoon)",
+    "category": "community",
+    "title": "From Connection to Contribution: Growing Together with PyLadies Seoul",
+    "summary": "PyLadies Seoul was rebooted in late 2023 after a long pause, beginning with a simple question: where could women Pythonistas find one another and keep growing together? This poster shares how we experimented with networking events, tutorials, workshops, seminars, book clubs, and study groups, and how those activities gradually created a path from connection to learning, speaking, and open source contribution. Community members began leading study groups, preparing conference proposals, contributing to Django, and creating new opportunities for others. We also exchanged lessons and support with PyLadies communities across Asia. Alongside these outcomes, we reflect on the challenges that came with growth, including concentrated workloads, shared responsibility, financial foundations, and sustainable operations. Our main lesson is that community impact is not measured only by events or attendance, but by whether people become visible, grow into new roles, and help the next person begin",
+    "community": "PyLadies Seoul",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P02",
+    "presenter": "Sofia Cunanan & Renz Carlo Caritativo",
+    "category": "community",
+    "title": "From Local Roots to Regional Reach:  The Growth of PyCon PH, 2023–2026",
+    "summary": "This poster explores the growth and evolving reach of PythonPH conferences from 2023 to 2026 using data from four events. It examines changes in attendance, professional backgrounds, learner experience, geographic participation, and first-time and returning attendees. Attendance more than doubled from 276 to 585, while international participation increased twelvefold. The number of attendees identifying as new to Python or programming also more than doubled. Meanwhile, students and participants from diverse technical and non-technical backgrounds became increasingly represented, and first-time attendees remained the majority alongside a growing base of returning participants. Together, these trends highlight PythonPH’s growth from a local conference community toward a broader and increasingly connected Python community.",
+    "community": "PythonPH",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P03",
+    "presenter": "Yeonguk Choo",
+    "category": "community",
+    "title": "From Users to Contributors: Building the Apache Airflow Community in Korea",
+    "summary": "What happens when users become contributors and communities connect? We share our journey building the Airflow Korea User Group through meetups, contributions, and cross-community collaboration.",
+    "community": "Apache Airflow Korea User Group",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P04",
+    "presenter": "PyLadies Taiwan",
+    "category": "community",
+    "title": "Not Just Python: How PyLadies Taiwan Keeps Evolving",
+    "summary": "PyLadies Taiwan started with Python, but our community has continued to evolve with the needs of our members. Over 13 years, we have grown from Python workshops, technical events, and study groups to conversations about women’s careers, gender and technology, and women’s experiences in the age of AI.\n\nIn this poster, we share how volunteer participation, new activities, and continuous experimentation have helped us reshape the community over time—not only as a place to learn Python, but also as a space to explore issues that matter to women in tech.\n\nA community stays alive not because there are always passionate people, but because someone is willing to keep redesigning how it works.",
+    "community": "PyLadies Taiwan",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P05",
+    "presenter": "Freilla Mae Espinola",
+    "category": "community",
+    "title": "Python Asia Organization: One Region, Many Communities, One Python Community",
+    "summary": "This poster shares how PAO turned a shared vision into real regional connection over the past year, and where that momentum is headed next.\n\nHighlights include PythonAsia 2026, held in Manila with Python Philippines — a milestone regional conference bringing together communities from across Asia. PAO also launched Python Across Asia, a new initiative spotlighting community leaders and stories beyond individual conferences, and organized two Online Charity Talks that combined learning, connection, and giving back. Growing sponsor support, including four corporate sponsors and nineteen GitHub Sponsors, has helped make this work possible.\n\nLooking ahead to 2026–2027, PAO is expanding its reach: Python Across Asia Episode 2, a new Online Charity Talk, a PyCon Mini Tokyo collaboration with PyCon JP Association, and PythonAsia 2027 in Singapore — the next chapter after Manila.\n\nThis poster invites the community to see PAO not as a single event, but as a growing regional network — one where Python communities across Asia can connect, share knowledge, and grow together. One region, many communities, one Python community.",
+    "community": "Python Asia Organization",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P06",
+    "presenter": "Novelle Estrella",
+    "category": "community",
+    "title": "Coffee. Code. Community.",
+    "summary": "PyLadies Manila is a mentorship-driven community built to empower women to lead, grow, and thrive in the Python open-source ecosystem. More than a meetup group, we are a movement; creating a safe, inclusive space where women can develop technical skills, build confidence, and step into leadership roles within tech.\n\nThrough hands-on workshops, mentorship programs, and collaborative projects, we equip our members with the tools to contribute meaningfully to open-source software—not just as participants, but as decision-makers and changemakers. We believe representation matters, and that the future of technology is stronger when it's built by diverse voices.\n\nSince our founding, PyLadies Manila has grown into a vibrant network of learners, mentors, and leaders who support one another beyond the code; fostering friendships, career growth, and a genuine sense of belonging in tech.\n\nBut we can't do this alone. Growing our programs, hosting more workshops, and reaching more women who want to lead takes resources and support.\n\nSupport our mission. Sponsor PyLadies Manila through GitHub Sponsors and help us continue building a Python community where women don't just participate—they lead.",
+    "community": "Python Philippines (PythonPH), PyLadies Manila",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P07",
+    "presenter": "李松霖",
+    "category": "community",
+    "title": "在台灣當數位遊牧者：城市、資源與政策全攻略移動中的社群：台灣數位遊牧者協會如何把散落各地的人連起來",
+    "summary": "想邊旅行邊工作，台灣哪裡最適合落腳？本海報由社團法人台灣數位遊牧者協會整理台灣數位遊牧地圖：一、城市比較，從台北到花蓮、台東的網路品質、生活成本、交通與社群密度；二、可用資源，共同工作空間、月租住宿、友善咖啡廳與線上社群；三、政策與制度，數位遊牧簽證、就業金卡、居留與稅務要點，以及地方政府的駐點與補助計畫。無論你是想找下一個據點的台灣工作者，或想邀請國際遊牧者來台的夥伴，都歡迎來聊聊。",
+    "community": "社團法人台灣數位遊牧者協會 (Taiwan Digital Nomad Association)",
+    "topics": [
+      "Life wisdom 生活智慧"
+    ]
+  },
+  {
+    "id": "P08",
+    "presenter": "Mac Taylor",
+    "category": "community",
+    "title": "關於 DevBuffet 小聚以及聚會趨勢成果分析與洞察",
+    "summary": "向大家介紹台灣的 DevBuffet 社群，不分南北，但因目前小聚組織者都住高雄所以常態在高雄舉辦活動，我們會介紹自己的社群，以及我們辦過 30 多場小聚的一些變化、統計數據和我們截至 2026 年的社群共識和結論，主要是讓大家可以從我們搜集的數據中獲得一些觀察的心得，得以用於社會實驗。",
+    "community": "DevBuffet",
+    "topics": [
+      "Community connection 社群經營"
+    ]
+  },
+  {
+    "id": "P09",
+    "presenter": "Milo Chen",
+    "category": "professional",
+    "title": "Agentic App Store",
+    "summary": "以開源方式，大家能使用 Python Reflex 去共享發展關於醫療照顧的AI 應用，參與的應用開發者可結合reflex 伙伴 Databricks 快速結合進入歐美企業，一開始雖然是開發社群共享版，但長遠來說可以發展企業商用版，因此需要將reflex AI 應用開發的成果 App Store 上共享，並且有Python社群力量互相監督品質與支持。",
+    "community": "",
+    "topics": [
+      "Medical Care 醫療"
+    ]
+  },
+  {
+    "id": "P10",
+    "presenter": "Anna Liang",
+    "category": "professional",
+    "title": "How do LLMs read your python? From Transformer Circuits perspective to Hands-On Tracing of Open-Source Models",
+    "summary": "Patching code with LLMs is now routine, yet what actually happens inside a model as it predicts your next line of Python remains an open research question. This poster walks the main thread of Anthropic's interpretability research: from the 2021 transformer circuits framework, through the 2024 discovery of a cross-language \"code error\" feature in a production-scale model, to the 2025 open-source release of circuit-tracer. Beyond theory, we get hands-on: using circuit-tracer to generate attribution graphs for open-weights models, we trace which internal features drive Python completion in structured scenarios.",
+    "community": "",
+    "topics": [
+      "AI 人工智慧"
+    ]
+  },
+  {
+    "id": "P11",
+    "presenter": "Carl John Vinas",
+    "category": "professional",
+    "title": "How Python Powers Self-Hosting & OSS: A Look Inside My Homelab Automations",
+    "summary": "Self-hosting and open-source software are increasingly vital for tech enthusiasts as absolute digital privacy becomes harder to obtain. This poster demonstrates how Python is essential to self-hosting by showcasing a homelab that simply could not exist without it.\n\nI provide a full architectural map of my setup, detailing exactly where Python acts as the low-friction glue. The display breaks down core services: Paperless-ngx (Django document processing), Home Assistant (Python IoT control), Frigate & Immich (local AI vision & photo categorization), a Discord Bot for transactions, and an AI-powered Receipt Processor (Flask & 8GB T1000 GPU).\n\nI will heavily spotlight this custom AI-powered Receipt Processor to highlight how the daily pain of processing receipts simply cannot be solved without Python's ecosystem.\n\nBy visualizing this setup, attendees will discover tangible homelab benefits: complete data ownership, eliminating reliance on fragile cloud services, and transforming personal infrastructure into an engaging weekend hobby. Take control of your private data without the grueling grind of heavy software engineering. This poster provides a clear blueprint to that end.",
+    "community": "",
+    "topics": [
+      "Automation",
+      "Open Source",
+      "Self Hosting and Homelabs"
+    ]
+  },
+  {
+    "id": "P12",
+    "presenter": "John Lu",
+    "category": "professional",
+    "title": "RL Fine-Tuning a Multimodal Nutrition Agent with JAX",
+    "summary": "Building production multimodal AI agents often relies on massive vision-language models (VLMs), making real-time deployment slow and expensive. Can a 4B-class model perform structured tool-calling as reliably as a 31B giant?\nThis poster presents a full-stack, open-source workflow for building a lightweight nutrition agent (photo → tool call → structured log) using JAX and RL fine-tuning. We demonstrate how to fine-tune a small model (e.g., Gemma 4 4B) using Group Relative Policy Optimization (GRPO) orchestrated via Tunix on free Colab TPUs. By replacing static labels with dynamic execution-based reward functions—scoring JSON validity and API execution success—our 4B model achieves tool-calling reliability comparable to models nearly ten times its size.\nWe break down the system architecture, the underlying JAX rationale (⁠grad⁠, ⁠jit⁠, ⁠vmap⁠), key evaluation metrics (Tool Call Success Rate, Caloric Deviation), and critical failure cases. Attendees will leave with actionable, transferable patterns to build fast, cheap, and reproducible multimodal agents.",
+    "community": "",
+    "topics": [
+      "Machine Learning 機器學習"
+    ]
+  },
+  {
+    "id": "P13",
+    "presenter": "Yuichiro Tachibana",
+    "category": "professional",
+    "title": "Streamlit-WebRTC: Real-time video and audio web apps in ~20 lines of Python",
+    "summary": "Streamlit-WebRTC is an open-source Python library for building real-time video and audio applications with Streamlit.\n\nIt handles browser media streaming and WebRTC communication, while developers process frames through simple Python callbacks. This makes it possible to combine Streamlit with libraries such as OpenCV, MediaPipe, and machine-learning frameworks without writing JavaScript.",
+    "community": "",
+    "topics": [
+      "Library"
+    ]
+  },
+  {
+    "id": "P15",
+    "presenter": "林嵩哲",
+    "category": "professional",
+    "title": "資料不跟著畢業: 用 STAC 與 AI agent 打造長期維護的資料目錄",
+    "summary": "實驗室累積的 TB 級水文氣象資料 (雷達、再分析、衛星)，隨著資料持續增加、成員來來去去,逐漸難以更新與追溯來源。我們用 Python 把散落在 NAS 的資料，建置成一套以開放標準(STAC) 描述、可即時搜尋的動態目錄：自動檢查資料的完整與一致，並用 AI agents 協助撰寫與檢核 metadata。海報分享系統怎麼設計、哪些檢查交給程式自動化、哪些交給 AI，以及現代巨量資料管理的方式。",
+    "community": "",
+    "topics": [
+      "資料工程",
+      "巨量地理資料",
+      "雲端串流 (ARCO)",
+      "STAC 資料目錄",
+      "AI Agent"
+    ]
+  }
+]

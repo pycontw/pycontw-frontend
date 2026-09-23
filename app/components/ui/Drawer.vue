@@ -5,6 +5,7 @@ import {
   DrawerOverlay,
   DrawerPortal,
   DrawerRoot,
+  DrawerTrigger,
 } from 'reka-ui'
 
 const emit = defineEmits<{
@@ -24,6 +25,10 @@ async function handleUpdateOpen(value: boolean) {
 
 <template>
   <DrawerRoot v-model:open="open" @update:open="handleUpdateOpen">
+    <DrawerTrigger v-if="$slots.default" as-child>
+      <slot />
+    </DrawerTrigger>
+
     <DrawerPortal>
       <DrawerOverlay class="DrawerOverlay fixed inset-0 z-30 bg-black/75" />
 
