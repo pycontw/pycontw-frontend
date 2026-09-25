@@ -19,6 +19,7 @@ const uiBase = 'max-sm:px-3 max-sm:py-2.5 max-sm:text-base max-sm:gap-2'
       color="neutral"
       icon="i-lucide:presentation"
       :ui="{ base: uiBase }"
+      target="_blank"
     >
       {{ t('slides') }}
     </UButton>
@@ -29,6 +30,7 @@ const uiBase = 'max-sm:px-3 max-sm:py-2.5 max-sm:text-base max-sm:gap-2'
       color="neutral"
       icon="i-lucide:message-square-more"
       :ui="{ base: uiBase }"
+      target="_blank"
     >
       Slido
     </UButton>
@@ -39,6 +41,7 @@ const uiBase = 'max-sm:px-3 max-sm:py-2.5 max-sm:text-base max-sm:gap-2'
       color="neutral"
       icon="i-lucide:file-pen"
       :ui="{ base: uiBase }"
+      target="_blank"
     >
       {{ t('note') }}
     </UButton>
@@ -49,6 +52,7 @@ const uiBase = 'max-sm:px-3 max-sm:py-2.5 max-sm:text-base max-sm:gap-2'
       color="error"
       icon="i-simple-icons:youtube"
       :ui="{ base: uiBase }"
+      target="_blank"
     >
       {{ t('playback') }}
     </UButton>
