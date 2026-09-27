@@ -39,6 +39,9 @@ export default {
     title: '介紹',
     overview: '總覽',
   },
+  venue: {
+    title: '會場資訊',
+  },
   speaking: {
     title: '投稿',
     cfp: '投稿募集',

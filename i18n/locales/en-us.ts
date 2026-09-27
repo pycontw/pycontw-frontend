@@ -39,6 +39,9 @@ export default {
     title: 'Introduction',
     overview: 'Overview',
   },
+  venue: {
+    title: 'Venue',
+  },
   speaking: {
     title: 'Proposal',
     cfp: 'Call for Proposals',

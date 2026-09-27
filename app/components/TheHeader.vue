@@ -10,10 +10,6 @@ const { proposalSystemUrl } = usePyCon()
 const [DefineEventsItems, ReuseEventsItems] = createReusableTemplate()
 
 const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: $t('sponsor.title'),
-    to: localePath('/sponsor'),
-  },
   ...pycon.scheduleReady
     ? [
         { label: $t('conference.schedule'), to: localePath('/conference/schedule') },
@@ -43,11 +39,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         },
       ]
     : [],
-  {
-    label: $t('registration.buy_ticket'),
-    to: localePath('/registration/tickets'),
-    active: route.path.startsWith(localePath('/registration')),
-  },
+  { label: $t('venue.title'), to: localePath('/venue') },
   {
     label: $t('about.title'),
     active: route.path.startsWith(localePath('/about')),
@@ -59,6 +51,10 @@ const items = computed<NavigationMenuItem[]>(() => [
       { label: $t('about.code_of_conduct'), to: localePath('/about/code-of-conduct') },
     ],
   },
+  {
+    label: $t('sponsor.title'),
+    to: localePath('/sponsor'),
+  },
   ...!pycon.cfpReady
     ? [
         {
@@ -67,6 +63,11 @@ const items = computed<NavigationMenuItem[]>(() => [
         },
       ]
     : [],
+  {
+    label: $t('registration.buy_ticket'),
+    to: localePath('/registration/tickets'),
+    active: route.path.startsWith(localePath('/registration')),
+  },
 ])
 
 const overviewItem = computed<NavigationMenuItem>(() => ({
