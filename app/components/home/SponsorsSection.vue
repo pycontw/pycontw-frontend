@@ -45,14 +45,16 @@ function isIndividual(sponsor: Sponsor) {
         <div
           v-for="sponsor in sponsorGroup.sponsors"
           :key="sponsor.name_en_us"
-          class="relative w-full aspect-square sponsor-logo cursor-pointer opacity-90 hover:opacity-100 hover:scale-105 transition-all"
+          class="flex flex-col w-full aspect-square sponsor-logo cursor-pointer opacity-90 hover:opacity-100 hover:scale-105 transition-all"
           @click="openSponsorModal(sponsor)"
         >
-          <div v-if="isIndividual(sponsor)" class="absolute inset-0 flex items-center justify-center text-black text-center text-xl">
-            {{ locale === 'en-us' ? sponsor.name_en_us : sponsor.name_zh_hant }}
+          <div class="min-h-0 flex-1 px-3 py-2">
+            <div v-if="isIndividual(sponsor)" class="size-full flex items-center justify-center text-black text-center text-xl">
+              {{ locale === 'en-us' ? sponsor.name_en_us : sponsor.name_zh_hant }}
+            </div>
+            <img v-else :src="sponsor.logo_url" class="logo-img">
           </div>
-          <img v-else :src="sponsor.logo_url" class="logo-img">
-          <div v-if="sponsor.subtitle_en_us || sponsor.subtitle_zh_hant" class="absolute bottom-0 left-0 w-full p-0.5">
+          <div v-if="sponsor.subtitle_en_us || sponsor.subtitle_zh_hant" class="shrink-0 w-full p-0.5 pt-0">
             <div class="rounded-b-[10px] rounded-t-xs bg-pink-500/15 py-1 font-semibold flex items-center justify-center">
               <UIcon name="i-lucide:heart-handshake" class="size-4 mr-1 text-pink-500" />
               <div class="text-pink-500 text-xs autospace-normal">
@@ -75,7 +77,7 @@ function isIndividual(sponsor: Sponsor) {
     <UModal v-model:open="openedModal" :title="t('sponsor.list')" :ui="{ content: 'max-w-2xl' }">
       <template #body>
         <div v-if="openedSponsor" class="w-full flex flex-col items-center p-4">
-          <div class="size-32 sponsor-logo relative">
+          <div class="size-32 sponsor-logo relative p-3">
             <div v-if="isIndividual(openedSponsor)" class="absolute inset-0 flex items-center justify-center text-black text-center text-xl">
               {{ locale === 'en-us' ? openedSponsor.name_en_us : openedSponsor.name_zh_hant }}
             </div>
@@ -106,7 +108,7 @@ function isIndividual(sponsor: Sponsor) {
 @reference "~/assets/css/main.css";
 
 .sponsor-logo {
-  @apply p-3 bg-white rounded-xl;
+  @apply bg-white rounded-xl;
 
   .logo-img {
     @apply size-full object-contain;
