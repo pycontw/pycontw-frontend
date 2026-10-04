@@ -12,7 +12,7 @@ For those who already know the fundamentals of Python and want to participate in
 
 Before the event, we will announce the project on our website and PyCon TW FB. At the opening of the event, we arrange the project hosts to introduce their project in brief. The participants can choose the interested project and join the development of the project. The project hosts can keep communicating with the attendees face to face. We encourage project hosts and participants to keep developing the project even after the event, so we will make a discord channel in PyCon TW.
 
-Venue: TBD, Taipei city
+Venue: Titansoft Taipei office / 11F-1, No. 3-1, Yuanqu St., Nangang Dist., Taipei City
 
 Please visit [KKTIX](https://pycontw.kktix.cc/events/2026-sprints) if you'd like to join as an attendee, or fill out this [Google Form](http://forms.gle/WTx6GRxrT168JCAW9) if you'd like to be a project owner in this event!
 
