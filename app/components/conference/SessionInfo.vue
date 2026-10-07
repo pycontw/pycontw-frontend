@@ -5,7 +5,7 @@ const { beginTime, endTime, location, language, category, pythonLevel } = define
   beginTime?: string
   endTime: string
   location?: string
-  language: ConferenceSpeechLanguage
+  language?: ConferenceSpeechLanguage
   category?: ConferenceSpeechCategory
   pythonLevel?: ConferenceSpeechPythonLevel
 }>()
@@ -21,7 +21,7 @@ const info = computed(() => {
     location: location ? resolveLocalizedText(resolveRoomLabel(location), locale.value) : '',
     beginTime: beginTime ? getSessionTimeLabel(beginTime) : '',
     endTime: getSessionTimeLabel(endTime),
-    languageLabel: $t(`speech.language_label.${language}`),
+    languageLabel: language ? $t(`speech.language_label.${language}`) : '',
     classificationTitle: [category && $t('speech.category_title'), pythonLevel && $t('speech.python_level_title')].filter(Boolean).join(' • '),
     classificationLabel: [category && $t(`speech.category.${category}`), pythonLevel && $t(`speech.python_level.${pythonLevel}`)].filter(Boolean).join(' • '),
   }
@@ -41,7 +41,7 @@ const info = computed(() => {
         </div>
       </div>
 
-      <div class="info-item">
+      <div v-if="location" class="info-item">
         <div data-label>
           <UIcon name="i-lucide:map-pin" class="size-4 text-dimmed" />
           <span class="autospace-normal">{{ t('location') }}</span>
@@ -51,7 +51,7 @@ const info = computed(() => {
         </div>
       </div>
 
-      <div class="info-item">
+      <div v-if="language" class="info-item">
         <div data-label>
           <UIcon name="i-lucide:languages" class="size-4 text-dimmed" />
           <span class="autospace-normal">{{ $t('speech.language') }}</span>

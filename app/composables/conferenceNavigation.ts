@@ -42,10 +42,10 @@ export function useConferenceNavigation() {
         label: 'Panel',
         to: localePath('/conference/panel-discussion'),
       },
-      // {
-      //   label: 'Young Inspires',
-      //   to: localePath('/conference/young-inspires'),
-      // },
+      {
+        label: 'Young Inspires',
+        to: localePath('/conference/young-inspires'),
+      },
     ],
   }))
 
