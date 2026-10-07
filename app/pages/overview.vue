@@ -74,7 +74,7 @@ const EVENTS = computed<Record<string, {
   pycast: {
     img: '/images/overview/pycast.jpg',
     tag: 'podcast',
-    ...(pycon.eventsReady && { link: { title: t('linkLabel.podcasts'), url: 'https://pycast.firstory.io/episodes' } }),
+    ...(pycon.eventsReady && { link: { title: t('linkLabel.podcasts'), url: 'https://pycast.firstory.cc/episodes' } }),
   },
 }))
 
