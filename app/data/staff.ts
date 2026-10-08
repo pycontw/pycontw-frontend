@@ -67,8 +67,11 @@ export const staffGroups: StaffGroup[] = [
       { name: 'Ray', avatar: '/images/about/staff/member-11.jpg', leader: true },
       { name: 'Elfreda', avatar: '/images/about/staff/member-12.png' },
       { name: 'Fanfan', avatar: '/images/about/staff/member-13.jpg' },
-      { name: 'Joe' },
-      { name: 'Wanye' },
+      { name: 'Fox' },
+      { name: '235' },
+      { name: 'Peter', avatar: '/images/about/staff/member-2.jpg' },
+      { name: 'Tiffany' },
+      { name: 'Fen' },
     ],
   },
   {
