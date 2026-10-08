@@ -11,6 +11,7 @@ export default {
     your_time_zone: 'Your time zone',
   },
   about: {
+    staff: 'Staff',
     title: 'About',
     history: 'History',
     community: 'Community',

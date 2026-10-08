@@ -38,13 +38,12 @@ const columns = computed<FooterColumn[]>(() => [
     label: 'PyCon TW',
     children: [
       {
-        label: t('footer.blog'),
-        to: 'https://conf.python.tw/',
-        target: '_blank',
-      },
-      {
         label: t('footer.about_us'),
         to: localePath('/about'),
+      },
+      {
+        label: t('about.staff'),
+        to: localePath('/about/staff'),
       },
       {
         label: t('footer.contact_us'),

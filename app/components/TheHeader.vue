@@ -48,6 +48,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       { label: 'PyCon Taiwan', to: localePath('/about') },
       { label: $t('about.history'), to: localePath('/about/history') },
       { label: $t('about.community'), to: localePath('/about/community') },
+      { label: $t('about.staff'), to: localePath('/about/staff') },
       { label: $t('about.code_of_conduct'), to: localePath('/about/code-of-conduct') },
     ],
   },

@@ -11,6 +11,7 @@ export default {
     your_time_zone: '你的時區',
   },
   about: {
+    staff: '工作人員',
     title: '關於',
     history: '研討會歷史',
     community: '在地社群',
