@@ -67,7 +67,7 @@ export const staffGroups: StaffGroup[] = [
       { name: 'Ray', avatar: '/images/about/staff/member-11.jpg', leader: true },
       { name: 'Elfreda', avatar: '/images/about/staff/member-12.png' },
       { name: 'Fanfan', avatar: '/images/about/staff/member-13.jpg' },
-      { name: 'Fox' },
+      { name: 'Fox', avatar: '/images/about/staff/member-23.jpg' },
       { name: '235' },
       { name: 'Peter' },
       { name: 'Tiffany' },
@@ -148,7 +148,7 @@ export const staffGroups: StaffGroup[] = [
     name_en: 'Photography',
     name_zh: '紀錄組',
     members: [
-      { name: 'Andy', leader: true },
+      { name: 'Andy', avatar: '/images/about/staff/member-22.jpg', leader: true },
       { name: '夏川 桃源', avatar: '/images/about/staff/member-19.png' },
       { name: 'Kason Kang' },
       { name: '流雲' },
