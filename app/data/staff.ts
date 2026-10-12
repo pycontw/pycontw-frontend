@@ -80,6 +80,8 @@ export const staffGroups: StaffGroup[] = [
     name_zh: '贊助執行組',
     members: [
       { name: 'ROCK', avatar: '/images/about/staff/member-14.jpg', leader: true },
+      { name: 'Rex', avatar: '/images/about/staff/member-21.jpg' },
+      { name: 'Connie', avatar: '/images/about/staff/member-10.jpg' },
     ],
   },
   {
