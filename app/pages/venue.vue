@@ -7,6 +7,7 @@ const mapEmbedUrl = computed(() => `https://maps.google.com/maps?q=臺北醫學�
 const trafficUrl = 'https://www.tmuh.org.tw/guide/traffic'
 const busRoutes = computed(() => ['1', '22', '33', '37', '38', '226', '288', t('bus.chengde'), t('bus.blue5')])
 const sections = computed(() => [
+  { id: 'venue-map', label: t('floorMap.title'), icon: 'i-lucide-map' },
   { id: 'public-transport', label: t('publicTransport'), icon: 'i-lucide-train-front' },
   { id: 'shuttle', label: t('shuttle.navigation'), icon: 'i-lucide-bus-front' },
   { id: 'parking', label: t('parking.title'), icon: 'i-lucide-car-front' },
@@ -80,6 +81,41 @@ useSeoMeta({
         <UIcon name="i-lucide-arrow-down" class="size-3.5 text-dimmed" />
       </a>
     </nav>
+
+    <section id="venue-map" aria-labelledby="venue-map-heading" class="venue-section pt-12 sm:pt-16">
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <h2 id="venue-map-heading" class="text-2xl font-bold text-highlighted sm:text-3xl">
+          {{ t('floorMap.title') }}
+        </h2>
+        <UButton
+          :to="$public('/images/venue/venue-map.png')"
+          external
+          target="_blank"
+          rel="noopener noreferrer"
+          color="neutral"
+          variant="outline"
+          trailing-icon="i-lucide-arrow-up-right"
+        >
+          {{ t('floorMap.openOriginal') }}
+        </UButton>
+      </div>
+      <a
+        :href="$public('/images/venue/venue-map.png')"
+        target="_blank"
+        rel="noopener noreferrer"
+        :aria-label="t('floorMap.openOriginal')"
+        class="block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      >
+        <img
+          :src="$public('/images/venue/venue-map.png')"
+          :alt="t('floorMap.alt')"
+          width="2496"
+          height="1243"
+          loading="lazy"
+          class="h-auto w-full rounded-xl border border-default"
+        >
+      </a>
+    </section>
 
     <section id="public-transport" aria-labelledby="public-transport-heading" class="venue-section pt-12 sm:pt-16">
       <div class="mb-6 flex items-center gap-3">
@@ -355,6 +391,10 @@ en-us:
   description: "PyCon Taiwan {year} takes place at the Teaching Building of Taipei Medical University. Find the venue address, MRT and bus routes, free shuttle service, and parking information."
   navigationLabel: Venue information sections
   publicTransport: Public transportation
+  floorMap:
+    title: Venue floor map
+    openOriginal: Open full-size map
+    alt: Floor plan of the Teaching Building's first and second floors, showing session rooms R0–R3, sponsor and community booths, Poster Session and Open Space areas, registration and service desk, restrooms, drinking fountains, stairs, and elevators.
   venue:
     university: Taipei Medical University
     building: Teaching Building
@@ -432,6 +472,10 @@ zh-hant:
   description: "PyCon Taiwan {year} 於臺北醫學大學教學大樓舉行。查看會場地址、捷運與公車路線、免費接駁車及停車資訊。"
   navigationLabel: 會場資訊章節
   publicTransport: 大眾運輸
+  floorMap:
+    title: 會場地圖
+    openOriginal: 完整尺寸
+    alt: 教學大樓一、二樓平面圖，標示 R0 至 R3 議程廳、贊助與社群夥伴攤位、Poster Session 與 Open Space 區域、報到與服務台、洗手間、飲水機、樓梯及電梯。
   venue:
     university: 臺北醫學大學
     building: 教學大樓
