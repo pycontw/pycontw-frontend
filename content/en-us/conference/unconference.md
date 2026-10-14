@@ -35,8 +35,7 @@ You may share any non-technical or community-related topic, such as community ma
 | ----- | -------------------------------- |
 | 09:00 | Unconference Registration Opens  |
 | 10:00 | Registration Closes              |
-| 10:25 | Speaker & Waitlist Confirmation  |
-| 10:35 | Speaker Check-in & Briefing       |
+| 10:40 | Speaker Check-in & Briefing       |
 | 10:50 | Unconference Begins              |
 
 ## Day 2｜Oct. 18 (Sun.)
@@ -45,7 +44,6 @@ You may share any non-technical or community-related topic, such as community ma
 | ----- | -------------------------------- |
 | 09:00 | Unconference Registration Opens  |
 | 12:00 | Registration Closes              |
-| 12:55 | Speaker & Waitlist Confirmation  |
 | 13:05 | Speaker Check-in & Briefing       |
 | 13:20 | Unconference Begins              |
 
