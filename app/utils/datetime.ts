@@ -1,6 +1,20 @@
 const TAIPEI_OFFSET_MINUTES = 8 * 60
 const TAIPEI_TIME_ZONE = 'Asia/Taipei'
 
+export function getTaipeiDateString(date: Date = new Date()): string {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: TAIPEI_TIME_ZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date)
+  const year = parts.find(part => part.type === 'year')!.value
+  const month = parts.find(part => part.type === 'month')!.value
+  const day = parts.find(part => part.type === 'day')!.value
+
+  return `${year}-${month}-${day}`
+}
+
 /**
  * @param date YYYY-MM-DD
  * @returns iso string in GMT+8, e.g. "2025-09-06T00:00:00+08:00"

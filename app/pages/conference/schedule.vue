@@ -9,6 +9,14 @@ const dayDates = computed(() => data.value?.data ? data.value.data.map(day => da
 const activeDate = ref(dayDates.value[0] ?? '')
 const activeDay = computed(() => days.value.find(day => day.date === activeDate.value) ?? days.value[0] ?? null)
 
+onMounted(() => {
+  watch(dayDates, (dates) => {
+    const today = getTaipeiDateString()
+
+    activeDate.value = dates.find(date => date === today) ?? dates[0] ?? ''
+  }, { immediate: true })
+})
+
 useHead({ title: $t('conference.schedule') })
 </script>
 
